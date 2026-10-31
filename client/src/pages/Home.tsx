@@ -406,7 +406,7 @@ export default function Home() {
                 <small>“らしさ”を輝かせる力で、美と幸せの環を広げ続けます。</small>
               </div>
               <div className="leader-card">
-                <div className="leader-photo"><img src={representativePhoto} alt="株式会社行雲流水 代表 藤津一弥" /></div>
+                <div className="leader-photo"><img loading="lazy" decoding="async" src={representativePhoto} alt="株式会社行雲流水 代表 藤津一弥" /></div>
                 <div className="leader-profile"><span>REPRESENTATIVE / KAZUYA FUJITSU</span><h3>藤津 一弥 <small>代表</small></h3><p>行雲流水にいたから夢が叶った。今が幸せだと思ってほしい。美容師って最高って思ってほしい。仲間の夢の数が多いほど会社は大きくなっていく。信用信頼できる仲間が多いほど幸せな人生を送れる。</p><p className="leader-message">美容が好きな方！夢を叶えたい方！一緒に成長しましょう！共に学び、共に成長できる仲間を募集しています。必ず、なりたい自分になれる！全力で応援します。</p><small className="leader-career">オーナースタイリスト／美容師歴27年。美容国際ライセンスHIQ LEVEL2取得、DADA DESIGN ACADEMY卒業、BOWアカデミー トレーナー、クリムラ技塾 初級講師、南大阪美容志塾 講師、志塾サロン会 レクチャラー、南大阪の美容師さんの交流の場 主宰。</small></div>
               </div>
             </div>
@@ -419,7 +419,7 @@ export default function Home() {
             <div><p>FLOWCLOUD と glow を起点に、世代・ライフスタイル・求める技術が異なるお客様へ。それぞれのブランドらしさを育てながら、「らしさを輝かせる」美と幸せの環を広げていく構想です。</p><span>株式会社行雲流水　事業展開ビジョン</span></div>
           </div>
           <figure className="vision-map">
-            <img src={businessVisionMap} alt="株式会社行雲流水の事業展開ビジョン。FLOWCLOUD、glow、WATERLINE（仮）、BONSAI（仮）、ココロオドル（仮）などの店舗構想を示す図" />
+            <img loading="lazy" decoding="async" src={businessVisionMap} alt="株式会社行雲流水の事業展開ビジョン。FLOWCLOUD、glow、WATERLINE（仮）、BONSAI（仮）、ココロオドル（仮）などの店舗構想を示す図" />
             <figcaption>株式会社行雲流水　事業展開ビジョン</figcaption>
           </figure>
         </section>
@@ -466,12 +466,12 @@ export default function Home() {
 
           <article className="salon-card salon-flow">
             <div className="salon-gallery" aria-label="FLOWCLOUDの店舗写真">
-              <img className="salon-gallery-main" src={flowCloudExteriorPhoto} alt="FLOWCLOUDの外観" />
+              <img loading="lazy" decoding="async" className="salon-gallery-main" src={flowCloudExteriorPhoto} alt="FLOWCLOUDの外観" />
               <div className="salon-gallery-side">
                 <SalonReel src={flowCloudReel} label="FLOWCLOUDのサロンリール動画" muted={activeReelSound !== "flow"} onToggleSound={() => setActiveReelSound(activeReelSound === "flow" ? null : "flow")} />
-                <img className="salon-gallery-detail" src={flowCloudInteriorPhoto} alt="FLOWCLOUDの落ち着いたカウンセリング空間" />
+                <img loading="lazy" decoding="async" className="salon-gallery-detail" src={flowCloudInteriorPhoto} alt="FLOWCLOUDの落ち着いたカウンセリング空間" />
               </div>
-              <div className="salon-gallery-logo"><img src={flowCloudLogo} alt="FLOWCLOUD ロゴ" /></div>
+              <div className="salon-gallery-logo"><img loading="lazy" decoding="async" src={flowCloudLogo} alt="FLOWCLOUD ロゴ" /></div>
               <small>FLOWCLOUD<br />SALON 01</small>
             </div>
             <div className="salon-detail">
@@ -490,12 +490,12 @@ export default function Home() {
 
           <article className="salon-card salon-glow">
             <div className="salon-gallery" aria-label="glowの店舗写真">
-              <img className="salon-gallery-main" src={glowReceptionPhoto} alt="glowのレセプションとロゴ" />
+              <img loading="lazy" decoding="async" className="salon-gallery-main" src={glowReceptionPhoto} alt="glowのレセプションとロゴ" />
               <div className="salon-gallery-side">
                 <SalonReel src={glowReel} label="glowのサロンリール動画" muted={activeReelSound !== "glow"} onToggleSound={() => setActiveReelSound(activeReelSound === "glow" ? null : "glow")} />
-                <img className="salon-gallery-detail" src={glowSalonInteriorPhoto} alt="glowのセット面" />
+                <img loading="lazy" decoding="async" className="salon-gallery-detail" src={glowSalonInteriorPhoto} alt="glowのセット面" />
               </div>
-              <div className="salon-gallery-logo"><img src={glowLogo} alt="glow ロゴ" /></div>
+              <div className="salon-gallery-logo"><img loading="lazy" decoding="async" src={glowLogo} alt="glow ロゴ" /></div>
               <small>glow<br />SALON 02</small>
             </div>
             <div className="salon-detail">
@@ -576,9 +576,9 @@ export default function Home() {
             <p>サロンの中で集まり、話し、視点を持ち寄る。実際の写真から、行雲流水の学びの時間と空間をご紹介します。</p>
           </div>
           <div className="training-photo-grid">
-            <figure className="training-photo-main"><img src={trainingSalonPhoto} alt="店内でスタッフが集まる研修・ミーティングの様子" /><figcaption><span>01 / IN-SALON SESSION</span><strong>店内で、言葉と技術を持ち寄る。</strong></figcaption></figure>
-            <figure className="training-photo-side"><img src={teamMeetingPhoto} alt="スタッフがテーブルを囲むミーティングの様子" /><figcaption><span>02 / MEETING</span><strong>それぞれの気づきを、チームへ。</strong></figcaption></figure>
-            <figure className="training-photo-detail"><img src={shampooBoothPhoto} alt="FLOWCLOUDのシャンプーブース" /><figcaption><span>03 / CARE SPACE</span><strong>お客様のための、静かな技術空間。</strong></figcaption></figure>
+            <figure className="training-photo-main"><img loading="lazy" decoding="async" src={trainingSalonPhoto} alt="店内でスタッフが集まる研修・ミーティングの様子" /><figcaption><span>01 / IN-SALON SESSION</span><strong>店内で、言葉と技術を持ち寄る。</strong></figcaption></figure>
+            <figure className="training-photo-side"><img loading="lazy" decoding="async" src={teamMeetingPhoto} alt="スタッフがテーブルを囲むミーティングの様子" /><figcaption><span>02 / MEETING</span><strong>それぞれの気づきを、チームへ。</strong></figcaption></figure>
+            <figure className="training-photo-detail"><img loading="lazy" decoding="async" src={shampooBoothPhoto} alt="FLOWCLOUDのシャンプーブース" /><figcaption><span>03 / CARE SPACE</span><strong>お客様のための、静かな技術空間。</strong></figcaption></figure>
           </div>
         </section>
 
@@ -595,13 +595,13 @@ export default function Home() {
             <p>一緒に学び、笑い、仕事をする仲間がいる。行雲流水で働くメンバー自身の言葉から、チームの空気とお客様への向き合い方をお届けします。</p>
           </div>
           <div className="team-photo-grid">
-            <figure className="team-photo team-photo-tall"><img src={teamSalonPhoto} alt="サロン内で集まるスタッフの様子" /><figcaption><span>SALON TIME</span><strong>サロンで過ごす、チームの時間。</strong></figcaption></figure>
-            <figure className="team-photo"><img src={teamDinnerPhoto} alt="食事会で集まるスタッフの様子" /><figcaption><span>TEAM DINNER</span><strong>仕事の外にも、話せる時間がある。</strong></figcaption></figure>
-            <figure className="team-photo"><img src={teamEventPhoto} alt="スタッフが集まるイベントの様子" /><figcaption><span>TEAM EVENT</span><strong>互いの挑戦を、みんなで称える。</strong></figcaption></figure>
+            <figure className="team-photo team-photo-tall"><img loading="lazy" decoding="async" src={teamSalonPhoto} alt="サロン内で集まるスタッフの様子" /><figcaption><span>SALON TIME</span><strong>サロンで過ごす、チームの時間。</strong></figcaption></figure>
+            <figure className="team-photo"><img loading="lazy" decoding="async" src={teamDinnerPhoto} alt="食事会で集まるスタッフの様子" /><figcaption><span>TEAM DINNER</span><strong>仕事の外にも、話せる時間がある。</strong></figcaption></figure>
+            <figure className="team-photo"><img loading="lazy" decoding="async" src={teamEventPhoto} alt="スタッフが集まるイベントの様子" /><figcaption><span>TEAM EVENT</span><strong>互いの挑戦を、みんなで称える。</strong></figcaption></figure>
           </div>
           <div className="staff-voice-grid" aria-label="スタッフ紹介">
             <article className="staff-voice-card">
-              <div className="staff-voice-photo"><img src={shionPhoto} alt="スタッフ しおん" /></div>
+              <div className="staff-voice-photo"><img loading="lazy" decoding="async" src={shionPhoto} alt="スタッフ しおん" /></div>
               <div className="staff-voice-content">
                 <p className="staff-voice-label">STAFF VOICE / 01</p>
                 <h3>しおん <small>スタイリスト</small></h3>
@@ -616,7 +616,7 @@ export default function Home() {
               </div>
             </article>
             <article className="staff-voice-card staff-voice-card-reverse">
-              <div className="staff-voice-photo"><img src={ayunaPhoto} alt="スタッフ あゆな" /></div>
+              <div className="staff-voice-photo"><img loading="lazy" decoding="async" src={ayunaPhoto} alt="スタッフ あゆな" /></div>
               <div className="staff-voice-content">
                 <p className="staff-voice-label">STAFF VOICE / 02</p>
                 <h3>あゆな <small>スタイリスト</small></h3>
@@ -627,7 +627,7 @@ export default function Home() {
               </div>
             </article>
             <article className="staff-voice-card">
-              <div className="staff-voice-photo"><img src={moePhoto} alt="スタッフ もえ" /></div>
+              <div className="staff-voice-photo"><img loading="lazy" decoding="async" src={moePhoto} alt="スタッフ もえ" /></div>
               <div className="staff-voice-content">
                 <p className="staff-voice-label">STAFF VOICE / 03</p>
                 <h3>もえ <small>スタイリスト</small></h3>
@@ -830,7 +830,7 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="footer-top">
-          <div className="footer-brand"><img src={logoPath} alt="株式会社 行雲流水 ko-un-ryu-sui ロゴ" /><p>FLOWCLOUD / glow 採用サイト</p></div>
+          <div className="footer-brand"><img loading="lazy" decoding="async" src={logoPath} alt="株式会社 行雲流水 ko-un-ryu-sui ロゴ" /><p>FLOWCLOUD / glow 採用サイト</p></div>
           <div className="footer-links"><a href="#about">私たちについて</a><a href="#salons">店舗紹介</a><a href="#growth">教育・給与</a><a href="#guideline">募集要項</a><a href="#experience">体験会</a><a href="#access">アクセス</a><a href="#instagram">Instagram</a><a href="#company">会社概要</a><a href="/faq">よくある質問</a><a href="/blog/">記事一覧</a><a href="https://www.flowcloud.net/" target="_blank" rel="noreferrer">FLOWCLOUD公式</a><a href="https://glow-izumiotsu.jp/" target="_blank" rel="noreferrer">glow公式</a><a href={googleBusinessUrl} target="_blank" rel="noreferrer">Googleのページ</a><a href="/recruit/newgrad">新卒採用</a><a href="/area">勤務エリア</a><a href="/school">美容学校の学生の方へ</a><a href="/recruit/student">高校生・美容学生</a><a href="/recruit/career">中途採用</a><a href="#contact">サロン見学・応募</a><Link href="/privacy">個人情報の取扱い</Link></div>
           <div className="footer-company"><p>株式会社 行雲流水</p><span>代表：藤津一弥<br />掲載拠点：大阪府泉大津市<br />設立：2020年4月1日<br />TEL：0725-90-5699</span></div>
         </div>
