@@ -17,3 +17,18 @@
 2. 【働き方】教育の流れ、休みの取り方、職種別の募集条件を採用サイトで公開しています。
 
 ※写真は各サイト掲載の店内・施術写真を使用。価格・日付は掲載前に最新クーポンと照合。
+
+## 投稿に使う写真候補（各サイトに掲載済み・権利は自社）
+画像URLは https://www.flowcloud.net/ または https://glow-izumiotsu.jp/ に続けて記載。
+### FLOWCLOUD
+- /cms/wp-content/uploads/2018/12/FLOW-CLOUD-001-1024x733.jpg … 外観（緑の扉）→ 来店案内・営業案内の投稿
+- /cms/wp-content/uploads/2018/12/FLOW-CLOUD-063.jpg … 半個室の店内 → 19周年・髪質改善の投稿
+- /cms/wp-content/uploads/2018/12/FLOW-CLOUD-031.jpg … シャンプー空間 → ヘッドスパ・炭酸スパの投稿
+- /cms/wp-content/uploads/2018/12/FLOW-CLOUD-047.jpg … カウンセリング席 → 初めての方・相談の投稿
+### glow
+- /wp-content/uploads/2026/04/glow_img-08.jpg … 店内 → 19周年・新規クーポンの投稿
+- /wp-content/uploads/2026/04/glow_img-10.jpg … カラー施術 → 艶カラーの投稿
+- /wp-content/uploads/2026/04/glow_img-05.jpg … ヘアケア商品棚 → 素髪ケアの投稿
+- /wp-content/uploads/2026/05/staff_3.jpg … スタッフ → 初めての方・相談の投稿
+### 求人
+- /images/flow-cloud-team-hero_18f9702b.jpg, team-salon_3c550db9.jpg, training-salon_b2a51844.jpg（https://ko-un-ryu-sui.com 配下）
