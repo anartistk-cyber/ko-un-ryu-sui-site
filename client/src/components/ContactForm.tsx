@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { Link } from "wouter";
 import { track } from "../lib/track";
 
 type Errors = Record<string, string>;
@@ -26,6 +25,9 @@ const PRESET: Record<string, { purpose?: string; status?: string; job?: string }
 };
 const submitLabel: Record<string, string> = { visit: "この内容で見学を申し込む", consult: "この内容で送信する", apply: "この内容で応募する", "": "この内容で送信する" };
 
+const DRAFT_KEY = "krs-contact-draft";
+const DRAFT_TEXT = ["name", "kana", "salon", "school", "date1", "date2", "date3", "conditions", "message"];
+
 export function ContactForm() {
   const [purpose, setPurpose] = useState("");
   const [status, setStatus] = useState("");
@@ -40,12 +42,47 @@ export function ContactForm() {
   const started = useRef(false);
   const summaryRef = useRef<HTMLDivElement>(null);
   const doneRef = useRef<HTMLDivElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+  const draftRef = useRef<Record<string, string> | null>(null);
+  const [restored, setRestored] = useState(0);
 
   useEffect(() => {
     const c = new URLSearchParams(window.location.search).get("c") ?? "";
     const p = PRESET[c];
     if (p) { setPurpose(p.purpose ?? ""); setStatus(p.status ?? ""); setJobId(p.job ?? (c === "newgrad" || c === "career" ? c : "")); }
   }, []);
+  // 入力途中の内容は、このタブを閉じるまで一時保存する（他のページを見て戻っても消えない。同意チェックは保存しない）
+  useEffect(() => {
+    try {
+      const raw = sessionStorage.getItem(DRAFT_KEY);
+      if (!raw) return;
+      const d = JSON.parse(raw) as Record<string, string>;
+      draftRef.current = d;
+      if (d.purpose) setPurpose(d.purpose);
+      if (d.status) setStatus(d.status);
+      if (d.job_id) setJobId(d.job_id);
+      if (d.email) setEmail(d.email);
+      if (d.phone) setPhone(d.phone);
+      if (d.contact_method) setMethod(d.contact_method);
+      setRestored(n => n + 1);
+    } catch { /* 保存できない環境では何もしない */ }
+  }, []);
+  useEffect(() => {
+    const d = draftRef.current, f = formRef.current;
+    if (!d || !f) return;
+    for (const k of DRAFT_TEXT) {
+      const el = f.elements.namedItem(k) as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement | null;
+      if (el && !el.value && d[k]) el.value = d[k];
+    }
+  }, [restored, status]);
+  const saveDraft = () => {
+    try {
+      const f = formRef.current; if (!f) return;
+      const fd = new FormData(f); const d: Record<string, string> = { job_id: jobId };
+      for (const k of [...DRAFT_TEXT, "purpose", "status", "email", "phone", "contact_method"]) d[k] = String(fd.get(k) ?? "");
+      sessionStorage.setItem(DRAFT_KEY, JSON.stringify(d));
+    } catch { /* 保存できない環境では何もしない */ }
+  };
   useEffect(() => { if (Object.keys(errors).length) summaryRef.current?.focus(); }, [errors]);
   useEffect(() => { if (done) doneRef.current?.focus(); }, [done]);
 
@@ -89,6 +126,7 @@ export function ContactForm() {
       .then(async res => {
         const json = await res.json().catch(() => ({}));
         if (res.ok && json?.ok) {
+          try { sessionStorage.removeItem(DRAFT_KEY); } catch { /* noop */ }
           setDone({ receipt: json.receipt, mailed: json.mailed, purpose });
           // サーバーが正常保存した時のみ1回だけ発火(個人情報なし)
           track("recruit_lead_saved", { lead_type: purpose, audience: status, salon: g("salon") || "undecided", job_id: jobId || "not_selected", source_page_type: "contact_form" });
@@ -119,7 +157,7 @@ export function ContactForm() {
   const err = (k: string) => errors[k] ? <small className="field-error" id={`e-${k}`} role="alert">{errors[k]}</small> : null;
   const student = status === "student" || status === "newgrad";
   return (
-    <form className="contact-form" onSubmit={onSubmit} onFocus={onStart} noValidate>
+    <form className="contact-form" ref={formRef} onSubmit={onSubmit} onFocus={onStart} onInput={saveDraft} onChange={saveDraft} noValidate>
       <div className="contact-form-heading"><span>MAIL FORM</span><strong>メールで相談する</strong><small><em>必須</em>の項目だけで送信できます。くわしい希望は、あとから伝えても大丈夫です。</small></div>
       <input className="form-honeypot" name="website" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       {Object.keys(errors).length > 0 && (
@@ -170,7 +208,7 @@ export function ContactForm() {
         </div>
       </details>
       <label className="contact-form-message">質問・伝えたいこと <em>任意（1000文字まで）</em><textarea name="message" rows={4} maxLength={1000} placeholder="気になることをご記入ください。健康状態や家族の詳しい事情などは、書かなくて大丈夫です。" /></label>
-      <label className="form-consent" id="f-consent"><input type="checkbox" name="consent" aria-invalid={!!errors.consent} /> <span><Link href="/privacy">個人情報の取扱い</Link>に同意します。 <b>必須</b></span></label>
+      <label className="form-consent" id="f-consent"><input type="checkbox" name="consent" aria-invalid={!!errors.consent} /> <span><a href="/privacy" target="_blank" rel="noopener noreferrer">個人情報の取扱い（新しいタブで開きます）</a>に同意します。 <b>必須</b></span></label>
       {err("consent")}
       <p className="contact-form-note">送信時点では見学日時は確定していません。担当者からの連絡をお待ちください。</p>
       <button className="contact-submit" type="submit" disabled={sending}>{sending ? "送信中…" : submitLabel[purpose] ?? submitLabel[""]}</button>
