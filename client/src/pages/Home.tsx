@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
 import { TBD } from "../components/Pending";
+import { faqItems } from "../data/faq";
 import { ContactForm } from "../components/ContactForm";
 import { track, trackClick } from "../lib/track";
 import {
@@ -184,28 +185,6 @@ const companyRows = [
   ["人事・教育の考え方", "人事理念「圧倒的当事者意識」／教育理念「人を想う可能思考」。感謝心・素直心・向上心を基礎に、人間力・接遇力・技術力を磨きます。"],
 ];
 
-const faqItems: [string, ReactNode][] = [
-  ["岸和田・堺・和泉など、泉大津以外から通えますか。", <>勤務地は泉大津市のFLOW CLOUDとglowです。岸和田・高石・和泉・堺・泉佐野・貝塚など南大阪・泉州エリアから通う方も、お住まいと通勤手段を伺って一緒に確認します。<a href="/area">勤務エリアのページ</a>もご覧ください。</>],
-  ["どの美容専門学校の学生でも相談できますか。", <>学校名は問いません。通信課程など対象か分からない場合も、お問い合わせください。<a href="/school">美容学校の学生の方へ</a></>],
-  ["まだ応募するか決めていません。相談できますか。", <>見学や働き方について、気になることをお知らせください。体験の受付条件や費用、選考との関係は<a href="/blog/taiken-guide">体験ガイド</a>でご案内します。</>],
-  ["美容学生です。何年生から見学できますか。", <>対象は要相談です。通信課程など、該当するか分からない場合は採用窓口へお問い合わせください。</>],
-  ["新卒の応募には美容師免許が必要ですか。", <>取得見込みの方も応募を受け付けています。対象の卒業時期と、入社時に必要な取得条件は募集要項をご確認ください。具体的な条件は要相談です。</>],
-  ["何年でデビューできますか。", <>1年でのデビューを目標とするカリキュラムをご案内しています。全員が同じ時期になる保証ではなく、技術・接客の習得状況を確認して担当範囲を決めます。</>],
-  ["練習は勤務時間内ですか。", <>必須レッスンの時間帯、自主練習の参加条件は要相談です。準備・練習は勤務時間内として扱います。教育記事に区分と費用を掲載します。</>],
-  ["給与には残業代が含まれますか。", <>コンシェルジュ（月給270,000円）は、基本給240,000円＋固定残業代30,000円（15時間分）で、超過分は別途支給します。上位の区分の内訳、手当、試用期間の条件は求人ごとにご確認ください。</>],
-  ["交通費と家賃補助は両方出ますか。", <>交通費または家賃補助のどちらか一方（併給なし）として、10,000円を支給します。週4日以上勤務の方が対象で、要相談です。</>],
-  ["年間休日と有給休暇はどうなりますか。", <>年間休日は104日、年末年始休暇は4日（12/31・1/1〜1/3）です。年次有給休暇は入社6か月以降に10日〜付与され、合計の年間休日は118日〜になります。希望休やシフトの決め方は要相談です。</>],
-  ["社会保険はありますか。", <>社会保険完備（健康保険〈介護保険を含む〉、厚生年金保険、雇用保険、労災保険）です。加入は法令の定めに従います。</>],
-  ["土日休みや短時間勤務はできますか。", <>現在受け入れ可能な曜日・時間帯は要相談です。ご希望の曜日と時間をお知らせください。店舗や募集状況によってはご希望に沿えない場合もあります。</>],
-  ["子どもの急病で休む場合はどうなりますか。", <>欠勤時の連絡窓口は各店舗です。無条件の対応を約束せず、具体的な手順を入社前に確認します。</>],
-  ["ブランクがあっても応募できますか。", <>パート募集ではブランクのある方も相談を受け付けています。これまでの経験と確認したい技術をお知らせください。技術確認や研修の条件は要相談です。</>],
-  ["在職中でも相談できますか。", <>入社を希望する時期と、連絡しやすい方法・時間帯をお知らせください。選考の進め方は募集条件と合わせてご案内します。</>],
-  ["店舗は選べますか。", <>希望を伺い、要相談で決定します。勤務地と変更範囲は求人詳細をご確認ください。</>],
-  ["どんなお客様が来店しますか。", <>FLOW CLOUDでは幅広い年代のお客様にご利用いただいています。glowを含む店舗ごとの仕事内容や接客は店舗紹介をご覧ください。比率を案内する際は集計期間を添えて掲載します。</>],
-  ["人間関係が不安です。", <>見学では、仕事中の声のかけ方や指導の様子もご覧ください。入社後の相談先は要相談です。職場の雰囲気を、ご自身でも確かめてください。</>],
-  ["応募から入社までの流れは。", <>選考は「見学→面接→採用」の流れです。必要書類、日程、結果の連絡方法を担当者からご案内します。</>],
-  ["返信が届きません。", <>迷惑メールフォルダをご確認ください。しばらく経っても連絡がない場合は、info@ko-un-ryu-sui.comへお問い合わせください。</>],
-];
 
 
 const experienceCards = [
@@ -808,7 +787,7 @@ export default function Home() {
         </section>
 
         <section className="faq-section section" aria-labelledby="faq-title">
-          <div className="faq-heading"><Eyebrow>FAQ</Eyebrow><h2 id="faq-title">よくある質問</h2></div>
+          <div className="faq-heading"><Eyebrow>FAQ</Eyebrow><h2 id="faq-title">よくある質問</h2><p><a href="/faq">質問を一覧で見る <ArrowRight size={14} aria-hidden="true" /></a></p></div>
           <div className="faq-list">
             {faqItems.map(([q, a]) => (
               <details key={q}>
@@ -852,7 +831,7 @@ export default function Home() {
       <footer className="site-footer">
         <div className="footer-top">
           <div className="footer-brand"><img src={logoPath} alt="株式会社 行雲流水 ko-un-ryu-sui ロゴ" /><p>FLOW CLOUD / glow 採用サイト</p></div>
-          <div className="footer-links"><a href="#about">私たちについて</a><a href="#salons">店舗紹介</a><a href="#growth">教育・給与</a><a href="#guideline">募集要項</a><a href="#experience">体験会</a><a href="#access">アクセス</a><a href="#instagram">Instagram</a><a href="#company">会社概要</a><a href="/blog/">記事一覧</a><a href="https://www.flowcloud.net/" target="_blank" rel="noreferrer">FLOW CLOUD公式</a><a href="https://glow-izumiotsu.jp/" target="_blank" rel="noreferrer">glow公式</a><a href={googleBusinessUrl} target="_blank" rel="noreferrer">Googleのページ</a><a href="/recruit/newgrad">新卒採用</a><a href="/area">勤務エリア</a><a href="/school">美容学校の学生の方へ</a><a href="/recruit/student">高校生・美容学生</a><a href="/recruit/career">中途採用</a><a href="#contact">サロン見学・応募</a><Link href="/privacy">個人情報の取扱い</Link></div>
+          <div className="footer-links"><a href="#about">私たちについて</a><a href="#salons">店舗紹介</a><a href="#growth">教育・給与</a><a href="#guideline">募集要項</a><a href="#experience">体験会</a><a href="#access">アクセス</a><a href="#instagram">Instagram</a><a href="#company">会社概要</a><a href="/faq">よくある質問</a><a href="/blog/">記事一覧</a><a href="https://www.flowcloud.net/" target="_blank" rel="noreferrer">FLOW CLOUD公式</a><a href="https://glow-izumiotsu.jp/" target="_blank" rel="noreferrer">glow公式</a><a href={googleBusinessUrl} target="_blank" rel="noreferrer">Googleのページ</a><a href="/recruit/newgrad">新卒採用</a><a href="/area">勤務エリア</a><a href="/school">美容学校の学生の方へ</a><a href="/recruit/student">高校生・美容学生</a><a href="/recruit/career">中途採用</a><a href="#contact">サロン見学・応募</a><Link href="/privacy">個人情報の取扱い</Link></div>
           <div className="footer-company"><p>株式会社 行雲流水</p><span>代表：藤津一弥<br />掲載拠点：大阪府泉大津市<br />設立：2020年4月1日<br />TEL：0725-90-5699</span></div>
         </div>
         <div className="footer-bottom"><span>© KOUNRYUSUI CO., LTD.</span><span>泉大津・岸和田・高石・和泉・堺・泉佐野・貝塚 美容師 求人 / 美容室 アシスタント 求人 / 南大阪・泉州</span></div>

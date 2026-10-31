@@ -32,6 +32,7 @@ const pages = [
   ["/area", "area.html"],
   ["/school", "school.html"],
   ["/recruit/student", "recruit/student.html"],
+  ["/faq", "faq.html"],
   ["/blog", "blog/index.html"],
   ["/privacy", "privacy.html"],
   ["/__not-found__", "404.html"],
