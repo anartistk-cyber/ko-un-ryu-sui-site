@@ -45,6 +45,10 @@
    "sha256": "619d48cf54bc940f30447d3a5c66aba7ffd7e3c9ce00fef40f909f95d45ffdca"
   },
   {
+   "path": "llms.txt",
+   "sha256": "dd3e095e85f44cf3099549235a8f0fc6a329dc35992b0f6a4371765c8ef5d78d"
+  },
+  {
    "path": "menu/index.html",
    "sha256": "da3d652463e078a085e713de255e8648c6b1e2b71c837e547f50f43c85cfad80"
   },

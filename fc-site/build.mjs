@@ -117,5 +117,14 @@ fs.writeFileSync(OUT+'/fc/style.css',fs.readFileSync('style.css','utf8'));
 // sitemap
 const urls=['/','/privacy/','/coupon/','/menu/','/hair-care-40-50/','/headspa/','/first/','/area/','/faq/','/company/','/cast/','/voice/','/salon-blog/',...posts.map(p=>`/salon-blog/${p.slug}/`)];
 fs.writeFileSync(OUT+'/sitemap-fc.xml',`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(u=>`<url><loc>${BASE+u}</loc><lastmod>${todayStr}</lastmod></url>`).join('')}</urlset>`);
+fs.writeFileSync(OUT+'/llms.txt',`# FLOWCLOUD（フロウクラウド）泉大津の完全予約の会員制美容室
+> 大阪府泉大津市東雲町1-20（〒595-0026）。南海本線「泉大津駅」から徒歩約3分。TEL 0725-90-5699。営業9:00〜20:00（最終受付18:00）・定休日は毎週月曜・火曜（不定休の日あり）・完全予約制。運営: 株式会社行雲流水（姉妹店 glow）。
+- 得意: 髪質改善ストレート・髪質改善パーマ、ヘッドスパ、トリートメント。半個室の空間で、素髪をきれいにしたい40代・50代の方にも通っていただいています。
+- 料金（税込）: カット¥5,500（10歳以上・シャンプーブロー別）、ナチュラルパーマ¥7,700〜、ハードパーマ¥9,900〜、髪質改善ストレート¥16,500〜、シスキュア（当店オリジナルのトリートメント）¥3,850。
+- 予約: ネット予約 ${L.net} ／ ホットペッパー ${L.hp} ／ 電話 0725-90-5699
+- 口コミ: ${L.hp}review/ （平均4.64・直近1年の集計・2026年10月時点）
+- 採用: ${L.recruit}
+- ページ: ${urls.map(u=>BASE+u).join(' ')}
+`);
 fs.writeFileSync(OUT+'/google0cfa36e6cfb51b13.html','google-site-verification: google0cfa36e6cfb51b13.html');
 console.log('pages',urls.length);
