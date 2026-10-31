@@ -10,7 +10,7 @@
   },
   {
    "path": "faq/index.html",
-   "sha256": "19f93c2cf5bc6dc095eff08c3abb3ecfe4e6664decce8cfe8176ed24a77c3ddf"
+   "sha256": "1aee1791f4654000aa38c93f8fd1f532291c767b62a44054e3fce8a9a8904fa7"
   },
   {
    "path": "first/index.html",
@@ -22,7 +22,7 @@
   },
   {
    "path": "headspa/index.html",
-   "sha256": "f34cafe4e5227d3634a174a63870996cbcf1e9787e84c5198cb517364da28a38"
+   "sha256": "2c4294618f990f8d8dc2b30054f1f0564655a7709ff61a59d791cefd0fd3a8bd"
   },
   {
    "path": "index.html",
@@ -38,7 +38,7 @@
   },
   {
    "path": "journal/index.html",
-   "sha256": "112e72e52a759cf8165d8512111104fb3e52f526293491b3dc32186535b8ef60"
+   "sha256": "118b4e636abce20353639da8aa1e4d7f20c3671eab909b87215b2c079915b712"
   },
   {
    "path": "journal/sugao-care-young/index.html",
@@ -54,7 +54,7 @@
   },
   {
    "path": "privacy/index.html",
-   "sha256": "e3c5cc88b80fff2d51ba974fe1b336a98b46c5e5eb94484fa21f9586dcee45b4"
+   "sha256": "f468f0385de682d96c796b9a4073e2e9a2cafbfd6b806ccb4df7462a036b13ca"
   },
   {
    "path": "robots.txt",
