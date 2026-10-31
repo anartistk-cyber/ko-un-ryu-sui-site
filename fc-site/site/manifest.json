@@ -2,23 +2,43 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "878bdfd4e45582d16892dbd2833b2f7913fdf78169262d662761c399686a5bdb"
+   "sha256": "7b2698d794064755e7726040d1e25fc8a93c79df4e2679fc559c860839a46dfb"
   },
   {
    "path": "cast/index.html",
-   "sha256": "e119aa7d41a1261fbba433df67fcaafcb294b97715755aad115516b0c98c47f4"
+   "sha256": "cdbe3e12c9fc7590fdd7babc051ca464c186ab5bc0e3f5e24fa11067d0c2005a"
   },
   {
    "path": "company/index.html",
-   "sha256": "bce1cfefebc21f46f97380be3af7e2af2b275b48f32558ee9d4334424d5462b0"
+   "sha256": "0d952372f51205d019ddbd3619348a049c40340e3c7a0084630b11073ce4ca88"
   },
   {
    "path": "coupon/index.html",
-   "sha256": "29a4b79de33633dd542292d03bd74b6ebe7f31d62a8476100e4f6396e4bbe792"
+   "sha256": "2805ae1a16a02c87293e0b5b4ca05f85e8d37bc9ad40329b1189ca36d9da9134"
   },
   {
    "path": "faq/index.html",
-   "sha256": "2aa566eb8aab7d6ea9ac50954e96ad1db6aa35e4f6f12d6a119434a28957306e"
+   "sha256": "bd313ed63b863ee782bfcfb29350292847d1ecd949df95484f4aa039493ec250"
+  },
+  {
+   "path": "favicon.ico",
+   "sha256": "6a0cd74431e3f887f74b8ffb6f4eb074e24cd65106ef86efd323415aff2408c4"
+  },
+  {
+   "path": "fc/apple-touch-icon.png",
+   "sha256": "ce589bc3ddfc86d2e0063bd67f589ddeb6fedc3c6742c4e93ea67310d50f541c"
+  },
+  {
+   "path": "fc/favicon-32.png",
+   "sha256": "d19cd4461335ca55eb17a56c2560e9c4cf1f44dbcaa8f7a07bd811e1d35fd33f"
+  },
+  {
+   "path": "fc/icon-192.png",
+   "sha256": "02685907fde5001418988f2a44dc615064b8ef6d32359004bce63a1d05001159"
+  },
+  {
+   "path": "fc/icon-512.png",
+   "sha256": "190bb8e67ab3f059830e6e708800bf024ec03ac30f459fe22467238a392b881f"
   },
   {
    "path": "fc/style.css",
@@ -26,7 +46,7 @@
   },
   {
    "path": "first/index.html",
-   "sha256": "20aeb429b2475beec8bd218650bd8b0f037755fb09338e058d56b1dcc5d03d9b"
+   "sha256": "d64b4d983f26f0016d5f1f6e403d8b24fcd8c4d97756d1f7fbbe667359f01272"
   },
   {
    "path": "google0cfa36e6cfb51b13.html",
@@ -34,15 +54,15 @@
   },
   {
    "path": "hair-care-40-50/index.html",
-   "sha256": "1222adc9a3cb0c3c02e3707358546f98ae6f00b55ce1794f664114278ad6569e"
+   "sha256": "1778b32ac20be394ebc323d6d5b399c7573c849e6d4981ac1f8d321365182f7f"
   },
   {
    "path": "headspa/index.html",
-   "sha256": "7dfdc8369ee5dfd8604bfd9b7099dad89a2b763b25c9094213eb8f355a267e5e"
+   "sha256": "6a13e4d9c0dd8688eaecca704836a17585b2ec8c7f059996c32afd1c4ae59dda"
   },
   {
    "path": "index.html",
-   "sha256": "e1c4514d91b4b9ddf13492142976b00cc2d6ba88f6af797e392a42530d274177"
+   "sha256": "91aa68518b6cbbad84b0e8a97cd3be6cae0ae19d53f11ef7baef7a65410196d9"
   },
   {
    "path": "llms.txt",
@@ -50,23 +70,23 @@
   },
   {
    "path": "menu/index.html",
-   "sha256": "f167d8fa24ba6152c70413b30de2a8c363133a4c38e2ad0683966efdd005eae3"
+   "sha256": "2cf17e3ecdc7c7f513d9d1409e2a537961ac055375ccedd27d6c403f72188d45"
   },
   {
    "path": "privacy/index.html",
-   "sha256": "c3f98cc1273320ebd0c1bad84c7d4e3c8519cb4b64bcdebc044b69060ee8ce85"
+   "sha256": "50460baa866df87767be7b6d1f81507f0f26cc58bcdca30f5b2f10a86f27d983"
   },
   {
    "path": "salon-blog/headspa-shampoo-kukan/index.html",
-   "sha256": "ffba801ce02d1d501f5854ce52ac89a9b17b3fe6ec3dd71719226f706dd6c93f"
+   "sha256": "ce80ac875d7a4487d31f8e08264905f63bc51755fca368d8f5cdf17b7601c25f"
   },
   {
    "path": "salon-blog/index.html",
-   "sha256": "306240d489f450b093e20cff2c2c5695f2cc5126b09826753867eb583509b4c8"
+   "sha256": "4c95f6060e6a05ee89e26dfcabae0dfbb51de8853fd8b9a83cc3b3ae5657d60f"
   },
   {
    "path": "salon-blog/kyugyobi-2026-11-12/index.html",
-   "sha256": "9009028f386e6d7efff590ede7261684bf22198e03a2824f00557204e4a7af31"
+   "sha256": "535b9ce124b6b675745ec0aeeec54836d64b8744074696d1ece1bbcb9077e77c"
   },
   {
    "path": "sitemap-fc.xml",
@@ -74,7 +94,7 @@
   },
   {
    "path": "voice/index.html",
-   "sha256": "188b3c33989526bf72bb5a94c262ac2c45df62ac538d4d67255b4d035c893722"
+   "sha256": "42383cd52b9be3c2f554f4adaa652bcb0f1c8ddb93a6168b52c885424cec2e72"
   }
  ]
 }

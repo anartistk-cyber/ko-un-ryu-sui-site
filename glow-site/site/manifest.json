@@ -2,19 +2,39 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "09f1151ea534254038e6848eeab92b9d05c53090fa8f870f579b75b85a1c28f0"
+   "sha256": "6f23e541e1203f9e2c449f6df87050a752006c9ded74bd833809c1f9ca156520"
   },
   {
    "path": "coupon/index.html",
-   "sha256": "2497fe1097516dc187858c689f7805e87866845ef52ffc1cfbca36ae77e6cdb1"
+   "sha256": "4abb9e992190c3b283e4a09d07eb401d7c77b9195161884d4bb625ecc2bdd83c"
   },
   {
    "path": "faq/index.html",
-   "sha256": "5a3eed8ce99ba22e80ffb9bb511ee95ea54cada407df8a85071796b8e3b60a55"
+   "sha256": "159220c42614be09b92e631c7a404b957823e3cb62bc123496bdcfab43cfc964"
+  },
+  {
+   "path": "favicon.ico",
+   "sha256": "90b5537dbc3e6588dcc88027a7adb060ebdf9ad065dd60403cfa285eacb2f716"
   },
   {
    "path": "first/index.html",
-   "sha256": "1194a9004bff0b3f86e8b644ca75cdd56c0195f71f715fd1f9425ca351e337d0"
+   "sha256": "0fa84380da41925937fad5dbbd15a0708296e74d564ed68faf786696fa3e3cae"
+  },
+  {
+   "path": "gl/apple-touch-icon.png",
+   "sha256": "ea761ac01c6091ca903478a7650b45ac04a26bedb8cf5952a476c31e22fe33d7"
+  },
+  {
+   "path": "gl/favicon-32.png",
+   "sha256": "ef246cc1dc99842e085d6af9e91e96dc4237aaf2b986a3c422c0edb3ff66e705"
+  },
+  {
+   "path": "gl/icon-192.png",
+   "sha256": "37ae1d7b062482dbfc2c3011318e663950da1b5db7388bc7fbbe221cc79ea0eb"
+  },
+  {
+   "path": "gl/icon-512.png",
+   "sha256": "6dd2fce3c70d73d54a16fa9b7044c8e9b9900af0fa7cf49eb6a996f57f2786e1"
   },
   {
    "path": "gl/style.css",
@@ -22,27 +42,27 @@
   },
   {
    "path": "headspa/index.html",
-   "sha256": "a1ec446baaa1ce2d5790d3740932e0d307da1579b513cb4c2d5c5be3d2dca041"
+   "sha256": "18298f0da3515389a19d6cf3e51624b133d87aaf7adf3eb32ff912696bdd7e62"
   },
   {
    "path": "index.html",
-   "sha256": "712a94818f393050c0ab38ac7235dc822c5a1057e873f38de81ddc0def1b2386"
+   "sha256": "8f49a01001d33c2c949faf258c333966a04f9e03b1261bc5221af9d153895935"
   },
   {
    "path": "journal/access-parking/index.html",
-   "sha256": "79cda114e3d257851b06ba0a5d4e400ab60e726265fc6298a6824c390f91ef4a"
+   "sha256": "028e6f24c57728f8bfd70f8c647a45d5372370647ee1188b22d76210c6801d0a"
   },
   {
    "path": "journal/first-salon-counseling/index.html",
-   "sha256": "408ea8b5cdbab9eb7d8399dfe7649fc6240fb411759950b2bc87d61a56d17e90"
+   "sha256": "b54c2723c19267ba4cc6ccd3a99bdee4b1b9e4b01eeb9d5f69fc7dba22f3528e"
   },
   {
    "path": "journal/index.html",
-   "sha256": "874f2ab5ed7168a24d58b7a090ead80721dc8fb9e118a9b14e1a492a256428e0"
+   "sha256": "03baf263c39dfa6b991334062a076cd11a1d95763f2cd6373893147456a384a7"
   },
   {
    "path": "journal/sugao-care-young/index.html",
-   "sha256": "17e61a25ecc4306550703dabb551ed6a7845b107aa5daf3795e4d10e7d2d2aa8"
+   "sha256": "a9e4b1537c66e3b9f233e1ebf807b6569313ab9f16c2732f5103015f3b9f59f7"
   },
   {
    "path": "llms.txt",
@@ -50,11 +70,11 @@
   },
   {
    "path": "menu/index.html",
-   "sha256": "d38132b1cf231386cc5246ffa662a7af0866f225d88e9816659fef6688ea4267"
+   "sha256": "8545e26d43d70d6ebaf716309aa8ff1d4701cd5cb036c647f9ba5c98cd1f0276"
   },
   {
    "path": "privacy/index.html",
-   "sha256": "ca609757bfec0fe0e4a00b82d48fa797e895a0790968bd99c9126ef9424f5f80"
+   "sha256": "2012b82c7c7f728b4c236345afc2f4ddd2f4a17b18a05f78c655244cf3d68123"
   },
   {
    "path": "robots.txt",
@@ -62,7 +82,7 @@
   },
   {
    "path": "short-perm/index.html",
-   "sha256": "993218c8c85c8ce99d1920cfee63dba40e1d227cfa213aa2589e1bf73e693e18"
+   "sha256": "3301a5a8075e84f51adaa796b9e7318b16725dfd47e3d8105ae6e8b5f07d4abf"
   },
   {
    "path": "sitemap-gl.xml",
@@ -70,11 +90,11 @@
   },
   {
    "path": "voice/index.html",
-   "sha256": "d9c157a66c55c12b3a7d5dbcf13258edabfe4aa462f86d321b549afbd5b617a4"
+   "sha256": "78b0f8b35e823a3593d782c47589a98c4bc98ffa552a4ab15313d45750155495"
   },
   {
    "path": "young/index.html",
-   "sha256": "8e3e54e71ab5c6f91ad5e1ec5edfc3afca0077ede1dc200854b0cc3e6e08cbab"
+   "sha256": "a58f490db485bfcc855ac7dd5d1a029a5de1fe397235e0b07d3db20e33ac1661"
   }
  ]
 }
