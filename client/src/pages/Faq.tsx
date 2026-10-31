@@ -3,8 +3,8 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 import { SubPage, LINE_URL } from "../components/SubPage";
 import { faqItems } from "../data/faq";
 
-const TITLE = "美容師求人のよくある質問｜給与・休み・見学・教育｜泉大津｜FLOW CLOUD・glow";
-const DESC = "泉大津のFLOW CLOUD・glowの採用に関するよくある質問。給与の内訳、年間休日・有給、社会保険、見学・体験、練習時間、通勤エリアなど、応募前の疑問にお答えします。";
+const TITLE = "美容師求人のよくある質問｜給与・休み・見学・教育｜泉大津｜FLOWCLOUD・glow";
+const DESC = "泉大津のFLOWCLOUD・glowの採用に関するよくある質問。給与の内訳、年間休日・有給、社会保険、見学・体験、練習時間、通勤エリアなど、応募前の疑問にお答えします。";
 
 export default function Faq() {
   // 回答の本文（画面に出ているテキスト）から FAQPage 構造化データを組み立てる
@@ -24,7 +24,7 @@ export default function Faq() {
       <main className="job-detail-main">
         <section className="faq-section section" aria-labelledby="faq-page-title">
           <div className="faq-heading"><h1 id="faq-page-title">美容師求人のよくある質問</h1>
-            <p>泉大津の美容室FLOW CLOUD・glowへの応募前に、よく聞かれることをまとめました。ここにない疑問も、見学・相談で気軽にご確認ください。</p></div>
+            <p>泉大津の美容室FLOWCLOUD・glowへの応募前に、よく聞かれることをまとめました。ここにない疑問も、見学・相談で気軽にご確認ください。</p></div>
           <div className="faq-list">
             {faqItems.map(([q, a]) => (
               <details key={q} data-faq-item>

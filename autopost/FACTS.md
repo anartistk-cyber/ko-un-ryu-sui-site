@@ -3,12 +3,12 @@
 
 ## 会社・店舗
 - 株式会社行雲流水（代表取締役 藤津一弥、設立2020年4月1日）。大阪府泉大津市。
-- FLOW CLOUD：泉大津市東雲町1-20（南海本線 泉大津駅から徒歩約3分）／glow：泉大津市旭町18-3 いずみおおつCITY 1F（泉大津駅東口から徒歩約1分）。
+- FLOWCLOUD：泉大津市東雲町1-20（南海本線 泉大津駅から徒歩約3分）／glow：泉大津市旭町18-3 いずみおおつCITY 1F（泉大津駅東口から徒歩約1分）。
 - 問い合わせ：info@ko-un-ryu-sui.com／公式LINE https://lin.ee/Z0JP8sH／TEL 0725-90-5699
 - Instagram：@ko_un_ryu_sui.recruit（採用）、@flowcloud_osaka、@glow_.osaka
 ## 募集
 - 2027年度 新卒美容師3名募集（年度・人数・募集状態は年度により異なる）。中途スタイリスト・パート・美容学生アルバイトも。
-- 学生アルバイト：対象 高校1年生〜専門学校2年生／勤務先 FLOW CLOUD・glow／最低 月1回。
+- 学生アルバイト：対象 高校1年生〜専門学校2年生／勤務先 FLOWCLOUD・glow／最低 月1回。
 - 応募資格：美容師免許（取得見込みを含む）。選考は「見学→面接→採用」、提出書類は履歴書。説明会・採用試験は体験会参加者が対象。
 ## 条件
 - 新卒月給27万円（基本給24万円＋固定残業代3万円〈15時間分〉、超過分は別途）。スタイリスト以上は固定残業50,000円（25時間分）。
@@ -24,4 +24,4 @@
 - スタッフの発言・体験談・口コミの創作、実在しない実績・数字・順位、他社比較での断定、「必ず」「絶対」「業界No.1」等の断定、給与の保証、未確認の通勤時間。
 - 個人名・顔写真（スタッフ個人の写真は使わない。使ってよい写真は下記のみ）。
 ## 使ってよい写真（/images/ 配下）
-flow-cloud-exterior_9a36efba.jpg（FLOW CLOUD外観）／flow-cloud-interior_15a0524c.jpg（FLOW CLOUD店内）／glow-salon-interior_768ab430.jpg（glow店内）／glow-reception_7c41b63c.jpg（glow受付）／shampoo-booth_bce574f7.jpg（シャンプーブース）／training-salon_b2a51844.jpg（研修）／team-meeting_f47f2a94.jpg（ミーティング）／team-event_287a856c.jpg（チームイベント）／gallery-salonwork.jpg（サロンワーク）／gallery-exterior.jpg（夜の外観）
+flow-cloud-exterior_9a36efba.jpg（FLOWCLOUD外観）／flow-cloud-interior_15a0524c.jpg（FLOWCLOUD店内）／glow-salon-interior_768ab430.jpg（glow店内）／glow-reception_7c41b63c.jpg（glow受付）／shampoo-booth_bce574f7.jpg（シャンプーブース）／training-salon_b2a51844.jpg（研修）／team-meeting_f47f2a94.jpg（ミーティング）／team-event_287a856c.jpg（チームイベント）／gallery-salonwork.jpg（サロンワーク）／gallery-exterior.jpg（夜の外観）

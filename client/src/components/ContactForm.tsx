@@ -157,7 +157,7 @@ export function ContactForm() {
         <div className="contact-form-grid">
         <label>フリガナ <em>任意</em><input name="kana" type="text" autoComplete="off" placeholder="例）ヤマダ ハナコ" /></label>
         <label>希望店舗 <em>任意</em>
-          <select name="salon" defaultValue=""><option value="">未選択</option><option value="flowcloud">FLOW CLOUD</option><option value="glow">glow</option><option value="consult">相談したい</option></select></label>
+          <select name="salon" defaultValue=""><option value="">未選択</option><option value="flowcloud">FLOWCLOUD</option><option value="glow">glow</option><option value="consult">相談したい</option></select></label>
         {student && <label>学校名・卒業予定 <em>任意</em><input name="school" type="text" autoComplete="off" placeholder="後日の確認でもかまいません" /></label>}
         <fieldset className="form-contact-set">
           <legend>希望日時 <em>任意</em>（決まっていなければ空欄で相談できます）</legend>

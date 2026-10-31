@@ -45,7 +45,7 @@ const locations = [
 const salonSection = (extra?: ReactNode): Section => ({
   h: "勤務地",
   body: <>
-    <p><strong>FLOW CLOUD</strong>：大阪府泉大津市東雲町1-20、南海本線 泉大津駅から徒歩約3分。</p>
+    <p><strong>FLOWCLOUD</strong>：大阪府泉大津市東雲町1-20、南海本線 泉大津駅から徒歩約3分。</p>
     <p><strong>glow</strong>：大阪府泉大津市旭町18-3 いずみおおつCITY 1F、南海本線 泉大津駅から徒歩約1分。</p>
     {extra ?? <p>配属・変更範囲：要相談</p>}
   </>,
@@ -54,9 +54,9 @@ const salonSection = (extra?: ReactNode): Section => ({
 const jobs: Record<JobType, JobData> = {
   stylist: {
     code: "stylist", number: "01", eyebrow: "HAIRDRESSER / STYLIST", title: "美容師スタイリスト",
-    h1: "泉大津の美容師・スタイリスト募集｜FLOW CLOUD・glow",
+    h1: "泉大津の美容師・スタイリスト募集｜FLOWCLOUD・glow",
     seoTitle: "美容師スタイリスト求人・正社員｜泉大津・岸和田・堺から通える｜行雲流水",
-    seoDesc: "泉大津の美容室FLOW CLOUD・glowのスタイリスト（美容師）求人。仕事内容、適用等級と給与、勤務時間、休日、応募条件を掲載。岸和田・堺・和泉からも通えます。見学・体験歓迎。",
+    seoDesc: "泉大津の美容室FLOWCLOUD・glowのスタイリスト（美容師）求人。仕事内容、適用等級と給与、勤務時間、休日、応募条件を掲載。岸和田・堺・和泉からも通えます。見学・体験歓迎。",
     lead: "今まで積み重ねた技術や接客を、次の職場で生かしたい方へ。お客様との関わり方、入社後の担当業務、給与と評価の条件をご案内します。転職で変えたいことも、これからも大切にしたいことも、お聞かせください。",
     salaryShort: "月給 290,000円〜（Jrスタイリスト）〜620,000円〜（アーティスト）",
     schedule: "シフト制／完全週休2日制",
@@ -75,7 +75,7 @@ const jobs: Record<JobType, JobData> = {
     extraCtas: [["体験と選考の流れを見る", "/blog/taiken-guide"]],
     closing: "給与の算定や担当業務について、確認してから応募したい方もご相談ください。",
     detailPath: "/jobs/stylist", employment: "正社員", employmentType: "FULL_TIME", salaryUnit: "MONTH", salaryMin: 290000,
-    jsonDesc: "<p>株式会社行雲流水が運営するFLOW CLOUD・glowで、美容師スタイリスト（正社員）を募集しています。</p><p>カウンセリング、カット、カラー、パーマ、シャンプー等の施術、予約管理、スタイル発信、備品管理、店内清掃を担当します。</p><p>月給は、Jrスタイリスト290,000円〜、スタイリスト320,000円〜、Topスタイリスト390,000円〜、Greatスタイリスト520,000円〜、アーティスト620,000円〜です。区分は指名技術売上等の条件によります。</p>",
+    jsonDesc: "<p>株式会社行雲流水が運営するFLOWCLOUD・glowで、美容師スタイリスト（正社員）を募集しています。</p><p>カウンセリング、カット、カラー、パーマ、シャンプー等の施術、予約管理、スタイル発信、備品管理、店内清掃を担当します。</p><p>月給は、Jrスタイリスト290,000円〜、スタイリスト320,000円〜、Topスタイリスト390,000円〜、Greatスタイリスト520,000円〜、アーティスト620,000円〜です。区分は指名技術売上等の条件によります。</p>",
     jsonQualifications: "美容師免許をお持ちの方（スタイリストとしての技術経験が必要です）。",
     jsonWorkHours: "シフト制（早番8:30〜17:30、遅番11:30〜20:30、休憩60分）、完全週休2日制。",
     related: [["教育の進め方を見る", "/blog/one-year-debut-curriculum"], ["早番・遅番の一日", "/blog/hayaban-osoban"], ["給与と手当の見方", "/blog/shoninkyu-teate"]],
@@ -84,7 +84,7 @@ const jobs: Record<JobType, JobData> = {
     code: "assistant", number: "02", eyebrow: "HAIRDRESSER / ASSISTANT", title: "美容師アシスタント",
     h1: "泉大津の美容師・アシスタント募集｜新卒・中途",
     seoTitle: "美容師アシスタント求人｜新卒・中途｜泉大津・南大阪・泉州｜行雲流水",
-    seoDesc: "泉大津の美容室FLOW CLOUD・glowのアシスタント（美容師）求人。仕事と教育の流れ、給与の内訳、勤務条件を掲載。新卒・中途それぞれの応募条件と、見学・体験の案内をご確認ください。",
+    seoDesc: "泉大津の美容室FLOWCLOUD・glowのアシスタント（美容師）求人。仕事と教育の流れ、給与の内訳、勤務条件を掲載。新卒・中途それぞれの応募条件と、見学・体験の案内をご確認ください。",
     lead: "美容師として学びながら、お客様の喜びにつながる仕事を増やしていく。基本となる技術や接客を学び、スタイリストを目指す方の募集です。これまでに身につけた技術がある方は、経験もお聞かせください。",
     salaryShort: "月給 270,000円〜",
     schedule: "シフト制／完全週休2日制",
@@ -92,14 +92,14 @@ const jobs: Record<JobType, JobData> = {
       { h: "2027年度の新卒募集", body: <p>2027年度の新卒美容師を3名募集しています。対象となる卒業時期・美容師免許の取得条件は、以下の募集要項をご確認ください。対象の卒業時期・入社時期・免許取得の条件は要相談です。</p> },
       { h: "給与", body: <p>月給27万円〜（基本給24万円＋固定残業代3万円・15時間分）。超過分は別途支給します。交通費または家賃補助（上限1万円）：どちらか一方・週4日以上勤務の方が対象・要相談。試用期間はなく、6か月の有期雇用として採用します。各手当：インスタ手当・集客手当・5ゴール手当・9キレイ手当・エンゲージメント手当・オール金賞手当（賞与）。支給条件は評価基準によります。</p> },
       { h: "教育について", body: <p>1年でのスタイリストデビューを目指すカリキュラムをご案内しています。デビュー時期は技術・接客の習得状況によって異なります。学ぶ内容、確認の基準、練習の時間と費用は、<Link href="/blog/one-year-debut-curriculum">教育の解説記事</Link>をご覧ください。</p> },
-      { h: "勤務・勤務地", body: <><p>早番8:30〜17:30、遅番11:30〜20:30、休憩60分。完全週休2日制です。勤務地はFLOW CLOUDまたはglow。</p><p>出勤前準備・練習は勤務時間内として扱います。配属：要相談</p><p><strong>FLOW CLOUD</strong>：泉大津市東雲町1-20（泉大津駅から徒歩約3分）／<strong>glow</strong>：泉大津市旭町18-3 いずみおおつCITY 1F（徒歩約1分）</p></> },
+      { h: "勤務・勤務地", body: <><p>早番8:30〜17:30、遅番11:30〜20:30、休憩60分。完全週休2日制です。勤務地はFLOWCLOUDまたはglow。</p><p>出勤前準備・練習は勤務時間内として扱います。配属：要相談</p><p><strong>FLOWCLOUD</strong>：泉大津市東雲町1-20（泉大津駅から徒歩約3分）／<strong>glow</strong>：泉大津市旭町18-3 いずみおおつCITY 1F（徒歩約1分）</p></> },
       { h: "応募条件と選考", body: <p>卒業・美容師免許取得見込みの条件は要相談です。中途アシスタントの方は経験と担当してきた仕事をお知らせください。体験参加を含む選考の内容は、<Link href="/blog/taiken-guide">体験ガイド</Link>でご案内しています。</p> },
     ],
     ctaLabel: "アシスタントとして応募・相談する",
     extraCtas: [["体験と選考の流れを見る", "/blog/taiken-guide"], ["教育の進め方を見る", "/blog/one-year-debut-curriculum"]],
     closing: "給与の内訳や教育について、確認してから応募したい方もご相談ください。",
     detailPath: "/jobs/assistant", employment: "正社員", employmentType: "FULL_TIME", salaryUnit: "MONTH", salaryMin: 270000,
-    jsonDesc: "<p>株式会社行雲流水が運営するFLOW CLOUD・glowで、美容師アシスタント（正社員）を募集しています。</p><p>サロン内施術アシスタント業務全般を担当し、基本となる技術や接客を学びます。月給は270,000円〜（固定残業15時間分を含み、超過分は別途支給）です。</p>",
+    jsonDesc: "<p>株式会社行雲流水が運営するFLOWCLOUD・glowで、美容師アシスタント（正社員）を募集しています。</p><p>サロン内施術アシスタント業務全般を担当し、基本となる技術や接客を学びます。月給は270,000円〜（固定残業15時間分を含み、超過分は別途支給）です。</p>",
     jsonQualifications: "美容師免許（取得見込みの方の条件は募集要項に記載）。",
     jsonWorkHours: "シフト制（早番8:30〜17:30、遅番11:30〜20:30、休憩60分）、完全週休2日制。",
     related: [["新卒案内を見る", "/recruit/newgrad"], ["早番・遅番の一日", "/blog/hayaban-osoban"]],
@@ -108,7 +108,7 @@ const jobs: Record<JobType, JobData> = {
     code: "part", number: "03", eyebrow: "HAIRDRESSER / PART-TIME", title: "パート美容師",
     h1: "泉大津の美容師パート募集｜子育て・復帰を考えている方へ",
     seoTitle: "美容師パート求人｜子育て・復職の相談｜泉大津・岸和田・堺｜行雲流水",
-    seoDesc: "泉大津の美容室FLOW CLOUD・glowのパート・アルバイト美容師求人。勤務できる曜日や時間から働き方を選べます。時給、勤務条件、技術確認、応募方法をご案内。ブランクのある方も相談可。",
+    seoDesc: "泉大津の美容室FLOWCLOUD・glowのパート・アルバイト美容師求人。勤務できる曜日や時間から働き方を選べます。時給、勤務条件、技術確認、応募方法をご案内。ブランクのある方も相談可。",
     lead: "美容師の仕事を、今の暮らしに合う形で続けたい。子育てや家庭の予定に合わせて働きたい。まずは、勤務できる曜日と時間をお知らせください。現在の募集条件と照らして、お話しします。",
     salaryShort: "時給 1,600円〜（Jrスタイリスト）／1,800円〜（スタイリスト）",
     schedule: "シフト制／曜日・時間はご相談",
@@ -116,14 +116,14 @@ const jobs: Record<JobType, JobData> = {
       { h: "募集する職種と時給", body: <><ul><li>Jrスタイリスト：時給1,600円〜</li><li>スタイリスト：時給1,800円〜</li></ul><p>適用区分と昇給の条件：評価基準によります。歩合・手当：評価基準によります。</p></> },
       { h: "働ける条件を、先に確かめる", body: <p>勤務できる日数・時間帯、土日祝の勤務、扶養内勤務は、ご希望をうかがって要相談です。シフト希望の提出は会社へ、3か月前に行います。急な欠勤時の連絡は各店舗へお願いします。</p> },
       { h: "ブランクのある方へ", body: <p>これまで経験した技術と、不安に感じていることをお聞かせください。担当できる業務と、確認・練習が必要な業務を整理します。復帰時の技術確認と研修の条件は要相談です。</p> },
-      { h: "勤務地", body: <><p>FLOW CLOUD（泉大津市東雲町1-20）またはglow（泉大津市旭町18-3 いずみおおつCITY 1F）。</p><p>店舗ごとの募集状況：年度により異なります</p></> },
+      { h: "勤務地", body: <><p>FLOWCLOUD（泉大津市東雲町1-20）またはglow（泉大津市旭町18-3 いずみおおつCITY 1F）。</p><p>店舗ごとの募集状況：年度により異なります</p></> },
       { h: "応募条件", body: <p>美容師免許をお持ちの方。ブランクのある方・育児中の方も相談できます。</p> },
     ],
     ctaLabel: "パートの働き方を相談する",
     extraCtas: [["体験と選考の流れを見る", "/blog/taiken-guide"]],
     closing: "曜日や時間によっては、ご希望に沿えない場合もあります。入社後の行き違いを減らすため、条件を一つずつ確かめていきましょう。",
     detailPath: "/jobs/part", employment: "パート", employmentType: "PART_TIME", salaryUnit: "HOUR", salaryMin: 1600,
-    jsonDesc: "<p>株式会社行雲流水が運営するFLOW CLOUD・glowで、パートの美容師（Jrスタイリスト・スタイリスト）を募集しています。</p><p>時給は、Jrスタイリスト1,600円〜、スタイリスト1,800円〜です。勤務できる曜日・時間帯はご相談ください。</p>",
+    jsonDesc: "<p>株式会社行雲流水が運営するFLOWCLOUD・glowで、パートの美容師（Jrスタイリスト・スタイリスト）を募集しています。</p><p>時給は、Jrスタイリスト1,600円〜、スタイリスト1,800円〜です。勤務できる曜日・時間帯はご相談ください。</p>",
     jsonQualifications: "美容師免許をお持ちの方。ブランクのある方・育児中の方も相談できます。",
     jsonWorkHours: "シフト制（曜日・時間帯はご相談ください）。",
     related: [["復職・両立のご相談", "/?c=part#contact"], ["早番・遅番の一日", "/blog/hayaban-osoban"]],
@@ -131,8 +131,8 @@ const jobs: Record<JobType, JobData> = {
   student: {
     code: "student", number: "04", eyebrow: "BEAUTY STUDENT / PART-TIME", title: "美容学生アルバイト",
     h1: "泉大津の美容学生アルバイト募集｜仕事を知る、一歩目に",
-    seoTitle: "美容学生・高校生アルバイト求人｜泉大津・南大阪｜FLOW CLOUD・glow",
-    seoDesc: "泉大津の美容室FLOW CLOUD・glowの美容学生・高校生向けアルバイト求人。担当する補助業務、時給、勤務日数、学校との調整、応募の流れをご案内。まずは見学・体験から。",
+    seoTitle: "美容学生・高校生アルバイト求人｜泉大津・南大阪｜FLOWCLOUD・glow",
+    seoDesc: "泉大津の美容室FLOWCLOUD・glowの美容学生・高校生向けアルバイト求人。担当する補助業務、時給、勤務日数、学校との調整、応募の流れをご案内。まずは見学・体験から。",
     lead: "学校で学ぶ美容と、実際のサロンの仕事をつなげてみませんか。お客様への声のかけ方、道具の準備、スタッフ同士の連携。働く現場を知りながら、卒業後の進路も考えられます。",
     salaryShort: "時給 1,300円〜",
     schedule: "学校の予定に合わせて相談",
@@ -146,7 +146,7 @@ const jobs: Record<JobType, JobData> = {
     extraCtas: [["2027年度の新卒募集を見る", "/recruit/newgrad"], ["学生アルバイトの詳しい働き方を見る", "/blog/student-baito"]],
     closing: "勤務できる曜日と時間、サロンで知りたいことをお聞かせください。",
     detailPath: "/jobs/student", employment: "アルバイト", employmentType: "PART_TIME", salaryUnit: "HOUR", salaryMin: 1300,
-    jsonDesc: "<p>株式会社行雲流水が運営するFLOW CLOUD・glowで、美容師を目指す学生アルバイトを募集しています。</p><p>店内の清掃・準備などの補助業務を担当します。時給は1,300円〜です。</p>",
+    jsonDesc: "<p>株式会社行雲流水が運営するFLOWCLOUD・glowで、美容師を目指す学生アルバイトを募集しています。</p><p>店内の清掃・準備などの補助業務を担当します。時給は1,300円〜です。</p>",
     jsonQualifications: "美容系を目指す学生の方（対象課程・学年は募集要項に記載）。美容師免許は不要です。",
     jsonWorkHours: "学校の予定に合わせて相談できます。",
     related: [["新卒案内を見る", "/recruit/newgrad"]],
@@ -260,7 +260,7 @@ export default function JobPosting({ type }: { type: JobType }) {
         </div>
       </section>
 
-      <footer className="privacy-footer"><span>© KOUNRYUSUI CO., LTD.</span><span className="sub-official"><a href="https://www.flowcloud.net/" target="_blank" rel="noreferrer">FLOW CLOUD公式サイト</a><a href="https://glow-izumiotsu.jp/" target="_blank" rel="noreferrer">glow公式サイト</a><Link href="/">採用トップ</Link></span></footer>
+      <footer className="privacy-footer"><span>© KOUNRYUSUI CO., LTD.</span><span className="sub-official"><a href="https://www.flowcloud.net/" target="_blank" rel="noreferrer">FLOWCLOUD公式サイト</a><a href="https://glow-izumiotsu.jp/" target="_blank" rel="noreferrer">glow公式サイト</a><Link href="/">採用トップ</Link></span></footer>
     </div>
   );
 }

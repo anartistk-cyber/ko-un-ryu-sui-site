@@ -3,7 +3,7 @@ import { Link } from "wouter";
 
 export default function NotFound() {
   useEffect(() => {
-    document.title = "ページが見つかりません｜FLOW CLOUD・glow 採用サイト";
+    document.title = "ページが見つかりません｜FLOWCLOUD・glow 採用サイト";
     document.querySelector<HTMLMetaElement>('meta[name="robots"]')?.setAttribute("content", "noindex");
     document.querySelector('link[rel="canonical"]')?.remove();
     document.querySelector('meta[property="og:url"]')?.remove();

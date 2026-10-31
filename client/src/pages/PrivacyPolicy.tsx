@@ -66,7 +66,7 @@ export default function PrivacyPolicy() {
         <p className="privacy-updated">事業者：株式会社行雲流水／所在地：大阪府泉大津市東雲町1-20／制定日：2026年10月30日／改定日：2026年10月30日</p>
       </main>
 
-      <footer className="privacy-footer"><span>© KOUNRYUSUI CO., LTD.</span><Link href="/">FLOW CLOUD / glow RECRUITMENT SITE</Link></footer>
+      <footer className="privacy-footer"><span>© KOUNRYUSUI CO., LTD.</span><Link href="/">FLOWCLOUD / glow RECRUITMENT SITE</Link></footer>
     </div>
   );
 }

@@ -19,7 +19,7 @@ export const posts: Post[] = [
   {
     slug: "taiken-guide",
     title: "サロン見学・体験から選考まで。申込み前に分かること",
-    seoTitle: "見学・体験から選考まで｜FLOW CLOUD・glow 採用",
+    seoTitle: "見学・体験から選考まで｜FLOWCLOUD・glow 採用",
     seoDesc: "体験の内容、所要時間と費用、選考との関係、申込みから当日までの流れをご確認いただけます。",
     date: "2026-10-29", category: "見学・体験",
     excerpt: "見学・スタッフ体験・施術体験の違いと、選考との関係を確認できます。",

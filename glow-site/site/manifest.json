@@ -2,7 +2,7 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "185d751e7bc23d9b4c41d4dac36f68388e0021b7d5c6a9293111b16c8ceb8ab2"
+   "sha256": "09f1151ea534254038e6848eeab92b9d05c53090fa8f870f579b75b85a1c28f0"
   },
   {
    "path": "coupon/index.html",
@@ -26,7 +26,7 @@
   },
   {
    "path": "index.html",
-   "sha256": "33adea0abb9f97cc9f6c91e026b7dd81e417974ce01f9201e3c5d346afbe2168"
+   "sha256": "712a94818f393050c0ab38ac7235dc822c5a1057e873f38de81ddc0def1b2386"
   },
   {
    "path": "journal/access-parking/index.html",
@@ -66,7 +66,7 @@
   },
   {
    "path": "sitemap-gl.xml",
-   "sha256": "38f567f17e246191ceaaf28fe35305e268c5beefdf48ec715857ff40999d6d42"
+   "sha256": "afe05620b3b0afc319412ecada98afa4ad8fb0be69278773e96d3b25dc92f341"
   },
   {
    "path": "voice/index.html",

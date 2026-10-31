@@ -38,7 +38,7 @@ const galleryPhotos: [string, string, string][] = [
   ["/images/gallery-salonwork.jpg", "サロンで施術とレッスンをしているスタッフ", "サロンワークの様子"],
   ["/images/gallery-award.jpg", "表彰状を手に笑顔の女性スタッフ2名", "がんばりは、ちゃんと表彰します"],
   ["/images/gallery-dinner.jpg", "テーブルを囲んで食事会を楽しむスタッフ", "みんなで食事会も"],
-  ["/images/gallery-exterior.jpg", "夜のFLOW CLOUD前に集まったスタッフ全員", "FLOW CLOUDの前で、みんなで"],
+  ["/images/gallery-exterior.jpg", "夜のFLOWCLOUD前に集まったスタッフ全員", "FLOWCLOUDの前で、みんなで"],
   ["/images/gallery-lesson-cut.jpg", "鏡の前でカットのレッスンを受けるスタッフと、そばで見守る先輩", "技術レッスンは、先輩がそばで見守ります"],
   ["/images/gallery-lesson-wig.jpg", "ウィッグを使ってカットを練習するスタッフ", "ウィッグでカットの練習"],
   ["/images/gallery-lesson-counsel.jpg", "お客様役の相手にヘアの確認をするスタッフ", "接客・カウンセリングの練習"],
@@ -53,12 +53,12 @@ const glowReceptionPhoto = "/images/glow-reception_7c41b63c.jpg";
 const flowCloudReel = "/images/flow-cloud-reel_3a97b205.mp4";
 const glowReel = "/images/glow-reel_752e5127.mp4";
 const lineHref = "https://lin.ee/Z0JP8sH";
-const seoTitle = "泉大津の美容師求人｜岸和田・堺・和泉から通える｜新卒・中途・学生｜FLOW CLOUD・glow";
-const seoDescription = "大阪府泉大津市の美容室FLOW CLOUD・glowの採用サイト。南大阪・泉州（岸和田・高石・和泉・堺・泉佐野・貝塚）から通える美容師求人。美容学生・高校生・新卒・中途・復職の方へ、募集条件と見学・体験をご案内します。";
+const seoTitle = "泉大津の美容師求人｜岸和田・堺・和泉から通える｜新卒・中途・学生｜FLOWCLOUD・glow";
+const seoDescription = "大阪府泉大津市の美容室FLOWCLOUD・glowの採用サイト。南大阪・泉州（岸和田・高石・和泉・堺・泉佐野・貝塚）から通える美容師求人。美容学生・高校生・新卒・中途・復職の方へ、募集条件と見学・体験をご案内します。";
 
 const instaAccounts = [
   { name: "行雲流水 採用", handle: "ko_un_ryu_sui.recruit" },
-  { name: "FLOW CLOUD", handle: "flowcloud_osaka" },
+  { name: "FLOWCLOUD", handle: "flowcloud_osaka" },
   { name: "glow", handle: "glow_.osaka" },
 ];
 
@@ -78,7 +78,7 @@ const navItems = [
 
 const commonRows = [
   ["応募資格", "美容師免許（取得見込みを含む）。必要経験：なし。"],
-  ["勤務地", <>FLOW CLOUD（泉大津駅徒歩約3分）／glow（泉大津駅徒歩約1分）。配属・仕事内容の変更の範囲：要相談</>],
+  ["勤務地", <>FLOWCLOUD（泉大津駅徒歩約3分）／glow（泉大津駅徒歩約1分）。配属・仕事内容の変更の範囲：要相談</>],
   ["雇用形態", "正社員"],
 ];
 const commonTail = [
@@ -156,7 +156,7 @@ const eventRows = [
 ];
 
 const historyRows = [
-  ["2007年11月", "代表・藤津が、日本で一番面積の小さい町・泉北郡忠岡町に、10坪の完全予約制プライベートサロン「FLOW CLOUD」を開業"],
+  ["2007年11月", "代表・藤津が、日本で一番面積の小さい町・泉北郡忠岡町に、10坪の完全予約制プライベートサロン「FLOWCLOUD」を開業"],
   ["2015年4月", "髪質改善『シスキュア』開発"],
   ["2018年4月", "泉大津へ拡張移転"],
   ["2018年5月", "学生アルバイト採用開始"],
@@ -169,7 +169,7 @@ const historyRows = [
 
 const googleBusinessUrl = "https://share.google/wWE2XkDrLOjj8NAit";
 const salonMaps = [
-  { name: "FLOW CLOUD", addr: "大阪府泉大津市東雲町1-20", walk: "南海本線・泉大津駅から徒歩約3分", q: "FLOW CLOUD 大阪府泉大津市東雲町1-20", site: "https://www.flowcloud.net/" },
+  { name: "FLOWCLOUD", addr: "大阪府泉大津市東雲町1-20", walk: "南海本線・泉大津駅から徒歩約3分", q: "FLOWCLOUD 大阪府泉大津市東雲町1-20", site: "https://www.flowcloud.net/" },
   { name: "glow", addr: "大阪府泉大津市旭町18-3 いずみおおつCITY 1F", walk: "南海本線・泉大津駅東口から徒歩約1分", q: "glow 大阪府泉大津市旭町18-3 いずみおおつCITY", site: "https://glow-izumiotsu.jp/" },
 ];
 
@@ -178,9 +178,9 @@ const companyRows = [
   ["代表取締役", "藤津 一弥"],
   ["設立", "2020年4月1日"],
   ["資本金", "100万円"],
-  ["電話", "0725-90-5699（FLOW CLOUD）"],
+  ["電話", "0725-90-5699（FLOWCLOUD）"],
   ["メール", "info@ko-un-ryu-sui.com"],
-  ["アクセス", "南海本線 泉大津駅。FLOW CLOUDは徒歩約3分、glowは徒歩約1分（地図は「店舗へのアクセス」をご覧ください）。"],
+  ["アクセス", "南海本線 泉大津駅。FLOWCLOUDは徒歩約3分、glowは徒歩約1分（地図は「店舗へのアクセス」をご覧ください）。"],
   ["理念", "Mission：らしさを輝かせる／Value：幸せ体験／Vision：幸せの環をつなぐ。2034年「らしさ輝く街創り」を目指しています。"],
   ["人事・教育の考え方", "人事理念「圧倒的当事者意識」／教育理念「人を想う可能思考」。感謝心・素直心・向上心を基礎に、人間力・接遇力・技術力を磨きます。"],
 ];
@@ -285,7 +285,7 @@ export default function Home() {
 
   return (
     <div className="site-shell" onClick={trackClick}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"岸和田・堺・和泉など、泉大津以外から通えますか。\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"勤務地は泉大津市のFLOW CLOUDとglowです。岸和田・高石・和泉・堺・泉佐野・貝塚など南大阪・泉州エリアから通う方も、お住まいと通勤手段を伺って一緒に確認します。\"}}, {\"@type\": \"Question\", \"name\": \"どの美容専門学校の学生でも相談できますか。\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"学校名は問いません。通信課程など対象か分からない場合も、お問い合わせください。\"}}, {\"@type\": \"Question\", \"name\": \"年間休日と有給休暇はどうなりますか。\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"年間休日は104日、年末年始休暇は4日です。年次有給休暇は入社6か月以降に10日〜付与され、合計の年間休日は118日〜になります。\"}}, {\"@type\": \"Question\", \"name\": \"社会保険はありますか。\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"社会保険完備です（健康保険〈介護保険を含む〉、厚生年金保険、雇用保険、労災保険）。\"}}, {\"@type\": \"Question\", \"name\": \"給与に残業代は含まれますか。\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"コンシェルジュ（月給270,000円）は、基本給240,000円＋固定残業代30,000円（15時間分）で、超過分は別途支給します。\"}}, {\"@type\": \"Question\", \"name\": \"試用期間はありますか。\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"正社員の募集では試用期間はなく、6か月の有期雇用として採用します。\"}}, {\"@type\": \"Question\", \"name\": \"応募前にサロンを見学できますか。\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"サロン見学・相談を受け付けています。公式LINEまたはメールフォームからご連絡ください。\"}}]}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"岸和田・堺・和泉など、泉大津以外から通えますか。\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"勤務地は泉大津市のFLOWCLOUDとglowです。岸和田・高石・和泉・堺・泉佐野・貝塚など南大阪・泉州エリアから通う方も、お住まいと通勤手段を伺って一緒に確認します。\"}}, {\"@type\": \"Question\", \"name\": \"どの美容専門学校の学生でも相談できますか。\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"学校名は問いません。通信課程など対象か分からない場合も、お問い合わせください。\"}}, {\"@type\": \"Question\", \"name\": \"年間休日と有給休暇はどうなりますか。\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"年間休日は104日、年末年始休暇は4日です。年次有給休暇は入社6か月以降に10日〜付与され、合計の年間休日は118日〜になります。\"}}, {\"@type\": \"Question\", \"name\": \"社会保険はありますか。\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"社会保険完備です（健康保険〈介護保険を含む〉、厚生年金保険、雇用保険、労災保険）。\"}}, {\"@type\": \"Question\", \"name\": \"給与に残業代は含まれますか。\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"コンシェルジュ（月給270,000円）は、基本給240,000円＋固定残業代30,000円（15時間分）で、超過分は別途支給します。\"}}, {\"@type\": \"Question\", \"name\": \"試用期間はありますか。\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"正社員の募集では試用期間はなく、6か月の有期雇用として採用します。\"}}, {\"@type\": \"Question\", \"name\": \"応募前にサロンを見学できますか。\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"サロン見学・相談を受け付けています。公式LINEまたはメールフォームからご連絡ください。\"}}]}" }} />
       <header className={`site-header ${scrolled ? "site-header-scrolled" : ""}`}>
         <a className="brand" href="#top" aria-label="行雲流水 採用サイト トップへ">
           <img src={logoPath} alt="株式会社 行雲流水 ko-un-ryu-sui ロゴ" />
@@ -315,7 +315,7 @@ export default function Home() {
             <div className="hero-copy">
               <Eyebrow>RECRUITING / OSAKA IZUMIOTSU</Eyebrow>
               <h1 id="hero-title">美容師としての<br /><em><span className="nb">これからを、</span><span className="nb">ここから。</span></em></h1>
-              <p className="hero-lead">大阪・泉大津のFLOW CLOUDとglow。はじめての就職も、経験を生かす転職も、子育てをしながらの仕事も。あなたの今に合う働き方を、募集条件と仕事の様子から確かめてください。</p>
+              <p className="hero-lead">大阪・泉大津のFLOWCLOUDとglow。はじめての就職も、経験を生かす転職も、子育てをしながらの仕事も。あなたの今に合う働き方を、募集条件と仕事の様子から確かめてください。</p>
               <div className="hero-actions">
                 <a className="button button-primary" href="/?c=visit#contact" data-track="visit" data-placement="hero">サロン見学を相談する <ArrowRight size={17} aria-hidden="true" /></a>
                 <a className="button button-quiet" href="#jobs" data-track="consult" data-placement="hero">自分に合う募集を見る <ArrowDownLine /></a>
@@ -324,9 +324,9 @@ export default function Home() {
               <p className="hero-source-note">2027年度 新卒美容師3名募集。中途・パート・学生アルバイトの募集条件もご案内しています。<br />年度・人数・募集状態は年度により異なります</p>
             </div>
             <div className="hero-visual hero-visual-photo">
-              <img className="hero-team-photo" src={heroTeamPhoto} alt="FLOW CLOUD前に集まる株式会社行雲流水の代表・藤津一弥とスタッフ" />
+              <img className="hero-team-photo" src={heroTeamPhoto} alt="FLOWCLOUD前に集まる株式会社行雲流水の代表・藤津一弥とスタッフ" />
               <div className="hero-visual-caption">
-                <span>FLOW CLOUD TEAM</span>
+                <span>FLOWCLOUD TEAM</span>
                 <strong>WE ARE<br />KOUNRYUSUI</strong>
                 <small>代表・藤津一弥と、個性を磨き合うチーム</small>
               </div>
@@ -342,7 +342,7 @@ export default function Home() {
         <div className="ticker" aria-hidden="true"><div className="ticker-track">{[0, 1].map(k => <span key={k}>✿ 2027年度 新卒美容師3名募集 ♡ 見学・体験の相談受付中 ★ 完全週休2日（シフト制） ✿ 中途・パート・学生アルバイトもご案内 ♡ まずは気になることから ★ </span>)}</div></div>
         <section className="official-band" aria-label="サロン公式サイト">
           <p>♡ 働くサロンをのぞいてみよう</p>
-          <a className="official-pill official-flow" href="https://www.flowcloud.net/" target="_blank" rel="noreferrer">FLOW CLOUD 公式サイト <ArrowUpRight size={15} aria-hidden="true" /></a>
+          <a className="official-pill official-flow" href="https://www.flowcloud.net/" target="_blank" rel="noreferrer">FLOWCLOUD 公式サイト <ArrowUpRight size={15} aria-hidden="true" /></a>
           <a className="official-pill official-glow" href="https://glow-izumiotsu.jp/" target="_blank" rel="noreferrer">glow 公式サイト <ArrowUpRight size={15} aria-hidden="true" /></a>
         </section>
 
@@ -416,10 +416,10 @@ export default function Home() {
         <section className="vision-section section" aria-labelledby="vision-title">
           <div className="vision-heading">
             <div><Eyebrow>BUSINESS VISION</Eyebrow><h2 id="vision-title">ひとつの想いから、<br />いくつもの美しさへ。</h2></div>
-            <div><p>FLOW CLOUD と glow を起点に、世代・ライフスタイル・求める技術が異なるお客様へ。それぞれのブランドらしさを育てながら、「らしさを輝かせる」美と幸せの環を広げていく構想です。</p><span>株式会社行雲流水　事業展開ビジョン</span></div>
+            <div><p>FLOWCLOUD と glow を起点に、世代・ライフスタイル・求める技術が異なるお客様へ。それぞれのブランドらしさを育てながら、「らしさを輝かせる」美と幸せの環を広げていく構想です。</p><span>株式会社行雲流水　事業展開ビジョン</span></div>
           </div>
           <figure className="vision-map">
-            <img src={businessVisionMap} alt="株式会社行雲流水の事業展開ビジョン。FLOW CLOUD、glow、WATERLINE（仮）、BONSAI（仮）、ココロオドル（仮）などの店舗構想を示す図" />
+            <img src={businessVisionMap} alt="株式会社行雲流水の事業展開ビジョン。FLOWCLOUD、glow、WATERLINE（仮）、BONSAI（仮）、ココロオドル（仮）などの店舗構想を示す図" />
             <figcaption>株式会社行雲流水　事業展開ビジョン</figcaption>
           </figure>
         </section>
@@ -442,13 +442,13 @@ export default function Home() {
             <article className="merit-card">
               <span className="card-number">02</span>
               <h3>2つの個性を持つ、<br />泉大津のサロン。</h3>
-              <p>髪と頭皮のケア、半個室で落ち着いて向き合うFLOW CLOUD。似合わせと扱いやすさを追求するglow。それぞれに異なる経験があります。</p>
-              <span className="fact-label">FLOW CLOUD / GLOW</span>
+              <p>髪と頭皮のケア、半個室で落ち着いて向き合うFLOWCLOUD。似合わせと扱いやすさを追求するglow。それぞれに異なる経験があります。</p>
+              <span className="fact-label">FLOWCLOUD / GLOW</span>
             </article>
             <article className="merit-card">
               <span className="card-number">03</span>
               <h3>お客様の素材美を、<br />丁寧に引き出す。</h3>
-              <p>glowは「傷ませない技術」「素材美を活かす」を掲げ、FLOW CLOUDは髪質改善・頭皮改善を主軸にしています。</p>
+              <p>glowは「傷ませない技術」「素材美を活かす」を掲げ、FLOWCLOUDは髪質改善・頭皮改善を主軸にしています。</p>
               <span className="fact-label">COUNSELING / CARE</span>
             </article>
           </div>
@@ -465,17 +465,17 @@ export default function Home() {
           </div>
 
           <article className="salon-card salon-flow">
-            <div className="salon-gallery" aria-label="FLOW CLOUDの店舗写真">
-              <img className="salon-gallery-main" src={flowCloudExteriorPhoto} alt="FLOW CLOUDの外観" />
+            <div className="salon-gallery" aria-label="FLOWCLOUDの店舗写真">
+              <img className="salon-gallery-main" src={flowCloudExteriorPhoto} alt="FLOWCLOUDの外観" />
               <div className="salon-gallery-side">
-                <SalonReel src={flowCloudReel} label="FLOW CLOUDのサロンリール動画" muted={activeReelSound !== "flow"} onToggleSound={() => setActiveReelSound(activeReelSound === "flow" ? null : "flow")} />
-                <img className="salon-gallery-detail" src={flowCloudInteriorPhoto} alt="FLOW CLOUDの落ち着いたカウンセリング空間" />
+                <SalonReel src={flowCloudReel} label="FLOWCLOUDのサロンリール動画" muted={activeReelSound !== "flow"} onToggleSound={() => setActiveReelSound(activeReelSound === "flow" ? null : "flow")} />
+                <img className="salon-gallery-detail" src={flowCloudInteriorPhoto} alt="FLOWCLOUDの落ち着いたカウンセリング空間" />
               </div>
-              <div className="salon-gallery-logo"><img src={flowCloudLogo} alt="FLOW CLOUD ロゴ" /></div>
-              <small>FLOW CLOUD<br />SALON 01</small>
+              <div className="salon-gallery-logo"><img src={flowCloudLogo} alt="FLOWCLOUD ロゴ" /></div>
+              <small>FLOWCLOUD<br />SALON 01</small>
             </div>
             <div className="salon-detail">
-              <div className="salon-title-row"><p className="eyebrow">SALON 01</p><span>FLOW CLOUD</span></div>
+              <div className="salon-title-row"><p className="eyebrow">SALON 01</p><span>FLOWCLOUD</span></div>
               <h3>「わたしのプチ別荘」で、<br />髪と頭皮に深く向き合う。</h3>
               <p>完全予約制・会員制の落ち着いた空間。髪質改善、縮毛矯正、ヘッドスパ、頭皮ケアを主軸に、丁寧なカウンセリングから一人ひとりの悩みと理想に寄り添うサロンです。</p>
               <ul className="feature-list">
@@ -578,7 +578,7 @@ export default function Home() {
           <div className="training-photo-grid">
             <figure className="training-photo-main"><img src={trainingSalonPhoto} alt="店内でスタッフが集まる研修・ミーティングの様子" /><figcaption><span>01 / IN-SALON SESSION</span><strong>店内で、言葉と技術を持ち寄る。</strong></figcaption></figure>
             <figure className="training-photo-side"><img src={teamMeetingPhoto} alt="スタッフがテーブルを囲むミーティングの様子" /><figcaption><span>02 / MEETING</span><strong>それぞれの気づきを、チームへ。</strong></figcaption></figure>
-            <figure className="training-photo-detail"><img src={shampooBoothPhoto} alt="FLOW CLOUDのシャンプーブース" /><figcaption><span>03 / CARE SPACE</span><strong>お客様のための、静かな技術空間。</strong></figcaption></figure>
+            <figure className="training-photo-detail"><img src={shampooBoothPhoto} alt="FLOWCLOUDのシャンプーブース" /><figcaption><span>03 / CARE SPACE</span><strong>お客様のための、静かな技術空間。</strong></figcaption></figure>
           </div>
         </section>
 
@@ -737,7 +737,7 @@ export default function Home() {
               <Eyebrow>COMPANY</Eyebrow>
               <h2 id="company-title">私たちのこれまでと、<br />会社概要。</h2>
             </div>
-            <p>2007年、10坪のプライベートサロンから始まった「FLOW CLOUD」。いま、2店舗のチームへと広がっています。</p>
+            <p>2007年、10坪のプライベートサロンから始まった「FLOWCLOUD」。いま、2店舗のチームへと広がっています。</p>
           </div>
           <div className="info-stack">
             <InfoBlock num="A" en="HISTORY" title="歩み" rows={historyRows} />
@@ -751,7 +751,7 @@ export default function Home() {
               <Eyebrow>INSTAGRAM</Eyebrow>
               <h2 id="insta-title">サロンの毎日を、<br />のぞいてみる。</h2>
             </div>
-            <p>採用の情報、FLOW CLOUDとglowの日々の投稿を、Instagramでご覧いただけます。気になったらフォローして、DMでも気軽に質問してください。</p>
+            <p>採用の情報、FLOWCLOUDとglowの日々の投稿を、Instagramでご覧いただけます。気になったらフォローして、DMでも気軽に質問してください。</p>
           </div>
           <div className="insta-grid">
             {instaAccounts.map(a => (
@@ -830,8 +830,8 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="footer-top">
-          <div className="footer-brand"><img src={logoPath} alt="株式会社 行雲流水 ko-un-ryu-sui ロゴ" /><p>FLOW CLOUD / glow 採用サイト</p></div>
-          <div className="footer-links"><a href="#about">私たちについて</a><a href="#salons">店舗紹介</a><a href="#growth">教育・給与</a><a href="#guideline">募集要項</a><a href="#experience">体験会</a><a href="#access">アクセス</a><a href="#instagram">Instagram</a><a href="#company">会社概要</a><a href="/faq">よくある質問</a><a href="/blog/">記事一覧</a><a href="https://www.flowcloud.net/" target="_blank" rel="noreferrer">FLOW CLOUD公式</a><a href="https://glow-izumiotsu.jp/" target="_blank" rel="noreferrer">glow公式</a><a href={googleBusinessUrl} target="_blank" rel="noreferrer">Googleのページ</a><a href="/recruit/newgrad">新卒採用</a><a href="/area">勤務エリア</a><a href="/school">美容学校の学生の方へ</a><a href="/recruit/student">高校生・美容学生</a><a href="/recruit/career">中途採用</a><a href="#contact">サロン見学・応募</a><Link href="/privacy">個人情報の取扱い</Link></div>
+          <div className="footer-brand"><img src={logoPath} alt="株式会社 行雲流水 ko-un-ryu-sui ロゴ" /><p>FLOWCLOUD / glow 採用サイト</p></div>
+          <div className="footer-links"><a href="#about">私たちについて</a><a href="#salons">店舗紹介</a><a href="#growth">教育・給与</a><a href="#guideline">募集要項</a><a href="#experience">体験会</a><a href="#access">アクセス</a><a href="#instagram">Instagram</a><a href="#company">会社概要</a><a href="/faq">よくある質問</a><a href="/blog/">記事一覧</a><a href="https://www.flowcloud.net/" target="_blank" rel="noreferrer">FLOWCLOUD公式</a><a href="https://glow-izumiotsu.jp/" target="_blank" rel="noreferrer">glow公式</a><a href={googleBusinessUrl} target="_blank" rel="noreferrer">Googleのページ</a><a href="/recruit/newgrad">新卒採用</a><a href="/area">勤務エリア</a><a href="/school">美容学校の学生の方へ</a><a href="/recruit/student">高校生・美容学生</a><a href="/recruit/career">中途採用</a><a href="#contact">サロン見学・応募</a><Link href="/privacy">個人情報の取扱い</Link></div>
           <div className="footer-company"><p>株式会社 行雲流水</p><span>代表：藤津一弥<br />掲載拠点：大阪府泉大津市<br />設立：2020年4月1日<br />TEL：0725-90-5699</span></div>
         </div>
         <div className="footer-bottom"><span>© KOUNRYUSUI CO., LTD.</span><span>泉大津・岸和田・高石・和泉・堺・泉佐野・貝塚 美容師 求人 / 美容室 アシスタント 求人 / 南大阪・泉州</span></div>

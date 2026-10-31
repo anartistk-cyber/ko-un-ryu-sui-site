@@ -14,7 +14,7 @@ const html = `<html><body style="margin:0"><div style="width:1200px;height:630px
 <div style="position:absolute;right:120px;bottom:-120px;width:260px;height:260px;border-radius:50%;background:${ac};opacity:.18"></div>
 <div style="font-size:26px;font-weight:700;letter-spacing:.08em"><span style="background:${ac};color:#fff;padding:6px 20px;border-radius:999px">${esc(cat || "採用情報")}</span></div>
 <div style="font-size:${size}px;font-weight:800;line-height:1.35;letter-spacing:-.02em;max-width:980px">${esc(title)}</div>
-<div style="font-size:26px;font-weight:700;letter-spacing:.06em">行雲流水｜FLOW CLOUD・glow 採用情報</div></div></body></html>`;
+<div style="font-size:26px;font-weight:700;letter-spacing:.06em">行雲流水｜FLOWCLOUD・glow 採用情報</div></div></body></html>`;
 fs.mkdirSync("client/public/images/blog", { recursive: true });
 const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1200, height: 630 } });
 await p.setContent(html); await p.waitForTimeout(300);
