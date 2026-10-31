@@ -4,7 +4,7 @@
 // 使い方（cron）：php /home/<サーバーID>/ko-un-ryu-sui.com/public_html/sync.php   ※sync.phpはブラウザから実行できないよう .htaccess で拒否する
 if (php_sapi_name() !== 'cli') { http_response_code(404); exit; }
 $BASE = 'https://raw.githubusercontent.com/anartistk-cyber/ko-un-ryu-sui-site/main/site/';
-$ROOT = __DIR__;
+$ROOT = __DIR__ . '/public_html'; // sync.php は public_html の1つ上（Webから見えない場所）に置く
 $ALLOW = ['html','js','css','png','jpg','jpeg','webp','svg','xml','txt','json','mp4'];
 $NEVER = ['.htaccess','contact.php','sync.php','sync.log'];
 function get($u){ $c=curl_init($u); curl_setopt_array($c,[CURLOPT_RETURNTRANSFER=>1,CURLOPT_FOLLOWLOCATION=>1,CURLOPT_TIMEOUT=>60,CURLOPT_USERAGENT=>'kr-sync']); $b=curl_exec($c); $s=curl_getinfo($c,CURLINFO_HTTP_CODE); curl_close($c); return [$s,$b]; }
