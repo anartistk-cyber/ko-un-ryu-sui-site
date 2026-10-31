@@ -1,0 +1,48 @@
+{
+ "files": [
+  {
+   "path": "area/index.html",
+   "sha256": "2d180bbebb48b93c30547a9b9061040d1cc9dc41c98f1d08324614835d308d4d"
+  },
+  {
+   "path": "cast/index.html",
+   "sha256": "0e308ed6e0826dcc9390b857f513bbda68baaf8bbb0a6ffbdf2c2f174621f3f7"
+  },
+  {
+   "path": "company/index.html",
+   "sha256": "800255b26142fa522f78241cb8ffe473cd7aa47f806873c436bf26376b132a68"
+  },
+  {
+   "path": "faq/index.html",
+   "sha256": "7584f33d38f38194235e7cbab2a252bd9e787dd8e4a583f45ea3addb62011de8"
+  },
+  {
+   "path": "fc/style.css",
+   "sha256": "2911c39594053c7fe204beb4048ab4b425b9788543af55be96fc3a1379454d9c"
+  },
+  {
+   "path": "first/index.html",
+   "sha256": "7cfd35bc7d43f2b56d37b6e5d11aae1d1246a208ced8b6cbf791d3a4437759e9"
+  },
+  {
+   "path": "hair-care-40-50/index.html",
+   "sha256": "cfbf7043103206164ef142f5a985e45225889a0114511d0ba21319cf8f001494"
+  },
+  {
+   "path": "headspa/index.html",
+   "sha256": "43c3b531dcee5f74820bc5b9f207f6597a980345adf3eee34ee1869948d38d8b"
+  },
+  {
+   "path": "index.html",
+   "sha256": "ebfc4ae3f9b829ecb9ba2ea636bb9c4bfcaaf55279a455d85bf77182298335dc"
+  },
+  {
+   "path": "menu/index.html",
+   "sha256": "fc7efc93435d7598e969b4f6eacb5da985ce0afe479540c10b3590d23e1841e6"
+  },
+  {
+   "path": "sitemap-fc.xml",
+   "sha256": "b0cfe14df9fcafaed3395546c5195b402c3a58b12c95c218ed536165ae3515d6"
+  }
+ ]
+}
