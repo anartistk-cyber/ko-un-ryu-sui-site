@@ -2,47 +2,59 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "2d180bbebb48b93c30547a9b9061040d1cc9dc41c98f1d08324614835d308d4d"
+   "sha256": "69cf2943d60173aae00b882f566286b34dfffcf54b4e4184ac0fb27be9234211"
   },
   {
    "path": "cast/index.html",
-   "sha256": "0e308ed6e0826dcc9390b857f513bbda68baaf8bbb0a6ffbdf2c2f174621f3f7"
+   "sha256": "aed49c67999bab4d99772d6ec53681eab6bf81046efe293a5225c0b74e6be17e"
   },
   {
    "path": "company/index.html",
-   "sha256": "800255b26142fa522f78241cb8ffe473cd7aa47f806873c436bf26376b132a68"
+   "sha256": "50686fbf4baac3b9bd1afc34eae6d6ef7a768bca353bbd543cf079215d62de54"
   },
   {
    "path": "faq/index.html",
-   "sha256": "7584f33d38f38194235e7cbab2a252bd9e787dd8e4a583f45ea3addb62011de8"
+   "sha256": "010120f23a6ccd4bf670668ddf26c82cb9e25c0bdcd414aec225ea5c953de95b"
   },
   {
    "path": "fc/style.css",
-   "sha256": "2911c39594053c7fe204beb4048ab4b425b9788543af55be96fc3a1379454d9c"
+   "sha256": "8530cee4c1eeb37922c17cd44089642930601d6a70d74aa9e4df533cb2b2dc80"
   },
   {
    "path": "first/index.html",
-   "sha256": "7cfd35bc7d43f2b56d37b6e5d11aae1d1246a208ced8b6cbf791d3a4437759e9"
+   "sha256": "e84c57f528b28183e83b55c856cdcd4cf9f24480bfa75d81859534c3782b38d1"
   },
   {
    "path": "hair-care-40-50/index.html",
-   "sha256": "cfbf7043103206164ef142f5a985e45225889a0114511d0ba21319cf8f001494"
+   "sha256": "4e52d9885064d1885e2ef601e8069332d1e703b01421c6bea940d79cdb3f3fa1"
   },
   {
    "path": "headspa/index.html",
-   "sha256": "43c3b531dcee5f74820bc5b9f207f6597a980345adf3eee34ee1869948d38d8b"
+   "sha256": "6f79234afa2c0e97093132cd79fe8ee87ab1e021d873dd7512c4386b9b2d69bf"
   },
   {
    "path": "index.html",
-   "sha256": "ebfc4ae3f9b829ecb9ba2ea636bb9c4bfcaaf55279a455d85bf77182298335dc"
+   "sha256": "ed18a9624b15021b7a41901081ee69345b2476407c880d89365835075ee0d517"
   },
   {
    "path": "menu/index.html",
-   "sha256": "fc7efc93435d7598e969b4f6eacb5da985ce0afe479540c10b3590d23e1841e6"
+   "sha256": "ff9c6ccba886a1b685fe1c641740f6c884af7e3199729e624926130c410cb3d4"
+  },
+  {
+   "path": "salon-blog/headspa-shampoo-kukan/index.html",
+   "sha256": "93c2dbfeefe7b3b67fddf9c1c39cb5bf5c7d25d1e710da19cbd6eaeab620750f"
+  },
+  {
+   "path": "salon-blog/index.html",
+   "sha256": "d6fc68836936f2f8777382a885a57062815f8ba6f335c857d8b28068e609cbbb"
+  },
+  {
+   "path": "salon-blog/kyugyobi-2026-11-12/index.html",
+   "sha256": "23451177ffdb96833c5660bfdb8c46d1fcbc54cd2401cd9e99691183df13dc0d"
   },
   {
    "path": "sitemap-fc.xml",
-   "sha256": "b0cfe14df9fcafaed3395546c5195b402c3a58b12c95c218ed536165ae3515d6"
+   "sha256": "4bbe2636e7c772fcd66740f657bb9778af9066a2fa4cfe1a4538420576adbb85"
   }
  ]
 }
