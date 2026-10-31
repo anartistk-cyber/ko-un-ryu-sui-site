@@ -2,7 +2,7 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "d8c15bf1afb7c124eaea1924388539bff2ba16af3615095d10cfd475f3941c1d"
+   "sha256": "468dd86d82ccad61c80ea13ec10a5e0b0bb21f72e3853a8ab4cd62c1e44d2569"
   },
   {
    "path": "coupon/index.html",
@@ -26,7 +26,7 @@
   },
   {
    "path": "index.html",
-   "sha256": "6bda7ecfc86c70e9d2f8bec79413db7511bda0b47b3a43313c3040168a7c3e67"
+   "sha256": "36f582b3c0355c71e43b31571909a229b1aeab118896e281a6f30a72028c861e"
   },
   {
    "path": "journal/access-parking/index.html",
