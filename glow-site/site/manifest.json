@@ -2,15 +2,15 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "476a3251bbc16098f3bc7eb85d537877dbfaca9fa3b74c22a97da41cead7473a"
+   "sha256": "c0d9ffd8503455152fd8ea5fe36903cf822a0ce73d617e7f7b36ec9abd8b6d74"
   },
   {
    "path": "faq/index.html",
-   "sha256": "9a5a8e7d79787134e297aa7cb1ded2ff9552353caaa1b921546092a8f918e14b"
+   "sha256": "82bf9eb21e4f1d63c16112740110dd28724136bd3b5c2e3b57d615c72543f5a0"
   },
   {
    "path": "first/index.html",
-   "sha256": "ee0b9d668635cd88bc79aeacc90c86cfa84a38f5cf5fc5da0834c5b3721b914b"
+   "sha256": "7ea4ec7c90fee426639d1d8f033a4bf4c2f7ea97d121da722c57d0bc22a58a99"
   },
   {
    "path": "gl/style.css",
@@ -18,35 +18,55 @@
   },
   {
    "path": "headspa/index.html",
-   "sha256": "e15ae5213279b0683b64530ef47151973d94255277a009afb203073f353a248b"
+   "sha256": "9c0078776b1f84bc849c74b2b28a7d246f036d732081c259a4da41a1e9e39b0e"
   },
   {
    "path": "index.html",
-   "sha256": "4e414ab2a89c1bf5a0f1f7fa65d988b2249502cc726a533821af3ddb0ca8d04b"
+   "sha256": "8db9dd9b37be26180c24f6de6c1c56fbd039e0b5c8757f544caa162193af5a3e"
   },
   {
    "path": "journal/access-parking/index.html",
-   "sha256": "244baa162c3908fe7e35eab57022b0f99a3d7f7d6987d4a0e504e7658f9affb2"
+   "sha256": "621461b67a8a778dcceb4054f3f9e246c35ceaa9e2dd4a35909e5c8cf97f6649"
+  },
+  {
+   "path": "journal/first-salon-counseling/index.html",
+   "sha256": "408cc21dff301343fe6441a8413c6eaeb566dbc8bfda8a2e6a73ec1de8c598e1"
   },
   {
    "path": "journal/index.html",
-   "sha256": "0f20d6edd8ea0fd464b6995a2b1ff8b62a8c900b68222be8a99a0e1b92c9235c"
+   "sha256": "f66748d7f3863303099c3d5f21599767ffcc6c0384d380a06ea1fcf06afadf3f"
+  },
+  {
+   "path": "journal/sugao-care-young/index.html",
+   "sha256": "83b03ec2e83e8b5a9bce2593d267c8c6a2fad5b67c9facac4bb62d2c46fe5d1f"
+  },
+  {
+   "path": "llms.txt",
+   "sha256": "02c273afdbafa72dca7a3f8b25bb5f755a4461a68d5098cc090c89c84b44cbad"
   },
   {
    "path": "menu/index.html",
-   "sha256": "51d6c49fc19994d5705bde6fe19ac6880161dc29c3236350dca80f0a3c9edaf5"
+   "sha256": "7451da6de94d0df9225caa1e6eda14f804c39492d7cbde8fb72af10fdec37bd3"
+  },
+  {
+   "path": "robots.txt",
+   "sha256": "1f48870ca93baa7cb21f9eaca2107fdd37b63e29a80eb795ac5364cd7ad668e9"
   },
   {
    "path": "short-perm/index.html",
-   "sha256": "d783d4088429ec2d1c2ad1efa68e2b0eb01c51fa861138a6033f6dcdcf50baa2"
+   "sha256": "42441f5d22a30a3f57c1c1375a948cc87d56a82c06bd72b4a87d0166804359a6"
   },
   {
    "path": "sitemap-gl.xml",
-   "sha256": "9ee18ab0a99ca61feff334d2090053f769ece74133f114f58a35c12db4ef1e92"
+   "sha256": "ff78b3569557b9e7f0b53131edcd9c1b5cd256e4a8b7ffaedf0af1c52aade7f4"
   },
   {
    "path": "voice/index.html",
-   "sha256": "ff9921f694a24ea079bd84cb376002b058c09d285f0fa80793ea284162751550"
+   "sha256": "a5aec46431e87e7f0daf1c653133b864489ce0f62d742ef24e3afe7390d69042"
+  },
+  {
+   "path": "young/index.html",
+   "sha256": "33a66aa19101319617a30c43de77fa0920d0ac87b18335209227593d356dcae5"
   }
  ]
 }
