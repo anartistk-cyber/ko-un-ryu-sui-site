@@ -1,0 +1,10 @@
+# ============================================================
+#  旧ドメイン ko-unryu-sui.com 用 .htaccess（転送専用）
+#  置き場所: ko-unryu-sui.com/public_html/.htaccess
+#  旧ドメインの全URLを、新ドメインの同じURLへ301転送します。
+#  ※旧ドメインは、最低1年は契約を続けてください。
+# ============================================================
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(.*)$ https://ko-un-ryu-sui.com/$1 [R=301,L]
+</IfModule>

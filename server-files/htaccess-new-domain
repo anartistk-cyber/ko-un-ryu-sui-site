@@ -1,0 +1,68 @@
+# ============================================================
+#  ko-un-ryu-sui.com（本サイト）用 .htaccess
+#  置き場所: ko-un-ryu-sui.com/public_html/.htaccess
+# ============================================================
+
+# --- 文字コード・トップページ ---
+AddDefaultCharset UTF-8
+DirectoryIndex index.html
+
+# --- 存在しないURLは404ページ（本物の404を返す） ---
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# (1) 旧ドメイン・www・http を、https://ko-un-ryu-sui.com に1回で統一（301）
+RewriteCond %{HTTP_HOST} !^ko-un-ryu-sui\.com$ [NC,OR]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://ko-un-ryu-sui.com%{REQUEST_URI} [R=301,L]
+
+# (2) /index.html は / に統一
+RewriteCond %{THE_REQUEST} \s/index\.html[\s?]
+RewriteRule ^index\.html$ https://ko-un-ryu-sui.com/ [R=301,L]
+
+# (3) 末尾スラッシュ付きURL（/privacy/ など）は付かない形に統一
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ https://ko-un-ryu-sui.com/$1 [R=301,L]
+
+# (4) /privacy → privacy.html、/jobs/stylist → jobs/stylist.html（拡張子なしで表示）
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+)$ $1.html [L]
+
+# (5) .html付きURLは拡張子なしに統一
+RewriteCond %{THE_REQUEST} \s/(.+)\.html[\s?]
+RewriteCond %{REQUEST_URI} !^/404\.html$
+RewriteRule ^(.+)\.html$ https://ko-un-ryu-sui.com/$1 [R=301,L]
+</IfModule>
+
+# --- 隠しファイルは見せない ---
+<FilesMatch "^\.(?!well-known)">
+  Require all denied
+</FilesMatch>
+
+# --- セキュリティヘッダー ---
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Strict-Transport-Security "max-age=31536000"
+</IfModule>
+
+# --- 圧縮 ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml text/plain application/xml
+</IfModule>
+
+# --- キャッシュ（assets内は内容が変わると名前も変わるので長期保存） ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png  "access plus 1 month"
+  ExpiresByType video/mp4  "access plus 1 month"
+  ExpiresByType text/css   "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/html  "access plus 0 seconds"
+</IfModule>
