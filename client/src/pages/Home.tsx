@@ -622,7 +622,7 @@ export default function Home() {
               <div className="staff-voice-photo"><img src={shionPhoto} alt="スタッフ しおん" /></div>
               <div className="staff-voice-content">
                 <p className="staff-voice-label">STAFF VOICE / 01</p>
-                <h3>しおん</h3>
+                <h3>しおん <small>スタイリスト</small></h3>
                 <div className="staff-voice-quote">
                   <span>行雲流水の良いところ</span>
                   <p>行雲流水では1人だけでなく、キャスト全員でゲストを幸せにするために取り組んでいます。僕はゲストから温かみを感じることが多く、働いていて幸せです。</p>
@@ -637,7 +637,7 @@ export default function Home() {
               <div className="staff-voice-photo"><img src={ayunaPhoto} alt="スタッフ あゆな" /></div>
               <div className="staff-voice-content">
                 <p className="staff-voice-label">STAFF VOICE / 02</p>
-                <h3>あゆな</h3>
+                <h3>あゆな <small>スタイリスト</small></h3>
                 <div className="staff-voice-quote staff-voice-quote-single">
                   <span>私たちが大切にしていること</span>
                   <p>私たちは「ただ髪を切る」だけではなく、お客様一人ひとりの毎日が少しでも前向きになるようなヘアスタイルづくりを大切にしています。髪質やライフスタイル、今のお悩みだけでなく、これからどうなっていきたいかまで寄り添いながら提案できる美容室を目指しています！</p>
@@ -648,7 +648,7 @@ export default function Home() {
               <div className="staff-voice-photo"><img src={moePhoto} alt="スタッフ もえ" /></div>
               <div className="staff-voice-content">
                 <p className="staff-voice-label">STAFF VOICE / 03</p>
-                <h3>もえ <small>Jr.スタイリスト／美容師歴5年</small></h3>
+                <h3>もえ <small>スタイリスト</small></h3>
                 <div className="staff-voice-quote staff-voice-quote-single">
                   <span>行雲流水の良いところ</span>
                   <p>行雲流水グループはとても暖かく居心地の良い、最幸の美容室です！分からないところは先輩が優しく丁寧に教えてくれて、いつでも質問がしやすい環境です。先輩ともいろんなおしゃべりができて、楽しく働けます！</p>
