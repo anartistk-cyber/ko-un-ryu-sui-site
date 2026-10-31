@@ -38,6 +38,9 @@ const galleryPhotos: [string, string, string][] = [
   ["/images/gallery-award.jpg", "表彰状を手に笑顔の女性スタッフ2名", "がんばりは、ちゃんと表彰します"],
   ["/images/gallery-dinner.jpg", "テーブルを囲んで食事会を楽しむスタッフ", "みんなで食事会も"],
   ["/images/gallery-exterior.jpg", "夜のFLOW CLOUD前に集まったスタッフ全員", "FLOW CLOUDの前で、みんなで"],
+  ["/images/gallery-lesson-cut.jpg", "鏡の前でカットのレッスンを受けるスタッフと、そばで見守る先輩", "技術レッスンは、先輩がそばで見守ります"],
+  ["/images/gallery-lesson-wig.jpg", "ウィッグを使ってカットを練習するスタッフ", "ウィッグでカットの練習"],
+  ["/images/gallery-lesson-counsel.jpg", "お客様役の相手にヘアの確認をするスタッフ", "接客・カウンセリングの練習"],
 ];
 const ayunaPhoto = "/images/staff-ayuna-portrait_38e7b974.jpg";
 const flowCloudLogo = "/images/flow-cloud-logo_95942c89.jpg";
