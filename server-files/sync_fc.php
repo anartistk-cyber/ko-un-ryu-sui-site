@@ -5,8 +5,8 @@ if (php_sapi_name() !== 'cli') { http_response_code(404); exit; }
 $BASE = 'https://raw.githubusercontent.com/anartistk-cyber/ko-un-ryu-sui-site/main/fc-site/site/';
 $ROOT = __DIR__ . '/public_html';
 $ALLOW_EXT = ['html','css','js','png','jpg','jpeg','webp','svg','xml','txt','json'];
-// 書き込みを許すパス（先頭一致）。これ以外は無視。
-$ALLOW_PATH = ['index.html','sitemap-fc.xml','fc/','menu/','first/','cast/','company/','area/','faq/','headspa/','hair-care-40-50/','salon-blog/'];
+// 
+$DENY_PREFIX = ['cms/','official/','wp-','xmlrpc','index.php','.']; // WordPress本体などは触らない
 function get($u){ $c=curl_init($u); curl_setopt_array($c,[CURLOPT_RETURNTRANSFER=>1,CURLOPT_FOLLOWLOCATION=>1,CURLOPT_TIMEOUT=>60,CURLOPT_USERAGENT=>'fc-sync']); $b=curl_exec($c); $s=curl_getinfo($c,CURLINFO_HTTP_CODE); curl_close($c); return [$s,$b]; }
 function logm($m){ file_put_contents(__DIR__.'/sync_fc.log', date('c').' '.$m."\n", FILE_APPEND); }
 [$s,$b]=get($BASE.'manifest.json?t='.time());
@@ -17,8 +17,7 @@ usort($m['files'], fn($a,$b)=>(substr($a['path'],-5)==='.html')<=>(substr($b['pa
 foreach($m['files'] as $f){
   $p=$f['path']; $h=$f['sha256'];
   if(strpos($p,'..')!==false||$p===''||$p[0]==='/'||basename($p)==='.htaccess') continue;
-  $ok=false; foreach($ALLOW_PATH as $a){ if($p===$a||(substr($a,-1)==='/'&&strpos($p,$a)===0)){$ok=true;break;} }
-  if(!$ok) continue;
+  $deny=false; foreach($DENY_PREFIX as $d){ if(strpos($p,$d)===0){$deny=true;break;} } if($deny) continue;
   if(!in_array(strtolower(pathinfo($p,PATHINFO_EXTENSION)),$ALLOW_EXT,true)) continue;
   $dst=$ROOT.'/'.$p;
   if(is_file($dst)&&hash_file('sha256',$dst)===$h) continue;
