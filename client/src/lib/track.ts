@@ -1,11 +1,12 @@
 // dataLayer専用の計測ヘルパー。個人情報(氏名・連絡先・自由記述・学校名・希望日時)は載せない。
-// GA4/GTMのIDはここでは読み込まない(導入は同意・プライバシー方針の確定後、別承認)。
+// GA4はindex.htmlのgtagで読み込む（プライバシーポリシーに記載済み）。イベントはgtagにも転送する。
 type Params = Record<string, string | number | undefined>;
-declare global { interface Window { dataLayer?: Record<string, unknown>[] } }
+declare global { interface Window { dataLayer?: Record<string, unknown>[]; gtag?: (...a: unknown[]) => void } }
 export function track(event: string, params: Params = {}) {
   try {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ event, ...params });
+    if (typeof window.gtag === "function") window.gtag("event", event, params);
   } catch { /* 計測失敗は無視 */ }
 }
 export function trackClick(e: { target: EventTarget | null }) {

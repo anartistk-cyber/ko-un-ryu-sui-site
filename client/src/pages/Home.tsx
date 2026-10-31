@@ -777,6 +777,7 @@ export default function Home() {
                 <h3>{a.name}</h3>
                 <iframe title={`${a.name}のInstagram`} src={`https://www.instagram.com/${a.handle}/embed`} loading="lazy" scrolling="no" referrerPolicy="no-referrer-when-downgrade" />
                 <a className="button button-quiet" href={`https://www.instagram.com/${a.handle}/`} target="_blank" rel="noreferrer" data-track="instagram" data-placement="instagram">{a.name}をInstagramで見る <ArrowUpRight size={15} aria-hidden="true" /></a>
+                <a className="button button-quiet" href={`https://www.instagram.com/${a.handle}/reels/`} target="_blank" rel="noreferrer" data-track="instagram" data-placement="instagram-reels">{a.name}のリール動画を見る <ArrowUpRight size={15} aria-hidden="true" /></a>
               </article>
             ))}
           </div>
