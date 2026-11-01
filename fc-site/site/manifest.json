@@ -66,11 +66,11 @@
   },
   {
    "path": "index.html",
-   "sha256": "d4eec57e5051aae28f5a437135e134c71e6abe6fdc506b85352bcbad3d48924b"
+   "sha256": "1ccc6ad337cd4a99c556cc04568281323b1170382f4548d9ecac47e4e31cb6f6"
   },
   {
    "path": "llms.txt",
-   "sha256": "9839bf0f747ea88a31c20c11a76303bf5424cdc97e2f792c609f451c89921b3d"
+   "sha256": "d116f5be64b7a21e9d83831e0d65d6727b40c8fa57d2a3ff26e93c03b26bbdd7"
   },
   {
    "path": "menu/index.html",
@@ -86,7 +86,11 @@
   },
   {
    "path": "salon-blog/index.html",
-   "sha256": "971b508aef52399e7364ae5bd3c92bb6a2b8a8df75732860f06f9b22c8411652"
+   "sha256": "0b29df5fd622523b04d82b3ee2aefdd1092cf47efc75167fc5e6cf4388b7e192"
+  },
+  {
+   "path": "salon-blog/kuse-uneri-straight-40-50/index.html",
+   "sha256": "11e4383228def16ab774c68e9eef8566dd9d1e6f406941f00981a699e6454bbe"
   },
   {
    "path": "salon-blog/kyugyobi-2026-11-12/index.html",
@@ -94,7 +98,7 @@
   },
   {
    "path": "sitemap-fc.xml",
-   "sha256": "8ef6cc03fe12b2c8ab82f53a319e90f913e30955fb9474e287a62403f89b5e15"
+   "sha256": "97a9ca546add48cbe2f2e71e430fb2932e6cf934e175d88b51251544e895c321"
   },
   {
    "path": "straight/index.html",

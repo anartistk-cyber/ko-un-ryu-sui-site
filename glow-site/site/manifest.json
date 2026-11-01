@@ -50,7 +50,7 @@
   },
   {
    "path": "index.html",
-   "sha256": "3d7dec138424423679ba83191f953e6d1075e8a31e4fb39cf40dc813d482edfa"
+   "sha256": "8c45110a466ac39bd307a1649c7450f20f728ab286a3281d6a5641f9c19d996d"
   },
   {
    "path": "journal/access-parking/index.html",
@@ -62,7 +62,11 @@
   },
   {
    "path": "journal/index.html",
-   "sha256": "5db4ba04fa316d0c8d05d477c6737261da2eeb5081eaa7df17558757d8dfaed2"
+   "sha256": "4df0e812f304e796caf265cb50506aac895930c0d811e65b8de2942372eea83e"
+  },
+  {
+   "path": "journal/kuse-hiroga-straight-young/index.html",
+   "sha256": "6ae608e816b0097f918ca62c9e6fbfe764e766cb125d700004c0fd37671e52ed"
   },
   {
    "path": "journal/sugao-care-young/index.html",
@@ -70,7 +74,7 @@
   },
   {
    "path": "llms.txt",
-   "sha256": "465454a46f12520ccf8501f552ffec77acd0ca4d6babb98515a182c090fc7e4c"
+   "sha256": "5b04d61ae7acfcb1b805ea8f34134ee4d3795ae550128d9a807d550c4eb195a5"
   },
   {
    "path": "menu/index.html",
@@ -90,7 +94,7 @@
   },
   {
    "path": "sitemap-gl.xml",
-   "sha256": "1dacf8dd6d912caa00110df9531bcb63179875739a86e76ab9c8a6cb75e26897"
+   "sha256": "f1af6598f3de0ac50ee391b95539b7320d700cda448989e8c41ec1fbb58e80e7"
   },
   {
    "path": "straight/index.html",
