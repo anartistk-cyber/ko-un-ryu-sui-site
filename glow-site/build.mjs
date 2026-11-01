@@ -43,7 +43,7 @@ ${body}</main>
 <div class="bar"><a href="${L.tel}">電話</a><a class="bn" href="${L.net}" rel="noopener">ネット予約</a><a href="/coupon/">クーポン</a><a href="${L.line}" rel="noopener">LINE</a></div></body></html>`}
 // 画像最適化：WPが生成済みの縮小版を srcset で出し分け（原寸1〜3MB→数十KB）。og:image等のmetaは原寸のまま
 const VAR={'2026/04/glow_img-08':[1477,1108],'2026/04/glow_img-05':[1477,1108],'2026/04/glow_img-10':[1920,1280],'2026/05/staff_3':[1477,1108]};
-const optImgs=h=>h.replace(/<img src="\/wp-content\/uploads\/([^"]+)\.jpg"([^>]*)>/g,(m,n,rest)=>{const d=VAR[n];if(!d)return m;const v=w=>`/wp-content/uploads/${n}-${w}x${Math.round(d[1]*w/d[0])}.jpg`;const hero=/fetchpriority/.test(rest);return `<img src="${v(1024)}" srcset="${v(300)} 300w, ${v(768)} 768w, ${v(1024)} 1024w" sizes="${hero?'100vw':'(max-width:720px) 100vw, 640px'}"${rest}>`});
+const optImgs=h=>h.replace(/<img src="\/wp-content\/uploads\/([^"]+)\.jpg"([^>]*)>/g,(m,n,rest)=>{const d=VAR[n];if(!d)return m;const v=w=>`/wp-content/uploads/${n}-${w}x${Math.round(d[1]*w/d[0])}.jpg`;const hero=/fetchpriority/.test(rest);return `<img src="${v(1024)}" srcset="${v(300)} 300w, ${v(768)} 768w, ${v(1024)} 1024w${hero?`, /wp-content/uploads/${n}.jpg ${d[0]}w`:''}" sizes="${hero?'100vw':'(max-width:720px) 100vw, 640px'}"${rest}>`});
 const write=(p,html)=>{html=optImgs(html);const f=p==='/'?'index.html':p.replace(/^\//,'')+'index.html';fs.mkdirSync(path.dirname(path.join(OUT,f)),{recursive:true});fs.writeFileSync(path.join(OUT,f),html)};
 const sec=(t,inner,cls='')=>`<section class="sec ${cls}"><div class="wrap">${t?`<h2>${t}</h2>`:''}${inner}</div></section>`;
 const faqLD=items=>({"@type":"FAQPage","mainEntity":items.map(([q,a])=>({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))});
