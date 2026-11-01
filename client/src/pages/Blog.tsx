@@ -67,6 +67,9 @@ export function BlogPost({ slug }: { slug: string }) {
     author: { "@type": "Organization", name: "株式会社 行雲流水" },
     publisher: { "@type": "Organization", name: "株式会社 行雲流水" },
   };
+  const toc = post.body.map((b, i) => ("h" in b ? { h: b.h, id: `sec-${i}` } : null)).filter((x): x is { h: string; id: string } => x !== null);
+  const hIdx = post.body.map((b, i) => ("h" in b ? i : -1)).filter(i => i >= 0);
+  const midIdx = hIdx.length >= 4 ? hIdx[Math.floor(hIdx.length / 2)] - 1 : -1;
   const others = posts.filter(p => p.slug !== slug).slice(0, 3);
   return (
     <SubPage title={post.seoTitle} description={post.seoDesc} path={path} image={post.image}>
@@ -75,10 +78,27 @@ export function BlogPost({ slug }: { slug: string }) {
         <p className="blog-meta">{fmt(post.date)}　<b>{post.category}</b></p>
         <h1>{post.title}</h1>
         {post.image && <img className="blog-hero" src={post.image} alt={post.imageAlt ?? post.title} width="1200" height="630" />}
+        {toc.length >= 3 && (
+          <nav className="blog-toc" aria-label="この記事の目次">
+            <p>この記事の内容</p>
+            <ol>{toc.map(t => <li key={t.id}><a href={`#${t.id}`}>{t.h}</a></li>)}</ol>
+          </nav>
+        )}
         <article className="blog-body">
-          {post.body.map((b, i) =>
-            "h" in b ? <h2 key={i}>{b.h}</h2> : "p" in b ? <p key={i}>{rich(b.p)}</p> : "img" in b ? <img key={i} className="blog-photo" src={b.img} alt={b.alt} loading="lazy" /> : <ul key={i}>{b.ul.map(li => <li key={li}>{rich(li)}</li>)}</ul>
-          )}
+          {post.body.map((b, i) => {
+            const node = "h" in b ? <h2 key={i} id={`sec-${i}`}>{b.h}</h2> : "p" in b ? <p key={i}>{rich(b.p)}</p> : "img" in b ? <img key={i} className="blog-photo" src={b.img} alt={b.alt} loading="lazy" /> : <ul key={i}>{b.ul.map(li => <li key={li}>{rich(li)}</li>)}</ul>;
+            if (i !== midIdx) return node;
+            return (
+              <div key={i}>
+                {node}
+                <aside className="blog-mid-cta" onClick={trackClick}>
+                  <p>読んで気になったことは、見学や公式LINEで気軽に聞けます。</p>
+                  <a href="/?c=visit#contact" data-track="consult" data-placement="blog-mid">見学・相談する</a>
+                  <a href="https://lin.ee/Z0JP8sH" target="_blank" rel="noreferrer" data-track="line" data-placement="blog-mid">公式LINEで質問する</a>
+                </aside>
+              </div>
+            );
+          })}
         </article>
         <section className="blog-cta" onClick={trackClick}>
           <h2>次に確認したいこと</h2>

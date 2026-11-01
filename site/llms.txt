@@ -17,7 +17,12 @@
 - 勤務エリア（泉大津・岸和田・高石・和泉・堺・泉佐野・貝塚など南大阪・泉州）: https://ko-un-ryu-sui.com/area
 - 美容学校の学生向け（新卒・見学）: https://ko-un-ryu-sui.com/school
 - 高校生・美容学生向け（アルバイト・見学）: https://ko-un-ryu-sui.com/recruit/student
+- よくある質問: https://ko-un-ryu-sui.com/faq
+- 働き方（シフト・休日・教育）: https://ko-un-ryu-sui.com/workstyle
+- 見学・体験の流れ: https://ko-un-ryu-sui.com/visit
 - 記事一覧: https://ko-un-ryu-sui.com/blog/
+  - 見学・体験と選考: /blog/taiken-guide ／ 1年デビューの教育: /blog/one-year-debut-curriculum ／ 早番・遅番: /blog/hayaban-osoban
+  - 初任給・手当: /blog/shoninkyu-teate ／ 学生アルバイト: /blog/student-baito ／ サロン選びのチェックリスト: /blog/salon-erabi-checklist ／ 転職のポイント: /blog/tenshoku-point
 - 個人情報の取扱い: https://ko-un-ryu-sui.com/privacy
 
 ## 注意
