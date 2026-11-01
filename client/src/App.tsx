@@ -20,6 +20,8 @@ function Router() {
       <Route path="/recruit/newgrad">{() => <Landing type="newgrad" />}</Route>
       <Route path="/recruit/career">{() => <Landing type="career" />}</Route>
       <Route path="/area">{() => <Guide type="area" />}</Route>
+      <Route path="/workstyle">{() => <Guide type="workstyle" />}</Route>
+      <Route path="/visit">{() => <Guide type="visit" />}</Route>
       <Route path="/school">{() => <Guide type="school" />}</Route>
       <Route path="/recruit/student">{() => <Guide type="student" />}</Route>
       <Route path="/blog">{() => <BlogIndex />}</Route>
