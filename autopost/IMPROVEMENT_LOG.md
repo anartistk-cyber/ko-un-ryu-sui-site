@@ -24,4 +24,10 @@
 - FC旧ブログの重複・短すぎるタイトル、画像なし80本はSearch Consoleの表示回数を見て優先順位付け。
 
 ## ChatGPTとの分担
-- （未確認：どの媒体の投稿をChatGPTが担当しているかを藤津さんに確認して記入する）
+（2026-11-01 確認。ChatGPTの「◆自動投稿」チャットの指示文を読んで記入）
+- ◆自動投稿チャット＝全媒体運用の主管。ローカルPCのworkspace（work/*.json, kounryusui-salon-posting skill）で動き、毎日21:15 JSTに予約枠の補充・公開確認・台帳更新を行う。旧Instagram専用の自動実行はこのチャットへ移管済み・停止済み。
+- ChatGPT担当：Google3プロフィール、Instagram/Threads 3アカウント（flowcloud_osaka・glow_.osaka・ko_un_ryu_sui.recruit）、HPB（FLOW・glow）、X、TikTok、YouTube、Facebookの投稿作成・予約・公開確認・7日/28日後の成果記録。
+- Claudeは上記媒体へ直接投稿しない（重複防止）。Claude担当：3サイト（採用・FLOWCLOUD・glow）の改善、投稿の着地ページ整備、投稿案の提供（autopost/内のmd）、GA/Search Consoleなどサイト側の分析共有。
+- 運用ルール（ChatGPT側）：Instagramは静止画像のみ（リール・動画化は新規登録しない）。月20投稿（Metricool無料枠）、週4回程度/媒体、有料契約なし。未確認の待遇・料金・募集枠を事実として書かない。AI生成の定型注記は付けない。FLOWは40〜50代女性、glowは10〜20代女性。
+- 連携方法：Claudeが作った案はユーザーを介してChatGPTに渡す（ChatGPTのPCファイルはClaudeから触れない）。ChatGPT側の公開結果はユーザー経由で受け取り、サイト改善の判断材料にする。
+- 注意：ChatGPT側の表記は「FLOW CLOUD」（スペースあり）。HPB等の公式掲載名を除き、新規投稿は「FLOWCLOUD」に統一するよう依頼する。autopost/IG_CAPTIONS_FLOWCLOUD_2026-11.md の「動画向き」案は、Instagramでは静止画で使う（他媒体のみ動画）。
