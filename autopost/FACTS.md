@@ -25,3 +25,4 @@
 - 個人名・顔写真（スタッフ個人の写真は使わない。使ってよい写真は下記のみ）。
 ## 使ってよい写真（/images/ 配下）
 flow-cloud-exterior_9a36efba.jpg（FLOWCLOUD外観）／flow-cloud-interior_15a0524c.jpg（FLOWCLOUD店内）／glow-salon-interior_768ab430.jpg（glow店内）／glow-reception_7c41b63c.jpg（glow受付）／shampoo-booth_bce574f7.jpg（シャンプーブース）／training-salon_b2a51844.jpg（研修）／team-meeting_f47f2a94.jpg（ミーティング）／team-event_287a856c.jpg（チームイベント）／gallery-salonwork.jpg（サロンワーク）／gallery-exterior.jpg（夜の外観）
+- コタ（COTA）：FLOWCLOUD・glowともに全商品を取り扱い、店頭販売あり（2026-11-01 藤津さん確認）。縮毛矯正は「髪質改善ストレート」メニューで対応（両店）。
