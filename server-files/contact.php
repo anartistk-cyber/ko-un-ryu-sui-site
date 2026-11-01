@@ -23,7 +23,7 @@ const MAIL_TO = [
 const ALLOWED_HOSTS = ['ko-un-ryu-sui.com', 'www.ko-un-ryu-sui.com'];
 const PURPOSES = ['visit' => '見学・体験を希望', 'consult' => '働き方を相談', 'apply' => '求人に応募'];
 const STATUSES = ['student' => '美容学生', 'newgrad' => '卒業予定・新卒', 'career' => '中途スタイリスト', 'return' => '復職を検討', 'other' => 'その他'];
-const SALONS = ['' => '未選択', 'flowcloud' => 'FLOW CLOUD', 'glow' => 'glow', 'consult' => '相談したい'];
+const SALONS = ['' => '未選択', 'flowcloud' => 'FLOWCLOUD', 'glow' => 'glow', 'consult' => '相談したい'];
 const JOB_IDS = ['', 'stylist', 'assistant', 'part', 'student', 'newgrad', 'career'];
 const COOLDOWN_SECONDS = 60;       // 同じメールアドレスからの連続送信を制限
 const IP_LIMIT_PER_HOUR = 10;      // 同じIPからの1時間あたり上限
