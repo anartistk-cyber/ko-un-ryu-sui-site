@@ -22,23 +22,23 @@
   },
   {
    "path": "favicon.ico",
-   "sha256": "6a0cd74431e3f887f74b8ffb6f4eb074e24cd65106ef86efd323415aff2408c4"
+   "sha256": "05fcff76cb7cc58ab51ec878eaad9d37e8c3c99cb9c79a8d0909814cf3ab2702"
   },
   {
    "path": "fc/apple-touch-icon.png",
-   "sha256": "ce589bc3ddfc86d2e0063bd67f589ddeb6fedc3c6742c4e93ea67310d50f541c"
+   "sha256": "498568519f2a99be171e45b1bbdebacb8ac0c7ee6039d09f60846f6e0555b7a0"
   },
   {
    "path": "fc/favicon-32.png",
-   "sha256": "d19cd4461335ca55eb17a56c2560e9c4cf1f44dbcaa8f7a07bd811e1d35fd33f"
+   "sha256": "3735826438f9c920f308c79aafa43595935952a514ec9f9a5f10d9476b11f3fb"
   },
   {
    "path": "fc/icon-192.png",
-   "sha256": "02685907fde5001418988f2a44dc615064b8ef6d32359004bce63a1d05001159"
+   "sha256": "b46c6be3bfcdb973cd1d899110f97815025c81d722e3481c930744932fafbdcb"
   },
   {
    "path": "fc/icon-512.png",
-   "sha256": "190bb8e67ab3f059830e6e708800bf024ec03ac30f459fe22467238a392b881f"
+   "sha256": "9b9da1906aa6c2cdeef1a034733b4ba893a9fc5eb70cf049d2924c026a72e27d"
   },
   {
    "path": "fc/style.css",
