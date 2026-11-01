@@ -78,7 +78,7 @@ const jobs: Record<JobType, JobData> = {
     jsonDesc: "<p>株式会社行雲流水が運営するFLOWCLOUD・glowで、美容師スタイリスト（正社員）を募集しています。</p><p>カウンセリング、カット、カラー、パーマ、シャンプー等の施術、予約管理、スタイル発信、備品管理、店内清掃を担当します。</p><p>月給は、Jrスタイリスト290,000円〜、スタイリスト320,000円〜、Topスタイリスト390,000円〜、Greatスタイリスト520,000円〜、アーティスト620,000円〜です。区分は指名技術売上等の条件によります。</p>",
     jsonQualifications: "美容師免許をお持ちの方（スタイリストとしての技術経験が必要です）。",
     jsonWorkHours: "シフト制（早番8:30〜17:30、遅番11:30〜20:30、休憩60分）、完全週休2日制。",
-    related: [["教育の進め方を見る", "/blog/one-year-debut-curriculum"], ["早番・遅番の一日", "/blog/hayaban-osoban"], ["給与と手当の見方", "/blog/shoninkyu-teate"]],
+    related: [["教育の進め方を見る", "/blog/one-year-debut-curriculum"], ["早番・遅番の一日", "/blog/hayaban-osoban"], ["給与と手当の見方", "/blog/shoninkyu-teate"], ["働き方（休み・教育・給与の内訳）", "/workstyle"], ["見学・体験の流れ", "/visit"]],
   },
   assistant: {
     code: "assistant", number: "02", eyebrow: "HAIRDRESSER / ASSISTANT", title: "美容師アシスタント",
@@ -126,7 +126,7 @@ const jobs: Record<JobType, JobData> = {
     jsonDesc: "<p>株式会社行雲流水が運営するFLOWCLOUD・glowで、パートの美容師（Jrスタイリスト・スタイリスト）を募集しています。</p><p>時給は、Jrスタイリスト1,600円〜、スタイリスト1,800円〜です。勤務できる曜日・時間帯はご相談ください。</p>",
     jsonQualifications: "美容師免許をお持ちの方。ブランクのある方・育児中の方も相談できます。",
     jsonWorkHours: "シフト制（曜日・時間帯はご相談ください）。",
-    related: [["復職・両立のご相談", "/?c=part#contact"], ["早番・遅番の一日", "/blog/hayaban-osoban"]],
+    related: [["復職・両立のご相談", "/?c=part#contact"], ["早番・遅番の一日", "/blog/hayaban-osoban"], ["働き方（休み・教育・給与の内訳）", "/workstyle"], ["見学・体験の流れ", "/visit"]],
   },
   student: {
     code: "student", number: "04", eyebrow: "BEAUTY STUDENT / PART-TIME", title: "美容学生アルバイト",
