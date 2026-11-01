@@ -19,3 +19,9 @@
 - 実施: ①ブログ記事に目次（見出し3つ以上）を追加 ②4見出し以上の記事の中盤に見学/LINE CTAを挿入 ③llms.txtに /faq /workstyle /visit と記事一覧を追加 ④sitemap lastmodを更新
 - セキュリティ: HSTS/nosniff/X-Frame/Referrer-Policy 設定済み。未設定: Content-Security-Policy、Permissions-Policy（HSTSにincludeSubDomains/preloadなし）→ 提案（サーバー設定のため要承認）。contact.php は Origin検証・IPレート制限あり。
 - 次回: 記事1本追加の効果確認、画像重量（site/images 300KB超5枚）の圧縮、Search Console確認のお願い。
+
+## 実行ログ 2026-11-01（追加分）
+- 記事追加: tsukin-kishiwada-izumi-sakai ／ 狙い: 岸和田・和泉・堺 美容師 求人 通勤 ／ 切り口: 交通費・家賃補助(上限1万円・要相談)と早番遅番。通勤時間は未確認のため記載せず。
+- カバー済みテーマに追加: tsukin-kishiwada-izumi-sakai
+- 画像圧縮: 300KB超の写真7枚を幅1600以下・品質78に（計約2.4MB→約1.5MB）。
+- server-files/htaccess-new-domain に Permissions-Policy を追記（※サーバーへの反映は藤津さんの手動アップロードが必要。CSPはGA/インラインスクリプトに影響するため未追加）。
