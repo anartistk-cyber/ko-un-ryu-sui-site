@@ -18,7 +18,7 @@ const faq=[
 ['料金はどこで確認できますか？','メニューページに料金の目安を掲載しています。長さによって料金が変わるメニューがあります。クーポンはホットペッパービューティーのページに最新情報があります。'],
 ['求人はしていますか？','はい。美容師・アシスタント・パートなどを募集しています。詳しくは採用サイト（ko-un-ryu-sui.com）をご覧ください。']
 ];
-const nav=[['/coupon/','クーポン'],['/menu/','メニュー・料金'],['/voice/','お客様の声'],['/hair-care-40-50/','40代・50代の髪'],['/straight/','髪質改善ストレート'],['/cota/','コタ製品'],['/headspa/','ヘッドスパ'],['/first/','初めての方へ'],['/area/','対応エリア'],['/faq/','よくある質問'],['/company/','アクセス'],['/salon-blog/','お知らせ・ブログ']];
+const nav=[['/coupon/','クーポン'],['/menu/','メニュー・料金'],['/voice/','お客様の声'],['/hair-care-40-50/','40代・50代の髪'],['/straight/','髪質改善ストレート'],['/cota-products/','コタ製品'],['/headspa/','ヘッドスパ'],['/first/','初めての方へ'],['/area/','対応エリア'],['/faq/','よくある質問'],['/company/','アクセス'],['/salon-blog/','お知らせ・ブログ']];
 const org={"@type":["HairSalon","BeautySalon"],"@id":BASE+"/#salon","name":"FLOWCLOUD（フロウクラウド）","alternateName":["フロウクラウド","FLOW CLOUD"],"url":BASE+"/","telephone":"+81-725-90-5699","email":"info@flowcloud.net","image":BASE+IMG('FLOW-CLOUD-001-1024x733'),"description":"大阪・泉大津の完全予約の会員制美容室。半個室空間で髪質改善・ヘッドスパ・トリートメント。南海本線泉大津駅から徒歩3分。","address":{"@type":"PostalAddress","postalCode":"595-0026","addressRegion":"大阪府","addressLocality":"泉大津市","streetAddress":"東雲町1-20","addressCountry":"JP"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"20:00"}],"areaServed":areas.map(a=>({"@type":"Place","name":a})),"hasMap":"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent('FLOWCLOUD 大阪府泉大津市東雲町1-20'),"sameAs":[L.hp,L.ig,L.fb,L.x,'https://www.youtube.com/@flowcloud',L.gbp,L.net],"parentOrganization":{"@type":"Organization","name":"株式会社行雲流水","url":L.recruit},"founder":{"@type":"Person","name":"藤津一弥"},"foundingDate":"2007-11","priceRange":"¥¥","potentialAction":{"@type":"ReserveAction","target":{"@type":"EntryPoint","urlTemplate":L.net,"actionPlatform":["http://schema.org/DesktopWebPlatform","http://schema.org/MobileWebPlatform"]},"result":{"@type":"Reservation","name":"ネット予約"}}};
 
 const jst=new Date(Date.now()+9*3600e3);const todayStr=jst.toISOString().slice(0,10);
@@ -127,14 +127,14 @@ sec('ご予約の前に',`<ul class="ul"><li>過去のカラー・パーマ・�
 `<div class="wrap">${cta('髪質改善ストレートのご予約・ご相談')}</div>`+sec('よくある質問',faqHtml(fSt),'alt')
 }));
 const fCo=[['コタの製品は取り扱っていますか？','はい、FLOWCLOUDではコタ（COTA）の全商品を取り扱っています。店頭で販売していますので、お気軽にお声がけください。'],['店頭で購入できますか？','はい、店頭で販売しています。在庫の状況は変わることがあるため、お探しの商品がある場合は、ご来店前にお電話でご確認いただくと確実です。'],['自分に合うヘアケアを相談できますか？','はい。髪の状態や普段のお手入れ方法をうかがい、おうちでのヘアケアのご相談をお受けします。']];
-write('/cota/',page({path:'/cota/',title:'コタ（COTA）全商品を店頭販売｜泉大津の美容室 FLOWCLOUD',desc:'泉大津の美容室FLOWCLOUDは、コタ（COTA）の全商品を取り扱い、店頭で販売しています。髪の状態に合わせたヘアケアのご相談もお気軽に。',h1:'コタ（COTA）全商品を店頭販売',lead:'FLOWCLOUDでは、コタ（COTA）の全商品を取り扱い、店頭で販売しています。髪の状態に合わせたおうちでのヘアケアも、お気軽にご相談ください。',crumbs:[['/cota/','コタ製品']],image:IMG('FLOW-CLOUD-047'),extra:[faqLD(fCo)],
+write('/cota-products/',page({path:'/cota-products/',title:'コタ（COTA）全商品を店頭販売｜泉大津の美容室 FLOWCLOUD',desc:'泉大津の美容室FLOWCLOUDは、コタ（COTA）の全商品を取り扱い、店頭で販売しています。髪の状態に合わせたヘアケアのご相談もお気軽に。',h1:'コタ（COTA）全商品を店頭販売',lead:'FLOWCLOUDでは、コタ（COTA）の全商品を取り扱い、店頭で販売しています。髪の状態に合わせたおうちでのヘアケアも、お気軽にご相談ください。',crumbs:[['/cota-products/','コタ製品']],image:IMG('FLOW-CLOUD-047'),extra:[faqLD(fCo)],
 body:sec('FLOWCLOUDのヘアケア相談',`<p>サロンで整えた髪を、おうちでもきれいに保つために。髪の状態や普段のお手入れ方法をうかがって、ご自宅でのヘアケアをご案内します。</p><p>コタ（COTA）の全商品を取り扱い、店頭で販売しています。在庫の状況は変わることがあるため、お探しの商品がある場合は、ご来店前にお電話でご確認いただくと確実です。</p>`)+
 sec('あわせておすすめ',`<p><a class="more" href="/menu/#rehair">髪質改善ストレート・トリートメントのメニューを見る →</a></p><p><a class="more" href="/straight/">髪質改善ストレート（縮毛矯正）について →</a></p>`,'alt')+
 `<div class="wrap">${cta('ご予約・ご相談はこちら')}</div>`+sec('よくある質問',faqHtml(fCo))
 }));
 
 // sitemap
-const urls=['/','/privacy/','/coupon/','/menu/','/hair-care-40-50/','/straight/','/cota/','/headspa/','/first/','/area/','/faq/','/company/','/cast/','/voice/','/salon-blog/',...posts.map(p=>`/salon-blog/${p.slug}/`)];
+const urls=['/','/privacy/','/coupon/','/menu/','/hair-care-40-50/','/straight/','/cota-products/','/headspa/','/first/','/area/','/faq/','/company/','/cast/','/voice/','/salon-blog/',...posts.map(p=>`/salon-blog/${p.slug}/`)];
 fs.writeFileSync(OUT+'/sitemap-fc.xml',`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(u=>`<url><loc>${BASE+u}</loc><lastmod>${todayStr}</lastmod></url>`).join('')}</urlset>`);
 fs.writeFileSync(OUT+'/llms.txt',`# FLOWCLOUD（フロウクラウド）泉大津の完全予約の会員制美容室
 > 大阪府泉大津市東雲町1-20（〒595-0026）。南海本線「泉大津駅」から徒歩約3分。TEL 0725-90-5699。営業9:00〜20:00（最終受付18:00）・定休日は毎週月曜・火曜（不定休の日あり）・完全予約制。運営: 株式会社行雲流水（姉妹店 glow）。

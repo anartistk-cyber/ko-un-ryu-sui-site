@@ -19,7 +19,7 @@ const faq=[
 ['料金はどこで確認できますか？','メニューページに料金の目安を掲載しています。クーポンの最新情報はホットペッパービューティーのページをご覧ください。'],
 ['求人はしていますか？','株式会社行雲流水（glow・FLOWCLOUD）の採用情報は、採用サイト（ko-un-ryu-sui.com）をご覧ください。']
 ];
-const nav=[['/coupon/','クーポン'],['/menu/','メニュー・料金'],['/voice/','お客様の声'],['/young/','10代・20代の方へ'],['/short-perm/','カット・カラー・パーマ'],['/straight/','髪質改善ストレート'],['/cota/','コタ製品'],['/headspa/','ヘッドスパ'],['/first/','初めての方へ'],['/area/','対応エリア'],['/faq/','よくある質問'],['/journal/','お知らせ・ブログ']];
+const nav=[['/coupon/','クーポン'],['/menu/','メニュー・料金'],['/voice/','お客様の声'],['/young/','10代・20代の方へ'],['/short-perm/','カット・カラー・パーマ'],['/straight/','髪質改善ストレート'],['/cota-products/','コタ製品'],['/headspa/','ヘッドスパ'],['/first/','初めての方へ'],['/area/','対応エリア'],['/faq/','よくある質問'],['/journal/','お知らせ・ブログ']];
 const org={"@type":["HairSalon","BeautySalon"],"@id":BASE+"/#salon","name":"glow（グロウ）","alternateName":["グロウ","glow 泉大津"],"url":BASE+"/","telephone":"+81-725-51-7222","image":BASE+I.ogp,"description":"泉大津駅徒歩1分、いずみおおつCITY 1Fの美容室。ヘア・ヘッドケアのトータルビューティー。カット・カラー・パーマ・髪質改善・ヘッドスパ。","address":{"@type":"PostalAddress","addressRegion":"大阪府","addressLocality":"泉大津市","streetAddress":"旭町18-3 いずみおおつCITY 1F","addressCountry":"JP"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"20:00"}],"areaServed":areas.map(a=>({"@type":"Place","name":a})),"hasMap":L.map,"sameAs":[L.salon,L.ig,L.gbp,L.net],"parentOrganization":{"@type":"Organization","name":"株式会社行雲流水","url":L.recruit},"priceRange":"¥¥","knowsAbout":["似合わせカット","艶カラー","髪質改善","デジタルパーマ","ヘッドスパ","ショートカット","レイヤーカット"],"makesOffer":[["カット（シャンプーブロー込）",5500],["カラー（根元・全体）",6600],["ナチュラルパーマ",7700],["髪質改善ストレート",16500],["シスキュア",3850],["リフトアップヘッドスパ",5500]].map(([n,pr])=>({"@type":"Offer","priceCurrency":"JPY","price":String(pr),"itemOffered":{"@type":"Service","name":n}})),"potentialAction":{"@type":"ReserveAction","target":{"@type":"EntryPoint","urlTemplate":L.net,"actionPlatform":["http://schema.org/DesktopWebPlatform","http://schema.org/MobileWebPlatform"]},"result":{"@type":"Reservation","name":"ネット予約"}}};
 const jst=new Date(Date.now()+9*3600e3);const todayStr=jst.toISOString().slice(0,10);
 const posts=[...DATA.posts].sort((a,b)=>b.date.localeCompare(a.date));
@@ -121,13 +121,13 @@ sec('ご予約の前に',`<ul class="ul"><li>過去のカラー・パーマ・�
 `<div class="wrap">${cta('髪質改善ストレートのご予約・ご相談')}</div>`+sec('よくある質問',faqHtml(fSt),'alt')
 }));
 const fCo=[['コタの製品は取り扱っていますか？','はい、glowではコタ（COTA）の全商品を取り扱っています。店頭で販売していますので、お気軽にお声がけください。'],['店頭で購入できますか？','はい、店頭で販売しています。在庫の状況は変わることがあるため、お探しの商品がある場合は、ご来店前にお電話でご確認いただくと確実です。'],['自分に合うヘアケアを相談できますか？','はい。髪の状態や普段のお手入れ方法をうかがい、おうちでのヘアケアのご相談をお受けします。']];
-write('/cota/',page({path:'/cota/',title:'コタ（COTA）全商品を店頭販売｜泉大津の美容室 glow',desc:'泉大津の美容室glowは、コタ（COTA）の全商品を取り扱い、店頭で販売しています。髪の状態に合わせたヘアケアのご相談もお気軽に。',h1:'コタ（COTA）全商品を店頭販売',lead:'glowでは、コタ（COTA）の全商品を取り扱い、店頭で販売しています。髪の状態に合わせたおうちでのヘアケアも、お気軽にご相談ください。',crumbs:[['/cota/','コタ製品']],image:I.interior,extra:[faqLD(fCo)],
+write('/cota-products/',page({path:'/cota-products/',title:'コタ（COTA）全商品を店頭販売｜泉大津の美容室 glow',desc:'泉大津の美容室glowは、コタ（COTA）の全商品を取り扱い、店頭で販売しています。髪の状態に合わせたヘアケアのご相談もお気軽に。',h1:'コタ（COTA）全商品を店頭販売',lead:'glowでは、コタ（COTA）の全商品を取り扱い、店頭で販売しています。髪の状態に合わせたおうちでのヘアケアも、お気軽にご相談ください。',crumbs:[['/cota-products/','コタ製品']],image:I.interior,extra:[faqLD(fCo)],
 body:sec('glowのヘアケア相談',`<p>サロンで整えた髪を、おうちでもきれいに保つために。髪の状態や普段のお手入れ方法をうかがって、ご自宅でのヘアケアをご案内します。</p><p>コタ（COTA）の全商品を取り扱い、店頭で販売しています。在庫の状況は変わることがあるため、お探しの商品がある場合は、ご来店前にお電話でご確認いただくと確実です。</p>`)+
 sec('あわせておすすめ',`<p><a class="more" href="/menu/#rehair">髪質改善ストレート・トリートメントのメニューを見る →</a></p><p><a class="more" href="/straight/">髪質改善ストレート（縮毛矯正）について →</a></p>`,'alt')+
 `<div class="wrap">${cta('ご予約・ご相談はこちら')}</div>`+sec('よくある質問',faqHtml(fCo))
 }));
 
-const urls=['/','/privacy/','/coupon/','/menu/','/young/','/short-perm/','/straight/','/cota/','/headspa/','/first/','/area/','/faq/','/voice/','/journal/',...posts.map(p=>`/journal/${p.slug}/`)];
+const urls=['/','/privacy/','/coupon/','/menu/','/young/','/short-perm/','/straight/','/cota-products/','/headspa/','/first/','/area/','/faq/','/voice/','/journal/',...posts.map(p=>`/journal/${p.slug}/`)];
 fs.writeFileSync(OUT+'/sitemap-gl.xml',`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(u=>`<url><loc>${BASE+u}</loc><lastmod>${todayStr}</lastmod></url>`).join('')}</urlset>`);
 fs.writeFileSync(OUT+'/llms.txt',`# glow（グロウ）泉大津駅徒歩1分の美容室
 > 大阪府泉大津市旭町18-3 いずみおおつCITY 1F。南海本線「泉大津駅」徒歩1分。TEL 0725-51-7222。営業9:00〜20:00・不定休・予約制。運営: 株式会社行雲流水（姉妹店 FLOWCLOUD）。

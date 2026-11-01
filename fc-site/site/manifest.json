@@ -2,27 +2,27 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "14fb51e4f1f2a4ebd175a9a9939c57be7ded11514da826c7bdbc98823c0463dd"
+   "sha256": "e4c5dcca39e5429827688e64120679024760ad552199178c4be6b997beef5238"
   },
   {
    "path": "cast/index.html",
-   "sha256": "2745429dd5db63b1d9dacd0e33a19d0d276cce851ed96154e751cce3badfd892"
+   "sha256": "ad338b7d7d5227ff845b8058b1111eb25f73935777ddc91b80a86891bb053089"
   },
   {
    "path": "company/index.html",
-   "sha256": "8a5d7add96b8927c41b9e76b33242439bff45a2061685fc5628a705abd056c33"
+   "sha256": "861d7bacee0d296c7a7e5183cf3c112881c98621ce02ff9d98ebc7950e3fb8d3"
   },
   {
-   "path": "cota/index.html",
-   "sha256": "f0af82759961cab27c3d046474a6c8c391be0bffb78e1d7300b32ceac85b1b3f"
+   "path": "cota-products/index.html",
+   "sha256": "2250f7090e135f2e046a9558e8866a42e73637d0f333237d8b788c42e3f7d765"
   },
   {
    "path": "coupon/index.html",
-   "sha256": "4a3784a11baf5dc31d8ee3883c98e0c4e5f4fc4600d2704e7af60671439e3c82"
+   "sha256": "0fe10c3bd30383dd1e163949254ab0891303c6b99cf3ac2c48a9b75f5adb0f2a"
   },
   {
    "path": "faq/index.html",
-   "sha256": "ab2501e7f70dc9a8066a97a4d2014213722c49dd852d3e927c07a1bcf57eaf18"
+   "sha256": "098c220d5af8fe73c3edb24f10fbb532f005b20a49406f4b05ef590d334be7fb"
   },
   {
    "path": "favicon.ico",
@@ -50,7 +50,7 @@
   },
   {
    "path": "first/index.html",
-   "sha256": "dc4bf71d183d0064ae983824292555ac6b03293c9cd2ecfd21581cb00909ac01"
+   "sha256": "ee62bf28d7ed3878d828538658ddc261bf5d8416310ac92f2ab9a6076ba0901c"
   },
   {
    "path": "google0cfa36e6cfb51b13.html",
@@ -58,51 +58,51 @@
   },
   {
    "path": "hair-care-40-50/index.html",
-   "sha256": "c3ea44b0075844e64d5fad896c90ae48ad9919ed58ee7667bb642879b9b55b46"
+   "sha256": "234eb5306e08b26ab23226f07efecb38682d0a5d3bc67b645ce4d0a940315a2a"
   },
   {
    "path": "headspa/index.html",
-   "sha256": "3f7d21bf3ea4adef78f146216f8003323d077ca6706e70f4013c4ec434567d4c"
+   "sha256": "68c63b8dc7073aa1ef21cf392a1c7b205618aa92a2ec1d9fd2777a97b02f3b6c"
   },
   {
    "path": "index.html",
-   "sha256": "e26d34a0e88b8f53174f175b807fa99508e49ad55b53970d9f8a48c6c49834f2"
+   "sha256": "d4eec57e5051aae28f5a437135e134c71e6abe6fdc506b85352bcbad3d48924b"
   },
   {
    "path": "llms.txt",
-   "sha256": "f334b3c79f1925dfb9bd7da3c79a74d18abc4edc42dde3780135a0dec94c96c4"
+   "sha256": "9839bf0f747ea88a31c20c11a76303bf5424cdc97e2f792c609f451c89921b3d"
   },
   {
    "path": "menu/index.html",
-   "sha256": "91322323a314d68750c36aece9a7b797cc10c13f24677a03aadd23eedaada816"
+   "sha256": "20fa6c1538a4e576b7005d70f016bd45c88f5020efc7f29ed03affe11f651e2d"
   },
   {
    "path": "privacy/index.html",
-   "sha256": "462589ffbadbca82328b607161a09003fe9d43c0b3918703522eed7a63af52bb"
+   "sha256": "b89bd8bab25a0fa8f2927ddb938ef0597250683aa319adfdb6674704f6a3c532"
   },
   {
    "path": "salon-blog/headspa-shampoo-kukan/index.html",
-   "sha256": "ea11df5ce9c515ceb1da95c9839e0508779700bd4548f4dcc5dfef5cae537473"
+   "sha256": "b6cafc484084c024acf3d9814aef2f8744fb01fc82d822e51d9c1ea4535bd811"
   },
   {
    "path": "salon-blog/index.html",
-   "sha256": "4b929d96885c783de42758637ce5f6eb8ac19a2085e6642dd1e62394443e0e9c"
+   "sha256": "971b508aef52399e7364ae5bd3c92bb6a2b8a8df75732860f06f9b22c8411652"
   },
   {
    "path": "salon-blog/kyugyobi-2026-11-12/index.html",
-   "sha256": "6b2333da3d8b0a6676471de3291a291d6cb218d05f5c35fb2c59a7b739205c7d"
+   "sha256": "f95f1bc1c11559961a270269718d25fb607ae14cbbd968da40e2a92b4643fe7d"
   },
   {
    "path": "sitemap-fc.xml",
-   "sha256": "2324e00e8e13451ad0f79992f1a93ae2760ac35d35fd86a8006978e5fa73a22b"
+   "sha256": "8ef6cc03fe12b2c8ab82f53a319e90f913e30955fb9474e287a62403f89b5e15"
   },
   {
    "path": "straight/index.html",
-   "sha256": "ae403a167d89c0299ffb0addcefd43390d7417b86e50f85da4fd7e8b6c940c06"
+   "sha256": "686b03caaa4a5c5b52cad8b08a5d46533b02d6787b0f29435a8841bae173ce0c"
   },
   {
    "path": "voice/index.html",
-   "sha256": "74d6e8f1c9c4d40a48808bd459cc09ed9c95efb3b42a3e43118b6ce808431f08"
+   "sha256": "d938115f33a0001125b3725e9c6d34a78abe89e71bbed27ce5e1cf1af94bf41f"
   }
  ]
 }

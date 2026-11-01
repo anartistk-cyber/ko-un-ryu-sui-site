@@ -2,19 +2,19 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "baab16f20021f087a5872c02062b8d522378052a6c09ee2707546a47eaca69fc"
+   "sha256": "ceb9e5bcf46abd076e48f7a8ffa83ea8325af1447add3834311b6b11d8980f76"
   },
   {
-   "path": "cota/index.html",
-   "sha256": "e3f9335a6c92763c123a2fc88804162787370d911092d53f1cd15f480950898b"
+   "path": "cota-products/index.html",
+   "sha256": "d96689d36d538e8f2c9188cbb1fcf57f98a148ed7baf888406c395f75302dbca"
   },
   {
    "path": "coupon/index.html",
-   "sha256": "678b9e96adc215ed773d165230a77390aaf8c220ce47235aaed9bcd9d8e5aec7"
+   "sha256": "809330986dc68e2e58a42fe3a819039e0b1272d75b65258003c215ab7eac74da"
   },
   {
    "path": "faq/index.html",
-   "sha256": "884d4fc99ba1c1ff7702ad25bb36dc0b1c689119b9fed7febbfd29e9b67706f0"
+   "sha256": "30158db67205b01fc0bfb0c97ef5817ffd7d5b9e1345243f0583fb8d67cbec8c"
   },
   {
    "path": "favicon.ico",
@@ -22,7 +22,7 @@
   },
   {
    "path": "first/index.html",
-   "sha256": "8e1800f818103d2c7a79ceedca9d3b287cc3a5ec10ef8f82657944126057ddd9"
+   "sha256": "bf4cc86610768a8313d1d74ce9128cf5812417c6bc6548a9cc2930d9475adb37"
   },
   {
    "path": "gl/apple-touch-icon.png",
@@ -46,39 +46,39 @@
   },
   {
    "path": "headspa/index.html",
-   "sha256": "8bafbc74f85fc7c8bb7a242ea9f8089aa90e2c7a211603a0a46e99ef0ad0ea8b"
+   "sha256": "62d0167f871f9bf0d9370c27f889ce01974b335ab92ec89719e326bd64ad81ca"
   },
   {
    "path": "index.html",
-   "sha256": "c42814dd009f99b58cebdfc1c7d72b109e9ecff6b67e1feb5f94a96e2f2bbb12"
+   "sha256": "3d7dec138424423679ba83191f953e6d1075e8a31e4fb39cf40dc813d482edfa"
   },
   {
    "path": "journal/access-parking/index.html",
-   "sha256": "b97257abbddcab78a30e365628bd3659c32fb69f21e66ad7a637e917a896f633"
+   "sha256": "5490d20bbc2df1b35632b45827b2e66f8e9ebf4f3438880038804b98a02b8f64"
   },
   {
    "path": "journal/first-salon-counseling/index.html",
-   "sha256": "cb79a11bb88f63ca75d2229db96065b06e2d5cdac8385fc394c961cc0a6ce308"
+   "sha256": "277f708527be81feb81f80058fb3f2a9231bda7cec614f5230b38a8296a9fc95"
   },
   {
    "path": "journal/index.html",
-   "sha256": "40e839af6d1614e8a126f94cb0a840b5ba401d28eedc1c749cd2876e9d47e3cb"
+   "sha256": "5db4ba04fa316d0c8d05d477c6737261da2eeb5081eaa7df17558757d8dfaed2"
   },
   {
    "path": "journal/sugao-care-young/index.html",
-   "sha256": "f01f580761ffbadd43967fd2494d6114bb2480a6c302f85409491f6fcf49d3ba"
+   "sha256": "10cd5c4a5cfd25a08180040591ebd52c30644c70af4a0f73fca9addd7a66a884"
   },
   {
    "path": "llms.txt",
-   "sha256": "43dd8a7ee9eccba3914dcf8344a4c154fea790a1c73a6e11e9cd4d4a9553053f"
+   "sha256": "465454a46f12520ccf8501f552ffec77acd0ca4d6babb98515a182c090fc7e4c"
   },
   {
    "path": "menu/index.html",
-   "sha256": "4d170e934b1f19a2d6659e1a68b5cdd9fb05e333a0d46477f6c4c09f72bb46ac"
+   "sha256": "075a142cd984d84dfe9dca38b60b214d7b210a3bdaeb20a9475d300be3f5ec3b"
   },
   {
    "path": "privacy/index.html",
-   "sha256": "24e6e10437d025054f819777a8a1b65417b7696e1a19ad77a39b4d726d8eca19"
+   "sha256": "dc362a9728c569a95dffac9c5f9198fd9e1332fd6cc080104d731202e1a9e29f"
   },
   {
    "path": "robots.txt",
@@ -86,23 +86,23 @@
   },
   {
    "path": "short-perm/index.html",
-   "sha256": "4f97aff203c84dbe23f5accfbe560cbf3e369d3ca91c80a5fcd4469e39eacaf4"
+   "sha256": "4644259aae6eff674f22407758aa267a4cd5623ec8a6124840065d51310ba525"
   },
   {
    "path": "sitemap-gl.xml",
-   "sha256": "ac3edfff75390bd360fef2e0332e64b64bd31c66d32bb1cb31829206a4cd35ff"
+   "sha256": "1dacf8dd6d912caa00110df9531bcb63179875739a86e76ab9c8a6cb75e26897"
   },
   {
    "path": "straight/index.html",
-   "sha256": "9f313f0e674495d5cb9c7ca2aba735e27389d50de7f72bb6838c06231b240f96"
+   "sha256": "df9245d885cb479ebf74c923dd9c69a5cba33a635012f6a7abb698d0c63b0dd8"
   },
   {
    "path": "voice/index.html",
-   "sha256": "5844352c6fa44d32aa5772c472acd9ae960cab590339af715ed2487fa2473234"
+   "sha256": "5b3bfb8699a1f92cd19070eeb2ec8dd8a8cfbb74a8bbaec373d44f584b65e575"
   },
   {
    "path": "young/index.html",
-   "sha256": "526ff950a6b897483c676859aed0d33faf76c004d2557b244e577f80d24ea90d"
+   "sha256": "4d58069e7040379568bc3af89c4e84a0635de936183ce285059e5d84f1cbf23f"
   }
  ]
 }
