@@ -66,11 +66,11 @@
   },
   {
    "path": "index.html",
-   "sha256": "1ccc6ad337cd4a99c556cc04568281323b1170382f4548d9ecac47e4e31cb6f6"
+   "sha256": "3597c973b7a3bc5b54623e81cf4c161e966d7fa0daf3c228cb6d851571ba41fc"
   },
   {
    "path": "llms.txt",
-   "sha256": "d116f5be64b7a21e9d83831e0d65d6727b40c8fa57d2a3ff26e93c03b26bbdd7"
+   "sha256": "e00b6b8db307b77bc82082a698f0d87a405b675b40f89978d73cf32e0c08845e"
   },
   {
    "path": "menu/index.html",
@@ -85,8 +85,12 @@
    "sha256": "b6cafc484084c024acf3d9814aef2f8744fb01fc82d822e51d9c1ea4535bd811"
   },
   {
+   "path": "salon-blog/home-hair-care-cota-store/index.html",
+   "sha256": "f8e7055f561509787571c71f780fb11fc04754942abe9dc9e0ddaed5b146abdb"
+  },
+  {
    "path": "salon-blog/index.html",
-   "sha256": "0b29df5fd622523b04d82b3ee2aefdd1092cf47efc75167fc5e6cf4388b7e192"
+   "sha256": "d5767a9cbaead6173fbb7d52ac97ce48b692c8f46baefe608252eb3e82626f2d"
   },
   {
    "path": "salon-blog/kuse-uneri-straight-40-50/index.html",
@@ -98,7 +102,7 @@
   },
   {
    "path": "sitemap-fc.xml",
-   "sha256": "97a9ca546add48cbe2f2e71e430fb2932e6cf934e175d88b51251544e895c321"
+   "sha256": "dcd6d2bc5bac633bf047d5d8152cbcc9ddd9375deb5c1b6c99d8cf61005a8e70"
   },
   {
    "path": "straight/index.html",
