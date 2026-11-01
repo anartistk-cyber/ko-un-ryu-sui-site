@@ -2,15 +2,19 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "fe88f6c3eaf6f7ac378836a2336d5508ef1319130a6b18d1b4f6a98c655705a3"
+   "sha256": "baab16f20021f087a5872c02062b8d522378052a6c09ee2707546a47eaca69fc"
+  },
+  {
+   "path": "cota/index.html",
+   "sha256": "39842001ebd6046285c5d3aaa7ff6ff5d72c9bf56ba9f53ae63529db153733ca"
   },
   {
    "path": "coupon/index.html",
-   "sha256": "c529be4515c7f6cf50cd4054e1900e72463775d9f01b8c989dc551c8df3b62c9"
+   "sha256": "678b9e96adc215ed773d165230a77390aaf8c220ce47235aaed9bcd9d8e5aec7"
   },
   {
    "path": "faq/index.html",
-   "sha256": "7bebde661da9983fe21bf3aa5f4f51b11343b6b3717b27ec346926f35571cbf8"
+   "sha256": "884d4fc99ba1c1ff7702ad25bb36dc0b1c689119b9fed7febbfd29e9b67706f0"
   },
   {
    "path": "favicon.ico",
@@ -18,7 +22,7 @@
   },
   {
    "path": "first/index.html",
-   "sha256": "5ea842467ad76bc2ab251836797e934593e1f72ad4723cfd9c6ba723b63fe7a4"
+   "sha256": "8e1800f818103d2c7a79ceedca9d3b287cc3a5ec10ef8f82657944126057ddd9"
   },
   {
    "path": "gl/apple-touch-icon.png",
@@ -42,39 +46,39 @@
   },
   {
    "path": "headspa/index.html",
-   "sha256": "34a97fb71ef235710ddaebfe60e3cc97114147b199d84af2e726adaab6d33bab"
+   "sha256": "8bafbc74f85fc7c8bb7a242ea9f8089aa90e2c7a211603a0a46e99ef0ad0ea8b"
   },
   {
    "path": "index.html",
-   "sha256": "2c3ce661eb47c1fa632c445cd3a9eee71d133781b17f985240850d06cef45454"
+   "sha256": "2accdd98b99cbf7687b5343dba301d7b02e47ff50ef7567b9fe81ac5ef99d4b6"
   },
   {
    "path": "journal/access-parking/index.html",
-   "sha256": "498c4e3dc10dd288d4443cb07256750d25b4d4cbbeea5a9905fdd2ec274b4bc7"
+   "sha256": "b97257abbddcab78a30e365628bd3659c32fb69f21e66ad7a637e917a896f633"
   },
   {
    "path": "journal/first-salon-counseling/index.html",
-   "sha256": "783b004dca3c840c3d93610ad8baa89b7c9468de47c3c4ae623817014ef66f73"
+   "sha256": "cb79a11bb88f63ca75d2229db96065b06e2d5cdac8385fc394c961cc0a6ce308"
   },
   {
    "path": "journal/index.html",
-   "sha256": "ff13ad8f0806df4aada6a8b31a05d40ce4f4529d6bd8d907511f23377dfe6b1c"
+   "sha256": "40e839af6d1614e8a126f94cb0a840b5ba401d28eedc1c749cd2876e9d47e3cb"
   },
   {
    "path": "journal/sugao-care-young/index.html",
-   "sha256": "26a9cf499e2aee9669304d7cd47f03858654a5e0fb6c00c29a3ac166ab31b99a"
+   "sha256": "f01f580761ffbadd43967fd2494d6114bb2480a6c302f85409491f6fcf49d3ba"
   },
   {
    "path": "llms.txt",
-   "sha256": "534d258b671e37020e50f620c3bebad65d887d7e0db1645f13aa76d68e7724b6"
+   "sha256": "43dd8a7ee9eccba3914dcf8344a4c154fea790a1c73a6e11e9cd4d4a9553053f"
   },
   {
    "path": "menu/index.html",
-   "sha256": "b1ca66ac27126dfea5b791ca8a28dd6997baaf368870e66201cf461d392b363e"
+   "sha256": "4d170e934b1f19a2d6659e1a68b5cdd9fb05e333a0d46477f6c4c09f72bb46ac"
   },
   {
    "path": "privacy/index.html",
-   "sha256": "d34475b6bb31a9ad71409e611c98ff892b6fee6ac90e6f428cbfa087f97f0426"
+   "sha256": "24e6e10437d025054f819777a8a1b65417b7696e1a19ad77a39b4d726d8eca19"
   },
   {
    "path": "robots.txt",
@@ -82,19 +86,23 @@
   },
   {
    "path": "short-perm/index.html",
-   "sha256": "8b940d4ddeb31b2b24918cfc0aebdcf4b6bc56389ec3b39f761a5a135ff3a6b1"
+   "sha256": "4f97aff203c84dbe23f5accfbe560cbf3e369d3ca91c80a5fcd4469e39eacaf4"
   },
   {
    "path": "sitemap-gl.xml",
-   "sha256": "afe05620b3b0afc319412ecada98afa4ad8fb0be69278773e96d3b25dc92f341"
+   "sha256": "ac3edfff75390bd360fef2e0332e64b64bd31c66d32bb1cb31829206a4cd35ff"
+  },
+  {
+   "path": "straight/index.html",
+   "sha256": "9f313f0e674495d5cb9c7ca2aba735e27389d50de7f72bb6838c06231b240f96"
   },
   {
    "path": "voice/index.html",
-   "sha256": "51d3b39dc1c7423c36a7e7f1b606246d5d03b30e2a82b8d914fb3d196d5a2b72"
+   "sha256": "5844352c6fa44d32aa5772c472acd9ae960cab590339af715ed2487fa2473234"
   },
   {
    "path": "young/index.html",
-   "sha256": "6d6b3c753447372306a065f2b45d0f43c56ebbef5a726d73bd59fac9bda46ee8"
+   "sha256": "526ff950a6b897483c676859aed0d33faf76c004d2557b244e577f80d24ea90d"
   }
  ]
 }

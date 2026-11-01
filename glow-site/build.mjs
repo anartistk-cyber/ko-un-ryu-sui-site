@@ -19,7 +19,7 @@ const faq=[
 ['料金はどこで確認できますか？','メニューページに料金の目安を掲載しています。クーポンの最新情報はホットペッパービューティーのページをご覧ください。'],
 ['求人はしていますか？','株式会社行雲流水（glow・FLOWCLOUD）の採用情報は、採用サイト（ko-un-ryu-sui.com）をご覧ください。']
 ];
-const nav=[['/coupon/','クーポン'],['/menu/','メニュー・料金'],['/voice/','お客様の声'],['/young/','10代・20代の方へ'],['/short-perm/','カット・カラー・パーマ'],['/headspa/','ヘッドスパ'],['/first/','初めての方へ'],['/area/','対応エリア'],['/faq/','よくある質問'],['/journal/','お知らせ・ブログ']];
+const nav=[['/coupon/','クーポン'],['/menu/','メニュー・料金'],['/voice/','お客様の声'],['/young/','10代・20代の方へ'],['/short-perm/','カット・カラー・パーマ'],['/straight/','髪質改善ストレート'],['/cota/','コタ製品'],['/headspa/','ヘッドスパ'],['/first/','初めての方へ'],['/area/','対応エリア'],['/faq/','よくある質問'],['/journal/','お知らせ・ブログ']];
 const org={"@type":["HairSalon","BeautySalon"],"@id":BASE+"/#salon","name":"glow（グロウ）","alternateName":["グロウ","glow 泉大津"],"url":BASE+"/","telephone":"+81-725-51-7222","image":BASE+I.ogp,"description":"泉大津駅徒歩1分、いずみおおつCITY 1Fの美容室。ヘア・ヘッドケアのトータルビューティー。カット・カラー・パーマ・髪質改善・ヘッドスパ。","address":{"@type":"PostalAddress","addressRegion":"大阪府","addressLocality":"泉大津市","streetAddress":"旭町18-3 いずみおおつCITY 1F","addressCountry":"JP"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"20:00"}],"areaServed":areas.map(a=>({"@type":"Place","name":a})),"hasMap":L.map,"sameAs":[L.salon,L.ig,L.gbp,L.net],"parentOrganization":{"@type":"Organization","name":"株式会社行雲流水","url":L.recruit},"priceRange":"¥¥","knowsAbout":["似合わせカット","艶カラー","髪質改善","デジタルパーマ","ヘッドスパ","ショートカット","レイヤーカット"],"makesOffer":[["カット（シャンプーブロー込）",5500],["カラー（根元・全体）",6600],["ナチュラルパーマ",7700],["髪質改善ストレート",16500],["シスキュア",3850],["リフトアップヘッドスパ",5500]].map(([n,pr])=>({"@type":"Offer","priceCurrency":"JPY","price":String(pr),"itemOffered":{"@type":"Service","name":n}})),"potentialAction":{"@type":"ReserveAction","target":{"@type":"EntryPoint","urlTemplate":L.net,"actionPlatform":["http://schema.org/DesktopWebPlatform","http://schema.org/MobileWebPlatform"]},"result":{"@type":"Reservation","name":"ネット予約"}}};
 const jst=new Date(Date.now()+9*3600e3);const todayStr=jst.toISOString().slice(0,10);
 const posts=[...DATA.posts].sort((a,b)=>b.date.localeCompare(a.date));
@@ -111,7 +111,23 @@ sec('10代・20代のお客様の声（抜粋）',`<div class="rv">${DATA.review
 sec('人気のメニューと料金（税込）',`<div class="g3 pm"><a href="/menu/#cut"><h3>カット（シャンプーブロー込）</h3><p>50分／¥5,500</p></a><a href="/menu/#color"><h3>カラー（根元・全体）</h3><p>¥6,600〜</p></a><a href="/menu/#rehair"><h3>髪質向上トリートメント</h3><p>¥4,400</p></a><a href="/menu/#rehair"><h3>シスキュア</h3><p>¥3,850</p></a><a href="/menu/#spa"><h3>炭酸ヘッドマッサージ</h3><p>10分／¥2,200</p></a><a href="/menu/#perm"><h3>パーマ（ナチュラル）</h3><p>¥7,700〜</p></a></div><p class="note">ご新規様向けのクーポンは<a href="${L.coupon}" rel="noopener">ホットペッパービューティー</a>で最新情報をご確認ください。</p>`,'alt')+
 `<div class="wrap">${cta('はじめてのご予約')}</div>`+sec('よくある質問',faqHtml(fy))}));
 fs.mkdirSync(OUT+'/gl',{recursive:true});fs.writeFileSync(OUT+'/gl/style.css',fs.readFileSync('style.css','utf8'));
-const urls=['/','/privacy/','/coupon/','/menu/','/young/','/short-perm/','/headspa/','/first/','/area/','/faq/','/voice/','/journal/',...posts.map(p=>`/journal/${p.slug}/`)];
+
+// STRAIGHT (縮毛矯正=髪質改善ストレート) / COTA
+const fSt=[['縮毛矯正はできますか？','glowでは、縮毛矯正のご相談を「髪質改善ストレート」のメニューでお受けしています。クセ・うねりが気になる方は、カウンセリングで髪の状態をうかがってご提案します。'],['髪質改善ストレートの料金はいくらですか？','髪質改善ストレートは16,500円〜（税込）、ポイント髪質改善ストレートは11,000円〜（税込）です。髪の長さや状態により変わる場合があります。'],['カラーやパーマ、縮毛矯正の履歴は伝えたほうがいいですか？','はい。過去のカラー・パーマ・縮毛矯正の履歴は、施術内容を決めるうえで大切です。ご予約時や当日のカウンセリングでお伝えください。'],['髪が傷んでいても受けられますか？','髪の状態によっては、メニューや工程を調整したり、施術をおすすめできない場合があります。カウンセリングで状態を確認してご説明します。']];
+write('/straight/',page({path:'/straight/',title:'髪質改善ストレート（縮毛矯正）｜泉大津の美容室 glow',desc:'泉大津の美容室glowの髪質改善ストレート（縮毛矯正のご相談）。クセ・うねり・広がりが気になる方へ。16,500円〜（税込）。カウンセリングで髪の状態を確認してご提案します。',h1:'髪質改善ストレート（縮毛矯正）',lead:'クセ・うねり・広がりが気になる方へ。縮毛矯正のご相談は、glowでは「髪質改善ストレート」のメニューでお受けしています。',crumbs:[['/straight/','髪質改善ストレート']],image:I.interior,extra:[faqLD(fSt)],
+body:sec('こんなお悩みの方へ',`<ul class="worry"><li>朝のクセ・うねりのセットに時間がかかる</li><li>湿気で髪が広がる</li><li>以前の縮毛矯正から伸びてきて、境目が気になる</li><li>パサつきやまとまりにくさが気になる</li></ul><p>お悩みは一人ひとり違います。カウンセリングで髪の状態をうかがい、合う方法をご提案します。</p>`)+
+sec('メニューと料金（税込）',T([['髪質改善ストレート','¥16,500〜'],['ポイント髪質改善ストレート','¥11,000〜']])+'<p class="note">※長さ・状態により料金が変わる場合があります。クーポンの最新情報はホットペッパービューティーをご覧ください。</p>','alt')+
+sec('ご予約の前に',`<ul class="ul"><li>過去のカラー・パーマ・縮毛矯正の履歴をお知らせください。</li><li>髪の状態によっては、工程を調整したり、施術をおすすめできない場合があります。</li><li>仕上がりや持ちには個人差があります。</li></ul>`)+
+`<div class="wrap">${cta('髪質改善ストレートのご予約・ご相談')}</div>`+sec('よくある質問',faqHtml(fSt),'alt')
+}));
+const fCo=[['コタの製品は取り扱っていますか？','はい、glowではコタ（COTA）の製品を取り扱っています。取扱製品や在庫は変わることがあるため、詳しくはご来店時またはお電話でご確認ください。'],['自分に合うヘアケアを相談できますか？','はい。髪の状態や普段のお手入れ方法をうかがい、おうちでのヘアケアのご相談をお受けします。']];
+write('/cota/',page({path:'/cota/',title:'コタ（COTA）製品の取り扱い｜泉大津の美容室 glow',desc:'泉大津の美容室glowは、コタ（COTA）の製品を取り扱っています。髪の状態に合わせたヘアケアのご相談もお気軽に。取扱製品・在庫はご来店時またはお電話でご確認ください。',h1:'コタ（COTA）製品の取り扱い',lead:'glowでは、コタ（COTA）の製品を取り扱っています。髪の状態に合わせたおうちでのヘアケアも、お気軽にご相談ください。',crumbs:[['/cota/','コタ製品']],image:I.interior,extra:[faqLD(fCo)],
+body:sec('glowのヘアケア相談',`<p>サロンで整えた髪を、おうちでもきれいに保つために。髪の状態や普段のお手入れ方法をうかがって、ご自宅でのヘアケアをご案内します。</p><p>取扱製品・在庫・価格は変わることがあるため、ご来店時またはお電話でご確認ください。</p>`)+
+sec('あわせておすすめ',`<p><a class="more" href="/menu/#rehair">髪質改善ストレート・トリートメントのメニューを見る →</a></p><p><a class="more" href="/straight/">髪質改善ストレート（縮毛矯正）について →</a></p>`,'alt')+
+`<div class="wrap">${cta('ご予約・ご相談はこちら')}</div>`+sec('よくある質問',faqHtml(fCo))
+}));
+
+const urls=['/','/privacy/','/coupon/','/menu/','/young/','/short-perm/','/straight/','/cota/','/headspa/','/first/','/area/','/faq/','/voice/','/journal/',...posts.map(p=>`/journal/${p.slug}/`)];
 fs.writeFileSync(OUT+'/sitemap-gl.xml',`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(u=>`<url><loc>${BASE+u}</loc><lastmod>${todayStr}</lastmod></url>`).join('')}</urlset>`);
 fs.writeFileSync(OUT+'/llms.txt',`# glow（グロウ）泉大津駅徒歩1分の美容室
 > 大阪府泉大津市旭町18-3 いずみおおつCITY 1F。南海本線「泉大津駅」徒歩1分。TEL 0725-51-7222。営業9:00〜20:00・不定休・予約制。運営: 株式会社行雲流水（姉妹店 FLOWCLOUD）。

@@ -18,7 +18,7 @@ const faq=[
 ['料金はどこで確認できますか？','メニューページに料金の目安を掲載しています。長さによって料金が変わるメニューがあります。クーポンはホットペッパービューティーのページに最新情報があります。'],
 ['求人はしていますか？','はい。美容師・アシスタント・パートなどを募集しています。詳しくは採用サイト（ko-un-ryu-sui.com）をご覧ください。']
 ];
-const nav=[['/coupon/','クーポン'],['/menu/','メニュー・料金'],['/voice/','お客様の声'],['/hair-care-40-50/','40代・50代の髪'],['/headspa/','ヘッドスパ'],['/first/','初めての方へ'],['/area/','対応エリア'],['/faq/','よくある質問'],['/company/','アクセス'],['/salon-blog/','お知らせ・ブログ']];
+const nav=[['/coupon/','クーポン'],['/menu/','メニュー・料金'],['/voice/','お客様の声'],['/hair-care-40-50/','40代・50代の髪'],['/straight/','髪質改善ストレート'],['/cota/','コタ製品'],['/headspa/','ヘッドスパ'],['/first/','初めての方へ'],['/area/','対応エリア'],['/faq/','よくある質問'],['/company/','アクセス'],['/salon-blog/','お知らせ・ブログ']];
 const org={"@type":["HairSalon","BeautySalon"],"@id":BASE+"/#salon","name":"FLOWCLOUD（フロウクラウド）","alternateName":["フロウクラウド","FLOW CLOUD"],"url":BASE+"/","telephone":"+81-725-90-5699","email":"info@flowcloud.net","image":BASE+IMG('FLOW-CLOUD-001-1024x733'),"description":"大阪・泉大津の完全予約の会員制美容室。半個室空間で髪質改善・ヘッドスパ・トリートメント。南海本線泉大津駅から徒歩3分。","address":{"@type":"PostalAddress","postalCode":"595-0026","addressRegion":"大阪府","addressLocality":"泉大津市","streetAddress":"東雲町1-20","addressCountry":"JP"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"20:00"}],"areaServed":areas.map(a=>({"@type":"Place","name":a})),"hasMap":"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent('FLOWCLOUD 大阪府泉大津市東雲町1-20'),"sameAs":[L.hp,L.ig,L.fb,L.x,'https://www.youtube.com/@flowcloud',L.gbp,L.net],"parentOrganization":{"@type":"Organization","name":"株式会社行雲流水","url":L.recruit},"founder":{"@type":"Person","name":"藤津一弥"},"foundingDate":"2007-11","priceRange":"¥¥","potentialAction":{"@type":"ReserveAction","target":{"@type":"EntryPoint","urlTemplate":L.net,"actionPlatform":["http://schema.org/DesktopWebPlatform","http://schema.org/MobileWebPlatform"]},"result":{"@type":"Reservation","name":"ネット予約"}}};
 
 const jst=new Date(Date.now()+9*3600e3);const todayStr=jst.toISOString().slice(0,10);
@@ -117,8 +117,24 @@ for(const p of posts){const img=IMG(p.image);write(`/salon-blog/${p.slug}/`,page
 // css
 fs.mkdirSync(OUT+'/fc',{recursive:true});
 fs.writeFileSync(OUT+'/fc/style.css',fs.readFileSync('style.css','utf8'));
+
+// STRAIGHT (縮毛矯正=髪質改善ストレート) / COTA
+const fSt=[['縮毛矯正はできますか？','FLOWCLOUDでは、縮毛矯正のご相談を「髪質改善ストレート」のメニューでお受けしています。クセ・うねりが気になる方は、カウンセリングで髪の状態をうかがってご提案します。'],['髪質改善ストレートの料金はいくらですか？','髪質改善ストレートは16,500円〜（税込）、ポイント髪質改善ストレートは11,000円〜（税込）です。髪の長さや状態により変わる場合があります。'],['カラーやパーマ、縮毛矯正の履歴は伝えたほうがいいですか？','はい。過去のカラー・パーマ・縮毛矯正の履歴は、施術内容を決めるうえで大切です。ご予約時や当日のカウンセリングでお伝えください。'],['髪が傷んでいても受けられますか？','髪の状態によっては、メニューや工程を調整したり、施術をおすすめできない場合があります。カウンセリングで状態を確認してご説明します。']];
+write('/straight/',page({path:'/straight/',title:'髪質改善ストレート（縮毛矯正）｜泉大津の美容室 FLOWCLOUD',desc:'泉大津の美容室FLOWCLOUDの髪質改善ストレート（縮毛矯正のご相談）。クセ・うねり・広がりが気になる方へ。16,500円〜（税込）。施術時間は120分〜が目安です。カウンセリングで髪の状態を確認してご提案します。',h1:'髪質改善ストレート（縮毛矯正）',lead:'クセ・うねり・広がりが気になる方へ。縮毛矯正のご相談は、FLOWCLOUDでは「髪質改善ストレート」のメニューでお受けしています。',crumbs:[['/straight/','髪質改善ストレート']],image:IMG('FLOW-CLOUD-047'),extra:[faqLD(fSt)],
+body:sec('こんなお悩みの方へ',`<ul class="worry"><li>朝のクセ・うねりのセットに時間がかかる</li><li>湿気で髪が広がる</li><li>以前の縮毛矯正から伸びてきて、境目が気になる</li><li>パサつきやまとまりにくさが気になる</li></ul><p>お悩みは一人ひとり違います。カウンセリングで髪の状態をうかがい、合う方法をご提案します。</p>`)+
+sec('メニューと料金（税込）',T([['髪質改善ストレート','120分〜','¥16,500〜'],['ポイント髪質改善ストレート','45〜60分','¥11,000〜']])+'<p class="note">※長さ・状態により料金が変わる場合があります。クーポンの最新情報はホットペッパービューティーをご覧ください。</p>','alt')+
+sec('ご予約の前に',`<ul class="ul"><li>過去のカラー・パーマ・縮毛矯正の履歴をお知らせください。</li><li>髪の状態によっては、工程を調整したり、施術をおすすめできない場合があります。</li><li>仕上がりや持ちには個人差があります。</li></ul>`)+
+`<div class="wrap">${cta('髪質改善ストレートのご予約・ご相談')}</div>`+sec('よくある質問',faqHtml(fSt),'alt')
+}));
+const fCo=[['コタの製品は取り扱っていますか？','はい、FLOWCLOUDではコタ（COTA）の製品を取り扱っています。取扱製品や在庫は変わることがあるため、詳しくはご来店時またはお電話でご確認ください。'],['自分に合うヘアケアを相談できますか？','はい。髪の状態や普段のお手入れ方法をうかがい、おうちでのヘアケアのご相談をお受けします。']];
+write('/cota/',page({path:'/cota/',title:'コタ（COTA）製品の取り扱い｜泉大津の美容室 FLOWCLOUD',desc:'泉大津の美容室FLOWCLOUDは、コタ（COTA）の製品を取り扱っています。髪の状態に合わせたヘアケアのご相談もお気軽に。取扱製品・在庫はご来店時またはお電話でご確認ください。',h1:'コタ（COTA）製品の取り扱い',lead:'FLOWCLOUDでは、コタ（COTA）の製品を取り扱っています。髪の状態に合わせたおうちでのヘアケアも、お気軽にご相談ください。',crumbs:[['/cota/','コタ製品']],image:IMG('FLOW-CLOUD-047'),extra:[faqLD(fCo)],
+body:sec('FLOWCLOUDのヘアケア相談',`<p>サロンで整えた髪を、おうちでもきれいに保つために。髪の状態や普段のお手入れ方法をうかがって、ご自宅でのヘアケアをご案内します。</p><p>取扱製品・在庫・価格は変わることがあるため、ご来店時またはお電話でご確認ください。</p>`)+
+sec('あわせておすすめ',`<p><a class="more" href="/menu/#rehair">髪質改善ストレート・トリートメントのメニューを見る →</a></p><p><a class="more" href="/straight/">髪質改善ストレート（縮毛矯正）について →</a></p>`,'alt')+
+`<div class="wrap">${cta('ご予約・ご相談はこちら')}</div>`+sec('よくある質問',faqHtml(fCo))
+}));
+
 // sitemap
-const urls=['/','/privacy/','/coupon/','/menu/','/hair-care-40-50/','/headspa/','/first/','/area/','/faq/','/company/','/cast/','/voice/','/salon-blog/',...posts.map(p=>`/salon-blog/${p.slug}/`)];
+const urls=['/','/privacy/','/coupon/','/menu/','/hair-care-40-50/','/straight/','/cota/','/headspa/','/first/','/area/','/faq/','/company/','/cast/','/voice/','/salon-blog/',...posts.map(p=>`/salon-blog/${p.slug}/`)];
 fs.writeFileSync(OUT+'/sitemap-fc.xml',`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(u=>`<url><loc>${BASE+u}</loc><lastmod>${todayStr}</lastmod></url>`).join('')}</urlset>`);
 fs.writeFileSync(OUT+'/llms.txt',`# FLOWCLOUD（フロウクラウド）泉大津の完全予約の会員制美容室
 > 大阪府泉大津市東雲町1-20（〒595-0026）。南海本線「泉大津駅」から徒歩約3分。TEL 0725-90-5699。営業9:00〜20:00（最終受付18:00）・定休日は毎週月曜・火曜（不定休の日あり）・完全予約制。運営: 株式会社行雲流水（姉妹店 glow）。
