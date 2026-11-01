@@ -102,7 +102,7 @@ const jobs: Record<JobType, JobData> = {
     jsonDesc: "<p>株式会社行雲流水が運営するFLOWCLOUD・glowで、美容師アシスタント（正社員）を募集しています。</p><p>サロン内施術アシスタント業務全般を担当し、基本となる技術や接客を学びます。月給は270,000円〜（固定残業15時間分を含み、超過分は別途支給）です。</p>",
     jsonQualifications: "美容師免許（取得見込みの方の条件は募集要項に記載）。",
     jsonWorkHours: "シフト制（早番8:30〜17:30、遅番11:30〜20:30、休憩60分）、完全週休2日制。",
-    related: [["新卒案内を見る", "/recruit/newgrad"], ["早番・遅番の一日", "/blog/hayaban-osoban"]],
+    related: [["新卒案内を見る", "/recruit/newgrad"], ["早番・遅番の一日", "/blog/hayaban-osoban"], ["働き方（休み・教育・給与の内訳）", "/workstyle"], ["見学・体験の流れ", "/visit"]],
   },
   part: {
     code: "part", number: "03", eyebrow: "HAIRDRESSER / PART-TIME", title: "パート美容師",
@@ -149,7 +149,7 @@ const jobs: Record<JobType, JobData> = {
     jsonDesc: "<p>株式会社行雲流水が運営するFLOWCLOUD・glowで、美容師を目指す学生アルバイトを募集しています。</p><p>店内の清掃・準備などの補助業務を担当します。時給は1,300円〜です。</p>",
     jsonQualifications: "美容系を目指す学生の方（対象課程・学年は募集要項に記載）。美容師免許は不要です。",
     jsonWorkHours: "学校の予定に合わせて相談できます。",
-    related: [["新卒案内を見る", "/recruit/newgrad"]],
+    related: [["新卒案内を見る", "/recruit/newgrad"], ["働き方（休み・教育・給与の内訳）", "/workstyle"], ["見学・体験の流れ", "/visit"]],
   },
 };
 
