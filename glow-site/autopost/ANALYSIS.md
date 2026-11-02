@@ -5,3 +5,4 @@
 - 次回: GBPの料金表記・HPB掲載料金との整合確認（外部のため提案のみ）、構造化データのFAQ/Offer整合、WP更新状況確認。
 - 2026-11-01 記事追加: kuse-hiroga-straight-young（狙い: くせ毛 縮毛矯正 10代20代 泉大津）。/straight/ へ内部リンク
 - 2026-11-01 記事追加: home-hair-care-cota-store-glow（同上）
+- 2026-11-02 ブログ追加: color-first-counseling-glow

@@ -66,11 +66,11 @@
   },
   {
    "path": "index.html",
-   "sha256": "a7bf65df9c03f4caad7fcdfeff26d0d599b369efb746d86c24f913e19915379e"
+   "sha256": "d2f6125370502afb49c1a10922e896da7cc913d04a710ce89147a73817deac30"
   },
   {
    "path": "llms.txt",
-   "sha256": "e00b6b8db307b77bc82082a698f0d87a405b675b40f89978d73cf32e0c08845e"
+   "sha256": "d6593adfac28aaeb68c66f1f9fd11670a65dbfb9d1c59d719398256ec41475c3"
   },
   {
    "path": "menu/index.html",
@@ -81,28 +81,32 @@
    "sha256": "b89bd8bab25a0fa8f2927ddb938ef0597250683aa319adfdb6674704f6a3c532"
   },
   {
+   "path": "salon-blog/color-taishoku-40-50/index.html",
+   "sha256": "ae018142bcde210115cc23f87df457469b5668226af916e8851ffa05db53c961"
+  },
+  {
    "path": "salon-blog/headspa-shampoo-kukan/index.html",
-   "sha256": "d69fe691abc9f6e3aa4a54b50aed5a34a1c2d3c6bd6b35bde90fd6e8fbd7f961"
+   "sha256": "fd8af16773cd3256f0a7ac678dbf1033e1881c6555b4cb60786281f5c184d4ea"
   },
   {
    "path": "salon-blog/home-hair-care-cota-store/index.html",
-   "sha256": "009f3db3dead43c803b241cab883979b6db419aa61ddf2205eadc6443b20a6bb"
+   "sha256": "1e428a0c43fed9c77d887f2cc0d504805d96e7978951c180234e6229b208be1d"
   },
   {
    "path": "salon-blog/index.html",
-   "sha256": "d5767a9cbaead6173fbb7d52ac97ce48b692c8f46baefe608252eb3e82626f2d"
+   "sha256": "e9cb7d9235e3ee99985a0624a021ea38b93fbe308ba1c14d5173b4cefa6a83fa"
   },
   {
    "path": "salon-blog/kuse-uneri-straight-40-50/index.html",
-   "sha256": "123702faf75a737ff1a0a5ca966bd0ffe4eb216e5127c41bd741ea1c1e23bae5"
+   "sha256": "6c9f28676225fba0159539c3b7fd4d758e82bd2548194cc02d0a77f9ea56ce44"
   },
   {
    "path": "salon-blog/kyugyobi-2026-11-12/index.html",
-   "sha256": "24c7a06665e7c8b1d510e544491433c46f2e9052a81c7def990696ba837edbe4"
+   "sha256": "83d2e445e014158eb431e0f6772d07cfeed62eacc53998721e56f1fca15fbf38"
   },
   {
    "path": "sitemap-fc.xml",
-   "sha256": "6b6e582e1b4a3c8d191b14b5cf7f126525bdcebaee31dad54a0fb39fd38b7ee1"
+   "sha256": "98f9e89f758f5fbfcc570fe81100835dc24e369f7930eeac2da2f3881b20edf7"
   },
   {
    "path": "straight/index.html",
