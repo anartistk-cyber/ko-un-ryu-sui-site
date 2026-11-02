@@ -50,39 +50,43 @@
   },
   {
    "path": "index.html",
-   "sha256": "389cd6740886be86f411067e1b3de750076ac4b9041e01baa4c8a7a02887cc17"
+   "sha256": "4b7f2f61216ff7c878bdc00a4c0d86a9273c29cf5430c693b932d65fa886ccd2"
   },
   {
    "path": "journal/access-parking/index.html",
-   "sha256": "0060ee85e345d5546250f6c15973ceec4f0be46dbdf896128f05bb0da392e5c2"
+   "sha256": "dc032cf77843f9ce87f00eb319547b57f717adfdb0e6253d2e0d1e08da70fe33"
   },
   {
    "path": "journal/color-first-counseling-glow/index.html",
-   "sha256": "fb5115437e5d648fda7f30b4b5efd64035145cc7f1ded209f5d8301372f1501f"
+   "sha256": "6a76521136dc2206efc96df1bf475d4c1005491f1877b2986756f013a042effa"
   },
   {
    "path": "journal/first-salon-counseling/index.html",
-   "sha256": "ae3b8c87488ab7be55757354884ad9ab2f4202164cee181d1e57c247d2c3e786"
+   "sha256": "1ccab08b123996c3ad6054aec3ce0d99fd3cf65650fce525060e61e99c10d737"
   },
   {
    "path": "journal/home-hair-care-cota-store-glow/index.html",
-   "sha256": "ff81527bc6fa0459d86c77325bd5383e1266c3b45c7576890734ac86775a2fab"
+   "sha256": "2323aac76392813a9839ea56276fbd543a44d3eaa7283b0bcdc626be39414250"
   },
   {
    "path": "journal/index.html",
-   "sha256": "d30584affda6376210c821106ae475c6347e6b63e80384e4f38c36d25ee59221"
+   "sha256": "132acd2d578504665674bcb12521611996d4ba2e3cd956753190233bd5d59299"
   },
   {
    "path": "journal/kuse-hiroga-straight-young/index.html",
-   "sha256": "b50ec409308dc7581d74d3c603e9fda3a849daa39380f8b7898948914d81161c"
+   "sha256": "90f4fe6da91d156e1a877b32a9be9b6fcebb989bd4d3d2a26d0332a6ac924ec1"
+  },
+  {
+   "path": "journal/short-layer-asa-raku/index.html",
+   "sha256": "d943cfcfc402b518becccd38c84635eba4158564619d4b435b9f99e881e375fd"
   },
   {
    "path": "journal/sugao-care-young/index.html",
-   "sha256": "86cd23adb8174947d1d117f430ce69cd8c86d2be22c8a9f0a4e0b03a4766ad9c"
+   "sha256": "f1f8d5b59f5c4282e47a6a88c13bc0071816b799496a14fb141c00227825d265"
   },
   {
    "path": "llms.txt",
-   "sha256": "0f8335061c36c64b8b44513930df6868ab2372f086628885e3933b91e056233a"
+   "sha256": "d156862b1ad6e8410499c80927a5727d35b216584b090cf982a9cd87794fd6c1"
   },
   {
    "path": "menu/index.html",
@@ -102,7 +106,7 @@
   },
   {
    "path": "sitemap-gl.xml",
-   "sha256": "19f9559f2bbb0728a17f9a4e2aa26d101474f57fcfb4d9e58f9958a2227bf0dd"
+   "sha256": "44d5350e07f30c6113a22ab01c9cb3caeccb9d04a9728dbf03446b53ad1f320a"
   },
   {
    "path": "straight/index.html",

@@ -6,3 +6,4 @@
 - 2026-11-01 記事追加: kuse-hiroga-straight-young（狙い: くせ毛 縮毛矯正 10代20代 泉大津）。/straight/ へ内部リンク
 - 2026-11-01 記事追加: home-hair-care-cota-store-glow（同上）
 - 2026-11-02 ブログ追加: color-first-counseling-glow
+- 2026-11-02 ブログ追加: short-layer-asa-raku
