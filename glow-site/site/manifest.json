@@ -2,7 +2,7 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "c3eace004c1c816f92d9b4a3a08820bccd11b4f217b8f0438d34e546a7ddd1d3"
+   "sha256": "f901e8dc1109040c55588ab2112f42cf862c84870f6156b6fe0a4d8e90accb7a"
   },
   {
    "path": "cota-products/index.html",
@@ -50,7 +50,7 @@
   },
   {
    "path": "index.html",
-   "sha256": "125064ed18c0b7f849202d5d7a7b4db32c1cc87b45f9646b99e6165d34ee2bd1"
+   "sha256": "9237226d3d703eef83b05cd9af166c4ebd03a8f778a1522677a4addccf79de23"
   },
   {
    "path": "journal/access-parking/index.html",
@@ -70,11 +70,15 @@
   },
   {
    "path": "journal/index.html",
-   "sha256": "5077585552a1526208a395bf332bfadd9cb56e053d04f2dbeee4945b1fc8ee06"
+   "sha256": "8cd8a41ae0abd4b7b5e95cd94cb7e88972d4b46f130dce046a5f8820cbc0a601"
   },
   {
    "path": "journal/kuse-hiroga-straight-young/index.html",
    "sha256": "59a810d78399f21fdbf6694207d1b790283ad0515a4f6192b1a864ecd2c43475"
+  },
+  {
+   "path": "journal/nenmatsu-nenshi-2026-2027/index.html",
+   "sha256": "d66b878a9633029e5fbb515c2959378ae3d46a6061cfbd22649cd3cd4d7ca240"
   },
   {
    "path": "journal/short-layer-asa-raku/index.html",
@@ -86,7 +90,7 @@
   },
   {
    "path": "llms.txt",
-   "sha256": "6f837f21ee0ba1bc88ea9a6b07231f1fdf9526a8540c618dbc3f12a24a6d6e66"
+   "sha256": "539adf89ccc3f679423c4a3fed3efd4ff8803ccbcccced347c908f2efeb8909d"
   },
   {
    "path": "menu/index.html",
@@ -106,7 +110,7 @@
   },
   {
    "path": "sitemap-gl.xml",
-   "sha256": "44d5350e07f30c6113a22ab01c9cb3caeccb9d04a9728dbf03446b53ad1f320a"
+   "sha256": "71ed11078da5bb5261114a341375e8801408a93c2743ebe268d93e1d493c8ef0"
   },
   {
    "path": "straight/index.html",

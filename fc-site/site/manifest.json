@@ -10,7 +10,7 @@
   },
   {
    "path": "company/index.html",
-   "sha256": "aa9c8432507ce20d2a453e578649491feba6a90a9e8b4de0d657fbb3b9520d18"
+   "sha256": "dff2a4fa7c35d78b899ac0a19674e48e2967c420ab94e95213fd2478024cde70"
   },
   {
    "path": "cota-products/index.html",
@@ -66,11 +66,11 @@
   },
   {
    "path": "index.html",
-   "sha256": "2500433a025dcbbbc7264f78f7ba2f940c987fdad3f037b7e08049f953dbedbe"
+   "sha256": "8d6c112b45c512e32b7a925e0a3773dab4b63456b15a171f8a758eb82d5878c9"
   },
   {
    "path": "llms.txt",
-   "sha256": "d6593adfac28aaeb68c66f1f9fd11670a65dbfb9d1c59d719398256ec41475c3"
+   "sha256": "03e95b83f80c2bbed8a343fa8084b28a823da4c1f195cd3805e03877fe4d6412"
   },
   {
    "path": "menu/index.html",
@@ -94,7 +94,7 @@
   },
   {
    "path": "salon-blog/index.html",
-   "sha256": "b841e5a7e680bcb9f08c50c39ccc5fb2d7d36a82458dc1597f3d652eac9522a2"
+   "sha256": "e81f11a5dd9760f5563368b1e5c9a37cf3ebfaa8de1ce08ebfc4e38b1a66f26a"
   },
   {
    "path": "salon-blog/kuse-uneri-straight-40-50/index.html",
@@ -105,8 +105,12 @@
    "sha256": "d8c64dae6688303a80f72cb9b9acdcf42d29a2643fb368efc849a0e30e14d5f4"
   },
   {
+   "path": "salon-blog/nenmatsu-nenshi-2026-2027/index.html",
+   "sha256": "0600b77cb7f796580dfe7ebbc275285a91a5cb217b380347aef12a3643e9bbab"
+  },
+  {
    "path": "sitemap-fc.xml",
-   "sha256": "98f9e89f758f5fbfcc570fe81100835dc24e369f7930eeac2da2f3881b20edf7"
+   "sha256": "91f7e9493feeee9f1a02733525aa157ba6968b35abc860e603827eb9a8da77e6"
   },
   {
    "path": "straight/index.html",
