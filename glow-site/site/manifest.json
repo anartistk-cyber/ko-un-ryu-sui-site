@@ -2,7 +2,7 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "b9f4befc32296c2d4ef00c2eecb3183ccfe8dd686c789b72c29bdb2bbb1d72c8"
+   "sha256": "8cac303aceabe008ab483010c8fa9ec537a8eb4a82b27904dc28b2b157ef23ef"
   },
   {
    "path": "cota-products/index.html",
@@ -50,7 +50,7 @@
   },
   {
    "path": "index.html",
-   "sha256": "4b7f2f61216ff7c878bdc00a4c0d86a9273c29cf5430c693b932d65fa886ccd2"
+   "sha256": "7beba7e8a0cf5c2bba357619776f1a67a26dbc711e0b83e336734c5403768123"
   },
   {
    "path": "journal/access-parking/index.html",

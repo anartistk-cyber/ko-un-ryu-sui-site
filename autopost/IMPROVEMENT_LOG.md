@@ -37,3 +37,4 @@
 - 2026-11-02 12:20 新記事3本（FC color-taishoku-40-50／glow color-first-counseling-glow・short-layer-asa-raku）とお客様の声のGoogle口コミ追加の公開表示を確認。FCのSearch Consoleはデータが10/30の1日分のみ（表示136・クリック5）。旧WP記事（/14625/ 13回、/15172/ 9回、/7588/ 7回、/12342/ 7回など）が既に表示されているため、旧ブログの整理（noindex追加）は2週間分のデータが溜まる11/15まで保留。
 - 2026-11-02 /cota-products/ にコタ公式サイトの製品一覧（シリーズ名）を追記。
 - 2026-11-02 12:40 採用サイト本番 .htaccess を藤津さんの画面で確認：Permissions-Policy 反映済み（X-Content-Type-Options/X-Frame-Options/Referrer-Policy/HSTS も有効）。手動アップロードは不要。
+- 2026-11-02 13:20 藤津さんから2027年1月の休業日を受領：FLOWCLOUD・glowとも 1/1〜5, 11, 12, 18, 19, 25, 26。data.json の closed に反映（営業カレンダーに2027年1月が表示される）。2月以降は未確定。
