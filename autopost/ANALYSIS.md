@@ -31,3 +31,4 @@
 - 記事追加: kyujitsu-yukyu-minikata ／ 狙い: 美容師 休日 有給 求人 見方 ／ 切り口: 年間休日104日・完全週休2日制とのちがい・有給取得率100%など確認済み事実のみ。
 - カバー済みテーマに追加: kyujitsu-yukyu-minikata
 - 既存記事改善: 今回は見送り（次回実施）。
+- 改善（11/2・ユーザー指示）: ①tenshoku-point を FACTS/サイト本文と照合し、冒頭に結論・固定残業代の記載・内部リンクCTAを追加（dateは変更なし）②shoninkyu-teate/hayaban-osoban等3記事の ctas に kyujitsu-yukyu-minikata を追加 ③/faq の休日・有給項目に記事リンク、「有給は取れていますか」を追加（取得率100%・勤続6.0年は2025年度実績）。
