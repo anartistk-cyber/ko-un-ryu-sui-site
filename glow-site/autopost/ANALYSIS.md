@@ -7,3 +7,4 @@
 - 2026-11-01 記事追加: home-hair-care-cota-store-glow（同上）
 - 2026-11-02 ブログ追加: color-first-counseling-glow
 - 2026-11-02 ブログ追加: short-layer-asa-raku
+- 2026-11-03 ブログ追加: first-perm-counseling-glow（初めてのパーマ×泉大津・和泉・高石・堺・岸和田／パーマ相談・料金・一般的お手入れ）
