@@ -61,3 +61,5 @@
   → 店名変更時の注意：FCは「flow」333件の検索でも表示されている。公式店名を「FLOWCLOUD」に変える際、「FLOW」を含む語が検索で拾われる形を保つこと。
   → 「予約」0はGoogle内予約の件数（予約リンク経由のクリックは含まれない）。
 - 2026-11-03 13:26 本番確認（FC）：/recruite/ 置換・/hair-quality/・記事中CTA・姉妹店リンクが反映済み。さらに https://www.flowcloud.net/recruit/ （旧WPの2018年の求人ページ。アシスタント月給19万〜・年間休日106日など古い条件が残っていた）も同じ案内ページに置換（canonicalは /recruite/ に統合）。geo（位置情報）は次回取り込み（14:22）で反映。
+- 2026-11-03 13:39 【GA4・GBP】①GA4にカスタムディメンション「CTA位置（イベント／パラメータ pos）」を登録（pageはGA4標準の「ページパス」と重複するため未登録）。②Googleプロフィールのウェブサイト欄にUTMを設定（審査待ち）：FC https://www.flowcloud.net/?utm_source=google&utm_medium=gbp&utm_campaign=profile_website ／ glow https://glow-izumiotsu.jp/?utm_source=google&utm_medium=gbp&utm_campaign=profile_website（両URLが本番で正常表示・パラメータ保持を確認）。GA4では source/medium=google / gbp で見える。
+- 2026-11-03 13:39 【情報統一】3サイトの電話・住所・営業時間・定休・最終受付の表記ゆれを機械照合：FC・glowはすべて一致。採用サイトに「年中無休」「19:00最終受付」の古い記載があり修正（Home.tsx営業時間行、blog hayaban-osoban / tenshoku-point）。会社沿革の「2025年4月 年中無休の営業を開始」は事実確認のため残置（藤津さんに確認依頼）。FACTS.mdに営業時間・休みの確定事項を追記。Googleプロフィールの説明文に事実と食い違う記載（FC：白髪ぼかし専門・高単価・求人文／glow：会員制・白髪ぼかし・スタッフ名）→ 修正案 autopost/GBP_PROFILE_COPY_2026-11.md（承認待ち）。glowのソーシャルプロフィール欄は未登録、FCは更新エラー表示（ChatGPT側の編集の可能性）。
