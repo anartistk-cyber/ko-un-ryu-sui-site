@@ -5,6 +5,10 @@
    "sha256": "b4eb24d18ca907552edb60e3d559eedd6beea419b0f886a3ffe1b7433a732610"
   },
   {
+   "path": "color/index.html",
+   "sha256": "3d97dc4c0a81fc828255869d3bd591f73816676c5acd2c617c5f75484ccb9559"
+  },
+  {
    "path": "cota-products/index.html",
    "sha256": "121f244f7f40cbe9f2ce6ae6895cbcf418810bfbd55955960f0b2221939cb5cc"
   },
@@ -50,7 +54,7 @@
   },
   {
    "path": "index.html",
-   "sha256": "bda8f29f8711312df8af099b9f7da698f2d127263969a6a16e56eb43a21b4f03"
+   "sha256": "400134aeda6b88b82d87ac7653a99e71bf17d02a2e6fdcfe6f8eaac6e49379b9"
   },
   {
    "path": "journal/access-parking/index.html",
@@ -58,7 +62,7 @@
   },
   {
    "path": "journal/color-first-counseling-glow/index.html",
-   "sha256": "9b2cbd30a24ff8a20d81641c2e751906a7eb61159ec4e0ba7aea22e9c66c50ad"
+   "sha256": "90e4901c4991a0e337948d9b8459af555e025f9f9c9e20d650b816dd055943fc"
   },
   {
    "path": "journal/first-perm-counseling-glow/index.html",
@@ -94,7 +98,7 @@
   },
   {
    "path": "llms.txt",
-   "sha256": "7196c91d4d89d55e899c190ba5c38a9112b27829930f7643df475f8af36032f2"
+   "sha256": "4b97886b605c5301c023f43f93e0d802780f703aafd22bab4e5021f4196068f6"
   },
   {
    "path": "menu/index.html",
@@ -110,11 +114,11 @@
   },
   {
    "path": "short-perm/index.html",
-   "sha256": "46add9b89fe8ffb3360aa665357a4c5c38993385d89d18fa3671ca5437b22479"
+   "sha256": "d55462926a10c638358d6e0ca69d6c0f49cd229aa77f4ec83bbc378b6ca54c8d"
   },
   {
    "path": "sitemap-gl.xml",
-   "sha256": "8d075b1142f3a2a4d1723b0d7b3cae5a893b6fb1b4da0dc309a2c1d5c7fe5300"
+   "sha256": "c80e5b838f944e234176bb0d692531bd9a2c2b7c59dbc46172850f51bdf22df2"
   },
   {
    "path": "straight/index.html",

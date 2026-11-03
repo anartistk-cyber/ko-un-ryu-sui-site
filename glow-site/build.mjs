@@ -62,7 +62,7 @@ write('/',page({path:'/',hero:true,title:'泉大津駅徒歩1分の美容室・�
 body:sec('こんなお悩み・ご希望はありませんか？',`<ul class="worry">${worries.map(w=>`<li>${w}</li>`).join('')}</ul><p>glowは、ヘア・ヘッドケアのトータルビューティーサロンです。「どんな髪型がいいかまだ決まっていない」という方も、カウンセリングでご希望や普段のお手入れをうかがい、似合わせカット、艶カラー、髪質改善、ヘッドスパなどからご提案します。<a href="/young/">10代・20代の方へのご案内</a></p>`)+
 cta('今すぐ予約する')+
 sec('glowの3つのこだわり',`<div class="g3"><article><img src="${I.staff}" alt="glowのスタッフ" loading="lazy" width="1024" height="768"><h3>1. 人間力・ホスピタリティ</h3><p>技術だけでなく、お客様の気持ちに寄り添う接客を大切にしています。</p></article><article><img src="${I.color}" alt="カラー施術中の様子" loading="lazy" width="1024" height="768"><h3>2. 素材美を活かす、傷ませない技術</h3><p>素の髪の美しさを活かすことを大切に、髪質改善ストレートやシスキュア、レコアイロンなど、髪に向き合うメニューをご用意しています。</p></article><article><img src="${I.shelf}" alt="店内のヘアケア商品の棚" loading="lazy" width="1024" height="768"><h3>3. 豊富なメニュー</h3><p>39種類以上のメニューから、お悩みやご希望に合わせて選べます。</p></article></div>`)+
-sec('人気のメニュー',`<div class="g3 pm"><a href="/menu/#cut"><h3>カット（シャンプーブロー込）</h3><p>50分／¥5,500</p></a><a href="/menu/#color"><h3>カラー（根元・全体）</h3><p>¥6,600〜</p></a><a href="/menu/#perm"><h3>パーマ（ナチュラル）</h3><p>¥7,700〜</p></a><a href="/menu/#rehair"><h3>髪質改善ストレート</h3><p>¥16,500〜</p></a><a href="/menu/#rehair"><h3>シスキュア</h3><p>¥3,850</p></a><a href="/headspa/"><h3>ヘッドスパ</h3><p>リフトアップ ¥5,500</p></a></div><p class="note">※ 料金はすべて税込表示です。クーポンは<a href="${L.coupon}" rel="noopener">ホットペッパービューティー</a>で最新情報をご確認ください。<a href="/menu/">全メニュー・料金へ</a></p>`,'alt')+
+sec('人気のメニュー',`<div class="g3 pm"><a href="/menu/#cut"><h3>カット（シャンプーブロー込）</h3><p>50分／¥5,500</p></a><a href="/menu/#color"><h3>カラー（根元・全体）</h3><p>¥6,600〜</p></a><a href="/menu/#perm"><h3>パーマ（ナチュラル）</h3><p>¥7,700〜</p></a><a href="/menu/#rehair"><h3>髪質改善ストレート</h3><p>¥16,500〜</p></a><a href="/menu/#rehair"><h3>シスキュア</h3><p>¥3,850</p></a><a href="/headspa/"><h3>ヘッドスパ</h3><p>リフトアップ ¥5,500</p></a></div><p class="note">※ 料金はすべて税込表示です。クーポンは<a href="${L.coupon}" rel="noopener">ホットペッパービューティー</a>で最新情報をご確認ください。<a href="/menu/">全メニュー・料金へ</a>　<a href="/color/">カラーのご相談 →</a></p>`,'alt')+
 sec('泉大津駅から徒歩1分',`<div class="two"><img src="${I.interior}" alt="glowの店内" loading="lazy" width="1477" height="1108"><div><p>南海本線「泉大津駅」から徒歩1分。いずみおおつCITY 1Fにあります。<strong>堺・羽衣・高石・岸和田・春木・貝塚・泉佐野</strong>など南海本線沿線の方はもちろん、<strong>和泉・和泉府中・和泉中央</strong>方面からもお越しいただけます。お車の方はアルザ地下駐車場をご利用いただけます。</p><p>大阪府泉大津市旭町18-3 いずみおおつCITY 1F<br>TEL <a href="${L.tel}">${L.telText}</a></p><p><a class="more" href="/area/">対応エリアとアクセス →</a></p></div></div>`)+
 sec('お客様の声',revCards(4)+'<p><a class="more" href="/voice/">お客様の声をもっと見る →</a></p>','alt')+
 sec('お知らせ・ブログ',postList(5)+'<p><a class="more" href="/journal/">お知らせ・ブログ一覧 →</a></p>')+
@@ -80,7 +80,7 @@ sec('カット','<div id="cut"></div>'+T(MENU.cut))+sec('カラー','<div id="co
 // short/cut/color/perm
 write('/short-perm/',page({path:'/short-perm/',title:'似合わせカット・艶カラー・デジタルパーマ・ショート｜泉大津の美容室 glow',desc:'泉大津駅徒歩1分のglow。似合わせカット、ショートカット、レイヤーカット、艶カラー、髪質改善カラー、デジタルパーマまで。朝ラクで扱いやすいスタイルをご提案します。',h1:'似合わせカット・カラー・パーマ',lead:'乾かすだけでまとまる、朝のスタイリングがラクになる。髪質・骨格・ライフスタイルに合わせてご提案します。',crumbs:[['/short-perm/','カット・カラー・パーマ']],image:I.color,
 body:sec('glowのカット・カラー・パーマ',`<div class="two"><img src="${I.color}" alt="カラー施術の様子" loading="lazy" width="1024" height="768"><div><p>カウンセリングでお悩みやご希望をうかがい、髪質や顔まわり、普段のお手入れ方法まで考えて、扱いやすいスタイルをご提案します。ショートカットやレイヤーカット、艶カラー、髪質改善カラー、パーマ（デジタルパーマを含む）などのご相談も承ります。</p><p>「まだイメージが決まっていない」という方も大丈夫です。お気軽にご相談ください。</p></div></div>`)+
-sec('お客様の声（抜粋）',revCards(5),'alt')+sec('メニューと料金','<p><a class="more" href="/menu/">カット・カラー・パーマ・髪質改善の料金を見る →</a></p>')+`<div class="wrap">${cta('ご予約はこちら')}</div>`}));
+sec('お客様の声（抜粋）',revCards(5),'alt')+sec('メニューと料金','<p><a class="more" href="/menu/">カット・カラー・パーマ・髪質改善の料金を見る →</a></p><p><a class="more" href="/color/">艶カラー・カラーのご相談について →</a></p>')+`<div class="wrap">${cta('ご予約はこちら')}</div>`}));
 // headspa
 write('/headspa/',page({path:'/headspa/',title:'ヘッドスパ｜炭酸・リフトアップ・ヘッドキュア｜泉大津駅徒歩1分 glow',desc:'泉大津駅徒歩1分の美容室glowのヘッドスパ。炭酸ヘッドスパ10分2,200円〜、リフトアップ、疲れ目改善、ヘッドキュアなど。頭のコリや疲れを癒し、きれいな素髪の土台となる頭皮を整えます。',h1:'ヘッドスパ・ヘッドケア',lead:'日頃の自分へのご褒美に。頭のコリや疲れをほぐすヘッドスパをご用意しています。',crumbs:[['/headspa/','ヘッドスパ']],
 body:sec('メニュー','<div id="spa"></div>'+T(MENU.spa))+sec('お客様の声（抜粋）',`<div class="rv">${DATA.reviews.filter(r=>/ヘッドスパ/.test(r.q)).map(r=>`<blockquote><p>「${esc(r.q)}」</p><footer>${r.who}／${r.date}${r.src==='Google'?'・Googleのクチコミ':'・ホットペッパービューティー'}</footer></blockquote>`).join('')}</div><p class="note">ホットペッパービューティーの★5口コミの一部を抜粋しています（個人の感想です）。</p>`,'alt')+`<div class="wrap">${cta('ヘッドスパのご予約')}</div>`}));
@@ -113,6 +113,17 @@ sec('人気のメニューと料金（税込）',`<div class="g3 pm"><a href="/m
 `<div class="wrap">${cta('はじめてのご予約')}</div>`+sec('よくある質問',faqHtml(fy))}));
 fs.mkdirSync(OUT+'/gl',{recursive:true});fs.writeFileSync(OUT+'/gl/style.css',fs.readFileSync('style.css','utf8'));
 
+// COLOR（艶カラー・カラーのご相談）
+const fCl=[['カラーの料金はいくらですか？','カラー（根元・全体）は6,600円〜、2メイクは14,850円〜、ポイントカラーは3,300円〜、ホイルワークは8,800円〜です（いずれも税込）。髪の長さや状態により変わる場合があります。'],['カラーは低刺激ですか？','glowでは低刺激のカラーを使用しています。肌や頭皮が敏感な方は、ご予約時やカウンセリングでお気軽にご相談ください。'],['なりたい色が決まっていなくても大丈夫ですか？','はい。「なりたい色はあるけど、自分に合うかわからない」というときも、カウンセリングで一緒に考えます。なりたい雰囲気の写真があれば、そのままお見せください。'],['カラーの履歴は伝えたほうがいいですか？','はい。過去のカラー・パーマ・縮毛矯正の履歴は、施術内容を決めるうえで大切です。ご予約時や当日のカウンセリングでお伝えください。髪の状態によっては、工程を調整したり、施術をおすすめできない場合があります。']];
+write('/color/',page({path:'/color/',title:'泉大津の艶カラー・カラーのご相談｜料金と相談のコツ｜美容室 glow（泉大津駅徒歩1分）',desc:'泉大津駅徒歩1分の美容室glowのカラー。艶カラー・根元カラー・全体カラー6,600円〜、2メイク、ポイントカラー、ホイルワーク。低刺激のカラーをご用意。10代・20代のカラーのご相談もお気軽に。',h1:'泉大津の艶カラー・カラーのご相談',lead:'カラーのツヤ・色味・色持ちが気になる方へ。なりたい色が決まっていなくても、カウンセリングで一緒に考えます。',crumbs:[['/color/','カラー']],image:I.color,extra:[faqLD(fCl)],
+body:sec('こんなお悩み・ご希望はありませんか？',`<ul class="worry"><li>カラーのツヤ・色味・色持ちが気になる</li><li>なりたい色はあるけど、自分に合うかわからない</li><li>肌や頭皮が敏感で、カラーが不安</li><li>初めての美容室で、カラーを相談したい</li></ul><p>glowでは低刺激のカラーを使用しています。ふんわりしたイメージでも大丈夫です。</p>`)+
+sec('カラーの料金（税込）',T(MENU.color)+'<p class="note">※長さ・状態により料金が変わる場合があります。クーポンの最新情報は<a href="'+L.coupon+'" rel="noopener">ホットペッパービューティー</a>をご覧ください。<a href="/menu/#color">メニュー・料金ページへ</a></p>','alt')+
+`<div class="wrap">${cta('カラーのご予約・ご相談')}</div>`+
+sec('相談のときに伝えると伝わりやすいこと',`<ul class="ul"><li>なりたい雰囲気（写真があればそのままお見せください）</li><li>過去のカラー・パーマ・縮毛矯正の履歴</li><li>肌や頭皮が敏感かどうか</li></ul><p>髪の状態によっては、工程を調整したり、施術をおすすめできない場合があります。仕上がりや持ちには個人差があります。</p>`)+
+sec('あわせて読みたい','<p><a class="more" href="/journal/color-first-counseling-glow/">艶カラーが気になる10代・20代へ｜相談のコツ →</a></p><p><a class="more" href="/short-perm/">似合わせカット・カラー・パーマ →</a></p><p><a class="more" href="/young/">10代・20代の方へ →</a></p><p><a class="more" href="/voice/">お客様の声 →</a></p>','alt')+
+`<div class="wrap">${cta('カラーのご予約・ご相談')}</div>`+sec('よくある質問',faqHtml(fCl))
+}));
+
 // STRAIGHT (縮毛矯正=髪質改善ストレート) / COTA
 const fSt=[['縮毛矯正はできますか？','glowでは、縮毛矯正のご相談を「髪質改善ストレート」のメニューでお受けしています。クセ・うねりが気になる方は、カウンセリングで髪の状態をうかがってご提案します。'],['髪質改善ストレートの料金はいくらですか？','髪質改善ストレートは16,500円〜（税込）、ポイント髪質改善ストレートは11,000円〜（税込）です。髪の長さや状態により変わる場合があります。'],['カラーやパーマ、縮毛矯正の履歴は伝えたほうがいいですか？','はい。過去のカラー・パーマ・縮毛矯正の履歴は、施術内容を決めるうえで大切です。ご予約時や当日のカウンセリングでお伝えください。'],['髪が傷んでいても受けられますか？','髪の状態によっては、メニューや工程を調整したり、施術をおすすめできない場合があります。カウンセリングで状態を確認してご説明します。']];
 write('/straight/',page({path:'/straight/',title:'髪質改善ストレート（縮毛矯正）｜泉大津の美容室 glow',desc:'泉大津の美容室glowの髪質改善ストレート（縮毛矯正のご相談）。クセ・うねり・広がりが気になる方へ。16,500円〜（税込）。カウンセリングで髪の状態を確認してご提案します。',h1:'髪質改善ストレート（縮毛矯正）',lead:'クセ・うねり・広がりが気になる方へ。縮毛矯正のご相談は、glowでは「髪質改善ストレート」のメニューでお受けしています。',crumbs:[['/straight/','髪質改善ストレート']],image:I.interior,extra:[faqLD(fSt)],
@@ -129,7 +140,7 @@ sec('あわせておすすめ',`<p><a class="more" href="/menu/#rehair">髪質�
 sec('あわせて読みたい','<p><a class="more" href="/journal/home-hair-care-cota-store-glow/">おうちでのヘアケアの選び方｜コタ全商品を店頭でご相談（glow） →</a></p>')+`<div class="wrap">${cta('ご予約・ご相談はこちら')}</div>`+sec('よくある質問',faqHtml(fCo))
 }));
 
-const urls=['/','/privacy/','/coupon/','/menu/','/young/','/short-perm/','/straight/','/cota-products/','/headspa/','/first/','/area/','/faq/','/voice/','/journal/',...posts.map(p=>`/journal/${p.slug}/`)];
+const urls=['/','/privacy/','/coupon/','/menu/','/young/','/short-perm/','/color/','/straight/','/cota-products/','/headspa/','/first/','/area/','/faq/','/voice/','/journal/',...posts.map(p=>`/journal/${p.slug}/`)];
 fs.writeFileSync(OUT+'/sitemap-gl.xml',`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(u=>`<url><loc>${BASE+u}</loc><lastmod>${todayStr}</lastmod></url>`).join('')}</urlset>`);
 fs.writeFileSync(OUT+'/llms.txt',`# glow（グロウ）泉大津駅徒歩1分の美容室
 > 大阪府泉大津市旭町18-3 いずみおおつCITY 1F。南海本線「泉大津駅」徒歩1分。TEL 0725-51-7222。営業9:00〜20:00・定休日は毎週月曜・火曜（不定休の日あり）・予約制。運営: 株式会社行雲流水（姉妹店 FLOWCLOUD）。

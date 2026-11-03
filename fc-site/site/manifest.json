@@ -9,6 +9,10 @@
    "sha256": "7f10a8208813fcbe5fcc5025a06c08f5ca23ee5bc1e4e1d7d4356e5d80280636"
   },
   {
+   "path": "color/index.html",
+   "sha256": "3c1d9f4c2939d925e50aa6877c0bd82d91b2b1a54c6bcff94f8020d5cbcc801c"
+  },
+  {
    "path": "company/index.html",
    "sha256": "1631dda435880bc44d3a76d0aabfc45d4748e4cc989a678de5c0e4ea1f2aba1e"
   },
@@ -58,7 +62,7 @@
   },
   {
    "path": "hair-care-40-50/index.html",
-   "sha256": "499c1a6cb32b55fc0bd915e91843f8d3577d4b4e41f8e994c21cbfe1b04e2e80"
+   "sha256": "b2c01de432727be4304b21a6f876c91e51a1a810a4a7cbbdd6df0f455275e600"
   },
   {
    "path": "hair-quality/index.html",
@@ -70,15 +74,15 @@
   },
   {
    "path": "index.html",
-   "sha256": "5ac8c2e573b950f1e230b2b91403b2e4c74b9486da1497bd640e91b586a389cc"
+   "sha256": "cd9e7e0a513c6b348ebc2ed4d557c782e553171ec166b86a53051e8217091cb3"
   },
   {
    "path": "llms.txt",
-   "sha256": "07f5baeaed3064f277660b1ffb6891c28d8db84c62c980ed564a3db3d4213b3f"
+   "sha256": "b7a5b5b468746fee1dacb6f815b35627a454a1534164abaeb2a9686aea2558e3"
   },
   {
    "path": "menu/index.html",
-   "sha256": "ff281e9d47c210aa9f689507ac562f6979c25984eaed5796eb5adcb92934f9ef"
+   "sha256": "58c9f0c2b1c16aa011fcb6278bb9e8e197f61324e2e7d100acc3f8b620d12ad5"
   },
   {
    "path": "privacy/index.html",
@@ -94,7 +98,7 @@
   },
   {
    "path": "salon-blog/color-taishoku-40-50/index.html",
-   "sha256": "29f2f42425dffe4a1b8ff974b5ea982be3e88f8bfb6d54aad989c00ff0b6c015"
+   "sha256": "8b7043132ca44c01b5607cabab5b540d0b1c21fd03481e3824ff3b43c94440f0"
   },
   {
    "path": "salon-blog/headspa-shampoo-kukan/index.html",
@@ -122,7 +126,7 @@
   },
   {
    "path": "sitemap-fc.xml",
-   "sha256": "6afb768b9e1db7ec72b2d4611c8c8cb00be970676433a673ece62847629dcb02"
+   "sha256": "af7be9debe757e5efaba6200be47459aaba4de54a559385261ec8d2dba611d78"
   },
   {
    "path": "straight/index.html",
