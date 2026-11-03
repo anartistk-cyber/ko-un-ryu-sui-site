@@ -180,6 +180,8 @@ fs.writeFileSync(OUT+'/llms.txt',`# FLOWCLOUD（フロウクラウド）泉大�
 - 採用: ${L.recruit}
 - ページ: ${urls.map(u=>BASE+u).join(' ')}
 `);
+// robots.txt：旧WP側（/cms/ のAIOSEO）の内容を引き継ぎ、新サイトのサイトマップ(sitemap-fc.xml)を追記
+fs.writeFileSync(OUT+'/robots.txt',`User-agent: *\nDisallow: /cms/wp-admin/\nAllow: /cms/wp-admin/admin-ajax.php\n\nSitemap: ${BASE}/sitemap.xml\nSitemap: ${BASE}/sitemap.rss\nSitemap: ${BASE}/sitemap-fc.xml\n`);
 fs.writeFileSync(OUT+'/google0cfa36e6cfb51b13.html','google-site-verification: google0cfa36e6cfb51b13.html');
 console.log('pages',urls.length);
 

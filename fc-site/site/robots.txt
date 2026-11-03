@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /cms/wp-admin/
+Allow: /cms/wp-admin/admin-ajax.php
+
+Sitemap: https://www.flowcloud.net/sitemap.xml
+Sitemap: https://www.flowcloud.net/sitemap.rss
+Sitemap: https://www.flowcloud.net/sitemap-fc.xml

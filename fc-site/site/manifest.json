@@ -97,6 +97,10 @@
    "sha256": "4537a6a0c883333b9dbeb198641e69cda4a8494f49baf639f828812ee16a3986"
   },
   {
+   "path": "robots.txt",
+   "sha256": "a1a3fc5773d8c1aab4364ab438d4bbc3dc5deee32d1ac74418f20ea0d32e52ea"
+  },
+  {
    "path": "salon-blog/color-taishoku-40-50/index.html",
    "sha256": "8b7043132ca44c01b5607cabab5b540d0b1c21fd03481e3824ff3b43c94440f0"
   },
