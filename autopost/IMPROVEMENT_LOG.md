@@ -60,3 +60,4 @@
   → 入口の主力はサイトより Googleマップ／検索のプロフィール（両店のサイトクリック計514／6か月≒月85）。ここから来た人は、GA4では「google / organic」に混ざる。プロフィールのウェブサイトURLにUTM（?utm_source=google&utm_medium=gbp&utm_campaign=profile_website）を付ければ分離できる（藤津さんの許可待ち）。
   → 店名変更時の注意：FCは「flow」333件の検索でも表示されている。公式店名を「FLOWCLOUD」に変える際、「FLOW」を含む語が検索で拾われる形を保つこと。
   → 「予約」0はGoogle内予約の件数（予約リンク経由のクリックは含まれない）。
+- 2026-11-03 13:26 本番確認（FC）：/recruite/ 置換・/hair-quality/・記事中CTA・姉妹店リンクが反映済み。さらに https://www.flowcloud.net/recruit/ （旧WPの2018年の求人ページ。アシスタント月給19万〜・年間休日106日など古い条件が残っていた）も同じ案内ページに置換（canonicalは /recruite/ に統合）。geo（位置情報）は次回取り込み（14:22）で反映。

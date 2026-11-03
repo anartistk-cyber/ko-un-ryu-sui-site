@@ -152,6 +152,9 @@ body:sec('募集している仕事',`<ul class="ul"><li><b>新卒美容師</b>�
 sec('給与・休日・教育・見学について',`<p>給与・手当・休日・勤務時間・教育制度などの最新の条件は、採用サイトに掲載しています。以前このページに掲載していた条件は改定されていますので、必ず採用サイトをご確認ください。</p><p><a class="btn b-net" href="${L.recruit}workstyle">休み・勤務時間・給与の内訳を見る</a>　<a class="btn b-hp" href="${L.recruit}visit">見学・体験と選考の流れを見る</a></p><p>見学・ご相談は随時受け付けています。まずは気軽にご連絡ください。</p><p><a class="btn b-line" href="https://lin.ee/Z0JP8sH" rel="noopener">公式LINEで質問する</a>　<a class="btn b-tel" href="${L.tel}">電話 ${L.telText}</a></p><p>メール：info@ko-un-ryu-sui.com</p><p><a class="more" href="${L.recruit}">採用サイト（ko-un-ryu-sui.com）トップへ →</a></p>`,'alt')
 }));
 
+// /recruit/（旧WPの2018年の求人ページ：給与・休日が古い）も同じ案内ページに置換。canonicalは /recruite/ に統合
+fs.mkdirSync(OUT+'/recruit',{recursive:true});fs.copyFileSync(OUT+'/recruite/index.html',OUT+'/recruit/index.html');
+
 // sitemap
 const urls=['/','/privacy/','/coupon/','/menu/','/hair-quality/','/hair-care-40-50/','/recruite/','/straight/','/cota-products/','/headspa/','/first/','/area/','/faq/','/company/','/cast/','/voice/','/salon-blog/',...posts.map(p=>`/salon-blog/${p.slug}/`)];
 fs.writeFileSync(OUT+'/sitemap-fc.xml',`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(u=>`<url><loc>${BASE+u}</loc><lastmod>${todayStr}</lastmod></url>`).join('')}</urlset>`);
