@@ -30,6 +30,9 @@
 flow-cloud-exterior_9a36efba.jpg（FLOWCLOUD外観）／flow-cloud-interior_15a0524c.jpg（FLOWCLOUD店内）／glow-salon-interior_768ab430.jpg（glow店内）／glow-reception_7c41b63c.jpg（glow受付）／shampoo-booth_bce574f7.jpg（シャンプーブース）／training-salon_b2a51844.jpg（研修）／team-meeting_f47f2a94.jpg（ミーティング）／team-event_287a856c.jpg（チームイベント）／gallery-salonwork.jpg（サロンワーク）／gallery-exterior.jpg（夜の外観）
 - コタ（COTA）：FLOWCLOUD・glowともに全商品を取り扱い、店頭販売あり（2026-11-01 藤津さん確認）。縮毛矯正は「髪質改善ストレート」メニューで対応（両店）。
 
+## メニューの前提（2026-11-03 オーナー指示）
+- メニューは、カットまたはシャンプーブローのどちらかが必須（あわせてのご利用）。単独の「ブロー¥1,650」は廃止し、「シャンプーブロー¥2,750」に一本化。サイト・Googleプロフィールから「ブロー¥1,650」は削除済み。ホットペッパー／サロンアンサー側のメニュー名は別途オーナー確認。
+
 ## 店名・看板・沿革（2026-11-03 オーナー確認）
 - 新しい看板では「FLOWCLOUD」「glow」それぞれの前後に文字が入る予定。正式な店名は未定。藤津さんから連絡があるまで、Google/HPB/各サイト/投稿の表記は変えない（従来どおり「FLOWCLOUD」「glow」）。連絡後に3サイト・llms.txt・構造化データ・投稿表記・Googleプロフィールを一括更新する。
 - 採用サイトの会社沿革「2025年4月 年中無休の営業を開始」は過去の事実としてそのまま残す（オーナー確認）。現在の営業は上記のとおり定休あり。
