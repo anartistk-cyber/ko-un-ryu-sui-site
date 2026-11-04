@@ -1,5 +1,6 @@
 # ============================================================
 # flowcloud.net  public_html/.htaccess  への追記案（2026-11-04）
+# 【適用済み 2026-11-04 10:4x 藤津さんがXserverの「.htaccess編集」で追記・保存。ライブテストで403解消を確認】
 # 目的: 国外IP制限（"###X SUPPORT" ブロック）が Google の検査ツール等を 403 で弾くのを直す。
 # 原因: そのブロックは「日本のIP」か「UAに Googlebot / bingbot 等を含むもの」だけを許可し、
 #       Google-InspectionTool（Search Console の URL検査・インデックス登録リクエスト）などは対象外。
