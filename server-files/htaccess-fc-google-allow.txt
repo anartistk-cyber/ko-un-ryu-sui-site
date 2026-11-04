@@ -17,8 +17,13 @@ SetEnvIf User-Agent "Google-InspectionTool" AllowSearchBot
 Allow from 66.249.64.0/19
 # ---- ここまで ----
 
-# 参考（任意・藤津さんの判断）: AI検索系クローラーを通す場合は同じ形で UA 行を足す。
-#   SetEnvIf User-Agent "OAI-SearchBot" AllowSearchBot
-#   SetEnvIf User-Agent "ChatGPT-User" AllowSearchBot
-#   SetEnvIf User-Agent "PerplexityBot" AllowSearchBot
-#   ※UA指定は偽装できるため、通すかどうかはオーナー判断。今朝のログにはこれらのアクセスはなし。
+# ---- AI検索系クローラー許可（2026-11-04 藤津さん承認・Xserverの編集画面に入力済み→保存は藤津さん）----
+# 検索・回答用のみ通す。学習用（GPTBot / ClaudeBot / CCBot 等）は通さない。
+SetEnvIf User-Agent "OAI-SearchBot" AllowSearchBot
+SetEnvIf User-Agent "ChatGPT-User" AllowSearchBot
+SetEnvIf User-Agent "PerplexityBot" AllowSearchBot
+SetEnvIf User-Agent "Perplexity-User" AllowSearchBot
+SetEnvIf User-Agent "Claude-SearchBot" AllowSearchBot
+SetEnvIf User-Agent "Claude-User" AllowSearchBot
+SetEnvIf User-Agent "Applebot" AllowSearchBot
+# 注: UA指定は偽装可能。より厳密にする場合は OpenAI（openai.com/searchbot.json 等）・Perplexity（perplexity.ai/perplexitybot.json 等）の公開IP範囲での許可も可能（要定期更新）。Anthropicは公開IP範囲なし。
