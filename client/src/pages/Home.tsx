@@ -54,7 +54,7 @@ const flowCloudReel = "/images/flow-cloud-reel_3a97b205.mp4";
 const glowReel = "/images/glow-reel_752e5127.mp4";
 const lineHref = "https://lin.ee/Z0JP8sH";
 const seoTitle = "泉大津の美容師求人｜岸和田・堺・和泉から通える｜新卒・中途・学生｜FLOWCLOUD・glow";
-const seoDescription = "大阪府泉大津市の美容室FLOWCLOUD・glowの採用サイト。南大阪・泉州（岸和田・高石・和泉・堺・泉佐野・貝塚）から通える美容師求人。美容学生・高校生・新卒・中途・復職の方へ、募集条件と見学・体験をご案内します。";
+const seoDescription = "大阪府泉大津市の美容室FLOWCLOUD（フロウクラウド）・glow（グロウ）の採用サイト。南大阪・泉州（岸和田・高石・和泉・堺・泉佐野・貝塚）から通える美容師求人。美容学生・高校生・新卒・中途・復職の方へ、募集条件と見学・体験をご案内します。";
 
 const instaAccounts = [
   { name: "行雲流水 採用", handle: "ko_un_ryu_sui.recruit" },
@@ -477,7 +477,7 @@ export default function Home() {
             <div className="salon-detail">
               <div className="salon-title-row"><p className="eyebrow">SALON 01</p><span>FLOWCLOUD</span></div>
               <h3>「わたしのプチ別荘」で、<br />髪と頭皮に深く向き合う。</h3>
-              <p>完全予約制・会員制の落ち着いた空間。髪質改善、縮毛矯正、ヘッドスパ、頭皮ケアを主軸に、丁寧なカウンセリングから一人ひとりの悩みと理想に寄り添うサロンです。</p>
+              <p>FLOWCLOUD（フロウクラウド）は、完全予約制・会員制の落ち着いた空間で、髪質改善、縮毛矯正、ヘッドスパ、頭皮ケアを主軸に、丁寧なカウンセリングから一人ひとりの悩みと理想に寄り添うサロンです。</p>
               <ul className="feature-list">
                 <li>半個室・プロジェクター付きシャンプーブースを含む、くつろぎを追求した空間</li>
                 <li>髪質改善・頭皮改善、縮毛矯正、艶カラー、ヘッドスパなどのケア提案</li>
@@ -501,7 +501,7 @@ export default function Home() {
             <div className="salon-detail">
               <div className="salon-title-row"><p className="eyebrow">SALON 02</p><span>glow</span></div>
               <h3>「似合う」と「扱いやすい」を、<br />毎日の自信に変えていく。</h3>
-              <p>ショート、ショートボブ、レイヤーカットから、髪質改善カラー、透明感カラー、ヘッドスパまで。マンツーマンで、お客様の似合うスタイルと日々の扱いやすさを提案します。</p>
+              <p>glow（グロウ）では、ショート、ショートボブ、レイヤーカットから、髪質改善カラー、透明感カラー、ヘッドスパまで、マンツーマンで、お客様の似合うスタイルと日々の扱いやすさを提案します。</p>
               <ul className="feature-list">
                 <li>ショート・ショートボブ・レイヤーカット、韓国レイヤー、パーマのスタイル提案</li>
                 <li>素材美を活かし、傷ませない技術とヘアケアを大切にする考え方</li>
