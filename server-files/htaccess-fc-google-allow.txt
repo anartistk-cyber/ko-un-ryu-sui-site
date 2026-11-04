@@ -1,0 +1,23 @@
+# ============================================================
+# flowcloud.net  public_html/.htaccess  への追記案（2026-11-04）
+# 目的: 国外IP制限（"###X SUPPORT" ブロック）が Google の検査ツール等を 403 で弾くのを直す。
+# 原因: そのブロックは「日本のIP」か「UAに Googlebot / bingbot 等を含むもの」だけを許可し、
+#       Google-InspectionTool（Search Console の URL検査・インデックス登録リクエスト）などは対象外。
+# 貼る場所: ファイルの一番下（"###---" で終わる X SUPPORT ブロックの外）。ブロックの中には入れない。
+# 手順: ①今の .htaccess をバックアップ ②下の「ここから」〜「ここまで」を末尾に貼る ③保存
+#       ④サイトが表示されること（500エラーでないこと）を確認 ⑤異常ならバックアップに戻す
+# 注意: このファイルは sync_fc.php では配信されない（.htaccess は同期対象外）。藤津さんがXserverで貼る。
+# ============================================================
+
+# ---- ここから ----
+# Search Console URL inspection / live test / request indexing
+SetEnvIf User-Agent "Google-InspectionTool" AllowSearchBot
+# Google crawl address block (Prefetch Proxy, GoogleOther, Storebot etc. also come from here)
+Allow from 66.249.64.0/19
+# ---- ここまで ----
+
+# 参考（任意・藤津さんの判断）: AI検索系クローラーを通す場合は同じ形で UA 行を足す。
+#   SetEnvIf User-Agent "OAI-SearchBot" AllowSearchBot
+#   SetEnvIf User-Agent "ChatGPT-User" AllowSearchBot
+#   SetEnvIf User-Agent "PerplexityBot" AllowSearchBot
+#   ※UA指定は偽装できるため、通すかどうかはオーナー判断。今朝のログにはこれらのアクセスはなし。
