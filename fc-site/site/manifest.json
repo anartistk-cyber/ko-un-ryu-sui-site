@@ -222,15 +222,15 @@
   },
   {
    "path": "hair-quality/index.html",
-   "sha256": "f0027f00a3ec494fb36179320483239e8f7629e727f279569bc6444a00fc345a"
+   "sha256": "150856436ee192591f76da899287fa463e6334f438e21b9959adc85b99f017dc"
   },
   {
    "path": "headspa/index.html",
-   "sha256": "242644dacd1ebea4fb1412c976ac2d00acfd5f8428d5a6c4cea6b3d9509d9484"
+   "sha256": "ad28ef08e0408151298f6b39521580433f06ea5550727eee8674215ef9039515"
   },
   {
    "path": "index.html",
-   "sha256": "5ee85787c8dd8f2525269127df3c050672fadc2d4ebec13b13ea2d70e9389f73"
+   "sha256": "b5dc44e842fb0fa2555bf43e6b23edd85d3b139c0d93c6e8c5aa97701b4552c0"
   },
   {
    "path": "llms.txt",
@@ -294,7 +294,7 @@
   },
   {
    "path": "straight/index.html",
-   "sha256": "75e3239d186120815944e818b0e29791b8cdec799b80aa747fbd74caa9710212"
+   "sha256": "a0efbeada0c9773a9b13e97a59119c27f678b67377e2a830ab9aeca3f8260e3c"
   },
   {
    "path": "style/index.html",
