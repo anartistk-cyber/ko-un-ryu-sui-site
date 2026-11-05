@@ -6,7 +6,7 @@
   },
   {
    "path": "cast/index.html",
-   "sha256": "ebd70e05e86363db29f1186361c0f78d12814849e6b719a1982beae8630f2a2a"
+   "sha256": "abe2ee79f8959575b84e6c8361fed861934cf44502e9ec88e34663abdc3a3afe"
   },
   {
    "path": "color/index.html",
@@ -50,7 +50,7 @@
   },
   {
    "path": "fc/img/cast-fujitsu.jpg",
-   "sha256": "3064707bed2f043145c0a08a222f459447a8c7e579338f6d4cc72105a3c408a3"
+   "sha256": "b2bddd3e92d3ca01f498d6daf4845ac6fe810adbff48a35f9ffc52bf436254ae"
   },
   {
    "path": "fc/img/cast-moe.jpg",
@@ -58,7 +58,7 @@
   },
   {
    "path": "fc/img/cast-takako.jpg",
-   "sha256": "47b8bd3240ebd19c76144d818271a7f71bfea65c7b6666bf4639fc3e4c42d243"
+   "sha256": "6ac7b3d78b09ae9b3f9f9667120aa4e05af8552ec2454579a633bc1338ba8592"
   },
   {
    "path": "fc/style.css",
