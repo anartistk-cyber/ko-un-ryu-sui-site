@@ -2,7 +2,7 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "f288d631aedd7b0975f710280465e8ff7d7ea22f08861bfdd10e330e804decd3"
+   "sha256": "e957b6cb90270eee818c5ac606fbbca0d29c94e6b12f20bf5953c8cf4295a8a7"
   },
   {
    "path": "cast/index.html",
@@ -58,7 +58,7 @@
   },
   {
    "path": "gl/style.css",
-   "sha256": "aac70ebeb1aa24dcccf482c7d9787c0ed9b297d116de19b378fff6930a315f20"
+   "sha256": "cf50964977fc97e17ea83628993956e62fec2e0ad81248b9d0659036f352e4f0"
   },
   {
    "path": "headspa/index.html",
@@ -66,7 +66,7 @@
   },
   {
    "path": "index.html",
-   "sha256": "e9429748db119f0af6d0bf1ad679ac3e00d4ea1aa6b8178ab3a067c2f43b3c29"
+   "sha256": "56fe5af1c4118ed7bf58b52406825358db995b3e9ccb0f173dc37dfe834f4220"
   },
   {
    "path": "journal/access-parking/index.html",
