@@ -210,3 +210,16 @@ a:focus-visible,summary:focus-visible,.btn:focus-visible,.mb:focus-visible,input
 /* 日本語の改行を自然に（見出しの1文字残りを防ぐ。未対応ブラウザでは無視されるだけ） */
 h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 .hero p,.ph .lead{word-break:auto-phrase}
+/* つぎは、こちらもどうぞ（ページ末のおすすめ導線） */
+.nx-sec{background:var(--pink2)}
+.nx{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.nx li{margin:0;padding:0}
+.nx-c{position:relative;display:flex;flex-direction:column;gap:6px;height:100%;padding:22px 22px 46px;background:#fff;border:2px solid var(--pinkl);border-radius:var(--r);text-decoration:none;color:var(--ink);transition:transform .2s,box-shadow .2s,border-color .2s}
+.nx-c b{font:700 18px/1.5 var(--hf);color:var(--pri)}
+.nx-c span{font-size:15px;line-height:1.75;color:var(--mute)}
+.nx-c i{position:absolute;right:20px;bottom:14px;font-style:normal;font-weight:700;color:var(--cta);transition:transform .2s}
+.nx-c .e{font-style:normal;font-size:26px;line-height:1;margin-bottom:2px}
+.nx-c:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,0,0,.1);border-color:var(--cta)}
+.nx-c:hover i{transform:translateX(4px)}
+@media(max-width:820px){.nx{grid-template-columns:1fr;gap:12px}.nx-c{padding:18px 20px 40px}}
+@media(prefers-reduced-motion:reduce){.nx-c,.nx-c i{transition:none}.nx-c:hover{transform:none}}
