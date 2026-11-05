@@ -241,6 +241,15 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 @media(prefers-reduced-motion:reduce){.cast-mini li{transition:none}.cast-mini li:hover{transform:none}}
 .cast-mini li span{white-space:nowrap;letter-spacing:0}
 @media(max-width:520px){.cast-mini li span{font-size:12.5px;padding-left:8px;padding-right:8px}}
+
+/* スマホで縦に長くなりすぎないように：人気メニューは2列、「選ばれる理由」などの写真つきカードは横スワイプ */
+@media(max-width:720px){
+ .pm{grid-template-columns:1fr 1fr;gap:10px}
+ .pm a{padding:14px 12px}.pm a h3{font-size:15px;line-height:1.5}.pm a p{font-size:13.5px;line-height:1.6}
+ .g3:has(>article){display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 14px;margin:0 -20px;-webkit-overflow-scrolling:touch}
+ .g3:has(>article)>article{flex:0 0 82%;scroll-snap-align:center}
+}
+@media(max-width:340px){.pm{grid-template-columns:1fr}}
 .hero-ph .ph2{object-position:24% 42%}
 .cast li b{display:block}
 @media(max-width:520px){.cta{padding:24px 14px}.cta .btn{width:100%;max-width:300px;padding:13px 10px;font-size:15px}.cta-lead{line-height:1.6}}

@@ -210,7 +210,7 @@
   },
   {
    "path": "gl/style.css",
-   "sha256": "fc14a6d5f3592891f7a698a39b7e1ee5eb234da4ffa443db14dd5d6c6e1cb7d2"
+   "sha256": "d8213dcc01a7959cd8872bf8bf2b2764c22f2c9533f59a7df9ddaf55534a1ab7"
   },
   {
    "path": "headspa/index.html",
@@ -218,7 +218,7 @@
   },
   {
    "path": "index.html",
-   "sha256": "90eebb02cb32301a47db833b583095e2f3a34ea897692a642e24603933100598"
+   "sha256": "06b3054262f6dc5ad756b1f1d1de4a2e606c1eec6a696de59f04615f21eec41c"
   },
   {
    "path": "journal/access-parking/index.html",

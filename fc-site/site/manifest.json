@@ -206,7 +206,7 @@
   },
   {
    "path": "fc/style.css",
-   "sha256": "7ad725b18e844213f5560568a4f5b98be340ac6cc9577f5ab07b259891aa0258"
+   "sha256": "325e351eb9b5b9e60333549bd44559f3a02b1a5c222ba956e4e53497a9188aa0"
   },
   {
    "path": "first/index.html",
@@ -230,7 +230,7 @@
   },
   {
    "path": "index.html",
-   "sha256": "4a446653ed8c4e6c80e262a4c11fae5fbc386b2d04f6b866793c737a96213f90"
+   "sha256": "2d9f125ef842047603aa0fd5a32c0d7f136cc61be34425f881b491008746b73f"
   },
   {
    "path": "llms.txt",
