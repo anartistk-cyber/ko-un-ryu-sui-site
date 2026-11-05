@@ -195,6 +195,21 @@ h1,h2,h3,.logo,.btn,.cta-lead,.ft-n,.cal-t{font-family:var(--hf)}
 @media(max-width:520px){.q-opts span{padding:10px 15px;font-size:14.5px}.q-res .r{padding:20px 18px 16px}.q-res li{flex-direction:column;gap:0}}
 @media(prefers-reduced-motion:reduce){.quiz.js .q-res .r.on{animation:none}}
 a:focus-visible,summary:focus-visible,.btn:focus-visible,.mb:focus-visible,input:focus-visible+span{outline:3px solid var(--butterd);outline-offset:3px;border-radius:10px}
+/* 表の見やすさ（店舗情報・会社概要の見出しが縦に折れない／スマホのメニュー表は名前を上段・時間と料金を下段に） */
+.mt.info th{white-space:nowrap;width:7.5em;vertical-align:top}
+.mt.info td{overflow-wrap:anywhere}
+@media(max-width:520px){
+ .mt.info th{width:6.2em;padding-right:4px}
+ .mt.menu,.mt.menu tbody{display:block;width:100%}
+ .mt.menu tr{display:grid;grid-template-columns:1fr auto;column-gap:12px;align-items:baseline;padding:11px 6px;border-bottom:1px solid var(--pinkl)}
+ .mt.menu th,.mt.menu td{display:block;border:0;padding:0;width:auto;background:none}
+ .mt.menu th{grid-column:1/-1;margin-bottom:2px;line-height:1.55}
+ .mt.menu td{color:var(--mute);font-size:14.5px}
+ .mt.menu td.pr{text-align:right;color:var(--cta);font-size:17px}
+}
+/* 日本語の改行を自然に（見出しの1文字残りを防ぐ。未対応ブラウザでは無視されるだけ） */
+h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
+.hero p,.sec>.wrap>p,.q-res p,.cast p,.two p{word-break:auto-phrase}
 .hero-ph .ph2{object-position:24% 42%}
 .cast li b{display:block}
 @media(max-width:520px){.cta{padding:24px 14px}.cta .btn{width:100%;max-width:300px;padding:13px 10px;font-size:15px}.cta-lead{line-height:1.6}}
