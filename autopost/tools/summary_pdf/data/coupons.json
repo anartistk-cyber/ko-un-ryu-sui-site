@@ -1,0 +1,122 @@
+[
+ {
+  "shop": "FLOWCLOUD",
+  "rank": 1,
+  "coupon": "頭皮スッキリ｜カット＋炭酸ヘッドスパ",
+  "bookings": 5,
+  "kind": "",
+  "total": 23
+ },
+ {
+  "shop": "FLOWCLOUD",
+  "rank": 2,
+  "coupon": "初めての方｜指名限定 カット＋カラー",
+  "bookings": 3,
+  "kind": "",
+  "total": 23
+ },
+ {
+  "shop": "FLOWCLOUD",
+  "rank": 3,
+  "coupon": "指名限定 髪質改善ストレート＋カット",
+  "bookings": 2,
+  "kind": "",
+  "total": 23
+ },
+ {
+  "shop": "FLOWCLOUD",
+  "rank": 4,
+  "coupon": "指名限定 リフトアップヘッドスパ",
+  "bookings": 2,
+  "kind": "",
+  "total": 23
+ },
+ {
+  "shop": "FLOWCLOUD",
+  "rank": 5,
+  "coupon": "来店3回まで＆指名限定 カット＋カラー",
+  "bookings": 2,
+  "kind": "",
+  "total": 23
+ },
+ {
+  "shop": "FLOWCLOUD",
+  "rank": 6,
+  "coupon": "迷ったときの相談クーポン",
+  "bookings": 2,
+  "kind": "",
+  "total": 23
+ },
+ {
+  "shop": "FLOWCLOUD",
+  "rank": 7,
+  "coupon": "他の7本（合計）",
+  "bookings": 7,
+  "kind": "other",
+  "total": 23
+ },
+ {
+  "shop": "glow",
+  "rank": 1,
+  "coupon": "新規限定｜似合わせカット＋艶カラー",
+  "bookings": 9,
+  "kind": "",
+  "total": 22
+ },
+ {
+  "shop": "glow",
+  "rank": 2,
+  "coupon": "似合わせカット＋炭酸ヘッドスパ",
+  "bookings": 5,
+  "kind": "",
+  "total": 22
+ },
+ {
+  "shop": "glow",
+  "rank": 3,
+  "coupon": "指名限定 デジタルパーマ＋カット",
+  "bookings": 2,
+  "kind": "",
+  "total": 22
+ },
+ {
+  "shop": "glow",
+  "rank": 4,
+  "coupon": "カット＋艶カラー＋髪質向上Tr",
+  "bookings": 2,
+  "kind": "",
+  "total": 22
+ },
+ {
+  "shop": "glow",
+  "rank": 5,
+  "coupon": "期間限定 癖毛解消＋スタイル持続Tr",
+  "bookings": 1,
+  "kind": "",
+  "total": 22
+ },
+ {
+  "shop": "glow",
+  "rank": 6,
+  "coupon": "指名限定 カット＋艶カラー",
+  "bookings": 1,
+  "kind": "",
+  "total": 22
+ },
+ {
+  "shop": "glow",
+  "rank": 7,
+  "coupon": "指名限定 カット＋水素ケアパーマ",
+  "bookings": 1,
+  "kind": "",
+  "total": 22
+ },
+ {
+  "shop": "glow",
+  "rank": 8,
+  "coupon": "cota商品付きコース",
+  "bookings": 1,
+  "kind": "",
+  "total": 22
+ }
+]

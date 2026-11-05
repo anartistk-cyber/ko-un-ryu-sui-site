@@ -1,0 +1,26 @@
+[
+ {
+  "shop": "FLOWCLOUD",
+  "metric": "acr",
+  "own": 3.8,
+  "avg": 12.0
+ },
+ {
+  "shop": "glow",
+  "metric": "acr",
+  "own": 3.1,
+  "avg": 14.0
+ },
+ {
+  "shop": "FLOWCLOUD",
+  "metric": "bookings",
+  "own": 42,
+  "avg": 126
+ },
+ {
+  "shop": "glow",
+  "metric": "bookings",
+  "own": 20,
+  "avg": 101
+ }
+]

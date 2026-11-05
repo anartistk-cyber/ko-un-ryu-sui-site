@@ -1,0 +1,23 @@
+[
+ {
+  "site": "FLOWCLOUD",
+  "score_before": 84,
+  "score_after": 91,
+  "lcp_before": 3.2,
+  "lcp_after": 2.6
+ },
+ {
+  "site": "glow",
+  "score_before": 85,
+  "score_after": 90,
+  "lcp_before": 3.1,
+  "lcp_after": 2.6
+ },
+ {
+  "site": "採用サイト",
+  "score_before": 61,
+  "score_after": 79,
+  "lcp_before": 17.1,
+  "lcp_after": 2.8
+ }
+]

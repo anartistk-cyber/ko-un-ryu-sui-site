@@ -1,0 +1,22 @@
+[
+ {
+  "channel": "Direct（直接）",
+  "sessions": 64,
+  "key_events": 7
+ },
+ {
+  "channel": "Organic Search（検索）",
+  "sessions": 57,
+  "key_events": 2
+ },
+ {
+  "channel": "Referral（他サイト）",
+  "sessions": 25,
+  "key_events": 0
+ },
+ {
+  "channel": "Organic Social（SNS）",
+  "sessions": 21,
+  "key_events": 1
+ }
+]

@@ -1,0 +1,65 @@
+[
+ {
+  "id": "fc_all",
+  "label": "FLOWCLOUD｜サイト全体",
+  "impressions": 805,
+  "clicks": 83,
+  "position": 7.1
+ },
+ {
+  "id": "fc_1",
+  "label": "FLOWCLOUD｜泉大津 美容室",
+  "impressions": 9,
+  "clicks": 2,
+  "position": 2.2
+ },
+ {
+  "id": "fc_2",
+  "label": "FLOWCLOUD｜泉大津 髪質改善",
+  "impressions": 11,
+  "clicks": 0,
+  "position": 5.4
+ },
+ {
+  "id": "fc_3",
+  "label": "FLOWCLOUD｜泉大津 縮毛矯正",
+  "impressions": 10,
+  "clicks": 0,
+  "position": 6.2
+ },
+ {
+  "id": "fc_4",
+  "label": "FLOWCLOUD｜ヘッドスパ 泉大津",
+  "impressions": 8,
+  "clicks": 0,
+  "position": 5.2
+ },
+ {
+  "id": "gl_1",
+  "label": "glow｜glow 泉大津",
+  "impressions": 9,
+  "clicks": 4,
+  "position": 2.7
+ },
+ {
+  "id": "gl_2",
+  "label": "glow｜泉大津 美容室",
+  "impressions": 5,
+  "clicks": 0,
+  "position": 6.2
+ },
+ {
+  "id": "gl_3",
+  "label": "glow｜泉大津 髪質改善",
+  "impressions": 4,
+  "clicks": 0,
+  "position": 10.0
+ },
+ {
+  "id": "rc_1",
+  "label": "採用｜スタイリスト 正社員",
+  "impressions": 3,
+  "clicks": 3,
+  "position": 8.3
+ }
+]

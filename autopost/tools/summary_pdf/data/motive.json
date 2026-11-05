@@ -1,0 +1,51 @@
+[
+ {
+  "motive": "ホットペッパー",
+  "fc_people": 20,
+  "fc_pct": 61,
+  "glow_people": 9,
+  "glow_pct": 18
+ },
+ {
+  "motive": "SNS・ホームページ・ネット",
+  "fc_people": 5,
+  "fc_pct": 15,
+  "glow_people": 4,
+  "glow_pct": 8
+ },
+ {
+  "motive": "紹介",
+  "fc_people": 3,
+  "fc_pct": 9,
+  "glow_people": 1,
+  "glow_pct": 2
+ },
+ {
+  "motive": "通りがかり",
+  "fc_people": 2,
+  "fc_pct": 6,
+  "glow_people": 5,
+  "glow_pct": 10
+ },
+ {
+  "motive": "ハンティング",
+  "fc_people": 0,
+  "fc_pct": 0,
+  "glow_people": 1,
+  "glow_pct": 2
+ },
+ {
+  "motive": "その他",
+  "fc_people": 1,
+  "fc_pct": 3,
+  "glow_people": 9,
+  "glow_pct": 18
+ },
+ {
+  "motive": "不明（未入力）",
+  "fc_people": 2,
+  "fc_pct": 6,
+  "glow_people": 22,
+  "glow_pct": 43
+ }
+]
