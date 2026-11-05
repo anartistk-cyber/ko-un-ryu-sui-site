@@ -50,8 +50,11 @@ const flowCloudExteriorPhoto = "/images/flow-cloud-exterior_9a36efba.jpg";
 const flowCloudInteriorPhoto = "/images/flow-cloud-interior_15a0524c.jpg";
 const glowSalonInteriorPhoto = "/images/glow-salon-interior_768ab430.jpg";
 const glowReceptionPhoto = "/images/glow-reception_7c41b63c.jpg";
-const flowCloudReel = "/images/flow-cloud-reel_3a97b205.mp4";
-const glowReel = "/images/glow-reel_752e5127.mp4";
+// 動画は軽量版（約2MB）。画面に近づくまで読み込まない（スマホの表示速度のため）。元の約9MB版は使わない。
+const flowCloudReel = "/images/flow-cloud-reel-lite_v1.mp4";
+const flowCloudReelPoster = "/images/flow-cloud-reel-poster_v1.jpg";
+const glowReel = "/images/glow-reel-lite_v1.mp4";
+const glowReelPoster = "/images/glow-reel-poster_v1.jpg";
 const lineHref = "https://lin.ee/Z0JP8sH";
 const seoTitle = "泉大津の美容師求人｜岸和田・堺・和泉から通える｜新卒・中途・学生｜FLOWCLOUD・glow";
 const seoDescription = "大阪府泉大津市の美容室FLOWCLOUD（フロウクラウド）・glow（グロウ）の採用サイト。南大阪・泉州（岸和田・高石・和泉・堺・泉佐野・貝塚）から通える美容師求人。美容学生・高校生・新卒・中途・復職の方へ、募集条件と見学・体験をご案内します。";
@@ -224,7 +227,7 @@ function InfoBlock({ num, en, title, small, rows, note }: { num: string; en: str
   );
 }
 
-function SalonReel({ src, label, muted, onToggleSound }: { src: string; label: string; muted: boolean; onToggleSound: () => void }) {
+function SalonReel({ src, poster, label, muted, onToggleSound }: { src: string; poster: string; label: string; muted: boolean; onToggleSound: () => void }) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -241,9 +244,29 @@ function SalonReel({ src, label, muted, onToggleSound }: { src: string; label: s
     }
   }, [muted]);
 
+  // 画面に近づいたときだけ読み込んで再生し、外れたら止める（初回表示の転送量を減らす）
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (typeof IntersectionObserver === "undefined") {
+      video.preload = "auto";
+      void video.play().catch(() => {});
+      return;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) void video.play().catch(() => {});
+        else video.pause();
+      },
+      { rootMargin: "160px", threshold: 0.1 },
+    );
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="salon-reel">
-      <video ref={videoRef} autoPlay loop muted={muted} playsInline preload="metadata" aria-label={label}>
+      <video ref={videoRef} loop muted={muted} playsInline preload="none" poster={poster} aria-label={label}>
         <source src={src} type="video/mp4" />
       </video>
       <span className="salon-reel-label">SALON REEL</span>
@@ -324,7 +347,7 @@ export default function Home() {
               <p className="hero-source-note">2027年度 新卒美容師3名募集。中途・パート・学生アルバイトの募集条件もご案内しています。<br />年度・人数・募集状態は年度により異なります</p>
             </div>
             <div className="hero-visual hero-visual-photo">
-              <img className="hero-team-photo" src={heroTeamPhoto} alt="FLOWCLOUD前に集まる株式会社行雲流水の代表・藤津一弥とキャスト" />
+              <img className="hero-team-photo" fetchPriority="high" decoding="async" src={heroTeamPhoto} alt="FLOWCLOUD前に集まる株式会社行雲流水の代表・藤津一弥とキャスト" />
               <div className="hero-visual-caption">
                 <span>FLOWCLOUD TEAM</span>
                 <strong>WE ARE<br />KOUNRYUSUI</strong>
@@ -468,7 +491,7 @@ export default function Home() {
             <div className="salon-gallery" aria-label="FLOWCLOUDの店舗写真">
               <img loading="lazy" decoding="async" className="salon-gallery-main" src={flowCloudExteriorPhoto} alt="FLOWCLOUDの外観" />
               <div className="salon-gallery-side">
-                <SalonReel src={flowCloudReel} label="FLOWCLOUDのサロンリール動画" muted={activeReelSound !== "flow"} onToggleSound={() => setActiveReelSound(activeReelSound === "flow" ? null : "flow")} />
+                <SalonReel src={flowCloudReel} poster={flowCloudReelPoster} label="FLOWCLOUDのサロンリール動画" muted={activeReelSound !== "flow"} onToggleSound={() => setActiveReelSound(activeReelSound === "flow" ? null : "flow")} />
                 <img loading="lazy" decoding="async" className="salon-gallery-detail" src={flowCloudInteriorPhoto} alt="FLOWCLOUDの落ち着いたカウンセリング空間" />
               </div>
               <div className="salon-gallery-logo"><img loading="lazy" decoding="async" src={flowCloudLogo} alt="FLOWCLOUD ロゴ" /></div>
@@ -492,7 +515,7 @@ export default function Home() {
             <div className="salon-gallery" aria-label="glowの店舗写真">
               <img loading="lazy" decoding="async" className="salon-gallery-main" src={glowReceptionPhoto} alt="glowのレセプションとロゴ" />
               <div className="salon-gallery-side">
-                <SalonReel src={glowReel} label="glowのサロンリール動画" muted={activeReelSound !== "glow"} onToggleSound={() => setActiveReelSound(activeReelSound === "glow" ? null : "glow")} />
+                <SalonReel src={glowReel} poster={glowReelPoster} label="glowのサロンリール動画" muted={activeReelSound !== "glow"} onToggleSound={() => setActiveReelSound(activeReelSound === "glow" ? null : "glow")} />
                 <img loading="lazy" decoding="async" className="salon-gallery-detail" src={glowSalonInteriorPhoto} alt="glowのセット面" />
               </div>
               <div className="salon-gallery-logo"><img loading="lazy" decoding="async" src={glowLogo} alt="glow ロゴ" /></div>
