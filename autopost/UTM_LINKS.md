@@ -64,3 +64,9 @@
   - https://ko-un-ryu-sui.com/?krs_internal=1
 - 解除したいとき：同じURLの `=1` を `=0` にして開く。ブラウザのデータを消した場合は再度開く。
 - 注意：お客様用のQRやリンクにはこのパラメータを付けない。
+
+## スタッフ端末の登録用QR（2026-11-05）
+- `autopost/utm-qr/internal_staff_devices.png`（作成：`python3 scripts/make-internal-qr.py`）。3サイト分のQRが1枚。各自のスマホ・PCで1回ずつ読み取って開くと、その端末は GA4 で内部扱い、Clarity も読み込まない。
+- 解除：URL末尾を `?krs_internal=0` にして開く。
+- 確認：登録直後に、GA4 の「リアルタイム」で自分のアクセスが出ない／データフィルタのテストで内部と判定されることを見る。
+
