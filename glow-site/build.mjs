@@ -50,8 +50,9 @@ const VAR={'2026/04/glow_img-08':[1477,1108],'2026/04/glow_img-05':[1477,1108],'
 const optImgs=h=>h.replace(/<img src="\/wp-content\/uploads\/([^"]+)\.jpg"([^>]*)>/g,(m,n,rest)=>{const d=VAR[n];if(!d)return m;const v=w=>`/wp-content/uploads/${n}-${w}x${Math.round(d[1]*w/d[0])}.jpg`;const hero=/fetchpriority/.test(rest);if(/class="sm"/.test(rest))return `<img src="${v(300)}" srcset="${v(300)} 300w, ${v(768)} 768w" sizes="250px"${rest}>`;return `<img src="${v(1024)}" srcset="${v(300)} 300w, ${v(768)} 768w, ${v(1024)} 1024w" sizes="${hero?'(max-width:820px) 100vw, 520px':'(max-width:720px) 100vw, 640px'}"${rest}>`});
 const write=(p,html)=>{html=optImgs(html);const f=p==='/'?'index.html':p.replace(/^\//,'')+'index.html';fs.mkdirSync(path.dirname(path.join(OUT,f)),{recursive:true});fs.writeFileSync(path.join(OUT,f),html)};
 const sec=(t,inner,cls='')=>`<section class="sec ${cls}"><div class="wrap">${t?`<h2>${t}</h2>`:''}${inner}</div></section>`;
+const castMini=()=>`<ul class="cast cast-mini"><li><a href="/cast/"><img src="/gl/img/cast-shion.jpg" alt="glowのスタイリスト しおん" width="480" height="607" loading="lazy"><b>しおん</b><span>スタイリスト</span></a></li><li><a href="/cast/"><img src="/gl/img/cast-ayuna.jpg" alt="glowのスタイリスト あゆな" width="480" height="640" loading="lazy"><b>あゆな</b><span>スタイリスト</span></a></li></ul>`;
 // ホームの並び順：来店前の不安→価格→店内・人柄→場所・営業日→予約、の順に進めるよう章単位で並べ替える。章が増減したらビルドを止める。
-const HOME_ORDER=['こんなお悩み・ご希望はありませんか？','なりたい雰囲気から選ぶ、おすすめメニュー','__cta','glowの3つのこだわり','人気のメニュー','お客様の声','glowの店内をのぞいてみる？','Instagram','泉大津駅から徒歩1分','営業日カレンダー','__cta2','よくある質問','お知らせ・ブログ','動画','採用情報・姉妹店'];
+const HOME_ORDER=['こんなお悩み・ご希望はありませんか？','なりたい雰囲気から選ぶ、おすすめメニュー','__cta','glowの3つのこだわり','人気のメニュー','お客様の声','glowの店内をのぞいてみる？','キャスト紹介','Instagram','泉大津駅から徒歩1分','営業日カレンダー','__cta2','よくある質問','お知らせ・ブログ','動画','採用情報・姉妹店'];
 function orderHome(body){
  const parts=body.split(/(?=<section class="sec[ "]|<div class="cta">)/).filter(c=>c.trim());
  const map=new Map();let cta1=null;
@@ -94,7 +95,7 @@ sec('人気のメニュー',`<div class="g3 pm"><a href="/menu/#cut"><h3>カッ�
 sec('泉大津駅から徒歩1分',`<div class="two"><img src="${I.interior}" alt="glowの店内" loading="lazy" width="1477" height="1108"><div><p>南海本線「泉大津駅」から徒歩1分。いずみおおつCITY 1Fにあります。<strong>堺・羽衣・高石・岸和田・春木・貝塚・泉佐野</strong>など南海本線沿線の方はもちろん、<strong>和泉・和泉府中・和泉中央</strong>方面からもお越しいただけます。お車の方はアルザ地下駐車場をご利用いただけます。</p><p>大阪府泉大津市旭町18-3 いずみおおつCITY 1F<br>TEL <a href="${L.tel}">${L.telText}</a></p><p><a class="more" href="/area/">対応エリアとアクセス →</a></p></div></div>`)+
 sec('お客様の声',revCards(4)+'<p><a class="more" href="/voice/">お客様の声をもっと見る →</a></p>','alt')+
 sec('お知らせ・ブログ',postList(5)+'<p><a class="more" href="/journal/">お知らせ・ブログ一覧 →</a></p>')+
-calendars()+videos()+sec('Instagram',insta())+
+calendars()+videos()+sec('キャスト紹介',castMini()+'<p>お悩みやなりたいイメージを、カウンセリングでじっくりうかがいます。</p><p><a class="more" href="/cast/">キャスト紹介を見る →</a></p>')+sec('Instagram',insta())+
 sec('よくある質問',faqHtml(faq.slice(0,6))+'<p><a class="more" href="/faq/">すべての質問を見る →</a></p>')+
 sec('採用情報・姉妹店',`<p>glowの運営会社・株式会社行雲流水では、美容師・アシスタントを募集しています。</p><p><a class="btn b-net" href="${L.recruit}">採用サイトを見る</a>　<a class="btn b-hp" href="${L.fc}" rel="noopener">姉妹店 FLOWCLOUD（フロウクラウド）</a></p>`,'alt')
 }));
