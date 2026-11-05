@@ -157,7 +157,7 @@ export function ContactForm() {
   const err = (k: string) => errors[k] ? <small className="field-error" id={`e-${k}`} role="alert">{errors[k]}</small> : null;
   const student = status === "student" || status === "newgrad";
   return (
-    <form className="contact-form" ref={formRef} onSubmit={onSubmit} onFocus={onStart} onInput={saveDraft} onChange={saveDraft} noValidate>
+    <form className="contact-form" data-clarity-mask="True" ref={formRef} onSubmit={onSubmit} onFocus={onStart} onInput={saveDraft} onChange={saveDraft} noValidate>
       <div className="contact-form-heading"><span>MAIL FORM</span><strong>メールで相談する</strong><small><em>必須</em>の項目だけで送信できます。くわしい希望は、あとから伝えても大丈夫です。</small></div>
       <input className="form-honeypot" name="website" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       {Object.keys(errors).length > 0 && (

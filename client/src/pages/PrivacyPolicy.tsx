@@ -4,6 +4,8 @@ import { TBD } from "../components/Pending";
 import { useEffect } from "react";
 import { Link } from "wouter";
 
+// ヒートマップ（Microsoft Clarity）。client/.env の VITE_CLARITY_ID が空の間は、スクリプトも追記文も出ない
+const CLARITY_ID = import.meta.env.VITE_CLARITY_ID || "";
 const logoPath = "/images/company-logo_19c099e6.jpg";
 
 const sections: { number: string; title: string; body: ReactNode }[] = [
@@ -13,7 +15,7 @@ const sections: { number: string; title: string; body: ReactNode }[] = [
   { number: "04", title: "保管と削除", body: <>取得した情報は、採用活動に必要な期間（選考終了後、最長1年を目安）保管し、利用の必要がなくなった後は、メール・記録を削除し、書類はシュレッダー等で破棄します。採用された方の情報は、入社後の従業員情報として当社の規程に従って取り扱います。</> },
   { number: "05", title: "安全管理", body: <>当社は、閲覧できる担当者を限定するアクセス制限や、パスワード管理などによって、個人情報の漏えい等を防ぐための管理を行います。</> },
   { number: "06", title: "照会・訂正等のお問い合わせ", body: <>個人情報に関するお問い合わせや、開示・訂正・削除等のご相談は、採用担当（info@ko-un-ryu-sui.com）または公式LINEへご連絡ください。ご本人であることを確認のうえ、法令に従い、合理的な期間内に対応します。</> },
-  { number: "07", title: "アクセス解析等", body: <>当サイトでは、閲覧状況（どのページがどれだけ見られているか等）を把握しサイト改善に役立てるため、Google社のアクセス解析サービス「Googleアナリティクス（GA4）」を利用しています。Cookie等を通じて、閲覧ページ、滞在時間、おおよその地域、端末の種類、ボタンのクリック等の情報が匿名のかたちで収集されます。氏名・連絡先等の個人を特定する情報は取得しません。収集された情報はGoogleのプライバシーポリシーに基づき管理されます。ブラウザのCookie設定の変更、またはGoogleが提供するオプトアウトアドオンの利用により、収集を停止できます。公式LINEへ移動した後は、LINE側の取扱いが適用されます。</> },
+  { number: "07", title: "アクセス解析等", body: <>当サイトでは、閲覧状況（どのページがどれだけ見られているか等）を把握しサイト改善に役立てるため、Google社のアクセス解析サービス「Googleアナリティクス（GA4）」を利用しています。Cookie等を通じて、閲覧ページ、滞在時間、おおよその地域、端末の種類、ボタンのクリック等の情報が匿名のかたちで収集されます。氏名・連絡先等の個人を特定する情報は取得しません。収集された情報はGoogleのプライバシーポリシーに基づき管理されます。ブラウザのCookie設定の変更、またはGoogleが提供するオプトアウトアドオンの利用により、収集を停止できます。{CLARITY_ID ? <>また、ページのどの部分が見られ、どこで離れているかを把握してサイトを改善するため、Microsoft社の分析サービス「Microsoft Clarity」（ヒートマップ）を利用しています。画面上のクリック・タップ・スクロールの動き、閲覧ページ、端末の種類、おおよその地域などがMicrosoft社に送信されます。お問い合わせ・応募フォームに入力された内容は収集しない設定にしています。収集された情報はMicrosoft社のプライバシーに関する声明に基づき管理されます。</> : null}公式LINEへ移動した後は、LINE側の取扱いが適用されます。</> },
 ];
 
 export default function PrivacyPolicy() {

@@ -47,3 +47,14 @@
 ## 記録
 - 各回の数字の要約を `autopost/reports/YYYY-MM-DD_*.md` に保存する（次回の比較用）。
 - 実施した改善は `autopost/IMPROVEMENT_LOG.md` に追記する。反映は fetch → ff-merge → push。
+
+## ヒートマップ（Microsoft Clarity）の導入手順（2026-11-05 準備済み・ID待ち）
+- 仕組み：IDが空の間は、スクリプトもプライバシーポリシーの追記も出ない。IDを入れてビルドすると、全ページにスクリプトが入り、プライバシーポリシーに「ヒートマップ（Microsoft Clarity）」の段落が付く（部品：shared/clarity.mjs）。
+- ID（Clarityのプロジェクト1つにつき1つ。サイトごとに別プロジェクトにする）を入れる場所：
+  - FLOWCLOUD：fc-site/data.json の "clarity"
+  - glow：glow-site/data.json の "clarity"
+  - 採用：client/.env の VITE_CLARITY_ID（その後 `VITE_PUBLISH=1 npx vite build && node scripts/prerender.mjs dist && node scripts/publish-gate.mjs dist && bash scripts/export-site.sh`）
+- 採用サイトのお問い合わせ・応募フォームは data-clarity-mask="True" で入力内容を収集しない設定にしてある（ContactForm.tsx）。FLOWCLOUD・glowには文字入力フォームがない。
+- Clarityのプロジェクト設定（藤津さん側）：マスキングは「Balanced（初期値）」のまま。GA4との連携は、Clarityの設定 > 「Google Analytics連携」で、連携すると GA4 の画面からClarityの録画へ移れる。
+- 読み取り：clarity.microsoft.com のダッシュボード（ヒートマップ・スクロール到達・「デッドクリック」「レイジクリック」）。直近7日／28日の「クリック率の高い要素」「スクロールの深さ」をレポートに入れる。
+- 導入直後の数日はデータが少ない。ヒートマップは1ページ数百ビュー程度でやっと形になる（いまのサイトは1ページ数十ビュー）ので、判断は「参考」とし、月次で見る。
