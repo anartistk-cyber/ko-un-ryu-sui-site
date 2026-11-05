@@ -6,7 +6,7 @@
   },
   {
    "path": "cast/index.html",
-   "sha256": "7f10a8208813fcbe5fcc5025a06c08f5ca23ee5bc1e4e1d7d4356e5d80280636"
+   "sha256": "6746c63fc2af437c75aae216d6e4e960f93c708f32e2588fcec869ca0a483468"
   },
   {
    "path": "color/index.html",
@@ -14,7 +14,7 @@
   },
   {
    "path": "company/index.html",
-   "sha256": "ee8b568381f6c1752abcdc12d39677046486e514c47042590ffa7f4b532aa4eb"
+   "sha256": "e290621edd37194d9e09ad05a057cd54166214138797b8b8add3b0e770280204"
   },
   {
    "path": "cota-products/index.html",
@@ -74,11 +74,11 @@
   },
   {
    "path": "index.html",
-   "sha256": "b7e0066ad31622ae31dcaefd7d010c9591412bc1c2df1f7afcbaa5bd5d3ea4bb"
+   "sha256": "5ce02db8e01b22dd28238a5acc014fb95b5b3f10089a48293029aca30cb4d4dc"
   },
   {
    "path": "llms.txt",
-   "sha256": "32b33b5fe96ced33e26bb0830b412d697dc49bdcb525cc908ffad0963c5be452"
+   "sha256": "4075af04f1ed170f1ccd42d2fe6c103aad2ea30ee73d91280583f120e38f1b7e"
   },
   {
    "path": "menu/index.html",
@@ -134,7 +134,7 @@
   },
   {
    "path": "sitemap-fc.xml",
-   "sha256": "6f8a4fd427300f68d105520eafa6d5330d632c6310ebe8d0a6a5899251f64e91"
+   "sha256": "14c4c4c112172bb8eb072b3ac37bcb6bec25388070483afc8d77b6fb627ebea9"
   },
   {
    "path": "straight/index.html",
