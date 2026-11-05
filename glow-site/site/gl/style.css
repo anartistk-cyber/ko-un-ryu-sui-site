@@ -158,6 +158,52 @@ h1,h2,h3,.logo,.btn,.cta-lead,.ft-n,.cal-t{font-family:var(--hf)}
 }
 @media(max-width:520px){.cast{grid-template-columns:1fr}.hero h1{font-size:23px}}
 
+/* ===== DELIGHT 2026-11-05: スクロール演出・おすすめ診断（共通。色は変数で切替） ===== */
+@supports (animation-timeline:view()){
+ @media(prefers-reduced-motion:no-preference){
+  .g3 article,.pm a,.worry li,.cast li,.gal figure,.rv blockquote,.cps .cp,.two>*{animation:rise both linear;animation-timeline:view();animation-range:entry 0% entry 38%}
+  @keyframes rise{from{opacity:.5;transform:translateY(24px)}to{opacity:1;transform:none}}
+ }
+}
+.quiz{max-width:900px;margin:0 auto;text-align:center}
+.quiz fieldset{border:0;margin:0;padding:0;min-width:0}
+.quiz legend{display:block;width:100%;padding:0;font:700 18px/1.7 var(--hf);margin:0 0 16px;color:var(--ink)}
+.quiz:not(.js) .q-pick{display:none}
+.q-opts{display:flex;flex-wrap:wrap;gap:10px 12px;justify-content:center;margin:0 0 24px;padding:0;list-style:none}
+.q-opts li{margin:0;padding:0}
+.q-opts label{display:inline-block;cursor:pointer}
+.q-opts input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.q-opts span{display:inline-block;padding:11px 20px;border-radius:999px;border:2px solid var(--pinkl);background:#fff;font-weight:700;font-size:15.5px;line-height:1.5;color:var(--ink);transition:transform .18s,background .18s,box-shadow .18s}
+.q-opts label:hover span{transform:translateY(-2px);background:var(--pink2);box-shadow:0 6px 14px rgba(0,0,0,.08)}
+.q-opts input:checked+span{background:var(--cta);border-color:var(--cta);color:#fff;box-shadow:0 6px 16px rgba(0,0,0,.18)}
+.q-opts input:focus-visible+span{outline:3px solid var(--butterd);outline-offset:2px}
+.q-res{text-align:left;max-width:760px;margin:0 auto}
+.q-res .r{background:#fff;border-radius:var(--r);padding:24px 26px 20px;box-shadow:0 12px 30px rgba(0,0,0,.08);border:2px solid var(--pinkl);margin:0 0 20px}
+.q-res h3{font:700 19px/1.6 var(--hf);color:var(--pri);margin:0 0 6px}
+.q-res .r p{margin:.3em 0}
+.q-res ul{list-style:none;margin:10px 0 12px;padding:0}
+.q-res li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dotted var(--pinkl);font-weight:700}
+.q-res li small{font-weight:400;color:var(--mute);margin-left:6px}
+.q-res li em{font-style:normal;color:var(--cta);white-space:nowrap}
+.q-res .r .cta-row{margin:12px 0 4px;justify-content:flex-start}
+.quiz.js .q-res .r{display:none}
+.quiz.js .q-res .r.on{display:block;animation:qpop .4s ease both}
+@keyframes qpop{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+.q-empty{color:var(--mute);font-size:15px;text-align:center;margin:0 0 6px}
+.quiz:not(.js) .q-empty{display:none}
+.quiz.js.done .q-empty{display:none}
+@media(max-width:520px){.q-opts span{padding:10px 15px;font-size:14.5px}.q-res .r{padding:20px 18px 16px}.q-res li{flex-direction:column;gap:0}}
+@media(prefers-reduced-motion:reduce){.quiz.js .q-res .r.on{animation:none}}
+a:focus-visible,summary:focus-visible,.btn:focus-visible,.mb:focus-visible,input:focus-visible+span{outline:3px solid var(--butterd);outline-offset:3px;border-radius:10px}
 .hero-ph .ph2{object-position:24% 42%}
 .cast li b{display:block}
 @media(max-width:520px){.cta{padding:24px 14px}.cta .btn{width:100%;max-width:300px;padding:13px 10px;font-size:15px}.cta-lead{line-height:1.6}}
+/* glow: もっとポップに（10〜20代向け） */
+.hero .eyebrow::before{content:"✦ ";color:var(--cta)}
+.hero-ph::after{content:"✦";position:absolute;right:-2%;bottom:34%;font-size:30px;color:var(--butterd);z-index:2;animation:twinkle 2.6s ease-in-out infinite}
+@keyframes twinkle{50%{transform:scale(1.25) rotate(12deg);opacity:.7}}
+@media(prefers-reduced-motion:reduce){.hero-ph::after{animation:none}}
+.btn:hover{transform:translateY(2px) rotate(-1deg)}
+.cast li:hover img{transform:rotate(-2deg) scale(1.03);transition:transform .25s}
+.cast li img{transition:transform .25s}
+.q-opts span{font-size:16px}
