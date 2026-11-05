@@ -28,7 +28,7 @@ SetEnvIf User-Agent "Claude-User" AllowSearchBot
 SetEnvIf User-Agent "Applebot" AllowSearchBot
 # 注: UA指定は偽装可能。より厳密にする場合は OpenAI（openai.com/searchbot.json 等）・Perplexity（perplexity.ai/perplexitybot.json 等）の公開IP範囲での許可も可能（要定期更新）。Anthropicは公開IP範囲なし。
 
-# ---- PageSpeed Insights（Lighthouse）許可（2026-11-05 22:10 Xserverの編集画面に入力済み→保存は藤津さん。保存後にPSIで測定して確認）----
+# ---- PageSpeed Insights（Lighthouse）許可（2026-11-05 22:06 Xserverの編集画面に入力済み→保存は藤津さん。保存後にPSIで測定して確認）----
 # 目的: PageSpeed Insights の測定が海外IP制限で 403 になり、FLOWCLOUDだけ表示速度を測れないのを直す（測定専用・サイトの見た目や順位は変わらない）。
 # 貼る場所: 上の「AI検索系クローラー許可」と同じブロックの末尾（"###---" の外）。保存は藤津さん。
 SetEnvIf User-Agent "Chrome-Lighthouse" AllowSearchBot
