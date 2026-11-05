@@ -113,3 +113,8 @@
 - .htaccess（Chrome-Lighthouse 許可1行）：Xserver がこの Chrome ではログアウト状態（ログイン画面）だったため、入力の準備まで進めず保留。パスワードは入力しない。藤津さんがXserverにログインしているブラウザで貼るか、ログイン後に「入力して保存の手前で止める」手順で準備する。
 - スタッフ端末の内部アクセス登録用QR（3サイト分）を作成：`autopost/utm-qr/internal_staff_devices.png`。Clarity↔GA4 連携は Googleの同意が必要なため藤津さんの操作待ち。
 
+
+## 2026-11-05 21:46 Clarity 本番確認
+- 3サイトの公開HTMLに Clarity のID（採用 z8vmhlm47r／FC z8vljpppky／glow z8vm7b11ut）が入っていること、プライバシーページ（採用 /privacy、FC・glow /privacy/）に「Microsoft Clarity」の段落があることを、キャッシュなしの取得で確認。
+- Clarity 側は3プロジェクトとも「あと少しで完了です」（データ未受信）。藤津さんのChromeは内部アクセスの印（krs_internal=1）が付いていて、Clarity は読み込まれない設計のため、自分で開いても送信されない。実訪問者のデータを待つ。
+- 再確認：11/5 23:30、翌朝 9時ごろ。それでも採用・glow が空なら、印を一時的に外して各サイト1回だけ開く確認を、藤津さんに一言確認してから行う（GAに3セッション混ざるため）。
