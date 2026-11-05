@@ -7,6 +7,7 @@ META=json.load(open(D+'meta.json',encoding='utf-8'))
 L=lambda n: json.load(open(D+n+'.json',encoding='utf-8'))
 kpi,motive,coupons,speed,channels,search,fixes,todo,ideas=[L(n) for n in ['hpb_kpi','motive','coupons','speed','channels','search','fixes','todo','coupon_ideas']]
 e=html.escape
+CHARTS_ONLY=os.environ.get('CHARTS_ONLY')=='1'   # 1 のとき：グラフのページだけ（修正した内容・やること・クーポン案は載せない。Docsの本文と合体する用）
 A,B,M='#2F5D8A','#C9772B','#B7BDC6'
 W=680
 def hbars(groups,mx,w=520,valW=92,fs=9.2,nameWw=62):
@@ -57,7 +58,7 @@ p{{margin:0}}
 .sub,.note,.s,.s2,.foot{{color:#5d6773}}
 .sub,.note{{font-size:8.4pt}}
 .take{{margin-top:6px;padding:8px 10px;background:#eef3f8;border-radius:5px}}
-.card{{border:1px solid #d4dae1;border-radius:6px;padding:10px 12px;margin-top:10px;break-inside:auto}}
+.card{{border:1px solid #d4dae1;border-radius:6px;padding:10px 12px;margin-top:10px;break-inside:avoid}}
 h2,h3{{break-after:avoid}}
 .card.flow{{break-inside:auto}}
 .tiles{{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px}}
@@ -81,9 +82,7 @@ th.n{{text-align:right}}
 .foot{{font-size:8pt;margin-top:10px}}
 .cols{{display:grid;grid-template-columns:1fr 1fr;gap:12px}}
 </style>
-<h1>{e(META['title'])}</h1>
-<p class="sub">{e(META['sub'])}</p>
-<p class="take">{e(META['take'])}</p>
+{('<h1>グラフで見る今月の数字</h1><p class="sub">'+e(META['sub'])+'</p>') if CHARTS_ONLY else ('<h1>'+e(META['title'])+'</h1><p class="sub">'+e(META['sub'])+'</p><p class="take">'+e(META['take'])+'</p>')}
 
 <div class="card"><h2>今月の数字：ホットペッパー</h2>
 <p class="note">「同条件の平均」は、SALON BOARDの「同P同A平均」（同じ掲載プラン・同じエリアの平均）です。ACRは、クーポンを見た人のうち予約完了まで進んだ割合です。</p>
@@ -97,23 +96,23 @@ th.n{{text-align:right}}
 <p class="note">クーポン別のネット予約数（SALON BOARDのサロンレポート・10月号）。</p>
 <div class="cols"><div><h3>FLOWCLOUD（合計 {fc_tot}件）</h3>{fc_svg}</div><div><h3>glow（合計 {gl_tot}件）</h3>{gl_svg}</div></div></div>
 
+<div class="card"><h2>表示速度（スマホ）</h2>
+<p class="note">PageSpeed Insights（スマホ・低速4G想定）。点数は高いほど、LCP（メインの画像が出るまで）は短いほど良い結果です。</p>
+<div class="cols"><div><h3>点数（100点満点）</h3>{score_svg}</div><div><h3>LCP（秒）</h3>{lcp_svg}</div></div></div>
+
 <div class="card"><h2>サイトへの流入と検索</h2>
 <p class="note">流入元はGA4（3サイト合計・直近28日）。「キーイベント」は予約・電話・LINEなどのボタンを押した数です。</p>{chan_svg}
 <h3>検索の表示回数・クリック・順位（参考）</h3>
 <p class="note">Search Consoleの登録が新しく、実データは数日分です。表示回数が少ないので、順位は目安として見てください。</p>
 <table><tr><th>検索語</th><th class="n">表示</th><th class="n">クリック</th><th class="n">順位</th></tr>{srch}</table></div>
 
-<div class="card"><h2>表示速度（スマホ）</h2>
-<p class="note">PageSpeed Insights（スマホ・低速4G想定）。点数は高いほど、LCP（メインの画像が出るまで）は短いほど良い結果です。</p>
-<div class="cols"><div><h3>点数（100点満点）</h3>{score_svg}</div><div><h3>LCP（秒）</h3>{lcp_svg}</div></div></div>
-
-<div class="card flow"><h2>修正した内容</h2>{fx}
+{'' if CHARTS_ONLY else f'''<div class="card flow"><h2>修正した内容</h2>{fx}
 <p class="note" style="margin-top:4px">ホットペッパーの反映は、申請から約20分で公開ページに出ます。金額・お客様の個人名はこの資料に載せていません。</p></div>
 
 <div class="card flow"><h2>新たにやること（提案）</h2>{td}</div>
 
 <div class="card flow"><h2>クーポンの見直し案</h2>
-<p class="note">まだホットペッパーには反映していません。藤津さんの了承後に実施します（実施前に、変更前の題名・価格を記録します）。</p>{idl}</div>
+<p class="note">まだホットペッパーには反映していません。藤津さんの了承後に実施します（実施前に、変更前の題名・価格を記録します）。</p>{idl}</div>'''}
 
 <p class="foot">{e(META['foot'])}</p>
 </html>'''
