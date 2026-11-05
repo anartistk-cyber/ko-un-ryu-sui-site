@@ -29,6 +29,6 @@
 - /wp-content/uploads/2026/04/glow_img-08.jpg … 店内 → 19周年・新規クーポンの投稿
 - /wp-content/uploads/2026/04/glow_img-10.jpg … カラー施術 → 艶カラーの投稿
 - /wp-content/uploads/2026/04/glow_img-05.jpg … ヘアケア商品棚 → 素髪ケアの投稿
-- /wp-content/uploads/2026/05/staff_3.jpg … スタッフ → 初めての方・相談の投稿
+- /wp-content/uploads/2026/05/staff_3.jpg … キャスト → 初めての方・相談の投稿
 ### 求人
 - /images/flow-cloud-team-hero_18f9702b.jpg, team-salon_3c550db9.jpg, training-salon_b2a51844.jpg（https://ko-un-ryu-sui.com 配下）

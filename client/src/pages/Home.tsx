@@ -34,14 +34,14 @@ const businessVisionMap = "/images/business-vision-map_1120114d.jpg";
 const shionPhoto = "/images/staff-shion-portrait_5de9f0d1.jpg";
 const moePhoto = "/images/staff-moe-portrait_a1.jpg";
 const galleryPhotos: [string, string, string][] = [
-  ["/images/gallery-team-pose.jpg", "笑顔でポーズを決めるスタッフ4名", "笑顔があふれるチームです"],
-  ["/images/gallery-salonwork.jpg", "サロンで施術とレッスンをしているスタッフ", "サロンワークの様子"],
-  ["/images/gallery-award.jpg", "表彰状を手に笑顔の女性スタッフ2名", "がんばりは、ちゃんと表彰します"],
-  ["/images/gallery-dinner.jpg", "テーブルを囲んで食事会を楽しむスタッフ", "みんなで食事会も"],
-  ["/images/gallery-exterior.jpg", "夜のFLOWCLOUD前に集まったスタッフ全員", "FLOWCLOUDの前で、みんなで"],
-  ["/images/gallery-lesson-cut.jpg", "鏡の前でカットのレッスンを受けるスタッフと、そばで見守る先輩", "技術レッスンは、先輩がそばで見守ります"],
-  ["/images/gallery-lesson-wig.jpg", "ウィッグを使ってカットを練習するスタッフ", "ウィッグでカットの練習"],
-  ["/images/gallery-lesson-counsel.jpg", "お客様役の相手にヘアの確認をするスタッフ", "接客・カウンセリングの練習"],
+  ["/images/gallery-team-pose.jpg", "笑顔でポーズを決めるキャスト4名", "笑顔があふれるチームです"],
+  ["/images/gallery-salonwork.jpg", "サロンで施術とレッスンをしているキャスト", "サロンワークの様子"],
+  ["/images/gallery-award.jpg", "表彰状を手に笑顔の女性キャスト2名", "がんばりは、ちゃんと表彰します"],
+  ["/images/gallery-dinner.jpg", "テーブルを囲んで食事会を楽しむキャスト", "みんなで食事会も"],
+  ["/images/gallery-exterior.jpg", "夜のFLOWCLOUD前に集まったキャスト全員", "FLOWCLOUDの前で、みんなで"],
+  ["/images/gallery-lesson-cut.jpg", "鏡の前でカットのレッスンを受けるキャストと、そばで見守る先輩", "技術レッスンは、先輩がそばで見守ります"],
+  ["/images/gallery-lesson-wig.jpg", "ウィッグを使ってカットを練習するキャスト", "ウィッグでカットの練習"],
+  ["/images/gallery-lesson-counsel.jpg", "お客様役の相手にヘアの確認をするキャスト", "接客・カウンセリングの練習"],
 ];
 const ayunaPhoto = "/images/staff-ayuna-portrait_38e7b974.jpg";
 const flowCloudLogo = "/images/flow-cloud-logo_95942c89.jpg";
@@ -132,7 +132,7 @@ const payRows = [
 const dayRows = [
   ["早番", <>8:30〜17:30（休憩60分）。出勤・準備・朝礼・営業開始・片付けの勤怠の扱い：勤務時間内として扱います（始業の15分前に集合。朝礼 8:40、終礼 17:25）</>],
   ["遅番", <>11:30〜20:30（休憩60分）。始業の15分前に集合。朝礼 11:15、終礼 20:25。</>],
-  ["営業時間", "9:00〜20:00（FLOWCLOUDの最終受付は18:00）／定休 毎週月曜・火曜（不定休あり）。スタッフは完全週休2日（シフト制）"],
+  ["営業時間", "9:00〜20:00（FLOWCLOUDの最終受付は18:00）／定休 毎週月曜・火曜（不定休あり）。キャストは完全週休2日（シフト制）"],
   ["自主レッスン", "早番は18:00〜20:00、遅番は9:00〜11:00を推奨しています。"],
 ];
 
@@ -324,7 +324,7 @@ export default function Home() {
               <p className="hero-source-note">2027年度 新卒美容師3名募集。中途・パート・学生アルバイトの募集条件もご案内しています。<br />年度・人数・募集状態は年度により異なります</p>
             </div>
             <div className="hero-visual hero-visual-photo">
-              <img className="hero-team-photo" src={heroTeamPhoto} alt="FLOWCLOUD前に集まる株式会社行雲流水の代表・藤津一弥とスタッフ" />
+              <img className="hero-team-photo" src={heroTeamPhoto} alt="FLOWCLOUD前に集まる株式会社行雲流水の代表・藤津一弥とキャスト" />
               <div className="hero-visual-caption">
                 <span>FLOWCLOUD TEAM</span>
                 <strong>WE ARE<br />KOUNRYUSUI</strong>
@@ -576,8 +576,8 @@ export default function Home() {
             <p>サロンの中で集まり、話し、視点を持ち寄る。実際の写真から、行雲流水の学びの時間と空間をご紹介します。</p>
           </div>
           <div className="training-photo-grid">
-            <figure className="training-photo-main"><img loading="lazy" decoding="async" src={trainingSalonPhoto} alt="店内でスタッフが集まる研修・ミーティングの様子" /><figcaption><span>01 / IN-SALON SESSION</span><strong>店内で、言葉と技術を持ち寄る。</strong></figcaption></figure>
-            <figure className="training-photo-side"><img loading="lazy" decoding="async" src={teamMeetingPhoto} alt="スタッフがテーブルを囲むミーティングの様子" /><figcaption><span>02 / MEETING</span><strong>それぞれの気づきを、チームへ。</strong></figcaption></figure>
+            <figure className="training-photo-main"><img loading="lazy" decoding="async" src={trainingSalonPhoto} alt="店内でキャストが集まる研修・ミーティングの様子" /><figcaption><span>01 / IN-SALON SESSION</span><strong>店内で、言葉と技術を持ち寄る。</strong></figcaption></figure>
+            <figure className="training-photo-side"><img loading="lazy" decoding="async" src={teamMeetingPhoto} alt="キャストがテーブルを囲むミーティングの様子" /><figcaption><span>02 / MEETING</span><strong>それぞれの気づきを、チームへ。</strong></figcaption></figure>
             <figure className="training-photo-detail"><img loading="lazy" decoding="async" src={shampooBoothPhoto} alt="FLOWCLOUDのシャンプーブース" /><figcaption><span>03 / CARE SPACE</span><strong>お客様のための、静かな技術空間。</strong></figcaption></figure>
           </div>
         </section>
@@ -595,13 +595,13 @@ export default function Home() {
             <p>一緒に学び、笑い、仕事をする仲間がいる。行雲流水で働くメンバー自身の言葉から、チームの空気とお客様への向き合い方をお届けします。</p>
           </div>
           <div className="team-photo-grid">
-            <figure className="team-photo team-photo-tall"><img loading="lazy" decoding="async" src={teamSalonPhoto} alt="サロン内で集まるスタッフの様子" /><figcaption><span>SALON TIME</span><strong>サロンで過ごす、チームの時間。</strong></figcaption></figure>
-            <figure className="team-photo"><img loading="lazy" decoding="async" src={teamDinnerPhoto} alt="食事会で集まるスタッフの様子" /><figcaption><span>TEAM DINNER</span><strong>仕事の外にも、話せる時間がある。</strong></figcaption></figure>
-            <figure className="team-photo"><img loading="lazy" decoding="async" src={teamEventPhoto} alt="スタッフが集まるイベントの様子" /><figcaption><span>TEAM EVENT</span><strong>互いの挑戦を、みんなで称える。</strong></figcaption></figure>
+            <figure className="team-photo team-photo-tall"><img loading="lazy" decoding="async" src={teamSalonPhoto} alt="サロン内で集まるキャストの様子" /><figcaption><span>SALON TIME</span><strong>サロンで過ごす、チームの時間。</strong></figcaption></figure>
+            <figure className="team-photo"><img loading="lazy" decoding="async" src={teamDinnerPhoto} alt="食事会で集まるキャストの様子" /><figcaption><span>TEAM DINNER</span><strong>仕事の外にも、話せる時間がある。</strong></figcaption></figure>
+            <figure className="team-photo"><img loading="lazy" decoding="async" src={teamEventPhoto} alt="キャストが集まるイベントの様子" /><figcaption><span>TEAM EVENT</span><strong>互いの挑戦を、みんなで称える。</strong></figcaption></figure>
           </div>
-          <div className="staff-voice-grid" aria-label="スタッフ紹介">
+          <div className="staff-voice-grid" aria-label="キャスト紹介">
             <article className="staff-voice-card">
-              <div className="staff-voice-photo"><img loading="lazy" decoding="async" src={shionPhoto} alt="スタッフ しおん" /></div>
+              <div className="staff-voice-photo"><img loading="lazy" decoding="async" src={shionPhoto} alt="キャスト しおん" /></div>
               <div className="staff-voice-content">
                 <p className="staff-voice-label">STAFF VOICE / 01</p>
                 <h3>しおん <small>スタイリスト</small></h3>
@@ -616,7 +616,7 @@ export default function Home() {
               </div>
             </article>
             <article className="staff-voice-card staff-voice-card-reverse">
-              <div className="staff-voice-photo"><img loading="lazy" decoding="async" src={ayunaPhoto} alt="スタッフ あゆな" /></div>
+              <div className="staff-voice-photo"><img loading="lazy" decoding="async" src={ayunaPhoto} alt="キャスト あゆな" /></div>
               <div className="staff-voice-content">
                 <p className="staff-voice-label">STAFF VOICE / 02</p>
                 <h3>あゆな <small>スタイリスト</small></h3>
@@ -627,7 +627,7 @@ export default function Home() {
               </div>
             </article>
             <article className="staff-voice-card">
-              <div className="staff-voice-photo"><img loading="lazy" decoding="async" src={moePhoto} alt="スタッフ もえ" /></div>
+              <div className="staff-voice-photo"><img loading="lazy" decoding="async" src={moePhoto} alt="キャスト もえ" /></div>
               <div className="staff-voice-content">
                 <p className="staff-voice-label">STAFF VOICE / 03</p>
                 <h3>もえ <small>スタイリスト</small></h3>
