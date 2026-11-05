@@ -2,27 +2,27 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "e957b6cb90270eee818c5ac606fbbca0d29c94e6b12f20bf5953c8cf4295a8a7"
+   "sha256": "ff6083dd8cce024238a1f84898c8ee27dec36d733a228703660384f6616089cb"
   },
   {
    "path": "cast/index.html",
-   "sha256": "0a4f4bf181a4188fba8f43bc554e89e7630b765d86bf6e30c6c6f72bb275d71a"
+   "sha256": "411f3c226112fb97da36a41fdcd140ed9edf3882ba6eb6cbb39a7d390602204d"
   },
   {
    "path": "color/index.html",
-   "sha256": "8ce48ee92c5427cf02b173bd4c8bbc1ea97b5d3191c0344dd0bcc8998beb1d74"
+   "sha256": "9d56c3ba508a878fe5dde52c9f04ec3438a80cd3cc900893c546f0d601b2f796"
   },
   {
    "path": "cota-products/index.html",
-   "sha256": "2fbb468f5622787a98ba6d45a0ee1dbf1aaaec07f7c8d40dfe527a3aa121c11f"
+   "sha256": "ccd01fa79bcfc5a10d88b96c857d8374ad9d2c92ae8280d60ec4cc7307574e30"
   },
   {
    "path": "coupon/index.html",
-   "sha256": "d41a85004c91cd70bd9d90b762adc618e5dfd75d6eee0273cf742d9bcee6dc75"
+   "sha256": "77c66cb1a02480850e631e934bc8c10c0e3f1a97d3aa0539c9b17b2b755987be"
   },
   {
    "path": "faq/index.html",
-   "sha256": "cba6045a9f8fed1f80d4055b4d93d658edfba8d380099655b8e49abdb7d52eeb"
+   "sha256": "76b401a92d08ca71870c740a40ee14b036bb4b40e6e3c8dbfd7f7b8e406360a7"
   },
   {
    "path": "favicon.ico",
@@ -30,7 +30,7 @@
   },
   {
    "path": "first/index.html",
-   "sha256": "1b49abe67a52c3bfc87c20f995166bfc1da21859a938656623939928e3866c76"
+   "sha256": "276db82c799cbf7924a6c0ea90e5abc96ab2035e97d040390d0e8fd902602e2c"
   },
   {
    "path": "gl/apple-touch-icon.png",
@@ -57,68 +57,220 @@
    "sha256": "d31a1ccf7ea93d306b2d1d353d6973ac46384944cc25fe3fbc932148fa2ae70d"
   },
   {
+   "path": "gl/img/st-01-l.jpg",
+   "sha256": "a2a0a425d99fcfa890ff73f84bc00ee1cdd8b202e6eb585dedd1ad404a2dfdc4"
+  },
+  {
+   "path": "gl/img/st-01-m.jpg",
+   "sha256": "be5dab02a7308e8232efa8a078d82a9cb5641b146c3ec0970e2d6cab3a768fd8"
+  },
+  {
+   "path": "gl/img/st-08-l.jpg",
+   "sha256": "b91cc1f305d0d178590abfe6ddef294be49b5b8f06c49020d6d01d39d82a7127"
+  },
+  {
+   "path": "gl/img/st-08-m.jpg",
+   "sha256": "39a091e51a5cb42e0dfdb1230275241b0e3478bdfa3fd263871929e77d754353"
+  },
+  {
+   "path": "gl/img/st-11-l.jpg",
+   "sha256": "b4d7ca56d738b2b83f92f4b7527c6d379a6109d494ea9bfad11e9893d3dc717c"
+  },
+  {
+   "path": "gl/img/st-11-m.jpg",
+   "sha256": "baa870eb531dce6a65087cdb266f6e9494c593726cad2acfe23c95b74e3531ed"
+  },
+  {
+   "path": "gl/img/st-12-l.jpg",
+   "sha256": "9edb3ca3a45ef3ef345db86a010dfe3b0256fc50f830dcbd03608212910d103d"
+  },
+  {
+   "path": "gl/img/st-12-m.jpg",
+   "sha256": "15b89c3a8af04b8ff8e1526721200b73fa731c883099337119858d0f91fafe14"
+  },
+  {
+   "path": "gl/img/st-13-l.jpg",
+   "sha256": "19e864184658a20f21fcd5feaf411636f6a516cdba796e532188fdbf55dbaeaf"
+  },
+  {
+   "path": "gl/img/st-13-m.jpg",
+   "sha256": "2f02c170e83aa949b9055facd90f0df5218159e32c7a30b6e9428b235de5203b"
+  },
+  {
+   "path": "gl/img/st-15-l.jpg",
+   "sha256": "7aa81035f0977acf0128c5ce6575d016bc9f1318cd3fef37eff4b238935e7a2d"
+  },
+  {
+   "path": "gl/img/st-15-m.jpg",
+   "sha256": "a5ced928873ec36191a2bfbea95ffe49dc9e61e4fb11ce31ef6b08ebb04d9af7"
+  },
+  {
+   "path": "gl/img/st-17-l.jpg",
+   "sha256": "f26f755875c26b08ae19d4d2bb5665be7d61a274090adebfcae2cea413fce5cb"
+  },
+  {
+   "path": "gl/img/st-17-m.jpg",
+   "sha256": "4956d94dbee87b3005f68e6787b6c2a0786fac51e18942da5d096d772e5e8659"
+  },
+  {
+   "path": "gl/img/st-24-l.jpg",
+   "sha256": "2c756642a506995f5b486dd1a2877e53f0ad5f8c4b10b74b7b9e79f02c97c499"
+  },
+  {
+   "path": "gl/img/st-24-m.jpg",
+   "sha256": "bfa02de19ef078f4933de575108836378e1ccc4f0741c3222e3df53d4deb2d64"
+  },
+  {
+   "path": "gl/img/st-25-l.jpg",
+   "sha256": "be3afb0823bcc592a5aa3dca2f735f1b1247b20252fb9f3e132a716aa0a67d89"
+  },
+  {
+   "path": "gl/img/st-25-m.jpg",
+   "sha256": "e9561b976ef66f21d9623477fec8ef956b4892af01b49fea3ad8c46220bf199d"
+  },
+  {
+   "path": "gl/img/st-29-l.jpg",
+   "sha256": "08bd6952eed9cc776f704b79011b023e7ffed8706ef49b71e3e4140de5349d88"
+  },
+  {
+   "path": "gl/img/st-29-m.jpg",
+   "sha256": "f134400691fa847cf8faf81a68499bf04a080d7a37f45a9cd9a2b7eeb73b70d1"
+  },
+  {
+   "path": "gl/img/st-33-l.jpg",
+   "sha256": "c3dcf9755bbafda7032ec840abcef1d380db212d49d76a1c6603be06cd66f32c"
+  },
+  {
+   "path": "gl/img/st-33-m.jpg",
+   "sha256": "a4aea841c0bcb36d2c78d5136fea47a9cf0b74cb62bfa6350f083294e2ab134e"
+  },
+  {
+   "path": "gl/img/st-46-l.jpg",
+   "sha256": "7b7e4692f00a21983a3104c1add56e8c8bfc05b0786a5dd60314950036148eb0"
+  },
+  {
+   "path": "gl/img/st-46-m.jpg",
+   "sha256": "97a6edee008a10171675988c48208a902fa64eeb787de1becb0144971bd0d630"
+  },
+  {
+   "path": "gl/img/st-47-l.jpg",
+   "sha256": "1cdb5e0356f1d6e03c58f884745c2decfb4570510b0cd85451ecf718a824ffa1"
+  },
+  {
+   "path": "gl/img/st-47-m.jpg",
+   "sha256": "eff31b989c9ee178bb0681c69350822b55ad49cb38f900176e8c728d26c3f2e1"
+  },
+  {
+   "path": "gl/img/st-50-l.jpg",
+   "sha256": "cc3d6942d3cbc2da26b624e97ac24b39a581f50d610c3dd5c6019056668fed13"
+  },
+  {
+   "path": "gl/img/st-50-m.jpg",
+   "sha256": "e29eca1eb74d32a66c8b53ca476eb8c023a9ec05efee83f85d431973572bafd8"
+  },
+  {
+   "path": "gl/img/st-55-l.jpg",
+   "sha256": "598644280241e25c09fe9ca27b4717e8a30c31538957477bd04203d8a0b70950"
+  },
+  {
+   "path": "gl/img/st-55-m.jpg",
+   "sha256": "63b5432bbd396768a0d5d6bfb8096b5cd2c710a65cef189965d66664af4ca16e"
+  },
+  {
+   "path": "gl/img/st-56-l.jpg",
+   "sha256": "6a80cc18d0aabbb84837d68c0aaaeb326df7b9f7c8dd1a124d5fd2228e469778"
+  },
+  {
+   "path": "gl/img/st-56-m.jpg",
+   "sha256": "a920dd6b0c024d795a8015bb4d0ef53258ecd57501e4c73e86c3f69af1e38669"
+  },
+  {
+   "path": "gl/img/st-58-l.jpg",
+   "sha256": "91f57b7b714ffdd31a7ef718b343f403934136ea219c45666d2386b5a9f42b3b"
+  },
+  {
+   "path": "gl/img/st-58-m.jpg",
+   "sha256": "5ecfeafe20b2aa8c07c6c7310fc3f2efaf63df9500ed04a77389a1f8fd2ae2b1"
+  },
+  {
+   "path": "gl/img/st-65-l.jpg",
+   "sha256": "8c643a396a40f5532f98feaec41fb0d0635065842a3b17e8651160b2ebf60270"
+  },
+  {
+   "path": "gl/img/st-65-m.jpg",
+   "sha256": "771bc8fdbeeeb7fa568e7603fe4a463dd9ac6f91dfc3dc680b13b829f7552d5d"
+  },
+  {
+   "path": "gl/img/st-72-l.jpg",
+   "sha256": "2be2ed176a0964a6e990cc919111f46ed6cec862424e8e4a9975e28ae0475be8"
+  },
+  {
+   "path": "gl/img/st-72-m.jpg",
+   "sha256": "a1ade4f0b8ffe040a414186eee3f8b0de24788b43fa38f48b0f918015ee60dfb"
+  },
+  {
    "path": "gl/style.css",
-   "sha256": "3dfab1950609f402b105f009af3e91a0b58240643a25533d989467dd567f614b"
+   "sha256": "fc14a6d5f3592891f7a698a39b7e1ee5eb234da4ffa443db14dd5d6c6e1cb7d2"
   },
   {
    "path": "headspa/index.html",
-   "sha256": "656996161b3739451b38cbe8d9d0909faf4cac119debe5e387b230f917d539b9"
+   "sha256": "fb3fe8dfa3d3597ff4210d78edd997a5e442043360246a82e2f9d988ff089fef"
   },
   {
    "path": "index.html",
-   "sha256": "0fc8cbea7f0647cba47ac7d51fc9c0b543afc7badeaef2680400110a8966260a"
+   "sha256": "90eebb02cb32301a47db833b583095e2f3a34ea897692a642e24603933100598"
   },
   {
    "path": "journal/access-parking/index.html",
-   "sha256": "ce0f28764ec558505b3102fa34c9715e4e69132c84bb516de7aadbb14dc02667"
+   "sha256": "8789c264b68248809e9eea6ad64c4b75d4f8482314dfbb3637f2ea39fc33e998"
   },
   {
    "path": "journal/color-first-counseling-glow/index.html",
-   "sha256": "b3d3eeaa57fe27e97d5eab2d4767f928620cffcffd50aa7af5782c48c84f8605"
+   "sha256": "a55a697ab984ee9d464fc8d2253ee12341b45d2a783094ef7815b8e65f4dc64c"
   },
   {
    "path": "journal/first-perm-counseling-glow/index.html",
-   "sha256": "ee5806bacbea5960de3d063b37c309cc7c4aea8985e243dfd5ceff1374a1187f"
+   "sha256": "ae19ad38550d59b79e2e8664ba9a9279d35cf7f086e1c5581d142c3fed238396"
   },
   {
    "path": "journal/first-salon-counseling/index.html",
-   "sha256": "42d99f86d486a686579cf7104d6d9076ebd07f8e9f322b8249c04595236fe41d"
+   "sha256": "6ea458a585be6fa62e8045fdd81c30bd0b57e7b99abd39767c88e9cd3cee545e"
   },
   {
    "path": "journal/home-hair-care-cota-store-glow/index.html",
-   "sha256": "21d46509acaf707587a23094cd82fad5a26f376f17048001ebe3c0adf9041890"
+   "sha256": "1a85179976d4c9c0f6941360ec2607d8ceff57d215f31935b1ad98b12d344513"
   },
   {
    "path": "journal/index.html",
-   "sha256": "1ddd91a2e93cfe782b74a123b26d41034db097a2270f959498fb415f3f74deb8"
+   "sha256": "1b7a95d8b3d5c4ae9b992ca626355129454b6c039aecb1061272037503f34f52"
   },
   {
    "path": "journal/kuse-hiroga-straight-young/index.html",
-   "sha256": "03972457d3736eebb10fc8460d293397a35829c831b8796c50a037910a70fc9a"
+   "sha256": "a2a011172294bb9933017a6e23e2c393ef2807265ebdbcfae404eb65a135a73b"
   },
   {
    "path": "journal/nenmatsu-nenshi-2026-2027/index.html",
-   "sha256": "a3ea44e22da7ed4b24fcb7b86fa256368d9db965bdd17a1d31febf5201a4dddc"
+   "sha256": "d09c58089fbbacbc25a3e6c38d3738aa6e5162174d201ccbb469ebd182d9552e"
   },
   {
    "path": "journal/short-layer-asa-raku/index.html",
-   "sha256": "947de0bcf9a618b6425c77c64fcd70bbf13659ad9fe3d5581abef737d343fc5e"
+   "sha256": "be3f9dbd0a902539a4a85bad6235dca1293f19c821f6ac1ededf3a5e8cf61eb5"
   },
   {
    "path": "journal/sugao-care-young/index.html",
-   "sha256": "f164fe53134aef1281ad55c6f40918b3d2f44c1cd0f2a79466a9ab1b099600c6"
+   "sha256": "295c6c6e2e36c3f2eb871d385b68a22396eb5d3fed2f1dfdd748de80c4e72e8d"
   },
   {
    "path": "llms.txt",
-   "sha256": "877612b214b8365ad54c051ef6e0ff93cb73e8b4d8a1924a4656330d7bba3bdd"
+   "sha256": "c1c739cd274ef72ae92cb41fadb43941ebc920b3fef5cbfbf081e3de18fa4084"
   },
   {
    "path": "menu/index.html",
-   "sha256": "4325611633425c46f40d808dbf00ff4707e4cf78774d4d8d38b8f99e49a36524"
+   "sha256": "c3ea5bed4347035e188c662dcc6e048d4cf8cdca904529e1f7c33d0e3590e87f"
   },
   {
    "path": "privacy/index.html",
-   "sha256": "94a9736d8091304213175cbb06c70774b71e57d77d9ad50cc163e2ce6f552c43"
+   "sha256": "dc9b6240cc202e21d0537e5f2055e1893ee1b4d6483dd0fae3d9603611e291c2"
   },
   {
    "path": "robots.txt",
@@ -126,23 +278,27 @@
   },
   {
    "path": "short-perm/index.html",
-   "sha256": "15f17d4805d05f16f92ff6deefa035e0123cf3a47cbd954bac3f91a64522f1c9"
+   "sha256": "9065cb4479b483a7b81ff65e515395414e87a70a88edbce3bcfb44aae0f53dda"
   },
   {
    "path": "sitemap-gl.xml",
-   "sha256": "b27b2f10bf02d83489576cbf587c1b7328f33bd226cff5ca2f7373b2ab539c2d"
+   "sha256": "81b8371e50dc9fedb790092aae68702c8413f94470727a72422fafd8ebad20a7"
   },
   {
    "path": "straight/index.html",
-   "sha256": "21556d4ae3cd80dc37f87234af41a0df8572dddf422b230f102214c6e430fc33"
+   "sha256": "8591a0f07b9777d7a8167250aa0ecd1b56b3905a8a01684447eaa0a34af8ab62"
+  },
+  {
+   "path": "style/index.html",
+   "sha256": "575c23015b8a6958d8de426bf19f759329890b28057e056504058a04f7bb6063"
   },
   {
    "path": "voice/index.html",
-   "sha256": "07e5a25f2e446561625bac80831ddcd3f130b2eab019f9d2828b1eac0476f05e"
+   "sha256": "161160bdb9a7c3de01e768c33d92f11d4bf5ebccb7135b111ee4a99213dbf90c"
   },
   {
    "path": "young/index.html",
-   "sha256": "30e2a9c67caf5d20b1ce7b3a0faf5d362f0728ab4f346481d33703e2732c905b"
+   "sha256": "3d7514b878d5b0b9240a02fc0cb91ddfc27b44bf798830c57d2d435788805f21"
   }
  ]
 }

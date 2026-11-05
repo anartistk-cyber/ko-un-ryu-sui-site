@@ -1,0 +1,36 @@
+
+/* ===== GALLERY 2026-11-05: ヘアスタイルギャラリー（共通の骨組み。見た目は各サイトの 45-pop.css） ===== */
+/* ホーム：流れる写真の帯。ホバー／フォーカスで一時停止。動きを減らす設定の人には横スクロールに切替 */
+.gm{overflow:hidden;position:relative;padding:12px 0 26px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.gm:focus-visible{outline:3px solid var(--butterd);outline-offset:2px}
+.gm-in{display:flex;align-items:flex-start;width:max-content;gap:18px;--gg:9px;animation:gm-slide 90s linear infinite reverse}
+.gm:hover .gm-in,.gm:focus-within .gm-in{animation-play-state:paused}
+@keyframes gm-slide{from{transform:translateX(0)}to{transform:translateX(calc(-50% - var(--gg)))}}
+.gc{display:block;flex:none;width:210px;position:relative;text-decoration:none;color:inherit}
+.gc img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+@media(max-width:720px){.gc{width:160px}.gm-in{gap:14px;--gg:7px}}
+@media(prefers-reduced-motion:reduce){.gm{overflow-x:auto;scroll-snap-type:x proximity}.gm-in{animation:none}.gc{scroll-snap-align:center}.gc[aria-hidden=true]{display:none}}
+/* 注記・誘導 */
+.gm-note{text-align:center}
+.gm-lead{word-break:auto-phrase;text-wrap:balance}
+/* /style/ ：種類で絞り込めるグリッド（ラジオ＋ラベル。JS不要） */
+.gp{max-width:1080px;margin:0 auto}
+.gf-r{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.gf-chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:0 0 30px}
+.gf-chips label{cursor:pointer;display:inline-block;padding:9px 22px;border-radius:999px;border:2px solid var(--pinkl);background:#fff;font-weight:700;font-size:15px;line-height:1.5;color:var(--ink);transition:transform .18s,background .18s,color .18s,border-color .18s}
+.gf-chips label:hover{transform:translateY(-2px)}
+.gf-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:26px 22px;align-items:start}
+.gf-list li{margin:0;padding:0;scroll-margin-top:96px}
+.gf-list figure{margin:0;position:relative}
+.gf-list img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+@media(max-width:720px){.gf-list{grid-template-columns:1fr 1fr;gap:18px 12px}}
+#gf-l:checked~.gf-list li:not(.c-l),#gf-b:checked~.gf-list li:not(.c-b),#gf-s:checked~.gf-list li:not(.c-s),#gf-c:checked~.gf-list li:not(.c-c),#gf-w:checked~.gf-list li:not(.c-w){display:none}
+#gf-all:checked~.gf-chips label[for=gf-all],#gf-l:checked~.gf-chips label[for=gf-l],#gf-b:checked~.gf-chips label[for=gf-b],#gf-s:checked~.gf-chips label[for=gf-s],#gf-c:checked~.gf-chips label[for=gf-c],#gf-w:checked~.gf-chips label[for=gf-w]{background:var(--cta);border-color:var(--cta);color:#fff;box-shadow:0 6px 14px rgba(0,0,0,.16)}
+#gf-all:focus-visible~.gf-chips label[for=gf-all],#gf-l:focus-visible~.gf-chips label[for=gf-l],#gf-b:focus-visible~.gf-chips label[for=gf-b],#gf-s:focus-visible~.gf-chips label[for=gf-s],#gf-c:focus-visible~.gf-chips label[for=gf-c],#gf-w:focus-visible~.gf-chips label[for=gf-w]{outline:3px solid var(--butterd);outline-offset:3px}
+/* 流れる文字の帯（ティッカー）。装飾なので読み上げ対象外。動きを減らす設定では止める */
+.tick{overflow:hidden;white-space:nowrap}
+.tick-in{display:flex;width:max-content;animation:tick-run 70s linear infinite}
+.tick-in.rev{animation-direction:reverse}
+.tick-in span{flex:none;padding:0 .6em}
+@keyframes tick-run{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.tick-in{animation:none}}

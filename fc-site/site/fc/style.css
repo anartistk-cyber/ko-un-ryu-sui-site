@@ -241,3 +241,92 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 @media(prefers-reduced-motion:reduce){.cast-mini li{transition:none}.cast-mini li:hover{transform:none}}
 .cast-mini li span{white-space:nowrap;letter-spacing:0}
 @media(max-width:520px){.cast-mini li span{font-size:12.5px;padding-left:8px;padding-right:8px}}
+
+/* ===== GALLERY 2026-11-05: ヘアスタイルギャラリー（共通の骨組み。見た目は各サイトの 45-pop.css） ===== */
+/* ホーム：流れる写真の帯。ホバー／フォーカスで一時停止。動きを減らす設定の人には横スクロールに切替 */
+.gm{overflow:hidden;position:relative;padding:12px 0 26px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.gm:focus-visible{outline:3px solid var(--butterd);outline-offset:2px}
+.gm-in{display:flex;align-items:flex-start;width:max-content;gap:18px;--gg:9px;animation:gm-slide 90s linear infinite reverse}
+.gm:hover .gm-in,.gm:focus-within .gm-in{animation-play-state:paused}
+@keyframes gm-slide{from{transform:translateX(0)}to{transform:translateX(calc(-50% - var(--gg)))}}
+.gc{display:block;flex:none;width:210px;position:relative;text-decoration:none;color:inherit}
+.gc img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+@media(max-width:720px){.gc{width:160px}.gm-in{gap:14px;--gg:7px}}
+@media(prefers-reduced-motion:reduce){.gm{overflow-x:auto;scroll-snap-type:x proximity}.gm-in{animation:none}.gc{scroll-snap-align:center}.gc[aria-hidden=true]{display:none}}
+/* 注記・誘導 */
+.gm-note{text-align:center}
+.gm-lead{word-break:auto-phrase;text-wrap:balance}
+/* /style/ ：種類で絞り込めるグリッド（ラジオ＋ラベル。JS不要） */
+.gp{max-width:1080px;margin:0 auto}
+.gf-r{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.gf-chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:0 0 30px}
+.gf-chips label{cursor:pointer;display:inline-block;padding:9px 22px;border-radius:999px;border:2px solid var(--pinkl);background:#fff;font-weight:700;font-size:15px;line-height:1.5;color:var(--ink);transition:transform .18s,background .18s,color .18s,border-color .18s}
+.gf-chips label:hover{transform:translateY(-2px)}
+.gf-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:26px 22px;align-items:start}
+.gf-list li{margin:0;padding:0;scroll-margin-top:96px}
+.gf-list figure{margin:0;position:relative}
+.gf-list img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+@media(max-width:720px){.gf-list{grid-template-columns:1fr 1fr;gap:18px 12px}}
+#gf-l:checked~.gf-list li:not(.c-l),#gf-b:checked~.gf-list li:not(.c-b),#gf-s:checked~.gf-list li:not(.c-s),#gf-c:checked~.gf-list li:not(.c-c),#gf-w:checked~.gf-list li:not(.c-w){display:none}
+#gf-all:checked~.gf-chips label[for=gf-all],#gf-l:checked~.gf-chips label[for=gf-l],#gf-b:checked~.gf-chips label[for=gf-b],#gf-s:checked~.gf-chips label[for=gf-s],#gf-c:checked~.gf-chips label[for=gf-c],#gf-w:checked~.gf-chips label[for=gf-w]{background:var(--cta);border-color:var(--cta);color:#fff;box-shadow:0 6px 14px rgba(0,0,0,.16)}
+#gf-all:focus-visible~.gf-chips label[for=gf-all],#gf-l:focus-visible~.gf-chips label[for=gf-l],#gf-b:focus-visible~.gf-chips label[for=gf-b],#gf-s:focus-visible~.gf-chips label[for=gf-s],#gf-c:focus-visible~.gf-chips label[for=gf-c],#gf-w:focus-visible~.gf-chips label[for=gf-w]{outline:3px solid var(--butterd);outline-offset:3px}
+/* 流れる文字の帯（ティッカー）。装飾なので読み上げ対象外。動きを減らす設定では止める */
+.tick{overflow:hidden;white-space:nowrap}
+.tick-in{display:flex;width:max-content;animation:tick-run 70s linear infinite}
+.tick-in.rev{animation-direction:reverse}
+.tick-in span{flex:none;padding:0 .6em}
+@keyframes tick-run{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.tick-in{animation:none}}
+
+/* ===== FC POP 2026-11-05: 上品なまま、もっと楽しく（きらめき・流れる写真・やさしい動き）。40〜50代女性向け ===== */
+@keyframes fc-tw{0%,100%{transform:scale(1) rotate(0);opacity:.95}50%{transform:scale(1.35) rotate(14deg);opacity:.45}}
+@keyframes fc-drift{50%{transform:translate(16px,-12px)}}
+@keyframes fc-shine{0%,62%{left:-60%}100%{left:130%}}
+@keyframes fc-pulse{0%,100%{box-shadow:0 6px 16px rgba(56,51,46,.16),0 0 0 0 rgba(168,72,90,.0)}50%{box-shadow:0 6px 16px rgba(56,51,46,.16),0 0 0 9px rgba(168,72,90,.13)}}
+/* きらめき（静止の飾り。動きは下の no-preference 内） */
+.hero .eyebrow::before{content:"✦ ";color:var(--gold)}
+.hero-ph::after{content:"✦";position:absolute;right:5%;top:1%;font-size:28px;line-height:1;color:var(--gold);z-index:3}
+.sec::before{content:"✦";position:absolute;right:7%;top:26px;font-size:18px;line-height:1;color:var(--goldl);pointer-events:none}
+.sec.alt::before{content:"✧";right:auto;left:7%}
+.nx-sec::before{content:none}
+.ph::before{content:"✦";position:absolute;left:11%;top:38px;font-size:22px;line-height:1;color:var(--goldl)}
+.ph::after{content:"✧";position:absolute;right:11%;bottom:44px;font-size:26px;line-height:1;color:var(--goldl)}
+@media(max-width:820px){.sec::before,.ph::before,.ph::after{display:none}}
+/* 予約ボタンにやさしい光 */
+.b-net{position:relative;overflow:hidden}
+.b-net::after{content:"";position:absolute;top:0;left:-60%;width:38%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.42),transparent);transform:skewX(-20deg);pointer-events:none}
+/* 流れる仕上がりギャラリー：やわらかなアーチ型の額縁 */
+.gm-in{gap:20px;--gg:10px}
+.gc{width:210px}
+.gc:nth-child(even){margin-top:30px}
+.gc img{border-radius:999px 999px 22px 22px;border:6px solid #fff;box-shadow:0 0 0 1.5px var(--goldl),0 14px 28px rgba(56,51,46,.14);background:var(--soft);transition:transform .35s,box-shadow .35s}
+.gc:hover img,.gc:focus-visible img{transform:translateY(-6px) rotate(-1.5deg);box-shadow:0 0 0 1.5px var(--gold),0 22px 38px rgba(56,51,46,.2)}
+.gc-t{display:block;text-align:center;font:500 13.5px/1.5 var(--bf);color:var(--ink);margin-top:12px;letter-spacing:.04em}
+.gm-lead{text-align:center;margin:-10px 0 14px;color:var(--mute)}
+.gm-more{text-align:center;margin:6px 0 0}
+@media(max-width:720px){.gc:nth-child(even){margin-top:20px}.gc-t{font-size:12.5px}}
+/* /style/ のグリッド */
+.gf-chips label{border:1px solid var(--goldl);font-weight:500;letter-spacing:.04em}
+.gf-chips label:hover{border-color:var(--gold)}
+#gf-all:checked~.gf-chips label[for=gf-all],#gf-l:checked~.gf-chips label[for=gf-l],#gf-b:checked~.gf-chips label[for=gf-b],#gf-s:checked~.gf-chips label[for=gf-s],#gf-c:checked~.gf-chips label[for=gf-c],#gf-w:checked~.gf-chips label[for=gf-w]{background:var(--pri);border-color:var(--pri)}
+.gf-list img{border-radius:999px 999px 22px 22px;border:6px solid #fff;box-shadow:0 0 0 1.5px var(--goldl),0 14px 28px rgba(56,51,46,.13)}
+.gf-list li:nth-child(3n+2){margin-top:30px}
+.gf-list figcaption{text-align:center;margin-top:12px;line-height:1.5}
+.gf-list figcaption b{display:block;font:700 15.5px/1.5 var(--hf);color:var(--ink)}
+.gf-list figcaption span{display:inline-block;margin-top:4px;font-size:12.5px;color:var(--pri);background:var(--soft);padding:0 12px;border-radius:999px}
+.gf-list li:target img{box-shadow:0 0 0 2px var(--gold),0 14px 28px rgba(56,51,46,.18)}
+@media(max-width:720px){.gf-list li:nth-child(3n+2){margin-top:0}.gf-list li:nth-child(even){margin-top:22px}}
+/* 流れる文字の帯 */
+.tick{background:var(--prid);color:#f3e7cb;padding:13px 0;border-block:1px solid var(--gold);font:500 15px/1.4 var(--hf);letter-spacing:.16em;margin:0}
+/* カードの写真はホバーでゆっくり寄る */
+.g3 article img{transition:transform .7s}
+.g3 article:hover img{transform:scale(1.04)}
+@media(prefers-reduced-motion:no-preference){
+ .hero::before{animation:fc-drift 14s ease-in-out infinite}
+ .hero::after{animation:fc-drift 18s ease-in-out infinite reverse}
+ .hero-ph::after,.sec::before,.ph::before,.ph::after{animation:fc-tw 3.6s ease-in-out infinite}
+ .sec.alt::before,.ph::after{animation-delay:1.2s}
+ .b-net::after{animation:fc-shine 5.5s ease-in-out infinite}
+ .hero .b-net{animation:fc-pulse 3.4s ease-in-out infinite}
+}
+@media(prefers-reduced-motion:reduce){.g3 article img,.g3 article:hover img{transition:none;transform:none}.b-net::after{display:none}}

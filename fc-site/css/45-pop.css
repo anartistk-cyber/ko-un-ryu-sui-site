@@ -1,0 +1,53 @@
+
+/* ===== FC POP 2026-11-05: 上品なまま、もっと楽しく（きらめき・流れる写真・やさしい動き）。40〜50代女性向け ===== */
+@keyframes fc-tw{0%,100%{transform:scale(1) rotate(0);opacity:.95}50%{transform:scale(1.35) rotate(14deg);opacity:.45}}
+@keyframes fc-drift{50%{transform:translate(16px,-12px)}}
+@keyframes fc-shine{0%,62%{left:-60%}100%{left:130%}}
+@keyframes fc-pulse{0%,100%{box-shadow:0 6px 16px rgba(56,51,46,.16),0 0 0 0 rgba(168,72,90,.0)}50%{box-shadow:0 6px 16px rgba(56,51,46,.16),0 0 0 9px rgba(168,72,90,.13)}}
+/* きらめき（静止の飾り。動きは下の no-preference 内） */
+.hero .eyebrow::before{content:"✦ ";color:var(--gold)}
+.hero-ph::after{content:"✦";position:absolute;right:5%;top:1%;font-size:28px;line-height:1;color:var(--gold);z-index:3}
+.sec::before{content:"✦";position:absolute;right:7%;top:26px;font-size:18px;line-height:1;color:var(--goldl);pointer-events:none}
+.sec.alt::before{content:"✧";right:auto;left:7%}
+.nx-sec::before{content:none}
+.ph::before{content:"✦";position:absolute;left:11%;top:38px;font-size:22px;line-height:1;color:var(--goldl)}
+.ph::after{content:"✧";position:absolute;right:11%;bottom:44px;font-size:26px;line-height:1;color:var(--goldl)}
+@media(max-width:820px){.sec::before,.ph::before,.ph::after{display:none}}
+/* 予約ボタンにやさしい光 */
+.b-net{position:relative;overflow:hidden}
+.b-net::after{content:"";position:absolute;top:0;left:-60%;width:38%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.42),transparent);transform:skewX(-20deg);pointer-events:none}
+/* 流れる仕上がりギャラリー：やわらかなアーチ型の額縁 */
+.gm-in{gap:20px;--gg:10px}
+.gc{width:210px}
+.gc:nth-child(even){margin-top:30px}
+.gc img{border-radius:999px 999px 22px 22px;border:6px solid #fff;box-shadow:0 0 0 1.5px var(--goldl),0 14px 28px rgba(56,51,46,.14);background:var(--soft);transition:transform .35s,box-shadow .35s}
+.gc:hover img,.gc:focus-visible img{transform:translateY(-6px) rotate(-1.5deg);box-shadow:0 0 0 1.5px var(--gold),0 22px 38px rgba(56,51,46,.2)}
+.gc-t{display:block;text-align:center;font:500 13.5px/1.5 var(--bf);color:var(--ink);margin-top:12px;letter-spacing:.04em}
+.gm-lead{text-align:center;margin:-10px 0 14px;color:var(--mute)}
+.gm-more{text-align:center;margin:6px 0 0}
+@media(max-width:720px){.gc:nth-child(even){margin-top:20px}.gc-t{font-size:12.5px}}
+/* /style/ のグリッド */
+.gf-chips label{border:1px solid var(--goldl);font-weight:500;letter-spacing:.04em}
+.gf-chips label:hover{border-color:var(--gold)}
+#gf-all:checked~.gf-chips label[for=gf-all],#gf-l:checked~.gf-chips label[for=gf-l],#gf-b:checked~.gf-chips label[for=gf-b],#gf-s:checked~.gf-chips label[for=gf-s],#gf-c:checked~.gf-chips label[for=gf-c],#gf-w:checked~.gf-chips label[for=gf-w]{background:var(--pri);border-color:var(--pri)}
+.gf-list img{border-radius:999px 999px 22px 22px;border:6px solid #fff;box-shadow:0 0 0 1.5px var(--goldl),0 14px 28px rgba(56,51,46,.13)}
+.gf-list li:nth-child(3n+2){margin-top:30px}
+.gf-list figcaption{text-align:center;margin-top:12px;line-height:1.5}
+.gf-list figcaption b{display:block;font:700 15.5px/1.5 var(--hf);color:var(--ink)}
+.gf-list figcaption span{display:inline-block;margin-top:4px;font-size:12.5px;color:var(--pri);background:var(--soft);padding:0 12px;border-radius:999px}
+.gf-list li:target img{box-shadow:0 0 0 2px var(--gold),0 14px 28px rgba(56,51,46,.18)}
+@media(max-width:720px){.gf-list li:nth-child(3n+2){margin-top:0}.gf-list li:nth-child(even){margin-top:22px}}
+/* 流れる文字の帯 */
+.tick{background:var(--prid);color:#f3e7cb;padding:13px 0;border-block:1px solid var(--gold);font:500 15px/1.4 var(--hf);letter-spacing:.16em;margin:0}
+/* カードの写真はホバーでゆっくり寄る */
+.g3 article img{transition:transform .7s}
+.g3 article:hover img{transform:scale(1.04)}
+@media(prefers-reduced-motion:no-preference){
+ .hero::before{animation:fc-drift 14s ease-in-out infinite}
+ .hero::after{animation:fc-drift 18s ease-in-out infinite reverse}
+ .hero-ph::after,.sec::before,.ph::before,.ph::after{animation:fc-tw 3.6s ease-in-out infinite}
+ .sec.alt::before,.ph::after{animation-delay:1.2s}
+ .b-net::after{animation:fc-shine 5.5s ease-in-out infinite}
+ .hero .b-net{animation:fc-pulse 3.4s ease-in-out infinite}
+}
+@media(prefers-reduced-motion:reduce){.g3 article img,.g3 article:hover img{transition:none;transform:none}.b-net::after{display:none}}

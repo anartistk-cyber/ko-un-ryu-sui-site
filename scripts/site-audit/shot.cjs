@@ -14,7 +14,7 @@ const [,, siteDir, imgDir, outPrefix, ...pages]=process.argv;
      return r.continue()}
    return r.abort()});
   for(const p of pages){
-   await pg.goto('http://localhost:8799'+p,{waitUntil:'load'});await pg.waitForTimeout(500);
+   await pg.goto('http://localhost:8799'+p,{waitUntil:'load'});await pg.evaluate(async()=>{for(let y=0;y<document.body.scrollHeight;y+=500){window.scrollTo(0,y);await new Promise(r=>setTimeout(r,100))}window.scrollTo(0,0)});await pg.waitForTimeout(700);
    const name=outPrefix+'-'+tag+'-'+(p.replace(/\//g,'_')||'_')+'.png';
    await pg.screenshot({path:name,fullPage:true});console.log(name)}
   await ctx.close()}
