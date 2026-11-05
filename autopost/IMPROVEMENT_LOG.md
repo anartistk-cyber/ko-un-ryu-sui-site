@@ -148,3 +148,11 @@
 - 結果：10月号のネット予約23件。1位は「カット＋炭酸ヘッドスパ」5件（22%）、**指名限定のクーポンが23件中11件（約48%）**。予約があったクーポンは13本（公開中21本）。
 - 見直し案の修正：#2「指名限定が多い」→ FLOWCLOUDでは指名限定が予約の約半分なので「減らさない」に変更。足りないのは指名なしの新規向けの主力。詳細は `reports/2026-11-05_hpb_coupon_review.md`。
 - HPB側は未変更（藤津さんは「まだ変更しない」）。
+
+## 2026-11-05 22:14 FLOWCLOUD の表示速度を初測定（.htaccess 保存で403が解消）
+- 藤津さんが「設定する」を押し、PageSpeed Insights（スマホ）で flowcloud.net が測れるようになった。結果：点数84、LCP/FCP 3.2秒、TBT 60ms、CLS 0、速度指数5.0秒。ユーザー補助97、おすすめの方法100、SEO100。
+- 残る原因：Googleフォントと style.css の描画ブロック（推定450ms）、画像のキャッシュ期間なし（約625KiB）、画像の最適化余地（約307KiB）。記録先：`reports/2026-11-05_rank_ai_speed_baseline.md` の1.
+
+## 2026-11-05 22:2x FLOWCLOUD：Googleフォントを描画を止めない読み込みに変更
+- fc-site/build.mjs：Shippori Mincho の読み込みを `media="print" onload="this.media='all'"` ＋ noscript に（glow・採用と同じ方法。font-display=swap は維持）。全26ページに反映。見た目と文言は変えていない。
+- 取り込み（:22）後に PSI で再測定（比較：84／LCP 3.2秒）。CLSがわずかに出ないかも見る（glowでは0→0.026だった）。
