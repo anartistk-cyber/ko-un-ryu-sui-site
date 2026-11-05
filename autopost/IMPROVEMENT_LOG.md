@@ -105,4 +105,5 @@
 - 内部アクセス除外：採用・FLOWCLOUD・glow の3サイトで、藤津さんのChromeに `krs_internal=1` を設定し、GA4へ traffic_type=internal で送られ Clarity が読み込まれないことを確認（FLOWCLOUDは古いHTMLのキャッシュで一度効かず、URLを変えて確認）。GA4のデータフィルタは「テスト」のまま（有効化は元に戻せないため、数日の確認後に藤津さんの了承を得て実施）。
 - HPB（SALON BOARD）：FLOWCLOUD・glow の10月・11月（1〜5日）の数字を取得（`autopost/reports/2026-11-05_rank_ai_speed_baseline.md` の5.）。両店とも PV は平均並みだが、ACR（予約完了率）が平均の約1/3以下、HPB経由予約は平均の約2〜3割。→ HPBのクーポン・予約枠の見直しが最優先候補（藤津さん確認の上で実施）。
 - 未取得：SalonAnswer 新規来店動機（ログイン待ち）、GA4↔Clarity 連携（Googleの同意が必要）。
+- SalonAnswer（21:35）：FLOWCLOUD の10月の新規来店動機を取得（33人中、ホットペッパー20・SNS/HP/ネット5・紹介3・通りがかり2・その他1・不明2）。glow は店舗切替の途中で停止（業務開始の実行が自動判定で許可されず）。経緯：画面確認のために `/sas/pos-open/close-pos` を開いたところ「業務終了」が実行され、FLOWCLOUDが業務終了状態になった。業務開始画面は FLOWCLOUD（コード1・レジ金額50,000）に戻して待機。再開の確認は藤津さんに依頼。再発防止：close-pos のURLは開かない旨を REPORT_RUNBOOK と報告書に記載。
 
