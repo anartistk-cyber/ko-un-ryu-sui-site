@@ -16,6 +16,9 @@
 - 採用：URLプレフィックス `https://ko-un-ryu-sui.com/`（sc-domain は権限なし）
 - URL：`https://search.google.com/search-console/performance/search-analytics?resource_id=<URLエンコードしたプロパティ>&num_of_days=28`、ページ別は `&breakdown=page` を付ける → get_page_text で読む（上位10件が見える）。
 - 平均掲載順位は「検索語ごとの平均」。毎回同じ条件の順位ではない。データは約2〜3日遅れ。
+- 検索語ごとの順位（固定キーワード表用）：URL の末尾に `&metrics=CLICKS%2CIMPRESSIONS%2CPOSITION` を付けると表に「掲載順位」列が出る。表下の「1 ページあたりの行数」を 250 にして、JS で `table tbody tr` の td を読む（クエリ｜クリック｜表示｜CTR｜順位）。表示回数の多い順に並べ替えて上位40件を読めば足りる。
+- 固定キーワード表：`autopost/reports/2026-11-05_rank_ai_speed_baseline.md` の「2.」の語を毎回同じ語で追う。表示が出ていない語は「まだ表示なし」と書く。新しく表示され始めた重要な語は表に足す。
+- Google検索の生成AI機能（AI概要など）での表示：`https://search.google.com/search-console/performance/search-analytics/ai?resource_id=<プロパティ>&num_of_days=28`（ベータ）。「合計表示回数」と「上位のページ」を読む。**旧ブログ記事（www付きURLの数字だけのパス）が出ていたら、古い価格・古い情報が案内されていないか内容を確認する**（2026-11-05：/14644/ に旧価格あり）。
 
 ### GA4（閲覧数・滞在・流入元・ボタンのクリック）
 - プロパティは1つ：`a55864419p561701981`（行雲流水グループ）。3サイトが同じプロパティに入っているので、パス（/menu/ など）が重なる。サイトの区別は「ページ タイトル」で行う（FLOWCLOUD／glow／採用＝「FLOWCLOUD・glow」「行雲流水」を含むタイトル）。
@@ -26,9 +29,31 @@
 - キーイベント：cta_net_reserve（ネット予約）／cta_tel（電話）／cta_line（LINE）／cta_hotpepper（ホットペッパー）＝FLOWCLOUD・glow、recruit_lead_saved＝採用。種類別の件数は、ページ別の表の「キーイベント」列のプルダウンで切り替える。
 - 注意：GA4のタブはスクリーンショットが固まる（タイムアウト）。get_page_text と JS で読む。events の別URL（all-events／conversions-event）はホームに戻される。管理 > イベント（`#/a55864419p561701981/admin/events/hub`）で一覧は見える。
 - 米国などの海外アクセスは、検索ロボット等の可能性がある。人数の判断から外して注記する。
+- 流入元（参照元／メディア）：`#/a55864419p561701981/reports/explorer?params=_u..nav%3Dmaui%26_u.dateOption%3Dlast28Days%26_r.explorerCard..seldim%3D%5B%22sessionSourceMedium%22%5D&r=lifecycle-traffic-acquisition-v2&collectionId=life-cycle`（`seldim` でディメンションを指定できる）。チャネル別は `seldim` なし。表は `1\t` 以降を JS で読む。chatgpt.com / perplexity / claude.ai / gemini などAI経由の参照元が出ていないかを毎回確認する。
+- ツールの出力に「項目=値;項目=値」の形（Cookieに似た形）を返すと遮断されることがある。「項目 -> 値 / 項目 -> 値」の形で返す。
+- 内部アクセス除外：各端末で `https://flowcloud.net/?krs_internal=1`（glow・採用サイトも同様）を一度開くと、その端末は GA4 に traffic_type=internal で送られ、Clarityも読み込まない。GA4 の「データフィルタ > Internal Traffic」は **現在「テスト」**。端末の登録が済み、レポートの「テストデータのフィルタ名」で内部扱いが確認できたら「有効」にする（有効化は元に戻せない）。
+- Search Console との連携：GA4 の「Search Console のリンク」は1プロパティにつき1件のみ。**flowcloud.net（ドメイン）↔ FLOWCLOUD ストリームを連携済み（2026-11-05）**。glow・採用は上限のため連携できないので、Search Console の画面で直接読む。
 
 ### Googleビジネスプロフィール（地図の表示・電話・ルート）
 - 初回レポートでは未取得。次回以降、各プロフィールの「パフォーマンス」画面から取得する。
+
+## 追加の測定項目（2026-11-05 から）
+### 表示速度（PageSpeed Insights・月次。大きな変更の後にも）
+- API（キー無し）は1日の上限ですぐ止まる。`https://pagespeed.web.dev/analysis?url=<URLエンコード>&form_factor=mobile` をChromeで開き、約30秒待って、スコア（性能）・LCP・FCP・TBT・CLS を読む。`.lh-container` の最初の要素が表示中のスマホ結果。
+- **FLOWCLOUD は海外IP制限でPSIが403になり、点数が無効（100点は403ページの値）。** `.htaccess` に Chrome-Lighthouse の許可を追記すれば測れる（案は `server-files/htaccess-fc-google-allow.txt`。適用は藤津さん）。適用前は「測れない」と書く。
+- 目安：LCP 2.5秒以下・CLS 0.1以下・性能 90点以上。超えたら原因（動画・大きな画像・フォントの読み込み待ち）を調べて直す。
+
+### 実際の来店・予約（HPB／SalonAnswer）
+- ホットペッパー（SALON BOARD）：藤津さんがChromeでログインしている時だけ読める（パスワードは入力しない）。経路別の予約数（自サイト経由かHPB経由か）を FLOWCLOUD・glow それぞれ記録する。
+- SalonAnswer：新規来店動機（来店のきっかけ）の件数。入力が空の人が多いので、「受付で来店動機を必ず聞いて入力する」運用にしてもらえると、サイトの効果と突き合わせられる。
+- 取れない時は「未取得」と書き、理由を書く。
+
+### 採用の流れ
+- フォーム：「このサイトを知ったきっかけ」（任意）と流入元（UTM）が、受付メールの末尾と GA4 の recruit_lead_saved（found_via／campaign）に入る。GA4 でレポートに出すには、管理 > カスタム定義で `found_via`・`campaign`（イベントスコープ）を登録する。
+- 週次：recruit_form_start（入力開始）→ recruit_lead_saved（送信完了）の数を並べ、離脱率の目安にする。
+
+### 流入元のリンク（UTM）
+- `autopost/UTM_LINKS.md` のリンクとQRを使う。Instagram・LINE は必ず `utm_medium=social`。
 
 ## レポートの形（Docsアーティファクト「行雲流水 3サイト 分析レポート」。1つの文書の先頭に新しい回を追加）
 1. 今回のひとこと（3行以内）
@@ -37,6 +62,7 @@
 4. 実施した改善（日付つき。IMPROVEMENT_LOG の内容を要約）
 5. 次にやること（優先順。各項目に「何を見て効果を判断するか」を書く）
 6. 測れたこと・測れていないこと
+7. 追加の測定（月次）：表示速度（スマホ）／検索順位の固定キーワード表／AI検索での表示（生成AI機能の表示回数・引用ページ・AI経由の流入）／流入元の内訳／来店・予約（HPB・SalonAnswer）
 
 ## 判断ルール
 - 数が少ない（表示が30未満など）は「参考」。1週間の増減だけで改善の良し悪しを決めない。改善の効果は2〜4週間見る。
