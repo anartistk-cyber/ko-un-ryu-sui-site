@@ -31,6 +31,7 @@
 - 米国などの海外アクセスは、検索ロボット等の可能性がある。人数の判断から外して注記する。
 - 流入元（参照元／メディア）：`#/a55864419p561701981/reports/explorer?params=_u..nav%3Dmaui%26_u.dateOption%3Dlast28Days%26_r.explorerCard..seldim%3D%5B%22sessionSourceMedium%22%5D&r=lifecycle-traffic-acquisition-v2&collectionId=life-cycle`（`seldim` でディメンションを指定できる）。チャネル別は `seldim` なし。表は `1\t` 以降を JS で読む。chatgpt.com / perplexity / claude.ai / gemini などAI経由の参照元が出ていないかを毎回確認する。
 - ツールの出力に「項目=値;項目=値」の形（Cookieに似た形）を返すと遮断されることがある。「項目 -> 値 / 項目 -> 値」の形で返す。
+- 公開直後の確認：ブラウザが古いHTMLをキャッシュしていると新しい仕組みが効かない（FLOWCLOUD で確認）。確認用のURLには `&r=2` などを付けて開く。サーバー側の対策案は `server-files/htaccess-html-revalidate.txt`。
 - 内部アクセス除外：各端末で `https://flowcloud.net/?krs_internal=1`（glow・採用サイトも同様）を一度開くと、その端末は GA4 に traffic_type=internal で送られ、Clarityも読み込まない。GA4 の「データフィルタ > Internal Traffic」は **現在「テスト」**。端末の登録が済み、レポートの「テストデータのフィルタ名」で内部扱いが確認できたら「有効」にする（有効化は元に戻せない）。
 - Search Console との連携：GA4 の「Search Console のリンク」は1プロパティにつき1件のみ。**flowcloud.net（ドメイン）↔ FLOWCLOUD ストリームを連携済み（2026-11-05）**。glow・採用は上限のため連携できないので、Search Console の画面で直接読む。
 
@@ -44,7 +45,12 @@
 - 目安：LCP 2.5秒以下・CLS 0.1以下・性能 90点以上。超えたら原因（動画・大きな画像・フォントの読み込み待ち）を調べて直す。
 
 ### 実際の来店・予約（HPB／SalonAnswer）
-- ホットペッパー（SALON BOARD）：藤津さんがChromeでログインしている時だけ読める（パスワードは入力しない）。経路別の予約数（自サイト経由かHPB経由か）を FLOWCLOUD・glow それぞれ記録する。
+- ホットペッパー（SALON BOARD）：藤津さんがChromeでログインしている時だけ読める（パスワードは入力しない）。FLOWCLOUD と glow は**別ID**（画面右下の表示で確認：「FLOW CLOUD様 / H000173335」「glow様 / H000798580」）。店舗の切替画面は無く、glowを読むには藤津さんにログインし直してもらう。
+  - 読む画面：`https://salonboard.com/CLP/bt/analysis/report/basicInfo/`（集計・分析 > HOT PEPPER Beauty レポート > 基本情報）。グラフに数字が出ないので、JSで `Highcharts.charts.filter(Boolean).map(c => c.series.map(s => s.name + ' ' + s.data.map(d => d.y).join(',')).join(' / '))` を読む。順番は サロン情報PV数／CVR／ACR／予約数／予約売上高／（PV数タブ）総PV／サロン情報PV／ブログPV／クーポンメニューPV／スタイルPV。系列は「自店」と「同P/同A平均」。
+  - 月の切替：画面を一番上に戻し、「先月」ボタンを押して「出力する」を押す（フォームを直接submitしても戻る）。月ごとに同じ手順で読む。
+  - 記録するのは件数・割合のみ。**金額（予約売上高）はレポートに書かない。**
+  - これは「HPB経由」の数字。自サイトの予約ボタン経由の来店数は、ここでは分からない（SalonAnswer の新規来店動機や、GA4 の cta_net_reserve と並べて見る）。
+  - 目安：ACR（クーポンを見た人が予約完了まで進む割合）が平均より低ければ、クーポン内容・価格・予約枠の見直し候補。
 - SalonAnswer：新規来店動機（来店のきっかけ）の件数。入力が空の人が多いので、「受付で来店動機を必ず聞いて入力する」運用にしてもらえると、サイトの効果と突き合わせられる。
 - 取れない時は「未取得」と書き、理由を書く。
 
