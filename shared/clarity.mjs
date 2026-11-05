@@ -2,7 +2,7 @@
 // IDを入れる場所： fc-site/data.json と glow-site/data.json の "clarity"、採用サイトは client/.env.production の VITE_CLARITY_ID。
 export const claritySnippet = (id) =>
   id
-    ? `<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","${id}")</script>`
+    ? `<script>(function(){try{if(localStorage.getItem("krs_internal"))return}catch(e){}(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","${id}")})()</script>`
     : '';
 
 // プライバシーポリシーの追記（FLOWCLOUD・glow。入力フォームのないサイト向け）

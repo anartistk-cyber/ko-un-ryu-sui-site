@@ -54,6 +54,8 @@ for (const [route, out] of pages) {
   await page.waitForSelector("#root > *");
   await page.waitForTimeout(500);
   let html = "<!DOCTYPE html>\n" + await page.evaluate(() => document.documentElement.outerHTML);
+  // 実行時に差し込まれた計測タグ（Clarity）を静的HTMLに残さない（内部アクセスの除外・二重読み込み防止のため。タグは index.html の読み込み用スクリプトが実行時に入れる）
+  html = html.replace(/<script async="" src="https:\/\/www\.clarity\.ms\/tag\/[^"]*"><\/script>/g, "");
   const target = path.join(dist, out);
   fs.mkdirSync(path.dirname(target), { recursive: true });
   fs.writeFileSync(target, html);

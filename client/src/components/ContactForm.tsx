@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { track } from "../lib/track";
+import { track, getCampaign } from "../lib/track";
 
 type Errors = Record<string, string>;
 const MSG = {
@@ -25,6 +25,16 @@ const PRESET: Record<string, { purpose?: string; status?: string; job?: string }
 };
 const submitLabel: Record<string, string> = { visit: "この内容で見学を申し込む", consult: "この内容で送信する", apply: "この内容で応募する", "": "この内容で送信する" };
 
+// サーバー(contact.php)を変えなくても受付メールに残るよう、メッセージの末尾に流入元を足す（1000文字を超える場合は足さない）
+function withSource(message: string, via: string): string {
+  const campaign = getCampaign();
+  const note = [via && `知ったきっかけ：${via}`, campaign && `流入：${campaign}`].filter(Boolean).join("／");
+  if (!note) return message;
+  const out = `${message}${message ? "\n\n" : ""}【${note}】`;
+  return out.length <= 1000 ? out : message;
+}
+// 「このサイトを知ったきっかけ」（任意）。どこからの応募が多いかを、広告・チラシ・SNSの効果測定に使う。
+const FOUND_VIA = ["Google検索", "Googleマップ（店舗ページ）", "Instagram", "LINE", "店舗のQR・チラシ", "学校・先生の紹介", "友人・知人の紹介", "求人サイト・求人票", "その他"];
 const DRAFT_KEY = "krs-contact-draft";
 const DRAFT_TEXT = ["name", "kana", "salon", "school", "date1", "date2", "date3", "conditions", "message"];
 
@@ -120,7 +130,7 @@ export function ContactForm() {
       body: JSON.stringify({
         name: g("name"), kana: g("kana"), email: g("email"), phone: g("phone"), purpose, status, contact_method: method,
         salon: g("salon"), date1: g("date1"), date2: g("date2"), date3: g("date3"), school: g("school"),
-        conditions: g("conditions"), message: g("message"), job_id: jobId, consent: true, website: g("website"),
+        conditions: g("conditions"), message: withSource(g("message"), g("found_via")), found_via: g("found_via"), campaign: getCampaign(), job_id: jobId, consent: true, website: g("website"),
       }),
     })
       .then(async res => {
@@ -129,7 +139,7 @@ export function ContactForm() {
           try { sessionStorage.removeItem(DRAFT_KEY); } catch { /* noop */ }
           setDone({ receipt: json.receipt, mailed: json.mailed, purpose });
           // サーバーが正常保存した時のみ1回だけ発火(個人情報なし)
-          track("recruit_lead_saved", { lead_type: purpose, audience: status, salon: g("salon") || "undecided", job_id: jobId || "not_selected", source_page_type: "contact_form" });
+          track("recruit_lead_saved", { lead_type: purpose, audience: status, salon: g("salon") || "undecided", job_id: jobId || "not_selected", found_via: g("found_via") || "not_answered", campaign: getCampaign() || "none", source_page_type: "contact_form" });
         } else {
           setServerError(true); track("recruit_form_error", { error_code: "server", form_type: purpose });
         }
@@ -189,6 +199,8 @@ export function ContactForm() {
             <option value="" disabled>連絡先を入力してください</option>
             {hasEmail && <option value="email">メール</option>}{hasPhone && <option value="tel">電話</option>}
           </select>{err("contact_method")}</label>
+        <label>このサイトを知ったきっかけ <em>任意</em>
+          <select name="found_via" defaultValue=""><option value="">選択しない</option>{FOUND_VIA.map(v => <option key={v} value={v}>{v}</option>)}</select></label>
       </div>
       <details className="form-more">
         <summary>希望の店舗・日時などを伝える（任意）</summary>

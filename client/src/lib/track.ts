@@ -18,3 +18,18 @@ export function trackClick(e: { target: EventTarget | null }) {
   else if (t === "audience") track("audience_select", p);
   else track("recruit_cta_click", { cta_type: t, ...p });
 }
+
+// 流入元（UTM）をセッション内で覚えておき、問い合わせ時の「どこから来たか」に使う。個人情報は含まない。
+const UTM_KEY = "krs-utm";
+export function rememberCampaign() {
+  try {
+    const q = new URLSearchParams(window.location.search);
+    const src = q.get("utm_source");
+    if (!src || sessionStorage.getItem(UTM_KEY)) return;
+    const clean = (v: string | null) => (v || "").replace(/[^A-Za-z0-9_\-.]/g, "").slice(0, 40);
+    sessionStorage.setItem(UTM_KEY, [clean(src), clean(q.get("utm_medium")), clean(q.get("utm_campaign"))].filter(Boolean).join("/"));
+  } catch { /* noop */ }
+}
+export function getCampaign(): string {
+  try { return sessionStorage.getItem(UTM_KEY) || ""; } catch { return ""; }
+}
