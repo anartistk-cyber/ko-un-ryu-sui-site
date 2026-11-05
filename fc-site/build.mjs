@@ -55,7 +55,7 @@ ${body}</main>
 const VAR={'FLOW-CLOUD-063':[2756,1837],'FLOW-CLOUD-031':[2756,1837],'FLOW-CLOUD-047':[2756,1817],'FLOW-CLOUD-044':[2756,1837],'FLOW-CLOUD-048':[2756,1754],'FLOW-CLOUD-051':[2756,1809]};
 const optImgs=h=>h.replace(/<img src="\/cms\/wp-content\/uploads\/2018\/12\/([^"]+)\.jpg"([^>]*)>/g,(m,n,rest)=>{const d=VAR[n];if(!d)return m;const v=w=>`/cms/wp-content/uploads/2018/12/${n}-${w}x${Math.round(d[1]*w/d[0])}.jpg`;const hero=/fetchpriority/.test(rest);if(/class="sm"/.test(rest))return `<img src="${v(300)}" srcset="${v(300)} 300w, ${v(768)} 768w" sizes="250px"${rest}>`;return `<img src="${v(768)}" srcset="${v(300)} 300w, ${v(768)} 768w" sizes="${hero?'(max-width:820px) 100vw, 520px':'(max-width:720px) 100vw, 640px'}"${rest}>`});
 const write=(p,html)=>{html=optImgs(html);const f=p==='/'?'index.html':p.replace(/^\//,'')+'index.html';fs.mkdirSync(path.dirname(path.join(OUT,f)),{recursive:true});fs.writeFileSync(path.join(OUT,f),html)};
-const sec=(t,inner,cls='')=>`<section class="sec ${cls}"><div class="wrap"><h2>${t}</h2>${inner}</div></section>`;
+const sec=(t,inner,cls='')=>`<section class="sec ${cls}"><div class="wrap">${t?`<h2>${t}</h2>`:''}${inner}</div></section>`;
 const faqLD=(items)=>({"@type":"FAQPage","mainEntity":items.map(([q,a])=>({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))});
 const faqHtml=items=>`<div class="faq">${items.map(([q,a])=>`<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}</div>`;
 const worries=['とにかくダメージで困っている','クセやうねりでおさまりが悪い','バサバサで広がる','ペたんとなりボリュームが出ない'.replace('ペ','ぺ'),'てっぺんの毛が薄くなってきた','ハチがはる','まとまりが悪くボリュームが出すぎる','カラーの退色が気になる','髪がゴワゴワする'];

@@ -47,10 +47,12 @@ for rel,p in sorted(pages.items()):
     titles.setdefault(t,[]).append(rel);descs.setdefault(d,[]).append(rel)
     if not 18<=len(t)<=75:issues['title長さ'].append((rel,len(t)))
     if not 60<=len(d)<=170:issues['description長さ'].append((rel,len(d)))
-    if not q.link.get('canonical') and not rel.startswith('404'):issues['canonicalなし'].append(rel)
-    if not q.meta.get('og:image') and not rel.startswith('404'):issues['og:imageなし'].append(rel)
+    if not q.link.get('canonical') and not rel.startswith(('404','google')):issues['canonicalなし'].append(rel)
+    if not q.meta.get('og:image') and not rel.startswith(('404','google')):issues['og:imageなし'].append(rel)
     h1=[x for x in q.h if x[0]=='h1']
-    if len(h1)!=1 and not rel.startswith('404'):issues['h1数'].append((rel,len(h1)))
+    if len(h1)!=1 and not rel.startswith(('404','google')):issues['h1数'].append((rel,len(h1)))
+    for x in q.h:
+        if not x[1].strip():issues['空の見出し'].append((rel,x[0]))
     prev=1
     for x in q.h:
         lv=int(x[0][1]);
@@ -67,7 +69,7 @@ for rel,p in sorted(pages.items()):
     for j in q.ld:
         try:json.loads(j)
         except Exception as e:issues['JSON-LD不正'].append((rel,str(e)[:50]))
-    if not q.ld and not rel.startswith('404'):issues['JSON-LDなし'].append(rel)
+    if not q.ld and not rel.startswith(('404','google')):issues['JSON-LDなし'].append(rel)
     if not q.lang:issues['lang無'].append(rel)
 for t,v in titles.items():
     if len(v)>1:issues['title重複'].append((t[:30],v[:4]))

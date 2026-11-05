@@ -209,7 +209,7 @@ a:focus-visible,summary:focus-visible,.btn:focus-visible,.mb:focus-visible,input
 }
 /* 日本語の改行を自然に（見出しの1文字残りを防ぐ。未対応ブラウザでは無視されるだけ） */
 h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
-.hero p,.sec>.wrap>p,.q-res p,.cast p,.two p{word-break:auto-phrase}
+.hero p,.ph .lead{word-break:auto-phrase}
 .hero-ph .ph2{object-position:24% 42%}
 .cast li b{display:block}
 @media(max-width:520px){.cta{padding:24px 14px}.cta .btn{width:100%;max-width:300px;padding:13px 10px;font-size:15px}.cta-lead{line-height:1.6}}

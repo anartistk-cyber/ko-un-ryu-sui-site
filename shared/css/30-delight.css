@@ -50,4 +50,4 @@ a:focus-visible,summary:focus-visible,.btn:focus-visible,.mb:focus-visible,input
 }
 /* 日本語の改行を自然に（見出しの1文字残りを防ぐ。未対応ブラウザでは無視されるだけ） */
 h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
-.hero p,.sec>.wrap>p,.q-res p,.cast p,.two p{word-break:auto-phrase}
+.hero p,.ph .lead{word-break:auto-phrase}
