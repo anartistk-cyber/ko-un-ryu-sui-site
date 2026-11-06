@@ -55,7 +55,15 @@ for (const [route, out] of pages) {
   await page.goto(base + route, { waitUntil: "load" });
   await page.waitForSelector("#root > *");
   await page.waitForTimeout(500);
-  let html = "<!DOCTYPE html>\n" + await page.evaluate(() => document.documentElement.outerHTML);
+  // 隣り合う文字ノードは、HTMLに書き出すと1つに結合され、読み込み時の引き継ぎ（hydrate）が合わなくなる。
+  // サーバー描画（ReactDOMServer）と同じく <!-- --> で区切って書き出す。
+  let html = "<!DOCTYPE html>\n" + await page.evaluate(() => {
+    const walker = document.createTreeWalker(document.getElementById("root"), NodeFilter.SHOW_TEXT);
+    const texts = [];
+    while (walker.nextNode()) texts.push(walker.currentNode);
+    for (const t of texts) if (t.nextSibling && t.nextSibling.nodeType === 3) t.after(document.createComment(" "));
+    return document.documentElement.outerHTML;
+  });
   // 実行時に差し込まれた計測タグ（Clarity）を静的HTMLに残さない（内部アクセスの除外・二重読み込み防止のため。タグは index.html の読み込み用スクリプトが実行時に入れる）
   html = html.replace(/<script async="" src="https:\/\/www\.clarity\.ms\/tag\/[^"]*"><\/script>/g, "");
   const target = path.join(dist, out);
