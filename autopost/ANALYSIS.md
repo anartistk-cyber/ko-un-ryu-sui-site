@@ -45,3 +45,16 @@
 - カバー済みテーマに追加: gakusei-kengaku-kakunin
 - 既存記事改善: 今回は見送り（次回実施）。金曜ではないため週次レビューなし。
 - 検証: sitemap 26URL／vite build／prerender／publish-gate すべて成功。
+
+## 実行ログ 2026-11-06（金・自動実行）
+- 準備: リポジトリは既にclone済み・origin/mainと同期。add_repo/register_repo_rootのツールはこの環境に無く、スコープ済みのためそのまま作業。
+- 調査: WebSearchはこの回は未実施（ツール未ロードのため）。11/1・11/4の調査結果（上位は求人媒体、ko-un-ryu-sui.comは未表示）を踏襲。
+- 記事追加: fukushoku-salon-erabi ／ 狙い: 美容師 復職 ブランク サロン選び 泉大津 ／ 切り口: 働き方の形・勤務時間・練習の扱い・教育・体験の5つの確認点。パートの時給は FACTS.md に無いため記載せず（要相談）。事実はFACTS.mdのみ。
+- カバー済みテーマに追加: fukushoku-salon-erabi
+- 既存記事改善: salon-erabi-checklist に冒頭の結論文と関連記事CTA2件を追加（dateは変更なし、FACTSとのずれなし）。
+- 検証: sitemap 27URL／vite build／prerender／publish-gate すべて成功（終了コード確認）。export-site.sh 75ファイル。
+
+### 今週の振り返り（11/1〜11/6）
+- 追加記事: tsukin-kishiwada-izumi-sakai／kyujitsu-yukyu-minikata／kotei-zangyo-minikata／gakusei-kengaku-kakunin／fukushoku-salon-erabi（計5本。ブログは合計12本）。
+- 検索順位: 「泉大津 美容師 求人」系は求人媒体が上位で、自サイトは上位10に未表示。ロングテール（確認点・見方型）を継続。
+- 来週の改善案: ①タイトルは「〜の見方」「確認したい◯つ」型を継続 ②高校生向け（美容師になるまでの道）と和泉・堺・高石の地域別記事が未着手 ③FAQに復職・ブランクの記事リンクを追加 ④パート条件（時給等）をFACTS.mdに追加するようオーナー確認を依頼 ⑤Search Consoleでの掲載順位確認（要オーナー）。
