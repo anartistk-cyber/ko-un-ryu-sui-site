@@ -445,7 +445,7 @@ export default function Home() {
             <div><p>FLOWCLOUD と glow を起点に、世代・ライフスタイル・求める技術が異なるお客様へ。それぞれのブランドらしさを育てながら、「らしさを輝かせる」美と幸せの環を広げていく構想です。</p><span>株式会社行雲流水　事業展開ビジョン</span></div>
           </div>
           <figure className="vision-map">
-            <img loading="lazy" decoding="async" src={businessVisionMap} alt="株式会社行雲流水の事業展開ビジョン。FLOWCLOUD、glow、WATERLINE（仮）、BONSAI（仮）、ココロオドル（仮）などの店舗構想を示す図" />
+            <img loading="lazy" decoding="async" width={882} height={795} src={businessVisionMap} alt="株式会社行雲流水の事業展開ビジョン。FLOWCLOUD、glow、WATERLINE（仮）、BONSAI（仮）、ココロオドル（仮）などの店舗構想を示す図" />
             <figcaption>株式会社行雲流水　事業展開ビジョン</figcaption>
           </figure>
         </section>
@@ -497,7 +497,7 @@ export default function Home() {
                 <SalonReel src={flowCloudReel} poster={flowCloudReelPoster} label="FLOWCLOUDのサロンリール動画" muted={activeReelSound !== "flow"} onToggleSound={() => setActiveReelSound(activeReelSound === "flow" ? null : "flow")} />
                 <img loading="lazy" decoding="async" className="salon-gallery-detail" src={flowCloudInteriorPhoto} alt="FLOWCLOUDの落ち着いたカウンセリング空間" />
               </div>
-              <div className="salon-gallery-logo"><img loading="lazy" decoding="async" src={flowCloudLogo} alt="FLOWCLOUD ロゴ" /></div>
+              <div className="salon-gallery-logo"><img loading="lazy" decoding="async" width={1020} height={689} src={flowCloudLogo} alt="FLOWCLOUD ロゴ" /></div>
               <small>FLOWCLOUD<br />SALON 01</small>
             </div>
             <div className="salon-detail">
@@ -521,7 +521,7 @@ export default function Home() {
                 <SalonReel src={glowReel} poster={glowReelPoster} label="glowのサロンリール動画" muted={activeReelSound !== "glow"} onToggleSound={() => setActiveReelSound(activeReelSound === "glow" ? null : "glow")} />
                 <img loading="lazy" decoding="async" className="salon-gallery-detail" src={glowSalonInteriorPhoto} alt="glowのセット面" />
               </div>
-              <div className="salon-gallery-logo"><img loading="lazy" decoding="async" src={glowLogo} alt="glow ロゴ" /></div>
+              <div className="salon-gallery-logo"><img loading="lazy" decoding="async" width={1326} height={1009} src={glowLogo} alt="glow ロゴ" /></div>
               <small>glow<br />SALON 02</small>
             </div>
             <div className="salon-detail">
@@ -589,7 +589,7 @@ export default function Home() {
             <article><span>02</span><h3>2年生<br />Jrスタイリスト</h3><p>ウィッグ60スタイルと新規モニター90名で実践力を磨きます。月20時間。</p></article>
             <article><span>03</span><h3>その先の<br />キャリア</h3><p>スタイリスト、トップ、グレイト、アーティスト、独立支援まで。あなたに合う道を一緒に考えます。</p></article>
           </div>
-          <figure className="curriculum-chart"><img src="/images/curriculum-chart.png" alt="デビューを目指すカリキュラム表。1年生コンシェルジュは月25時間、2年生Jrスタイリストは月20時間" loading="lazy" /><figcaption>デビューを目指すカリキュラム（月ごとの内容）</figcaption></figure>
+          <figure className="curriculum-chart"><img src="/images/curriculum-chart.png" width={741} height={577} alt="デビューを目指すカリキュラム表。1年生コンシェルジュは月25時間、2年生Jrスタイリストは月20時間" loading="lazy" /><figcaption>デビューを目指すカリキュラム（月ごとの内容）</figcaption></figure>
           <div className="info-stack">
             <InfoBlock num="A" en="CURRICULUM" title="教育カリキュラム" rows={curriculumRows} />
             <InfoBlock num="B" en="PAY &amp; CAREER STEPS" title="給与・キャリアステップ" rows={payRows} note="職種・等級ごとの月給は固定残業代（15時間／月）を含む目安です。昇格は指名技術売上などに応じます。" />
