@@ -2,6 +2,7 @@ import fs from 'fs';import path from 'path';
 import {makeGallery} from '../shared/gallery.mjs';
 import {claritySnippet,clarityPolicy} from '../shared/clarity.mjs';
 import {livePill,liveScript} from '../shared/live-status.mjs';
+import {readCssMin} from '../shared/css-min.mjs';
 import {rateHero,rateBox,rateText,rateAvgNote} from '../shared/rating.mjs';
 import {ROBOTS_META,parentOrg,offerCatalog,specialHours,buildLlmsFull,llmsPageLinks} from '../shared/seo.mjs';
 const OUT='site';fs.rmSync(OUT,{recursive:true,force:true});
@@ -161,7 +162,7 @@ sec('glowが大切にしていること',`<div class="two"><img src="${I.color}"
 sec('10代・20代のお客様の声（抜粋）',`<div class="rv">${DATA.reviews.filter(r=>/10代|20代/.test(r.who)).map(r=>`<blockquote><p>「${esc(r.q)}」</p><footer>${r.who}／${r.date}${r.src==='Google'?'・Googleのクチコミ':'・ホットペッパービューティー'}</footer></blockquote>`).join('')}</div><p class="note">ホットペッパービューティーの★5口コミの一部を抜粋しています（個人の感想です）。<a href="${L.review}" rel="noopener">すべての口コミを見る</a></p>`)+
 sec('人気のメニューと料金（税込）',`<div class="g3 pm"><a href="/menu/#cut"><h3>カット（シャンプーブロー込）</h3><p>50分／¥5,500</p></a><a href="/menu/#color"><h3>カラー（根元・全体）</h3><p>¥6,600〜</p></a><a href="/menu/#rehair"><h3>髪質向上トリートメント</h3><p>¥4,400</p></a><a href="/menu/#rehair"><h3>シスキュア</h3><p>¥3,850</p></a><a href="/menu/#spa"><h3>炭酸ヘッドマッサージ</h3><p>10分／¥2,200</p></a><a href="/menu/#perm"><h3>パーマ（ナチュラル）</h3><p>¥7,700〜</p></a></div><p class="note">ご新規様向けのクーポンは<a href="${L.coupon}" rel="noopener">ホットペッパービューティー</a>で最新情報をご確認ください。</p>`,'alt')+
 `<div class="wrap">${cta('はじめてのご予約')}</div>`+sec('よくある質問',faqHtml(fy))}));
-fs.mkdirSync(OUT+'/gl',{recursive:true});fs.writeFileSync(OUT+'/gl/style.css',fs.readFileSync('style.css','utf8'));
+fs.mkdirSync(OUT+'/gl',{recursive:true});fs.writeFileSync(OUT+'/gl/style.css',readCssMin('style.css'));
 
 // COLOR（艶カラー・カラーのご相談）
 const fCl=[['カラーの料金はいくらですか？','カラー（根元・全体）は6,600円〜、2メイクは14,850円〜、ポイントカラーは3,300円〜、ホイルワークは8,800円〜です（いずれも税込）。髪の長さや状態により変わる場合があります。'],['カラーは低刺激ですか？','glowでは低刺激のカラーを使用しています。肌や頭皮が敏感な方は、ご予約時やカウンセリングでお気軽にご相談ください。'],['なりたい色が決まっていなくても大丈夫ですか？','はい。「なりたい色はあるけど、自分に合うかわからない」というときも、カウンセリングで一緒に考えます。なりたい雰囲気の写真があれば、そのままお見せください。'],['カラーの履歴は伝えたほうがいいですか？','はい。過去のカラー・パーマ・縮毛矯正の履歴は、施術内容を決めるうえで大切です。ご予約時や当日のカウンセリングでお伝えください。髪の状態によっては、工程を調整したり、施術をおすすめできない場合があります。']];

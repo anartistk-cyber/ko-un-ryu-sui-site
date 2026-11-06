@@ -2,6 +2,7 @@ import fs from 'fs';import path from 'path';
 import {makeGallery} from '../shared/gallery.mjs';
 import {claritySnippet,clarityPolicy} from '../shared/clarity.mjs';
 import {livePill,liveScript} from '../shared/live-status.mjs';
+import {readCssMin} from '../shared/css-min.mjs';
 import {rateHero,rateBox,rateText,rateAvgNote} from '../shared/rating.mjs';
 import {ROBOTS_META,parentOrg,offerCatalog,specialHours,buildLlmsFull,llmsPageLinks} from '../shared/seo.mjs';
 const OUT='site';fs.rmSync(OUT,{recursive:true,force:true});
@@ -174,7 +175,7 @@ write('/salon-blog/',page({path:'/salon-blog/',title:'お知らせ・ブログ�
 for(const p of posts){const img=IMG(p.image);write(`/salon-blog/${p.slug}/`,page({path:`/salon-blog/${p.slug}/`,title:`${p.title}｜FLOWCLOUD（泉大津の美容室）`,desc:p.desc,h1:p.title,lead:`${p.date.replace(/-/g,'.')} ${p.type}`,crumbs:[['/salon-blog/','お知らせ・ブログ'],[`/salon-blog/${p.slug}/`,p.title]],image:img,extra:[{"@type":"BlogPosting","headline":p.title,"datePublished":p.date,"dateModified":p.date,"image":BASE+img,"description":p.desc,"inLanguage":"ja","author":{"@id":BASE+"/#salon"},"publisher":{"@id":BASE+"/#salon"},"mainEntityOfPage":BASE+`/salon-blog/${p.slug}/`}],body:sec('',`<img class="art-img" src="${img}" alt="${esc(p.alt)}" width="1024" height="768">${bodyHtml(p.body,p.type==='ブログ')}`)+(()=>{const o=posts.filter(x=>x.slug!==p.slug&&x.type==='ブログ').slice(0,3);return o.length?sec('あわせて読みたい','<ul class="posts">'+o.map(x=>`<li><time datetime="${x.date}">${x.date.replace(/-/g,'.')}</time> <a href="/salon-blog/${x.slug}/">${esc(x.title)}</a></li>`).join('')+'</ul>','alt'):''})()+`<div class="wrap">${cta('ご予約はこちら')}</div>`}))}
 // css
 fs.mkdirSync(OUT+'/fc',{recursive:true});
-fs.writeFileSync(OUT+'/fc/style.css',fs.readFileSync('style.css','utf8'));
+fs.writeFileSync(OUT+'/fc/style.css',readCssMin('style.css'));
 fs.mkdirSync(OUT+'/fc/img',{recursive:true});for(const f of fs.readdirSync('img')){fs.copyFileSync('img/'+f,OUT+'/fc/img/'+f)}
 
 // STRAIGHT (縮毛矯正=髪質改善ストレート) / COTA
