@@ -12,7 +12,44 @@ type G = {
 
 const SALON = "FLOWCLOUD（泉大津駅から徒歩約3分）とglow（泉大津駅東口から徒歩約1分）";
 
-const pages: Record<"area" | "school" | "student" | "workstyle" | "visit", G> = {
+const pages: Record<"recruit" | "area" | "school" | "student" | "workstyle" | "visit", G> = {
+  recruit: {
+    path: "/recruit/", code: "visit", audience: "recruit", eyebrow: "RECRUIT / FLOWCLOUD・glow",
+    h1: "泉大津の美容室で、美容師として働く。",
+    seoTitle: "美容師の募集職種｜新卒・中途・パート・美容学生｜泉大津｜FLOWCLOUD・glow",
+    desc: "大阪府泉大津市のFLOWCLOUDとglowの採用情報。2027年度の新卒美容師、アシスタント、スタイリスト、中途、パート、美容学生アルバイトの募集と、見学・体験の相談をご案内します。",
+    lead: "株式会社行雲流水が運営する、泉大津市の美容室FLOWCLOUDとglowの採用ページです。あなたの状況に合わせて、募集職種と、見学・体験の入口をご案内します。",
+    chipsLabel: "こんな方からのご相談をお待ちしています",
+    chips: ["美容学生", "新卒", "中途", "子育て・復職", "アシスタント", "スタイリスト", "学生アルバイト"],
+    sections: [
+      { h: "募集している職種。", body: <>
+        <p>美容師免許（取得見込みを含む）をお持ちの、美容学生・新卒・中途・パート（子育て・復職）の方を募集しています。美容学生アルバイトの募集もあります。</p>
+        <ul className="job-detail-list">
+          <li><Link href="/recruit/newgrad">2027年度 新卒美容師採用（3名募集）</Link></li>
+          <li><Link href="/jobs/assistant">美容師アシスタント（正社員）</Link></li>
+          <li><Link href="/jobs/stylist">美容師スタイリスト（正社員）</Link></li>
+          <li><Link href="/recruit/career">中途スタイリスト採用</Link></li>
+          <li><Link href="/jobs/part">パート美容師（子育て・復職の相談）</Link></li>
+          <li><Link href="/jobs/student">美容学生アルバイト</Link></li>
+        </ul></> },
+      { h: "あなたの状況から選ぶ。", body: <>
+        <ul className="job-detail-list">
+          <li><Link href="/school">美容学校に通っている方へ</Link></li>
+          <li><Link href="/recruit/student">高校生・美容学生の方へ</Link></li>
+          <li><Link href="/recruit/career">中途・転職をお考えの方へ</Link></li>
+          <li><Link href="/area">泉大津・南大阪・泉州から通いたい方へ（勤務エリア）</Link></li>
+          <li><Link href="/workstyle">休み・教育・給与の内訳を知りたい方へ（働き方）</Link></li>
+        </ul></> },
+      { h: "まずは、見学・相談から。", body: <p>応募を決めていなくても、サロンを見て、働き方を聞いてみてください。見学・体験の内容、費用、選考との関係は、お申し込み前にご案内します。公式LINEなら、住んでいる地域や希望の働き方を送るだけで始められます。<Link href="/visit">見学・体験の流れを見る</Link></p> },
+    ],
+    faq: [
+      ["どこで勤務しますか。", "泉大津市のFLOWCLOUD（泉大津駅から徒歩約3分）とglow（東口から徒歩約1分）です。"],
+      ["選考の流れを教えてください。", "見学（会社説明会）→ 面接 → 採用の流れで、提出書類は履歴書です。"],
+      ["勤務時間は何時から何時までですか。", "シフト制で、早番は8:30〜17:30、遅番は11:30〜20:30（休憩60分）です。"],
+    ],
+    related: [["勤務エリア（泉大津・南大阪・泉州）", "/area"], ["働き方（休み・教育・給与の内訳）", "/workstyle"], ["見学・体験の流れ", "/visit"], ["よくある質問", "/faq"]],
+    primary: "サロン見学を相談する",
+  },
   area: {
     path: "/area", code: "visit", audience: "area", eyebrow: "WORK AREA / IZUMIOTSU",
     h1: "泉大津・南大阪・泉州で、美容師として働く。",
@@ -162,7 +199,7 @@ const pages: Record<"area" | "school" | "student" | "workstyle" | "visit", G> = 
   },
 };
 
-export function Guide({ type }: { type: "area" | "school" | "student" | "workstyle" | "visit" }) {
+export function Guide({ type }: { type: "recruit" | "area" | "school" | "student" | "workstyle" | "visit" }) {
   const d = pages[type];
   const faqLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: d.faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) };
   const pageLd = { "@context": "https://schema.org", "@type": "WebPage", name: d.seoTitle, url: SITE + d.path, description: d.desc, inLanguage: "ja", about: { "@id": SITE + "/#org" }, isPartOf: { "@id": SITE + "/#website" } };

@@ -17,6 +17,8 @@ function Router() {
       <Route path="/jobs/assistant">{() => <JobPosting type="assistant" />}</Route>
       <Route path="/jobs/part">{() => <JobPosting type="part" />}</Route>
       <Route path="/jobs/student">{() => <JobPosting type="student" />}</Route>
+      <Route path="/recruit">{() => <Guide type="recruit" />}</Route>
+      <Route path="/recruit/">{() => <Guide type="recruit" />}</Route>
       <Route path="/recruit/newgrad">{() => <Landing type="newgrad" />}</Route>
       <Route path="/recruit/career">{() => <Landing type="career" />}</Route>
       <Route path="/area">{() => <Guide type="area" />}</Route>

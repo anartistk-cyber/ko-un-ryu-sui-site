@@ -27,6 +27,7 @@ const pages = [
   ["/jobs/assistant", "jobs/assistant.html"],
   ["/jobs/part", "jobs/part.html"],
   ["/jobs/student", "jobs/student.html"],
+  ["/recruit/", "recruit/index.html"],
   ["/recruit/newgrad", "recruit/newgrad.html"],
   ["/recruit/career", "recruit/career.html"],
   ["/area", "area.html"],
