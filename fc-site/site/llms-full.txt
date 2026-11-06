@@ -1,13 +1,50 @@
 # FLOWCLOUD（フロウクラウド）泉大津の完全予約の会員制美容室
 > 大阪府泉大津市東雲町1-20（〒595-0026）。南海本線「泉大津駅」から徒歩約3分。TEL 0725-90-5699。営業9:00〜20:00（最終受付18:00）・定休日は毎週月曜・火曜（不定休の日あり）・完全予約制。運営: 株式会社行雲流水（姉妹店 glow）。
+
+## 基本情報
 - 得意: 髪質改善ストレート・髪質改善パーマ、ヘッドスパ、トリートメント。半個室の空間で、素髪をきれいにしたい40代・50代の方にも通っていただいています。
 - 料金（税込）: カット¥5,500（10歳以上・シャンプーブロー込）、ナチュラルパーマ¥7,700〜、ハードパーマ¥9,900〜、髪質改善ストレート¥16,500〜、シスキュア（当店オリジナルのトリートメント）¥3,850。
 - キャスト: 藤津一弥（オーナースタイリスト）、もえ・たかこ・あい（スタイリスト）。
-- 予約: ネット予約 https://sam003.salonanswer.com/sas/reserve/xVd3T4lIQ/ ／ ホットペッパー https://beauty.hotpepper.jp/slnH000173335/ ／ 電話 0725-90-5699
-- 口コミ: https://beauty.hotpepper.jp/slnH000173335/review/ （ホットペッパービューティー 口コミ平均4.64（直近1年の集計・口コミ56件）／Googleマップ 4.8（クチコミ118件）・2026年11月時点）
-- 採用: https://ko-un-ryu-sui.com/
-- 全文版（全ページの本文を1ファイルにまとめたもの）: https://www.flowcloud.net/llms-full.txt
-- ページ: https://www.flowcloud.net/ https://www.flowcloud.net/privacy/ https://www.flowcloud.net/coupon/ https://www.flowcloud.net/menu/ https://www.flowcloud.net/style/ https://www.flowcloud.net/hair-quality/ https://www.flowcloud.net/color/ https://www.flowcloud.net/hair-care-40-50/ https://www.flowcloud.net/recruite/ https://www.flowcloud.net/straight/ https://www.flowcloud.net/cota-products/ https://www.flowcloud.net/headspa/ https://www.flowcloud.net/men/ https://www.flowcloud.net/first/ https://www.flowcloud.net/area/ https://www.flowcloud.net/faq/ https://www.flowcloud.net/company/ https://www.flowcloud.net/cast/ https://www.flowcloud.net/voice/ https://www.flowcloud.net/salon-blog/ https://www.flowcloud.net/salon-blog/fuyu-kansou-pasatsuki-40-50/ https://www.flowcloud.net/salon-blog/nenmatsu-nenshi-2026-2027/ https://www.flowcloud.net/salon-blog/color-taishoku-40-50/ https://www.flowcloud.net/salon-blog/home-hair-care-cota-store/ https://www.flowcloud.net/salon-blog/kuse-uneri-straight-40-50/ https://www.flowcloud.net/salon-blog/kyugyobi-2026-11-12/ https://www.flowcloud.net/salon-blog/headspa-shampoo-kukan/
+- 電話: 0725-90-5699
+
+## 予約・口コミ
+- [24時間ネット予約](https://sam003.salonanswer.com/sas/reserve/xVd3T4lIQ/)
+- [ホットペッパービューティー（クーポン・予約）](https://beauty.hotpepper.jp/slnH000173335/)
+- [ホットペッパービューティーの口コミ](https://beauty.hotpepper.jp/slnH000173335/review/): ホットペッパービューティー 口コミ平均4.64（直近1年の集計・口コミ56件）／Googleマップ 4.8（クチコミ118件）・2026年11月時点
+
+## 姉妹店・採用
+- [姉妹店 glow（泉大津駅徒歩1分）](https://glow-izumiotsu.jp/)
+- [採用情報（株式会社行雲流水）](https://ko-un-ryu-sui.com/)
+
+## ページ一覧
+- [全文版（全ページの本文を1ファイルにまとめたもの）](https://www.flowcloud.net/llms-full.txt)
+- [泉大津の美容院・美容室 FLOWCLOUD（フロウクラウド）｜髪質改善・ヘッドスパ｜完全予約制](https://www.flowcloud.net/)
+- [プライバシーポリシー｜FLOWCLOUD](https://www.flowcloud.net/privacy/)
+- [クーポン｜泉大津の美容室 FLOWCLOUD｜髪質改善・ヘッドスパ・カラー](https://www.flowcloud.net/coupon/)
+- [メニュー・料金｜髪質改善・カラー・ヘッドスパ｜泉大津の美容室 FLOWCLOUD](https://www.flowcloud.net/menu/)
+- [ヘアスタイルギャラリー｜ロング・ボブ・ショート・カラー｜泉大津の美容室 FLOWCLOUD](https://www.flowcloud.net/style/)
+- [泉大津の髪質改善｜ストレート・パーマ・シスキュアの料金と選び方｜美容室 FLOWCLOUD](https://www.flowcloud.net/hair-quality/)
+- [泉大津のカラー・白髪染めのご相談｜料金と相談のしかた｜美容室 FLOWCLOUD](https://www.flowcloud.net/color/)
+- [40代・50代の髪質改善｜パサつき・うねり・ボリューム｜泉大津の美容室 FLOWCLOUD](https://www.flowcloud.net/hair-care-40-50/)
+- [求人情報｜FLOWCLOUD（泉大津）｜美容師・パート・学生アルバイト｜株式会社行雲流水](https://www.flowcloud.net/recruite/)
+- [泉大津の縮毛矯正のご相談｜髪質改善ストレート16,500円〜｜FLOWCLOUD](https://www.flowcloud.net/straight/)
+- [コタ（COTA）全商品を店頭販売｜泉大津の美容室 FLOWCLOUD](https://www.flowcloud.net/cota-products/)
+- [泉大津のヘッドスパ｜真っ暗な半個室で炭酸・アロマ・リフトアップ｜FLOWCLOUD](https://www.flowcloud.net/headspa/)
+- [泉大津のメンズカット・メンズヘッドスパ｜完全予約・半個室の美容室｜FLOWCLOUD](https://www.flowcloud.net/men/)
+- [初めてのお客様へ｜完全予約の会員制美容室 FLOWCLOUD｜泉大津](https://www.flowcloud.net/first/)
+- [泉大津・岸和田・高石・和泉・堺から通える美容室｜対応エリア・アクセス｜FLOWCLOUD](https://www.flowcloud.net/area/)
+- [よくある質問｜予約・営業時間・場所・髪質改善｜泉大津の美容室 FLOWCLOUD](https://www.flowcloud.net/faq/)
+- [会社概要・アクセス｜FLOWCLOUD（株式会社行雲流水）｜泉大津駅徒歩3分](https://www.flowcloud.net/company/)
+- [キャスト紹介｜FLOWCLOUD（フロウクラウド）泉大津の美容室](https://www.flowcloud.net/cast/)
+- [お客様の声｜40代・50代のお客様の口コミ｜泉大津の美容室 FLOWCLOUD](https://www.flowcloud.net/voice/)
+- [お知らせ・ブログ｜泉大津の美容室 FLOWCLOUD](https://www.flowcloud.net/salon-blog/)
+- [冬の乾燥でパサつく40代・50代の髪｜おうちの見直しと泉大津の美容室｜FLOWCLOUD（泉大津の美容室）](https://www.flowcloud.net/salon-blog/fuyu-kansou-pasatsuki-40-50/)
+- [年末年始（2026〜2027）の営業と1月の休業日のお知らせ｜FLOWCLOUD（泉大津の美容室）](https://www.flowcloud.net/salon-blog/nenmatsu-nenshi-2026-2027/)
+- [カラーの退色が気になる40代・50代へ｜泉大津FLOWCLOUDのご相談の仕方｜FLOWCLOUD（泉大津の美容室）](https://www.flowcloud.net/salon-blog/color-taishoku-40-50/)
+- [おうちでのヘアケアの選び方｜コタ全商品を店頭でご相談（泉大津）｜FLOWCLOUD（泉大津の美容室）](https://www.flowcloud.net/salon-blog/home-hair-care-cota-store/)
+- [クセ・うねりが気になる大人の髪｜髪質改善ストレートの考え方｜FLOWCLOUD（泉大津の美容室）](https://www.flowcloud.net/salon-blog/kuse-uneri-straight-40-50/)
+- [11月・12月の休業日のお知らせ｜FLOWCLOUD（泉大津の美容室）](https://www.flowcloud.net/salon-blog/kyugyobi-2026-11-12/)
+- [真っ暗な空間で受ける、FLOWCLOUDのシャンプーとヘッドスパ｜FLOWCLOUD（泉大津の美容室）](https://www.flowcloud.net/salon-blog/headspa-shampoo-kukan/)
 
 （このファイルは、サイトの全ページの本文を1つにまとめたものです。最新の内容は各ページのURLをご確認ください。）
 

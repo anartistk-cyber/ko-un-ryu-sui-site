@@ -21,7 +21,7 @@ h1,h2,h3,.logo,.cta-lead,.ft-n,.cal-t{font-family:var(--hf)}
 .b-net{background:var(--cta)}
 .b-hp{background:#f7ecd0;color:var(--ink)!important;border:1px solid var(--goldl);box-shadow:0 6px 16px rgba(182,146,90,.22)}
 .b-tel{background:var(--pri)}
-.b-line{background:#06a755}
+.b-line{background:#05803f}
 .b-map{background:#6c645c}
 /* hero */
 .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center;padding:56px max(20px,calc((100% - 1080px)/2)) 76px;background:linear-gradient(180deg,#fbf7f1 0%,#f4f0e6 100%);min-height:0;position:relative;overflow:hidden;color:var(--ink)}

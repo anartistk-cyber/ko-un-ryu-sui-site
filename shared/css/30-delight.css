@@ -3,7 +3,7 @@
 @supports (animation-timeline:view()){
  @media(prefers-reduced-motion:no-preference){
   .g3 article,.pm a,.worry li,.cast li,.gal figure,.rv blockquote,.cps .cp,.two>*{animation:rise both linear;animation-timeline:view();animation-range:entry 0% entry 38%}
-  @keyframes rise{from{opacity:.5;transform:translateY(24px)}to{opacity:1;transform:none}}
+  @keyframes rise{from{opacity:1;transform:translateY(24px)}to{opacity:1;transform:none}}
  }
 }
 .quiz{max-width:900px;margin:0 auto;text-align:center}

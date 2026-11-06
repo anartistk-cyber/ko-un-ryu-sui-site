@@ -36,7 +36,7 @@
 .gm-lead{text-align:center;margin:-8px 0 8px;color:var(--mute);font-weight:700}
 .gm-more{text-align:center;margin:8px 0 0}
 .gm-sec{overflow:hidden}
-.burst{position:absolute;right:max(14px,calc((100% - 1080px)/2 + 10px));top:22px;width:88px;height:88px;display:flex;align-items:center;justify-content:center;text-align:center;font:700 13px/1.25 var(--hf);color:var(--cta);background:var(--butter);clip-path:polygon(50.0% 0.0%,60.6% 10.4%,75.0% 6.7%,79.0% 21.0%,93.3% 25.0%,89.6% 39.4%,100.0% 50.0%,89.6% 60.6%,93.3% 75.0%,79.0% 79.0%,75.0% 93.3%,60.6% 89.6%,50.0% 100.0%,39.4% 89.6%,25.0% 93.3%,21.0% 79.0%,6.7% 75.0%,10.4% 60.6%,0.0% 50.0%,10.4% 39.4%,6.7% 25.0%,21.0% 21.0%,25.0% 6.7%,39.4% 10.4%);transform:rotate(12deg);z-index:2}
+.burst{position:absolute;right:max(14px,calc((100% - 1080px)/2 + 10px));top:22px;width:88px;height:88px;display:flex;align-items:center;justify-content:center;text-align:center;font:700 13px/1.25 var(--hf);color:var(--ctad);background:var(--butter);clip-path:polygon(50.0% 0.0%,60.6% 10.4%,75.0% 6.7%,79.0% 21.0%,93.3% 25.0%,89.6% 39.4%,100.0% 50.0%,89.6% 60.6%,93.3% 75.0%,79.0% 79.0%,75.0% 93.3%,60.6% 89.6%,50.0% 100.0%,39.4% 89.6%,25.0% 93.3%,21.0% 79.0%,6.7% 75.0%,10.4% 60.6%,0.0% 50.0%,10.4% 39.4%,6.7% 25.0%,21.0% 21.0%,25.0% 6.7%,39.4% 10.4%);transform:rotate(12deg);z-index:2}
 @media(max-width:720px){.gc{width:158px;padding:8px 8px 34px}.gm-in{gap:20px;--gg:10px}.burst{position:static;width:64px;height:64px;font-size:10.5px;margin:-12px auto 4px}}
 /* /style/ のグリッド（ポラロイド） */
 .gf-chips label{border:2px solid var(--pinkl)}

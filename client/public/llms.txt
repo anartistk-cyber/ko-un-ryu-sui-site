@@ -4,28 +4,28 @@
 
 ## 基本情報
 - 運営: 株式会社行雲流水（代表: 藤津一弥、設立2020年4月1日）
-- FLOWCLOUD（フロウクラウド）: 大阪府泉大津市東雲町1-20（南海本線 泉大津駅から徒歩約3分） https://www.flowcloud.net/
-- glow（グロウ）: 大阪府泉大津市旭町18-3 いずみおおつCITY 1F（泉大津駅東口から徒歩約1分） https://glow-izumiotsu.jp/
-- 問い合わせ: info@ko-un-ryu-sui.com / 公式LINE https://lin.ee/Z0JP8sH / TEL 0725-90-5699（FLOWCLOUD）
-- Googleのページ: https://share.google/wWE2XkDrLOjj8NAit
+- [FLOWCLOUD（フロウクラウド）](https://www.flowcloud.net/): 大阪府泉大津市東雲町1-20（南海本線 泉大津駅から徒歩約3分）
+- [glow（グロウ）](https://glow-izumiotsu.jp/): 大阪府泉大津市旭町18-3 いずみおおつCITY 1F（泉大津駅東口から徒歩約1分）
+- 問い合わせ: info@ko-un-ryu-sui.com / [公式LINE](https://lin.ee/Z0JP8sH) / TEL 0725-90-5699（FLOWCLOUD）
+- [Googleのビジネスプロフィール](https://share.google/wWE2XkDrLOjj8NAit)
 
 ## 主なページ
-- トップ（見学・相談・よくある質問・アクセス）: https://ko-un-ryu-sui.com/
-- 募集職種の一覧: https://ko-un-ryu-sui.com/recruit/
-- 募集職種: https://ko-un-ryu-sui.com/jobs/stylist , /jobs/assistant , /jobs/part , /jobs/student
-- 新卒採用: https://ko-un-ryu-sui.com/recruit/newgrad
-- 中途採用: https://ko-un-ryu-sui.com/recruit/career
-- 勤務エリア（泉大津・岸和田・高石・和泉・堺・泉佐野・貝塚など南大阪・泉州）: https://ko-un-ryu-sui.com/area
-- 美容学校の学生向け（新卒・見学）: https://ko-un-ryu-sui.com/school
-- 高校生・美容学生向け（アルバイト・見学）: https://ko-un-ryu-sui.com/recruit/student
-- よくある質問: https://ko-un-ryu-sui.com/faq
-- 働き方（シフト・休日・教育）: https://ko-un-ryu-sui.com/workstyle
-- 見学・体験の流れ: https://ko-un-ryu-sui.com/visit
-- 記事一覧: https://ko-un-ryu-sui.com/blog/
-  - 見学・体験と選考: /blog/taiken-guide ／ 1年デビューの教育: /blog/one-year-debut-curriculum ／ 早番・遅番: /blog/hayaban-osoban
-  - 初任給・手当: /blog/shoninkyu-teate ／ 学生アルバイト: /blog/student-baito ／ サロン選びのチェックリスト: /blog/salon-erabi-checklist ／ 転職のポイント: /blog/tenshoku-point
-- 個人情報の取扱い: https://ko-un-ryu-sui.com/privacy
-- 全文版（全ページの本文を1ファイルにまとめたもの）: https://ko-un-ryu-sui.com/llms-full.txt
+- [トップ（見学・相談・よくある質問・アクセス）](https://ko-un-ryu-sui.com/)
+- [募集職種の一覧](https://ko-un-ryu-sui.com/recruit/)
+- 募集職種: [スタイリスト](https://ko-un-ryu-sui.com/jobs/stylist) ／ [アシスタント](https://ko-un-ryu-sui.com/jobs/assistant) ／ [パート](https://ko-un-ryu-sui.com/jobs/part) ／ [学生アルバイト](https://ko-un-ryu-sui.com/jobs/student)
+- [新卒採用](https://ko-un-ryu-sui.com/recruit/newgrad)
+- [中途採用](https://ko-un-ryu-sui.com/recruit/career)
+- [勤務エリア（泉大津・岸和田・高石・和泉・堺・泉佐野・貝塚など南大阪・泉州）](https://ko-un-ryu-sui.com/area)
+- [美容学校の学生向け（新卒・見学）](https://ko-un-ryu-sui.com/school)
+- [高校生・美容学生向け（アルバイト・見学）](https://ko-un-ryu-sui.com/recruit/student)
+- [よくある質問](https://ko-un-ryu-sui.com/faq)
+- [働き方（シフト・休日・教育）](https://ko-un-ryu-sui.com/workstyle)
+- [見学・体験の流れ](https://ko-un-ryu-sui.com/visit)
+- [記事一覧](https://ko-un-ryu-sui.com/blog/)
+  - [見学・体験と選考](https://ko-un-ryu-sui.com/blog/taiken-guide) ／[1年デビューの教育](https://ko-un-ryu-sui.com/blog/one-year-debut-curriculum) ／[早番・遅番](https://ko-un-ryu-sui.com/blog/hayaban-osoban)
+  - [初任給・手当](https://ko-un-ryu-sui.com/blog/shoninkyu-teate) ／[学生アルバイト](https://ko-un-ryu-sui.com/blog/student-baito) ／[サロン選びのチェックリスト](https://ko-un-ryu-sui.com/blog/salon-erabi-checklist) ／[転職のポイント](https://ko-un-ryu-sui.com/blog/tenshoku-point)
+- [個人情報の取扱い](https://ko-un-ryu-sui.com/privacy)
+- [全文版（全ページの本文を1ファイルにまとめたもの）](https://ko-un-ryu-sui.com/llms-full.txt)
 
 ## 注意
 - 一部の条件は「要相談」です。詳細は見学・相談時または募集要項でご確認ください。

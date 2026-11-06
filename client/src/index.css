@@ -1025,3 +1025,29 @@ html.cv-off main>:is(.worry-section,.who-section,.statement-section,.vision-sect
 /* 応募フォーム（contact）は対象外：フォームの入力・検証・#contact-form へのジャンプを確実にするため */
 .worry-section{--cis:1050px}.who-section{--cis:2574px}.statement-section{--cis:1869px}.vision-section{--cis:583px}.merit-section{--cis:1660px}.salons-section{--cis:2704px}.jobs-section{--cis:1534px}.education-section{--cis:3381px}.training-scenes-section{--cis:1197px}.gallery-section{--cis:1574px}.staff-section{--cis:3590px}.guideline-section{--cis:5106px}.life-section{--cis:2787px}.experience-section{--cis:1535px}.access-section{--cis:1630px}.company-section{--cis:2640px}.insta-section{--cis:2760px}.blog-section{--cis:1848px}.faq-section{--cis:2427px}
 @media(min-width:821px){.worry-section{--cis:946px}.who-section{--cis:1259px}.statement-section{--cis:1576px}.vision-section{--cis:628px}.merit-section{--cis:1008px}.salons-section{--cis:2137px}.jobs-section{--cis:861px}.education-section{--cis:2627px}.training-scenes-section{--cis:1084px}.gallery-section{--cis:1553px}.staff-section{--cis:2700px}.guideline-section{--cis:3244px}.life-section{--cis:2515px}.experience-section{--cis:1080px}.access-section{--cis:1148px}.company-section{--cis:2200px}.insta-section{--cis:1310px}.blog-section{--cis:1071px}.faq-section{--cis:2130px}}
+
+/* ===== 色のコントラスト（WCAG AA 4.5:1。大きい文字は3:1）：PageSpeed「ユーザー補助」の指摘を解消 =====
+   ポップな色は飾り（枠・影・背景）にはそのまま使い、白い文字を載せる面と小さな色文字だけを、同じ色合いのまま少し深くする。 */
+:root { --hot-d: #d6336c; --coral-d: #d93a2b; --line-d: #04873a; }
+/* 白い文字を載せるピンク・コーラル・LINEグリーンの面 */
+.button-primary, .ticker, .blog-cta, .job-detail-apply { background: var(--hot-d); }
+.button-primary { box-shadow: 0 6px 0 #a5224f; }
+.internal-apply-link, .job-detail-cta, .choice-mail b, .contact-form label b { background: var(--coral-d); }
+.internal-apply-link { box-shadow: 0 4px 0 #a52a1f; }
+.job-detail-cta { box-shadow: 0 5px 0 #a52a1f; }
+.button-line, .job-detail-line, .mobile-cta .mobile-line, .choice-line b { background: var(--line-d); }
+.button-line { box-shadow: 0 5px 0 #036a2e; }
+.job-detail-apply > div > p { color: #fff; }
+.merit-card-featured .card-number { color: var(--ink); }
+/* 小さな色文字 */
+.guideline-table th { color: #d22c68; }
+.worry-q, .facts-grid b, .lp-catch { color: #d42365; }
+.guideline-title p, .info-stack .guideline-title p, .staff-voice-quote span, .job-more > p, .official-band p, .contact-form-heading > span, .form-more summary, .desktop-nav a[target], .education-section .eyebrow, .contact-section .eyebrow, .contact-head .eyebrow { color: #ba3e61; }
+.choice-mail .choice-tag, .contact-form-heading small em { color: #b84338; }
+.quote-card > small { color: #607475; }
+.leader-career { color: #596e6f; }
+.vision-heading .eyebrow, .eyebrow { color: #3f595a; }
+.privacy-contact > div > p { color: #8fd0ce; }
+/* 飾りの大きな数字（読ませる文字ではないが、薄すぎる色を3:1まで） */
+.section-index { color: #699895; }
+.job-detail-hero > span { color: #6a988d; }

@@ -98,3 +98,14 @@ export function buildLlmsFull(dir, base, header) {
   fs.writeFileSync(path.join(dir, 'llms-full.txt'), body);
   return { pages: parts.length, bytes: Buffer.byteLength(body) };
 }
+
+// llms.txt 用：各ページの <title> を読んで「- [タイトル](URL)」の一覧にする（llms.txt の推奨形式＝Markdownのリンク。PageSpeedの llms.txt 監査も、リンクが無いと不合格にする）
+export function llmsPageLinks(outDir, base, urls) {
+  return urls.map((u) => {
+    const f = path.join(outDir, u.replace(/^\//, ''), 'index.html');
+    let t = u;
+    try { t = (fs.readFileSync(f, 'utf8').match(/<title>([^<]*)<\/title>/) || [])[1] || u; } catch { /* ページが無ければURLのまま */ }
+    t = t.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/[\[\]]/g, '');
+    return `- [${t}](${base}${u})`;
+  }).join('\n');
+}

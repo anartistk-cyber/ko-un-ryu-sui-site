@@ -1,10 +1,48 @@
 # glow（グロウ）泉大津駅徒歩1分の美容室
 > 大阪府泉大津市旭町18-3 いずみおおつCITY 1F。南海本線「泉大津駅」徒歩1分。TEL 0725-51-7222。営業9:00〜20:00・定休日は毎週月曜・火曜（不定休の日あり）・予約制。運営: 株式会社行雲流水（姉妹店 FLOWCLOUD）。
+
+## 基本情報
 - 得意: 似合わせカット、艶カラー、髪質改善、デジタルパーマ、ヘッドスパ。10代・20代の「素髪をきれいに」したい方に人気。
 - キャスト: しおん・あゆな（スタイリスト）。
 - 料金（税込）: カット¥5,500（シャンプーブロー込）、カラー¥6,600〜、ナチュラルパーマ¥7,700〜、髪質改善ストレート¥16,500〜、リフトアップヘッドスパ¥5,500。
 - 駐車場: アルザ地下駐車場（最初の1時間無料、店舗利用1,100円以上で追加2時間無料、最大3時間）。
-- 予約: https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000798580
-- 口コミ: https://beauty.hotpepper.jp/slnH000798580/review/（ホットペッパービューティー 口コミ平均4.53（直近1年の集計・口コミ31件）／Googleマップ 4.9（クチコミ17件）・2026年11月時点）
-- 全文版（全ページの本文を1ファイルにまとめたもの）: https://glow-izumiotsu.jp/llms-full.txt
-- ページ: https://glow-izumiotsu.jp/ https://glow-izumiotsu.jp/privacy/ https://glow-izumiotsu.jp/coupon/ https://glow-izumiotsu.jp/menu/ https://glow-izumiotsu.jp/style/ https://glow-izumiotsu.jp/young/ https://glow-izumiotsu.jp/short-perm/ https://glow-izumiotsu.jp/color/ https://glow-izumiotsu.jp/hair-quality/ https://glow-izumiotsu.jp/straight/ https://glow-izumiotsu.jp/cota-products/ https://glow-izumiotsu.jp/headspa/ https://glow-izumiotsu.jp/first/ https://glow-izumiotsu.jp/cast/ https://glow-izumiotsu.jp/area/ https://glow-izumiotsu.jp/faq/ https://glow-izumiotsu.jp/voice/ https://glow-izumiotsu.jp/journal/ https://glow-izumiotsu.jp/journal/head-spa-first-time-young/ https://glow-izumiotsu.jp/journal/first-perm-counseling-glow/ https://glow-izumiotsu.jp/journal/nenmatsu-nenshi-2026-2027/ https://glow-izumiotsu.jp/journal/short-layer-asa-raku/ https://glow-izumiotsu.jp/journal/color-first-counseling-glow/ https://glow-izumiotsu.jp/journal/home-hair-care-cota-store-glow/ https://glow-izumiotsu.jp/journal/kuse-hiroga-straight-young/ https://glow-izumiotsu.jp/journal/access-parking/ https://glow-izumiotsu.jp/journal/first-salon-counseling/ https://glow-izumiotsu.jp/journal/sugao-care-young/
+- 電話: 0725-51-7222
+
+## 予約・口コミ
+- [ネット予約（ホットペッパービューティー）](https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000798580)
+- [ホットペッパービューティーの口コミ](https://beauty.hotpepper.jp/slnH000798580/review/): ホットペッパービューティー 口コミ平均4.53（直近1年の集計・口コミ31件）／Googleマップ 4.9（クチコミ17件）・2026年11月時点
+
+## 姉妹店・採用
+- [姉妹店 FLOWCLOUD（泉大津の完全予約・半個室の美容室）](https://www.flowcloud.net/)
+- [採用情報（株式会社行雲流水）](https://ko-un-ryu-sui.com/)
+
+## ページ一覧
+- [全文版（全ページの本文を1ファイルにまとめたもの）](https://glow-izumiotsu.jp/llms-full.txt)
+- [泉大津駅徒歩1分の美容室・美容院｜glow（グロウ）｜10代・20代の似合わせカット・艶カラー](https://glow-izumiotsu.jp/)
+- [プライバシーポリシー｜glow](https://glow-izumiotsu.jp/privacy/)
+- [クーポン｜泉大津駅徒歩1分の美容室 glow｜新規限定・カット＋艶カラー](https://glow-izumiotsu.jp/coupon/)
+- [メニュー・料金｜カット・カラー・パーマ・髪質改善・ヘッドスパ｜泉大津の美容室 glow](https://glow-izumiotsu.jp/menu/)
+- [ヘアスタイルギャラリー｜ボブ・ショート・ロング・ウェーブ｜泉大津駅徒歩1分の美容室 glow](https://glow-izumiotsu.jp/style/)
+- [10代・20代の方へ｜泉大津の美容室glow｜素髪をきれいに・似合わせカット・艶カラー](https://glow-izumiotsu.jp/young/)
+- [似合わせカット・艶カラー・デジタルパーマ・ショート｜泉大津の美容室 glow](https://glow-izumiotsu.jp/short-perm/)
+- [泉大津の艶カラー・カラーのご相談｜料金と相談のコツ｜美容室 glow（泉大津駅徒歩1分）](https://glow-izumiotsu.jp/color/)
+- [泉大津の髪質改善｜ストレート・パーマ・シスキュアの料金と選び方｜美容室 glow（駅徒歩1分）](https://glow-izumiotsu.jp/hair-quality/)
+- [泉大津の縮毛矯正のご相談｜髪質改善ストレート16,500円〜｜glow（駅徒歩1分）](https://glow-izumiotsu.jp/straight/)
+- [コタ（COTA）全商品を店頭販売｜泉大津の美容室 glow](https://glow-izumiotsu.jp/cota-products/)
+- [泉大津のヘッドスパ｜炭酸2,200円〜・リフトアップ・ヘッドキュア｜glow（駅徒歩1分）](https://glow-izumiotsu.jp/headspa/)
+- [初めての方へ｜予約制の美容室 glow｜泉大津駅徒歩1分](https://glow-izumiotsu.jp/first/)
+- [キャスト紹介｜泉大津駅徒歩1分の美容室 glow（グロウ）](https://glow-izumiotsu.jp/cast/)
+- [泉大津・和泉・高石・堺・岸和田から通える美容室｜対応エリア・アクセス｜glow](https://glow-izumiotsu.jp/area/)
+- [よくある質問｜予約・駐車場・営業時間・髪質改善｜泉大津の美容室 glow](https://glow-izumiotsu.jp/faq/)
+- [お客様の声｜口コミ｜泉大津駅徒歩1分の美容室 glow](https://glow-izumiotsu.jp/voice/)
+- [お知らせ・ブログ｜泉大津の美容室 glow](https://glow-izumiotsu.jp/journal/)
+- [ヘッドスパが初めての10代・20代へ｜泉大津・和泉・高石・堺・岸和田から通えるglowの選び方｜glow（泉大津の美容室）](https://glow-izumiotsu.jp/journal/head-spa-first-time-young/)
+- [初めてのパーマで迷わない｜泉大津・和泉・高石・堺の10代20代へ、glowの相談のしかた｜glow（泉大津の美容室）](https://glow-izumiotsu.jp/journal/first-perm-counseling-glow/)
+- [年末年始の営業と11月〜1月の休業日のお知らせ（2026〜2027）｜glow（泉大津の美容室）](https://glow-izumiotsu.jp/journal/nenmatsu-nenshi-2026-2027/)
+- [朝のセットが楽になるショート・レイヤーカット｜泉大津glowの相談のしかた｜glow（泉大津の美容室）](https://glow-izumiotsu.jp/journal/short-layer-asa-raku/)
+- [艶カラーが気になる10代・20代へ｜泉大津glowでの相談のコツ｜glow（泉大津の美容室）](https://glow-izumiotsu.jp/journal/color-first-counseling-glow/)
+- [おうちでのヘアケアの選び方｜コタ全商品を店頭でご相談（glow）｜glow（泉大津の美容室）](https://glow-izumiotsu.jp/journal/home-hair-care-cota-store-glow/)
+- [くせ毛・広がりが気になる10代20代へ｜髪質改善ストレートの前に｜glow（泉大津の美容室）](https://glow-izumiotsu.jp/journal/kuse-hiroga-straight-young/)
+- [泉大津駅から徒歩1分。glowへのアクセスと駐車場のご案内｜glow（泉大津の美容室）](https://glow-izumiotsu.jp/journal/access-parking/)
+- [初めての美容室で迷わない。カウンセリングで伝えるコツ（泉大津・和泉・高石から）｜glow（泉大津の美容室）](https://glow-izumiotsu.jp/journal/first-salon-counseling/)
+- [素髪をきれいに見せる3つの習慣｜10代・20代のヘアケア（泉大津の美容室glow）｜glow（泉大津の美容室）](https://glow-izumiotsu.jp/journal/sugao-care-young/)
