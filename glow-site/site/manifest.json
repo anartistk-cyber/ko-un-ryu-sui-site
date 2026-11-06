@@ -209,6 +209,62 @@
    "sha256": "a1ade4f0b8ffe040a414186eee3f8b0de24788b43fa38f48b0f918015ee60dfb"
   },
   {
+   "path": "gl/img/strip-glow_img-03-380.jpg",
+   "sha256": "642fd216e73743bc98234f3c64a8987dea6a8ea890814bfd4c88dac854b87469"
+  },
+  {
+   "path": "gl/img/strip-glow_img-03-560.jpg",
+   "sha256": "4fdef467549d4cf448cbf0e6ad8c5045e7bec61b3ee8f421a19df2506397859a"
+  },
+  {
+   "path": "gl/img/strip-glow_img-05-380.jpg",
+   "sha256": "d9c5a57638954b7cfc769bbe194e87e977bd373ef3da5d7ec8fb7ce5bed061a4"
+  },
+  {
+   "path": "gl/img/strip-glow_img-05-560.jpg",
+   "sha256": "653ece084e2d519e28a7be882ab3b1ce05f26ecb7ef8ae33967eb4385afb3148"
+  },
+  {
+   "path": "gl/img/strip-glow_img-06-380.jpg",
+   "sha256": "5303e9c0e55993b81d3076aa1a9fcbd7959b76637bb4a752b2e31036ceeced94"
+  },
+  {
+   "path": "gl/img/strip-glow_img-06-560.jpg",
+   "sha256": "db4fd0b24d32c04c69a24f1d731606b50157ef64b853c4a11c2572fa13b6854d"
+  },
+  {
+   "path": "gl/img/strip-glow_img-08-380.jpg",
+   "sha256": "ae833bf3341809eadf94ff9dfcc3e8f4897bec117f8c55f0c4a18e2ba003faa4"
+  },
+  {
+   "path": "gl/img/strip-glow_img-08-560.jpg",
+   "sha256": "fb42ba3cb0fe1c636d6d63d3aa29cb3699dbef915318b9a3c52ff7c19bba4569"
+  },
+  {
+   "path": "gl/img/strip-glow_img-09-380.jpg",
+   "sha256": "0de44858aee1c95b7cf75d3cfce6ff824568ff281fe361fb9424218d1704ff0f"
+  },
+  {
+   "path": "gl/img/strip-glow_img-09-560.jpg",
+   "sha256": "c87395b49519dc0c9c075d751ba45b80c1f8c9607bc305ea552a57b49ebc27f2"
+  },
+  {
+   "path": "gl/img/strip-glow_img-10-380.jpg",
+   "sha256": "6afe6323d1c07d037675a849b90e9475fc251d27d7d1a2052283fce2b4c19168"
+  },
+  {
+   "path": "gl/img/strip-glow_img-10-560.jpg",
+   "sha256": "d85ae25f79f70878d6dc941a52b7dcce9ba08887e1788cbda0ecb53360a633e0"
+  },
+  {
+   "path": "gl/img/strip-staff_3-380.jpg",
+   "sha256": "0c5811bc7c999f0d789404d134f72ac8110a5a8f488a8b8c0f0a1a5f0c1ac3db"
+  },
+  {
+   "path": "gl/img/strip-staff_3-560.jpg",
+   "sha256": "28cc78bfebfd9e7c2056717c80cb8b17b6f50f71bb80ca0aba681a99cd4ccd2d"
+  },
+  {
    "path": "gl/style.css",
    "sha256": "d8213dcc01a7959cd8872bf8bf2b2764c22f2c9533f59a7df9ddaf55534a1ab7"
   },
@@ -218,7 +274,7 @@
   },
   {
    "path": "index.html",
-   "sha256": "2fd74ecd42f8b47f81ff4c2770733d7e784d9e52c67b46808d8df7e7954e4677"
+   "sha256": "caab565e1bf1aeec836588b9ef62451dbb8b51bb203edafcf11aaa3be3ce3d7c"
   },
   {
    "path": "journal/access-parking/index.html",
