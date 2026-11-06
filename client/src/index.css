@@ -1016,3 +1016,12 @@ p, li, dd, td, th, summary { word-break: auto-phrase; line-break: strict; text-w
 @media (max-width: 850px) {
   .hero-actions .button-primary { grid-column: 1 / -1; flex: 1 1 100%; min-height: 56px; font-size: 14px; }
 }
+
+/* 画面の外のセクションは、見える直前まで描画（レイアウト）を後回しにする。初回のレイアウト負荷が約半分になり、PageSpeed の TBT（表示直後の固まり）が下がる。
+   contain-intrinsic-size は実測の高さ（スマホ412幅／PC1280幅）。auto を付けたので、一度表示した後は実際の高さを覚える。 */
+main>:is(.worry-section,.who-section,.statement-section,.vision-section,.merit-section,.salons-section,.jobs-section,.education-section,.training-scenes-section,.gallery-section,.staff-section,.guideline-section,.life-section,.experience-section,.access-section,.company-section,.insta-section,.blog-section,.faq-section){content-visibility:auto;contain-intrinsic-size:auto var(--cis,900px)}
+/* ページ内リンク（#jobs など）を押した／#付きで開いたときは、先に全部を描画してからスクロールする（高さが「目安」のままだと着地がずれるため）。切替は client/index.html の小さなスクリプト */
+html.cv-off main>:is(.worry-section,.who-section,.statement-section,.vision-section,.merit-section,.salons-section,.jobs-section,.education-section,.training-scenes-section,.gallery-section,.staff-section,.guideline-section,.life-section,.experience-section,.access-section,.company-section,.insta-section,.blog-section,.faq-section){content-visibility:visible}
+/* 応募フォーム（contact）は対象外：フォームの入力・検証・#contact-form へのジャンプを確実にするため */
+.worry-section{--cis:1050px}.who-section{--cis:2574px}.statement-section{--cis:1869px}.vision-section{--cis:583px}.merit-section{--cis:1660px}.salons-section{--cis:2704px}.jobs-section{--cis:1534px}.education-section{--cis:3381px}.training-scenes-section{--cis:1197px}.gallery-section{--cis:1574px}.staff-section{--cis:3590px}.guideline-section{--cis:5106px}.life-section{--cis:2787px}.experience-section{--cis:1535px}.access-section{--cis:1630px}.company-section{--cis:2640px}.insta-section{--cis:2760px}.blog-section{--cis:1848px}.faq-section{--cis:2427px}
+@media(min-width:821px){.worry-section{--cis:946px}.who-section{--cis:1259px}.statement-section{--cis:1576px}.vision-section{--cis:628px}.merit-section{--cis:1008px}.salons-section{--cis:2137px}.jobs-section{--cis:861px}.education-section{--cis:2627px}.training-scenes-section{--cis:1084px}.gallery-section{--cis:1553px}.staff-section{--cis:2700px}.guideline-section{--cis:3244px}.life-section{--cis:2515px}.experience-section{--cis:1080px}.access-section{--cis:1148px}.company-section{--cis:2200px}.insta-section{--cis:1310px}.blog-section{--cis:1071px}.faq-section{--cis:2130px}}
