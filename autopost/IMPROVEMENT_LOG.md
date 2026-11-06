@@ -332,3 +332,9 @@
 - 本番PSI（スマホ）：**100／100／100／100**（維持）。FCP 1.0秒・LCP 1.0秒・TBT 80ms・CLS 0.028・SI 1.0秒。
 - PC版の残りは LCP 1.8秒（ヒーロー写真 img.ph1）。内訳（実測）：TTFB 10ms／リソース読み込みの遅延 170ms／読み込み時間 240ms／描画の遅延 160ms。PSIの点数はこの実測より長いシミュレーション値なので、写真の発見を早める（PC幅だけの preload）を次に試す。
 - 学び：PSIの測定機に日本語フォントが無い場合、代替書体の指定では行数の変化を防げない。Webフォントが原因のCLSには font-display:optional（最初の描画後に入れ替えない）が確実。IPA書体の追加は実機では無害なので残す。
+
+## 2026-11-06 23:50 glow トップ：PC幅だけヒーロー写真を先読み（LCP 1.8秒の短縮を狙う）
+- 変更：glow-site/build.mjs の head に、トップ（hero ページ）だけ `<link rel="preload" as="image" imagesrcset=… imagesizes=… media="(min-width:821px)" fetchpriority="high">` を追加（`<style>` と gtag より前）。スマホ幅（≤820px）では先読みしない＝スマホの100点に影響しない設計。
+- 手元の確認：PC 1350px DPR1 は st-24-m.jpg を1回だけ取得（imgと先読みが同じ候補で二重取得なし）、DPR2 は st-24-l.jpg、スマホ 412px は先読み無しで img のみ。manifest 92ファイル不一致0。
+- 期待：リソース読み込みの遅延 170ms の短縮。PC 93→95点以上。
+- 反映：glow 00:27 の取り込み後に本番PSI（PC・スマホ）で確認。変わらない／悪化なら外す。
