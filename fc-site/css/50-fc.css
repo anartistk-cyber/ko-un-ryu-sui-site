@@ -1,0 +1,9 @@
+
+/* ===== 50-fc：FLOWCLOUD だけの調整 ===== */
+/* スマホ：ヒーロー写真は最初の画面の下寄りに置く。写真が最初の画面に大きく入ると、PageSpeed の「最大コンテンツの表示(LCP)」が
+   テキストから写真の読み込み待ちに変わり、手元の同条件測定で 2.4秒→3.6秒（点数95→87）に悪化したため（2026-11-06）。 */
+@media(max-width:820px){
+ .hero{gap:32px}
+ .hero .hero-lead{font-size:16px;line-height:1.9}
+ .hero .hero-ph{margin-top:40px}
+}

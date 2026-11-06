@@ -1010,3 +1010,9 @@ p, li, dd, td, th, summary { word-break: auto-phrase; line-break: strict; text-w
 .blog-mid-cta p { margin: 0; flex: 1 1 100%; font-size: 14px; line-height: 1.8; }
 .blog-mid-cta a { display: inline-block; padding: 10px 18px; border-radius: 999px; background: var(--ink); color: #fff; font-size: 13px; text-decoration: none; }
 .blog-mid-cta a + a { background: #fff; color: var(--ink); border: 1px solid var(--ink); }
+
+/* 2026-11-06 スマホ：見学の相談ボタンを全幅1行に（予約・応募につなげる）。
+   余白は詰めない：ヒーロー写真が最初の画面に入ると PageSpeed の LCP が写真待ちになり悪化するため（写真は最初の画面の下に保つ） */
+@media (max-width: 850px) {
+  .hero-actions .button-primary { grid-column: 1 / -1; flex: 1 1 100%; min-height: 56px; font-size: 14px; }
+}
