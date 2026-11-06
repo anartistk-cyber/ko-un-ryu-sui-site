@@ -11,6 +11,7 @@
 
 ## 主なページ
 - トップ（見学・相談・よくある質問・アクセス）: https://ko-un-ryu-sui.com/
+- 募集職種の一覧: https://ko-un-ryu-sui.com/recruit/
 - 募集職種: https://ko-un-ryu-sui.com/jobs/stylist , /jobs/assistant , /jobs/part , /jobs/student
 - 新卒採用: https://ko-un-ryu-sui.com/recruit/newgrad
 - 中途採用: https://ko-un-ryu-sui.com/recruit/career
@@ -24,6 +25,7 @@
   - 見学・体験と選考: /blog/taiken-guide ／ 1年デビューの教育: /blog/one-year-debut-curriculum ／ 早番・遅番: /blog/hayaban-osoban
   - 初任給・手当: /blog/shoninkyu-teate ／ 学生アルバイト: /blog/student-baito ／ サロン選びのチェックリスト: /blog/salon-erabi-checklist ／ 転職のポイント: /blog/tenshoku-point
 - 個人情報の取扱い: https://ko-un-ryu-sui.com/privacy
+- 全文版（全ページの本文を1ファイルにまとめたもの）: https://ko-un-ryu-sui.com/llms-full.txt
 
 ## 注意
 - 一部の条件は「要相談」です。詳細は見学・相談時または募集要項でご確認ください。

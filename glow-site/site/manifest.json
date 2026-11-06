@@ -2,27 +2,27 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "f9c1580b30e0e52ee9eadc7bdcc191acc802c234516c4f33d2ea5e6fa31537e8"
+   "sha256": "d5b49dec8b8dbbea5f64c9686274c0eb7a7b53d0d314a8d2cc58809cfcf64c46"
   },
   {
    "path": "cast/index.html",
-   "sha256": "08c094801e4c01e5d8cd7296d823028f58295335461bf7264b9fc7cb06382625"
+   "sha256": "807115f5e2aaf70ccec12db622e266faa69844fb87c1988d35fc7f9b1b12a90b"
   },
   {
    "path": "color/index.html",
-   "sha256": "5fb1cd2e6998d77e87b0a699535fa0004e5ccbfebfde200e335277efd7dec828"
+   "sha256": "2e8ec2b838be4a2cb4cbd7bab87ad728b8812023508ca035cf2576af6c0e9102"
   },
   {
    "path": "cota-products/index.html",
-   "sha256": "377be26121df4d679bb586f251059757e932d27b6ba043f9b8205cbf154c9e8b"
+   "sha256": "036c073e4bf86c77ccd61b98c1185715f50f131910ae851fa6fd1050bf695b83"
   },
   {
    "path": "coupon/index.html",
-   "sha256": "49bbc8be768502d477f9db4561410384bf3fe56446dd4e0b3e580a877c522e22"
+   "sha256": "7079c095e54c9904261b6c3dd3b8b75b80bfa00fc015db7a47a10d8985694527"
   },
   {
    "path": "faq/index.html",
-   "sha256": "4b4587d794762b6129790270f13264d018de649e26398979d8b8e0819b79681b"
+   "sha256": "bd0fdd4dbfb58843baf1b0056720ab3c483daceb4f555ef5cf147c695f154be5"
   },
   {
    "path": "favicon.ico",
@@ -30,7 +30,7 @@
   },
   {
    "path": "first/index.html",
-   "sha256": "264d01d2c3a0eba2945016a321245a2f998b660517fcc1ae83f6d17efb2a60e5"
+   "sha256": "b409d0cd2a567c77720be18b4afc16b85f333d3849b77980f0b10fb90c1175f4"
   },
   {
    "path": "gl/apple-touch-icon.png",
@@ -270,71 +270,75 @@
   },
   {
    "path": "hair-quality/index.html",
-   "sha256": "fb6f9985ce056d38040863ac02ac73069b44e64d7eefb2265540e3b2de2ec17a"
+   "sha256": "28fabe21309f34b6ecb18317f135788c3c162ee3807ffbb578e8bef5b91d79ae"
   },
   {
    "path": "headspa/index.html",
-   "sha256": "63af44935fccc899119e1f63027acdd4ca82190eb448b871f54cc1d19c595b5d"
+   "sha256": "5a2909ec3a0120e27288ceb4fb4038f659c4fc7498077367979a4def9b55f5f1"
   },
   {
    "path": "index.html",
-   "sha256": "eafcb19cf30bed23f82558327f312854b047cedb8845bdcc8d326b10dde7ad1f"
+   "sha256": "8ac4a70d5b22cef10c781f9840a75f2040f2f074dde92f3d8740e330a9932d02"
   },
   {
    "path": "journal/access-parking/index.html",
-   "sha256": "2e8490480c06132696da832418e2b95de1ce9b06f3c6b2b7c94f268915c63f7d"
+   "sha256": "582987645d37438d376ce7681108ce9fc4d64559a0d20a9bb8313766c22780c4"
   },
   {
    "path": "journal/color-first-counseling-glow/index.html",
-   "sha256": "2ad89c9511fc80dc5d8fc602e4286121d20d2e31574c36243c61424022601c0e"
+   "sha256": "3f8f8db8c69e0a0eac18cc7ee216f2ec5ed60390987e6f61c3b0e915e56b1380"
   },
   {
    "path": "journal/first-perm-counseling-glow/index.html",
-   "sha256": "11e749b3cc1b4470602241b29e01b16fc9f3ec432d92f680fe179a948a885f50"
+   "sha256": "7700aa0bec0d214dcd324cbbdc8757a16e75e0257cc3c36ccc7a78485821933e"
   },
   {
    "path": "journal/first-salon-counseling/index.html",
-   "sha256": "b14becc54c482f0ae30d558bcbf2068d0ff9c0396d623ac0bdd13c96ef71c823"
+   "sha256": "45441562dbb84868cbfde7f0a6aaa66e93c859b8443866fa72d35aeb1c2ae7b7"
   },
   {
    "path": "journal/head-spa-first-time-young/index.html",
-   "sha256": "4ce6cc5b96148ba27a4190b755bd7a5d54a663bad64e4f883fadb699328195b2"
+   "sha256": "96456bd4dbe38c082535d15ea899a386c1fe834dc07aacc01165ecbd2b474270"
   },
   {
    "path": "journal/home-hair-care-cota-store-glow/index.html",
-   "sha256": "3f1f18a954a15bf517906eed664fd2b0ae6247bb53fa1d954427a7ca0042bd3d"
+   "sha256": "88930de678e88fe32483cdf5cc38d3fea3a5410c065fb356649908eeb7d46254"
   },
   {
    "path": "journal/index.html",
-   "sha256": "58e2ab3a25c5e6a189d50fe96482e1c97120dbdb51ccbdb998554fffad17237e"
+   "sha256": "c6fa2a892ef87b5b5521f162342112e80199c509c6eb836f1e43e3ee65932cf2"
   },
   {
    "path": "journal/kuse-hiroga-straight-young/index.html",
-   "sha256": "8f7bddb2fc30792729a6d4f910953542aa749c301c786db3fd80861388ea5dd8"
+   "sha256": "fa4d1418b28558e40958f4befd21b6be16a5638f98d60a54a1bbd0182c3609ab"
   },
   {
    "path": "journal/nenmatsu-nenshi-2026-2027/index.html",
-   "sha256": "b92a676d575d42ee1e75fdb85eb141e9cb08cdae52842ac533c531f960f0f40d"
+   "sha256": "52c82388a2b6fdf0ddc45531bd79d1e57c56b66213d6b1fe99b13431c83a90cc"
   },
   {
    "path": "journal/short-layer-asa-raku/index.html",
-   "sha256": "bf2678043ba95e30dfaf845fbad1ff419b7145d11057e680b77ae04fa2402e7d"
+   "sha256": "95a839f351eb696575f594ae6975ca6f81cfd5788daf2393d1a63118b47803ba"
   },
   {
    "path": "journal/sugao-care-young/index.html",
-   "sha256": "4597e52478eabdb54bf894d3154dcd4c96967e22f05b68b7c60cab4efc87f7ef"
+   "sha256": "3d842d4754e52f4c5af20d17bbfdc7b2049af3efadabc204a8d117f48635a190"
+  },
+  {
+   "path": "llms-full.txt",
+   "sha256": "489eb7e402f2ccd7ad2246ada79e09daf2aa39bd979f14137fc657233a6a7c5a"
   },
   {
    "path": "llms.txt",
-   "sha256": "7c125577586e277d2960c2651602c330bc1f898afc6d7bae4a43332412e8e38a"
+   "sha256": "88ca61531a137d3d08fbc53639c488811410318ff7916522cb2ee4e4cfa68198"
   },
   {
    "path": "menu/index.html",
-   "sha256": "1ff86af9828a937dbf9592911c3e2179f90e1660acde45cee0e7fb00d9f99068"
+   "sha256": "a45ec2234bcea9cbab41fc1307c4eaf694897424ff2b746ac932e6df61eee021"
   },
   {
    "path": "privacy/index.html",
-   "sha256": "90cbf7e5ad9217849de8fe9c0c684430934ea263136a2dcb9905a5c379c36905"
+   "sha256": "bda9f8f1dd47b919b249458e57aee9bac7b0e20b34721a2828386427ecf77441"
   },
   {
    "path": "robots.txt",
@@ -342,7 +346,7 @@
   },
   {
    "path": "short-perm/index.html",
-   "sha256": "fd01d4dce503f310995284cff7c9b4e2a378c8b1b18c40c96525926610c6d6ec"
+   "sha256": "d59ad34c8fb25f7f530197c7ef238c7c4f706eefb58e13e2997b5a56833dc7ce"
   },
   {
    "path": "sitemap-gl.xml",
@@ -350,19 +354,19 @@
   },
   {
    "path": "straight/index.html",
-   "sha256": "7c914fc8f914beb055cb306af899bb133ca5dbe0491ed6d1664bd4e636e29a80"
+   "sha256": "64e04ee2da6266aee8a3e2f9a8b20279a6e1137e792c3ad117759e727068b2fa"
   },
   {
    "path": "style/index.html",
-   "sha256": "fd9fee3dfca07d18b5c20a6c9b0843435ede86192276d7853600dfd17ec37ea8"
+   "sha256": "bc74e4754f18150bdc66788addf158d07a52a279eac7262b5c94f24e3676c45a"
   },
   {
    "path": "voice/index.html",
-   "sha256": "a0e740ea603676f672b8798d23c4e46f6ccc3d4943871b3c595b30ce65d395cf"
+   "sha256": "6ff54366238db3c9e4fa832a69559b6cef841947197e4a26b5ce99e132c89f82"
   },
   {
    "path": "young/index.html",
-   "sha256": "0795566e779e7f8f8e1e952b1c9f4a91f78704f75edf7ec69cdbbbeb7a0c9371"
+   "sha256": "2291a4b1a88e70caae79707f8ffdd7277cb08a7b436d164a4ed9bc2f1d21a1fb"
   }
  ]
 }
