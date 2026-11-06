@@ -5,7 +5,9 @@ const OUT='site';fs.rmSync(OUT,{recursive:true,force:true});
 const BASE='https://www.flowcloud.net';
 const IMG=(n)=>`/cms/wp-content/uploads/2018/12/${n}.jpg`;
 const STRIP_IMGS=[['FLOW-CLOUD-063','仕切りのある半個室の店内'],['FLOW-CLOUD-048','シャンデリアとFLOWCLOUDのロゴ'],['FLOW-CLOUD-047','緑のドアと窓が見えるテーブル席'],['FLOW-CLOUD-044','ロッカーとシャンデリアのある入口'],['FLOW-CLOUD-031','照明を落としたシャンプー空間'],['FLOW-CLOUD-051','やわらかな灯りのヘッドスパ個室'],['FLOW-CLOUD-001-1024x733','FLOWCLOUDの外観。緑の扉が目印']];
-const stripSet=h=>STRIP_IMGS.map(([n,a])=>`<img src="${IMG(n)}" class="sm" alt="${h?'':a}" ${h?'aria-hidden="true" ':''}loading="lazy" width="250" height="176">`).join('');
+// 帯写真は表示が小さい(PC250×176／スマホ190×136)ので、専用の小型版(img/strip-*-380.jpg)を標準にし、より高精細な画面(DPR2.6超など)だけWPの大きい版に切り替える
+const STRIP_HI={'FLOW-CLOUD-063':[768,512],'FLOW-CLOUD-048':[768,489],'FLOW-CLOUD-047':[768,506],'FLOW-CLOUD-044':[768,512],'FLOW-CLOUD-031':[768,512],'FLOW-CLOUD-051':[768,504],'FLOW-CLOUD-001-1024x733':[1024,733]};
+const stripSet=h=>STRIP_IMGS.map(([n,a])=>{const base=n.replace(/-1024x733$/,''),lo=`/fc/img/strip-${base}-380.jpg`,[hw,hh]=STRIP_HI[n],hi=n.endsWith('-1024x733')?IMG(n):`/cms/wp-content/uploads/2018/12/${n}-${hw}x${hh}.jpg`;return `<img src="${lo}" srcset="${lo} 380w, ${hi} ${hw}w" sizes="(max-width:820px) 190px, 250px" class="sm" alt="${h?'':a}" ${h?'aria-hidden="true" ':''}loading="lazy" width="250" height="176">`}).join('');
 const STRIP=`<div class="strip" aria-label="FLOWCLOUDの店内の写真"><div class="strip-in">${stripSet(false)}${stripSet(true)}</div></div>`;
 const QITEMS_FC=[{k:'パサつき・ダメージ・ゴワつき',h:'パサつき・ダメージが気になる方へ',p:'髪の状態をカウンセリングしたうえで、トリートメントを中心にご提案します。',m:[['シスキュア','当店オリジナルのトリートメント／20分','¥3,850'],['髪質向上トリートメント','サラサラ・しっとり／10分','¥4,400']],href:'/menu/#rehair',more:'メニューと料金を見る'},
 {k:'クセ・うねり・広がり',h:'クセ・うねり・広がりが気になる方へ',p:'クセやうねりのご相談は、髪質改善ストレートのメニューでお受けしています。',m:[['髪質改善ストレート','120分〜','¥16,500〜'],['ポイント髪質改善ストレート','45〜60分','¥11,000〜']],href:'/straight/',more:'髪質改善ストレートを詳しく見る'},

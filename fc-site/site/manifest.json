@@ -14,7 +14,7 @@
   },
   {
    "path": "company/index.html",
-   "sha256": "1d79962157e8e58276cd28f7c64193377bfc5b198311aba6ea393caad2958f60"
+   "sha256": "873421d4ae48e6615d60b119106247c036d3d75e16e4a43e637689947f0cfd84"
   },
   {
    "path": "cota-products/index.html",
@@ -205,6 +205,34 @@
    "sha256": "ded797bbca1985456282ddb60ee1084c72cf9080a10cab0e6bdb4706e8a683e2"
   },
   {
+   "path": "fc/img/strip-FLOW-CLOUD-001-380.jpg",
+   "sha256": "ccbe3d3c6ba164eb48b315b20771fb39f6d8ec54dc5739684085ee238fd9a4e9"
+  },
+  {
+   "path": "fc/img/strip-FLOW-CLOUD-031-380.jpg",
+   "sha256": "6fd1b20a11cdd68a1cf7d413218495aca1fcd2b0a87c2459ee68ebf6582f9655"
+  },
+  {
+   "path": "fc/img/strip-FLOW-CLOUD-044-380.jpg",
+   "sha256": "709991e22d6063498dccbf2a74d35af4d6ff574b6b5564ad78cfb2d492b79f1a"
+  },
+  {
+   "path": "fc/img/strip-FLOW-CLOUD-047-380.jpg",
+   "sha256": "0501832fae40910232887052fca415bf6ba0bcfcdfecb02a31181ae209620838"
+  },
+  {
+   "path": "fc/img/strip-FLOW-CLOUD-048-380.jpg",
+   "sha256": "125d8c44b66eeb565bf0a4319897d5c7a9f3c190ff31f939b89ba46ae67bddfe"
+  },
+  {
+   "path": "fc/img/strip-FLOW-CLOUD-051-380.jpg",
+   "sha256": "8ab0199b5d2c057f1b83bb7fc72471756c6e8907128b4b3cb2e34413e2354291"
+  },
+  {
+   "path": "fc/img/strip-FLOW-CLOUD-063-380.jpg",
+   "sha256": "ef4de75f9f6dac0053f7e93e8550cc18358c9a19e8a99286e5d10092db6d3cad"
+  },
+  {
    "path": "fc/style.css",
    "sha256": "325e351eb9b5b9e60333549bd44559f3a02b1a5c222ba956e4e53497a9188aa0"
   },
@@ -230,7 +258,7 @@
   },
   {
    "path": "index.html",
-   "sha256": "b5dc44e842fb0fa2555bf43e6b23edd85d3b139c0d93c6e8c5aa97701b4552c0"
+   "sha256": "06fef5122a5e6c325bc418776c50e49e145198db8d4414b015f42a19a23e6783"
   },
   {
    "path": "llms.txt",
@@ -290,7 +318,7 @@
   },
   {
    "path": "sitemap-fc.xml",
-   "sha256": "5735f4f50bc921b0b73fa8210dc1160a4fe081836dbbc420c0ceb98c1f0d030d"
+   "sha256": "199a004b756fe922b0e5bbb12e563a8b2d11e1446d69f68ee8b8dbf66dc21db5"
   },
   {
    "path": "straight/index.html",
