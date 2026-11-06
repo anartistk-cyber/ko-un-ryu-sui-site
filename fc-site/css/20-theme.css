@@ -1,6 +1,6 @@
 
 /* ===== FC THEME 2026-11-05: 40〜50代女性向け「上品・落ち着き・大人のかわいさ」 ===== */
-:root{--hf:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;--bf:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Noto Sans JP",Meiryo,sans-serif;--gold:#b6925a;--goldl:#e8d9bb;--line:#efe6d8}
+:root{--hf:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho","IPAexMincho","IPAMincho",serif;--bf:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Noto Sans JP",Meiryo,"IPAexGothic","IPAGothic",sans-serif;--gold:#b6925a;--goldl:#e8d9bb;--line:#efe6d8}
 body{font-family:var(--bf);font-weight:400;color:var(--ink);background:#fff;font-size:17.5px;line-height:2}
 a{color:var(--pri)}
 h1,h2,h3,.logo,.cta-lead,.ft-n,.cal-t{font-family:var(--hf)}

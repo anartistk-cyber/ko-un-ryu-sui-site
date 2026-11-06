@@ -38,7 +38,7 @@ img{max-width:100%;height:auto;display:block}a{color:var(--g)}
 :root{--pri:#1d6b57;--prid:#14503f;--soft:#e4f5ee;--pink:#ffdfe7;--pink2:#fff6f8;--pinkl:#f9c3d1;--cta:#d03a65;--ctad:#a82a4e;--butter:#ffe28a;--butterd:#d9b84e;--ink:#4a3a44;--mute:#7b6b75;--dot1:#f59ab3;--dot2:#7fd0b4;--dot3:#ffd25c;--r:28px}
 
 /* ===== THEME LAYER 2026-11-05: ポップで可愛く上品（共通。色は :root の変数で切替） ===== */
-:root{--hf:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif}
+:root{--hf:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,"IPAexGothic","IPAGothic",sans-serif}
 body{font-family:var(--hf);font-weight:500;color:var(--ink);background:#fff;font-size:16.5px;line-height:1.95}
 a{color:var(--pri)}
 h1,h2,h3,.logo,.btn,.cta-lead,.ft-n,.cal-t{font-family:var(--hf)}
