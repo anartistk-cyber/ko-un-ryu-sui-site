@@ -258,7 +258,7 @@
   },
   {
    "path": "headspa/index.html",
-   "sha256": "3cba648a4629f12517f70726f4fa1911a1af830f859fa05f690d883997229085"
+   "sha256": "10c154f204799b1e060d72c85c24b220a6f10789ff877515878160cc8db9214c"
   },
   {
    "path": "index.html",
@@ -266,7 +266,7 @@
   },
   {
    "path": "llms-full.txt",
-   "sha256": "9fdff7f60dd9668b82216a72e5f3391f1e33b5c47b373909a956d07792627544"
+   "sha256": "0f7c1beba58dde701d563577a74d2190cd6f794fa0fbc1e25da18b7ff6ffb826"
   },
   {
    "path": "llms.txt",
