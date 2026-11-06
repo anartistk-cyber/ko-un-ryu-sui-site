@@ -11,8 +11,8 @@
   --sand: #f6f3ed;
   --line: rgba(23, 60, 62, .18);
   --muted: #627778;
-  --display: "Frank Ruhl Libre", "Noto Serif JP", serif;
-  --jp: "Noto Serif JP", serif;
+  --display: "Frank Ruhl Libre", "Noto Serif JP", "IPAexMincho", "IPAMincho", serif;
+  --jp: "Noto Serif JP", "IPAexMincho", "IPAMincho", serif;
   --ease: cubic-bezier(.23, 1, .32, 1);
 }
 
@@ -450,8 +450,9 @@ h1, h2, h3 { font-weight: 400; }
 .job-detail-apply .job-detail-cta { color: var(--ink); background: #c9e5dc; }
 .job-detail-apply .job-detail-cta:hover { background: #fff; }
 
-@keyframes enterUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+/* 開始を opacity:.01 にする：opacity:0 の要素はLCPの候補にならず、ヒーロー文・写真がLCPと数えられるのが再描画（約1.5秒後）まで遅れる。見た目は同じ。 */
+@keyframes enterUp { from { opacity: .01; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: .01; } to { opacity: 1; } }
 
 @media (max-width: 850px) {
   .desktop-nav, .header-cta { display: none; }
@@ -633,7 +634,7 @@ h1, h2, h3 { font-weight: 400; }
 /* ===== POP layer: 上品さを残しつつ、可愛く ===== */
 :root {
   --pink: #f4a3b8; --blush: #fdeaf0; --butter: #ffe8a3; --cream: #fff8ec; --coral: #ff8f80; --lilac: #e9defa;
-  --pop: "Zen Maru Gothic", var(--jp);
+  --pop: "Zen Maru Gothic", "IPAexGothic", "IPAGothic", var(--jp);
 }
 body { background: var(--cream); }
 .eyebrow { display: inline-flex; width: fit-content; padding: 7px 14px 7px 12px; border-radius: 999px; background: var(--blush); color: #c2476a; font-family: var(--pop); font-weight: 700; letter-spacing: .12em; }
@@ -825,17 +826,17 @@ h1, h2 { font-weight: 700 !important; letter-spacing: -.02em !important; }
 .facts-grid{list-style:none;margin:0 auto;padding:0;max-width:1100px;display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
 .facts-grid li{background:#fff;border:2.5px solid #2b2233;border-radius:20px;box-shadow:4px 4px 0 #ff7aa8;padding:14px 8px;text-align:center}
 .facts-grid li:nth-child(even){box-shadow:4px 4px 0 #ffd84d}
-.facts-grid b{display:block;font-family:'Zen Maru Gothic',sans-serif;font-size:1.6rem;color:#e0457f;line-height:1.2}
+.facts-grid b{display:block;font-family:'Zen Maru Gothic',"IPAexGothic","IPAGothic",sans-serif;font-size:1.6rem;color:#e0457f;line-height:1.2}
 .facts-grid span{display:block;font-size:.78rem;line-height:1.5;margin-top:6px}
 .worry-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:1000px;margin:24px auto}
 .worry-card{background:#fff8e1;border:2.5px solid #2b2233;border-radius:22px;box-shadow:5px 5px 0 #ff7aa8;padding:18px 20px}
-.worry-q{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:1.05rem;color:#e0457f;margin:0 0 6px}
+.worry-q{font-family:'Zen Maru Gothic',"IPAexGothic","IPAGothic",sans-serif;font-weight:700;font-size:1.05rem;color:#e0457f;margin:0 0 6px}
 .worry-card p{margin:0;line-height:1.8}
 @media(max-width:860px){.facts-grid{grid-template-columns:repeat(2,1fr)}.worry-grid{grid-template-columns:1fr}}
 
-.lp-catch{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:1.25rem;color:#e0457f;margin:6px 0 10px}
+.lp-catch{font-family:'Zen Maru Gothic',"IPAexGothic","IPAGothic",sans-serif;font-weight:700;font-size:1.25rem;color:#e0457f;margin:6px 0 10px}
 .lp-who{max-width:900px;margin:28px auto;padding:22px 24px;background:#fff8e1;border:2.5px solid #2b2233;border-radius:24px;box-shadow:6px 6px 0 #ffd84d}
-.lp-who h2{font-family:'Zen Maru Gothic',sans-serif;margin:0 0 12px;font-size:1.3rem}
+.lp-who h2{font-family:'Zen Maru Gothic',"IPAexGothic","IPAGothic",sans-serif;margin:0 0 12px;font-size:1.3rem}
 .lp-who ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
 .lp-who li{display:flex;gap:8px;align-items:flex-start;line-height:1.7}
 .lp-who li svg{flex:none;margin-top:5px;color:#e0457f}
@@ -848,7 +849,7 @@ h1, h2 { font-weight: 700 !important; letter-spacing: -.02em !important; }
 .gallery-grid figure:nth-child(1),.gallery-grid figure:nth-child(2){grid-column:span 3}
 .gallery-grid figure:nth-child(even){box-shadow:5px 5px 0 #ffd84d}
 .gallery-grid img{width:100%;height:260px;object-fit:cover;display:block}
-.gallery-grid figcaption{padding:10px 12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:.95rem}
+.gallery-grid figcaption{padding:10px 12px;font-family:'Zen Maru Gothic',"IPAexGothic","IPAGothic",sans-serif;font-weight:700;font-size:.95rem}
 @media(max-width:860px){.gallery-grid{grid-template-columns:1fr 1fr}.gallery-grid figure,.gallery-grid figure:nth-child(1),.gallery-grid figure:nth-child(2){grid-column:span 1}.gallery-grid img{height:200px}}
 
 /* 要確定マーカー(プレビュー専用。公開ゲートで残存を検出) */

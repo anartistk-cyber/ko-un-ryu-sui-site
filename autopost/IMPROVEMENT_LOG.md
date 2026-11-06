@@ -301,3 +301,11 @@
 - 手元の確認（PSI相当の代替書体）：glow トップ PC CLS 0.364→0.003、/menu/ /coupon/ /cast/ /faq/ /first/ /voice/ の PC は 0.001〜0.006、スマホは 0.002〜0.03。
 - 学び：PSIの CLS が大きいときは『Webフォントが届く前後で行数が変わっていないか』を疑う。手元で再現するには Playwright を FONTCONFIG_FILE（sans-serif を IPAPGothic に置換）で起動して layout-shift を観測する（scratchpad の cls2.cjs 方式）。
 - 反映：glow :27 / FLOWCLOUD :22 の取り込み後に本番PSI（PC・スマホ）で再確認する。
+
+## 2026-11-06 22:28 採用サイト：CSS埋め込みの本番結果（PC良好・スマホはLCP悪化）と、その原因対策
+- 本番PSI（22:18〜22:20）：PC 71→87点（TBT 360→90ms、ユーザー補助100、SEO/おすすめ100、エージェント3/3）。スマホ 88→73・75点（FCP 2.8→1.1秒、SI 4.9→1.4〜3.3秒に改善した一方、LCP 2.8→10.7〜11.7秒）。2回とも再現。
+- 原因（手元でPSI相当の環境を再現して特定）：①ヒーロー（.hero-copy / .hero-visual）の入場アニメーションが opacity:0 から始まるため、ヒーロー文・写真がLCPの候補になるのが再描画（約1.5秒後）まで遅れる。②Webフォント（Zen Maru Gothic / Noto Serif JP）が届く前の代替書体が文字幅の狭い日本語書体（IPAP）で、届いた瞬間に文字が広がってLCPが更新され、CLSも出る（スマホ 0.101）。LCPのシミュレーションは『LCPが遅く観測されるほど、それまでの全通信・JS処理を遅い回線で再現する』ので、観測が1.4秒だと10秒台になる。
+- 直したこと（client/src/index.css）：keyframes enterUp／fadeIn の開始を opacity:0 → .01（見た目は同じ。LCPの候補が最初の描画で決まる）。--display／--jp／--pop と Zen Maru の直指定に IPAexMincho・IPAMincho・IPAexGothic・IPAGothic を追加（glow・FCと同じ対策）。
+- 手元の確認（PSI相当の代替書体）：スマホ 412px：LCP 1520ms→228ms（ヒーロー文）、CLS 0.101→0.0015。PC 1350px：LCP 1652ms（H1）→396ms（ヒーロー写真）、CLS 0.0002→0.0015。見た目はアニメーション開始時の1%の透明度だけの差。
+- 学び：①PSI の画面は『スマホ』『PC』の2つの結果が同じIDで同居している。getElementById は先頭（スマホ側）を返すので、PC側を読むときは表示中の要素（offsetParent があるもの）に絞る。以前『別集計が混ざる』と書いたのはこれ。②LCPが遅いときは、LCP要素が opacity:0 から始まるアニメーションや、Webフォント到着で広がる文字になっていないかを疑う。
+- 反映：23:17 の取り込み後に本番PSI（スマホ・PC）で再確認する。悪化したら prerender.mjs のCSS埋め込みを外す。
