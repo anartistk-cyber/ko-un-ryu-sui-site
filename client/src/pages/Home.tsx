@@ -21,7 +21,7 @@ import {
 import { Link } from "wouter";
 import { posts } from "../data/posts";
 
-const logoPath = "/images/company-logo_19c099e6.jpg";
+const logoPath = "/images/company-logo_s210.jpg";
 const representativePhoto = "/images/representative-fujitsu-kazuhiko_e45df51f.jpg";
 const heroTeamPhoto = "/images/flow-cloud-team-hero_18f9702b.jpg";
 const teamMeetingPhoto = "/images/team-meeting_f47f2a94.jpg";
@@ -347,7 +347,10 @@ export default function Home() {
               <p className="hero-source-note">2027年度 新卒美容師3名募集。中途・パート・学生アルバイトの募集条件もご案内しています。<br />年度・人数・募集状態は年度により異なります</p>
             </div>
             <div className="hero-visual hero-visual-photo">
-              <img className="hero-team-photo" fetchPriority="high" decoding="async" src={heroTeamPhoto} alt="FLOWCLOUD前に集まる株式会社行雲流水の代表・藤津一弥とキャスト" />
+              <picture>
+                <source type="image/webp" srcSet="/images/flow-cloud-team-hero_640.webp 640w, /images/flow-cloud-team-hero_960.webp 960w" sizes="(max-width: 820px) 76vw, 623px" />
+                <img className="hero-team-photo" fetchPriority="high" decoding="async" src={heroTeamPhoto} width={960} height={1280} alt="FLOWCLOUD前に集まる株式会社行雲流水の代表・藤津一弥とキャスト" />
+              </picture>
               <div className="hero-visual-caption">
                 <span>FLOWCLOUD TEAM</span>
                 <strong>WE ARE<br />KOUNRYUSUI</strong>

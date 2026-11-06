@@ -6,7 +6,7 @@ import { trackClick, track } from "../lib/track";
 
 const siteUrl = "https://ko-un-ryu-sui.com";
 const companyName = "株式会社 行雲流水";
-const logoPath = "/images/company-logo_19c099e6.jpg";
+const logoPath = "/images/company-logo_s210.jpg";
 
 type JobType = "stylist" | "assistant" | "part" | "student";
 

@@ -6,7 +6,7 @@ import { Link } from "wouter";
 
 // ヒートマップ（Microsoft Clarity）。client/.env の VITE_CLARITY_ID が空の間は、スクリプトも追記文も出ない
 const CLARITY_ID = import.meta.env.VITE_CLARITY_ID || "";
-const logoPath = "/images/company-logo_19c099e6.jpg";
+const logoPath = "/images/company-logo_s210.jpg";
 
 const sections: { number: string; title: string; body: ReactNode }[] = [
   { number: "01", title: "取得する情報", body: "当社は、氏名、フリガナ、連絡先（メールアドレス・電話番号）、相談内容と現在の状況、希望店舗・希望日時、学校名・卒業予定、希望する勤務条件、質問・伝えたいことなど、フォームに入力いただいた情報および選考の過程でご提供いただいた情報を取得します。" },

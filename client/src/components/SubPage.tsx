@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react";
 
 export const SITE = "https://ko-un-ryu-sui.com";
 export const LINE_URL = "https://lin.ee/Z0JP8sH";
-const logoPath = "/images/company-logo_19c099e6.jpg";
+const logoPath = "/images/company-logo_s210.jpg";
 
 export function setMeta(opts: { title: string; description: string; path: string; jsonLd?: object; image?: string }) {
   document.title = opts.title;
