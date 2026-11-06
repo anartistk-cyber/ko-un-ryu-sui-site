@@ -8,3 +8,4 @@
 - 2026-11-02 ブログ追加: color-first-counseling-glow
 - 2026-11-02 ブログ追加: short-layer-asa-raku
 - 2026-11-03 ブログ追加: first-perm-counseling-glow（初めてのパーマ×泉大津・和泉・高石・堺・岸和田／パーマ相談・料金・一般的お手入れ）
+- 2026-11-06 /hair-quality/ 新設（狙い: 泉大津 髪質改善／泉大津 髪質改善ストレート／髪質改善 10代 20代）。事実はFACTS・メニュー表のみ。/straight/ から内部リンク。
