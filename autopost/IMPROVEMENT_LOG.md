@@ -262,3 +262,9 @@
 - Xserver側の準備は完了（ドメイン追加＋.htaccess入力）。ネームサーバー切替は購入元が分かるまで保留。新ドメイン側は未変更。
 - 旧ドメインへの現行の転送（Manusの転送ページ）は動いている。急ぎではないが、Manus Pro 更新 11/25 と、ドメイン有効期限 2027-01-31 は要注意。
 - 15:2x（追記）Manus「購入済みのドメイン」は空。旧ドメインの購入元は、別のManusアカウントか別の販売元。購入時のメール（2026-01-31前後）を藤津さんが探す。見つかるまで旧ドメインのNS切替は保留。
+
+## 2026-11-06 16:5x 採用サイト：/recruit/ と /jobs/ の403を解消（入口ページを追加）
+- 点検（ブラウザのfetchで本番を確認）：`/recruit/` と `/jobs/` が **403**（ディレクトリにindex.htmlがなく、一覧表示も禁止のため）。`/recruit/newgrad`・`/student`・`/career`、`/jobs/stylist`・`/assistant`・`/part`・`/student`、`/area`・`/school`・`/visit`・`/workstyle`・`/privacy`・`/blog/`・sitemap・robots・llms は200。`/contact` は404（旧ルートか不明。今は放置）。
+- 対応：求人の入口ページ（募集職種6件＋状況別リンク＋見学の案内＋FAQ3件）を `Guide` の type="recruit" として追加。`/recruit/` と `/jobs/` の両方に同じページを出し、canonical は `/recruit/` に統一（重複回避）。`/recruit/` を sitemap に追加（`/jobs/` は入れない）。フッター（サブページ・トップ）に「募集職種一覧」を追加。事実は既存ページの文言のみ（新しい数字・条件は追加していない）。
+- 公開：commit 8310183・4ce9a62 を main へ push → 17:17 の取り込みで反映見込み。17:25 に本番で確認する（自分宛の予約）。
+- 旧ドメイン経由の旧URL点検：過去のApp.tsx（git履歴4版）のルートはすべて現在も存在。残りの確認は旧Manusサイトの旧ルート（Manus側のコード `client/legacy`）。必要になったらManusの画面で確認する。
