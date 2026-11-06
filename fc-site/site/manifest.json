@@ -26,7 +26,7 @@
   },
   {
    "path": "cut/index.html",
-   "sha256": "3da464c26fadcefc41d1778fca79a3dd24be7fc529e2d2187bb7910d7c5fc35d"
+   "sha256": "8896369d6e85d103b4c9e1cdedeaf80c3394ae68ea9b10460d1820b610532e9c"
   },
   {
    "path": "faq/index.html",
@@ -266,11 +266,11 @@
   },
   {
    "path": "llms-full.txt",
-   "sha256": "98b6bba2c6a461cf0e47997d539dd690debf65bfdd6897859650119879a0f73f"
+   "sha256": "43c221099e83f6ea321869b55f52fb9abafcb10de0f45ca0eeffaa5482319dc6"
   },
   {
    "path": "llms.txt",
-   "sha256": "8d435bfa79217bb397a52c01eb3433b814d39979d96ffa7b0ea5a4170134e60f"
+   "sha256": "72051b6a8cccd9849e1c2215e261de792754f2acec5371f1f68e0407f9fd48ae"
   },
   {
    "path": "men/index.html",
@@ -278,7 +278,11 @@
   },
   {
    "path": "menu/index.html",
-   "sha256": "c12ba499b836d4814fd6054b6c0a7db7f323a98803278cee4fdd72120b326663"
+   "sha256": "47441cf21cee732866afdae551f3f317d75a778bbed5988ac6d206c9776cd9a1"
+  },
+  {
+   "path": "perm/index.html",
+   "sha256": "2afb9aa7f4a14a660459f68007c2841e47235d6a4af5cc82f846e792e56b5912"
   },
   {
    "path": "privacy/index.html",
@@ -330,7 +334,7 @@
   },
   {
    "path": "sitemap-fc.xml",
-   "sha256": "bb081367eab9ca352bde543010866744df58355a3f8aaecc5f0ee8357bf1076d"
+   "sha256": "31b3ed43caa896f94d6b2eb02c6fc372de07affe01e7eb26d46471e6b0e26b5c"
   },
   {
    "path": "straight/index.html",
