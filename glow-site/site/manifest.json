@@ -2,7 +2,7 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "028462057a7631ac5cdf3045ac92a20fa8c0f6e59942b71f92f26cf07bd08a3b"
+   "sha256": "d57989e414f67cbd4d254732acb30b8d0a3dd4072ae9da62b9cb08989ebb160d"
   },
   {
    "path": "cast/index.html",
@@ -278,7 +278,7 @@
   },
   {
    "path": "index.html",
-   "sha256": "2e4bf8f047614404d261731a9fa6195c38293d1f2396f79a4dee0b508a801eee"
+   "sha256": "c1718de5ce42e87a5505d19dc5d03b990213ea44a9ef5900de812f2e731550a8"
   },
   {
    "path": "journal/access-parking/index.html",
@@ -350,7 +350,7 @@
   },
   {
    "path": "sitemap-gl.xml",
-   "sha256": "b80caaed50cf5abb9c6071a86cfdf01fe7ec689d60ec95a1b415828281a85c48"
+   "sha256": "e45b5eb3a75c974b77bf13257de3f88091641b2adccfb70b14073bd4d1bd83ec"
   },
   {
    "path": "straight/index.html",
