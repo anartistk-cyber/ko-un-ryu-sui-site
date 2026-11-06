@@ -23,6 +23,7 @@ const base = `http://127.0.0.1:${server.address().port}`;
 const postSlugs = [...fs.readFileSync(path.resolve("client/src/data/posts.ts"), "utf8").matchAll(/^\s{4}slug: "([a-z0-9-]+)"/gm)].map(m => m[1]);
 const pages = [
   ["/", "index.html"],
+  ["/jobs/", "jobs/index.html"], // 入口ページ（canonical は /recruit/）。ディレクトリ直アクセスの403を防ぐ
   ["/jobs/stylist", "jobs/stylist.html"],
   ["/jobs/assistant", "jobs/assistant.html"],
   ["/jobs/part", "jobs/part.html"],

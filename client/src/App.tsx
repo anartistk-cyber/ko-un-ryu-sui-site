@@ -13,6 +13,8 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/jobs">{() => <Guide type="recruit" />}</Route>
+      <Route path="/jobs/">{() => <Guide type="recruit" />}</Route>
       <Route path="/jobs/stylist">{() => <JobPosting type="stylist" />}</Route>
       <Route path="/jobs/assistant">{() => <JobPosting type="assistant" />}</Route>
       <Route path="/jobs/part">{() => <JobPosting type="part" />}</Route>
