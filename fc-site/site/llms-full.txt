@@ -21,7 +21,7 @@
 - [泉大津の美容院・美容室 FLOWCLOUD（フロウクラウド）｜髪質改善・ヘッドスパ｜完全予約制](https://www.flowcloud.net/)
 - [プライバシーポリシー｜FLOWCLOUD](https://www.flowcloud.net/privacy/)
 - [クーポン｜泉大津の美容室 FLOWCLOUD｜髪質改善・ヘッドスパ・カラー](https://www.flowcloud.net/coupon/)
-- [メニュー・料金｜髪質改善・カラー・ヘッドスパ｜泉大津の美容室 FLOWCLOUD](https://www.flowcloud.net/menu/)
+- [メニュー・料金｜カット・パーマ・カラー・髪質改善・ヘッドスパ｜泉大津の美容室 FLOWCLOUD](https://www.flowcloud.net/menu/)
 - [ヘアスタイルギャラリー｜ロング・ボブ・ショート・カラー｜泉大津の美容室 FLOWCLOUD](https://www.flowcloud.net/style/)
 - [泉大津の髪質改善｜ストレート・パーマ・シスキュアの料金と選び方｜美容室 FLOWCLOUD](https://www.flowcloud.net/hair-quality/)
 - [泉大津のカラー・白髪染めのご相談｜料金と相談のしかた｜美容室 FLOWCLOUD](https://www.flowcloud.net/color/)
@@ -764,7 +764,7 @@ URL: https://www.flowcloud.net/men/
 - ヘッドスパ真っ暗な空間で、頭皮と髪、そして心まで整えるひとときを。→
 
 ---
-## メニュー・料金｜髪質改善・カラー・ヘッドスパ｜泉大津の美容室 FLOWCLOUD
+## メニュー・料金｜カット・パーマ・カラー・髪質改善・ヘッドスパ｜泉大津の美容室 FLOWCLOUD
 URL: https://www.flowcloud.net/menu/
 
 トップ ＞ メニュー・料金メニュー・料金
