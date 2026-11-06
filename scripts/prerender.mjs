@@ -74,3 +74,22 @@ for (const [route, out] of pages) {
 }
 await browser.close();
 server.close();
+
+// 最初の画面を早く出すため、サイト全体のCSS（assets/index-*.css）を各ページの <style> に埋め込む。
+// FLOWCLOUD・glow と同じ方式で、HTMLを受け取ったあとにCSSファイルを取りに行く待ち（描画のブロック）が無くなる。
+// CSSファイルも従来どおり dist/assets に残す。CSS内に url() が無いことが前提（相対パスが壊れるため。あれば埋め込まない）。
+{
+  const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => e.isDirectory() ? walk(path.join(d, e.name)) : e.name.endsWith(".html") ? [path.join(d, e.name)] : []);
+  const link = /<link rel="stylesheet"(?: crossorigin(?:="[^"]*")?)? href="(\/assets\/[^"]+\.css)"(?: crossorigin(?:="[^"]*")?)?>/;
+  let n = 0;
+  for (const f of walk(dist)) {
+    const html = fs.readFileSync(f, "utf8");
+    const m = html.match(link);
+    if (!m) continue;
+    const css = fs.readFileSync(path.join(dist, m[1]), "utf8");
+    if (/url\(/.test(css) || /<\/style/i.test(css)) { console.warn("CSS埋め込みをスキップ（url()あり）:", f); continue; }
+    fs.writeFileSync(f, html.replace(link, () => "<style>" + css + "</style>"));
+    n++;
+  }
+  console.log("CSSを埋め込んだページ:", n);
+}
