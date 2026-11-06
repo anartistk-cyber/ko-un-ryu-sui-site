@@ -10,6 +10,7 @@
   1. 毎月1日 朝8時ごろ（一次）：HPB（SALON BOARD）・SalonAnswerの前月分を読んで記録。藤津さんがChatGPT（◆自動投稿）の「◆月次成果」を貼ってくれた分も同じ記録に残す（貼られなければ「未受領」）。
   2. 毎月1日 夕方18時ごろ（二重チェック）：朝の数字を読み直して照合。
   3. 毎月2日 朝8時台（本レポート）：前月1日〜末日の数字（検索・GA4・GBP・表示速度・ヒートマップ）に、1日の記録（HPB・SalonAnswer・ChatGPT成果）を並べる。Docs先頭に「今月のまとめ（1ページ）」→詳しい分析の順に作る（レポートは1つ）。幹部共有用に、Docs全体のPDFの『今月のまとめ』のあとへグラフのページを差し込んだ1つのPDFを `autopost/tools/summary_pdf/`（README「1つのPDFにする手順」）で作って藤津さんへ送る。HPB・SalonAnswerには2日にはログインしない。
+  4. サイトの数字の更新（毎月2日、本レポートの後）：口コミ評価は `fc-site/data.json`・`glow-site/data.json` の `ratings`（asOf と、HPB: avg／count／4項目、Google: avg／count）を、HPBの口コミ画面とGoogleビジネスプロフィールで**見た値だけ**に書き換える（件数が増えただけでも更新。asOf は「YYYY-MM-DD」）。休業日リスト `closed` は末尾の日付が2か月先まで入っているかを見て足す（FLOWCLOUDのリストは2027-01-26まで）。更新後は `node build.mjs`→manifest再生成→push。ページ上の「◯年◯月時点」「直近1年の集計」は asOf から自動で出る。
 - 四半期（1・4・7・10月の2日の本レポートに付ける）：ページ構成・狙うキーワードの大きな見直し。
 
 ## 数字の取り方（ログイン済みChrome：claude-in-chrome）
