@@ -256,3 +256,8 @@
 - 藤津さん（Manusで調べた内容）：旧ドメインの登録先は Global Domain Group LLC、NS は NS1/NS2.GLOBALDOMAINGROUP.COM。旧ドメインでメールは使っていない。Manusの設定画面（アカウント設定）にはドメイン管理（DNS）の項目はなく、DNSは登録先側で触る。
 - 手順書：`autopost/OLD_DOMAIN_MOVE.md`。Xserver側の準備（ドメイン追加＋SSL＋.htaccess）→ NS切替（藤津さん）→ 確認 → Manusの接続解除、の順。
 - Xserver のサーバーパネルはログイン切れ（再ログイン画面）。パスワードは入力できないため、藤津さんのログイン待ち。
+
+## 2026-11-06 15:1x 旧ドメインの購入元が不明（GDGにログインできない）
+- Verisign RDAP で確認：レジストラ Global Domain Group LLC（IANA 3956）、NS1/NS2.GLOBALDOMAINGROUP.COM、登録 2026-01-31、有効期限 2027-01-31。卸売りのレジストラのため、藤津さんは直接ログインできず、購入元（再販元）を探す必要がある。
+- Xserver側の準備は完了（ドメイン追加＋.htaccess入力）。ネームサーバー切替は購入元が分かるまで保留。新ドメイン側は未変更。
+- 旧ドメインへの現行の転送（Manusの転送ページ）は動いている。急ぎではないが、Manus Pro 更新 11/25 と、ドメイン有効期限 2027-01-31 は要注意。

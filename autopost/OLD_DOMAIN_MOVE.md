@@ -1,7 +1,7 @@
 # 旧ドメイン ko-unryu-sui.com を Xserver の 301 転送にする手順（2026-11-06 作成）
 
 ## 分かっていること（藤津さん提供の情報＋Manus画面の確認）
-- 旧ドメイン `ko-unryu-sui.com`／`www.ko-unryu-sui.com`：登録先（レジストラ）は Global Domain Group LLC、ネームサーバーは `NS1.GLOBALDOMAINGROUP.COM`・`NS2.GLOBALDOMAINGROUP.COM`（藤津さんから受領。こちらでは未確認）。
+- 旧ドメイン `ko-unryu-sui.com`／`www.ko-unryu-sui.com`：登録先（レジストラ）は Global Domain Group LLC、ネームサーバーは `NS1.GLOBALDOMAINGROUP.COM`・`NS2.GLOBALDOMAINGROUP.COM`（藤津さんから受領。11/6 Verisign RDAP で確認済み：登録 2026-01-31、**有効期限 2027-01-31**、状態 client transfer prohibited）。
 - 今は Manus のプロジェクト「行雲流水様_採用LP」にカスタムドメインとして接続され、JavaScript＋meta refresh で新ドメインへ転送するページを返している（サーバーの301ではない）。
 - 新ドメイン `ko-un-ryu-sui.com` は Xserver 管理（NS1〜NS5.XSERVER.JP）。**新ドメイン側は変更しない。**
 - 旧ドメインでメールは使っていない（藤津さん回答 11/6）→ MX/TXT の引き継ぎは不要。
@@ -21,3 +21,9 @@
 - Manus のドメインはサブスクが切れると旧ドメインが開かなくなる。解約・変更の前に上の手順を終える。
 - 旧ドメインの登録更新（Global Domain Group）は止めない（最低1年は維持）。
 - Xserver のサーバーパネルは、ログインが切れていると Claude は操作できない（パスワードは入力しない）。藤津さんが先にログインする。
+
+## 11/6 15時の状況（追記）
+- Xserver：旧ドメイン `ko-unryu-sui.com` をドメイン追加済み（状態「反映待ち」・SSL未発行は、ネームサーバー切替前の想定どおり）。旧ドメインの .htaccess に301転送を入力済み（保存ボタンは藤津さん）。新ドメインの設定は未変更。
+- **詰まっている点**：Global Domain Group は卸売りのレジストラで、藤津さんは直接ログインできない。2026-01-31 に取得されたドメインで、購入元（再販元）が不明。ネームサーバーの切替はその購入元の管理画面でしかできない。
+- 購入元の探し方：2026-01-31 前後のメール（件名に `ko-unryu-sui.com`、「ドメイン」「Verify」「Global Domain Group」）やクレジットカード明細。Manus の「利用状況と請求」「ドメイン」画面にはドメイン管理の項目はなかった（Manus Pro の更新日は 11/25）。
+- 期限：ドメインの有効期限 2027-01-31 を過ぎると新旧とも旧URLが失効。Manusのサブスクが切れると旧ドメインの転送ページも止まる（11/25更新）。
