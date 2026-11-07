@@ -22,7 +22,7 @@
   },
   {
    "path": "coupon/index.html",
-   "sha256": "0d5b1c87fbbefef1ccc59a7da259513a8bc5d39b495332a04cd9bb0320a64980"
+   "sha256": "748f7c1353d13af3d558704b351c7b5bcdd117aed727888df39c66e900fd52d5"
   },
   {
    "path": "cut/index.html",
@@ -266,7 +266,7 @@
   },
   {
    "path": "llms-full.txt",
-   "sha256": "18d4ad370036786e962737aa437e66f7a1fe63d1695254ebc8b619a0f453d513"
+   "sha256": "d10beaf33fcfe77914dec6615ce4ac664724bc33a464c5991ffa1f8b4d4207a7"
   },
   {
    "path": "llms.txt",
