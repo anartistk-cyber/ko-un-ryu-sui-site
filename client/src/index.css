@@ -432,6 +432,10 @@ h1, h2, h3 { font-weight: 400; }
 .job-detail-copy p { margin: 0 0 20px; }
 .job-detail-copy p:last-child { margin-bottom: 0; }
 .job-detail-copy strong { color: var(--ink); font-weight: 500; }
+.job-detail-copy .job-faq-item { margin: 0 0 30px; }
+.job-detail-copy .job-faq-item:last-child { margin-bottom: 0; }
+.job-detail-copy .job-faq-item p { margin: 0; }
+.job-detail-copy .job-faq-item p:first-child { margin-bottom: 6px; }
 .job-detail-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
 .job-detail-list li { display: flex; gap: 11px; align-items: flex-start; color: #496364; font-size: 13px; line-height: 1.9; }
 .job-detail-list svg { flex: 0 0 auto; margin-top: .45em; color: var(--teal); }

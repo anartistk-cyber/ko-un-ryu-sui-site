@@ -487,3 +487,14 @@
 - 依頼文：autopost/REQUEST_CHATGPT_2026-11-07_gbp-post-photos.md（8本の投稿×写真の候補、触らない項目、完了報告）。藤津さんが貼り付ける。
 - 次：11/11〜11/18に公開されたか、写真つきか、Googleの投稿一覧で確認（週次レポートに入れる）。
 
+## 2026-11-07 夕 採用サイト：求人3ページに『よくあるご質問』とFAQPage（スタイリスト・アシスタント・パート）
+- 見つけたこと：求人4ページのうち、FAQ（よくあるご質問）と構造化データ（FAQPage）があるのは学生アルバイト（/jobs/student）だけだった。スタイリスト・アシスタント・パートは、給与・休み・勤務時間・応募前の疑問に答える部分が本文に散っていた。FC・glow の主要ページはすべてFAQPageあり。
+- 直したこと（client/src/pages/JobPosting.tsx）：
+  - /jobs/stylist（6問）：給与（各区分）／休み／勤務時間／手当／未経験の応募／選考の流れ。
+  - /jobs/assistant（7問）：新卒の募集人数／給与／交通費・家賃補助／試用期間／スタイリストデビュー／勤務時間・勤務地／中途の応募。
+  - /jobs/part（6問）：時給／曜日・時間／扶養内／ブランク／シフト希望の提出時期／勤務地。
+  - 質問と答えは、各ページの本文と autopost/FACTS.md に載っている内容だけ（新しい数字・条件は足していない）。見える『よくあるご質問』と同じ文を FAQPage の JSON-LD に出す。
+  - 見た目：質問と答えの間隔が逆（答え→次の質問が詰まり、質問→答えが空く）だったので、client/src/index.css に .job-faq-item を追加（項目の間30px、質問と答えの間6px）。/jobs/student にも効く。
+- 確認：prerender 後の HTML に FAQPage と Question（6／7／6／6問）、JSON-LD は JSON として読める。スマホ390px・PC1280px で overflow 0、4ページとも目で確認。公開前の点検（publish-gate）OK、export-site 81ファイル。
+- 次：採用 :17 の取り込み後に本番で確認し、Search Console で /jobs/stylist /jobs/assistant /jobs/part のインデックス登録をリクエスト。2〜4週間後に、求人ページの表示・クリックと、応募（recruit_lead_saved）を見る。
+
