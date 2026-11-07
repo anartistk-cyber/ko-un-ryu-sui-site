@@ -238,7 +238,7 @@ export default function JobPosting({ type }: { type: JobType }) {
 
   const cta = `/?c=${job.code}#contact`;
   return (
-    <div className="job-detail-page" onClick={trackClick}>
+    <div className="job-detail-page" data-pg={`jobs-${type}`} onClick={trackClick}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       {faqData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />}
 

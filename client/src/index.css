@@ -1056,3 +1056,43 @@ html.cv-off main>:is(.worry-section,.who-section,.statement-section,.vision-sect
 /* 飾りの大きな数字（読ませる文字ではないが、薄すぎる色を3:1まで） */
 .section-index { color: #699895; }
 .job-detail-hero > span { color: #6a988d; }
+
+/* ===== 採用サブページ：ページごとの色と動き（2026-11-08）。CSSのみ・画像なし・JSなし。data-pg は SubPage／JobPosting が付ける。
+   --tn=文字に使える濃い色（白地で4.5:1以上）／--tnb=飾りの明るい色／--tns=やわらかな背景。動きは transform と opacity だけ（レイアウトを動かさない）。 ===== */
+.job-detail-page{--tn:#1c6665;--tnb:#2ab3a6;--tns:#e3f3ef}
+.job-detail-page[data-pg=jobs-assistant],.job-detail-page[data-pg=recruit-newgrad]{--tn:#c2285a;--tnb:#ff5f97;--tns:#ffe3ec}
+.job-detail-page[data-pg=jobs-part]{--tn:#b45309;--tnb:#ff9f43;--tns:#fff0dc}
+.job-detail-page[data-pg=jobs-student],.job-detail-page[data-pg=recruit-student]{--tn:#6d44c4;--tnb:#a584ff;--tns:#efe8ff}
+.job-detail-page[data-pg=recruit-career]{--tn:#1f5fbf;--tnb:#5b9bff;--tns:#e4eeff}
+.job-detail-page[data-pg=area]{--tn:#1f7a4d;--tnb:#43c785;--tns:#e6f6ec}
+.job-detail-page[data-pg=workstyle]{--tn:#c8402a;--tnb:#ff7a5c;--tns:#ffe9e1}
+.job-detail-page[data-pg=visit]{--tn:#8a6500;--tnb:#ffc400;--tns:#fff4cc}
+.job-detail-page[data-pg=school]{--tn:#0f7396;--tnb:#38b6e0;--tns:#e0f4fb}
+.job-detail-page[data-pg=blog]{--tn:#a35400;--tnb:#ffb020;--tns:#fff1cf}
+.job-detail-page[data-pg=faq]{--tn:#34479a;--tnb:#7a8cf0;--tns:#e8ecff}
+/* ページ上部に、ページの色のやわらかな光 */
+.job-detail-page[data-pg]{background:radial-gradient(110% 440px at 0 0,var(--tns),transparent 72%),radial-gradient(80% 380px at 100% 0,var(--tns),transparent 70%),var(--paper)}
+/* 見出しの上の小さな札（ページの色）と、見出し下の飾り線 */
+.job-detail-page[data-pg] .job-detail-hero>p:first-child{justify-self:start;width:fit-content;padding:6px 14px;border-radius:999px;background:#fff;color:var(--tn);border:2px solid var(--tn);box-shadow:3px 3px 0 var(--tnb)}
+.job-detail-page[data-pg] .job-detail-hero h1::after{content:"";display:block;width:92px;height:8px;margin-top:18px;border-radius:99px;background:linear-gradient(90deg,var(--tnb) 0 62%,var(--tns) 62% 100%)}
+.job-detail-page[data-pg] .job-detail-section-heading h2::before{content:"";display:block;width:46px;height:6px;margin-bottom:14px;border-radius:99px;background:var(--tnb);transform-origin:0 50%}
+/* 応募ボタンにやわらかな光 */
+.job-detail-hero .job-detail-cta,.job-detail-apply .job-detail-cta{position:relative;overflow:hidden}
+.job-detail-hero .job-detail-cta::after,.job-detail-apply .job-detail-cta::after{content:"";position:absolute;top:0;left:-60%;width:36%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);pointer-events:none}
+/* スマホ：飾りの大きな数字が見出しに重ならないよう、札の行に収める */
+@media(max-width:520px){.job-detail-hero>span{top:-2px;font-size:56px}}
+@keyframes rc-shine{0%,60%{left:-60%}100%{left:130%}}
+@keyframes rc-bob{50%{transform:translateY(-8px)}}
+@keyframes rc-draw{from{transform:scaleX(.2);opacity:.3}to{transform:none;opacity:1}}
+@keyframes rc-mark{from{background-size:0 100%}}
+@media(prefers-reduced-motion:no-preference){
+ .job-detail-hero .job-detail-cta::after,.job-detail-apply .job-detail-cta::after{animation:rc-shine 5s ease-in-out infinite}
+ .job-detail-hero>span{animation:rc-bob 6s ease-in-out infinite}
+ /* トップ：見出しの蛍光ペンの線が、左から引かれる */
+ .hero-copy h1 em{background-repeat:no-repeat;background-size:100% 100%;animation:rc-mark .9s .35s cubic-bezier(.2,.7,.2,1) backwards}
+}
+@supports(animation-timeline:view()){
+ @media(prefers-reduced-motion:no-preference){
+  .job-detail-page[data-pg] .job-detail-section-heading h2::before{animation:rc-draw both linear;animation-timeline:view();animation-range:entry 5% entry 65%}
+ }
+}

@@ -452,3 +452,68 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
  .rate-v{font-size:20px}
  .rate-i small{font-size:11px}
 }
+
+/* ===== 55-tone 2026-11-08: ページごとの色と絵文字（ポップで可愛く、ページの内容がひと目で分かる）。CSSのみ・画像なし・JSなし =====
+   <body data-pg="cut"> のようにページ名が入る（build.mjs の PG）。--dot1=見出しの飾りの色／--p1・--p2=見出し帯の背景／--c1・--c2=帯の丸い飾り。
+   動きは transform と opacity だけ（レイアウトを動かさない＝CLSなし）。prefers-reduced-motion では止める。 */
+body[data-pg=coupon]{--dot1:#f06a8d;--p1:#ffe3ea;--p2:#fff2c9;--c1:#ffc2d1;--c2:#ffe28a}
+body[data-pg=menu]{--dot1:#f59ab3;--p1:#fff0f3;--p2:#e4f5ee;--c1:#f9c3d1;--c2:#b9ecd8}
+body[data-pg=style]{--dot1:#a77bf0;--p1:#f1e8ff;--p2:#ffe9f1;--c1:#e0cffb;--c2:#ffc7da}
+body[data-pg=young]{--dot1:#ff6fa3;--p1:#ffe0ec;--p2:#e9f0ff;--c1:#ffc2d9;--c2:#c4d8ff}
+body[data-pg=cut]{--dot1:#4aa8e0;--p1:#e3f4ff;--p2:#fff0f6;--c1:#bfe3fb;--c2:#ffd0e0}
+body[data-pg=hair-donation]{--dot1:#ef5c7a;--p1:#ffe6ea;--p2:#fff6dc;--c1:#ffc5d0;--c2:#ffe28a}
+body[data-pg=short-perm]{--dot1:#f2a233;--p1:#fff0d6;--p2:#ffe3ee;--c1:#ffd9a0;--c2:#ffc2d9}
+body[data-pg=color]{--dot1:#e45aa0;--p1:#ffe8f0;--p2:#f1e6ff;--c1:#ffc2dc;--c2:#d9c3fb}
+body[data-pg=hair-quality]{--dot1:#3fbf94;--p1:#e0f6ee;--p2:#fff8d9;--c1:#b9ecd8;--c2:#ffe28a}
+body[data-pg=straight]{--dot1:#5b8def;--p1:#e6efff;--p2:#e4f5ee;--c1:#c4d8ff;--c2:#b9ecd8}
+body[data-pg=cota-products]{--dot1:#f08a3c;--p1:#fff1dc;--p2:#ffe3ee;--c1:#ffd9a8;--c2:#ffc2d9}
+body[data-pg=headspa]{--dot1:#36aebd;--p1:#dff3f7;--p2:#e9f8ee;--c1:#b4e4ec;--c2:#c8efd6}
+body[data-pg=first]{--dot1:#e9b422;--p1:#fff6cf;--p2:#e4f5ee;--c1:#ffe28a;--c2:#b9ecd8}
+body[data-pg=cast]{--dot1:#ec6a98;--p1:#ffe1ea;--p2:#e8e4ff;--c1:#ffc2d1;--c2:#d6cffb}
+body[data-pg=area]{--dot1:#3aa88a;--p1:#e4f5ee;--p2:#e3f0ff;--c1:#b9ecd8;--c2:#c4d8ff}
+body[data-pg=faq]{--dot1:#6b7fe8;--p1:#e8ecff;--p2:#fff6dc;--c1:#cdd5ff;--c2:#ffe28a}
+body[data-pg=voice]{--dot1:#f0953c;--p1:#fff0d6;--p2:#ffe3ee;--c1:#ffd9a0;--c2:#ffc2d9}
+body[data-pg=journal]{--dot1:#67b86a;--p1:#e9f5e4;--p2:#fff0f6;--c1:#c8e8c0;--c2:#ffd0e0}
+/* サブページの見出し帯：ページの色（トップ・会社情報などは今までの色のまま） */
+body[data-pg]:not([data-pg=privacy]):not([data-pg=company]) .ph{background:linear-gradient(150deg,var(--p1,var(--pink2)),var(--p2,var(--soft)))}
+body[data-pg] .ph::before{background:var(--c1,var(--pink))}
+body[data-pg] .ph::after{background:var(--c2,var(--butter))}
+/* 絵文字（見出し帯の左上。飾りなので読み上げない） */
+body[data-pg=coupon] .ph .wrap::before{content:"🎟️";content:"🎟️"/""}
+body[data-pg=menu] .ph .wrap::before{content:"📖";content:"📖"/""}
+body[data-pg=style] .ph .wrap::before{content:"📸";content:"📸"/""}
+body[data-pg=young] .ph .wrap::before{content:"🎀";content:"🎀"/""}
+body[data-pg=cut] .ph .wrap::before{content:"✂️";content:"✂️"/""}
+body[data-pg=hair-donation] .ph .wrap::before{content:"💗";content:"💗"/""}
+body[data-pg=short-perm] .ph .wrap::before{content:"🌀";content:"🌀"/""}
+body[data-pg=color] .ph .wrap::before{content:"🎨";content:"🎨"/""}
+body[data-pg=hair-quality] .ph .wrap::before{content:"✨";content:"✨"/""}
+body[data-pg=straight] .ph .wrap::before{content:"💫";content:"💫"/""}
+body[data-pg=cota-products] .ph .wrap::before{content:"🧴";content:"🧴"/""}
+body[data-pg=headspa] .ph .wrap::before{content:"☁️";content:"☁️"/""}
+body[data-pg=first] .ph .wrap::before{content:"🔰";content:"🔰"/""}
+body[data-pg=cast] .ph .wrap::before{content:"💇";content:"💇"/""}
+body[data-pg=area] .ph .wrap::before{content:"🚃";content:"🚃"/""}
+body[data-pg=faq] .ph .wrap::before{content:"💬";content:"💬"/""}
+body[data-pg=voice] .ph .wrap::before{content:"💌";content:"💌"/""}
+body[data-pg=journal] .ph .wrap::before{content:"📝";content:"📝"/""}
+body[data-pg]:not([data-pg=home]) .ph .wrap::before{font-size:36px}
+@media(max-width:520px){body[data-pg]:not([data-pg=home]) .ph .wrap::before{font-size:26px}}
+/* カードは触れるとぷるんと浮く（translate は transform と別なので、スクロール演出と干渉しない） */
+.g3 article,.pm a,.cast li,.nx-c{transition:translate .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s ease}
+@media(hover:hover){.g3 article:hover,.pm a:hover,.cast li:hover,.nx-c:hover{translate:0 -6px}}
+@media(prefers-reduced-motion:no-preference){
+ /* トップ：最初の画面は、ぴょこっと定位置へ（transformだけ。文字は最初から見えるのでLCPは遅れない） */
+ @keyframes t-pop{from{transform:translateY(20px) scale(.97)}to{transform:none}}
+ .hero-t>*{animation:t-pop .7s cubic-bezier(.34,1.56,.64,1) both}
+ .hero-t>:nth-child(2){animation-delay:.05s}.hero-t>:nth-child(3){animation-delay:.1s}.hero-t>:nth-child(4){animation-delay:.15s}
+ .hero-t>:nth-child(5){animation-delay:.2s}.hero-t>:nth-child(6){animation-delay:.25s}.hero-t>:nth-child(n+7){animation-delay:.3s}
+}
+/* 見出しのドットは、画面に入るとぽんっと出る（対応ブラウザのみ。非対応は最初から表示） */
+@supports(animation-timeline:view()){
+ @media(prefers-reduced-motion:no-preference){
+  @keyframes t-dots{from{transform:scale(.3);opacity:.2}to{transform:none;opacity:1}}
+  .sec h2::after{animation:t-dots both cubic-bezier(.34,1.56,.64,1);animation-timeline:view();animation-range:entry 5% entry 65%}
+ }
+}
+@media(prefers-reduced-motion:reduce){.g3 article,.pm a,.cast li,.nx-c{transition:none}}

@@ -6,6 +6,9 @@ export const SITE = "https://ko-un-ryu-sui.com";
 export const LINE_URL = "https://lin.ee/Z0JP8sH";
 const logoPath = "/images/company-logo_s210.jpg";
 
+// ページ名（<div data-pg>）：ページごとの色を出し分ける（index.css の「採用サブページ：ページごとの色」）。/recruit/newgrad→recruit-newgrad、/blog/xxx→blog、/faq→faq
+export const pgOf = (path: string) => path.split("/").filter(Boolean).slice(0, path.startsWith("/blog") ? 1 : 2).join("-") || "home";
+
 export function setMeta(opts: { title: string; description: string; path: string; jsonLd?: object; image?: string }) {
   document.title = opts.title;
   const set = (sel: string, v: string) => document.querySelector<HTMLMetaElement>(sel)?.setAttribute("content", v);
@@ -23,7 +26,7 @@ export function SubPage({ children, title, description, path, image }: { childre
     { "@type": "ListItem", position: 1, name: "採用トップ", item: SITE + "/" },
     { "@type": "ListItem", position: 2, name: title.split("｜")[0], item: SITE + path }] };
   return (
-    <div className="job-detail-page sub-page">
+    <div className="job-detail-page sub-page" data-pg={pgOf(path)}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
       <header className="job-detail-header">
         <Link href="/" className="privacy-brand" aria-label="行雲流水 採用サイト トップへ">
