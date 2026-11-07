@@ -22,7 +22,7 @@
   },
   {
    "path": "cut/index.html",
-   "sha256": "c8310ec56e6ef0325d97384c96811eea3040ab4b36b6356ffc1fc91aa923c536"
+   "sha256": "b1785278f8f0ffeb67ee085bd314562b33435b9b7ff2a43752741af5bbc6b3c8"
   },
   {
    "path": "faq/index.html",
@@ -273,6 +273,10 @@
    "sha256": "0d46dcde4af58425a43140710e4d925bf82a6a29ff24429863f2a63b6d216da3"
   },
   {
+   "path": "hair-donation/index.html",
+   "sha256": "9697edb8ea45fe8482e4398b9c3b3622931b88d743b606b0f352d10ca0e00436"
+  },
+  {
    "path": "hair-quality/index.html",
    "sha256": "52772f71e379e4633279f7bf307843c5a9f8bb0a9528e1c24064a8d37196bf6b"
   },
@@ -330,11 +334,11 @@
   },
   {
    "path": "llms-full.txt",
-   "sha256": "37d9c1959e088ae900b6aaec63643a75a0099f64a868f202c4cb70a37d405f78"
+   "sha256": "fcf978c0ceb1625ad027fcf2bbacace8fefd47a5547fff84a4d0ba426a83d98d"
   },
   {
    "path": "llms.txt",
-   "sha256": "8898cb6ff638c135f1ab8f28c0b2e078f7fcf3b53b91773fda3d4f5fc33ab250"
+   "sha256": "ff127ad6b610c3c2e9ff8dda439e5c022866a7bfba0b102f81c941a488250dc1"
   },
   {
    "path": "menu/index.html",
@@ -354,7 +358,7 @@
   },
   {
    "path": "sitemap-gl.xml",
-   "sha256": "cc53f9a632e7de11c2be3e4d77959c70c4007935fe7dba5f7d03b5ee56cb77a0"
+   "sha256": "332ee57d42af6fff7228c24fafe0130573566648fa0d9f4711d6eaaa29171a20"
   },
   {
    "path": "straight/index.html",

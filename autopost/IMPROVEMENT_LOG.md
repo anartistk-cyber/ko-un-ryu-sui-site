@@ -544,3 +544,11 @@
   - autopost/FACTS.md と fc-site/autopost/FACTS.md に事実として追記。
 - 確認：node build.mjs、manifest 再生成（FC 88／glow 93・不一致0）。
 - 次：FC :22／glow :27 の取り込み後に本番を確認。『31cm以上』が FLOWCLOUD でも同じか、料金（通常カットと同じか）・流れ・どの団体に送るかを藤津さんに確認できれば、短い専用ページにして『ヘアドネーション 大阪 美容室』などを狙える。
+
+## 2026-11-07 夕 FLOWCLOUD・glow：ヘアドネーションの専用ページ /hair-donation/ を新設
+- 藤津さんの回答（17:15）：①31cm以上はFLOWCLOUDも同じ ②料金は通常のカットと一緒 ③カットした髪はご自身で郵送・店は情報提供する。
+- 新設：FLOWCLOUD /hair-donation/（泉大津のFLOWCLOUDで…）、glow /hair-donation/。構成：『ヘアドネーションのカットについて』（髪の長さ31cm以上／料金は通常のカットと同じ＝シャンプーブロー込¥5,500・50分／カットした髪はご自身で郵送・必要な情報はご案内）→ご来店の流れ→（FC は3つの安心）→予約ボタン→よくある質問6問（FAQPage）→つぎは。
+- 内部リンク：/cut/ の本文に『ヘアドネーションのカットをご希望の方へ →』を追加。サイトマップ・llms.txt・『つぎは』カードに登録。
+- 事実メモ：autopost/FACTS.md・fc-site/autopost/FACTS.md を更新（寄付先の団体名は未確認のため書いていない。『ヘアドネーションのご希望は、ご予約時やご来店時にお伝えください』は案内文として入れた。運用と違えば直す）。
+- 確認：node build.mjs（FC 31／glow 30ページ）、manifest（FC 89／glow 94・不一致0）、overflow-test は FC 32ページ・glow 30ページ×4幅とも overflow 0、PC／スマホの画面を確認、JSON-LD は JSON として読める、canonical は各サイトのURL。
+- 次：FC :22／glow :27 の取り込み後に本番を確認 → Search Console で両ページのインデックス登録をリクエスト（FC は /hair-donation/、glow も同様）。ヘアドネーションの検索語（FCは約10種類）の表示・クリックを2〜4週間見る。
