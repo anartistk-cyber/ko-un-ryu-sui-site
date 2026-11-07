@@ -508,3 +508,7 @@
 - 確認：node build.mjs（FC 30ページ／glow 29ページ）、manifest 再生成（FC 88／glow 93、不一致0）、overflow-test は FC 31ページ×4幅・glow 29ページ×4幅とも overflow 0。audit.py は既知の指摘（google確認ファイル、recruit/recruite の重複、privacy の title）のみ。
 - 次：FC :22／glow :27 の取り込み後に、本番の記事ページで『つぎは』のリンク先を確認。2〜4週間後に GA4 で、記事→サービスページ→cta の流れ（ページ遷移・cta_net_reserve など）が増えたか見る。
 - 追加（FLOWCLOUD）：お知らせ『11月・12月の休業日のお知らせ』の説明文（description）が51字と短かったので、『FLOWCLOUD（泉大津）…営業時間は9:00〜20:00（最終受付18:00）。…』に（本文と FACTS にある内容だけ）。manifest 再生成 88ファイル・不一致0。
+
+## 2026-11-07 夕 GBP 12月の投稿案（下書き）を作成（投稿はしていない）
+- autopost/GBP_DRAFTS_2026-12.md：FLOWCLOUD（カラー／髪質改善／髪質改善ストレート／メンズ）・glow（カラー／10代・20代／髪質改善ストレート／髪質改善）各4本。リンクは UTM 付き（`post_202612_◯◯`）、日付は休業日を避けた 12/2・5・9・12 の 10:00。文は各ページ・メニュー表にある内容だけ。
+- 次：藤津さんが「投稿して」と言ったら gbp-post-schedule の手順で予約投稿。写真は ChatGPT へ依頼文を作って渡す。
