@@ -448,3 +448,7 @@
 - 提案：写真（jpg/png/gif/webp/svg/ico）に Cache-Control: public, max-age=2592000（30日）。HTML は前回の指定どおり『開くたびに更新確認』のまま。案は server-files/htaccess-image-cache.txt。
 - 状況：FC（flowcloud.net）の .htaccess に末尾追記として入力済み（保存は藤津さん）。保存後に、サイトが500でないこと・画像に Cache-Control が付いたことを確認 → glow の分を入力する。
 - 注意：同じファイル名で写真を差し替えると、再訪問の方には最大30日間古い写真が出る。差し替えは別名で。
+
+## 2026-11-07 13:27 画像のキャッシュ指定：FC を藤津さんが保存 → 本番で確認／glow分を入力済み
+- 本番確認（FC・13:27）：旧WPの写真（FLOW-CLOUD-063 ほか）と favicon.ico が Cache-Control: public, max-age=2592000（30日）で返る。HTML（/・/cut/）は no-cache のまま。サイトは200で正常表示。
+- glow-izumiotsu.jp の .htaccess（WordPress ブロック・HTML更新確認ブロックの後ろ）に同じ指定を入力して保存の手前で止めた。保存は藤津さん待ち。保存後に glow の写真に同じヘッダーが付くこと・サイトが500でないことを確認する。
