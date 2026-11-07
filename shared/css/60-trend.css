@@ -34,3 +34,17 @@
  .steps li:last-child:before{display:none}
  .steps h3{margin:0 0 5px;padding-top:9px}
 }
+/* サブページ下の「あわせて見るページ」`.nx`（3枚）は、スマホでは横にめくる（約350px短く）。文字・リンクは同じ */
+@media(max-width:720px){
+ .nx{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -20px;padding:8px 20px 12px;scroll-padding:0 20px;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+ .nx::-webkit-scrollbar{display:none}
+ .nx>li{flex:0 0 80%;scroll-snap-align:start}
+}
+@supports selector(::scroll-marker){
+ @media(max-width:720px){
+  .nx{scroll-marker-group:after}
+  .nx::scroll-marker-group{display:flex;justify-content:center;gap:8px;padding:12px 0 0}
+  .nx>li::scroll-marker{content:"";width:8px;height:8px;border-radius:99px;background:var(--pinkl)}
+  .nx>li::scroll-marker:target-current{background:var(--cta);width:22px}
+ }
+}
