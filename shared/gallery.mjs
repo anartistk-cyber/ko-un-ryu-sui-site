@@ -45,6 +45,9 @@ export function makeGallery({ dir, items, cats, pageHref = '/style/' }) {
       name: it.t,
       description: it.a,
       creditText: credit,
+      // Googleの「画像メタデータ」推奨項目。写真は自社（Instagram）のもの。license/acquireLicensePage は他者へ貸し出さないので付けない。
+      creator: { '@type': 'Organization', name: credit, url: base + '/' },
+      copyrightNotice: `© ${credit}（株式会社行雲流水）`,
     })),
   });
 

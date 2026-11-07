@@ -678,3 +678,11 @@
 ## 2026-11-08 07:45 Search Console のインデックス確認（新設ページ6件）
 - 確認：FLOWCLOUD `/color/` `/men/` `/straight/`、glow `/hair-quality/` `/young/` `/straight/` を URL検査。6件すべて「URL は Google に登録されています／ページはインデックスに登録済み」、パンくずリストも有効（1件）。
 - 対応：すでに登録済みのため、インデックス登録リクエストは送っていない（1日の上限を消費しない）。「次：検索流入が出るまで」は Search Console の検索パフォーマンスで、これらのページのクリック・表示を2〜4週間見る（毎週の週次点検で確認）。
+
+## 2026-11-08 08:15 Search Console「画像メタデータ」の警告（glow、重大でない4件）に対応
+- きっかけ：Search Console から glow-izumiotsu.jp に「画像メタデータの構造化データ：acquireLicensePage／copyrightNotice／license／creator がありません」（重大でない推奨項目）の通知。
+- 原因：ヘアスタイルギャラリー `/style/` の ImageObject（glow 19件・FC 18件、`shared/gallery.mjs`）に creditText だけで、作成者・著作権表示がなかった。
+- 直したこと：全 ImageObject に `creator`（Organization：glow／FLOWCLOUD）と `copyrightNotice`（「© glow（株式会社行雲流水）」／「© FLOWCLOUD（株式会社行雲流水」）を追加。画像は自社 Instagram の写真で、事実どおり。FC も同じ警告が出る前に同時に対応。変わったのは両サイトの `/style/` のみ。
+- 付けていないもの：`license`／`acquireLicensePage`。これは「写真を他者に使用許諾する」ことを示す項目（Google画像の「ライセンス可能」バッジ用）で、貸し出す予定がないため付けない。通知に残る2件は、見た目・順位に影響しない推奨項目なので、そのままでよい。
+- 点検：JSON-LD は全件パース可（glow 19／FC 18 が creator と copyrightNotice を持つ）、manifest 不一致0（90／95）、audit.py は既知のみ。
+- 次：Search Console の「画像メタデータ」で「修正を検証」を押すと、creator と copyrightNotice の2件が消える（Googleの再クロール待ち。数日〜2週間）。
