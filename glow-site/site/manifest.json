@@ -22,7 +22,7 @@
   },
   {
    "path": "cut/index.html",
-   "sha256": "359cee41feafe522d26cd6aabf044ce2c53737985182e8748a7f8991b9fb90ad"
+   "sha256": "c8310ec56e6ef0325d97384c96811eea3040ab4b36b6356ffc1fc91aa923c536"
   },
   {
    "path": "faq/index.html",
@@ -330,7 +330,7 @@
   },
   {
    "path": "llms-full.txt",
-   "sha256": "92ae3bf36eb6ced539b2cd9e4c8947cabb66cb85b9f92f633568f6b4a3899846"
+   "sha256": "37d9c1959e088ae900b6aaec63643a75a0099f64a868f202c4cb70a37d405f78"
   },
   {
    "path": "llms.txt",
