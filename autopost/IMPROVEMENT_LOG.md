@@ -686,3 +686,14 @@
 - 付けていないもの：`license`／`acquireLicensePage`。これは「写真を他者に使用許諾する」ことを示す項目（Google画像の「ライセンス可能」バッジ用）で、貸し出す予定がないため付けない。通知に残る2件は、見た目・順位に影響しない推奨項目なので、そのままでよい。
 - 点検：JSON-LD は全件パース可（glow 19／FC 18 が creator と copyrightNotice を持つ）、manifest 不一致0（90／95）、audit.py は既知のみ。
 - 次：Search Console の「画像メタデータ」で「修正を検証」を押すと、creator と copyrightNotice の2件が消える（Googleの再クロール待ち。数日〜2週間）。
+
+## 2026-11-08 08:50 本番確認と PageSpeed 再測定（第2弾 78a1319・第3弾 1524ced／5cbda99・画像メタデータ 12b850a 取り込み後）
+- 本番（同一オリジンfetch＋390px iframe の計算済みスタイル）：
+  - 採用：トップの順序が「who → experience（選べる体験会）→ about」、`.education-steps` は display:flex／overflow-x:auto、募集要項の表の行は grid、横はみ出しなし（docSW 375）。求人詳細 `/jobs/stylist` は節の余白32px・gap14px・行間1.85、高さ約6,520px（手元 6,336px、実フォントで差）。
+  - FLOWCLOUD・glow：`.steps li` の padding-left 58px、`.rv` は flex、`.nx`（あわせて見るページ）は display:flex・3枚（FC 194px／glow 254px）、横はみ出しなし。`/style/` の ImageObject は creator 18／19・copyrightNotice 18／19（FC／glow）が本番に出ている。
+- PageSpeed（スマホ・トップ・各3回、前回01:40頃の値と比較）：
+  - 採用：95／90／99（TBT 210／380／60ms、FCP＝LCP 1.2秒、CLS 0.001）／前回 100／89／99（FCP・LCP 1.1秒）。
+  - glow：95／93／96（TBT 260／310／230ms、FCP＝LCP 0.9〜1.0秒、CLS 0）／前回 99／96／96。ユーザー補助・おすすめの方法・SEO は100。
+  - FLOWCLOUD：99／100（TBT 60／50ms、FCP＝LCP 1.0秒、CLS 0、SI 1.0〜3.3秒は1回だけのぶれ）／前回 100／100。
+  - 判断：点数のぶれは TBT（gtag 約250ms）で、FCP・LCP は±0.1秒、CLS は0〜0.001。点数−3以上でも LCP+0.3秒以上でもない → 戻さない（第2弾・第3弾とも維持）。
+- 旧ドメインへの転送（既知）：この Chrome で `https://ko-un-ryu-sui.com/`（クエリなしのトップ）だけ、数秒で旧ドメイン ko-unryu-sui.com（Manus の「新しいURLへ移動します」）へ移る。`/jobs/stylist`・`?chk=` 付きは新ドメインのまま。11/7 19:40 の調査と同じ症状で、サーバーは問題なし（fetch は reload／default／force-cache とも「/」が 200・転送なし、JS の service worker なし、Google の PageSpeed は裸のURLで正しい採用ページを測れた）。このブラウザに古い転送が残っている見立てのまま。藤津さんの端末は、シークレットウィンドウで確認し、キャッシュ削除（全期間）で直る見込み。根本対処は旧ドメインのネームサーバー変更（OLD_DOMAIN_MOVE.md）。
