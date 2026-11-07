@@ -1122,3 +1122,25 @@ html.cv-off main>:is(.worry-section,.who-section,.statement-section,.vision-sect
     .home-blog-grid > *::scroll-marker:target-current, .staff-voice-grid > *::scroll-marker:target-current { background: var(--pink); width: 22px; }
   }
 }
+
+/* ===== スマホ：募集要項などの表を、見出しと内容を横に並べて短く／成長のステップは横にめくる（2026-11-08 第2弾）=====
+   根拠：採用トップは表が10個あり、スマホでは「見出し」の上に「内容」が縦に積まれて約8,500pxを占めていた。文字は変えない（CSSのみ）。 */
+@media (max-width: 560px) {
+  .guideline-table tr { display: grid; grid-template-columns: 84px minmax(0, 1fr); column-gap: 10px; align-items: start; padding: 9px 0; }
+  .guideline-table th, .guideline-table td { width: auto; }
+  .guideline-table th { padding: 3px 0 3px 6px; line-height: 1.6; }
+  .guideline-table td { padding: 2px 6px 2px 0; line-height: 1.75; }
+}
+@media (max-width: 720px) {
+  .education-steps { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; border-top: 0; margin-left: -20px; margin-right: -20px; padding: 6px 20px 14px; scroll-padding: 0 20px; overscroll-behavior-x: contain; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .education-steps::-webkit-scrollbar { display: none; }
+  .education-steps article, .education-steps article:first-child { flex: 0 0 80%; min-width: 0; min-height: auto; scroll-snap-align: start; border: 1px solid rgba(255,255,255,.3); border-radius: 18px; }
+}
+@supports selector(::scroll-marker) {
+  @media (max-width: 720px) {
+    .education-steps { scroll-marker-group: after; }
+    .education-steps::scroll-marker-group { display: flex; justify-content: center; gap: 8px; padding: 12px 0 0; }
+    .education-steps > *::scroll-marker { content: ""; width: 8px; height: 8px; border-radius: 99px; background: rgba(255,255,255,.35); }
+    .education-steps > *::scroll-marker:target-current { background: #fff; width: 22px; }
+  }
+}

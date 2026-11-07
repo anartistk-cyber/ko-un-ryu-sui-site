@@ -416,6 +416,27 @@ export default function Home() {
           <p className="who-line"><a className="button button-primary" href={lineHref} target="_blank" rel="noreferrer" data-track="line" data-placement="body">どれか迷ったら、公式LINEで相談 <ArrowUpRight size={16} aria-hidden="true" /></a></p>
         </section>
 
+        <section className="experience-section section" id="experience" aria-labelledby="experience-title">
+          <div className="section-heading split-heading">
+            <div>
+              <Eyebrow>EXPERIENCE</Eyebrow>
+              <h2 id="experience-title">選べる体験会。<br />まずは1時間から。</h2>
+            </div>
+            <p>体験会は随時（1〜6時間）。公式LINEからご希望の体験と日時をお送りください。その他の日程はご相談ください。</p>
+          </div>
+          <div className="merit-grid">
+            {experienceCards.map(([num, title, text]) => (
+              <article className="merit-card" key={num}>
+                <span className="card-number">{num}</span>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
+          </div>
+          <p className="data-note"><Check size={15} aria-hidden="true" /> 説明会・採用試験は体験会に参加された方が対象です。日程はLINEまたはフォームでお問い合わせください。</p>
+          <p className="experience-cta"><a className="button button-primary" href={lineHref} target="_blank" rel="noreferrer">公式LINEで体験会を予約する <ArrowUpRight size={17} aria-hidden="true" /></a></p>
+        </section>
+
         <section className="statement-section section" id="about" aria-labelledby="about-title">
           <div className="section-grid">
             <div>
@@ -707,27 +728,6 @@ export default function Home() {
             <InfoBlock num="B" en="BENEFITS" title="休日・福利厚生" rows={benefitRows} />
             <InfoBlock num="C" en="ANNUAL EVENTS" title="年間行事" rows={eventRows} />
           </div>
-        </section>
-
-        <section className="experience-section section" id="experience" aria-labelledby="experience-title">
-          <div className="section-heading split-heading">
-            <div>
-              <Eyebrow>EXPERIENCE</Eyebrow>
-              <h2 id="experience-title">選べる体験会。<br />まずは1時間から。</h2>
-            </div>
-            <p>体験会は随時（1〜6時間）。公式LINEからご希望の体験と日時をお送りください。その他の日程はご相談ください。</p>
-          </div>
-          <div className="merit-grid">
-            {experienceCards.map(([num, title, text]) => (
-              <article className="merit-card" key={num}>
-                <span className="card-number">{num}</span>
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </article>
-            ))}
-          </div>
-          <p className="data-note"><Check size={15} aria-hidden="true" /> 説明会・採用試験は体験会に参加された方が対象です。日程はLINEまたはフォームでお問い合わせください。</p>
-          <p className="experience-cta"><a className="button button-primary" href={lineHref} target="_blank" rel="noreferrer">公式LINEで体験会を予約する <ArrowUpRight size={17} aria-hidden="true" /></a></p>
         </section>
 
         <section className="access-section section" id="access" aria-labelledby="access-title">
