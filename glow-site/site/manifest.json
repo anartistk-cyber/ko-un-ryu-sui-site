@@ -2,7 +2,7 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "4b76de34ec89c384a28ff0a4d1bb430f40740cf1e35a842aaa5976d5e8550ecf"
+   "sha256": "dda115dde78087a92e12d0eeaa64ef192323a7b19b7cf00a6f24b65b7a8b6797"
   },
   {
    "path": "cast/index.html",
@@ -34,7 +34,7 @@
   },
   {
    "path": "first/index.html",
-   "sha256": "72b3b062ae8b3ecc19f564979eebd519e9eaeeb04e66af75b4a7327e927eeab6"
+   "sha256": "9cb630c918d3fe17dadd9d28690598a17a8a1d7195022e76537cdc2ca8c8bbb4"
   },
   {
    "path": "gl/apple-touch-icon.png",
@@ -330,7 +330,7 @@
   },
   {
    "path": "llms-full.txt",
-   "sha256": "2aaaf155eb1ae87841bc0171c6bd26d4772d836c9754fbaeb6eca8c546eca792"
+   "sha256": "5f90a1937844aafb02a9acb6b6fe92a6f134343627a21432573e0514c1706946"
   },
   {
    "path": "llms.txt",

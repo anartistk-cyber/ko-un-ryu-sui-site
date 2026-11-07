@@ -397,3 +397,9 @@
 - 本番確認（FC 09:22／glow 09:27 の取り込み後）：FC・glow とも /headspa/ が200・題名そのまま・FAQPageあり・『メニューの選び方』あり。トップに /cut/ へのリンクあり（FC 4箇所・glow 3箇所）。
 - Search Console でライブテスト『URLはGoogleに登録できます』→ FC /headspa/・glow /headspa/ のインデックス登録をリクエスト済み（FC は既に旧版が登録済みのページ。更新の再クロール依頼）。これでリクエスト済みは本日 FC 3件（/cut/ /perm/ /headspa/）・glow 3件（/cut/ /short-perm/ /headspa/）。
 - 技術メモ：キャスト代表のChromeは画面撮影（screenshot）がタイムアウトする。URL検査は、検索バー（aria-label『…内のすべての URL を検査』）の値を JS で入れて Enter イベントを送り、ボタンは文字列で探して click() すると操作できた（座標クリック不要）。
+
+## 2026-11-07 12:25 中身の改善④：/first/（初めての方へ）・/area/（エリア）に FAQ と FAQPage（FC・glow）
+- 見つけたこと：『初めて 美容室 泉大津』『◯◯から泉大津 美容室』のように調べる人が着地しやすい /first/ と /area/ に、疑問を解消する FAQ が無かった（FAQ は /faq/ にだけあった）。
+- 直したこと：既存の /faq/ の質問・回答をそのまま選んで載せた（回答文は /faq/ と同一＝事実の食い違いなし）。FC /first/＝半個室・ヘッドスパの空間・予約なし・営業時間・料金・年代のお悩み、FC /area/＝場所・遠方から・営業時間・予約なし。glow /first/＝予約なし・営業時間・駐車場・低刺激カラー・髪質改善・料金、glow /area/＝場所・遠方から・駐車場・営業時間。各ページに FAQPage JSON-LD を追加。
+- 確認：overflow 0（FC・glow）／audit は既知の指摘のみ／manifest 不一致0（FC 87・glow 93）。
+- サーバー側：Xserver にログインしてもらえたので、FC の .htaccess に『HTMLの更新確認』と『旧WP番号URL2つの301』を入力済みで保存待ち（保存は藤津さん）。glow の『HTMLの更新確認』は FC の保存後に入力する。
