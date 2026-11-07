@@ -35,6 +35,7 @@ type JobData = {
   jsonQualifications: string;
   jsonWorkHours: string;
   related: [string, string][];
+  faq?: [string, string][];
 };
 
 const locations = [
@@ -130,10 +131,10 @@ const jobs: Record<JobType, JobData> = {
   },
   student: {
     code: "student", number: "04", eyebrow: "BEAUTY STUDENT / PART-TIME", title: "美容学生アルバイト",
-    h1: "泉大津の美容学生アルバイト募集｜仕事を知る、一歩目に",
-    seoTitle: "美容学生・高校生アルバイト求人｜泉大津・南大阪｜FLOWCLOUD・glow",
-    seoDesc: "泉大津の美容室FLOWCLOUD・glowの美容学生・高校生向けアルバイト求人。担当する補助業務、時給、勤務日数、学校との調整、応募の流れをご案内。まずは見学・体験から。",
-    lead: "学校で学ぶ美容と、実際のサロンの仕事をつなげてみませんか。お客様への声のかけ方、道具の準備、キャスト同士の連携。働く現場を知りながら、卒業後の進路も考えられます。",
+    h1: "泉大津の高校生・専門学校生アルバイト募集",
+    seoTitle: "高校生・美容学生のアルバイト｜時給1,300円〜｜泉大津・大阪｜FLOWCLOUD・glow",
+    seoDesc: "泉大津の美容室FLOWCLOUD・glowの高校生・美容学生向けアルバイト。対象は高校1年生〜専門学校2年生、時給1,300円〜、最低月1回から、学校の予定に合わせて相談できます。まずは見学・体験から。",
+    lead: "高校1年生〜専門学校2年生が対象です。学校で学ぶ美容と、実際のサロンの仕事をつなげてみませんか。お客様への声のかけ方、道具の準備、キャスト同士の連携。働く現場を知りながら、卒業後の進路も考えられます。最低勤務は月に1回、学校の予定に合わせて相談できます。",
     salaryShort: "時給 1,300円〜",
     schedule: "学校の予定に合わせて相談",
     sections: [
@@ -150,6 +151,14 @@ const jobs: Record<JobType, JobData> = {
     jsonQualifications: "美容系を目指す学生の方（対象課程・学年は募集要項に記載）。美容師免許は不要です。",
     jsonWorkHours: "学校の予定に合わせて相談できます。",
     related: [["新卒案内を見る", "/recruit/newgrad"], ["働き方（休み・教育・給与の内訳）", "/workstyle"], ["見学・体験の流れ", "/visit"]],
+    faq: [
+      ["高校生でも応募できますか？", "はい。対象は高校1年生〜専門学校2年生です。通信課程など、該当するか分からない場合は、お問い合わせください。"],
+      ["美容師免許がなくても大丈夫ですか？", "はい。美容師免許は不要です。店内の清掃・準備などの補助業務を担当します。美容師免許が必要な施術を、無資格の方へ任せることはありません。"],
+      ["週に何日くらい働けますか？", "最低の勤務条件は月に1回です。勤務日数・1日の時間・時間帯は要相談で、学校の授業や試験の予定も事前にご相談ください。"],
+      ["時給はいくらですか？", "時給1,300円〜です。"],
+      ["交通費は出ますか？", "通勤圏外の方のみ、上限10,000円まで支給します。"],
+      ["まず見学や話を聞くだけでもできますか？", "はい。応募前のご相談や、見学・体験からでも大丈夫です。勤務できる曜日・時間と、サロンで知りたいことをお聞かせください。"],
+    ],
   },
 };
 
@@ -182,6 +191,15 @@ export default function JobPosting({ type }: { type: JobType }) {
     [job, jobUrl],
   );
 
+  const faqData = useMemo(
+    () => job.faq && ({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: job.faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
+    }),
+    [job],
+  );
+
   useEffect(() => {
     document.title = job.seoTitle;
     updateHeadMeta('meta[name="description"]', job.seoDesc);
@@ -197,6 +215,7 @@ export default function JobPosting({ type }: { type: JobType }) {
   return (
     <div className="job-detail-page" onClick={trackClick}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      {faqData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />}
 
       <header className="job-detail-header">
         <Link href="/" className="privacy-brand" aria-label="行雲流水 採用サイト トップへ">
@@ -223,6 +242,15 @@ export default function JobPosting({ type }: { type: JobType }) {
             <div className="job-detail-copy">{s.body}</div>
           </section>
         ))}
+
+        {job.faq && (
+          <section className="job-detail-section">
+            <div className="job-detail-section-heading"><p>FAQ</p><h2>よくあるご質問</h2></div>
+            <div className="job-detail-copy">
+              {job.faq.map(([q, a]) => <div key={q}><p><strong>{q}</strong></p><p>{a}</p></div>)}
+            </div>
+          </section>
+        )}
 
         <section className="job-detail-section">
           <div className="job-detail-section-heading"><p>CONDITIONS</p><h2>募集条件(労働条件表)</h2></div>
