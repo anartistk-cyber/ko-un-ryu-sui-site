@@ -602,3 +602,12 @@
 - できなかったこと：Instagram 採用アカウントの画面が固まり（タブが応答せず）、プロフィール全文は読めていない。Chrome のログインは glow のアカウントなので、採用アカウントの編集もしていない。SNSの変更は Claude は行わない。
 - 渡すもの：autopost/REQUEST_CHATGPT_2026-11-07_old-domain-links.md（直す場所・プロフィール文の案・ChatGPT への貼り付け文）。
 - 根本対処は旧ドメインのネームサーバーを Xserver に変えて 301 にすること（autopost/OLD_DOMAIN_MOVE.md）。購入元（再販元）が不明で止まっている。Manus 更新日 11/25 までに決める。
+
+## 2026-11-07 19:40 採用サイト：給与表記の本番確認＋奨学金記事のインデックス登録リクエスト＋トップURLの旧ドメイン転送の調査
+- 本番確認（19:17 の取り込み後・Chromeで取得）：Home／/recruit/newgrad／/jobs/assistant／/faq／奨学金の記事に「28万円」「一律1万円」あり（FAQは 280,000円・基本給240,000円＋固定残業代30,000円＋交通費または家賃補助10,000円）。「27万円」「270,000」「上限10,000円（どちら」「週4日以上」は0件。/jobs/assistant の JSON-LD baseSalary minValue=280000。JSバンドルにも旧表記なし。
+- インデックス登録リクエスト：/blog/shougakukin-hensai-salon-erabi（ライブテスト「URL は Google に登録できます」→「インデックス登録をリクエスト済み」を確認）。
+- 調査（藤津さんの白い画面の原因）：Chrome で `https://ko-un-ryu-sui.com/`（トップ・クエリなし）を開くと、数秒で旧ドメイン ko-unryu-sui.com（Manus「新しいURLへ移動します」）に飛ぶ。同じChromeで /faq、/?chk=1 などは新ドメインのまま開く。
+  - サーバーは問題なし：fetch（no-store／Accept違い）は「/」が 200（リダイレクトなし）、WebFetchも転送なし、Search Console は「/」を「URL は Google に登録されています」。HTMLにもJSバンドルにも旧ドメインへの転送コードなし。
+  - 見立て：藤津さんのChromeに「新ドメインのトップ → 旧ドメイン」の古い転送（301）が残っている可能性が高い。旧ドメインの Manus ページは新URLへ JavaScript で戻すため、「新→旧→新→…」と往復して白い画面になる。クエリ付き・別ページは出ない点とも合う。fetch の cache:reload では直らなかった（キャッシュの区画が別の可能性）。確定ではない。
+  - 確かめ方・直し方（藤津さんに案内）：シークレットウィンドウで https://ko-un-ryu-sui.com/ が普通に開けば端末側のキャッシュ。Chrome の「閲覧履歴データの削除」で「キャッシュされた画像とファイル」（期間：全期間）を削除する。サイトの設定の変更は Claude はしない。
+  - 古いリンク側の対処は REQUEST_CHATGPT_2026-11-07_old-domain-links.md（SNS）と OLD_DOMAIN_MOVE.md（旧ドメインの301）のとおり。
