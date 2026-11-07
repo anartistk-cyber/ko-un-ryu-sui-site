@@ -392,3 +392,8 @@
 - 直したこと：FC トップ『人気のメニュー』のカットのカードを /menu/#cut → /cut/ に変更し、注記に『カットのご案内』『パーマのご案内』を追加。glow トップ『人気のメニュー』のカットのカードを /cut/、パーマのカードを /short-perm/ に変更。
 - 確認：overflow 0（FC・glow）／manifest 不一致0（FC 87・glow 93）。
 - サーバー側（Xserver）：キャスト代表のChromeはサーバーパネルのログインが切れていた（『ログイン情報が破棄されました』）。.htaccess の保存待ち（HTMLの更新確認設定 server-files/htaccess-html-revalidate.txt）と、旧WP番号URLの301案は、藤津さんのログイン後に入力まで行う。
+
+## 2026-11-07 09:35 /headspa/（FC・glow）・トップのリンクの本番確認と検索登録リクエスト
+- 本番確認（FC 09:22／glow 09:27 の取り込み後）：FC・glow とも /headspa/ が200・題名そのまま・FAQPageあり・『メニューの選び方』あり。トップに /cut/ へのリンクあり（FC 4箇所・glow 3箇所）。
+- Search Console でライブテスト『URLはGoogleに登録できます』→ FC /headspa/・glow /headspa/ のインデックス登録をリクエスト済み（FC は既に旧版が登録済みのページ。更新の再クロール依頼）。これでリクエスト済みは本日 FC 3件（/cut/ /perm/ /headspa/）・glow 3件（/cut/ /short-perm/ /headspa/）。
+- 技術メモ：キャスト代表のChromeは画面撮影（screenshot）がタイムアウトする。URL検査は、検索バー（aria-label『…内のすべての URL を検査』）の値を JS で入れて Enter イベントを送り、ボタンは文字列で探して click() すると操作できた（座標クリック不要）。
