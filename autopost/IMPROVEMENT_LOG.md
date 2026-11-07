@@ -413,3 +413,9 @@
 - 本番確認（FC・12:29）：/14625/ → /straight/、/15172/ → /headspa/ に転送（200で到達・redirected）。HTML（/・/menu/・/first/ ほか）が Cache-Control: no-cache で返る。サイトは正常表示（500なし）。FC の /first/ /area/ /cut/ /perm/ /headspa/ は FAQPage あり（:22 取り込み後）。
 - glow-izumiotsu.jp の .htaccess（WordPress ブロックの後ろ）に『HTMLは開くたびに更新確認』を入力して保存の手前で止めた。保存は藤津さん待ち。保存後に glow の HTML が no-cache で返ること・サイトが500でないことを確認する。
 - 学び：保存待ちのタブから離れると入力が消えるので、確認用の別タブで本番を見る。
+
+## 2026-11-07 12:40 glow の .htaccess も保存 → 本番確認／検索登録リクエスト（FC・glow 計5件）
+- 本番確認（glow・12:36）：/・/menu/・/coupon/ が200で、HTML が Cache-Control: no-cache で返る。サイトは正常表示（500なし）。これで FLOWCLOUD・glow・採用の3サイトとも、更新したページが古いまま表示されにくくなった。glow の /first/ /area/ は FAQPage あり（:27 取り込み後）。
+- Search Console でライブテスト『URLはGoogleに登録できます』→ インデックス登録をリクエスト済み：FC /first/ /area/ /menu/（題名変更）、glow /first/ /area/。今日の累計：FC 6件（/cut/ /perm/ /headspa/ ＋3）、glow 5件（/cut/ /short-perm/ /headspa/ ＋2）。
+- 未リクエスト：/coupon/（FC・glow）。13:22/13:27 の取り込みで本番に出たあと、確認してから送る。
+- 技術メモ：今回は画面撮影が使えたので、検索バーのクリック＋入力＋Return、『公開 URL をテスト』（約(1490,131)）、『インデックス登録をリクエスト』（約(1197,323)）で進められた（wait は10秒まで）。

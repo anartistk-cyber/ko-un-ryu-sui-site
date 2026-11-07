@@ -1,5 +1,5 @@
 # ============================================================
-# flowcloud.net / glow-izumiotsu.jp  public_html/.htaccess  への追記案（2026-11-05・flowcloud.net は 2026-11-07 適用済み＝本番で Cache-Control: no-cache を確認／glow-izumiotsu.jp は 2026-11-07 入力済み・保存待ち）
+# flowcloud.net / glow-izumiotsu.jp  public_html/.htaccess  への追記案（2026-11-05・flowcloud.net は 2026-11-07 適用済み＝本番で Cache-Control: no-cache を確認／glow-izumiotsu.jp も 2026-11-07 適用済み＝本番で no-cache を確認）
 # 目的: 更新したページが、お客様のスマホ・PCで古いまま表示されるのを防ぐ。
 # 原因: 今は HTML に「どれくらい保存してよいか」の指定がなく、ブラウザが更新日時から推測して数時間〜数日、古い画面を使い回す。
 #       （採用サイト ko-un-ryu-sui.com は htaccess-new-domain に同じ指定が入っているため起きない）
