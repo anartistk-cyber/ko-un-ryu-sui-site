@@ -1144,3 +1144,20 @@ html.cv-off main>:is(.worry-section,.who-section,.statement-section,.vision-sect
     .education-steps > *::scroll-marker:target-current { background: #fff; width: 22px; }
   }
 }
+
+/* ===== 求人詳細ページ（スマホ）：読みやすさは保ったまま、余白と行間を少し詰めて縦を短くする（第3弾）=====
+   文字・順番・リンクは変えない。応募ボタンまでの距離を近づけるのがねらい。 */
+@media (max-width: 560px) {
+  .job-detail-section { gap: 14px; padding: 32px 0; }
+  .job-detail-section-heading > p { margin-bottom: 10px; }
+  .job-detail-page[data-pg] .job-detail-section-heading h2::before { margin-bottom: 10px; }
+  .job-detail-copy { line-height: 1.85; }
+  .job-detail-copy p { margin-bottom: 12px; }
+  .job-detail-copy .job-faq-item { margin-bottom: 18px; }
+  .job-detail-copy .job-faq-item p:first-child { margin-bottom: 4px; }
+  .job-detail-list { gap: 8px; }
+  .job-detail-list li, .job-location-list p { line-height: 1.8; }
+  .job-location-list { gap: 12px; }
+  .job-detail-facts article { padding: 12px 14px; gap: 4px; }
+  .job-detail-copy .cond-table th, .job-detail-copy .cond-table td { padding: 6px 9px; line-height: 1.7; }
+}
