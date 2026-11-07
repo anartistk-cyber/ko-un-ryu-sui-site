@@ -585,3 +585,4 @@
 - 問題なし：GBP glow の説明・時間・投稿の継続、HPB glow のクーポン価格（カット＋カラー等）とサイトの料金の一致、19周年クーポンの一致、採用Instagram のリンク。
 - 渡すもの：autopost/REQUEST_CHATGPT_2026-11-07_listing-fixes.md（貼り付け用の文つき）。反映は藤津さんの OK のあと ChatGPT が行う（HPB・SNSは Claude は触らない）。
 - 次：GBPの8投稿の写真は公開側で確認できていない（8投稿とも画像枠あり／予約6本は 11/11〜11/18 に公開予定）→ 11/11 以降に公開側で確認。
+- 訂正（11/7 18:17・藤津さん）：glow の「会員制」はそのままでOK、FLOWCLOUD の Instagram プロフィールは「徒歩3分」で正しい（「徒歩5分」はGoogle検索結果側の古い表示の可能性）→ 修正依頼から外した。ChatGPT への依頼は HPB の営業時間・定休日（FC・glow）と SalonAnswer glow の定休日の4点に絞った。FACTS.md に記録。
