@@ -7,3 +7,4 @@
 - 2026-11-02 ブログ追加: FC color-taishoku-40-50 / glow color-first-counseling-glow（事実はFACTS・既存メニューのみ）。
 - 2026-11-04 ブログ追加: fuyu-kansou-pasatsuki-40-50（冬の乾燥・パサつき・静電気。狙い: 泉大津 美容室 パサつき 40代 50代 冬。/menu/ /hair-care-40-50/ /cota-products/ へ内部リンク。事実はFACTSのみ、効果断定なし。水曜のため週次レビューは実施せず）。メモ: ローカルcloneが origin/main と無関係履歴だったため origin/main にリセットして作業。
 - 2026-11-06 /men/ 新設（狙い: 泉大津 メンズカット／泉大津 美容室 メンズ／メンズ ヘッドスパ 泉大津）。事実はメニュー表のみ。/menu/ /headspa/ から内部リンク。
+- 2026-11-07 ブログ追加: toppe-peta-volume-40-50（トップのぺたんこ・ボリューム。狙い: 泉大津 美容室 ぺたんこ 40代 50代 / 分け目 ボリューム）。/menu/ /hair-care-40-50/ /cota-products/ /headspa/ へ内部リンク。事実はFACTSのみ、効果断定なし。週次レビュー: fuyu-kansou-pasatsuki-40-50 に新記事への内部リンクを追加。
