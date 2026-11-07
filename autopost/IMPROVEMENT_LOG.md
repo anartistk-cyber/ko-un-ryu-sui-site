@@ -567,3 +567,13 @@
   - glow（:27）：/hair-donation/ が表示、共通メニューに『カラー』。
 - Search Console：ライブテスト『URLはGoogleに登録できます』→ インデックス登録をリクエスト済み：採用 /jobs/stylist・/jobs/assistant・/jobs/part、FLOWCLOUD /hair-donation/、glow /hair-donation/・/color/。今日の累計：FC 8件、glow 8件、採用 4件（上限は約10件／プロパティ）。
 - 未リクエスト（次の日に回す）：FC /color/ /men/ /straight/、glow /hair-quality/ /young/ /straight/。
+
+## 2026-11-07 夕 3サイトのブログを1本ずつ公開（FLOWCLOUD・glow・採用）／記事に「よくある質問」を付けられるように
+- 藤津さんの指示（17:40）：『ホームページのブログの投稿はよろしくね。FLOWCLOUD glow 行雲流水 3サイト分。SEO・MEO・AIO、予約や問い合わせにつながる工夫を』。
+- 仕組みの改善（fc-site/build.mjs・glow-site/build.mjs）：記事に `faq: [[質問, 答え], …]` を書けば、記事の最後に「よくある質問」を表示し、FAQPage の構造化データ（JSON-LD）を出す。AI検索・Googleのリッチ表示に拾われやすくするため。
+- FLOWCLOUD：『泉大津でカットの美容室を選ぶとき、40代・50代が確認したい5つのこと』（/salon-blog/cut-erabikata-izumiotsu-40-50/）。狙い：泉大津 カット 美容室 40代 50代 選び方。冒頭に結論＋5つの先まとめ（AI向け）→ 各見出しで FLOWCLOUD の事実（シャンプーブロー込50分¥5,500・半個室・完全予約・駅徒歩3分・9:00〜20:00／最終受付18:00・定休 月火）。つぎは /cut/ /first/ /hair-donation/。FAQ 4問。写真 FLOW-CLOUD-047。
+- glow：『髪質改善、どれから相談する？お悩み別のえらび方｜10代・20代のみなさんへ』（/journal/hair-quality-erabikata-young/）。狙い：髪質改善 どれ 選び方 泉大津 10代 20代。お悩み→メニュー（髪質改善ストレート¥16,500〜／ポイント¥11,000〜／髪質改善パーマ¥16,500〜／シスキュア¥3,850／レコアイロン¥8,800〜）。効果の保証は書かない。つぎは /hair-quality/ /straight/ /menu/。FAQ 4問。写真 glow_img-05。
+- 採用：『奨学金を返済中の美容学生が、就職先で確認したい5つのこと』（/blog/shougakukin-hensai-salon-erabi）。月給の内訳・休み・交通費家賃補助・返済サポート・練習費用。見学・LINE への入口と新卒募集（2027年度3名）を本文と ctas に配置。
+- 事実の確認：数字は FACTS.md・サイトの表とだけ照合（FC電話 0725-90-5699、glowは電話番号を本文に書かず）。創作の体験談・口コミ・順位は無し。
+- 確認：FC 32／glow 31ページ build、manifest（FC 90／glow 95・不一致0）、overflow-test は FC 33・glow 31ページ×4幅で overflow 0、audit.py は既知の指摘のみ（google認証ファイル・recruit重複・privacyタイトル・sitemap.xml）、JSON-LD は BlogPosting＋FAQPage＋Breadcrumb が読める、採用は publish-gate OK。
+- 次：取り込み後（採用 :17／FC :22／glow :27）に本番で3記事を確認 → Search Console でインデックス登録をリクエスト（1日の上限に注意）。2〜4週間後に、記事の検索語・表示回数と cta イベント（cta_net_reserve／cta_tel／cta_line、採用は recruit_lead_saved）を見る。
