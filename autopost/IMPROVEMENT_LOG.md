@@ -577,3 +577,11 @@
 - 事実の確認：数字は FACTS.md・サイトの表とだけ照合（FC電話 0725-90-5699、glowは電話番号を本文に書かず）。創作の体験談・口コミ・順位は無し。
 - 確認：FC 32／glow 31ページ build、manifest（FC 90／glow 95・不一致0）、overflow-test は FC 33・glow 31ページ×4幅で overflow 0、audit.py は既知の指摘のみ（google認証ファイル・recruit重複・privacyタイトル・sitemap.xml）、JSON-LD は BlogPosting＋FAQPage＋Breadcrumb が読める、採用は publish-gate OK。
 - 次：取り込み後（採用 :17／FC :22／glow :27）に本番で3記事を確認 → Search Console でインデックス登録をリクエスト（1日の上限に注意）。2〜4週間後に、記事の検索語・表示回数と cta イベント（cta_net_reserve／cta_tel／cta_line、採用は recruit_lead_saved）を見る。
+
+## 2026-11-07 夕 ChatGPT担当分のチェック（Googleプロフィール・HPB・Instagram／読み取りのみ）
+- 見たもの：GBP glow（検索の管理者パネル）、HPB の FLOWCLOUD・glow、Instagram の @flowcloud_osaka・@glow_.osaka・@ko_un_ryu_sui.recruit。Claude は何も変更していない。
+- 見つけた食い違い（FACTSとの差）：HPB FLOWCLOUD の営業時間が「9:00〜18:00受付（カットのみ19:00）」、定休日「なし」・「年中無休」／HPB glow の定休日「不定休」／SalonAnswer glow の「定休日 なし（不定休）」／glow Instagram の「会員制」／FLOWCLOUD の「徒歩5分」。
+- 根拠の確認が要る表現：HPB glow の「No.1」クーポン名、「一番リラックスできる」、Instagram の「No.1を目指す」／HPBのスタッフ数／HPB Work 月給26万〜／glow の店名にある地域名。
+- 問題なし：GBP glow の説明・時間・投稿の継続、HPB glow のクーポン価格（カット＋カラー等）とサイトの料金の一致、19周年クーポンの一致、採用Instagram のリンク。
+- 渡すもの：autopost/REQUEST_CHATGPT_2026-11-07_listing-fixes.md（貼り付け用の文つき）。反映は藤津さんの OK のあと ChatGPT が行う（HPB・SNSは Claude は触らない）。
+- 次：GBPの8投稿の写真は公開側で確認できていない（8投稿とも画像枠あり／予約6本は 11/11〜11/18 に公開予定）→ 11/11 以降に公開側で確認。
