@@ -32,3 +32,40 @@
 - /wp-content/uploads/2026/05/staff_3.jpg … キャスト → 初めての方・相談の投稿
 ### 求人
 - /images/flow-cloud-team-hero_18f9702b.jpg, team-salon_3c550db9.jpg, training-salon_b2a51844.jpg（https://ko-un-ryu-sui.com 配下）
+
+---
+## 追加案（2026-11-07）：新ページ（/cut/ /perm/ /headspa/ /first/ ほか）へつなぐ投稿 ※下書き。投稿は藤津さんの確認後
+目的：Googleで見た人を、そのテーマの詳しいページへ送り、予約・電話につなげる。ボタンは「詳細」（または「予約」）にして、下のリンクを入れる。
+リンクは UTM 付き（`utm_source=google&utm_medium=gbp`）。GA4 で『Googleプロフィールの投稿から来た人』が見分けられる。`utm_campaign` は `post_202611_◯◯`（小文字・半角英数字・アンダースコアのみ）。
+文章は各ページ・メニュー表に載っている内容だけ。料金は税込。掲載前に最新のメニュー表・クーポンと照合すること。
+
+### FLOWCLOUD
+1. 【カット】シャンプーブロー込50分・¥5,500（税込）。一席ごとに仕切りのある半個室で、髪のお悩みをうかがってからカットします。完全予約制。
+   - リンク：`https://www.flowcloud.net/cut/?utm_source=google&utm_medium=gbp&utm_campaign=post_202611_cut`
+   - 写真：FLOW-CLOUD-063（半個室の店内）
+2. 【パーマ】ナチュラルパーマ¥7,700〜、髪質改善パーマ¥16,500〜（税込・カット別）。髪の状態をうかがってから、合うかけ方をご提案します。
+   - リンク：`https://www.flowcloud.net/perm/?utm_source=google&utm_medium=gbp&utm_campaign=post_202611_perm`
+   - 写真：FLOW-CLOUD-047（カウンセリング席）
+3. 【ヘッドスパ】炭酸ヘッドマッサージ10分¥2,200、疲れ目改善ヘッドスパ25分¥4,400（税込）。真っ暗な空間で、フルフラットのベッドで施術します。
+   - リンク：`https://www.flowcloud.net/headspa/?utm_source=google&utm_medium=gbp&utm_campaign=post_202611_headspa`
+   - 写真：FLOW-CLOUD-031（シャンプー空間）
+4. 【初めての方へ】「わたしのプチ別荘」のような、完全予約・半個室の美容室です。ご来店の前に、流れと雰囲気をご覧ください。
+   - リンク：`https://www.flowcloud.net/first/?utm_source=google&utm_medium=gbp&utm_campaign=post_202611_first`
+   - 写真：FLOW-CLOUD-001（外観）
+
+### glow
+1. 【カット】シャンプーブロー込50分・¥5,500（税込）。泉大津駅徒歩1分。カウンセリングで、お悩みや「こうなりたい」をうかがってから似合わせます。
+   - リンク：`https://glow-izumiotsu.jp/cut/?utm_source=google&utm_medium=gbp&utm_campaign=post_202611_cut`
+   - 写真：glow_img-08（店内）
+2. 【パーマ】ナチュラルパーマ7,700円〜（税込）。ショートにもゆるいパーマにも。髪の長さ・状態をうかがってご提案します。
+   - リンク：`https://glow-izumiotsu.jp/short-perm/?utm_source=google&utm_medium=gbp&utm_campaign=post_202611_perm`
+   - 写真：glow_img-10
+3. 【ヘッドスパ】炭酸・アロマ・疲れ目ケアなど、お疲れや頭皮の状態に合わせてえらべます。学校帰り・お仕事帰りにも。
+   - リンク：`https://glow-izumiotsu.jp/headspa/?utm_source=google&utm_medium=gbp&utm_campaign=post_202611_headspa`
+   - 写真：glow_img-08
+4. 【お車でお越しの方へ】アルザ地下駐車場をご利用いただけます。最初の1時間は無料、以降は30分ごとに200円です（店舗でのご利用条件はページをご確認ください）。
+   - リンク：`https://glow-izumiotsu.jp/area/?utm_source=google&utm_medium=gbp&utm_campaign=post_202611_access`
+   - 写真：外観またはglow_img-08
+
+※投稿の頻度は、まず各店週1回程度から。1回ごとに1つのテーマ（上の1〜4を順番に）。
+※『休業日のお知らせ』『周年クーポン』の投稿は、上の既存案を優先。
