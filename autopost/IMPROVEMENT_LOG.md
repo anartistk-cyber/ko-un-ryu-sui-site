@@ -626,3 +626,19 @@
   - 動きは transform／opacity／background-size（描画のみ）だけ。prefers-reduced-motion では止める。スクロール連動の動きは対応ブラウザのみ（非対応は最初から表示）。
 - 点検：overflow-test（FC・glow）／同等の全ページ×4幅（採用 29ページ）すべて overflow: 0。audit.py は既知の指摘のみ（google認証ファイル・recruit/recruite重複・privacyのtitle・sitemap.xml MISSING＝FC/glowのみ）。採用は publish-gate OK・hydration OK（30ページ）・export 83ファイル、FC・glow は manifest 不一致0（90／95）。
 - 次：取り込み後（採用 :17／FC :22／glow :27）に本番で表示確認 → PageSpeed（スマホ）を前回値（採用79／glow90／FC91）と同条件で再測定。悪化していれば、透かし文字・絵文字・トップの入場の動きから順に外す。
+
+## 2026-11-08 01:00 「今の流行と閲覧者の動向に合わせて、サイトを変えていく」第1弾（スマホを「めくる」形に・CSSのみ）
+- きっかけ：藤津さん「今の流行と、閲覧者の動向に合わせて、サイトは全部変えていこう！見た目とか特にね」。
+- 閲覧者の動向（GA4 28日・Search Console・HPB/SalonAnswer・既存レポート）：
+  - キーイベント28件中24件がスマホ（モバイルファースト）。流入は自然検索・Googleプロフィール・Instagram・直接。デスクトップは社内・ロボット混在の可能性（GA4の内部トラフィック除外は未設定）。データはまだ少ない（28日で183ユーザー）ので、1週間の増減で良し悪しを決めず、2〜4週間で見る。
+  - HPBの予約経路で自社HPは6.1%、Instagramは0.9% → HPは「ポータル・Googleプロフィール・Instagramを見たあとに確かめるページ」。早く信頼でき、予約ボタンがすぐ見つかることが大事。
+  - 採用：応募する人は条件より「雰囲気・人・見学」を重視（BEAUTY INSIGHT）。
+- 流行の調査（要点）：目的のある動き（transform/opacity中心）、ブランド固有の色・形、表情のある文字、答えを先に出す読みやすい構成、軽さの重視、スマホは横にめくるカード。
+- 実装（すべてCSSのみ。HTMLの文字は変えない＝検索エンジンにはそのまま見える）：
+  - FLOWCLOUD・glow：`shared/css/60-trend.css` 新設（`scripts/build-css.mjs` の両サイトの末尾に追加）。スマホ（〜720px）で「お客様の声」`.rv` と「営業日カレンダー」`.cals` を横スワイプのカード列に（次のカードが少し見える）。「こんなお悩み」`.worry` は小さなタグ風（〜820px）。対応ブラウザ（Chrome系）はカード列の下に「今何枚目か」の点（::scroll-marker）。
+  - 採用：`client/src/index.css` 末尾に「スマホ：長いカードの並びは、横に1枚ずつめくる」。立場別カード `.who-grid`、働く魅力 `.merit-grid`、仲間の声 `.staff-voice-grid`、Instagram `.insta-grid`、ブログ `.home-blog-grid` を横スワイプに。Instagramは92%幅（埋め込みの最小幅326pxを確保）。
+  - 見送り：トップの文字の流れる帯（FC/glowにはすでに写真の流れる帯があり、動きが重なる）。
+- 効果（手元・スマホ幅390・全体をスクロールして測定）：採用トップ 49,922px → 43,639px（−6,283px／12.6%）、FC 17,659px → 16,784px、glow 約16,089px → 約15,039px。
+- 軽さの確認：CLS 0（glowはスクロール後 0.0035→0.0021）、LCPは hero-lead の文字のまま誤差の範囲（FC 140〜204ms→144〜180ms、glow 140→148ms）、無限アニメは増えず（FC 14／glow 31／採用 3）。採用CSSは gzip 18.7KB→約20.0KB、JSは同じ138KB。
+- 点検：overflow-test（FC 33ページ・glow 31ページ・採用 29ページ×4幅）すべて overflow: 0。audit.py は既知の指摘のみ。採用は publish-gate OK・hydration OK（30ページ）・export 83ファイル、FC・glow は manifest 不一致0（90／95）。
+- 次：①取り込み後（採用 :17／FC :22／glow :27）に本番で確認、PageSpeed（スマホ）を前回値（採用79／glow90／FC91）と同条件で再測定。悪化したら、このコミットを戻してから前回分の透かし文字・絵文字・入場の動きを外す。②第2弾の候補：採用の長い募集要項・年間の流れの折りたたみ、FC/glowの「ご予約3ステップ」の見せ方、採用トップの見学導線。③GA4の内部トラフィック除外（藤津さんのGA4操作）を済ませると、デスクトップの数字が信頼できる。

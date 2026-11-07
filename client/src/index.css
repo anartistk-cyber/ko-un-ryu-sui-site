@@ -1096,3 +1096,29 @@ html.cv-off main>:is(.worry-section,.who-section,.statement-section,.vision-sect
   .job-detail-page[data-pg] .job-detail-section-heading h2::before{animation:rc-draw both linear;animation-timeline:view();animation-range:entry 5% entry 65%}
  }
 }
+
+/* ===== スマホ：長いカードの並びは、横に1枚ずつめくる（2026-11-08）=====
+   根拠：採用トップがスマホで約5万px（画面60枚ぶん）あり、最後まで届かない。GA4ではキーイベントの大半がスマホ。
+   CSSのみ（HTMLの文字は変えない＝検索にはそのまま見える）。位置は小さな点で示す（対応ブラウザのみ）。 */
+@media (max-width: 720px) {
+  .who-grid, .merit-grid, .insta-grid, .home-blog-grid, .staff-voice-grid {
+    display: flex; gap: 14px; max-width: none; overflow-x: auto; scroll-snap-type: x mandatory;
+    margin-left: -20px; margin-right: -20px; padding: 8px 20px 16px; scroll-padding: 0 20px;
+    overscroll-behavior-x: contain; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  }
+  .who-grid::-webkit-scrollbar, .merit-grid::-webkit-scrollbar, .insta-grid::-webkit-scrollbar,
+  .home-blog-grid::-webkit-scrollbar, .staff-voice-grid::-webkit-scrollbar { display: none; }
+  .who-grid > *, .merit-grid > *, .home-blog-grid > *, .staff-voice-grid > * { flex: 0 0 84%; min-width: 0; scroll-snap-align: start; }
+  .insta-grid > * { flex: 0 0 92%; min-width: 0; scroll-snap-align: start; }
+}
+@supports selector(::scroll-marker) {
+  @media (max-width: 720px) {
+    .who-grid, .merit-grid, .insta-grid, .home-blog-grid, .staff-voice-grid { scroll-marker-group: after; }
+    .who-grid::scroll-marker-group, .merit-grid::scroll-marker-group, .insta-grid::scroll-marker-group,
+    .home-blog-grid::scroll-marker-group, .staff-voice-grid::scroll-marker-group { display: flex; justify-content: center; gap: 8px; padding: 14px 0 0; }
+    .who-grid > *::scroll-marker, .merit-grid > *::scroll-marker, .insta-grid > *::scroll-marker,
+    .home-blog-grid > *::scroll-marker, .staff-voice-grid > *::scroll-marker { content: ""; width: 8px; height: 8px; border-radius: 99px; background: #cfe0de; }
+    .who-grid > *::scroll-marker:target-current, .merit-grid > *::scroll-marker:target-current, .insta-grid > *::scroll-marker:target-current,
+    .home-blog-grid > *::scroll-marker:target-current, .staff-voice-grid > *::scroll-marker:target-current { background: var(--pink); width: 22px; }
+  }
+}
