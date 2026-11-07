@@ -559,3 +559,11 @@
 - 直したこと（fc-site/css/45-pop.css・見た目のみ）：見出し帯（.ph）の背景に、左上のピーチ（#f6e6e1）と右下のセージ（#eef3ec）のやわらかな光を重ね、スマホ幅でも金色の ✦ ✧ を小さく表示。文字・ボタン・料金には触れていない。
 - 確認：node scripts/build-css.mjs → fc-site で node build.mjs、manifest 再生成（FC 89・不一致0）、overflow-test は FC 32ページ×4幅で overflow 0、スマホ390px・PC1280px で /color/ /hair-donation/ を目で確認。
 - 次：FC :22 の取り込み後（18:22）に本番で確認。glow は既に可愛い見た目なので今回は変更なし。他に見た目を足す候補：サブページのヒーロー写真、料金表の見出しの飾り。
+
+## 2026-11-07 17:30 本番確認とSearch Consoleのインデックス登録リクエスト
+- 本番確認（取り込み後）：
+  - 採用（:17）：/jobs/stylist・/jobs/assistant・/jobs/part で『よくあるご質問』が6／7／6問、FAQPage の JSON-LD も同数、.job-faq-item の下の間隔30px。
+  - FLOWCLOUD（:22）：/hair-donation/ が表示（題名・H1・共通メニューの『パーマ』『カラー』）、記事『トッペ・ペタ髪』の末尾リンクが /perm/ /hair-quality/ /headspa/、/cut/ にヘアドネーションのリンクとFAQ。
+  - glow（:27）：/hair-donation/ が表示、共通メニューに『カラー』。
+- Search Console：ライブテスト『URLはGoogleに登録できます』→ インデックス登録をリクエスト済み：採用 /jobs/stylist・/jobs/assistant・/jobs/part、FLOWCLOUD /hair-donation/、glow /hair-donation/・/color/。今日の累計：FC 8件、glow 8件、採用 4件（上限は約10件／プロパティ）。
+- 未リクエスト（次の日に回す）：FC /color/ /men/ /straight/、glow /hair-quality/ /young/ /straight/。
