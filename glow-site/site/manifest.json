@@ -330,7 +330,7 @@
   },
   {
    "path": "llms-full.txt",
-   "sha256": "f1fff362742355168117729cdf937446a9c17830d832cbfc1aee6b4ebe82fcba"
+   "sha256": "b6566b45b7ac03227f9b697caf30bee4c4b7c3de4844f3f83f0c753924278d25"
   },
   {
    "path": "llms.txt",
@@ -338,7 +338,7 @@
   },
   {
    "path": "menu/index.html",
-   "sha256": "3ca21b71e8292e232df6e25cfedd819f21f7b0042df5b39024f0194d4c71c4c8"
+   "sha256": "4689813dacd448082ec2996092b5221834031130cd2e819607cb9464d7b9f50a"
   },
   {
    "path": "privacy/index.html",
