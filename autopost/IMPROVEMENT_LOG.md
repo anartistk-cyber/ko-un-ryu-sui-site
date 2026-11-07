@@ -594,3 +594,11 @@
 - 注意：内訳の「基本給24万＋固定残業代3万」は、従来の内訳と「固定残業入っての金額」の回答から置いた（藤津さんの文言そのものではない）。違えば直す。
 - 確認：publish-gate OK、export 83ファイル・manifest不一致0、出力HTMLに旧表記（27万円／270,000円／上限10,000円（どちらか…／週4日以上勤務）は無し。
 - 次：採用 :17（19:17）の取り込み後に本番確認 → 奨学金の記事のインデックス登録リクエスト（金額を直したため、直してから出す）。Search Console は FLOWCLOUD・glow の記事分を18:36までにリクエスト済み。
+
+## 2026-11-07 19:30 採用サイトの旧ドメイン（ko-unryu-sui.com）リンクの点検
+- 藤津さんの指摘（18:55／19:00）：「採用サイトへのリンクがおかしい。ko-un-ryu-sui.com に全て変更して」。スクリーンショットはアドレスバーが旧ドメインで、白い画面のまま読み込みが終わらない状態。
+- 点検：ソース（client/・fc-site/・glow-site/）と公開ファイル（site/・fc-site/site・glow-site/site）に旧ドメインの記載は無し（残るのは手順書・ログ・server-files のみ）。FLOWCLOUD／glow の採用リンクは ko-un-ryu-sui.com で正しい。サイト側で直すものは無し。
+- 旧ドメインが残っているのは外部：Instagram 採用アカウントのプロフィール文、Instagram／Threads／Facebook の投稿本文（Google検索の表示で確認）。Chrome で https://ko-unryu-sui.com/ を開くと Manus の転送ページ（「新しいURLへ移動します」）が出て止まる＝スクリーンショットと同じ。
+- できなかったこと：Instagram 採用アカウントの画面が固まり（タブが応答せず）、プロフィール全文は読めていない。Chrome のログインは glow のアカウントなので、採用アカウントの編集もしていない。SNSの変更は Claude は行わない。
+- 渡すもの：autopost/REQUEST_CHATGPT_2026-11-07_old-domain-links.md（直す場所・プロフィール文の案・ChatGPT への貼り付け文）。
+- 根本対処は旧ドメインのネームサーバーを Xserver に変えて 301 にすること（autopost/OLD_DOMAIN_MOVE.md）。購入元（再販元）が不明で止まっている。Manus 更新日 11/25 までに決める。
