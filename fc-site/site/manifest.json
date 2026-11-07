@@ -262,11 +262,11 @@
   },
   {
    "path": "index.html",
-   "sha256": "c3e926a5905a592cf53dce9c5b1285e6e82c6d75623a4ee75d124c6615715720"
+   "sha256": "d7bcd34fdcf566fb91aa00137089a778ba457363644d1eab8a170352309a77db"
   },
   {
    "path": "llms-full.txt",
-   "sha256": "a526031bf6d1787c58f536e08d500054b402adb04f34f1db40c24996338587fc"
+   "sha256": "459c65d27548480d72607dee64e503a51fe3d8cf18befa8b47e274a155162e9e"
   },
   {
    "path": "llms.txt",
