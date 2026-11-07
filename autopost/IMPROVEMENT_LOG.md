@@ -404,7 +404,12 @@
 - 確認：overflow 0（FC・glow）／audit は既知の指摘のみ／manifest 不一致0（FC 87・glow 93）。
 - サーバー側：Xserver にログインしてもらえたので、FC の .htaccess に『HTMLの更新確認』と『旧WP番号URL2つの301』を入力済みで保存待ち（保存は藤津さん）。glow の『HTMLの更新確認』は FC の保存後に入力する。
 
-## 2026-11-07 12:40 中身の改善⑤：/coupon/（クーポン）に『えらび方』と FAQ・FAQPage（FC・glow）
+## 2026-11-07 12:30 中身の改善⑤：/coupon/（クーポン）に『えらび方』と FAQ・FAQPage（FC・glow）
 - 見つけたこと：クーポンは予約に直結するページなのに、一覧だけで『自分はどれを選べばいいか』『最新はどこで見るか』の説明が無く、FAQPage も無かった。
 - 直したこと：両サイトの /coupon/ に『クーポンのえらび方』（新規／2回目以降／全員のタグの見方、条件・長さ加算はクーポンごとに違うのでHPBで確認、/menu/ と /cut/ へのリンク）と『よくある質問』4問（掲載は data.json の asOf 時点・最新はHPB／予約なし来店・営業時間・料金は /faq/ の回答をそのまま流用）を追加し、FAQPage の構造化データを付けた。価格・条件の数字は一切足していない。
 - 確認：overflow 0（FC 31ページ・glow 29ページ×4幅）／audit は既知の指摘のみ／スマホ撮影で表の折れ・ボタンの重なりなし／manifest 不一致0（FC 88・glow 93）。
+
+## 2026-11-07 12:35 サーバー（FC）の .htaccess を藤津さんが保存 → 本番で確認／glow分を入力済み
+- 本番確認（FC・12:29）：/14625/ → /straight/、/15172/ → /headspa/ に転送（200で到達・redirected）。HTML（/・/menu/・/first/ ほか）が Cache-Control: no-cache で返る。サイトは正常表示（500なし）。FC の /first/ /area/ /cut/ /perm/ /headspa/ は FAQPage あり（:22 取り込み後）。
+- glow-izumiotsu.jp の .htaccess（WordPress ブロックの後ろ）に『HTMLは開くたびに更新確認』を入力して保存の手前で止めた。保存は藤津さん待ち。保存後に glow の HTML が no-cache で返ること・サイトが500でないことを確認する。
+- 学び：保存待ちのタブから離れると入力が消えるので、確認用の別タブで本番を見る。
