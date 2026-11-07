@@ -452,3 +452,17 @@
 ## 2026-11-07 13:27 画像のキャッシュ指定：FC を藤津さんが保存 → 本番で確認／glow分を入力済み
 - 本番確認（FC・13:27）：旧WPの写真（FLOW-CLOUD-063 ほか）と favicon.ico が Cache-Control: public, max-age=2592000（30日）で返る。HTML（/・/cut/）は no-cache のまま。サイトは200で正常表示。
 - glow-izumiotsu.jp の .htaccess（WordPress ブロック・HTML更新確認ブロックの後ろ）に同じ指定を入力して保存の手前で止めた。保存は藤津さん待ち。保存後に glow の写真に同じヘッダーが付くこと・サイトが500でないことを確認する。
+
+## 2026-11-07 13:40 本番確認・検索登録・表示速度（⑤⑥・採用 /jobs/student・診断リンク・画像キャッシュ）
+- 本番確認（FC 13:22／glow 13:27／採用 13:17 の取り込み後・13:30）：
+  - FC・glow とも /coupon/ に『クーポンのえらび方』とFAQPage、/menu/ に『お悩みからメニューをえらぶ』とFAQPage、トップの診断リンク（FC→/perm/、glow→/cut/）が出ている。
+  - 採用 /jobs/student：title『高校生・美容学生のアルバイト｜時給1,300円〜｜泉大津・大阪｜FLOWCLOUD・glow』、H1『泉大津の高校生・専門学校生アルバイト募集』、FAQPage、『よくあるご質問』が出ている。
+- 画像キャッシュ（.htaccess）：glow も藤津さんが保存済み。glow_img-08.jpg が Cache-Control: public, max-age=2592000 で返る（FC は13:27確認済み）。HTML は no-cache のまま。
+- Search Console：ライブテスト『URLはGoogleに登録できます』→ インデックス登録をリクエスト済み：採用 /jobs/student、FC /coupon/（未登録だった）、glow /coupon/（検出－未登録だった）。今日の累計：FC 7件、glow 6件、採用 1件。
+- 表示速度（PageSpeed・スマホ／パフォーマンス・ユーザー補助・おすすめの方法・SEO）：
+  - FC /menu/ 99/100/100/100（FCP 1.0・LCP 1.0・TBT 120ms・CLS 0・SI 1.0）
+  - glow /menu/ 98/100/100/100（FCP 1.0・LCP 1.0・TBT 140ms・CLS 0.012・SI 3.0）
+  - FC /coupon/ 100/100/100/100（TBT 80ms）／glow /coupon/ 99/100/100/100（TBT 140ms・SI 1.1）
+  - 採用 /jobs/student 96/100/100/100（FCP 1.0・LCP 1.0・TBT 200ms・CLS 0.004・SI 3.1）
+  - 判断：すべて既存ページと同水準。直すべき悪化なし（点数±3は誤差）。
+- 次：2〜4週間後に、新ページ（/cut/ /perm/ /short-perm/ /headspa/ /menu/ /coupon/ /jobs/student）の表示・クリック・順位と GA4 のキーイベントを確認。週次レポート（日曜）に入れる。
