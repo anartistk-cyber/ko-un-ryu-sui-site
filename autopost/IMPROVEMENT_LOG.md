@@ -552,3 +552,10 @@
 - 事実メモ：autopost/FACTS.md・fc-site/autopost/FACTS.md を更新（寄付先の団体名は未確認のため書いていない。『ヘアドネーションのご希望は、ご予約時やご来店時にお伝えください』は案内文として入れた。運用と違えば直す）。
 - 確認：node build.mjs（FC 31／glow 30ページ）、manifest（FC 89／glow 94・不一致0）、overflow-test は FC 32ページ・glow 30ページ×4幅とも overflow 0、PC／スマホの画面を確認、JSON-LD は JSON として読める、canonical は各サイトのURL。
 - 次：FC :22／glow :27 の取り込み後に本番を確認 → Search Console で両ページのインデックス登録をリクエスト（FC は /hair-donation/、glow も同様）。ヘアドネーションの検索語（FCは約10種類）の表示・クリックを2〜4週間見る。
+
+## 2026-11-07 夕 FLOWCLOUD：サブページの見出し帯を、スマホでも上品に目立つ見た目に
+- 藤津さんの指示（17:20）：『見た目も可愛く上品に目立っていこう』。ターゲットを混ぜない（FLOWCLOUD＝40〜50代・上品／glow＝10〜20代・ポップで可愛く上品）。
+- 見つけたこと：glow のサブページ見出し帯は、ピンク・バター・ハート・星でスマホでも華やかだが、FLOWCLOUD のサブページ見出し帯は、スマホで平らなクリーム色だけ（金の ✦ ✧ はPC幅のみ）で、他ページとの差が出にくかった。
+- 直したこと（fc-site/css/45-pop.css・見た目のみ）：見出し帯（.ph）の背景に、左上のピーチ（#f6e6e1）と右下のセージ（#eef3ec）のやわらかな光を重ね、スマホ幅でも金色の ✦ ✧ を小さく表示。文字・ボタン・料金には触れていない。
+- 確認：node scripts/build-css.mjs → fc-site で node build.mjs、manifest 再生成（FC 89・不一致0）、overflow-test は FC 32ページ×4幅で overflow 0、スマホ390px・PC1280px で /color/ /hair-donation/ を目で確認。
+- 次：FC :22 の取り込み後（18:22）に本番で確認。glow は既に可愛い見た目なので今回は変更なし。他に見た目を足す候補：サブページのヒーロー写真、料金表の見出しの飾り。

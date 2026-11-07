@@ -51,3 +51,6 @@
  .hero .b-net{animation:fc-pulse 3.4s ease-in-out infinite}
 }
 @media(prefers-reduced-motion:reduce){.g3 article img,.g3 article:hover img{transition:none;transform:none}.b-net::after{display:none}}
+/* サブページの見出し帯：ピーチとセージのやわらかな光（スマホでも上品に目立たせる） */
+.ph{background:radial-gradient(120% 95% at 6% 0%,rgba(246,230,225,.9),rgba(246,230,225,0) 58%),radial-gradient(110% 95% at 96% 100%,rgba(238,243,236,.95),rgba(238,243,236,0) 60%),linear-gradient(180deg,#fbf7f1,#fff)}
+@media(max-width:820px){.ph::before{display:block;content:"✦";left:9%;top:18px;font-size:16px}.ph::after{display:block;content:"✧";right:9%;bottom:22px;font-size:18px}}
