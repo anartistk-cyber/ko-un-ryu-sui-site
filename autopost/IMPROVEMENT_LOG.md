@@ -498,3 +498,12 @@
 - 確認：prerender 後の HTML に FAQPage と Question（6／7／6／6問）、JSON-LD は JSON として読める。スマホ390px・PC1280px で overflow 0、4ページとも目で確認。公開前の点検（publish-gate）OK、export-site 81ファイル。
 - 次：採用 :17 の取り込み後に本番で確認し、Search Console で /jobs/stylist /jobs/assistant /jobs/part のインデックス登録をリクエスト。2〜4週間後に、求人ページの表示・クリックと、応募（recruit_lead_saved）を見る。
 
+
+## 2026-11-07 夕 FLOWCLOUD・glow：ブログ記事のおわりの『つぎは…』リンクを、記事の話題に合うサービスページへ
+- 見つけたこと：記事ページ末の『つぎは、こちらもどうぞ／チェック』は、どの記事も既定の /menu/ /first/ /voice/（glow は /journal/ 記事で同じ3つ）で、パーマの記事から /perm/、ヘッドスパの記事から /headspa/ へ進めなかった。記事で興味を持った人が、そのメニューのページ（料金・予約ボタンがある）へ進む道が弱かった。
+- 直したこと：fc-site/build.mjs と glow-site/build.mjs の NX（ページごとの『つぎは』3リンク）に、記事ごとの指定を追加（既存の NXC にあるページだけを指定）。
+  - FLOWCLOUD（8記事）：トッペ・ペタ髪→/perm/ /hair-quality/ /headspa/、ヘッドスパ→/headspa/ /menu/ /coupon/、くせ・うねり→/straight/ /hair-quality/ /menu/、カラー・退職→/color/ /menu/ /coupon/、冬の乾燥→/hair-quality/ /headspa/ /menu/、cota→/cota-products/ /hair-quality/ /menu/、年末年始・休業日→/coupon/ /menu/ /first/ ほか。
+  - glow（10記事）：ショートレイヤー→/cut/ /short-perm/ /menu/、初パーマ→/short-perm/ /menu/ /coupon/、ヘッドスパ→/headspa/ /menu/ /coupon/、くせ毛・縮毛→/straight/ /hair-quality/ /menu/、初カラー→/color/ /menu/ /coupon/、お車→/area/ /first/ /coupon/、はじめての美容室→/first/ /cut/ /young/ ほか。
+  - 新しい文・料金・条件は足していない（リンク先を変えただけ）。
+- 確認：node build.mjs（FC 30ページ／glow 29ページ）、manifest 再生成（FC 88／glow 93、不一致0）、overflow-test は FC 31ページ×4幅・glow 29ページ×4幅とも overflow 0。audit.py は既知の指摘（google確認ファイル、recruit/recruite の重複、privacy の title）のみ。
+- 次：FC :22／glow :27 の取り込み後に、本番の記事ページで『つぎは』のリンク先を確認。2〜4週間後に GA4 で、記事→サービスページ→cta の流れ（ページ遷移・cta_net_reserve など）が増えたか見る。
