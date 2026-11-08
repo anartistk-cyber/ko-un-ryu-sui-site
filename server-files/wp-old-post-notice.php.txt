@@ -1,0 +1,20 @@
+// FLOWCLOUD 旧WordPress（/cms/）：2024年以前の投稿の先頭に「過去の投稿です」の案内を出すコード案（2026-11-08・未適用）
+// 目的：期限切れの特典・古い料金が載った旧記事から、いまのメニュー・料金・初めての方へ案内する。記事本文は書き換えない（表示のときだけ足す）。
+// 入れる場所：Code Snippets 等のスニペット機能があればそこ（なければ子テーマの functions.php の末尾）。
+// 元に戻す：スニペットを無効化（または下の add_filter ブロックを消す）だけ。
+add_filter('the_content', function ($content) {
+    if (!is_singular('post') || !in_the_loop() || !is_main_query()) {
+        return $content;
+    }
+    if ((int) get_the_date('Y') >= 2025) {
+        return $content;
+    }
+    $q = '?utm_source=old_blog&utm_medium=notice&utm_campaign=old_post_notice';
+    $notice = '<div class="fc-oldpost-notice" style="margin:0 0 24px;padding:14px 16px;border:1px solid #d9c9a3;background:#faf6ec;color:#3a3a3a;font-size:15px;line-height:1.8;">'
+        . '<strong>この記事は過去の投稿です。</strong>記事内の特典・料金・クーポンは、すでに終了・変更になっているものがあります。'
+        . 'いまのメニュー・料金は <a href="https://www.flowcloud.net/menu/' . $q . '">メニュー・料金</a>、'
+        . 'はじめての方は <a href="https://www.flowcloud.net/first/' . $q . '">はじめての方へ</a>、'
+        . 'クーポンは <a href="https://www.flowcloud.net/coupon/' . $q . '">クーポン</a> をご覧ください。'
+        . '</div>';
+    return $notice . $content;
+}, 5);
