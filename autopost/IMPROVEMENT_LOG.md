@@ -752,3 +752,4 @@
   - 採用 Instagram @ko_un_ryu_sui.recruit：プロフィール文は案どおり（大阪・泉大津の美容師採用｜行雲流水／FLOWCLOUD／glow｜新卒・中途・パート募集／まずは見学・ご相談から（見学→面接→採用））、URL https://ko-un-ryu-sui.com/、リンク3件（ko-un-ryu-sui.com・www.flowcloud.net・glow-izumiotsu.jp）。投稿133件（ChatGPT の件数と一致）。給与の数字なし。旧ドメインなし。
   - ChatGPT が「未確認」とした www.ko-unryu-sui.com：非wwwと同じ Manus の中継ページ（「新しいURLへ移動します」＋「新しいサイトへ移動」リンク＝ https://ko-un-ryu-sui.com/）が出る（WebFetch）。HTTPの301ではない。
   - 残件（ChatGPT 側）：Facebook 動画（旧URL www.ko-unryu-sui.com 入り・編集項目なし）／Threads 旧URL入り投稿 少なくとも9件（編集項目なし）／LINE公式（ログイン待ち）／Facebook 全投稿の網羅点検。判断：これらの投稿は消さず・再投稿もしない（旧リンクは Manus の中継ページ経由で新サイトへ行ける）。根本対処は旧ドメインのネームサーバー変更（Manus 更新 11/25 前。藤津さん保留中）で、それが済めば旧URLは新サイトの同じパスへ301転送され、投稿の直しは不要になる。
+- 本番確認（11/8 21:30・18ccbf4 の取り込み後）：採用サイト https://ko-un-ryu-sui.com/ のトップ（「/」・200・転送なし）と JS（index-Co7NSdfm.js＝新しいビルド）に「年中無休」は0件。会社沿革は 2020年4月→2021年5月→2022年1月→2026年3月 の順で、2025年4月の行は無し。
