@@ -18,7 +18,7 @@
   },
   {
    "path": "cota-products/index.html",
-   "sha256": "18b1e4661bed514d9b0034dc67a8a11f50d9bc7e0572463f10d5411ac02f5e2b"
+   "sha256": "f6bfc8f3a458ec0b1a358da37c669893bc39fcd010022111b40ec8047996b72b"
   },
   {
    "path": "coupon/index.html",
@@ -270,7 +270,7 @@
   },
   {
    "path": "llms-full.txt",
-   "sha256": "d4a09e58efef8d0b74381ff3051fc9428ab496e8489987d9bec1a7d381bb1f06"
+   "sha256": "78cd7d80cfbf4efe4ae6b6bc33608a9044363088d81b3a0815d2efd6cb04ae66"
   },
   {
    "path": "llms.txt",
