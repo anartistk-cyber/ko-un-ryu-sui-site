@@ -10,7 +10,7 @@
   },
   {
    "path": "color/index.html",
-   "sha256": "c05f453f89d3ad1f301ce76268f6dff64d291efedc9182fd0789f03d7b9e4a9d"
+   "sha256": "d881d0e6cefdc350c3247e7877d610446ada21562beed8b7764414345c91ad34"
   },
   {
    "path": "company/index.html",
@@ -26,7 +26,7 @@
   },
   {
    "path": "cut/index.html",
-   "sha256": "ec2efd5deac054d54b4fc1bb3534f0c624c52582514fb6e95656848039bab748"
+   "sha256": "6ed37dc89aded20383476420cbbdad69c7330f5a2a488f4f1f329e6760441679"
   },
   {
    "path": "faq/index.html",
@@ -270,7 +270,7 @@
   },
   {
    "path": "llms-full.txt",
-   "sha256": "78cd7d80cfbf4efe4ae6b6bc33608a9044363088d81b3a0815d2efd6cb04ae66"
+   "sha256": "b536eb2f5165a3aa32d33f5a31094232cc2d1aea38314bc8a3fb211700b44237"
   },
   {
    "path": "llms.txt",
@@ -282,7 +282,7 @@
   },
   {
    "path": "menu/index.html",
-   "sha256": "36d50734a57cf2d5cae42035455e30c3bf7ffd065f02c98c8a81978c65b3a20a"
+   "sha256": "854bd8d435629342ec0a5fef7fd58a5a5cb7f631b1a676f356f589d03d8ee358"
   },
   {
    "path": "perm/index.html",
