@@ -64,6 +64,7 @@
   - https://ko-un-ryu-sui.com/?krs_internal=1
 - 解除したいとき：同じURLの `=1` を `=0` にして開く。ブラウザのデータを消した場合は再度開く。
 - 注意：お客様用のQRやリンクにはこのパラメータを付けない。
+- 状態：GA4 のデータフィルタ（Internal Traffic）は 2026-11-08 に「有効」。登録済みの端末のアクセスは、以後の分から集計に入らない（登録していない端末は数えられる）。
 
 ## スタッフ端末の登録用QR（2026-11-05）
 - `autopost/utm-qr/internal_staff_devices.png`（作成：`python3 scripts/make-internal-qr.py`）。3サイト分のQRが1枚。各自のスマホ・PCで1回ずつ読み取って開くと、その端末は GA4 で内部扱い、Clarity も読み込まない。

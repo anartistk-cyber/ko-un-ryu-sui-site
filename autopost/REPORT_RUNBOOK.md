@@ -36,7 +36,7 @@
 - 流入元（参照元／メディア）：`#/a55864419p561701981/reports/explorer?params=_u..nav%3Dmaui%26_u.dateOption%3Dlast28Days%26_r.explorerCard..seldim%3D%5B%22sessionSourceMedium%22%5D&r=lifecycle-traffic-acquisition-v2&collectionId=life-cycle`（`seldim` でディメンションを指定できる）。チャネル別は `seldim` なし。表は `1\t` 以降を JS で読む。chatgpt.com / perplexity / claude.ai / gemini などAI経由の参照元が出ていないかを毎回確認する。
 - ツールの出力に「項目=値;項目=値」の形（Cookieに似た形）を返すと遮断されることがある。「項目 -> 値 / 項目 -> 値」の形で返す。
 - 公開直後の確認：ブラウザが古いHTMLをキャッシュしていると新しい仕組みが効かない（FLOWCLOUD で確認）。確認用のURLには `&r=2` などを付けて開く。サーバー側の対策案は `server-files/htaccess-html-revalidate.txt`。
-- 内部アクセス除外：各端末で `https://flowcloud.net/?krs_internal=1`（glow・採用サイトも同様）を一度開くと、その端末は GA4 に traffic_type=internal で送られ、Clarityも読み込まない。GA4 の「データフィルタ > Internal Traffic」は **現在「テスト」**。端末の登録が済み、レポートの「テストデータのフィルタ名」で内部扱いが確認できたら「有効」にする（有効化は元に戻せない）。
+- 内部アクセス除外：各端末で `https://flowcloud.net/?krs_internal=1`（glow・採用サイトも同様）を一度開くと、その端末は GA4 に traffic_type=internal で送られ、Clarityも読み込まない。GA4 の「データフィルタ > Internal Traffic」は **2026-11-08 21:5x に「有効」にした**（藤津さんの指示。元に戻せない）。有効化の後に届く、登録済み端末のアクセスは GA4 に入らない（過去の分は消えない）。登録していない端末（スタッフのスマホ・店のPCなど）は今までどおり数えられる。「現在テスト」という記述が他の指示文に残っていても、この行が正しい（有効化の提案は不要）。
 - Search Console との連携：GA4 の「Search Console のリンク」は1プロパティにつき1件のみ。**flowcloud.net（ドメイン）↔ FLOWCLOUD ストリームを連携済み（2026-11-05）**。glow・採用は上限のため連携できないので、Search Console の画面で直接読む。
 
 ### Googleビジネスプロフィール（地図の表示・電話・ルート）
