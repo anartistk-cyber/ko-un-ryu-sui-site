@@ -1,0 +1,8 @@
+/* FLOWCLOUD 旧WordPress（/cms/）：記事ページの先頭に文字だけの案内を出す（2026-11-09・藤津さんが「文字だけの案内（CSS）」を選択）
+   入れる場所：WordPress管理画面 → 外観 → カスタマイズ → 追加CSS。貼り付けて「公開」。
+   元に戻す：貼り付けたこの部分を消して「公開」。リンクなし・記事本文は変えない。
+   対象：記事ページ（section.single_post）。テーマのbodyクラスが無いため、日付での絞り込みはできない（全ての記事に出る）。 */
+.single_post::before{
+  content:"この記事は過去の投稿です。記事内の特典・料金・クーポンは、すでに終了・変更になっている場合があります。最新のメニュー・料金は、上のメニューの「メニュー・クーポン」をご覧ください。";
+  display:block;margin:0 0 24px;padding:14px 16px;border:1px solid #d9c9a3;background:#faf6ec;color:#3a3a3a;font-size:15px;line-height:1.8;
+}
