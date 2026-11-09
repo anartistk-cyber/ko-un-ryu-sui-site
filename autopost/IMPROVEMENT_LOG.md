@@ -803,3 +803,10 @@
   - 書かなかったこと：カード会社・QR/電子マネーの具体名、FLOWCLOUD駐車場の台数・場所・料金（未確認）。
   - 確認：build・manifest再生成・JSON-LD全ページ読める・overflow 0（FC 33ページ・glow 31ページ×4幅）。
   - 次：取り込み後（FC :22／glow :27）に本番確認 → インデックス登録リクエスト（FC /faq/ 他）。
+- 2026-11-09 19:4x 【口コミページにGoogleのクチコミ投稿リンクを追加／/cut/ の説明にキッズカット（両店）／Googleプロフィールの読み取り（変更なし）】藤津さんが選択した「優先リンクの設定・属性の充実・クチコミ依頼の導線」のうち、読み取りと、サイトでできる分を実施。
+  - クチコミ依頼の導線：Googleの「クチコミを増やす」画面から投稿リンクを読み取り、開いて各店の投稿画面であることを確認（投稿はしていない）。FLOWCLOUD＝https://g.page/r/CTM5Shj5Kk6oEAE/review、glow＝https://g.page/r/CQZx1U7QvwvpEAE/review。両店の /voice/ に「ご来店いただいた方へ：Googleマップでお店の感想を書くことができます」の案内とリンクを追加（特典とは切り離した、ふつうのお願い。口コミと引き換えの特典の扱いは従来どおり藤津さんの判断）。
+  - /cut/ の説明文（meta description）にキッズカットの料金を追加（FC 10歳未満¥3,850、glow ¥3,850）。検索の関連語に「泉大津 キッズカット」が出ているため。
+  - 優先リンク（保留）：FLOWCLOUD のGoogleプロフィールの予約リンクは4本（rwg.kanzashi.com／minimodel.jp／b.hpr.jp＝ホットペッパー／www.flowcloud.net＝サイトのトップページ・UTMなし）、優先リンクは未選択。サイトの主な予約先（サロンアンサー sam003.salonanswer.com）は入っていない。どれを優先にするかで予約の流れが変わるため、設定は変えずに藤津さんに質問する。
+  - 属性：FLOWCLOUD の決済方法はGoogleが自動で設定済み（クレジット・デビット・PayPay・楽天ペイ・MasterCard・NFC）、駐車場は「敷地内駐車場／無料駐車場あり」。空欄は子供・客層など（事実が未確認のため入れていない）。プロフィールの「記入」ウィザードは広告クレジットとGoogle Workspaceの案内のみで、入力項目は無かった。
+  - Google検索結果で気づいたこと：Instagram（@flowcloud_osaka）の説明の表示が「泉大津駅から徒歩5分」（FACTSは徒歩3分）、投稿に「泉大津No.1のこだわり艶髪施術」。Instagram側の確認は藤津さん／ChatGPT側。
+  - 確認：build・manifest再生成・JSON-LD全て読める・overflow 0（FC 33／glow 31ページ×4幅）。
