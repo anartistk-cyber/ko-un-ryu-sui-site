@@ -862,4 +862,8 @@
   - 本番（glow :27 の取り込み後）：/area/ に「入口の目印」＋ glow-entrance.jpg（1000px・読み込み成功）／/first/ に「店内のようす」＋店内3枚（seats・shampoo・logo、すべて1000px・読み込み成功）。
   - インデックス登録リクエスト（glow プロパティ https://glow-izumiotsu.jp/）：/first/・/area/ とも、ライブテスト「URLはGoogleに登録できます」→「リクエスト済み」を確認。glow は今日これで合計4件（上限約10件）。FLOWCLOUD は今日10件使用済み。
   - 次：GBP 店内写真の反映表示を確認。効果判断は2〜4週間後。
+- 2026-11-09 21:5x HPB（FLOWCLOUD）の反映を公開ページで確認（読み取りのみ）
+  - サロンボード掲載管理TOP：サロン掲載情報＝「反映済み」（2026/11/09 21:30 申請）。
+  - 公開ページ https://beauty.hotpepper.jp/slnH000173335/ ：道案内に「(駐車場はサロン前に4台（無料）)」、支払い方法に「Visa／Mastercard／JCB／American Express／Diners Club／現金・QRコード決済・電子マネー・交通系ICもご利用いただけます」が出ている。営業時間・定休日・駐車場「あり(4台)」はサイトと一致。
+  - 気づき：HPB の「お店のホームページ」は http://www.flowcloud.net/（httpのまま）。表示上の問題はないが、https に直すかは藤津さんの判断（サロンボード側の変更）。
 
