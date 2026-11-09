@@ -67,3 +67,12 @@
 - バナー: make-banner.mjs に タイトル中の `\n` を改行にする機能を追加（長い題名が「就職先／で」のように泣き別れるのを防ぐ）。
 - 検証: sitemap 29URL／vite build／prerender／publish-gate すべて終了コード0。export-site.sh 83ファイル・manifest不一致0。
 - 次回（月曜の自動実行）: 高校生向け（美容師になるまでの道）／和泉・堺・高石の地域別記事。効果は2〜4週間後に Search Console で「奨学金」を含む検索語の表示を確認。
+
+## 実行ログ 2026-11-09（月・自動実行）
+- 準備: ローカルcloneがorigin/mainと無関係な履歴だったため、origin/mainから作業ブランチを作成。add_repo/register_repo_rootのツールは無く、スコープ済みのためそのまま作業。
+- 調査: 「高校生 美容師になるには」は進学情報サイト中心、「泉大津 美容師 求人 高校生 アルバイト」は求人媒体中心。ko-un-ryu-sui.com は上位10に未表示。→ 高校生向けに「進路を決める前にできること」型の記事を追加。
+- 記事追加: koukousei-biyoushi-susumikata ／ 狙い: 美容師 高校生 進路 サロン 体験 ／ 切り口: 知る・体験する・学生アルバイト・条件を見る の4つ。事実はFACTS.mdのみ（学生アルバイトは高校1年生〜、時給1,300円〜はサイトの既存記事どおり）。
+- カバー済みテーマに追加: koukousei-biyoushi-susumikata（高校生）
+- 既存記事改善: student-baito（最古）をFACTSと照合しずれなし。ctasに新記事を追加（dateは変更なし）。
+- 検証: sitemap 30URL／vite build／prerender／publish-gate すべて終了コード0。
+- 次回: 和泉・堺・高石の地域別記事。金曜ではないため週次レビューなし。
