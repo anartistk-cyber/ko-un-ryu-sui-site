@@ -2,7 +2,7 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "0da9a097adc943a2ab3bc5e7b5ac7431cc5f78e4b54d1f7ddbcaf2800dbadeb2"
+   "sha256": "340aeb401af80650efb449fc4812ce295428691b952cf8d488466b32d96c02e8"
   },
   {
    "path": "cast/index.html",
@@ -34,7 +34,7 @@
   },
   {
    "path": "first/index.html",
-   "sha256": "c42e3755a75e48dd93feacb8fc860176b9dd4fdf673fc0cb5a7ba34d85a66731"
+   "sha256": "f3b1b424e3519f05147dadd977f4a3fd55aadf8ac1cdff4b31ac3cb66d7d84b8"
   },
   {
    "path": "gl/apple-touch-icon.png",
@@ -59,6 +59,22 @@
   {
    "path": "gl/img/cast-shion.jpg",
    "sha256": "d31a1ccf7ea93d306b2d1d353d6973ac46384944cc25fe3fbc932148fa2ae70d"
+  },
+  {
+   "path": "gl/img/glow-entrance.jpg",
+   "sha256": "a61f5b380a89ce9befa0a7ab99c587d0bb82f7b4c0d4a525a2eb16a3e198b837"
+  },
+  {
+   "path": "gl/img/glow-interior-logo.jpg",
+   "sha256": "9306cc034790d792c37f4849f7d307eea5bd9d55a289cab6556996d40eb414c3"
+  },
+  {
+   "path": "gl/img/glow-interior-seats.jpg",
+   "sha256": "661d541c00f699c6a566e5d741ad410c0a9fe7006e92260771fb1a9eb3008d84"
+  },
+  {
+   "path": "gl/img/glow-interior-shampoo.jpg",
+   "sha256": "9885a602cd8b12fa6f0d47e5395e1e1ab00a22ada9961c5d1c5246c11d0e9be6"
   },
   {
    "path": "gl/img/st-01-l.jpg",
@@ -338,7 +354,7 @@
   },
   {
    "path": "llms-full.txt",
-   "sha256": "955a9d78b1afaa78948d0b9ccf81992d2e22bfccc538d0094a3c3156b58c3843"
+   "sha256": "e0669622f42ad93b39708fdac55cfee0688525e445d43c3c8ee1e6431cab085d"
   },
   {
    "path": "llms.txt",
