@@ -20,6 +20,7 @@
 | Instagram プロフィール（リンク欄） | `https://flowcloud.net/?utm_source=instagram&utm_medium=social&utm_campaign=bio` | – |
 | Instagram ストーリーズのリンク | `https://flowcloud.net/?utm_source=instagram&utm_medium=social&utm_campaign=story` | – |
 | LINE公式アカウント（リッチメニュー） | `https://flowcloud.net/?utm_source=line&utm_medium=social&utm_campaign=richmenu` | – |
+| LINE公式アカウント（ビジネスプロフィールのWebサイト欄・2026-11-09 開始） | `https://www.flowcloud.net/?utm_source=line&utm_medium=social&utm_campaign=profile` | – |
 | LINE公式（行雲流水＝採用）のリッチメニューからFLOWCLOUDへ（2026-11-09 開始） | `https://www.flowcloud.net/?utm_source=line&utm_medium=social&utm_campaign=recruit_richmenu` | – |
 | LINE公式アカウント（一斉配信） | `https://flowcloud.net/?utm_source=line&utm_medium=social&utm_campaign=broadcast_202611` | – |
 | ホットペッパービューティー（サロンページのHPリンク） | `https://flowcloud.net/?utm_source=hotpepper&utm_medium=referral&utm_campaign=salon_page` | – |
@@ -34,6 +35,7 @@
 | Instagram プロフィール（リンク欄） | `https://glow-izumiotsu.jp/?utm_source=instagram&utm_medium=social&utm_campaign=bio` | – |
 | Instagram ストーリーズのリンク | `https://glow-izumiotsu.jp/?utm_source=instagram&utm_medium=social&utm_campaign=story` | – |
 | LINE公式アカウント（リッチメニュー） | `https://glow-izumiotsu.jp/?utm_source=line&utm_medium=social&utm_campaign=richmenu` | – |
+| LINE公式アカウント（ビジネスプロフィールのWebサイト欄・2026-11-09 開始） | `https://glow-izumiotsu.jp/?utm_source=line&utm_medium=social&utm_campaign=profile` | – |
 | LINE公式（行雲流水＝採用）のリッチメニューからglowへ（2026-11-09 開始） | `https://glow-izumiotsu.jp/?utm_source=line&utm_medium=social&utm_campaign=recruit_richmenu` | – |
 | LINE公式アカウント（時間外の自動返信・2026-11-09 開始） | `https://glow-izumiotsu.jp/?utm_source=line&utm_medium=social&utm_campaign=autoreply` | – |
 | LINE公式アカウント（一斉配信） | `https://glow-izumiotsu.jp/?utm_source=line&utm_medium=social&utm_campaign=broadcast_202611` | – |
