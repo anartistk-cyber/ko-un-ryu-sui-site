@@ -52,6 +52,8 @@
 | Instagram ストーリーズのリンク | `https://ko-un-ryu-sui.com/?utm_source=instagram&utm_medium=social&utm_campaign=story` | – |
 | LINE公式アカウント（リッチメニュー） | `https://ko-un-ryu-sui.com/?utm_source=line&utm_medium=social&utm_campaign=richmenu` | – |
 | LINE公式アカウント（一斉配信） | `https://ko-un-ryu-sui.com/?utm_source=line&utm_medium=social&utm_campaign=broadcast_202611` | – |
+| LINE公式（採用）のあいさつメッセージ（2026-11-09 開始） | `https://ko-un-ryu-sui.com/?utm_source=line&utm_medium=social&utm_campaign=greeting` | – |
+| LINE公式（採用）のビジネスプロフィール Webサイト欄（2026-11-09 開始） | `https://ko-un-ryu-sui.com/?utm_source=line&utm_medium=social&utm_campaign=profile` | – |
 | ホットペッパービューティー（サロンページのHPリンク） | `https://ko-un-ryu-sui.com/?utm_source=hotpepper&utm_medium=referral&utm_campaign=salon_page` | – |
 | 店内の採用ポスター・名刺のQR | `https://ko-un-ryu-sui.com/?utm_source=store_qr&utm_medium=qr&utm_campaign=recruit_poster` | `autopost/utm-qr/recruit_store_poster.png` |
 | 学校配布の資料・先生への案内 | `https://ko-un-ryu-sui.com/?utm_source=school&utm_medium=print&utm_campaign=school_flyer_202611` | `autopost/utm-qr/recruit_school_flyer_202611.png` |

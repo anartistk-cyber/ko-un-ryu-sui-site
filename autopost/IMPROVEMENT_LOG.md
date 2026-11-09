@@ -827,3 +827,7 @@
   - 変更：FC /faq/ と /area/ の駐車場Q「はい、FLOWCLOUDの敷地内に無料の駐車場が4台分あります。台数に限りがありますので、お車でお越しの方はご予約時にお知らせください。」／FC /area/ に「お車でお越しの方」を追加（glow の /area/ と同じ構成）／FC llms.txt の基本情報に「駐車場」を追加／FACTS 3か所（autopost・fc-site・glow-site）に追記。
   - 確認：FC 33ページ×4幅 overflow 0、manifest 90ファイル不一致0、FAQPage JSON-LD と表示FAQの数が一致（faq 15／area 5／menu 7／cut 9）、audit は既知の項目のみ。
   - 次：FC :22 取り込み後に本番の /faq/・/area/ を確認 → /area/ をインデックス登録リクエスト（FC は今日8件使用済み・上限約10件）。
+- 2026-11-09 19:5x glow の外観写真をGoogleプロフィールに登録／採用LINEのあいさつ・プロフィールを設定（藤津さん 19:43「１．OK　２、送る」）
+  - glow GBP：藤津さんが送った外観写真2枚（店頭の全景・看板のアップ）を「写真と動画」から追加（反映待ち）。店内3枚・glow ロゴ・行雲流水ロゴも届いているが、依頼は外観のみだったので未登録（ロゴ・カバー枠は空のまま）→ 藤津さんに登録してよいか確認。
+  - 採用LINE（@512rmwnk）：あいさつメッセージを初期文から採用の案内に差し替え（UTM campaign=greeting）。プロフィールの Webサイトを誤記の http://ko-unryu-sui.com → https://ko-un-ryu-sui.com/（UTM campaign=profile）に修正、Instagram @ko_un_ryu_sui.recruit を追加、営業時間（日・水〜土 9:00〜20:00／月・火 定休日／不定休あり）を設定。再読み込みで保存を確認。UTM_LINKS.md・LINE_RUNBOOK.md・LINE_KOUN_GREETING_PROFILE_DRAFT_2026-11-09.md に記録。
+  - 次：採用LINEは GA4 で utm_campaign=greeting／profile の流入を週次で見る。GBP写真は反映後に表示を確認。
