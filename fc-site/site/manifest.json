@@ -30,7 +30,7 @@
   },
   {
    "path": "faq/index.html",
-   "sha256": "fc6d18c674785fa054b281440b2ae7b15b9bdf903d65592f731e85c503adcb0b"
+   "sha256": "b42bfad4d732125a0c732c7f83c35278145818750f483488d5f02ac5ae994710"
   },
   {
    "path": "favicon.ico",
@@ -266,11 +266,11 @@
   },
   {
    "path": "index.html",
-   "sha256": "c8f5a255d26b1abe93df4f1a36b7f877f5b4dbcb61394157795f57b1f62e59bf"
+   "sha256": "f8d8dca83eb99e342637f87cc5c79835cf6609365f43935c4bb1aebcfb34cc11"
   },
   {
    "path": "llms-full.txt",
-   "sha256": "5beba5a3c0700890edb91b5d124b44e76842194e589ab735567fc9f94febd50d"
+   "sha256": "4e0ff9e10bf34f213232456745312429da0d170d849a79526d790cb5edd8915e"
   },
   {
    "path": "llms.txt",
@@ -282,7 +282,7 @@
   },
   {
    "path": "menu/index.html",
-   "sha256": "239120fc615e276e9f77c3de5d58389196ab86fb44d179886846934725a711e4"
+   "sha256": "18d0e40ed8df57fd51bc5cbaff6fae1cc034f2328c98b0f23c6b0bb64b5f234e"
   },
   {
    "path": "perm/index.html",
