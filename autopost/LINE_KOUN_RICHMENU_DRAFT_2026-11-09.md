@@ -13,11 +13,11 @@
 | A | 左上 | 行雲流水サイト | https://ko-un-ryu-sui.com/?utm_source=line&utm_medium=social&utm_campaign=richmenu |
 | B | 中上 | FLOWCLOUD | https://www.flowcloud.net/?utm_source=line&utm_medium=social&utm_campaign=recruit_richmenu |
 | C | 右上 | glow | https://glow-izumiotsu.jp/?utm_source=line&utm_medium=social&utm_campaign=recruit_richmenu |
-| D | 左下 | 会社案内 | https://drive.google.com/file/d/13Rbg-KG2txjmHFI_JffdKcLNw9APspC8/view（会社案内PDF。Googleドライブ。UTMは付けられない） |
+| D | 左下 | 会社案内 | https://drive.google.com/file/d/1QMQCxIc5p6__WKw2Dujnf3XDKs6T9Gx8/view（会社案内2027の軽量版PDF 4.85MB。藤津さん（anartist.k@gmail.com）自身のドライブ。リンクを知っている人が閲覧可。UTMは付けられない）。11/9 15:1x に、元の shion1012 さんのドライブのファイル（12.5MB）から差し替え |
 | E | 中下 | よくある質問 | https://ko-un-ryu-sui.com/faq?utm_source=line&utm_medium=social&utm_campaign=richmenu |
 | F | 右下 | Instagram | https://www.instagram.com/ko_un_ryu_sui.recruit/ |
 - B・C は、サロンのお客さま向けLINEの richmenu と見分けるため `utm_campaign=recruit_richmenu`（UTM_LINKS.md）。
-- D の会社案内PDFは、リンクを知っている人が見られる設定（所有者は shion1012@gmail.com のドライブ）。会社案内を差し替えるときは、同じファイルの新しい版にするか、このリンクを直す。
+- D の会社案内PDFは、藤津さん自身のドライブ（マイドライブ「行雲流水会社案内2027（軽量版）.pdf」）。リンクを知っている人が閲覧可。会社案内を新しくするときは、ドライブで同じファイルを「新しいバージョンを管理」で差し替えればリンクを変えずに済む。軽量化は autopost/line-richmenu/pdf_dedupe.py（同じ内容の重複データをまとめて再圧縮。画質は変わらない）。
 
 ## 設定
 - タイトル（管理用）：採用メニュー／トークルームのメニュー名：メニュー／初期状態で表示：オン／表示期間：登録した日から（終了日なし）。
