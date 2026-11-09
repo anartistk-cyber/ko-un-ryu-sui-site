@@ -831,3 +831,6 @@
   - glow GBP：藤津さんが送った外観写真2枚（店頭の全景・看板のアップ）を「写真と動画」から追加（反映待ち）。店内3枚・glow ロゴ・行雲流水ロゴも届いているが、依頼は外観のみだったので未登録（ロゴ・カバー枠は空のまま）→ 藤津さんに登録してよいか確認。
   - 採用LINE（@512rmwnk）：あいさつメッセージを初期文から採用の案内に差し替え（UTM campaign=greeting）。プロフィールの Webサイトを誤記の http://ko-unryu-sui.com → https://ko-un-ryu-sui.com/（UTM campaign=profile）に修正、Instagram @ko_un_ryu_sui.recruit を追加、営業時間（日・水〜土 9:00〜20:00／月・火 定休日／不定休あり）を設定。再読み込みで保存を確認。UTM_LINKS.md・LINE_RUNBOOK.md・LINE_KOUN_GREETING_PROFILE_DRAFT_2026-11-09.md に記録。
   - 次：採用LINEは GA4 で utm_campaign=greeting／profile の流入を週次で見る。GBP写真は反映後に表示を確認。
+- 2026-11-09 20:0x 藤津さん 19:43 の「４」「５」の確認結果
+  - ４（Instagram @flowcloud_osaka の「徒歩5分」→3分）：本番のプロフィール文を読むと、すでに「◾️泉大津駅 徒歩3分 駐車場4台」になっていた（変更不要）。「泉大津No.1を目指す」は藤津さんの指示で置いたまま。
+  - ５（Yahoo!マップ FLOW CLOUD の「泉大津駅東出口から徒歩約2分」）：住所の下に出る距離の自動表示（Yahoo側の計算）。修正の窓口は「掲載情報の修正・報告」（Yahoo! JAPAN IDでログインが必要）と、オーナー用の Yahoo!プレイス（無料）のみ。ログイン・アカウント作成は Claude は行わないため未変更。藤津さんが自分のIDで「その他の情報の修正・報告」から出すか、プレイスに登録して「アクセス」を入れる必要がある（自動表示が直るかは Yahoo 次第）。
