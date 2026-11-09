@@ -4,8 +4,8 @@
 事実は autopost/FACTS.md のみ：営業 9:00〜20:00／定休 毎週月曜・火曜（不定休あり）／FLOWCLOUD 最終受付 18:00／「年中無休」「19:00最終受付」は使わない／店名は FLOWCLOUD（スペースなし）／glow は 泉大津市旭町18-3 いずみおおつCITY 1F。
 
 ## 先に藤津さんが決めること
-1. あいさつメッセージのクチコミ特典（水素ケア無料クーポン）：①特典の記載をやめてクチコミのお願いだけにする（推奨）②そのまま。クチコミと引き換えの特典は Google のルールで禁止のため、①を推奨。あいさつの3通目（クーポン画像）も合わせて外す。
-2. glow の「個別のお問い合わせを受け付けておりません」自動応答：サイトは「LINEで相談」と案内しているので、①この自動応答を止める／文を変える（推奨）②LINE相談をやめてサイトのボタンを変える。
+1. あいさつメッセージのクチコミ特典（水素ケア無料クーポン）：**保留（藤津さん 11/9 13:23「おいておいて」）。触らない。** 参考：クチコミと引き換えの特典は Google のルールで禁止。
+2. glow の「個別のお問い合わせを受け付けておりません」自動応答：**Claude が対応中（11/9 藤津さんの指示。案は autopost/LINE_GLOW_AUTOREPLY_DRAFT_2026-11-09.md・承認待ち）。ChatGPT は触らない。** glow の「応答メッセージ Default」「応答方法」「応答時間」は Claude が直す。
 
 ## 直す内容（FLOWCLOUD）
 - 応答メッセージ「当日予約の自動返答」：「定休日(月曜日)」→「定休日（毎週月曜・火曜。不定休あり）」。
@@ -13,7 +13,7 @@
 - リッチメニュー（新規）：ネット予約／電話 0725-90-5699／メニュー・料金／クーポン／アクセス。リンクは UTM_LINKS.md の richmenu 用 `https://flowcloud.net/?utm_source=line&utm_medium=social&utm_campaign=richmenu`（ネット予約のURLは FACTS の予約URL）。
 
 ## 直す内容（glow）
-- 応答メッセージ Default：上の2のとおり。
+- 応答メッセージ Default：Claude が対応中（上の2）。ChatGPT は触らない。
 - ビジネスプロフィール：住所の建物名を「アルザ泉大津」→「いずみおおつCITY 1F」、ウェブサイト `https://glow-izumiotsu.jp/?utm_source=line&utm_medium=social&utm_campaign=profile`、営業時間（毎日 9:00〜20:00、定休 月・火）。お知らせ欄のサンプル文は公開しない。「未公開の変更」は内容確認後に公開。
 - リッチメニュー（新規）：FLOWCLOUD と同じ構成。リンクは `https://glow-izumiotsu.jp/?utm_source=line&utm_medium=social&utm_campaign=richmenu`。
 
