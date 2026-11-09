@@ -39,7 +39,7 @@
 - [よくある質問｜予約・営業時間・場所・髪質改善｜泉大津の美容室 FLOWCLOUD](https://www.flowcloud.net/faq/)
 - [会社概要・アクセス｜FLOWCLOUD（株式会社行雲流水）｜泉大津駅徒歩3分](https://www.flowcloud.net/company/)
 - [キャスト紹介｜FLOWCLOUD（フロウクラウド）泉大津の美容室](https://www.flowcloud.net/cast/)
-- [お客様の声｜40代・50代のお客様の口コミ｜泉大津の美容室 FLOWCLOUD](https://www.flowcloud.net/voice/)
+- [お客様の声・口コミ｜40代・50代のお客様｜泉大津の美容院・美容室 FLOWCLOUD](https://www.flowcloud.net/voice/)
 - [お知らせ・ブログ｜泉大津の美容室 FLOWCLOUD](https://www.flowcloud.net/salon-blog/)
 - [泉大津でカットの美容室を選ぶとき、40代・50代が確認したい5つのこと｜FLOWCLOUD（泉大津の美容室）](https://www.flowcloud.net/salon-blog/cut-erabikata-izumiotsu-40-50/)
 - [トップがぺたんこになる40代・50代へ｜ボリュームを出す日々の工夫｜FLOWCLOUD（泉大津の美容室）](https://www.flowcloud.net/salon-blog/toppe-peta-volume-40-50/)
@@ -1142,7 +1142,7 @@ URL: https://www.flowcloud.net/style/
 - 初めてのお客様へ「わたしのプチ別荘」のような、完全予約・半個室の美容室です。→
 
 ---
-## お客様の声｜40代・50代のお客様の口コミ｜泉大津の美容室 FLOWCLOUD
+## お客様の声・口コミ｜40代・50代のお客様｜泉大津の美容院・美容室 FLOWCLOUD
 URL: https://www.flowcloud.net/voice/
 
 トップ ＞ お客様の声お客様の声
