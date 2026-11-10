@@ -2,35 +2,35 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "9775eaa1f95d70ffe40eac6154d40af0cf8b6f6df1d80ecaf6d3bab497f390eb"
+   "sha256": "025299a716170c9e6bd7b303405cd7e7e91bcae8ffdf98c8fae4507cac9215e1"
   },
   {
    "path": "cast/index.html",
-   "sha256": "9241f6162e965e4830a817f63e2e911f585b0d0ed78cb90ea240a2bb90f01a9c"
+   "sha256": "3d0cd71f60f8a179f521988b505cecf05771e624aaa201b34f845988956c6c63"
   },
   {
    "path": "color/index.html",
-   "sha256": "df95dceb546600120e0fe6097c0aed27b51d826e640937b33259e5a3958e0862"
+   "sha256": "c50485ff520fcd7d97bf8bf4edcaab522ca8c8bd09b97aa475f0858281f8a3aa"
   },
   {
    "path": "company/index.html",
-   "sha256": "6d55f06bf3545758991fcf4c27f35fdfed13bd5a02c9fc512ee1423f2c0ac631"
+   "sha256": "9dd29128f100e359f426fc0cab71e9394d6763ed9cc8b36c8255324399569439"
   },
   {
    "path": "cota-products/index.html",
-   "sha256": "565e9ced516011f137cbdcb8e8c153bbc4e15cde7ffc110d1b519a94944df3b5"
+   "sha256": "dd5cdd510da1406eb29b1b3010f8f686f906505936ef220d4392c8b99d81ea49"
   },
   {
    "path": "coupon/index.html",
-   "sha256": "d58c01693354f5a9ed8aaff04384cc34cffac22a5595238fa4cd9418c07275c7"
+   "sha256": "f877c4e1c5490ca6faab2ff766d69a76931cb71edff0403bfc81af54e1550fb5"
   },
   {
    "path": "cut/index.html",
-   "sha256": "95aaa2a75b29a4c82ff328715df8a23aa0b56e8a862fe446a743e17eba7fc9f6"
+   "sha256": "ba1de239d36d403355a97fa41e3ed4b5e951adf4543deaba4a0dfe4eef5411b2"
   },
   {
    "path": "faq/index.html",
-   "sha256": "9fad05ae08ee918fd376fb60faa14e2a1f96bf2f44d6f55f95b55ff0df497868"
+   "sha256": "8b592f57bf5d4a4ce5faef20c4c9b4037f9e70865263d1310ef75f05f9c74c1b"
   },
   {
    "path": "favicon.ico",
@@ -242,7 +242,7 @@
   },
   {
    "path": "first/index.html",
-   "sha256": "24de1435821b0b9be67b392064975bcc58a9c695ce3fc779db6fef8aa71166b1"
+   "sha256": "e3b2e229ab60d9328a1ce73b4e8d8347fda0d1ec7d6d93df812cf5c605ab5061"
   },
   {
    "path": "google0cfa36e6cfb51b13.html",
@@ -250,55 +250,55 @@
   },
   {
    "path": "hair-care-40-50/index.html",
-   "sha256": "0529e65fa6986457a8e82ef9582c738ca45c70ba7b658c9c5ef14ba8fb5d7dcd"
+   "sha256": "3121c0fbe17eb9ba3655d5867041579506ebd46a8fa004478000b90e28b809b0"
   },
   {
    "path": "hair-donation/index.html",
-   "sha256": "077d4d834384ff6bcf93e30c2333fc4b5f6e322df92ebed300a9f4873d2f785f"
+   "sha256": "88f8e81539d1ca73b9ee4943f6bb8c6a9875f06d6fa880b7b2367408e3fc15d9"
   },
   {
    "path": "hair-quality/index.html",
-   "sha256": "97479131e7f1a4e6e60b8ec403bbc00ee8995e6e7461da336b904bba413638de"
+   "sha256": "fbc36c6f8667a13ca5619b899ef9aa0bdcded24b67f7b698dbf8bb88dac919ff"
   },
   {
    "path": "headspa/index.html",
-   "sha256": "be82a951a13f2ed5c9350380ed4376138d0dd9dd44c8bbf24f4c2fd35b295af7"
+   "sha256": "721bf4552125a2a5b2b6b24c7e29c4c8b6b5c4418cf26830f4634546bf226ea0"
   },
   {
    "path": "index.html",
-   "sha256": "24408b610a8ff65be0d5f65e564b66250d8bcc120cbeef68e710eb269fc10d9b"
+   "sha256": "d88a6ad53430875a60c4c0a0c16dc6383204d74209e64b6f6975cbc615011774"
   },
   {
    "path": "llms-full.txt",
-   "sha256": "6e7ad2bd4beb004ec2a2439b21365880dd524def35bb7813d82576a2ed976708"
+   "sha256": "f9a91cbe6509c5fef413d8615c67113e3da79958c6fff70856738165567dedda"
   },
   {
    "path": "llms.txt",
-   "sha256": "aeae430dc3c9a61bbe5f957f3f1743c85dc31d752484421e8b0ef06ca305d7a8"
+   "sha256": "d152c3a78c5f79e0f7fd7c6256328ccbba2b77014e24b906e4641b6787b3bcaa"
   },
   {
    "path": "men/index.html",
-   "sha256": "db6c81517764a09c4889bcc996fe3ef212d2cc79f802e8285298bc8d29750ec9"
+   "sha256": "cd738c111c660987523562ec9ae437ba4f40c7fe9d6235434f0c1ed2f7197264"
   },
   {
    "path": "menu/index.html",
-   "sha256": "b767106fbe734c92aadf8a62df95df0ebef13a0e970e526f2bc7f0dc86b20797"
+   "sha256": "c9401972f5e1387005745b43afc7cde6ac3fa1e5c87675e9d6e413cf6d378460"
   },
   {
    "path": "perm/index.html",
-   "sha256": "dd9cf4ac2145fc08a3791352ede43d21c14c10e55f0bd1e915a3f839e94b50ef"
+   "sha256": "3175af03a6635be70792858ab690aac83a1f2c222261bcfc1138e9c4130e1277"
   },
   {
    "path": "privacy/index.html",
-   "sha256": "892cf1a69c4e5b30e6c97457a48daf4c962028296579531a5c53f3764e1e8b6d"
+   "sha256": "a245a0f6a9ceabea846c10dd1f119054dc2622e3c8591795dc394a2d9dd8f8a9"
   },
   {
    "path": "recruit/index.html",
-   "sha256": "d99cc80e48ec412748fb8f6dede77d2f1e15402e25a8ee0fb0a941091a87e7f3"
+   "sha256": "4b4455649de17db9af2b16f650dcf22f9654f00a15134fa38a06358b97003bb1"
   },
   {
    "path": "recruite/index.html",
-   "sha256": "d99cc80e48ec412748fb8f6dede77d2f1e15402e25a8ee0fb0a941091a87e7f3"
+   "sha256": "4b4455649de17db9af2b16f650dcf22f9654f00a15134fa38a06358b97003bb1"
   },
   {
    "path": "robots.txt",
@@ -306,59 +306,63 @@
   },
   {
    "path": "salon-blog/color-taishoku-40-50/index.html",
-   "sha256": "83f57937fb16ca23abc938abf19e350e23c66b80a6ae5659e3c4d9e36231fa38"
+   "sha256": "5b08c1c78838e7608f04211684ce29ebfcfc1f1cd7ddb96cbe2f0f56319058d1"
   },
   {
    "path": "salon-blog/cut-erabikata-izumiotsu-40-50/index.html",
-   "sha256": "192cdb4735075337f6ed8f6629c3b955d84f5872c87a282d9eeb30f7e0bfe3b5"
+   "sha256": "f010990b2cc729dacf15313ecd62170c7189874129bcee1bcb03af095f08cb92"
   },
   {
    "path": "salon-blog/fuyu-kansou-pasatsuki-40-50/index.html",
-   "sha256": "fe49ea122f6583043c4953b8a0c1cc43e88b7cad68dd6c746c42e25ab8cd788a"
+   "sha256": "18c61c386a4d0912469ccaef9272ce9193250efdce09ece7e764a2f4e7dfaa27"
   },
   {
    "path": "salon-blog/headspa-shampoo-kukan/index.html",
-   "sha256": "c9f425a020260f7fcbed651120afb889186cdc0c578a7cb35fa2821276af7521"
+   "sha256": "eb5bdadfa8b7278daf9f00955fd89f2a76cf2edef7c81bf882a066acba2253a0"
   },
   {
    "path": "salon-blog/home-hair-care-cota-store/index.html",
-   "sha256": "523e98a2baf1b64991297131c316725fc5f8febd91f885e33326db9eddefa2fd"
+   "sha256": "179e75e650ee569f511cdb10421411f567247009147a79535cdb106d60f1d86c"
   },
   {
    "path": "salon-blog/index.html",
-   "sha256": "89242f2eb2a65b6fdc2b997f59d1d0245fb752922256c3eedb47514ae5024672"
+   "sha256": "dc1dd35cb7d158b5f31df7810c1896cc0a8e7cc65463790cc88cd042824320f2"
   },
   {
    "path": "salon-blog/kuse-uneri-straight-40-50/index.html",
-   "sha256": "8815c4b63d4eb2bf23590486f1e3eecb26f84b45814212c58a4517722a1767a1"
+   "sha256": "edb97e3d42bcd4efb46075a00a71e1fb5c6f8f38f52a506528ca8b58e2d170ef"
   },
   {
    "path": "salon-blog/kyugyobi-2026-11-12/index.html",
-   "sha256": "74748ce0c2852d1aa09aae2411e4df96b9712e761b41354cdc82b70dd062d3e5"
+   "sha256": "4de2a2a753d140d8539d775fe0a912f1267b8333d9c28aea53e313dfbacc3979"
   },
   {
    "path": "salon-blog/nenmatsu-nenshi-2026-2027/index.html",
-   "sha256": "84e18d7f91e6ab2de40b309ca14ba781ef0c7058d255486b0eb16a54ac803623"
+   "sha256": "7f527d349154cfb8c6acc40feb4441b821754526801cf1a128cfc5e8e6347963"
+  },
+  {
+   "path": "salon-blog/serum-color-40-50/index.html",
+   "sha256": "63b153825af9515ab9aa44eb525bdef510a9d1c0d5b270ad4fcf2fd62240135e"
   },
   {
    "path": "salon-blog/toppe-peta-volume-40-50/index.html",
-   "sha256": "51a8d24c61c2d76a1af3c7cfd61a6423204b947ac9c39675ca22246d13e65fa2"
+   "sha256": "c508b97eaab0604b4f1bb289dcc0dd9b944b3781e9600138c51d2b73117950b3"
   },
   {
    "path": "sitemap-fc.xml",
-   "sha256": "2927c2f70e863f66784221c96a1fddee2de1502c0ee8a6d06a131e4b7ba86c95"
+   "sha256": "05a0817dec8f64dd72ac02dc6103d3e24855c661d5ea4c6dd608b47d720662e5"
   },
   {
    "path": "straight/index.html",
-   "sha256": "e9305cf50945a997fda9f63e0ae727d43bc85e9cb858205890005e752232745c"
+   "sha256": "c1809ae70f3915c8f8b3deb36bca0c7ba090ed1744f262060773d88884b9f6de"
   },
   {
    "path": "style/index.html",
-   "sha256": "a5a03fe0f2f8e767e6c6d086c37339c5f9fd0c7be128f12be9fc9d5ef65180d7"
+   "sha256": "9c3026589669c231af20544aacc0312489b16c32a26139c009941cbaecafa24c"
   },
   {
    "path": "voice/index.html",
-   "sha256": "7897b1d90e41f6eefb4a7f9df5cbc949dfc0fbde9afa907e5d607c4753424fb1"
+   "sha256": "8947e6b00b5a71147439389b6f390c0e5541e01dca92dc8247e53255df07b0a0"
   }
  ]
 }
