@@ -10,7 +10,7 @@
   },
   {
    "path": "color/index.html",
-   "sha256": "232dca7061b70b0fd1754a84e306d47a64c9e17a35e90057ce027d5569bbf1f8"
+   "sha256": "24c425f3a1e2873fa97356cd4dbe7ad779a0efc41f4522ff89f22c1d19c37f87"
   },
   {
    "path": "cota-products/index.html",
@@ -358,7 +358,7 @@
   },
   {
    "path": "llms-full.txt",
-   "sha256": "b5dd11057be6d004df0641fd9b021f50ec58e15f9e9021218a4d4907fc206a7a"
+   "sha256": "6dc5deee78b4dd01a8415fe855c07c1ab8a92d407fc92b3792eae0919030cdf4"
   },
   {
    "path": "llms.txt",
