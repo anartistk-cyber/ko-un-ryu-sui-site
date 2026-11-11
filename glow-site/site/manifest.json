@@ -26,7 +26,7 @@
   },
   {
    "path": "faq/index.html",
-   "sha256": "0569eeecf1766ed53b356e8b96e73529531d5d8315275ddca7bd8d05dd8a9eac"
+   "sha256": "611eeb1ea07868be9d843d49ca18a4cd073adfb035389194291b62b9b93fba2b"
   },
   {
    "path": "favicon.ico",
@@ -302,7 +302,7 @@
   },
   {
    "path": "index.html",
-   "sha256": "eb91fdaf40880034f9aa923ca1f5784da6bd1ea915326e71874b871b5bb0c92e"
+   "sha256": "62080ba563feec6c0f0d94ed492814e581b42acacea488499430e25e0bff412b"
   },
   {
    "path": "journal/access-parking/index.html",
@@ -326,7 +326,7 @@
   },
   {
    "path": "journal/hair-set-seijinshiki-glow/index.html",
-   "sha256": "8deb3c0c091c1379c04aead983e71edcf8cfe269b9d7f4c6f695ff041622cd3f"
+   "sha256": "778c84cbdfb6bb158d64239b195fd2d308ebf09827fb5e053c7c410d05de9646"
   },
   {
    "path": "journal/head-spa-first-time-young/index.html",
@@ -362,7 +362,7 @@
   },
   {
    "path": "llms-full.txt",
-   "sha256": "4d90b92609873b8bdb7b1f876607715b6a211aa9fc0f09f5af1aa6be9a51f366"
+   "sha256": "246dbc5feb4ae129599a1ebc92f77872b278259f09ac6a3749797f624aa35b74"
   },
   {
    "path": "llms.txt",
