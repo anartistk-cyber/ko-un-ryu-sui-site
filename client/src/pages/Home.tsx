@@ -166,7 +166,7 @@ const historyRows = [
   ["2020年4月", "株式会社行雲流水 設立"],
   ["2021年5月", "デザイナーパート採用開始"],
   ["2022年1月", "『リヘア』開発"],
-  ["2026年3月", "2号店「glow」いずみおおつCITY内にOPEN"],
+  ["2026年4月", "2号店「glow」いずみおおつCITY内にOPEN"],
 ];
 
 const googleBusinessUrl = "https://share.google/wWE2XkDrLOjj8NAit";
