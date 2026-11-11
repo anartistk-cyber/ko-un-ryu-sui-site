@@ -116,7 +116,7 @@ const otherRows = [
 
 const curriculumRows = [
   ["1年生 コンシェルジュ（月25時間）", "基本（受付・電話）／毛髪理論（通年）／カラー理論（5〜7月）／パーマ理論（8〜10月）／カット理論（11〜3月）／ケア／カラー（5〜9月）／アイロン（4〜6月）／パーマ（8〜10月）／スタイリング・セットアップ・カウンセリング／ウィッグカット（通年）"],
-  ["2年生 Jrスタイリスト（月20時間）", "ウィッグデザインカット60スタイル（ロング〜ミディアム30、ショート〜刈り上げ30）／新規モニター90名（カット40・カラーカット30・パーマカット20）"],
+  ["2年生 Jrスタイリスト（月25時間）", "ウィッグデザインカット60スタイル（ロング〜ミディアム30、ショート〜刈り上げ30）／新規モニター80名（カット30・カラーカット30・パーマカット20）"],
   ["その後のキャリア", "スタイリスト40／70／90 → トップ → グレイト → アーティスト。アイリスト、セラピスト、メイクアップアーティスト、パートスタイリスト、管理職、FC契約、独立支援など、一人ひとりに合った道を一緒に考えます。"],
   ["レッスンの進め方", "先輩キャストがプリセプターとして寄り添います。営業中レッスン、早番時の夜レッスン、遅番時の朝レッスン、月1回の合同レッスンなど。"],
 ];
@@ -482,7 +482,7 @@ export default function Home() {
             <article className="merit-card merit-card-featured">
               <span className="card-number">01</span>
               <h3>1年でのデビューを目標に、<br />学ぶ道筋を。</h3>
-              <p>1年目は月25時間、2年目は月20時間のレッスンを、先輩キャストがプリセプターとして支えます。1年は目標であり、習得状況を確認して担当範囲を決めます（勤務内外の扱い・費用負担：要相談）。</p>
+              <p>1年目・2年目とも月25時間のレッスンを、先輩キャストがプリセプターとして支えます。1年は目標であり、習得状況を確認して担当範囲を決めます（勤務内外の扱い・費用負担：要相談）。</p>
               <span className="fact-label">1-YEAR DEBUT CURRICULUM</span>
             </article>
             <article className="merit-card">
@@ -606,10 +606,10 @@ export default function Home() {
           </div>
           <div className="education-steps" aria-label="成長のステップ">
             <article><span>01</span><h3>1年生<br />コンシェルジュ</h3><p>受付・電話から、毛髪理論、カラー・パーマ・カットの理論と実技まで。月25時間。</p></article>
-            <article><span>02</span><h3>2年生<br />Jrスタイリスト</h3><p>ウィッグ60スタイルと新規モニター90名で実践力を磨きます。月20時間。</p></article>
+            <article><span>02</span><h3>2年生<br />Jrスタイリスト</h3><p>ウィッグ60スタイルと新規モニター80名で実践力を磨きます。月25時間。</p></article>
             <article><span>03</span><h3>その先の<br />キャリア</h3><p>スタイリスト、トップ、グレイト、アーティスト、独立支援まで。あなたに合う道を一緒に考えます。</p></article>
           </div>
-          <figure className="curriculum-chart"><img src="/images/curriculum-chart.png" width={741} height={577} alt="デビューを目指すカリキュラム表。1年生コンシェルジュは月25時間、2年生Jrスタイリストは月20時間" loading="lazy" /><figcaption>デビューを目指すカリキュラム（月ごとの内容）</figcaption></figure>
+          <figure className="curriculum-chart"><img src="/images/curriculum-chart-2027.png" width={1100} height={825} alt="デビューを目指すカリキュラム表。1年生コンシェルジュは月25時間、2年生Jrスタイリストは月25時間" loading="lazy" /><figcaption>デビューを目指すカリキュラム（月ごとの内容）</figcaption></figure>
           <div className="info-stack">
             <InfoBlock num="A" en="CURRICULUM" title="教育カリキュラム" rows={curriculumRows} />
             <InfoBlock num="B" en="PAY &amp; CAREER STEPS" title="給与・キャリアステップ" rows={payRows} note="職種・等級ごとの月給は固定残業代（15時間／月）を含む目安です。昇格は指名技術売上などに応じます。" />
