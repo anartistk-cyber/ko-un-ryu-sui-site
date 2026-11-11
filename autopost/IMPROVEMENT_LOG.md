@@ -986,3 +986,4 @@
   - p25：HPのQRを flowcloud.net → https://ko-un-ryu-sui.com/?utm_source=company_guide&utm_medium=qr に差し替え（リンクも更新）。UTMは会社案内PDF経由の訪問をGA4で見分けるため（11/15 の分析で確認）。QRは cv2 で読めた。LINE側のQR（採用LINE）も再確認 OK。
   - 確認：前後のピクセル差は p4・p23・p25 だけ。ドライブの版：v4（01:25）が現行、ファイルID・リンク共有（UNLISTED）・ゴミ箱でないことを確認。ドライブで p25 を開いて新QRを確認。
   - FACTS：募集の文言と沿革・QRを追記。
+- 2026-11-12 01:27 【本番確認（採用 :17 の取り込み後）】https://ko-un-ryu-sui.com/ のJSは index-BeBrVLkZ.js（新しいビルド）。会社沿革は「2026年4月 2号店「glow」いずみおおつCITY内にOPEN」で「2026年3月」は0件。「月25時間」「新規モニター80名」が出て、「月20時間」「新規モニター90名」「年中無休」は0件。ホームの文は textContent で確認（折りたたみ内は innerText に出ない）。
