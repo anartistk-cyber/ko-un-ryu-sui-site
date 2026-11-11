@@ -76,3 +76,12 @@
 - 既存記事改善: student-baito（最古）をFACTSと照合しずれなし。ctasに新記事を追加（dateは変更なし）。
 - 検証: sitemap 30URL／vite build／prerender／publish-gate すべて終了コード0。
 - 次回: 和泉・堺・高石の地域別記事。金曜ではないため週次レビューなし。
+
+## 実行ログ 2026-11-11（水・自動実行）
+- 準備: リポジトリはclone済み・origin/mainと同期。add_repo/register_repo_rootのツールは無く、スコープ済みのためそのまま作業。`npm ci` を実施（node_modules未導入だったため）。
+- 調査: 「高石 堺 美容師 求人 泉大津 通勤」上位は求人媒体（キャリアマップ/Job-medley/ハローワーク）。ko-un-ryu-sui.com は上位に未表示（Job-medleyにFLOWCLOUDのパート求人は表示）。地域×通勤は tsukin-kishiwada-izumi-sakai で既出のため、別の疑問へ切り替え。
+- 記事追加: yuki-koyo-shiyo-kikan-minikata ／ 狙い: 美容師 求人 有期雇用 試用期間 見方 ／ 切り口: 試用期間の有無・契約期間とその先・休みと有給の始まり・社会保険と勤続の4点。事実はFACTS.mdのみ。契約更新の条件はFACTSに無いため「見学・相談時にご質問ください」とし書かず。
+- カバー済みテーマに追加: yuki-koyo-shiyo-kikan-minikata（雇用形態）
+- 既存記事改善: 11/9に実施済みのため今回は見送り（次回実施）。金曜ではないため週次レビューなし。
+- 検証: sitemap 31URL／npm ci／vite build／prerender／publish-gate すべて終了コード0。
+- 次回: 和泉・堺・高石の地域別（通勤以外の切り口）／美容学校の選び方と就職活動の時期（時期の事実はFACTSに無いため要確認）。
