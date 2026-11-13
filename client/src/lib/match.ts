@@ -5,4 +5,7 @@
 //   ・URLが変わったとき：MATCH_APP_URL をここで1か所だけ直す（公開は次の毎時の取り込み）。
 //   ・外部アプリを自社サーバーへ移したとき：MATCH_APP_URL を新しい場所に直すだけでよい。
 export const MATCH_ENTRY = "/match/";
-export const MATCH_APP_URL = "https://kounryusui-recruit.flowcloudcast.chatgpt.site/";
+// 2026-11-13 21:5x から、自社ドメインのサブドメイン（ChatGPT Sites の独自ドメイン接続。DNS は Xserver の DNSレコード設定で
+// match → CNAME custom-domains.chatgpt.site と、検証用 TXT 2件）。HTTPS も有効。
+// 予備（元のアドレス。独自ドメイン側に不具合があったときの切り戻し先）： https://kounryusui-recruit.flowcloudcast.chatgpt.site/
+export const MATCH_APP_URL = "https://match.ko-un-ryu-sui.com/";

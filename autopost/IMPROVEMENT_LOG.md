@@ -1020,3 +1020,9 @@
   - 確認：vite build・prerender・publish-gate・hydration（34ページ）OK。Playwrightで、描画テスト用ブラウザでは移らず画面が残る／通常のブラウザでは約1.0秒後に外部アプリへ replace で移る／ボタンの href／noindex／canonicalなし／フォールバックのリンク／トップ・/recruit/・/visit・/faq のリンクがすべて /match/（新しいタブ）。site/・llms-full・sitemap に外部URLの直書きは入口ページ以外に無い。
   - 次：（1）毎日の見張り（外部アプリと入口が開けるか。異常のときだけ藤津さんへ通知）を設定。（2）根本対策＝ChatGPT側で独自ドメイン（例 match.ko-un-ryu-sui.com）を接続するのは、藤津さんの操作とXserverのDNS設定が要るので、許可をいただいてから案内。（3）最終的に自社サーバーへ移す場合も、MATCH_APP_URL を直すだけでよい。（4）/privacy に外部アプリのデータの扱いが無い件は藤津さんの判断待ち。
 - 2026-11-13 21:24 【本番確認：f0c3e59（元アプリへのリンク）が21:17の取り込みで公開された】トップのヒーロー・フッターのリンク先が外部アプリ（https://kounryusui-recruit.flowcloudcast.chatgpt.site/）／sitemap.xml は32件で /match なし／/match（入口なし版）は取得できず（旧 /match が残っていないことの確認）／外部アプリは正常に表示（タイトル「採用マッチング | 株式会社行雲流水」）。フォームの初期表示の実機確認は、次の公開（9d8bb35＝入口 /match/、22:17の取り込み）後の22:22確認でまとめて行う。
+- 2026-11-13 21:50 【採用マッチング診断：独自ドメイン https://match.ko-un-ryu-sui.com/ を接続し、入口 /match/ の転送先を切り替えた（藤津さん 21:25〜21:48）】
+  - 手順：ChatGPT Sites でドメイン追加（match.ko-un-ryu-sui.com）→ Xserver の DNSレコード設定（ko-un-ryu-sui.com）に3件（CNAME match→custom-domains.chatgpt.site／TXT _openai-site-verification.match／TXT _cf-custom-hostname.match）を、私が入力画面を用意し藤津さんが「追加する」で1件ずつ保存（既存のMX・SPF等は触っていない）→ ChatGPT側でドメイン・HTTPS証明書とも「有効」。
+  - 確認：実機のChrome（ノート代表）で https://match.ko-un-ryu-sui.com/ がHTTPSで表示され、タイトル「採用マッチング | 株式会社行雲流水」・「適性診断」「見学・相談・応募」の入口あり。WebFetch と Google DNS（dns.google）は登録直後は古い「該当なし」の結果が残り、取得できなかった（robots_disallowed。否定キャッシュ）。
+  - 変更：client/src/lib/match.ts の MATCH_APP_URL を新アドレスに（元の chatgpt.site はコメントに予備として残す）。サイト内リンクは従来どおり /match/（入口）を向いており、変更不要。ビルド・publish-gate・hydration（34ページ）OK。site/ に外部アドレスの直書きは入口ページの新アドレスのみ。
+  - 見張り：毎日 09:41 の確認（trig_01MHzCDrCjKepExBi7GD6xVo）を、新アドレス本命＋元のアドレス予備＋入口＋トップのリンク、に更新。
+  - 次：（1）22:17の取り込み後に本番の /match/ → 新アドレスの転送を実機Chromeで確認（22:22）。（2）11/15 の分析で、/match/ のページビュー（QR・LINE流入含む）と recruit_cta_click の cta_type=match を見る。（3）/privacy に外部アプリのデータの扱いが無い件は藤津さんの判断待ち。
