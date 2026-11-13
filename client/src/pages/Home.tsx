@@ -341,6 +341,7 @@ export default function Home() {
               <div className="hero-actions">
                 <a className="button button-primary" href="/?c=visit#contact" data-track="visit" data-placement="hero">サロン見学を相談する <ArrowRight size={17} aria-hidden="true" /></a>
                 <a className="button button-quiet" href="#jobs" data-track="consult" data-placement="hero">自分に合う募集を見る <ArrowDownLine /></a>
+                <a className="hero-line-link" href="/match" data-track="match" data-placement="hero">12問の採用マッチング診断 <ArrowRight size={14} aria-hidden="true" /></a>
                 <a className="hero-line-link" href={lineHref} target="_blank" rel="noreferrer" data-track="line" data-placement="hero">LINEで採用の質問をする <ArrowUpRight size={14} aria-hidden="true" /></a>
               </div>
               <p className="hero-source-note">2027年度 新卒美容師3名募集。中途・パート・学生アルバイトの募集条件もご案内しています。<br />年度・人数・募集状態は年度により異なります</p>
@@ -856,7 +857,7 @@ export default function Home() {
       <footer className="site-footer">
         <div className="footer-top">
           <div className="footer-brand"><img loading="lazy" decoding="async" src={logoPath} alt="株式会社 行雲流水 ko-un-ryu-sui ロゴ" /><p>FLOWCLOUD / glow 採用サイト</p></div>
-          <div className="footer-links"><a href="#about">私たちについて</a><a href="#salons">店舗紹介</a><a href="#growth">教育・給与</a><a href="#guideline">募集要項</a><a href="#experience">体験会</a><a href="#access">アクセス</a><a href="#instagram">Instagram</a><a href="#company">会社概要</a><a href="/faq">よくある質問</a><a href="/workstyle">働き方（休み・教育）</a><a href="/visit">見学・体験の流れ</a><a href="/blog/">記事一覧</a><a href="https://www.flowcloud.net/" target="_blank" rel="noreferrer">FLOWCLOUD公式</a><a href="https://glow-izumiotsu.jp/" target="_blank" rel="noreferrer">glow公式</a><a href={googleBusinessUrl} target="_blank" rel="noreferrer">Googleのページ</a><a href="/recruit/">募集職種一覧</a><a href="/recruit/newgrad">新卒採用</a><a href="/area">勤務エリア</a><a href="/school">美容学校の学生の方へ</a><a href="/recruit/student">高校生・美容学生</a><a href="/recruit/career">中途採用</a><a href="#contact">サロン見学・応募</a><Link href="/privacy">個人情報の取扱い</Link></div>
+          <div className="footer-links"><a href="#about">私たちについて</a><a href="#salons">店舗紹介</a><a href="#growth">教育・給与</a><a href="#guideline">募集要項</a><a href="#experience">体験会</a><a href="#access">アクセス</a><a href="#instagram">Instagram</a><a href="#company">会社概要</a><a href="/faq">よくある質問</a><a href="/workstyle">働き方（休み・教育）</a><a href="/visit">見学・体験の流れ</a><a href="/match">採用マッチング診断</a><a href="/blog/">記事一覧</a><a href="https://www.flowcloud.net/" target="_blank" rel="noreferrer">FLOWCLOUD公式</a><a href="https://glow-izumiotsu.jp/" target="_blank" rel="noreferrer">glow公式</a><a href={googleBusinessUrl} target="_blank" rel="noreferrer">Googleのページ</a><a href="/recruit/">募集職種一覧</a><a href="/recruit/newgrad">新卒採用</a><a href="/area">勤務エリア</a><a href="/school">美容学校の学生の方へ</a><a href="/recruit/student">高校生・美容学生</a><a href="/recruit/career">中途採用</a><a href="#contact">サロン見学・応募</a><Link href="/privacy">個人情報の取扱い</Link></div>
           <div className="footer-company"><p>株式会社 行雲流水</p><span>代表：藤津一弥<br />掲載拠点：大阪府泉大津市<br />設立：2020年4月1日<br />TEL：0725-90-5699</span></div>
         </div>
         <div className="footer-bottom"><span>© KOUNRYUSUI CO., LTD.</span><span>泉大津・岸和田・高石・和泉・堺・泉佐野・貝塚 美容師 求人 / 美容室 アシスタント 求人 / 南大阪・泉州</span></div>

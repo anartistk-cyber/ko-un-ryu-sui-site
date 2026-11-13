@@ -39,6 +39,7 @@ const pages: Record<"recruit" | "area" | "school" | "student" | "workstyle" | "v
           <li><Link href="/recruit/career">中途・転職をお考えの方へ</Link></li>
           <li><Link href="/area">泉大津・南大阪・泉州から通いたい方へ（勤務エリア）</Link></li>
           <li><Link href="/workstyle">休み・教育・給与の内訳を知りたい方へ（働き方）</Link></li>
+          <li><Link href="/match">12問の採用マッチング診断で、見学で聞いてみたいことを見つけたい方へ</Link></li>
         </ul></> },
       { h: "まずは、見学・相談から。", body: <p>応募を決めていなくても、サロンを見て、働き方を聞いてみてください。見学・体験の内容、費用、選考との関係は、お申し込み前にご案内します。公式LINEなら、住んでいる地域や希望の働き方を送るだけで始められます。<Link href="/visit">見学・体験の流れを見る</Link></p> },
     ],
@@ -194,7 +195,7 @@ const pages: Record<"recruit" | "area" | "school" | "student" | "workstyle" | "v
       ["選考の流れを教えてください。", "見学（会社説明会）→ 面接 → 採用の流れで、提出書類は履歴書です。"],
       ["どこで勤務しますか。", "泉大津市のFLOWCLOUD（泉大津駅から徒歩約3分）とglow（東口から徒歩約1分）です。"],
     ],
-    related: [["働き方（休み・教育・給与の内訳）", "/workstyle"], ["よくある質問", "/faq"], ["勤務エリア", "/area"]],
+    related: [["働き方（休み・教育・給与の内訳）", "/workstyle"], ["採用マッチング診断（12問）", "/match"], ["よくある質問", "/faq"], ["勤務エリア", "/area"]],
     primary: "サロン見学を相談する",
   },
 };

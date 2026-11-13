@@ -21,6 +21,7 @@
 - [よくある質問](https://ko-un-ryu-sui.com/faq)
 - [働き方（シフト・休日・教育）](https://ko-un-ryu-sui.com/workstyle)
 - [見学・体験の流れ](https://ko-un-ryu-sui.com/visit)
+- [採用マッチング診断（12問・美容学生/新卒/中途）](https://ko-un-ryu-sui.com/match)
 - [記事一覧](https://ko-un-ryu-sui.com/blog/)
   - [見学・体験と選考](https://ko-un-ryu-sui.com/blog/taiken-guide) ／[1年デビューの教育](https://ko-un-ryu-sui.com/blog/one-year-debut-curriculum) ／[早番・遅番](https://ko-un-ryu-sui.com/blog/hayaban-osoban)
   - [初任給・手当](https://ko-un-ryu-sui.com/blog/shoninkyu-teate) ／[学生アルバイト](https://ko-un-ryu-sui.com/blog/student-baito) ／[サロン選びのチェックリスト](https://ko-un-ryu-sui.com/blog/salon-erabi-checklist) ／[転職のポイント](https://ko-un-ryu-sui.com/blog/tenshoku-point)

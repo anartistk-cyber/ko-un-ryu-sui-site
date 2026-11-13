@@ -37,6 +37,7 @@ const pages = [
   ["/faq", "faq.html"],
   ["/workstyle", "workstyle.html"],
   ["/visit", "visit.html"],
+  ["/match", "match.html"],
   ["/blog", "blog/index.html"],
   ["/privacy", "privacy.html"],
   ["/__not-found__", "404.html"],

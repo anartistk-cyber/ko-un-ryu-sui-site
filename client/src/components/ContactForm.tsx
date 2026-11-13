@@ -26,22 +26,28 @@ const PRESET: Record<string, { purpose?: string; status?: string; job?: string }
 const submitLabel: Record<string, string> = { visit: "この内容で見学を申し込む", consult: "この内容で送信する", apply: "この内容で応募する", "": "この内容で送信する" };
 
 // サーバー(contact.php)を変えなくても受付メールに残るよう、メッセージの末尾に流入元を足す（1000文字を超える場合は足さない）
-function withSource(message: string, via: string): string {
+function withSource(message: string, via: string, diagnosis = ""): string {
   const campaign = getCampaign();
   const note = [via && `知ったきっかけ：${via}`, campaign && `流入：${campaign}`].filter(Boolean).join("／");
-  if (!note) return message;
-  const out = `${message}${message ? "\n\n" : ""}【${note}】`;
-  return out.length <= 1000 ? out : message;
+  // 診断結果（本人が「そえる」を選んだときだけ）→ 流入元の順に足す。1000文字を超えるものは足さない。
+  let out = message;
+  for (const n of [diagnosis, note]) {
+    if (!n) continue;
+    const next = `${out}${out ? "\n\n" : ""}【${n}】`;
+    if (next.length <= 1000) out = next;
+  }
+  return out;
 }
 // 「このサイトを知ったきっかけ」（任意）。どこからの応募が多いかを、広告・チラシ・SNSの効果測定に使う。
 const FOUND_VIA = ["Google検索", "Googleマップ（店舗ページ）", "Instagram", "LINE", "店舗のQR・チラシ", "学校・先生の紹介", "友人・知人の紹介", "求人サイト・求人票", "その他"];
 const DRAFT_KEY = "krs-contact-draft";
 const DRAFT_TEXT = ["name", "kana", "salon", "school", "date1", "date2", "date3", "conditions", "message"];
 
-export function ContactForm() {
-  const [purpose, setPurpose] = useState("");
-  const [status, setStatus] = useState("");
-  const [jobId, setJobId] = useState("");
+// preset：呼び出し側（採用マッチング診断など）が相談内容・現在の状況・求人IDの初期値を決めるとき。diagnosisNote：結果をそえるときの1行。sourcePage：計測用の流入ページ名。
+export function ContactForm({ preset, diagnosisNote = "", sourcePage = "contact_form" }: { preset?: { purpose?: string; status?: string; job?: string }; diagnosisNote?: string; sourcePage?: string } = {}) {
+  const [purpose, setPurpose] = useState(preset?.purpose ?? "");
+  const [status, setStatus] = useState(preset?.status ?? "");
+  const [jobId, setJobId] = useState(preset?.job ?? "");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [method, setMethod] = useState("");
@@ -57,6 +63,7 @@ export function ContactForm() {
   const [restored, setRestored] = useState(0);
 
   useEffect(() => {
+    if (preset) return; // 呼び出し側が初期値を決めているときは、?c= は見ない
     const c = new URLSearchParams(window.location.search).get("c") ?? "";
     const p = PRESET[c];
     if (p) { setPurpose(p.purpose ?? ""); setStatus(p.status ?? ""); setJobId(p.job ?? (c === "newgrad" || c === "career" ? c : "")); }
@@ -93,6 +100,16 @@ export function ContactForm() {
       sessionStorage.setItem(DRAFT_KEY, JSON.stringify(d));
     } catch { /* 保存できない環境では何もしない */ }
   };
+  // 完成済みHTMLを引き継いだとき、ブラウザが先頭の選択肢（見学したい・美容学生）を表示してしまうのに、入力の状態は空のまま、というずれが出る。
+  // 表示を状態（未選択＝「選択してください」）に合わせる。ずれたままだと、選択済みに見えるのに送信時「選択してください」のエラーになる。
+  useEffect(() => {
+    const f = formRef.current; if (!f) return;
+    for (const [k, v] of [["purpose", purpose], ["status", status], ["contact_method", method]] as const) {
+      const el = f.elements.namedItem(k) as HTMLSelectElement | null;
+      if (el && el.value !== v) el.value = v;
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   useEffect(() => { if (Object.keys(errors).length) summaryRef.current?.focus(); }, [errors]);
   useEffect(() => { if (done) doneRef.current?.focus(); }, [done]);
 
@@ -130,7 +147,7 @@ export function ContactForm() {
       body: JSON.stringify({
         name: g("name"), kana: g("kana"), email: g("email"), phone: g("phone"), purpose, status, contact_method: method,
         salon: g("salon"), date1: g("date1"), date2: g("date2"), date3: g("date3"), school: g("school"),
-        conditions: g("conditions"), message: withSource(g("message"), g("found_via")), found_via: g("found_via"), campaign: getCampaign(), job_id: jobId, consent: true, website: g("website"),
+        conditions: g("conditions"), message: withSource(g("message"), g("found_via"), diagnosisNote), found_via: g("found_via"), campaign: getCampaign(), job_id: jobId, consent: true, website: g("website"),
       }),
     })
       .then(async res => {
@@ -139,7 +156,7 @@ export function ContactForm() {
           try { sessionStorage.removeItem(DRAFT_KEY); } catch { /* noop */ }
           setDone({ receipt: json.receipt, mailed: json.mailed, purpose });
           // サーバーが正常保存した時のみ1回だけ発火(個人情報なし)
-          track("recruit_lead_saved", { lead_type: purpose, audience: status, salon: g("salon") || "undecided", job_id: jobId || "not_selected", found_via: g("found_via") || "not_answered", campaign: getCampaign() || "none", source_page_type: "contact_form" });
+          track("recruit_lead_saved", { lead_type: purpose, audience: status, salon: g("salon") || "undecided", job_id: jobId || "not_selected", found_via: g("found_via") || "not_answered", campaign: getCampaign() || "none", source_page_type: sourcePage, diagnosis: diagnosisNote ? "attached" : "none" });
         } else {
           setServerError(true); track("recruit_form_error", { error_code: "server", form_type: purpose });
         }
