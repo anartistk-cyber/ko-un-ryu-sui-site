@@ -1,7 +1,9 @@
 import { useEffect, type ReactNode } from "react";
 import { Link } from "wouter";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Sparkles } from "lucide-react";
 import { MATCH_ENTRY } from "../lib/match";
+import { MatchStrip } from "./MatchCta";
+import { trackClick } from "../lib/track";
 
 export const SITE = "https://ko-un-ryu-sui.com";
 export const LINE_URL = "https://lin.ee/Z0JP8sH";
@@ -31,16 +33,18 @@ export function SubPage({ children, title, description, path, image }: { childre
   return (
     <div className="job-detail-page sub-page" data-pg={pgOf(path)}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }} />
-      <header className="job-detail-header">
+      <header className="job-detail-header" onClick={trackClick}>
         <Link href="/" className="privacy-brand" aria-label="行雲流水 採用サイト トップへ">
           <img src={logoPath} alt="株式会社 行雲流水 ko-un-ryu-sui ロゴ" />
           <span />
           <small>RECRUITMENT</small>
         </Link>
+        <a className="header-match" href={MATCH_ENTRY} target="_blank" rel="noopener noreferrer" data-track="match" data-placement="subheader"><Sparkles size={15} aria-hidden="true" /> 12問の適性診断</a>
         <Link href="/" className="privacy-back">トップへ戻る <ArrowLeft size={15} aria-hidden="true" /></Link>
       </header>
       {children}
-      <div className="mobile-cta" aria-label="見学・応募へのショートカット"><a className="mobile-email" href="/?c=visit#contact">見学・相談する</a><a className="mobile-line" href={LINE_URL} target="_blank" rel="noreferrer">LINEで相談</a></div>
+      <MatchStrip lineHref={LINE_URL} placement="subpage" selfTrack />
+      <div className="mobile-cta" aria-label="診断・LINE・見学のショートカット" onClick={trackClick}><a className="mobile-match" href={MATCH_ENTRY} target="_blank" rel="noopener noreferrer" data-track="match" data-placement="sticky-sub"><Sparkles size={15} aria-hidden="true" />12問の診断</a><a className="mobile-line" href={LINE_URL} target="_blank" rel="noreferrer" data-track="line" data-placement="sticky-sub">LINE相談</a><a className="mobile-email" href="/?c=visit#contact" data-track="consult" data-placement="sticky-sub">見学</a></div>
       <footer className="privacy-footer"><span>© KOUNRYUSUI CO., LTD.</span><span className="sub-official"><a href="https://www.flowcloud.net/" target="_blank" rel="noreferrer">FLOWCLOUD公式サイト</a><a href="https://glow-izumiotsu.jp/" target="_blank" rel="noreferrer">glow公式サイト</a><Link href="/">採用トップ</Link><Link href="/recruit/">募集職種一覧</Link><Link href="/area">勤務エリア</Link><Link href="/school">美容学校の学生の方へ</Link><Link href="/recruit/student">高校生・美容学生</Link><Link href="/recruit/newgrad">新卒採用</Link><Link href="/recruit/career">中途採用</Link><Link href="/workstyle">働き方（休み・教育）</Link><Link href="/visit">見学・体験の流れ</Link><a href={MATCH_URL} target="_blank" rel="noopener noreferrer">採用マッチング診断（12問）</a><Link href="/faq">よくある質問</Link></span></footer>
     </div>
   );

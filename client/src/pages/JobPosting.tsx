@@ -3,6 +3,8 @@ import { useEffect, useMemo, type ReactNode } from "react";
 import { Link } from "wouter";
 import { TBD } from "../components/Pending";
 import { trackClick, track } from "../lib/track";
+import { MatchStrip } from "../components/MatchCta";
+import { LINE_URL } from "../components/SubPage";
 
 const siteUrl = "https://ko-un-ryu-sui.com";
 const companyName = "株式会社 行雲流水";
@@ -303,6 +305,8 @@ export default function JobPosting({ type }: { type: JobType }) {
           </div>
         </section>
       </main>
+
+      <MatchStrip lineHref={LINE_URL} placement="job" />
 
       <section className="job-more" aria-label="関連ページ">
         <p>RELATED</p>

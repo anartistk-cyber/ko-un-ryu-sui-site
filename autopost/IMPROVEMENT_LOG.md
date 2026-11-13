@@ -1026,3 +1026,10 @@
   - 変更：client/src/lib/match.ts の MATCH_APP_URL を新アドレスに（元の chatgpt.site はコメントに予備として残す）。サイト内リンクは従来どおり /match/（入口）を向いており、変更不要。ビルド・publish-gate・hydration（34ページ）OK。site/ に外部アドレスの直書きは入口ページの新アドレスのみ。
   - 見張り：毎日 09:41 の確認（trig_01MHzCDrCjKepExBi7GD6xVo）を、新アドレス本命＋元のアドレス予備＋入口＋トップのリンク、に更新。
   - 次：（1）22:17の取り込み後に本番の /match/ → 新アドレスの転送を実機Chromeで確認（22:22）。（2）11/15 の分析で、/match/ のページビュー（QR・LINE流入含む）と recruit_cta_click の cta_type=match を見る。（3）/privacy に外部アプリのデータの扱いが無い件は藤津さんの判断待ち。
+- 2026-11-13 22:08 【採用サイト：採用マッチング診断と公式LINEへの入口を「目立つ飾り」に（藤津さん 21:54「もっと目立たせるような装飾した文字や図でリンク飛ぶように／LINEに直接行くのも目立たせても良い／マッチングアプリは一番目立たせて」）】
+  - 方針：診断を一番（赤ピンク→赤のグラデーション＋黄色の「12問」シール＋2つの円とハートの図＋光が流れる動き）、公式LINEを次（緑のボタン）。文言は診断アプリ自身の言い回し（「12問で、あなたの大切にしたいことを見つけよう」「適性診断」）に合わせ、所要時間・無料などアプリが言っていないことは書かない。
+  - 置き場所：トップ＝ヘッダーの小ボタン「12問の適性診断」／スマホのメニュー先頭／ヒーロー（診断の大きなカード＋LINEボタン。見学相談・募集を見るはその下）／統計帯の下の帯／問い合わせフォームの前の帯／スマホの固定バー（診断・LINE相談・見学の3分割。診断が一番広い）。サブページ（/recruit/ ほか・ブログ・FAQ）＝ヘッダーの小ボタン（スマホは固定バー）／本文の下の帯／固定バー。求人詳細（/jobs/…）＝関連ページの上の帯。部品は client/src/components/MatchCta.tsx（MatchCta・LineCta・MatchStrip）、CSSは index.css 末尾。リンク先は従来どおり入口 /match/（新しいタブ）と公式LINE。
+  - 速度への配慮：画像は使わずCSSとインラインSVGだけ。動きは transform のみ（光・シールのゆれ・図の上下・矢印）で prefers-reduced-motion では止める。スマホのヒーロー写真は最初の画面の下（上端 約1112px、画面高823px）のまま＝LCP は文字のまま。白文字の面は #d6336c／#d93a2b／#04873a（AA）。
+  - 確認：vite build・prerender・publish-gate・hydration（34ページ）OK。Playwright：412・1280px で横はみ出しなし（トップ・/recruit/）、ヘッダーは 360〜1440px で折り返し・はみ出しなし（1239px以下はナビの公式サイトリンク、1039px以下は SALON VISIT・Instagram を外す。ページ内に同じリンクあり）、全リンクのクリックで recruit_cta_click（cta_type=match）／recruit_line_click が1回ずつ発火。入口 /match/ のテストも全OK（テストの転送先を新アドレスに更新）。
+  - 計測の変化：スマホ固定バーのLINEは今回から recruit_line_click（placement=sticky／sticky-sub）で数える（以前は未計測）。新しい placement：header／menu／hero／band／before-contact／subheader／subpage／sticky／sticky-sub／job。
+  - 次：（1）取り込み後（採用 :17）に本番で見た目と /match/ の転送を確認。（2）PageSpeed（スマホ）を採用で測り、LCP が文字のまま・88前後を保つか確認。（3）11/15 の分析で placement 別の match／line クリックを見て、効く場所を伸ばし効かない場所は減らす。

@@ -4,6 +4,7 @@ import { faqItems } from "../data/faq";
 import { ContactForm } from "../components/ContactForm";
 import { track, trackClick } from "../lib/track";
 import { MATCH_ENTRY } from "../lib/match";
+import { MatchCta, LineCta, MatchStrip } from "../components/MatchCta";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -319,6 +320,7 @@ export default function Home() {
         <nav className="desktop-nav" aria-label="主要ナビゲーション">
           {navItems.map(([label, href]) => <a key={label} href={href} {...(href.startsWith("http") ? { target: "_blank", rel: "noreferrer" } : {})}>{label}</a>)}
         </nav>
+        <a className="header-match" href={matchHref} target="_blank" rel="noopener noreferrer" data-track="match" data-placement="header"><Sparkles size={15} aria-hidden="true" /> 12問の適性診断</a>
         <a className="header-cta" href="#contact">SALON VISIT <ArrowRight size={15} aria-hidden="true" /></a>
         <button className="menu-button" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "メニューを閉じる" : "メニューを開く"} aria-expanded={menuOpen}>
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -328,6 +330,7 @@ export default function Home() {
       <div className={`mobile-menu ${menuOpen ? "mobile-menu-open" : ""}`} aria-hidden={!menuOpen}>
         <div className="mobile-menu-inner">
           <p className="eyebrow">MENU</p>
+          <a className="mobile-menu-match" href={matchHref} target="_blank" rel="noopener noreferrer" data-track="match" data-placement="menu" onClick={closeMenu}><Sparkles size={18} aria-hidden="true" /> 12問の適性診断をはじめる <ArrowRight size={18} aria-hidden="true" /></a>
           {navItems.map(([label, href], index) => <a key={label} style={{ transitionDelay: `${70 + index * 45}ms` }} href={href} onClick={closeMenu} {...(href.startsWith("http") ? { target: "_blank", rel: "noreferrer" } : {})}>{label}</a>)}
           <a className="mobile-menu-visit" href="#contact" onClick={closeMenu}>サロン見学・応募の相談 <ArrowRight size={18} /></a>
         </div>
@@ -341,10 +344,10 @@ export default function Home() {
               <h1 id="hero-title">美容師としての<br /><em><span className="nb">これからを、</span><span className="nb">ここから。</span></em></h1>
               <p className="hero-lead">大阪・泉大津のFLOWCLOUDとglow。はじめての就職も、経験を生かす転職も、子育てをしながらの仕事も。あなたの今に合う働き方を、募集条件と仕事の様子から確かめてください。</p>
               <div className="hero-actions">
+                <MatchCta placement="hero" />
+                <LineCta href={lineHref} placement="hero" />
                 <a className="button button-primary" href="/?c=visit#contact" data-track="visit" data-placement="hero">サロン見学を相談する <ArrowRight size={17} aria-hidden="true" /></a>
                 <a className="button button-quiet" href="#jobs" data-track="consult" data-placement="hero">自分に合う募集を見る <ArrowDownLine /></a>
-                <a className="hero-line-link" href={matchHref} target="_blank" rel="noopener noreferrer" data-track="match" data-placement="hero">12問の採用マッチング診断（新しいタブで開きます） <ArrowUpRight size={14} aria-hidden="true" /></a>
-                <a className="hero-line-link" href={lineHref} target="_blank" rel="noreferrer" data-track="line" data-placement="hero">LINEで採用の質問をする <ArrowUpRight size={14} aria-hidden="true" /></a>
               </div>
               <p className="hero-source-note">2027年度 新卒美容師3名募集。中途・パート・学生アルバイトの募集条件もご案内しています。<br />年度・人数・募集状態は年度により異なります</p>
             </div>
@@ -384,6 +387,8 @@ export default function Home() {
             <li><b>1時間〜</b><span>体験会・サロン見学<br />気軽に相談できます</span></li>
           </ul>
         </section>
+
+        <MatchStrip lineHref={lineHref} placement="band" />
 
         <section className="worry-section section" aria-labelledby="worry-title">
           <div className="section-heading"><Eyebrow>VOICE</Eyebrow><h2 id="worry-title">こんな不安、<br />ありませんか？</h2></div>
@@ -826,6 +831,8 @@ export default function Home() {
           </div>
         </section>
 
+        <MatchStrip lineHref={lineHref} placement="before-contact" />
+
         <section className="contact-section" id="contact" aria-labelledby="contact-title">
           <div className="contact-head">
             <Eyebrow>LET'S TALK</Eyebrow>
@@ -865,7 +872,7 @@ export default function Home() {
         <div className="footer-bottom"><span>© KOUNRYUSUI CO., LTD.</span><span>泉大津・岸和田・高石・和泉・堺・泉佐野・貝塚 美容師 求人 / 美容室 アシスタント 求人 / 南大阪・泉州</span></div>
       </footer>
 
-      <div className="mobile-cta" aria-label="見学・応募へのショートカット"><a className="mobile-email" href="/?c=visit#contact" data-track="consult" data-placement="sticky">見学・相談する</a><a className="mobile-line" href={lineHref} target="_blank" rel="noreferrer">LINEで相談</a></div>
+      <div className="mobile-cta" aria-label="診断・LINE・見学のショートカット"><a className="mobile-match" href={matchHref} target="_blank" rel="noopener noreferrer" data-track="match" data-placement="sticky"><Sparkles size={15} aria-hidden="true" />12問の診断</a><a className="mobile-line" href={lineHref} target="_blank" rel="noreferrer" data-track="line" data-placement="sticky">LINE相談</a><a className="mobile-email" href="/?c=visit#contact" data-track="consult" data-placement="sticky">見学</a></div>
     </div>
   );
 }
