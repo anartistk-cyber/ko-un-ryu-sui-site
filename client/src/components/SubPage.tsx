@@ -4,6 +4,8 @@ import { ArrowLeft } from "lucide-react";
 
 export const SITE = "https://ko-un-ryu-sui.com";
 export const LINE_URL = "https://lin.ee/Z0JP8sH";
+// 採用マッチング診断（藤津さん作成の外部アプリ。診断12問と見学・相談・応募の受付は向こうで動く）
+export const MATCH_URL = "https://kounryusui-recruit.flowcloudcast.chatgpt.site/";
 const logoPath = "/images/company-logo_s210.jpg";
 
 // ページ名（<div data-pg>）：ページごとの色を出し分ける（index.css の「採用サブページ：ページごとの色」）。/recruit/newgrad→recruit-newgrad、/blog/xxx→blog、/faq→faq
@@ -38,7 +40,7 @@ export function SubPage({ children, title, description, path, image }: { childre
       </header>
       {children}
       <div className="mobile-cta" aria-label="見学・応募へのショートカット"><a className="mobile-email" href="/?c=visit#contact">見学・相談する</a><a className="mobile-line" href={LINE_URL} target="_blank" rel="noreferrer">LINEで相談</a></div>
-      <footer className="privacy-footer"><span>© KOUNRYUSUI CO., LTD.</span><span className="sub-official"><a href="https://www.flowcloud.net/" target="_blank" rel="noreferrer">FLOWCLOUD公式サイト</a><a href="https://glow-izumiotsu.jp/" target="_blank" rel="noreferrer">glow公式サイト</a><Link href="/">採用トップ</Link><Link href="/recruit/">募集職種一覧</Link><Link href="/area">勤務エリア</Link><Link href="/school">美容学校の学生の方へ</Link><Link href="/recruit/student">高校生・美容学生</Link><Link href="/recruit/newgrad">新卒採用</Link><Link href="/recruit/career">中途採用</Link><Link href="/workstyle">働き方（休み・教育）</Link><Link href="/visit">見学・体験の流れ</Link><Link href="/match">採用マッチング診断</Link><Link href="/faq">よくある質問</Link></span></footer>
+      <footer className="privacy-footer"><span>© KOUNRYUSUI CO., LTD.</span><span className="sub-official"><a href="https://www.flowcloud.net/" target="_blank" rel="noreferrer">FLOWCLOUD公式サイト</a><a href="https://glow-izumiotsu.jp/" target="_blank" rel="noreferrer">glow公式サイト</a><Link href="/">採用トップ</Link><Link href="/recruit/">募集職種一覧</Link><Link href="/area">勤務エリア</Link><Link href="/school">美容学校の学生の方へ</Link><Link href="/recruit/student">高校生・美容学生</Link><Link href="/recruit/newgrad">新卒採用</Link><Link href="/recruit/career">中途採用</Link><Link href="/workstyle">働き方（休み・教育）</Link><Link href="/visit">見学・体験の流れ</Link><a href={MATCH_URL} target="_blank" rel="noopener noreferrer">採用マッチング診断（12問）</a><Link href="/faq">よくある質問</Link></span></footer>
     </div>
   );
 }
