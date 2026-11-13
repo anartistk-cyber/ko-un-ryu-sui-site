@@ -1014,3 +1014,8 @@
   - いま：トップのヒーロー・フッター、/recruit/（「あなたの状況から選ぶ」）、全サブページのフッターから https://kounryusui-recruit.flowcloudcast.chatgpt.site/ へ新しいタブで開くリンク（data-track=match でクリックを recruit_cta_click の cta_type=match として計測）。/match ページ・サイトマップ・llms.txt の登録・CSS・データは削除。埋め込み（iframe）は、画面が二重スクロールになり、スマホで使いにくいので見送り（要望があれば再検討）。
   - 残した修正：問い合わせフォーム（ContactForm）の初期表示のずれ（「見学したい」「美容学生」が表示されているのに未選択エラーになる不具合）の直し。確認：初期表示は「選択してください」、?c= の初期値は従来どおり。ビルド・publish-gate・hydration（33ページ）OK。
   - 注意（藤津さんへ）：元アプリは chatgpt.site のサブドメイン上の試作品で、氏名・学校・Instagram などを入力して送る。採用サイトの「個人情報の取扱い」（/privacy）には、この外部アプリの扱いは書いていない。アドレス変更・停止があるとリンク切れになる。
+- 2026-11-13 21:22 【採用マッチング診断のリンク切れ対策：自社ドメインの入口 /match/ を作った（藤津さん 21:19「２と３をすすめよう！やって」）】
+  - 困りごと：外部アプリは chatgpt.site（ChatGPT Sites、公開ベータ）上の試作品。公開停止やプラン・設定の変更でURLがどうなるかは公式の説明で確認できず、止まるとサイト・QR・LINE・会社案内のリンクが全部切れる。
+  - 直したこと：https://ko-un-ryu-sui.com/match/ を転送ページにした（開くと約1秒後に外部アプリへ。自動で移らないときのボタンと、開けないとき用の「見学・相談フォーム」「公式LINE」の案内つき）。noindex・canonicalなし・サイトマップ/llms外。サイト内のリンク（トップのヒーロー・フッター、/recruit/、全サブページのフッター）は外部URLではなく /match/ に向けた（新しいタブ。data-track=match のクリック計測は従来どおり）。転送先は client/src/lib/match.ts の MATCH_APP_URL の1か所だけ。QRやLINEから入る人のアクセスは、GA4で /match/ のページビューとして数える（utm付きでもよい）。
+  - 確認：vite build・prerender・publish-gate・hydration（34ページ）OK。Playwrightで、描画テスト用ブラウザでは移らず画面が残る／通常のブラウザでは約1.0秒後に外部アプリへ replace で移る／ボタンの href／noindex／canonicalなし／フォールバックのリンク／トップ・/recruit/・/visit・/faq のリンクがすべて /match/（新しいタブ）。site/・llms-full・sitemap に外部URLの直書きは入口ページ以外に無い。
+  - 次：（1）毎日の見張り（外部アプリと入口が開けるか。異常のときだけ藤津さんへ通知）を設定。（2）根本対策＝ChatGPT側で独自ドメイン（例 match.ko-un-ryu-sui.com）を接続するのは、藤津さんの操作とXserverのDNS設定が要るので、許可をいただいてから案内。（3）最終的に自社サーバーへ移す場合も、MATCH_APP_URL を直すだけでよい。（4）/privacy に外部アプリのデータの扱いが無い件は藤津さんの判断待ち。

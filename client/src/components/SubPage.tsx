@@ -1,11 +1,12 @@
 import { useEffect, type ReactNode } from "react";
 import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
+import { MATCH_ENTRY } from "../lib/match";
 
 export const SITE = "https://ko-un-ryu-sui.com";
 export const LINE_URL = "https://lin.ee/Z0JP8sH";
-// 採用マッチング診断（藤津さん作成の外部アプリ。診断12問と見学・相談・応募の受付は向こうで動く）
-export const MATCH_URL = "https://kounryusui-recruit.flowcloudcast.chatgpt.site/";
+// 採用マッチング診断（外部アプリ）への自社ドメインの入口（/match/）。外部アプリのURLは lib/match.ts の1か所だけで管理する
+export const MATCH_URL = MATCH_ENTRY;
 const logoPath = "/images/company-logo_s210.jpg";
 
 // ページ名（<div data-pg>）：ページごとの色を出し分ける（index.css の「採用サブページ：ページごとの色」）。/recruit/newgrad→recruit-newgrad、/blog/xxx→blog、/faq→faq

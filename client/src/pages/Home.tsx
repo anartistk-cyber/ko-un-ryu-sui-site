@@ -3,6 +3,7 @@ import { TBD } from "../components/Pending";
 import { faqItems } from "../data/faq";
 import { ContactForm } from "../components/ContactForm";
 import { track, trackClick } from "../lib/track";
+import { MATCH_ENTRY } from "../lib/match";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -56,7 +57,7 @@ const flowCloudReelPoster = "/images/flow-cloud-reel-poster_v1.jpg";
 const glowReel = "/images/glow-reel-lite_v1.mp4";
 const glowReelPoster = "/images/glow-reel-poster_v1.jpg";
 const lineHref = "https://lin.ee/Z0JP8sH";
-const matchHref = "https://kounryusui-recruit.flowcloudcast.chatgpt.site/"; // 採用マッチング診断（藤津さん作成の外部アプリ）
+const matchHref = MATCH_ENTRY; // 採用マッチング診断（藤津さん作成の外部アプリ）への自社ドメインの入口（/match/。転送先は lib/match.ts）
 const seoTitle = "泉大津の美容師求人｜岸和田・堺・和泉から通える｜新卒・中途・学生｜FLOWCLOUD・glow";
 const seoDescription = "大阪府泉大津市の美容室FLOWCLOUD（フロウクラウド）・glow（グロウ）の採用サイト。南大阪・泉州（岸和田・高石・和泉・堺・泉佐野・貝塚）から通える美容師求人。美容学生・高校生・新卒・中途・復職の方へ、募集条件と見学・体験をご案内します。";
 

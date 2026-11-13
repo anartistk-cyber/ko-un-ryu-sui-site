@@ -39,6 +39,7 @@ const pages = [
   ["/visit", "visit.html"],
   ["/blog", "blog/index.html"],
   ["/privacy", "privacy.html"],
+  ["/match/", "match/index.html"], // 採用マッチング診断（外部アプリ）への自社ドメインの入口。noindex・サイトマップ外
   ["/__not-found__", "404.html"],
 ];
 
