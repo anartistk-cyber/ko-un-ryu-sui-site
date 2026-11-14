@@ -320,7 +320,7 @@ export default function Home() {
         <nav className="desktop-nav" aria-label="主要ナビゲーション">
           {navItems.map(([label, href]) => <a key={label} href={href} {...(href.startsWith("http") ? { target: "_blank", rel: "noreferrer" } : {})}>{label}</a>)}
         </nav>
-        <a className="header-match" href={matchHref} target="_blank" rel="noopener noreferrer" data-track="match" data-placement="header"><Sparkles size={15} aria-hidden="true" /> 12問の適性診断</a>
+        <a className="header-match" href={matchHref} target="_blank" rel="noopener noreferrer" data-track="match" data-placement="header"><Sparkles size={15} aria-hidden="true" /> 7問の適性診断</a>
         <a className="header-cta" href="#contact">SALON VISIT <ArrowRight size={15} aria-hidden="true" /></a>
         <button className="menu-button" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "メニューを閉じる" : "メニューを開く"} aria-expanded={menuOpen}>
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -330,7 +330,7 @@ export default function Home() {
       <div className={`mobile-menu ${menuOpen ? "mobile-menu-open" : ""}`} aria-hidden={!menuOpen}>
         <div className="mobile-menu-inner">
           <p className="eyebrow">MENU</p>
-          <a className="mobile-menu-match" href={matchHref} target="_blank" rel="noopener noreferrer" data-track="match" data-placement="menu" onClick={closeMenu}><Sparkles size={18} aria-hidden="true" /> 12問の適性診断をはじめる <ArrowRight size={18} aria-hidden="true" /></a>
+          <a className="mobile-menu-match" href={matchHref} target="_blank" rel="noopener noreferrer" data-track="match" data-placement="menu" onClick={closeMenu}><Sparkles size={18} aria-hidden="true" /> 7問の適性診断をはじめる <ArrowRight size={18} aria-hidden="true" /></a>
           {navItems.map(([label, href], index) => <a key={label} style={{ transitionDelay: `${70 + index * 45}ms` }} href={href} onClick={closeMenu} {...(href.startsWith("http") ? { target: "_blank", rel: "noreferrer" } : {})}>{label}</a>)}
           <a className="mobile-menu-visit" href="#contact" onClick={closeMenu}>サロン見学・応募の相談 <ArrowRight size={18} /></a>
         </div>
@@ -872,7 +872,7 @@ export default function Home() {
         <div className="footer-bottom"><span>© KOUNRYUSUI CO., LTD.</span><span>泉大津・岸和田・高石・和泉・堺・泉佐野・貝塚 美容師 求人 / 美容室 アシスタント 求人 / 南大阪・泉州</span></div>
       </footer>
 
-      <div className="mobile-cta" aria-label="診断・LINE・見学のショートカット"><a className="mobile-match" href={matchHref} target="_blank" rel="noopener noreferrer" data-track="match" data-placement="sticky"><Sparkles size={15} aria-hidden="true" />12問の診断</a><a className="mobile-line" href={lineHref} target="_blank" rel="noreferrer" data-track="line" data-placement="sticky">LINE相談</a><a className="mobile-email" href="/?c=visit#contact" data-track="consult" data-placement="sticky">見学</a></div>
+      <div className="mobile-cta" aria-label="診断・LINE・見学のショートカット"><a className="mobile-match" href={matchHref} target="_blank" rel="noopener noreferrer" data-track="match" data-placement="sticky"><Sparkles size={15} aria-hidden="true" />7問の診断</a><a className="mobile-line" href={lineHref} target="_blank" rel="noreferrer" data-track="line" data-placement="sticky">LINE相談</a><a className="mobile-email" href="/?c=visit#contact" data-track="consult" data-placement="sticky">見学</a></div>
     </div>
   );
 }

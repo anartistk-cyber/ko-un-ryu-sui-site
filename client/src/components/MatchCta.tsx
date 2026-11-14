@@ -3,7 +3,7 @@ import { MATCH_ENTRY } from "../lib/match";
 import { trackClick } from "../lib/track";
 
 // 採用マッチング診断（外部アプリ）と公式LINEへの、目立たせた入口。診断を一番目立たせ、LINEを次に目立たせる。
-// 文言は診断アプリ自身の言い回し（「12問で、あなたの大切にしたいことを見つけよう」「適性診断」）に合わせ、所要時間・無料などアプリが言っていないことは書かない。
+// 文言は診断アプリ自身の言い回し（「7問で、あなたの大切にしたいことを見つけよう」「適性診断」）に合わせ、所要時間・無料などアプリが言っていないことは書かない。
 // 飾りはCSS（グラデーション・影・動き）とインラインSVGだけ。画像を読み込まないので、表示速度（LCP）には影響しない。
 
 /** 診断のイラスト：2つの円が重なる「マッチ」とハート・きらめき（飾りなので読み上げない） */
@@ -29,10 +29,10 @@ export function MatchCta({ placement, variant = "card" }: { placement: string; v
   return (
     <a className={`match-cta match-cta-${variant}`} href={MATCH_ENTRY} target="_blank" rel="noopener noreferrer" data-track="match" data-placement={placement}>
       <span className="match-cta-shine" aria-hidden="true" />
-      <span className="match-cta-sticker" aria-hidden="true"><b>12</b><i>問</i></span>
+      <span className="match-cta-sticker" aria-hidden="true"><b>7</b><i>問</i></span>
       <span className="match-cta-body">
         <span className="match-cta-kicker">採用マッチング診断</span>
-        <strong className="match-cta-title"><span className="nb">12問で、</span><span className="nb">あなたの大切に</span><span className="nb">したいことを</span><span className="nb">見つけよう</span></strong>
+        <strong className="match-cta-title"><span className="nb">7問で、</span><span className="nb">あなたの大切に</span><span className="nb">したいことを</span><span className="nb">見つけよう</span></strong>
         <span className="match-cta-go">適性診断をはじめる <ArrowRight size={18} aria-hidden="true" /></span>
       </span>
       <MatchArt className="match-cta-art" />
