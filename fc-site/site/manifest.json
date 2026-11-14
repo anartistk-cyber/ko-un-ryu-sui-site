@@ -14,7 +14,7 @@
   },
   {
    "path": "company/index.html",
-   "sha256": "f1a9f9008b174500df84e31c7b4c7a4adf8bab4bc8aad9b0dfa867e0fa33bca9"
+   "sha256": "a284892a9cb406d95bf5b085e9c32af3b705f82a5e2eb242c9e2ca35bf766999"
   },
   {
    "path": "cota-products/index.html",
@@ -266,15 +266,15 @@
   },
   {
    "path": "index.html",
-   "sha256": "dd3704882eba7a4317cfe1c3121642d59c0e12e1aaa2c9c8a76d4eca2fc5fbc6"
+   "sha256": "d9ec9f78ad7ef7bd4d4b180a3283c4f1a424d8cb783fd025bf3fb30170cd7bb3"
   },
   {
    "path": "llms-full.txt",
-   "sha256": "d59b2a783dec30a7db32be8d0c7c3d6826da4267899623f8f6840a3f7124dd88"
+   "sha256": "e9f3aa715ad163b02a15bda6e1d87b258f96043f8f623109e07c5892ad36a798"
   },
   {
    "path": "llms.txt",
-   "sha256": "e9bf219e764db2640d5c39588ec55e4350364799b5c22e818adf049386240dad"
+   "sha256": "a7b042785af9ac804239dffcb604b45f464d87ebe61c25ab7a86fda6c65e5704"
   },
   {
    "path": "men/index.html",
@@ -306,55 +306,59 @@
   },
   {
    "path": "salon-blog/color-taishoku-40-50/index.html",
-   "sha256": "37d01bc5557ed12985a5996b918920eaab5602e4ac53316a4557e0287c3758b8"
+   "sha256": "ab088fb9ca3dee992b80f1e5d7d6a4815b50c7037ae3d1367ab1d2128fb8c052"
   },
   {
    "path": "salon-blog/cut-erabikata-izumiotsu-40-50/index.html",
-   "sha256": "55db6ca9b4c965bbbe6ebeb6071c655e3d5c39cf56ddcae7737239f02f757350"
+   "sha256": "481b54d660f18eb0311f400a07365ec3a9a78594d235b5d0150ac3a1fd9cecdd"
   },
   {
    "path": "salon-blog/fuyu-kansou-pasatsuki-40-50/index.html",
-   "sha256": "cb0963f8c45bed8aa8b64e1590f7e88039b3333197fa57f6201e6033fc00250e"
+   "sha256": "cf36f1c4cef4a5097df47b0224129e9fa2ef296000a706f452d7a7f5b1b72834"
   },
   {
    "path": "salon-blog/headspa-shampoo-kukan/index.html",
-   "sha256": "221ae3387336624081493f12f7a6c17b078ea4075da0752413cba4b9e7f5ed82"
+   "sha256": "8cf8072dfcd25049510e3b44ea16b273a151bc504e01f935ce8ea1090308839c"
   },
   {
    "path": "salon-blog/home-hair-care-cota-store/index.html",
-   "sha256": "d1309891a6c37329d0a501467ec09a70c4efb64e6d4ce988d396233b6edf814a"
+   "sha256": "42aa778ab5ce58b948a92c7c692334e2e1b115e8dfd6c714a751ba69f9f69c78"
   },
   {
    "path": "salon-blog/index.html",
-   "sha256": "ad790187acc8fb1bb24d21a301753795eb7a527f78960e13c16c6bb836bfdca1"
+   "sha256": "12a97960bfde4128d9c7c24317946188d17c824a533b49e72b8ec152c0832480"
   },
   {
    "path": "salon-blog/kuse-uneri-straight-40-50/index.html",
-   "sha256": "1adec29c2be7eeb3dc2a4a449c2140b59befedacca2b8f7d19aa5d02eb86cd1e"
+   "sha256": "4f021b398b7dd26d72da3761841a61a88177dfd35d43873fcee0fee8193a4094"
   },
   {
    "path": "salon-blog/kyugyobi-2026-11-12/index.html",
-   "sha256": "a9e47a64f85f55be97f2b5381fac7ca821df5d647dd2072c8336a4b45517b2f1"
+   "sha256": "f269007c9c519874f669950e8c73ebe2b4fafb9321be947e9aab63487200a514"
   },
   {
    "path": "salon-blog/nenmatsu-hair-plan-40-50/index.html",
-   "sha256": "a927502a4504dfa11b3048d1239e0d28ff4bf7ed8d0e3d9e07f68b269ff9cec7"
+   "sha256": "470e4f9cf9642f03af0897693ae41c4883263b4ca06d159767346e1cbc207555"
   },
   {
    "path": "salon-blog/nenmatsu-nenshi-2026-2027/index.html",
-   "sha256": "0c8b1006a8a9503eef801dd8a759e802767e12af24ed854afcaf72a3b54dd4b7"
+   "sha256": "fe7fe3ea2e990e367a9aee3cec49c3504311e5466841bf93bb67229ae58401ed"
   },
   {
    "path": "salon-blog/serum-color-40-50/index.html",
-   "sha256": "e5ef5d39c9b1e85ff8aed0a02c740de08d7293193625b280cf162980f551ecfe"
+   "sha256": "0d59481ae7ddce83e03ed261bbc065057faac5f486b46e7738fccb232dc3b986"
+  },
+  {
+   "path": "salon-blog/shiraga-ne-moto-40-50/index.html",
+   "sha256": "1234162fde99b4cee1864d0f1465b50e11de040fa2291d5ff9492a8a15e0496c"
   },
   {
    "path": "salon-blog/toppe-peta-volume-40-50/index.html",
-   "sha256": "3fabe9c0d5e480b8c018a56756c8a36fbf7e1cbf90e3af9ffa30d1b7bc60f6ca"
+   "sha256": "bdf16097d652bae2f2a959312c9393528b4ac050635c77a6d1194c6c599010af"
   },
   {
    "path": "sitemap-fc.xml",
-   "sha256": "0fd4d945f595656dba96334097667bdd401b2fd268d18546714ca75c015fb469"
+   "sha256": "be4bd72546e1b4ef443ced2b993da18b17dfb785bfaabdbb73854f7d4fd825a4"
   },
   {
    "path": "straight/index.html",
