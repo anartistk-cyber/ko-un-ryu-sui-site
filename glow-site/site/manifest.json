@@ -2,11 +2,11 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "d9862fa021efe2edaa2e64b3e335c586172a12ef83592129c7dbaa796076c19c"
+   "sha256": "aab7dc3e55e846edcb1ac508f53a95dceee251ec148312184208b970aca55aee"
   },
   {
    "path": "cast/index.html",
-   "sha256": "25cbabfb62f894a84d0cb87bd1417f757d41eaaa1f334a1a8f0010ad09de0be8"
+   "sha256": "bf716234fe730cbb6df1d3cca9c85737c3d32e351bafcd7463ed20d2ffaa577e"
   },
   {
    "path": "color/index.html",
@@ -302,7 +302,7 @@
   },
   {
    "path": "index.html",
-   "sha256": "525ca42c2d2bd94702b8b572315980bd95a63cc4163759f939283d90762a50b6"
+   "sha256": "8e995e5d909bd77240fc45911ac19e518cdf46d8997a11a6f707fa2deaaa0c7f"
   },
   {
    "path": "journal/access-parking/index.html",
@@ -366,7 +366,7 @@
   },
   {
    "path": "llms-full.txt",
-   "sha256": "cbb3cb83fe7e8d2e2ee534f6d1ecb18d1b70c909792bc26a74e22f5f9b53ebf6"
+   "sha256": "e7cfd110295718e3c890530afda8ed8155fbbe4d805d3f434ebd72ffa600704d"
   },
   {
    "path": "llms.txt",
@@ -378,7 +378,7 @@
   },
   {
    "path": "menu/index.html",
-   "sha256": "54773e7db05c63ebee54394237f004c1206990d316b3450c374d9dca498a1c5b"
+   "sha256": "09d27b1697fbb9aa4a441c98b2e9c732e9bcc3147dd7c842fc8d2419280e6c56"
   },
   {
    "path": "privacy/index.html",
@@ -394,7 +394,7 @@
   },
   {
    "path": "sitemap-gl.xml",
-   "sha256": "1ce7dfef474924ab69fb65f4dbb40c6429093ff6eb8966a915c8e11934b962fe"
+   "sha256": "369fd6d92a177498a711755413f7ff418e0228d03a7a70da8d8ab85a1daf889a"
   },
   {
    "path": "straight/index.html",
@@ -406,7 +406,7 @@
   },
   {
    "path": "voice/index.html",
-   "sha256": "e4c63c8c80b1dee4b5b9efc9ca1c94059cfac688c9416d7436e528ebca3f29be"
+   "sha256": "c77a014cac66194238f12f3e29036adb7dd0235cf0369f830b33293ce7d7a8d0"
   },
   {
    "path": "young/index.html",
