@@ -1115,3 +1115,4 @@
   - 確認：両サイトとも build→manifest 再生成→overflow-test `overflow: 0`（FC 36ページ・glow 37ページ×4幅）→audit.py（既知のもののみ：FC の recruit/recruite の title・description 重複、glow の privacy の title 長さ、sitemap.xml MISSING は sitemap-fc／gl を使うため既知）→FAQPage JSON-LD が JSON として読めて5問。
   - 定期タスク：「SalonAnswer月次指標の途中経過」の予定を「朝8:00＋夕方18:00」（11・16・21日）に戻し、名前も元に戻した（権限の確認は今回は通った。藤津さんの回答が決定）。指示文は元から「朝夕2回」なので書き換え不要。営業時間中の店舗切替の心配は、藤津さんが「受付と重ならないので大丈夫」と回答したので解消。次は 11/21。
   - 次：取り込み後（FC :22／glow :27）に本番の /straight/ で FAQ 5問を確認。EFFECT_CHECKS に1行足した（12/2・12/16 判定）。
+  - 本番確認（2026-11-18 20:3x）：FC・glow の /straight/ とも、FAQ が5問（最後が「ブリーチをした髪でも縮毛矯正はできますか？」）、FAQPage の JSON-LD も5問、title は変更なし。インデックス登録のリクエストは、/straight/ が既存ページで今回は文の追加だけなので出していない（1日約10件の上限を新ページに残す）。
