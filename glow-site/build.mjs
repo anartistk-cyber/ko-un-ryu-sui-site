@@ -11,7 +11,7 @@ import {rateHero,rateBox,rateText,rateAvgNote} from '../shared/rating.mjs';
 import {ROBOTS_META,parentOrg,offerCatalog,specialHours,buildLlmsFull,llmsPageLinks} from '../shared/seo.mjs';
 const OUT='site';fs.rmSync(OUT,{recursive:true,force:true});
 const BASE='https://glow-izumiotsu.jp';
-const IMG=n=>`/wp-content/uploads/${n}`;
+const IMG=n=>n.startsWith("/")?n:`/wp-content/uploads/${n}`;
 const I={interior:IMG('2026/04/glow_img-08.jpg'),shelf:IMG('2026/04/glow_img-05.jpg'),color:IMG('2026/04/glow_img-10.jpg'),staff:IMG('2026/05/staff_3.jpg'),ogp:IMG('2026/05/ogp.jpg')};
 const STRIP_IMGS=[['2026/04/glow_img-03.jpg','glowの店内。ミラーとセット椅子が並ぶ明るい空間'],['2026/04/glow_img-10.jpg','カラー施術中の様子'],['2026/04/glow_img-09.jpg','いずみおおつCITY 1Fのglow外観'],['2026/05/staff_3.jpg','glowのキャスト'],['2026/04/glow_img-05.jpg','店内のヘアケア商品の棚'],['2026/04/glow_img-08.jpg','glowの店内。木のカウンターと大きな鏡'],['2026/04/glow_img-06.jpg','ガラス窓越しに見えるglowの店内']];
 // 帯写真は表示が小さい(250×176 / スマホ190×136)ので、専用の小型版(img/strip-*-380/560.jpg)を srcset で出し分け（WP原寸の768px版より約7割軽い）
