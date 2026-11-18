@@ -21,6 +21,7 @@
 | 採用マッチング診断の入口 /match/・LINE への入口・問数7問（11/13〜11/14） | GA4 採用：recruit_cta_click／recruit_line_click／recruit_form_start／recruit_lead_saved／view_job（7日）。11/17 以降は「採用CTAの場所・種類」別 | 11/8〜11/14：recruit_cta_click 15（5人）／recruit_line_click 2／recruit_form_start 1／recruit_lead_saved 0／view_job 9（IMPROVEMENT_LOG 11/15 10:06） | 11/27／12/11 | |
 | FC・glow の予約ブロックの見出しを、ページの内容に合わせた言葉に変更（11/15） | GA4 ページ別の「表示→キーイベント」（直したページ。FC と glow はページタイトルで分ける） | 11/8〜11/14：FC トップ 88→12／glow トップ 49→5／glow クーポン 16→6／FC メニュー 18→1／glow メニュー 13→2（IMPROVEMENT_LOG 11/15 10:06） | 11/29／12/13 | |
 | FC の予約ブロック下に /coupon/ への文字リンク（glow は元からあり）（11/16、本番確認 11/17） | /coupon/ の表示とキーイベント（FC と glow はページタイトルで分ける） | 11/8〜11/14：/coupon/ 表示 18・キーイベント 6（reports/2026-11-15_weekly.md の気づき2） | 11/30／12/14 | |
+| /straight/ の FAQ に「ブリーチをした髪でも縮毛矯正はできますか？」を追加（FC・glow）（11/18 公開、本番確認は取り込み後） | Search Console の「泉大津 ブリーチ矯正」の表示・クリック・順位（FC。glow は出れば）。/straight/ の表示 | FC 直近28日（11/18 に読んだ値）：表示16・順位5.3・クリック0。glow：読んだ範囲では出ていない（IMPROVEMENT_LOG 2026-11-18 20:08・20:2x） | 12/2／12/16 | |
 | 表示速度（スマホ）の維持 | PageSpeed：性能点数・LCP・TBT（3サイト） | 11/17：FC 100／glow 97（TBT 200ms）／採用 99、LCP 0.9〜1.1秒（IMPROVEMENT_LOG 11/17） | 11/22（glow を再測定）／12/2（月次） | |
 | ブログ自動投稿（FC 水・土／glow 火・金） | 新記事の表示・クリック（Search Console ページ別の /salon-blog/・/journal/） | なし（記事ごとに公開日から4週間後に見る。まとめては月次の本レポートで） | 12/2（月次）から | |
 
