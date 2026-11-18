@@ -117,3 +117,9 @@
 - 既存記事改善: 古い記事 salon-erabi-checklist をFACTSと照合しずれなし。ctasに新記事を追加（dateは変更なし）。
 - 検証: sitemap 34URL／vite build／prerender／publish-gate すべて終了コード0。
 - 次回: 和泉・堺・高石の地域別（通勤以外の切り口）／美容学校の選び方と就職活動の時期（時期の事実をオーナーに確認）。金曜ではないため週次レビューなし。
+
+### 運用変更 2026-11-18（藤津さん指示）
+- 投稿日を 月・火・木・土・日 に変更。曜日テーマ（月 就職活動／火 教育・技術／木 働き方・待遇／土 体験・見学／日 地域・暮らし）とハッシュタグ（記事の `tags`）を導入。詳細は CONTENT_PLAN.md、手順は RUNBOOK.md。
+- 画像・動画：人物が写ってもOK・店内の雰囲気が実際と同じならOK（FACTS.md更新）。scripts/make-video.mjs を追加（写真から約15秒の動画）、記事の本文に video ブロックを追加。
+- コード：Post に tags、Blog.tsx で記事末尾に表示＋keywords。vite build／prerender／publish-gate OK。
+- 初回のタグ付き記事：hogosha-biyoushi-shuushoku-shinpai（日曜テーマ寄りの内容）。Instagram下書きは autopost/sns/ に置いた（未投稿）。

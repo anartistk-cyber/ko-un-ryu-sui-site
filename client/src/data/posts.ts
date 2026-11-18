@@ -1,4 +1,4 @@
-export type Block = { h: string } | { p: string } | { ul: string[] } | { img: string; alt: string };
+export type Block = { h: string } | { p: string } | { ul: string[] } | { img: string; alt: string } | { video: string; poster: string; alt: string };
 export type Post = {
   slug: string;
   title: string;
@@ -11,6 +11,7 @@ export type Post = {
   ctas: [string, string][];
   image?: string; // 例: /images/blog/<slug>.jpg
   imageAlt?: string;
+  tags?: string[]; // ハッシュタグ（#なし）。共通2＋曜日2＋記事固有1〜3
 };
 
 // 文中の [[...]] は「要確定」の仮置き。プレビューでは黄色表示、公開ゲートで残存を検出します。
@@ -22,6 +23,7 @@ export const posts: Post[] = [
     seoTitle: "美容師の就職先で保護者が気になること｜休み・給与・社会保険・勤務時間｜行雲流水 採用",
     seoDesc: "美容学生・高校生のお子さんが美容師を目指すとき、保護者の方が就職先で確認したい休み・給与の内訳・社会保険・勤務時間・禁煙の5点を、行雲流水の事実のみで整理します。",
     date: "2026-11-18", category: "就職活動",
+    tags: ["行雲流水", "美容師求人", "美容師の成長", "サロン見学", "泉大津", "保護者"],
     image: "/images/blog/hogosha-biyoushi-shuushoku-shinpai.jpg", imageAlt: "美容師を目指すお子さんの就職先、保護者が気になる5つのこと",
     excerpt: "「休みはあるの？」「お給料は？」保護者の方が就職先で気になる5つの点を、事実だけで整理しました。",
     body: [

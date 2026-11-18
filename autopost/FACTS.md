@@ -29,7 +29,7 @@
 - 受動喫煙対策：基本的に禁煙（喫煙は屋外）。
 ## 禁止
 - キャストの発言・体験談・口コミの創作、実在しない実績・数字・順位、他社比較での断定、「必ず」「絶対」「業界No.1」等の断定、給与の保証、未確認の通勤時間。
-- 個人名・顔写真（キャスト個人の写真は使わない。使ってよい写真は下記のみ）。
+- 個人名の記載は引き続き避ける。顔写真・人物の写真：2026-11-18 藤津さんの指示で「実際の人物が写っていてもOK、店内の雰囲気が実際と同じならOK」に変更（下記の写真以外も、サロンの雰囲気が実物と一致するものは可。実在しない個人・体験談に見せかけない）。
 ## 使ってよい写真（/images/ 配下）
 flow-cloud-exterior_9a36efba.jpg（FLOWCLOUD外観）／flow-cloud-interior_15a0524c.jpg（FLOWCLOUD店内）／glow-salon-interior_768ab430.jpg（glow店内）／glow-reception_7c41b63c.jpg（glow受付）／shampoo-booth_bce574f7.jpg（シャンプーブース）／training-salon_b2a51844.jpg（研修）／team-meeting_f47f2a94.jpg（ミーティング）／team-event_287a856c.jpg（チームイベント）／gallery-salonwork.jpg（サロンワーク）／gallery-exterior.jpg（夜の外観）
 - コタ（COTA）：FLOWCLOUD・glowともに全商品を取り扱い、店頭販売あり（2026-11-01 藤津さん確認）。縮毛矯正は「髪質改善ストレート」メニューで対応（両店）。

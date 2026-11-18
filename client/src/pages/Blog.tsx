@@ -66,6 +66,7 @@ export function BlogPost({ slug }: { slug: string }) {
     mainEntityOfPage: SITE + path,
     author: { "@type": "Organization", name: "株式会社 行雲流水" },
     publisher: { "@type": "Organization", name: "株式会社 行雲流水" },
+    ...(post.tags?.length ? { keywords: post.tags.join(", ") } : {}),
   };
   const toc = post.body.map((b, i) => ("h" in b ? { h: b.h, id: `sec-${i}` } : null)).filter((x): x is { h: string; id: string } => x !== null);
   const hIdx = post.body.map((b, i) => ("h" in b ? i : -1)).filter(i => i >= 0);
@@ -86,7 +87,7 @@ export function BlogPost({ slug }: { slug: string }) {
         )}
         <article className="blog-body">
           {post.body.map((b, i) => {
-            const node = "h" in b ? <h2 key={i} id={`sec-${i}`}>{b.h}</h2> : "p" in b ? <p key={i}>{rich(b.p)}</p> : "img" in b ? <img key={i} className="blog-photo" src={b.img} alt={b.alt} loading="lazy" /> : <ul key={i}>{b.ul.map(li => <li key={li}>{rich(li)}</li>)}</ul>;
+            const node = "h" in b ? <h2 key={i} id={`sec-${i}`}>{b.h}</h2> : "p" in b ? <p key={i}>{rich(b.p)}</p> : "img" in b ? <img key={i} className="blog-photo" src={b.img} alt={b.alt} loading="lazy" /> : "video" in b ? <video key={i} className="blog-photo" src={b.video} poster={b.poster} controls playsInline preload="none" aria-label={b.alt} /> : <ul key={i}>{b.ul.map(li => <li key={li}>{rich(li)}</li>)}</ul>;
             if (i !== midIdx) return node;
             return (
               <div key={i}>
@@ -100,6 +101,7 @@ export function BlogPost({ slug }: { slug: string }) {
             );
           })}
         </article>
+        {post.tags?.length ? <p className="blog-tags">{post.tags.map(t => <span key={t}>#{t}</span>)}</p> : null}
         <section className="blog-cta" onClick={trackClick}>
           <h2>次に確認したいこと</h2>
           <div>

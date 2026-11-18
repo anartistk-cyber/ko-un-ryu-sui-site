@@ -1285,3 +1285,6 @@ html.cv-off main>:is(.worry-section,.who-section,.statement-section,.vision-sect
   .match-cta-banner .match-cta-go { font-size: 17px; padding: 11px 19px 11px 21px; }
   .match-cta-banner .match-cta-note { font-size: 12px; }
 }
+
+.blog-tags { margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13px; }
+.blog-tags span { padding: 4px 12px; border-radius: 999px; background: var(--butter); color: var(--ink); font-weight: 700; }
