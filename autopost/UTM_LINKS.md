@@ -83,4 +83,4 @@
 ブログ記事の下に「公式アカウント・関連リンク」を自動で出す（glow・FLOWCLOUD は build.mjs の postLinks、採用は client/src/pages/Blog.tsx）。
 - 姉妹サイトへのリンクには `?utm_source=<glow_blog|fc_blog|recruit_blog>&utm_medium=internal&utm_campaign=<記事のslug>` を付ける。GA4 で「どの記事から、どのサイトへ」が分かる。
 - ホットペッパー（クーポン・サロンページ）・Instagram・Google口コミ・YouTube（FLOWCLOUD）は直リンク。
-- まだ載せていない：Threads・TikTok・glow の YouTube。アカウントのURLが未確認のため。藤津さんからURLをもらったら build.mjs の L に足して全記事に出す。
+- Threads（3アカウント）・FLOWCLOUD の TikTok を追加済み（2026-11-18）。まだ載せていない：glow・採用の TikTok／YouTube。アカウントのURLが未確認のため。藤津さんからURLをもらったら build.mjs の L に足して全記事に出す。
