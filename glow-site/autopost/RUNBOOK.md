@@ -33,3 +33,4 @@
 
 ## 3サイト連携（2026-11-18）
 毎回 `autopost/BLOG_NETWORK.md`（採用・FLOWCLOUD・glow の共通ルール）を読み、今週の軸・内部リンク・被り回避の決まりに従う。
+毎回、記事を書く前に autopost/BLOG_SYNERGY.md と autopost/BLOG_CALENDAR.md を読み、同日ペア・橋渡しリンク・重複回避・共通タグのルールに従う。公開したら BLOG_CALENDAR.md に1行追記する（書く前に git fetch origin main）。
