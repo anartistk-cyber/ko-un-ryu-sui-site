@@ -56,3 +56,16 @@
 - 2026-11-18 に藤津さんからURLを受領し追加：Threads（採用 @ko_un_ryu_sui.recruit／FLOWCLOUD @flowcloud_osaka／glow @glow_.osaka）、FLOWCLOUD TikTok（@flowcloud1101）、FLOWCLOUD YouTube（@flowcloud）。まだ無い：glow・採用のTikTok／YouTube（URLを推測で入れない。分かったら足す）。
 - 本文の中にも、話題に合う導線（HPBクーポン・メニュー・予約・LINE・関連記事）を1〜2か所入れる。「見学・応募」と「お客様のご予約」は混ぜない。
 - 週次（日曜）で、リンク別のクリック（GA4のcta・外部リンク・UTM `fc_blog`/`glow_blog`/`recruit_blog` 別）を見て、押されない置き方は文言・位置・並びを変える。毎週1つは工夫（ボタン文言／並び順／本文中の導線／動画の埋め込み／記事末尾の一言）を入れ、BLOG_CALENDAR の「学び」に「何を変えたか→数字」を1行で残す。取れない数字は「未取得」。
+## 8. リンクの活性化と毎週の工夫（2026-11-18 藤津さん指示）
+- 全記事の末尾に「公式アカウント・関連リンク」を自動で出している（HPBクーポン・サロンページ／Instagram／YouTube（FLOWCLOUD）／Googleの口コミ・マップ／姉妹サイト・採用へのUTM付きリンク。仕組みと流入元の付け方は autopost/UTM_LINKS.md「3サイトのブログ内リンク」）。リンク先は確認済みのURLだけ。
+- 未確認のため入れていない：Threads、TikTok、glow・採用のYouTube。URLを藤津さんに確認し、分かったら各 build.mjs の `L` と Blog.tsx に足す（推測でURLを入れない）。
+- 本文の中にも、話題に合う導線（HPBクーポン・メニュー・予約・LINE・関連記事）を1〜2か所入れる。「見学・応募」と「お客様のご予約」は混ぜない。
+- 週次（日曜）で、リンク別のクリック（GA4のcta・外部リンク・UTM `fc_blog`/`glow_blog`/`recruit_blog` 別）を見て、押されない置き方は文言・位置・並びを変える。毎週1つは工夫（ボタン文言／並び順／本文中の導線／動画の埋め込み／記事末尾の一言）を入れ、BLOG_CALENDAR の「学び」に「何を変えたか→数字」を1行で残す。取れない数字は「未取得」。
+
+## 8. 公式アカウント一覧（2026-11-18 藤津さん確認。記事末尾・Instagram下書き・動画の説明欄で使う）
+- 採用：Instagram @ko_un_ryu_sui.recruit／Threads https://www.threads.com/@ko_un_ryu_sui.recruit／LINE https://lin.ee/Z0JP8sH
+- FLOWCLOUD：Instagram @flowcloud_osaka／Threads https://www.threads.com/@flowcloud_osaka／TikTok https://www.tiktok.com/@flowcloud1101／YouTube https://www.youtube.com/@flowcloud
+- glow：Instagram @glow_.osaka／Threads https://www.threads.com/@glow_.osaka（glow の YouTube・TikTok は未確認のため載せない）
+- 採用のYouTube・TikTokは未確認。FLOWCLOUDのものを「サロンの様子」として紹介するのみ。
+- Threads・TikTok への投稿は、Instagram と同じ扱い（OK不要）。ログイン済みの環境が使える回に、記事の要点を短い文で投稿する。
+
