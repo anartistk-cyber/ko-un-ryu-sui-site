@@ -1288,3 +1288,8 @@ html.cv-off main>:is(.worry-section,.who-section,.statement-section,.vision-sect
 
 .blog-tags { margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13px; }
 .blog-tags span { padding: 4px 12px; border-radius: 999px; background: var(--butter); color: var(--ink); font-weight: 700; }
+
+.blog-links { margin: 32px 0 0; }
+.blog-links h2 { font-size: 18px; margin: 0 0 12px; }
+.blog-links ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.blog-links a { display: block; padding: 12px 16px; border-radius: 16px; background: var(--pink2, #fff6f8); color: var(--ink); font-weight: 700; text-decoration: none; }
