@@ -6,6 +6,7 @@
 | 2026-11-18 | 水 | FLOWCLOUD | 髪のお悩み解決（細毛感・ハリコシ） | hari-koshi-hosoi-ke-40-50 | 泉大津 40代 髪 ハリコシ | #髪のお悩み #40代ヘアケア | — |
 | 2026-11-18 | 水 | 採用 | 就職活動／保護者（臨時回） | hogosha-biyoushi-shuushoku-shinpai | 美容師 就職 保護者 | #行雲流水 #保護者 | FLOWCLOUD の40〜50代記事から橋渡し候補 |
 | 2026-11-19 | 木 | 採用 | 働き方・待遇（パート美容師の時給） | part-biyoushi-jikyu-minikata | 美容師 パート 時給 求人 見方 | #行雲流水 #働き方 #パート美容師 | 復職記事(fukushoku-salon-erabi)・/jobs/part |
+| 2026-11-19 | 木 | glow | メニュー・相談のしかた（前髪カット） | maegami-cut-soudan-young | 泉大津 前髪カット | #前髪カット #glow泉大津 | — |
 
 ## 要確認（食い違い・未確認の事実）
 （なし）

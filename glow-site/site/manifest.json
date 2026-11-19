@@ -2,31 +2,31 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "f2f72da92844bf70008175b375fe92586bfcb85a2ec18e799a50830943935dff"
+   "sha256": "730e54201be58b1c2c20851d90625ac948f51ecdef2d5e64578eb21a91b85eed"
   },
   {
    "path": "cast/index.html",
-   "sha256": "18be8a874aced14e405ba41ac0bf6f515011fae42107d5aa6cdc8308bee75eb9"
+   "sha256": "cd06d95456428aaaf58b8826b6bad678fdcd0f3a97ddbaa238e71a2e0c06e69e"
   },
   {
    "path": "color/index.html",
-   "sha256": "c120182464b3b3903965a578187a77f0181572305fa4390c1b4edcc792d59577"
+   "sha256": "3629b770c55a84f53fc82d581303cf25a6b53722c6c02c22820f872045f3b8e5"
   },
   {
    "path": "cota-products/index.html",
-   "sha256": "4bfc5dec551aa7f89a01db3057bcc7ccb12ad85b9d41866e7731ef136ba7ede6"
+   "sha256": "87a4881405b75dd502b2f5f71970f9607ddc61bd7767ca9bf6a558e8c51bc137"
   },
   {
    "path": "coupon/index.html",
-   "sha256": "dc0521347df65f69435645a7c7f9f5844d48f373af493b78f29b6a43d6e5746f"
+   "sha256": "32b7427ba5daf5c1cebd18b6a5ed0c4061642b5481d08799542e972936e7027e"
   },
   {
    "path": "cut/index.html",
-   "sha256": "622e048a66a22e9e0e6a9ac4c8931a5db024e078a62ccac9c341bed0c7e34773"
+   "sha256": "7bcfbfb4cda8fac366bf96016dc0827f319ef3fbfde204aec228d09e3475c70d"
   },
   {
    "path": "faq/index.html",
-   "sha256": "873f5c41be1c1384416062bbf7a53c5cf494b2c9abb604b0290b7e623279dc1f"
+   "sha256": "a7efda127568d3ea913a36ac8821f11f27718db42c1d7f213a578f6c5a2cff4d"
   },
   {
    "path": "favicon.ico",
@@ -34,7 +34,7 @@
   },
   {
    "path": "first/index.html",
-   "sha256": "35311107770be3ce4e83f0fc6d75452c623b1f395ec670182c35fee1c6d385f4"
+   "sha256": "8a5183781df122e51cb28ed63f91d135ff193a43bbba7f6f8b0065d4a2b6db57"
   },
   {
    "path": "gl/apple-touch-icon.png",
@@ -55,6 +55,10 @@
   {
    "path": "gl/img/card-fuyu-kansou-pasa-young.jpg",
    "sha256": "22e4d5c21f09145854f5b82d64dd58e78dc272ef4de36e3163107a6abeb33d78"
+  },
+  {
+   "path": "gl/img/card-maegami-cut-soudan-young.jpg",
+   "sha256": "a142a687a016af4d05d52e80688e42991c63a0585213e3921a773f74549cdc0f"
   },
   {
    "path": "gl/img/cast-ayuna.jpg",
@@ -290,107 +294,111 @@
   },
   {
    "path": "gl/style.css",
-   "sha256": "1aed9314b66d7123fb761b54c03d65a66cf3e68f0df5efc388ea2e912ec7eddf"
+   "sha256": "1397b5e5b4faf24c703af6226f908ed74313fde427837b49caa5fc795e286533"
   },
   {
    "path": "hair-donation/index.html",
-   "sha256": "62024382652da6f2cfaa29be315191d49a21ebe0df882be85962183e2f4f6760"
+   "sha256": "6f6f498ed96e981e7983e57da3d2b3d6dc7a4a4dcf726f1966f4db607b7b8c77"
   },
   {
    "path": "hair-quality/index.html",
-   "sha256": "5788d0f8edf6cbf46f67f3f7f6bdf9d6a7ddca0c32f5fb40ae208a1929cba137"
+   "sha256": "cb1bae819a49eed227131f5719879dab0a701e083a38153d7647e34655f662f8"
   },
   {
    "path": "headspa/index.html",
-   "sha256": "0274441ccd020c3f8d203cba5938d4087c078c6fc652b5cdb95904c943f01006"
+   "sha256": "03c7f348be5c500d4fea1cdadf399abee0f644fa59fb3447c1a3719bf78048da"
   },
   {
    "path": "index.html",
-   "sha256": "0591fc089b519725a7f4d1c7f9017f224ab15f9170b3f770a53a88fca89d585a"
+   "sha256": "6eb04036dc67fdf102cc0e7b4a5e7bb1e7572f3a748a4486062946fad5d82e54"
   },
   {
    "path": "journal/access-parking/index.html",
-   "sha256": "4032dc7f781364153aca85e426fa55943b60c216ef1570b4fc95e3c470bf8959"
+   "sha256": "4181c27ed6cb91a94000bc09266362620e015dc316102ce1200c0d2ad6978972"
   },
   {
    "path": "journal/color-first-counseling-glow/index.html",
-   "sha256": "66ee6df5094da649d72cac9e21f234b7e3527e900c7312e8027ca124b22665ae"
+   "sha256": "ee80b3ae5de572f7d36f72db36e8780536b9d4153cec85ff41ec7dc1ab988de3"
   },
   {
    "path": "journal/first-perm-counseling-glow/index.html",
-   "sha256": "2814fba7032e46a7fb00645718f7aa92b5acf1f60e923c0ccce12794890e478f"
+   "sha256": "38bae1968646028a0b1d64dfcc2b364733c19f3d32fc818c1a4c6c1d8b1031d9"
   },
   {
    "path": "journal/first-salon-counseling/index.html",
-   "sha256": "1edd2722d306b54b17ee250aea75218d4f8ae72ccaadc7cf442a567ff6134a05"
+   "sha256": "32d477c3bfa88ae13e5aba1f2b42fab0592cacd516f13e2167f36f7e8504b08e"
   },
   {
    "path": "journal/fuyu-kansou-pasa-young/index.html",
-   "sha256": "326d96747f71261df98d1a81c3c5d781ae5757fb81dbe2dde73b8a1c4cbfb583"
+   "sha256": "f1daa62dd5e7e1e4b3532dc01107c36c5f68a38bd7c4c6e53da8cb2b318251b8"
   },
   {
    "path": "journal/hair-quality-erabikata-young/index.html",
-   "sha256": "823698e3b02834f25cc7625c73b3e7453cdee0bcc51f9dc053c83ad31248584f"
+   "sha256": "3c653d6b34c23d79276366b253c960ba561b4645804cf4b5092c4e5b66c52b37"
   },
   {
    "path": "journal/hair-set-seijinshiki-glow/index.html",
-   "sha256": "1718a6403ebd75756c73db8b0c48c073765015f9aea71a98caab9669797758c4"
+   "sha256": "8c4d916680f2dd8da12e2af473d27ec55799a4d5e7b5b043c4e8f92e64d5f11d"
   },
   {
    "path": "journal/head-spa-first-time-young/index.html",
-   "sha256": "e56ed75249554b1943eb4341f30542e9744a73dd3e702341c4ac42b7189e9587"
+   "sha256": "009cfea8bee17fd5f257f75c74a15dc0dd04c7959afbca2a64d9d67f7d18b531"
   },
   {
    "path": "journal/highlight-top-only-young/index.html",
-   "sha256": "0e7aa029de9094184fc0796b3ea3d68aaad3f8b4c8344e8087483d16c55007d3"
+   "sha256": "8444a3606328143fd599c2fbc335cc8984fe7fb9f6482ed452f127afe80d2d32"
   },
   {
    "path": "journal/home-hair-care-cota-store-glow/index.html",
-   "sha256": "936dc5d9e0e5117f5148c8d1cf41d87d31b2b5adee0214b1617ac3f021b43853"
+   "sha256": "d7e60c86a7dedfb4b0d9a704fe75f9112730b2dbc82b2cbfc2d7d6c44bf1c9d3"
   },
   {
    "path": "journal/index.html",
-   "sha256": "9012219e3b52379a715efb38bacc4975e92fc6d5a54fbeee73d3a48b6170f349"
+   "sha256": "eef23e36a8f9c6db55b4484b5e5c283f52bff51dbe858f20fa9ecb8ae30d4bd5"
   },
   {
    "path": "journal/kuse-hiroga-straight-young/index.html",
-   "sha256": "7425d34b79d9f3474b9f13b6d90df348fb9968882605c718e08357d69d7e50a0"
+   "sha256": "8f32e9bc908a0f91d3858b9e8d219f296ec9b457efd1f261d5583a0d76fa3101"
+  },
+  {
+   "path": "journal/maegami-cut-soudan-young/index.html",
+   "sha256": "8bf31a8d2452c3fb1e5350c8a09e34a0824956f26915cf4af12f0cf1eb96da72"
   },
   {
    "path": "journal/nenmatsu-nenshi-2026-2027/index.html",
-   "sha256": "4575125ee8a41e0b35cbf6961f0e83442031268dacc994896c4c5bf34eb80f59"
+   "sha256": "c915aa2e6cb1be816717c5f19c7bed5eedbd744d1749f62d96333eeda504d438"
   },
   {
    "path": "journal/serum-color-fuyu-young/index.html",
-   "sha256": "ff05e106a5d2794ac632a8130511b87546b7db6f6073e6e2094c8b484bc8ce78"
+   "sha256": "1221e0f2eed113fc72344d4ffcc19f0b6931244b11132306929dd8f6cdce9393"
   },
   {
    "path": "journal/short-layer-asa-raku/index.html",
-   "sha256": "aaca2ff0182828ad43df9c80696c75cf222b9432d1868f6fdcea5a7ece85d48c"
+   "sha256": "d6e8c8b440c4a4d40c80c8eeb64bd266de53eb8bd11f396e3d746d331edf7ca1"
   },
   {
    "path": "journal/sugao-care-young/index.html",
-   "sha256": "29dad040c236a516088f032e8c5e8cb21555388a857e3fbc222b3dc7152cbe56"
+   "sha256": "01c1f0804a9e8ee7dc391d7956a3cca72f9fe5cfa3003836030ed5700779cd36"
   },
   {
    "path": "llms-full.txt",
-   "sha256": "300ad4335c58c8a22e6f174a56c813a44cc221ce77e69fdf4ee4ba06cdae21e6"
+   "sha256": "374be7d7336929077b782f0dc71dc816d1a7d2d0a99171fbe78528f728efb30a"
   },
   {
    "path": "llms.txt",
-   "sha256": "a0e674d590fcd5e88a1d28377b97f1c93d58c377ab53a5b2002fc792c53df3b2"
+   "sha256": "de23840a2677c76166c9fc7273443764b36aa37a8489af222dc2d68a51670482"
   },
   {
    "path": "men/index.html",
-   "sha256": "caba7033865b3f91117d5d89695528d7bcea8a4940e54abbd976085d8777cf79"
+   "sha256": "57780754c1d2201b84ad12018c64143d98ba6b2b044870d24b3926ead39e03b6"
   },
   {
    "path": "menu/index.html",
-   "sha256": "84e083293cba996313bf2569e5472dca53ffb3112bc3b53984536b2ae9f93016"
+   "sha256": "d5cb53cd52fdb2a326b134ef6fbcbb05929f37710c0a59888d76545bc2a81cd8"
   },
   {
    "path": "privacy/index.html",
-   "sha256": "cd814f35f734b42c7412ee24fd5ce5f0a2d3ca8c5e394dbcc2160654c4421fed"
+   "sha256": "0dba662393d24066871ce899c33e0da8328971c67b1808efb007d7f36ad3dc14"
   },
   {
    "path": "robots.txt",
@@ -398,27 +406,27 @@
   },
   {
    "path": "short-perm/index.html",
-   "sha256": "9f5051677553830756531246ef106b047100bcdad63007ba7ac183739fcbfe5e"
+   "sha256": "ab7da1b101e83fea45da44a190358c7ec46a3eb44261a97f9a5ffa518ddb670f"
   },
   {
    "path": "sitemap-gl.xml",
-   "sha256": "eeb474f6b374f14fa5d8da5d57c15f0b12fa4a56d5d20c9580d7de1d2312ef33"
+   "sha256": "009e8d91fa220fbfa90dcaa2986511ba1bf05077cf5097d9550353a05f30ec74"
   },
   {
    "path": "straight/index.html",
-   "sha256": "de8c56e5528c32e6ae3497dc81e0404a47e5122c319cfa586f752d001257d83e"
+   "sha256": "aa8d16c21e1a164219eddb9b5ed83eb8a1c2b8da24cd8d6074f15f585e53b0cf"
   },
   {
    "path": "style/index.html",
-   "sha256": "8a2ed919f563ebfa7e5ea3cec53bcc2357fab5eafc3613ebee172805f1d3fc67"
+   "sha256": "cfaf71aee4300e9f03f7ebcea34bc97c0a157b328c2a8ea781a3c1254ee06ee4"
   },
   {
    "path": "voice/index.html",
-   "sha256": "ba98e553b06e797db794a313bd117cf471b2798277cb84b05608c064822466f4"
+   "sha256": "86eb9dc7f635049232a270a2a45ef2dd2637498ba42493c260fb7502a3cb2d25"
   },
   {
    "path": "young/index.html",
-   "sha256": "1ebe1da8889978b17b5070c611632ae36cf0c8a4909ba4fee08b4d513e80269c"
+   "sha256": "0b903dea06bf10a508e62085893ca2fcc0440f375e3c526b574180a327236b8d"
   }
  ]
 }
