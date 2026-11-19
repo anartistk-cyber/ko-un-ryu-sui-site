@@ -123,3 +123,16 @@
 - 画像・動画：人物が写ってもOK・店内の雰囲気が実際と同じならOK（FACTS.md更新）。scripts/make-video.mjs を追加（写真から約15秒の動画）、記事の本文に video ブロックを追加。
 - コード：Post に tags、Blog.tsx で記事末尾に表示＋keywords。vite build／prerender／publish-gate OK。
 - 初回のタグ付き記事：hogosha-biyoushi-shuushoku-shinpai（日曜テーマ寄りの内容）。Instagram下書きは autopost/sns/ に置いた（未投稿）。
+
+## 実行ログ 2026-11-19（木・自動実行）
+- 曜日／テーマ：木＝働き方・待遇／パート美容師の時給の見方。
+- 準備: clone済み（HEAD detached→main・origin/mainと同期）。add_repo/register_repo_rootのツールは無く、スコープ済みのためそのまま作業。`npm ci` を実施。
+- 調査: 「美容師 パート 時給 求人 見方 泉大津」上位は求人媒体（Job-medley/エン/Indeed/タウンワーク）中心。ko-un-ryu-sui.com は上位に未表示（Job-medleyにFLOWCLOUDのパート求人は表示）。時給の読み方（区分・交通費・勤務条件）を整理した記事は薄い。
+- 記事追加: part-biyoushi-jikyu-minikata ／ 狙い: 美容師 パート 時給 見方 復職 ／ 切り口: 時給の区分・交通費・勤務日数と時間帯・聞いておきたいことの4点。事実はFACTS.mdのみ（パートJr1,600円〜／スタイリスト1,800円〜、パート交通費は通勤圏外の方のみ上限10,000円）。パートの有給・社会保険・勤務日数は未確認のため「個別にご案内・要相談」とし、時給からの月収換算もしていない。
+- タグ: 行雲流水／美容師求人／働き方／パート美容師／時給／泉大津美容師／復職（7個）。
+- 画像・動画: バナー（make-banner）＋本文写真1枚（glow店内）＋動画1本（FLOWCLOUD店内・glow店内・シャンプーブローの写真から約15秒・241KB・AI生成なし）。
+- Instagram下書き: autopost/sns/part-biyoushi-jikyu-minikata.md（未投稿）。
+- カバー済みテーマに追加: part-biyoushi-jikyu-minikata（給与・待遇／パート）
+- 既存記事改善: 11/18に実施済みのため今回は見送り。日曜ではないため週次レビューなし。
+- 検証: sitemap 35URL／vite build／prerender／publish-gate すべて終了コード0。
+- 次回: 金曜は週次レビューのみ。土曜は体験・見学、日曜は地域・暮らし（和泉・堺・高石の地域別）。
