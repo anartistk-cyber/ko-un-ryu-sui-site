@@ -378,7 +378,15 @@
   },
   {
    "path": "sitemap.xml",
-   "sha256": "e09b4e2994fe190759732f428303ef4d55a87724c936e756228a32477cc5fdd0"
+   "sha256": "e51db41aee24c89cff1fce059568336b878260006c9562003e36f1660ed19f61"
+  },
+  {
+   "path": "type-shindan/index.html",
+   "sha256": "6dc00325d8dcf1d71f84df0bb9b80044e8a593182666d40ef6e3960f69caf666"
+  },
+  {
+   "path": "type-shindan/ogp.png",
+   "sha256": "c829cbe392da03c7f72132193d9efcacfa09878cc62aa5fc8c7396f0778f3a0a"
   },
   {
    "path": "visit.html",

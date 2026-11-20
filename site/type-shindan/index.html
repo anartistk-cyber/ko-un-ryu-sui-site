@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>美容師タイプ診断｜あなたはどのジョブ？｜行雲流水</title>
+<meta name="description" content="18問・約2分。仕事で大事にしていることから、8つのジョブ（美容師タイプ）と今の働き方の充実度がわかる無料診断です。結果カードはLINEで受け取れます。">
+<link rel="canonical" href="https://ko-un-ryu-sui.com/type-shindan/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="美容師タイプ診断｜あなたはどのジョブ？">
+<meta property="og:description" content="18問・約2分。8つのジョブからあなたの美容師タイプがわかります。">
+<meta property="og:url" content="https://ko-un-ryu-sui.com/type-shindan/">
+<meta property="og:image" content="https://ko-un-ryu-sui.com/type-shindan/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VJVHXEG25K"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VJVHXEG25K',(function(){try{var s=location.search,l=localStorage;if(/[?&]krs_internal=1/.test(s))l.setItem("krs_internal","1");else if(/[?&]krs_internal=0/.test(s))l.removeItem("krs_internal");if(l.getItem("krs_internal"))return{traffic_type:"internal"}}catch(e){}return{}})());</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<style>
+/* 設計メモ：スマホ1カラム。入口 → 1問1画面 → 結果。雲と水の淡い青に、藍の文字、山吹の差し色。 */
+:root{
+  --bg:#eaf1f4;
+  --surface:#ffffff;
+  --ink:#15243b;
+  --muted:#5a6b80;
+  --line:#cfdbe3;
+  --accent:#e9a514;
+  --accent-ink:#3a2a00;
+  --deep:#1d4e78;
+  --line-green:#06c755;
+  --display:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
+  --body:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1a28;--surface:#18273a;--ink:#eaf1f7;--muted:#9fb0c3;--line:#2c3f56;
+    --accent:#f2b736;--accent-ink:#2a1e00;--deep:#8fc3ee;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1a28;--surface:#18273a;--ink:#eaf1f7;--muted:#9fb0c3;--line:#2c3f56;
+  --accent:#f2b736;--accent-ink:#2a1e00;--deep:#8fc3ee;color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75;-webkit-text-size-adjust:100%}
+.wrap{max-width:480px;margin:0 auto;padding:20px 16px 40px;display:flex;flex-direction:column;gap:20px}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;line-height:1.35}
+p{margin:0}
+.brandbar{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted)}
+.tag{border:1px solid var(--line);border-radius:999px;padding:2px 10px;background:var(--surface)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px 18px;display:flex;flex-direction:column;gap:16px}
+.hero h1{font-size:34px;font-weight:900;letter-spacing:.02em}
+.hero h1 span{background:linear-gradient(transparent 62%,var(--accent) 62%);padding:0 2px}
+.lead{color:var(--muted);font-size:15px}
+.kicker{font-family:"DotGothic16",var(--display);color:var(--deep);font-size:16px;letter-spacing:.04em}
+.types{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.typechip{border:2px solid var(--ink);border-radius:8px;background:var(--bg);padding:10px 6px 8px;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;font-family:"DotGothic16",var(--display);font-size:13px;line-height:1.3}
+.typechip svg{width:84px;height:auto}
+.typechip small{font-size:11px;color:var(--muted)}
+.btn{appearance:none;border:0;border-radius:14px;padding:16px 18px;font-family:var(--display);font-weight:900;font-size:18px;cursor:pointer;width:100%;color:var(--accent-ink);background:var(--accent);box-shadow:0 4px 0 rgba(0,0,0,.18)}
+.btn:active{transform:translateY(2px);box-shadow:0 2px 0 rgba(0,0,0,.18)}
+.btn.line{background:var(--line-green);color:#fff;display:block;text-align:center;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--deep);box-shadow:none;border:1px solid var(--line);font-size:15px;padding:12px}
+.btn:focus-visible,.opt:focus-visible{outline:3px solid var(--deep);outline-offset:3px}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px}
+.steps li{display:flex;gap:10px;align-items:baseline}
+.steps b{font-family:var(--display);color:var(--deep);flex:none}
+.note{font-size:12px;color:var(--muted);line-height:1.6}
+/* 質問 */
+.progress{height:8px;background:var(--line);border-radius:99px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .25s}
+.qmeta{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.q{font-size:22px;font-weight:900}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opts.many{display:grid;grid-template-columns:1fr 1fr;gap:8px}.opts.many .opt{padding:12px 10px;font-size:14px}
+.opt{appearance:none;text-align:left;font:inherit;font-weight:500;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:14px 16px;cursor:pointer;line-height:1.5}
+.opt:hover{border-color:var(--deep)}
+/* 結果 */
+.resulthead{display:flex;gap:14px;align-items:center}
+.resulthead svg{width:112px;height:auto;flex:none}
+.job{font-family:"DotGothic16",var(--display);font-size:13px;color:var(--muted)}
+.resulthead h2{font-size:24px;font-weight:900}
+.catch{font-family:var(--display);font-weight:700;color:var(--deep)}
+.list{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:4px}
+h3{font-size:16px;font-weight:700;color:var(--deep)}
+.map{position:relative;aspect-ratio:1/1;max-width:240px;width:100%;margin:6px auto 22px;border:1px solid var(--line);border-radius:14px;background:
+  linear-gradient(var(--line),var(--line)) 50% 0/1px 100% no-repeat,
+  linear-gradient(var(--line),var(--line)) 0 50%/100% 1px no-repeat,var(--bg)}
+.map .dot{position:absolute;width:20px;height:20px;border-radius:50%;background:var(--accent);border:3px solid var(--ink);transform:translate(-50%,-50%)}
+.map span{position:absolute;font-size:11px;color:var(--muted);white-space:nowrap}
+.map .t{top:-20px;left:50%;transform:translateX(-50%)}
+.map .b{bottom:-20px;left:50%;transform:translateX(-50%)}
+.map .l{left:6px;top:50%;transform:translateY(-130%)}
+.map .r{right:6px;top:50%;transform:translateY(-130%)}
+.gauge{display:flex;align-items:center;gap:12px}
+.gauge .bar{flex:1;height:18px;border-radius:99px;background:var(--line);overflow:hidden}
+.gauge .bar i{display:block;height:100%;background:var(--deep);border-radius:99px}
+.gauge strong{font-family:var(--display);font-size:28px;font-variant-numeric:tabular-nums;line-height:1}
+.linebox{border:2px dashed var(--line-green);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:8px;font-size:14px}
+.linebox code{font-family:var(--body);font-weight:700;background:var(--bg);border-radius:8px;padding:8px 10px;display:block}
+
+.px{image-rendering:pixelated;image-rendering:crisp-edges;display:block}
+.stage{border:3px solid var(--ink);border-radius:10px;overflow:hidden;background:linear-gradient(#bfe3f5 0 62%,transparent 62%),repeating-conic-gradient(#d2ae76 0 25%,#c09a60 0 50%) 0 0/16px 16px}
+.party{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:6px 4px 2px}
+.party img{width:100%;height:auto}
+.hero-stage{display:flex;justify-content:center;padding:10px 0 4px}
+.hero-stage img{width:200px;height:auto}
+.rtitle{display:flex;flex-direction:column;gap:2px;text-align:center}
+.rtitle h2{font-size:26px;font-weight:900}
+.job{font-family:"DotGothic16",var(--display);font-size:15px;color:var(--deep)}
+.mix{font-family:var(--display);font-weight:900;font-size:18px;line-height:1.5}
+.axes{display:flex;flex-direction:column;gap:10px}
+.axis{display:grid;grid-template-columns:4.5em 1fr 4.5em;align-items:center;gap:8px;font-family:"DotGothic16",var(--display);font-size:13px}
+.axis .r{text-align:right}
+.axis .track{position:relative;height:14px;border:2px solid var(--ink);background:var(--bg)}
+.axis .track::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--line)}
+.axis .track i{position:absolute;top:-4px;width:12px;height:18px;background:var(--accent);border:2px solid var(--ink);transform:translateX(-50%);z-index:1}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion:reduce){.progress i{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brandbar"><a href="/" style="color:inherit;text-decoration:none">行雲流水｜FLOWCLOUD・glow</a><span class="tag">無料・約2分</span></div>
+
+  <!-- 入口 -->
+  <section id="intro" class="card hero">
+    <p class="kicker">18問・約2分。あなたはどのジョブ？</p>
+    <h1><span>美容師タイプ診断</span></h1>
+    <p class="lead">仕事で大事にしていることから、8つのジョブ（美容師タイプ）からあなたに近いものと、今の働き方の充実度がわかります。</p>
+    <div class="stage"><div class="party" id="party"></div></div>
+    <button class="btn" id="startBtn" type="button">診断をはじめる ▶</button>
+    <ol class="steps">
+      <li><b>1</b><span>質問に答える（タップするだけ）</span></li>
+      <li><b>2</b><span>タイプと働き方の充実度がその場でわかる</span></li>
+      <li><b>3</b><span>LINEで結果カードと、タイプ別の働き方ヒントを受け取る</span></li>
+    </ol>
+    <p class="note">お名前はうかがいません。回答は、個人を特定しない形でアクセス解析に記録し、内容の改善に使います（<a href="/privacy" style="color:inherit">プライバシーポリシー</a>）。<br>運営：株式会社行雲流水（大阪・泉大津の美容室 FLOWCLOUD／glow）</p>
+  </section>
+
+  <!-- 質問 -->
+  <section id="quiz" class="card" hidden>
+    <div class="qmeta"><span id="qsec"></span><span id="qnum"></span></div>
+    <div class="progress"><i id="bar" style="width:0%"></i></div>
+    <h2 class="q" id="qtext"></h2>
+    <div class="opts" id="opts"></div>
+    <button class="btn ghost" id="backBtn" type="button">ひとつ前に戻る</button>
+  </section>
+
+  <!-- 結果 -->
+  <section id="result" hidden style="display:flex;flex-direction:column;gap:20px">
+    <div class="card">
+      <p class="kicker">あなたの美容師タイプは</p>
+      <div class="stage hero-stage"><img class="px" id="rImg" alt="" width="40" height="40"></div>
+      <div class="rtitle"><p class="job" id="rJob"></p><h2 id="rName"></h2><p class="catch" id="rCatch"></p></div>
+      <p id="rDesc"></p>
+      <div class="axes">
+        <div class="axis"><span>技術</span><div class="track"><i id="ax"></i></div><span class="r">人</span></div>
+        <div class="axis"><span>挑戦</span><div class="track"><i id="ay"></i></div><span class="r">じっくり</span></div>
+        <div class="axis"><span>感性</span><div class="track"><i id="az"></i></div><span class="r">理論</span></div>
+      </div>
+      <h3>職種と働き方の目安</h3><p class="mix" id="rMix"></p><p id="rEmp"></p>
+      <h3>強み</h3><ul class="list" id="rStrong"></ul>
+      <h3>力を出しやすい働き方</h3><ul class="list" id="rFit"></ul>
+      <h3>気をつけたいこと</h3><p id="rCare"></p>
+    </div>
+    <div class="card">
+      <h3>今の働き方の充実度</h3>
+      <div class="gauge"><div class="bar"><i id="gBar"></i></div><strong id="gNum"></strong></div>
+      <p id="gText"></p>
+      <p class="note">休み・成長・評価・お客様との時間の4問から出した目安です。</p>
+    </div>
+    <div class="card">
+      <h3>結果カードとタイプ別ヒントをLINEで受け取る</h3>
+      <p class="lead">行雲流水の公式LINEに、下の合言葉を送ると届きます。</p>
+      <a class="btn line" id="lineBtn" href="https://line.me/R/ti/p/%40512rmwnk" target="_blank" rel="noopener">LINEで受け取る ▶</a>
+      <div class="linebox" id="lineBox">
+        <span>LINEが開くと、下の合言葉が入力済みになっています。そのまま送信すると、結果カードが届きます。</span>
+        <code id="lineMsg"></code>
+        <span class="note">うまく入力されないときは、合言葉をそのまま打って送ってください。</span>
+      </div>
+      <button class="btn ghost" id="retryBtn" type="button">もう一度診断する</button>
+    </div>
+  </section>
+</div>
+
+<script>
+const IMG={"TCF": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAC8ElEQVR42u2YQWgTURCG/w09NlRDsyDBYOgmYOvBQ83BRAQDEWywBIp4sF6CIHjoqYggSKBQtCcPgofmUkSCCMWiB4UUhMRDQQmkGqwphdgobmIabe7rYfOSfdndNG93k4biQMjuzLzstzNv5r084L8ATiEgOYWAZGTsUK/BAMDnmiEqqVzIcCy/wfUJDFull2CF6wmgUwhISjAzcABg6zWcWbH1Ai69sj5YgCo49xoF6XPNwGgVc71Ia3plHcGbl1S+RuYiZ6Q6lSKmHEwvxIeqKl0naO4wC6CbyDI16r1qoW8rDwHuGrBcyHAQ0Ezx6+Afyu4dH9Mc9+3LtqY+kh7RhRNTDvAhGZJ5DraDmZVIegQyULUZCGUEbWbgcrsV1T356OmUNn/cQ2VCTDmo9Bqq4k4R9N9baF5vLN7X1VFj4h5VhVsCmNutIPbkacvomwbvDUJ8M08P0tAn7txGLHGu5eNeA4pXKVDmIiFvFoHcCxdP0enlvUHtvqenb0RLTDmacFoRZF7qyGAqeoxCxiqLgw9VNZu++Q3rhz35Ye2pJROf6Bt+OH9cd1VRptb0WuwUApIe1Pu7CQDAxYcx7fROLVEtZd5fw9LGMc3VxHAEy4UMx09B+vx4WmUbv3Wh4bOlsk3MvVKk9+AdjqkUlwsZbmJOXl20QLXASJTISnHQNsz0HCQP1ANtB+tmB2MZoPLtN+NfZd0Vel5u1h4BAM48aPmy7AmHzMA9u/4RZ08PN3X2aBHicyflZ48Wsb/qBvHN5uu4kQxIfYmgltijRep+p1TB6CD8aeqVmAIMzybBTy6r9PurbuS2f6j73+QywrPJwz362ClVAP8nDJNrk2K6UcsVTNs8rtEWrM4K0pcUkwdl83Vk83UKTnlNbKxwlp3NOIWA5Bvz6tprv39BrP3VhWvfRQ9cFXeKquVFQqIFAJ2iemT6oCVnM9dOfKd0L36eBABo6VmL5OhHUOdQ6XLj+62RLZbVKQ4zVuw7Fv9/AcR+i/4CK/IAAAAASUVORK5CYII=", "TCL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAADGUlEQVR42u2YX0hTURzHv7ckInuY0AZtKuV2RyL552VEEzYYlKawB0mi9VTiyx6G0b+XSOilMpQefBHybRmGhFBIhTCFRfiQVsSCzRlt18gtlMLe6vaw3bOdu3Pd7u4dkez3snu+54x99vt7NqBqVata1f4/M9qcYilaKbZHLyAJwGhzimafiwJiaaVajR5wZp8rswiCAJh9LrIm+2UYp0coSwVYDy4AAFKxMFdRQCWw5o528hxZXtEFlNMUUgC1oSjCoWkMJ4FXF/rROHSWOv9l7Am1v+3mKdBikKpzMBULcwhC5C1mog0naSC55e/XhqIAgKiwTuCMNqeoBMppKYyt1Tgsid/UntCwFwBgsDZRQPn7BmsT8Z7R5hSfRcfRy/vJOh9WUxUbrE3YtubWK+cd5Ln90RIAIDzhozQDIyK9vF+U4Lpn2jDXBwJZtgcPnGjA55vncqLdCxPfiY3nV+nDDP3I7cf49SZB5Z/kObkHdWnUAGDiO1Xp8i/cPdPGzMWyASnvaXxvKhbm5vreMSta8yTB600AKAxt1oiePYeTdYozmuVBTssUUYJauP4QAOC6e4kd9p4RUrH37t+h9q5duUF5UvOo+/jAq+o9LYHZguJYWg4BABwd7oIwawpxKhbmWgKZC0Ex0JbArOo5rEsOSh+oBFoumC6A+QnuGTue0c7Qeen5EwcAzA/lrmL5I04KLwAsLYfg6HCLuuSg0eYUjw3WwdJcT7RJzyguzl+mzkmaEEnC0lwPIZLEp4lNAsSy/FzU3mZkNukZpdZrQlrx7K14gFr7Wwcx/n5C/yu/FvO3DpJnOZxmwEXvAKbsXQX6z6eN+LC6XqBP2buw6B2gNBZURT24JqSRdrzFwf37dgyvNN7kJh95NVrai6knU5lSBUt21HKImX+mnhGqijOQEFltS7dGbbQ5RSGSvTJ7cnAS6JqQBtlnABTrjxx0+l1st/KK+1vfv2Fj60dZzfqfV3HFR52StwBgJ6/uGg9yeuRf/+EEpU1/bQAAsHS1ebj7Pajw19rp7OsLNS2lUiE+pbJ3vlRz/i81foSKIeCl/QAAAABJRU5ErkJggg==", "TSF": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAC50lEQVR42u2XT0gUURzHvyNbWURmurPFVrA2u0SHoIQ5uJvRwYI82KkgiDqkYK6koC3pfaPsYJRuZEIRBHlJhA7VaSM9BCnUJZbNPeiq+8faCqQo2A4z8/I1f9yZeWMQ+4Nl9v3e78378Hu/329+DyhLWcpSFpW4hWDRLQSLLN7FsQJaPb7NLwMAOrM1RJdLTnLrDqiAvT7kWtM2NPPLEiznNJgebKmQnBU4q2BWIC3tNJPO2ILrzNY450HFi60BGvLgfq+m7bsPaU39SMJTUjy6WJUWPRAjebuTQz2CRSPICjslJZlZoeaSmRXy09Mpz2xbC4E0qpkus3DHqlIQPFsAgDwVefJ4mPzv7+7R1Clr5iYm2JeZ1YDJzAq1OQIt4P0hZJ/10os09GfOXsLNzXVkXL9U1I3FClYxyPtDpvR3ty1hMfbAEM4WIOU9B9faz+Kpz1LQ/320shC9bIeGajJXGG9f8/WWPagkARqqqU0BIB4ZRTwySi9YZUfWOu3B/u4edHW0qfQHWo/IRTihmhscumdqD9tHrGyoBWoHjPmXRA/UKhhzwO3u+1KtPHmU1o+JUkLkLjoHqPcp+vTjCup2B8g4HBMxcCFO2YRjIu60vyG2s/MJ7Nh0gx2gWwgWky/7VPrrHZc17cMxkRqn0nlbJ1NRCtyXc9cAAI2DP8lcZOjWulzASqqDVY+uAgBedW0AAHyfOg8AiA3z6O0rqOy/Pd2L9x8XVPrevgJiwzx7QABoHJ+WOpimKCobHurapdJ55MVpbK3cqHu8IwkPaVhtAeaSk5zQFJW8d+qw1M/J8Sg0RcE3D4BvHlCt83lr4fPWqhsH2d7MrW7NJJEhi1p6JU5n55UvhkiB+by1SKXz+DNv/n7M7OIe2OfXnS8sZ5AtfFXBuQXjdp9pP2hFHLt2GoniLQAw8irzLP5XwrGIv9O75ijd2OIeAICW3myS/P8e1GkmTsjP52aTwokjPm4yc1+Ysf8NbgYx7yp7y7kAAAAASUVORK5CYII=", "TSL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAACuklEQVR42u1YTWjTYBh+UobIENTahDlRlKZOTJWdJjYVbxXag568iYiIoIcpOIcglJ6G9qIXTxORHQQP/hxW2NhBYdlE0O2wotXICjKHTVs7B3r8PDRJkzQp+ZIwh/aB0u973vdLHt6/pgG66KKLLrrY1GCCuAjLi8SNnyJLzIYK1ISFwxFX/vV6lVoo40ecVVhUGNLXX4pvOwp1K5IJKmpGcUY4CaURSSUuKLit2x4acZXPswAALpZEOBzBWk3B9l2s7rNWU/S1xls565nAUmwUCACHjp1p8/k4caFlP/fIkTM2jLVptMhSp9+YXpYXSV80QUjpReuj8ibOge+LJgjLi6S+/ps8m5rV023HuU6xIksMF0s61g0XS1LxbhGicVZkidFCv1q46fmmNGd7fLf23A8AQGVyxNas86ofEjs35peE5UXiJOr16EMAwMk7F+3TnslDkSWG5UVSWpjBq7l3uHx1FMa1linPEVRkieEyIMX7p9tshy+dUH0+tdmE4ZdUHeorxYosMcIwCADYCbUK8zI+fNegdkMnoV6FBfo0AwD9mWY9Lt4zCxy81hT4bTLvOJhLCzMA0FZ/viLI8iLpFdLYsV/QufmxlC7IyB2/NQ3Nt1EuggWI24j6HzMWzI+lTPvllaqv6wUu0EuJjI8/buN9jxkAKN9tpnfwgZlff74P5aNvcCTab+IXrwCAAC5TAMuLZClXUi23Ec8OYClXwvlck4lnmyJDQUdleaWK6tB7bNu6xVV649mBjnvfg9rYwRoO7InY1h+XyetntfS2otiEdc8EUUe9QhoA8OHJdduIpm9MAAB+FQu2z35W0cZRFNjfzoPRmKO9UfuOSuOnp2EdwiZH4GNGixYAdIrqPxPBQJrk7O6vJu7p6l4AgB1PW4eh//Xl0Sn1e+qvvjxSxaUoB/w0jf8f6ObE9+1BK5oAAAAASUVORK5CYII=", "HCF": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAACrElEQVR42u1XP2jUUBz+UrIIQhF6h9oqiJcU7kQsBQfv5Jajgh1uc6ij0PUGLR1FcCmnQweXgpN0cSk3OFgO4bBxELTin4PmIhXkqr1UrDo4xiF5716SewnJe4ot90FI8kt+eR/f7/u99wIMMcQQBweZXNGR+jFyyMjJ5IrO7upY6JmallxnXqH32krRsS1DkZ0DACNpyY0uPKexzrwSWZ64nKhcNW2Jf9QvJ/YQL+f9nS1ujiKjxGmgrTiwLUNhCZ67PUljQgR5JEfPl/pqvd2IJRdUnpB7dbwqX0GWnK+sHKJBkuy3WYKqrGknSrE0mP7aSNfFLN5Yn0P35ODFgjlRsC1DEVLwQu6U7758c7mvaOPewFgwJ24WUEXUYweHXkVWK6H3ZMH1ZPVWKE5irfs1ABOR3ks9UfOQ1UqJ4nH+Iw2UWkGfemlyn9VDfpsG6HQjr4tffAcAWtogaNx7D5eORTaFlJWEeIZHqrX40FVq6cbgss/WQysGb+OgiG65PixXE+UUag1KbmuzSeOTU5WBJIVKbFuGUqi5vokjWqg1Qkp1PnVjxxD2IBmQR3QQMWqFZhPlSgWtZvPvEGQ91Lvu+fGqn2Dvpe76bhUhv5UrFZBz/cEjSPVgJld0Nqaq0PM6jf1enMGRpXXfeyRmtk3oeR1m20Rps+9DbfwkOt0dbpNI2yywhFhsd/eQF/jeCP5zCBHU7+rAXDj+a+003n3cCT+Y83ISQHqJt7t7wMXXOEquBaGKTC/ZWbczaQd7ODM+1icbWEGiVg3pJSYDmW0TZtv0kWOvybMgOdsylKgOFl7q2ClHP6txn+9/20Vv/2ci5Q5MF0tvEqIWAESpemgUVGT479oJ/5/a4y/uj9GgeFIfHn4FOb+LV7zz07gt/b8o8UzCuXM9yft/ALRDZUoqHJf1AAAAAElFTkSuQmCC", "HCL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAACt0lEQVR42u1YTWgTQRT+Nuwxl2B3rZQtqEn8qRBKwYOJ4qmiRXprkQpiwaOWHqRHEXIo9KSeawxUBC8iUoK5VbreaggqaokWGqJmk/6gPXlwPWwm2dmfMLs7jSXku2TmzXs7X97M+9kFeuihhx66E1I0qbPoCf+L3If7X3Dm3glXnVpJFQBA7KQ3yKYAkNXSWOtfctUdQVKvlVRB5EFsVC4z6efB9kfMEIN4ykoscexwc1z8VrXZE/28plBy5WkEAFCe2sHIT93fEUvRpN7OU2Zy5nk7ok5Y6xeaJJkJWsktPUvg+rUipeNEhBXlqR07SdY7KEWT+snQJwBh29pmfQ+DfWFqTkDkVpnZpri93WbnCHxHMfGemRwAvHn1uKVz846jzGwz/Seyf2lms75HbY74OORYCtryXeMaZB7a5ER24eo0Eg6pxwkhXslXjqU8yVkRYkmun/+eovOZptDe8wgvtiJrBcjDJc28NSKQHK0VTXlDD+cifD1oqwaaglpJFeSxhdaGlk1X5haxMrdIG5r0mrY8KwnxIrnUBknoHx+M23RP3zrfsFm3rQ3NvNy/UmeNuFpJFYZmoAOAE1EnYrWSKrA2F1y6GULajaiZmJ/ni7zarNVh41HSFTpYVp8sAwBSPjqZQASlaFJ/JG9heKDVJCjZHNYnLtKdSjaH8o3LILqFShW3tUPo2BFboWRz1HyjUg+0SQgHHIEITmbmEU/P2uS/Xwzi/dfvNnk8PYvJzHzngsQJG5U6cPYdwmQcEGKQ9CKPGamFRDDB0YG+Fllz4+ChgnA5YpLbCpUqCpUqRc48Jmt+8qHA67Uzfjzmur67VYW2+4siJ0VbZfNARjGrJ7kHCfEWALTzatfkQYHH/Zs4Qjeyz38YL+ZOcq9B0v0edPl4dKnx+9pPYPA+4lGP0Zv3ov8Pj2Ep+sxgrfMAAAAASUVORK5CYII=", "HSF": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAACu0lEQVR42u1YTWgTQRT+tuQkCipmoS2WFpMVGwueCtp68WAlkebWexDpwdIqRQqevZVihVTwUHqVXqRgDnoQKqyFHqQgVdiOZFE0mK11UTx4Wg/JTGayuzGbmRCxeZed/ebv4715b94boCtd6axoqheMJ8Y8/t8hptQeMdXkpoysgK0DngzJnnaSA4ApI+vTakcItkt6DoWTUBOWM7nAfr2w1rLDaCqIBZ29IFm3NiIT1VQ6xbnhFGu/f7fbkGizJDVVWuPJ8RJGtFltalHJjR5LYbA3ocwJqDb5UMSTlgrUdokIZO0SYW2K12N0Tj55EgCQT+agF+DxDqYXasFdqQbzDwzWnrljhWNVcli+AdxeDfV8h5haTEZ7z56ka4CRhZ4cR7lwVyTG4Qx7tA/kroSSa0ug1pPjTePXX20Day99uGV/FLQnRVDQXgtzZ/YOAsnRr7ps5vV3AGCmrReGV8fh0onamdw7YOfRGBwIvHFa1qCeWaxtyG0KAJsLq9hcqDtf3Dg2l7sGqVnr46KUBvXMInYf+q+54ZuXq5qwfH2puQ0f9uveeaCgIGF1iKltJ+DRMOMQU0vNwQMQSDSIGB+U6W2iNKN2iKnxWTL9hhHliQWt8bdktiUT0834xftuXasE87ToLH3W70pjBcJV1myyEJPJZo5MnMXxxBDDtqbncWH5vjBua3oeFx8vgY51SRHxCHWK0qKJEuKl+Hn//075pQjas5PYSY/48J9PB/D2wxcfvpMegT072bm6mJl09A2OKjCvFEGHmJqeqXgm9WAqQ/2nAs8fvUGi1CRSJqYbuaQIlxQFcnyb9rVS2SkrO40zydB+99tXlN0foeTiibHQsPNPeHEjrSp3EqotAGik1e7Th1DA934SS8nS6crLVgAe1UkO1+MRJxPV73PZ11YVJr4a0WNfRBn/B6kLTZzswaLMAAAAAElFTkSuQmCC", "HSL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAACuklEQVR42u2YQWgTQRSGvw1FiohQ0LVWrLQ2Fa0iwVahrfUiCgZSEKnQU8EW9CDtpRSSg3iwEHISAgUTwYuCISgRctCbYHtp1YOWoo32II1pEmmp4jUektnsJtu4m92UovkhZN+bNzM//8x7M7tQRx111FHHjoZkxyD7O/pyRuIyiVnT8zXYQcw7NWkoftpPzixRyQq5UmLdri7leeH9YgWiAcMkJbtUU5NTYyui0/6AoWWXzJIbujpIh7PTtiT4m5oOK4Mnlj/r+tQ/I31qliRCyeHdo0XnaZC7wwCkF0Y18U9+h02r77Ci3sQATAzkbXk4w8k7xxRigpzaL+LNqOiway/Jzv7ic3dYUVHtrwZVEwzeqD5RzPRtsCzd3Drsgo93P+k2a/xz69DbtD1JIrsDpOOT0NuETFjT9nrqIQAX/OEt+xo9fSwpKLsDLN4fLPOfGDtfKMLlydA1HqvdHswkZqXIs5jG7hqPGZpUxKmLsijSlS4bUrXncGn1F5OUKirIq+NLCb1tljiTyuneeqpaYjGAeqKevtv5ya9c18T2RFoBmAcldqxzjXvxZQCWvib5BaTbWwDwuZ2EKArQYOU2c6TtInLLccUXnfHgHnmqiYvOeLh26wUiNp1cAh7zKPYGgHOn2gEU2/4yU4LojEdjr6xmdeNGBvsVBdW270GNCRqFUQUtHXXzQRdxb2OZ/+fzVj58SZb5495G5oMuRTGhmp5dMwVXVrNw9h17KizvtpwkmcSsJLvzmSkyWKDt0D7d/Se7A4UszmerwM3NZnx7U/YniSiy+cwE8CjkBNGV1SzF9nyfENo6GCIHqQO6ddC2187Oo84t2zd+rJHe2KzqtdPBDoftSSLUAqik6j+joGTH/hs6+E3ji3w/DICe3+w+dPyvH48uF/5fWv14ZMcSXzJZO1+Zif8DTwEh/bRon+EAAAAASUVORK5CYII="};
+const TYPES={"TCF": {"name": "ひらめきクリエイター型", "job": "星の魔法使い", "key": "クリエイター", "catch": "新しい技術で、まだ見たことのない仕上がりを。", "desc": "技術が好きで、新しいものにすぐ手が伸びるタイプ。感覚でつかんだイメージを、自分の手で形にするのが得意です。", "strong": ["新しい技術・デザインの吸収が早い", "提案の引き出しが多い", "まわりに刺激を与える"], "fit": ["新メニューや講習に挑戦できる環境", "作品撮りやSNSで発信できる場", "技術を試す時間がとれるシフト"], "care": "次々に興味が移りやすいので、ひとつを「看板技術」として育てると指名につながります。"}, "TCL": {"name": "しくみイノベーター型", "job": "薬剤の発明家", "key": "イノベーター", "catch": "なぜそうなるかを突きとめ、新しいやり方をつくる。", "desc": "薬剤や工程の理屈を調べ、もっと良い方法を考えるタイプ。新しい技術を、再現できる手順に落としこめます。", "strong": ["薬剤・毛髪の知識が深い", "技術をマニュアルや手順にできる", "失敗の原因を見つけて直せる"], "fit": ["新しい薬剤やメニュー開発に関われる店", "検証や練習の時間がとれる環境", "学んだことを共有できるチーム"], "care": "説明が専門的になりがちです。お客様には結論から、短い言葉で伝えると喜ばれます。"}, "TSF": {"name": "感性アーティスト型", "job": "色彩の絵師", "key": "アーティスト", "catch": "自分の世界観を、一人ひとりの髪に描く。", "desc": "色や質感、雰囲気へのこだわりが強いタイプ。時間をかけて、その人だけの仕上がりをつくり上げます。", "strong": ["色・質感のセンスがある", "世界観に共感したお客様がつく", "写真や作品で魅力を伝えられる"], "fit": ["得意なスタイルを打ち出せる店", "一人のお客様に時間をかけられる予約枠", "空間や道具にもこだわれる環境"], "care": "好みがはっきりしている分、合わない要望に疲れやすい面も。得意を先に発信しておくと、合うお客様が集まります。"}, "TSL": {"name": "こだわりマイスター型", "job": "はさみの剣士", "key": "マイスター", "catch": "ひとつの技術を、誰にも負けない深さまで。", "desc": "仕上がりの質に、理論と反復でとことん向き合うタイプ。再現性の高さでお客様の信頼を得ます。", "strong": ["仕上がりが安定している", "細かな違いに気づける", "専門メニューで選ばれる"], "fit": ["施術時間をしっかりとれる予約枠", "髪質改善・カラー・スパなど専門性を出せる店", "道具や薬剤にこだわれる環境"], "care": "こだわりが伝わりにくいことがあります。仕上がりの理由を言葉にすると、価値がもっと届きます。"}, "HCF": {"name": "笑顔エンターテイナー型", "job": "歌う旅芸人", "key": "エンターテイナー", "catch": "その場の空気を明るくして、ファンを増やす。", "desc": "人が好きで、ノリと勢いがあるタイプ。会話や発信で人を楽しませ、初めてのお客様ともすぐ打ちとけます。", "strong": ["初対面でも会話がはずむ", "SNSや動画での発信が得意", "お店の雰囲気を明るくする"], "fit": ["新規のお客様に多く出会える店", "発信やイベントを任せてもらえる環境", "個性を出すことを歓迎する経営者"], "care": "盛り上がりを優先して、要望の確認が浅くなることも。最初のカウンセリングだけは型を決めておくと安心です。"}, "HCL": {"name": "巻きこみプロデューサー型", "job": "旗をふる隊長", "key": "プロデューサー", "catch": "人を巻きこんで、お店ごと良くしていく。", "desc": "人が好きで、計画を立てて動かすタイプ。お客様にもチームにも声をかけ、店全体の仕組みを前へ進めます。", "strong": ["目標から逆算して動ける", "後輩や仲間を育てられる", "企画を形にして数字につなげる"], "fit": ["店長・教育・採用など役割が広がる環境", "数字や目標をチームで追える店", "意見を出すと動いてくれる経営者"], "care": "人のために動きすぎて疲れがち。自分の技術を磨く時間を先に予定へ入れておきましょう。"}, "HSF": {"name": "寄りそいパートナー型", "job": "いやしの守り手", "key": "パートナー", "catch": "一人のお客様と、長く深く付き合う。", "desc": "お客様の気持ちを感じとり、変化に気づけるタイプ。派手さよりも安心感で選ばれ、長いお付き合いが増えていきます。", "strong": ["話しやすい空気をつくれる", "リピート・指名が続きやすい", "居心地のよい空間をつくれる"], "fit": ["一人ひとりに時間をかけられる予約制", "半個室・マンツーマンに近い接客", "数より関係づくりを評価する店"], "care": "お願いされると断れず、抱えこみやすい面も。休みと予約の上限を自分で決めておくと長く続けられます。"}, "HSL": {"name": "見立てアドバイザー型", "job": "知恵の賢者", "key": "アドバイザー", "catch": "髪と暮らしを見立てて、長く任される相談役に。", "desc": "お客様の話を整理し、髪の状態と生活に合う計画を立てるタイプ。理由のある提案で、信頼を積み重ねます。", "strong": ["カウンセリングが丁寧で的確", "ホームケアや次回提案が上手", "長期の髪づくりを任される"], "fit": ["カウンセリングに時間をとれる店", "髪質改善や頭皮ケアなど計画型のメニュー", "店販や提案をきちんと評価する仕組み"], "care": "正しさを優先しすぎると、お客様の「やってみたい」を止めてしまうことも。気持ちを先に受けとめてから提案を。"}};
+const TWO=(a,b,k)=>[{t:a,v:[k,1]},{t:b,v:[k,-1]}];
+const LV=(a)=>a.map((t,i)=>({t,v:['w',3-i]}));
+const PF=(k,a)=>a.map((t,i)=>({t,v:[k,i+1]}));
+const QS=[
+  {s:'タイプ',q:'仕事でいちばん嬉しい瞬間は？',o:TWO('狙いどおりの仕上がりが決まったとき','お客様が笑顔で「また来るね」と言ってくれたとき','x')},
+  {s:'タイプ',q:'新しいメニューが出たら？',o:TWO('すぐ試して自分のものにしたい','今の得意をもっと磨いてから取り入れたい','y')},
+  {s:'タイプ',q:'休みの日、つい見てしまうのは？',o:TWO('技術動画や新しい薬剤の情報','接客や会話、人の気持ちの話','x')},
+  {s:'タイプ',q:'理想の1日に近いのは？',o:TWO('いろいろなお客様を次々と担当する','一人ひとりに時間をかけて担当する','y')},
+  {s:'タイプ',q:'後輩に教えるなら、まず何を？',o:TWO('技術のコツを細かく','お客様との向き合い方を','x')},
+  {s:'タイプ',q:'3年後、どうなっていたい？',o:TWO('店長や教育など、新しい役割に挑戦している','指名のお客様に長く愛されている','y')},
+  {s:'タイプ',q:'お客様への提案は、どちらが多い？',o:TWO('その場のひらめきや感覚で','髪の状態と理由を整理して','z')},
+  {s:'タイプ',q:'新しいことを覚えるときは？',o:TWO('まず手を動かして感覚でつかむ','理屈や手順を理解してから始める','z')},
+  {s:'タイプ',q:'目標の立て方は？',o:TWO('ワクワクする方へまず動く','数字や計画から逆算する','z')},
+  {s:'働き方',q:'今、休みはとれていますか？',o:LV(['しっかりとれている','まあまあとれている','あまりとれていない','ほとんどとれていない'])},
+  {s:'働き方',q:'この1年、自分の成長を感じますか？',o:LV(['とても感じる','少し感じる','あまり感じない','止まっている気がする'])},
+  {s:'働き方',q:'頑張りは、給与や評価に反映されていますか？',o:LV(['されている','まあまあされている','あまりされていない','まったくされていない'])},
+  {s:'働き方',q:'お客様一人にかけられる時間は？',o:LV(['十分ある','まあまあある','少し足りない','まったく足りない'])},
+  {s:'あなたのこと',q:'あなたの職種（めざす職種）は？',o:PF('job',['美容師','アイリスト','エステ','ネイリスト','レセプション','その他'])},
+  {s:'あなたのこと',q:'希望の働き方は？',o:PF('emp',['正社員','パート・アルバイト','業務委託','まだ決めていない'])},
+  {s:'あなたのこと',q:'この仕事の経験年数は？',o:PF('exp',['学生・これから','1〜3年','4〜9年','10年以上','今は現場を離れている'])},
+  {s:'あなたのこと',q:'働いている（働きたい）エリアは？',o:PF('area',['泉大津・和泉・高石・忠岡','岸和田・貝塚','泉佐野・熊取・泉南・阪南','堺','大阪市内','東大阪・八尾・南河内','北大阪（豊中・吹田・高槻など）','兵庫','京都・奈良・滋賀','和歌山','そのほかの地域'])},
+  {s:'あなたのこと',q:'今の気持ちに近いのは？',o:PF('mind',['今のお店で続けたい','良いお店があれば話を聞いてみたい','転職を考えている','復帰・再開を考えている'])}
+];
+const $=id=>document.getElementById(id);
+let i=0,ans=[];
+function show(id){['intro','quiz','result'].forEach(s=>$(s).hidden=(s!==id));window.scrollTo(0,0)}
+function render(){
+  const Q=QS[i];
+  $('qsec').textContent=Q.s;$('qnum').textContent=(i+1)+' / '+QS.length;
+  $('bar').style.width=(i/QS.length*100)+'%';
+  $('qtext').textContent=Q.q;
+  const box=$('opts');box.innerHTML='';box.className='opts'+(Q.o.length>6?' many':'');
+  Q.o.forEach((o,n)=>{const b=document.createElement('button');b.type='button';b.className='opt';b.textContent=o.t;
+    b.addEventListener('click',()=>{ans[i]=n;if(i<QS.length-1){i++;render()}else finish()});box.appendChild(b)});
+  $('backBtn').hidden=(i===0);
+}
+function score(a){
+  const r={x:0,y:0,z:0,w:0,exp:0,area:0,mind:0,job:0,emp:0};
+  a.forEach((n,k)=>{const [key,val]=QS[k].o[n].v;if(['exp','area','mind','job','emp'].includes(key))r[key]=val;else r[key]+=val});
+  r.type=(r.x>0?'T':'H')+(r.y>0?'C':'S')+(r.z>0?'F':'L');
+  r.pct=Math.round(r.w/12*100);
+  const rest=a[QS.findIndex(q=>q.q.indexOf('休みはとれて')>=0)];
+  r.fit=(r.x>0&&r.y>0&&(r.exp===3||r.exp===4))?'gyomu':((rest>=2||r.exp===5||r.mind===4)?'part':'sei');
+  return r;
+}
+function fill(id,arr){$(id).innerHTML='';arr.forEach(t=>{const li=document.createElement('li');li.textContent=t;$(id).appendChild(li)})}
+function finish(){
+  const r=score(ans),T=TYPES[r.type];
+  $('rImg').src=IMG[r.type];$('rJob').textContent='ジョブ：'+T.job;$('rName').textContent=T.name;$('rCatch').textContent=T.catch;$('rDesc').textContent=T.desc;
+  fill('rStrong',T.strong);fill('rFit',T.fit);$('rCare').textContent=T.care;
+  ['x','y','z'].forEach(k=>{$('a'+k).style.left=(50-r[k]/3*40)+'%'});
+  $('gBar').style.width=r.pct+'%';$('gNum').textContent=r.pct+'%';
+  $('gText').textContent=r.pct>=75?'今の環境で力を出せているようです。この状態を保ちながら、次の目標を決めると伸びが続きます。'
+    :r.pct>=50?'おおむね良い状態です。点が低かった項目をひとつだけ選んで、整えてみましょう。'
+    :r.pct>=25?'少し無理が続いているかもしれません。休みと評価のどちらかを、店長やオーナーに相談してみる価値があります。'
+    :'かなり負担がかかっている状態です。働き方そのものを見直す時期かもしれません。';
+  const JOBS=['','美容師','アイリスト','エステ','ネイリスト','レセプション','その他'],EMPS=['','正社員','パート・アルバイト','業務委託','まだ決めていない'];
+  const FIT={sei:['正社員向き','腰をすえて力を伸ばせる、安定した働き方が合いやすそうです。'],part:['パート向き','時間にゆとりを持てる働き方が、今のあなたには合いやすそうです。'],gyomu:['業務委託向き','経験と技術を生かし、自分の裁量で動ける働き方が合いやすいタイプです。']}[r.fit];
+  $('rMix').textContent=T.name+' × '+JOBS[r.job]+' × '+FIT[0];
+  $('rEmp').textContent=FIT[1]+(r.emp===4?'':'（あなたの希望：'+EMPS[r.emp]+'）')+' あくまで目安です。';
+  try{gtag('event','type_shindan_result',{shindan_type:T.key,shindan_fit:r.fit,shindan_job:JOBS[r.job],shindan_emp:EMPS[r.emp],shindan_exp:r.exp,shindan_area:r.area,shindan_mind:r.mind,shindan_pct:r.pct})}catch(e){}
+  $('lineBtn').dataset.t=T.key;$('lineMsg').textContent='診断結果：'+T.key;$('lineBtn').href='https://line.me/R/oaMessage/%40512rmwnk/?'+encodeURIComponent('診断結果：'+T.key);
+  show('result');
+}
+Object.keys(TYPES).forEach(k=>{const im=document.createElement('img');im.className='px';im.src=IMG[k];im.alt=TYPES[k].job;im.width=40;im.height=40;$('party').appendChild(im)});
+$('startBtn').addEventListener('click',()=>{i=0;ans=[];render();show('quiz')});
+$('backBtn').addEventListener('click',()=>{if(i>0){i--;render()}});
+$('retryBtn').addEventListener('click',()=>show('intro'));
+$('lineBtn').addEventListener('click',()=>{try{gtag('event','type_shindan_line',{shindan_type:$('lineBtn').dataset.t||''})}catch(e){}});
+$('startBtn').addEventListener('click',()=>{try{gtag('event','type_shindan_start')}catch(e){}});
+</script>
+</body>
+</html>

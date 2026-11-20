@@ -25,6 +25,7 @@
 | 表示速度（スマホ）の維持 | PageSpeed：性能点数・LCP・TBT（3サイト） | 11/17：FC 100／glow 97（TBT 200ms）／採用 99、LCP 0.9〜1.1秒（IMPROVEMENT_LOG 11/17） | 11/22（glow を再測定）／12/2（月次） | |
 | ブログ自動投稿（FC 水・土／glow 火・金） | 新記事の表示・クリック（Search Console ページ別の /salon-blog/・/journal/） | なし（記事ごとに公開日から4週間後に見る。まとめては月次の本レポートで） | 12/2（月次）から | |
 | FC 予約の準備の記事（yoyaku-junbi-40-50）と、nenmatsu-hair-plan・cut-erabikata からの内部リンク（11/20） | 3記事の表示・クリック（Search Console ページ別）、予約CTA（GA4 cta_*） | なし（公開直後） | 12/4／12/18 | |
+| 美容師タイプ診断の公開と LINE 結果カード（採用 /type-shindan/）（11/20） | GA4 の type_shindan_start／type_shindan_result／type_shindan_line の件数、/type-shindan/ の表示、行雲流水LINE の友だち数（11/20 時点 7） | なし（公開直後） | 12/4／12/18 | |
 
 ## 計測の変更の目印（比べるときの注意）
 - 11/3：GA4 の「CTA位置（pos）」を登録（FC・glow）。
