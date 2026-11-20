@@ -14,7 +14,7 @@
   },
   {
    "path": "company/index.html",
-   "sha256": "a2f015620f0db832fd2b277e3d4d4cecd8732f9531b2154f245bfbad6eb6573d"
+   "sha256": "fa05251f8427c82e04c5677f554951104edd13cf8010cf86cf6fd8992b56beaa"
   },
   {
    "path": "cota-products/index.html",
@@ -51,6 +51,10 @@
   {
    "path": "fc/icon-512.png",
    "sha256": "9b9da1906aa6c2cdeef1a034733b4ba893a9fc5eb70cf049d2924c026a72e27d"
+  },
+  {
+   "path": "fc/img/card-yoyaku-junbi-40-50.jpg",
+   "sha256": "10ca86c8bd4709f7d11aec3f482c97de0b59a4f780fdf21b02eddd477b60cb26"
   },
   {
    "path": "fc/img/cast-fujitsu.jpg",
@@ -266,15 +270,15 @@
   },
   {
    "path": "index.html",
-   "sha256": "23da750d8f4c6dea251825804f4dd9f5b7c563954b5d127ccd5751d3b980c824"
+   "sha256": "437e20c4463ccfed23e24ea4dad023efc15af848caa986d89c2e76577705a77f"
   },
   {
    "path": "llms-full.txt",
-   "sha256": "d4485bca301d260a860770588b6d39d439131cf2230e2d8581305b5a6cdd664d"
+   "sha256": "21ea570edb670c1d80d27a0ad5937674f5f54b698bb9ba202ff3260793dbe280"
   },
   {
    "path": "llms.txt",
-   "sha256": "2e1a0fed3c6c68899f219029b14da29f6de91070e9e3f10374a1567b0be79b4e"
+   "sha256": "a5ed8caa20454d0ebeb6c0c6a31413f3df796a178dcb252bdc0c0ca728b6a5cb"
   },
   {
    "path": "men/index.html",
@@ -306,63 +310,67 @@
   },
   {
    "path": "salon-blog/color-taishoku-40-50/index.html",
-   "sha256": "50d19d7f392f15a7c096e84a16235c48725ca886439f3268a8a4c546c2d799ff"
+   "sha256": "fd69858590a9fa59a2dd985d18274e49298c71d8594c26cd33d84b105f6dd250"
   },
   {
    "path": "salon-blog/cut-erabikata-izumiotsu-40-50/index.html",
-   "sha256": "030cb636fa00fe053b114265b9d700cbbf4107f35e7895fa0157a03235ef2066"
+   "sha256": "1d105364cfef17c7c1a1d9c079b1f37c313191c40bca570d03360c6c93513baf"
   },
   {
    "path": "salon-blog/fuyu-kansou-pasatsuki-40-50/index.html",
-   "sha256": "8e1ed2503c8873b07ba9c1d64bda21396dda877e3fad663bc8a6ba29c5a6bbc0"
+   "sha256": "70b603f34ea9ac969b849c313e1021c3ea2d895f36fc23798d31e6ba74383c39"
   },
   {
    "path": "salon-blog/hari-koshi-hosoi-ke-40-50/index.html",
-   "sha256": "f5a9fe77c248dc868eb11c6b77dfd7dd662cb58f74aa76765f3ad62df9404d9a"
+   "sha256": "28983681b145a121a90f7ea2b69bd9fae4e600aa9988724689e4d2d78ec121c9"
   },
   {
    "path": "salon-blog/headspa-shampoo-kukan/index.html",
-   "sha256": "5ca857fb169f9eb4bb28b3fa87c8ae193e6df3ec4dc30a0fb6e31843b8f9b0ab"
+   "sha256": "d49fb2e9f8f51171503320c1ce52136f4e4adec86427a0c69187b02b7b0d20be"
   },
   {
    "path": "salon-blog/home-hair-care-cota-store/index.html",
-   "sha256": "0f7318ff479460dc7366e133ec48ec136df8f401f19c438814f02dc3d4dfe74e"
+   "sha256": "f63e7c41aebc9325bde8b8a9bb7cb3aed434e9af9a37b7d2dc66802db070973b"
   },
   {
    "path": "salon-blog/index.html",
-   "sha256": "f092ffbc713fefb5155a6fd7d3f70d3ff4a3bdc3960f455bb010bb023a71234e"
+   "sha256": "bd7f3ac685adac3679f31203472ec82b6bb23d03dca7628da4efc0026ee2fe2f"
   },
   {
    "path": "salon-blog/kuse-uneri-straight-40-50/index.html",
-   "sha256": "33fdcc12a386fcd2f773131b549153c982a72aa5aff27eb5e678101184ab2889"
+   "sha256": "220f35459fc4462399566ca7cc5c0dd04da9c49ac74003d523f39889b93fe6e5"
   },
   {
    "path": "salon-blog/kyugyobi-2026-11-12/index.html",
-   "sha256": "60fd60900bcb3594a92be503502b12b33370f8815da366f3997a274d5053553c"
+   "sha256": "7fccec118c6e0c456e9e3561e985f66294faa4f866986208d68aca0be5c27378"
   },
   {
    "path": "salon-blog/nenmatsu-hair-plan-40-50/index.html",
-   "sha256": "e856ea436274de76d1fe84697123a309fdab91f5d31c637d1c834a03b8621ef1"
+   "sha256": "5e438cb0f59e503dd69dd0ea1fafe054d13a8338059d2a04d5c95d994fcfdc97"
   },
   {
    "path": "salon-blog/nenmatsu-nenshi-2026-2027/index.html",
-   "sha256": "134e971a0346f506e6fe366d14776e96a0633da0e10d0d338b6bf65445b3d49a"
+   "sha256": "edbeadd2e8578f36f56da3549edc71dd5b0aafabd16ef70b0f6cba9820d80706"
   },
   {
    "path": "salon-blog/serum-color-40-50/index.html",
-   "sha256": "42bd38a2e98f732865ce278ffd8173bf8d0c74b3365a5a799aae169b7291ed05"
+   "sha256": "5c2f2cad1245046364ebeeb123e1c312df48188884ecbaa67b8f968dd3415fe8"
   },
   {
    "path": "salon-blog/shiraga-ne-moto-40-50/index.html",
-   "sha256": "d510d970c35ba04e66488c8127fbbccc5624899b47090607c632cfaa74c01029"
+   "sha256": "4781f2f56960d3a924da3e0807cf8599b97507312468bb84b95ec50d5b109877"
   },
   {
    "path": "salon-blog/toppe-peta-volume-40-50/index.html",
-   "sha256": "0ee52394e75694506951f45125e447741210d516fdaf6ffb071aef5ef2e9fb98"
+   "sha256": "067d6ca6a0fc7fb3fc70eabb24292b269094c0b4a12ec854afc3af0b4da619e4"
+  },
+  {
+   "path": "salon-blog/yoyaku-junbi-40-50/index.html",
+   "sha256": "a371418f9b7db1c3191ed68ffe0c3b6925ea3c4c6a8c73a833c280ddc392b5b5"
   },
   {
    "path": "sitemap-fc.xml",
-   "sha256": "9ad2efbd2db828eb298f771c9eb50b958c780cb64d8cc6a0eba4678d4eb78204"
+   "sha256": "ef08ac3cda8c5151f5dd4fbec2d85a65e3688ea38eb62d4c4da8e360b4f22f60"
   },
   {
    "path": "straight/index.html",
