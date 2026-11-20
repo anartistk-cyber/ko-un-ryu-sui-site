@@ -52,13 +52,24 @@ export function LineCta({ href, placement }: { href: string; placement: string }
   );
 }
 
-/** 診断（大）＋LINE（中）をまとめた帯。サブページの下・トップの途中に置く。selfTrack は、計測の受け皿（onClick={trackClick}）がまわりに無い場所用 */
+/** 美容師タイプ診断（/type-shindan/・自社の静的ページ）への入口。採用の入口を広げるための気軽な診断（2026-11-20 藤津さん）。同じタブで開く */
+export function TypeCta({ placement }: { placement: string }) {
+  return (
+    <a className="type-cta" href="/type-shindan/" data-track="type_shindan" data-placement={placement}>
+      <span className="type-cta-text"><b>美容師タイプ診断</b><small>18問・約2分。あなたはどのジョブ？</small></span>
+      <ArrowRight className="type-cta-arrow" size={20} aria-hidden="true" />
+    </a>
+  );
+}
+
+/** 診断（大）＋LINE（中）＋タイプ診断（小）をまとめた帯。サブページの下・トップの途中に置く。selfTrack は、計測の受け皿（onClick={trackClick}）がまわりに無い場所用 */
 export function MatchStrip({ lineHref, placement, selfTrack = false }: { lineHref: string; placement: string; selfTrack?: boolean }) {
   return (
     <section className="match-strip" aria-label="採用マッチング診断と公式LINE" {...(selfTrack ? { onClick: trackClick } : {})}>
       <div className="match-strip-inner">
         <MatchCta placement={placement} variant="banner" />
         <LineCta href={lineHref} placement={placement} />
+        <TypeCta placement={placement} />
       </div>
     </section>
   );
