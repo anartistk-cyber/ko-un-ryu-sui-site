@@ -84,3 +84,10 @@
 - 姉妹サイトへのリンクには `?utm_source=<glow_blog|fc_blog|recruit_blog>&utm_medium=internal&utm_campaign=<記事のslug>` を付ける。GA4 で「どの記事から、どのサイトへ」が分かる。
 - ホットペッパー（クーポン・サロンページ）・Instagram・Google口コミ・YouTube（FLOWCLOUD）は直リンク。
 - Threads（3アカウント）・FLOWCLOUD の TikTok を追加済み（2026-11-18）。まだ載せていない：glow・採用の TikTok／YouTube。アカウントのURLが未確認のため。藤津さんからURLをもらったら build.mjs の L に足して全記事に出す。
+
+## 美容師タイプ診断（採用・2026-11-20 追加）
+| 置き場所 | URL |
+|---|---|
+| Instagram プロフィール（リンク欄） | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=instagram&utm_medium=social&utm_campaign=type_shindan_bio` |
+| Instagram ストーリーズのリンク | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=instagram&utm_medium=social&utm_campaign=type_shindan_story` |
+- 流入元は回答ログ（スプレッドシート「美容師タイプ診断_回答ログ」）の「流入元」列にも `instagram/social/type_shindan_bio` の形で残る。
