@@ -382,11 +382,11 @@
   },
   {
    "path": "type-shindan/index.html",
-   "sha256": "6dc00325d8dcf1d71f84df0bb9b80044e8a593182666d40ef6e3960f69caf666"
+   "sha256": "504b684d5492c40795c6c66458981078815c70a84941ea45d45fda66de45e306"
   },
   {
    "path": "type-shindan/ogp.png",
-   "sha256": "c829cbe392da03c7f72132193d9efcacfa09878cc62aa5fc8c7396f0778f3a0a"
+   "sha256": "fba786539bd1bce9d2f597fd7848a5aaea20eef7841dbfe073091cbea26996ec"
   },
   {
    "path": "visit.html",
