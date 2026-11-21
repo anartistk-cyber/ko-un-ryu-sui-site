@@ -111,6 +111,9 @@ h3{font-size:16px;font-weight:700;color:var(--deep)}
 .party img{width:100%;height:auto}
 .hero-stage{display:flex;justify-content:center;padding:10px 0 4px}
 .hero-stage img{width:210px;height:auto}
+.blurbox{position:relative}
+.blurbox img{filter:blur(13px);-webkit-filter:blur(13px)}
+.blurnote{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);white-space:nowrap;background:var(--ink);color:#fff;font-family:var(--display);font-weight:700;font-size:13px;padding:6px 14px;border-radius:999px}
 .rtitle{display:flex;flex-direction:column;gap:2px;text-align:center}
 .rtitle h2{font-size:26px;font-weight:900}
 .job{font-family:"DotGothic16",var(--display);font-size:15px;color:var(--deep)}
@@ -139,7 +142,7 @@ h3{font-size:16px;font-weight:700;color:var(--deep)}
     <ol class="steps">
       <li><b>1</b><span>質問に答える（タップするだけ）</span></li>
       <li><b>2</b><span>タイプと働き方の充実度がその場でわかる</span></li>
-      <li><b>3</b><span>LINEで結果カードと、タイプ別の働き方ヒントを受け取る</span></li>
+      <li><b>3</b><span>くわしい結果（強み・合う働き方など）をLINEで受け取る</span></li>
     </ol>
     <p class="note">お名前や連絡先はうかがいません。回答は、個人を特定しない形で記録し、採用のご案内づくりと内容の改善に使います（<a href="/privacy" style="color:inherit">プライバシーポリシー</a>）。<br>運営：株式会社行雲流水（大阪・泉大津の美容室 FLOWCLOUD／glow）</p>
   </section>
@@ -157,7 +160,7 @@ h3{font-size:16px;font-weight:700;color:var(--deep)}
   <section id="result" hidden style="display:flex;flex-direction:column;gap:20px">
     <div class="card">
       <p class="kicker">あなたの美容師タイプは</p>
-      <div class="stage hero-stage"><img class="px" id="rImg" alt="" width="460" height="560"></div>
+      <div class="stage hero-stage blurbox"><img class="px" id="rImg" alt="" width="460" height="560"><span class="blurnote">くっきりした絵は、LINEの結果カードで</span></div>
       <div class="rtitle"><p class="job" id="rJob"></p><h2 id="rName"></h2><p class="catch" id="rCatch"></p></div>
       <p id="rDesc"></p>
       <div class="axes">
@@ -166,9 +169,6 @@ h3{font-size:16px;font-weight:700;color:var(--deep)}
         <div class="axis"><span>感性</span><div class="track"><i id="az"></i></div><span class="r">理論</span></div>
       </div>
       <h3>職種と働き方の目安</h3><p class="mix" id="rMix"></p><p id="rEmp"></p>
-      <h3>強み</h3><ul class="list" id="rStrong"></ul>
-      <h3>力を出しやすい働き方</h3><ul class="list" id="rFit"></ul>
-      <h3>気をつけたいこと</h3><p id="rCare"></p>
     </div>
     <div class="card">
       <h3>今の働き方の充実度</h3>
@@ -177,9 +177,10 @@ h3{font-size:16px;font-weight:700;color:var(--deep)}
       <p class="note">休み・成長・評価・お客様との時間の4問から出した目安です。</p>
     </div>
     <div class="card">
-      <h3>結果カードとタイプ別ヒントをLINEで受け取る</h3>
-      <p class="lead">行雲流水の公式LINEに、下の合言葉を送ると届きます。</p>
-      <a class="btn line" id="lineBtn" href="https://line.me/R/ti/p/%40512rmwnk" target="_blank" rel="noopener">LINEで受け取る ▶</a>
+      <h3>詳しい結果は、LINEで受け取れます</h3>
+      <p class="lead">あなたのジョブの結果カードを、行雲流水の公式LINEでお届けします。</p>
+      <ul class="list"><li>キャラクターの絵</li><li>あなたの強み</li><li>力を出しやすい働き方</li><li>気をつけたいこと</li></ul>
+      <a class="btn line" id="lineBtn" href="https://line.me/R/ti/p/%40512rmwnk" target="_blank" rel="noopener">詳しい結果をLINEで受け取る ▶</a>
       <div class="linebox" id="lineBox">
         <span>LINEが開くと、下の合言葉が入力済みになっています。そのまま送信すると、結果カードが届きます。</span>
         <code id="lineMsg"></code>
@@ -242,7 +243,6 @@ function fill(id,arr){$(id).innerHTML='';arr.forEach(t=>{const li=document.creat
 function finish(){
   const r=score(ans),T=TYPES[r.type];
   $('rImg').src=IMG[r.type];$('rJob').textContent='ジョブ：'+T.job;$('rName').textContent=T.name;$('rCatch').textContent=T.catch;$('rDesc').textContent=T.desc;
-  fill('rStrong',T.strong);fill('rFit',T.fit);$('rCare').textContent=T.care;
   ['x','y','z'].forEach(k=>{$('a'+k).style.left=(50-r[k]/3*40)+'%'});
   $('gBar').style.width=r.pct+'%';$('gNum').textContent=r.pct+'%';
   $('gText').textContent=r.pct>=75?'今の環境で力を出せているようです。この状態を保ちながら、次の目標を決めると伸びが続きます。'
