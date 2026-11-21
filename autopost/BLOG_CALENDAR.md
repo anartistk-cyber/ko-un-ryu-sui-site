@@ -9,6 +9,7 @@
 | 2026-11-19 | 木 | glow | メニュー・相談のしかた（前髪カット） | maegami-cut-soudan-young | 泉大津 前髪カット | #前髪カット #glow泉大津 | — |
 | 2026-11-20 | 金 | FLOWCLOUD | 季節・おでかけ・予約の準備（予約前の4つ） | yoyaku-junbi-40-50 | 泉大津 美容室 予約 初めて 40代 50代 | #予約の準備 #FLOWCLOUD | nenmatsu-hair-plan・cut-erabikata へ相互リンク |
 | 2026-11-21 | 土 | 採用 | 体験・見学（夜のレッスン体験） | lesson-taiken-yoru-minikata | 美容師 レッスン体験 サロン見学 | #行雲流水 #サロン見学 #レッスン体験 | taiken-guide・one-year-debut-curriculum・gakusei-kengaku-kakunin |
+| 2026-11-21 | 土 | glow | スタイル・おでかけ（冬のおでかけ前の髪の相談） | fuyu-odekake-style-young | 泉大津 美容室 冬 おでかけ ヘアセット | #ヘアスタイル #ヘアアレンジ #glow泉大津 | hair-set-seijinshiki-glow・short-layer-asa-raku へ内部リンク |
 
 ## 要確認（食い違い・未確認の事実）
 （なし）
