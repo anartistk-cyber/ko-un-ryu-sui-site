@@ -2,7 +2,7 @@
  "files": [
   {
    "path": "area/index.html",
-   "sha256": "730e54201be58b1c2c20851d90625ac948f51ecdef2d5e64578eb21a91b85eed"
+   "sha256": "6d4ac5992c57ab6036acd2eca440b32d173c15ea7b021c12219bd0578cfc1fba"
   },
   {
    "path": "cast/index.html",
@@ -55,6 +55,10 @@
   {
    "path": "gl/img/card-fuyu-kansou-pasa-young.jpg",
    "sha256": "22e4d5c21f09145854f5b82d64dd58e78dc272ef4de36e3163107a6abeb33d78"
+  },
+  {
+   "path": "gl/img/card-fuyu-odekake-style-young.jpg",
+   "sha256": "83316da988d268e5144361e0b07784abcc9ca2565618a924689ed073d72616a4"
   },
   {
    "path": "gl/img/card-maegami-cut-soudan-young.jpg",
@@ -310,83 +314,87 @@
   },
   {
    "path": "index.html",
-   "sha256": "6eb04036dc67fdf102cc0e7b4a5e7bb1e7572f3a748a4486062946fad5d82e54"
+   "sha256": "f1248084596fd817863ae825f1a491dec28b87082b46539012af6122a5f1c735"
   },
   {
    "path": "journal/access-parking/index.html",
-   "sha256": "4181c27ed6cb91a94000bc09266362620e015dc316102ce1200c0d2ad6978972"
+   "sha256": "7041a280d5a9b423a578e0c0857f85923e40725ed33e4a000555f739fd4edf45"
   },
   {
    "path": "journal/color-first-counseling-glow/index.html",
-   "sha256": "ee80b3ae5de572f7d36f72db36e8780536b9d4153cec85ff41ec7dc1ab988de3"
+   "sha256": "289a6334e1bd654327f71a60fc534250254b17ec6bf9ce6ee5278797d2b8a385"
   },
   {
    "path": "journal/first-perm-counseling-glow/index.html",
-   "sha256": "38bae1968646028a0b1d64dfcc2b364733c19f3d32fc818c1a4c6c1d8b1031d9"
+   "sha256": "091ccd63b98f6420f64d9820926a7e9b646ded410f6c57e446ab7f4fdc1ee01c"
   },
   {
    "path": "journal/first-salon-counseling/index.html",
-   "sha256": "32d477c3bfa88ae13e5aba1f2b42fab0592cacd516f13e2167f36f7e8504b08e"
+   "sha256": "12fc96932ff5a39615e0c5a10fbaddb205ab6f9be43b6995ab0bed5286caf666"
   },
   {
    "path": "journal/fuyu-kansou-pasa-young/index.html",
-   "sha256": "f1daa62dd5e7e1e4b3532dc01107c36c5f68a38bd7c4c6e53da8cb2b318251b8"
+   "sha256": "3388fa300a285d88b9bd149f4f46aa2425b57bb8c80a86c783ff5d11cad62aa6"
+  },
+  {
+   "path": "journal/fuyu-odekake-style-young/index.html",
+   "sha256": "8ab915dfd8b78dc96399a084129c453ea6a4a66873a37cac044afb19067a48f7"
   },
   {
    "path": "journal/hair-quality-erabikata-young/index.html",
-   "sha256": "3c653d6b34c23d79276366b253c960ba561b4645804cf4b5092c4e5b66c52b37"
+   "sha256": "91bf5ea4d20858d444b975a5a22f38ad19686aa5ac6b562ca143353ed0afb9be"
   },
   {
    "path": "journal/hair-set-seijinshiki-glow/index.html",
-   "sha256": "8c4d916680f2dd8da12e2af473d27ec55799a4d5e7b5b043c4e8f92e64d5f11d"
+   "sha256": "5130a6d64458a76309d6f9b1bf5eb52e4152553dc6138ae0ea2c15cda68ffd15"
   },
   {
    "path": "journal/head-spa-first-time-young/index.html",
-   "sha256": "009cfea8bee17fd5f257f75c74a15dc0dd04c7959afbca2a64d9d67f7d18b531"
+   "sha256": "d65dab39b2605acbb41e9fab3dfde6691a605a95216f04e3d889cccf398724a4"
   },
   {
    "path": "journal/highlight-top-only-young/index.html",
-   "sha256": "8444a3606328143fd599c2fbc335cc8984fe7fb9f6482ed452f127afe80d2d32"
+   "sha256": "bf0a42e2c84ee29869e72a214411c5362cac80a460065d2186d8d74a74d272f0"
   },
   {
    "path": "journal/home-hair-care-cota-store-glow/index.html",
-   "sha256": "d7e60c86a7dedfb4b0d9a704fe75f9112730b2dbc82b2cbfc2d7d6c44bf1c9d3"
+   "sha256": "479bb9eb629de208cf595d4b626b78f2d99f1b4dd5912c36925bb69ebe95e78d"
   },
   {
    "path": "journal/index.html",
-   "sha256": "eef23e36a8f9c6db55b4484b5e5c283f52bff51dbe858f20fa9ecb8ae30d4bd5"
+   "sha256": "84508962122e3cc8df7052b45e85ef1f12275aad4891d24b57410068880ef486"
   },
   {
    "path": "journal/kuse-hiroga-straight-young/index.html",
-   "sha256": "8f32e9bc908a0f91d3858b9e8d219f296ec9b457efd1f261d5583a0d76fa3101"
+   "sha256": "16a677d605c135fa43439e0f3cb311f2522d74569f16bce3b3d9e4de85127f90"
   },
   {
    "path": "journal/maegami-cut-soudan-young/index.html",
-   "sha256": "8bf31a8d2452c3fb1e5350c8a09e34a0824956f26915cf4af12f0cf1eb96da72"
+   "sha256": "0653ff8a740f5006754074901f76c8f05ce0ab446a2137507959459a301027f7"
   },
   {
    "path": "journal/nenmatsu-nenshi-2026-2027/index.html",
-   "sha256": "c915aa2e6cb1be816717c5f19c7bed5eedbd744d1749f62d96333eeda504d438"
+   "sha256": "1d13374fa7d4b0fce6c3b4cb44f09a19697435402cd6a555ebcfdcd107c6dd17"
   },
   {
    "path": "journal/serum-color-fuyu-young/index.html",
-   "sha256": "1221e0f2eed113fc72344d4ffcc19f0b6931244b11132306929dd8f6cdce9393"
+   "sha256": "c1114647d217c34303d2717ae85ef9e4d67f2220943c8dcf067da8bb6ba08aea"
   },
   {
    "path": "journal/short-layer-asa-raku/index.html",
-   "sha256": "d6e8c8b440c4a4d40c80c8eeb64bd266de53eb8bd11f396e3d746d331edf7ca1"
+   "sha256": "b656bdfe4798ca31fe16d58935125d5e719d6c131420ccf23cc3240c18c9d650"
   },
   {
    "path": "journal/sugao-care-young/index.html",
-   "sha256": "01c1f0804a9e8ee7dc391d7956a3cca72f9fe5cfa3003836030ed5700779cd36"
+   "sha256": "00cf6746fbf1894e804c32fa2b036af9809dd963d07b10f36fc0949e986cd189"
   },
   {
    "path": "llms-full.txt",
-   "sha256": "374be7d7336929077b782f0dc71dc816d1a7d2d0a99171fbe78528f728efb30a"
+   "sha256": "eb9fd44ebc9bc05290bc60f0e74c1708eaca01870ca728e8001b3cef5fe14abb"
   },
   {
    "path": "llms.txt",
-   "sha256": "de23840a2677c76166c9fc7273443764b36aa37a8489af222dc2d68a51670482"
+   "sha256": "cc400311482e88c07f6fae06ebeda68fc3d605c8b126381fe912aeb4712fd409"
   },
   {
    "path": "men/index.html",
@@ -410,7 +418,7 @@
   },
   {
    "path": "sitemap-gl.xml",
-   "sha256": "009e8d91fa220fbfa90dcaa2986511ba1bf05077cf5097d9550353a05f30ec74"
+   "sha256": "0037dfc9ef19d7519c77085ec46eb72ad5cdf60d5abc8340f6ef6911d07a8040"
   },
   {
    "path": "straight/index.html",
