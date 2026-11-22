@@ -1,0 +1,24 @@
+{
+ "files": [
+  {
+   "path": "app.php",
+   "sha256": "16f6600b274101cfb286fc7d5c295ac088ad23b30d8f3ad98a9e6501d7182169"
+  },
+  {
+   "path": "diagnosis.js",
+   "sha256": "d26299f104889b2ff67d1847fa65f9d9a2436e6f4a258721a455fe0b5bcc4686"
+  },
+  {
+   "path": "index.html",
+   "sha256": "c9c3e87805028605e525bf0813e747e5bbb1566aa1fa4afcaa88780828c9a544"
+  },
+  {
+   "path": "lib/admin.js",
+   "sha256": "b4a3718966de516a1bc938a44b1a333c443a0e8580c99854e71a98877f6fbdb3"
+  },
+  {
+   "path": "privacy.html",
+   "sha256": "284a85cd7cdf9e280f67985ce0f1d01f87090f3532e1957c11d177889c9ee877"
+  }
+ ]
+}

@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>採用マッチング | 株式会社行雲流水</title>
+<style>
+:root{color-scheme:light;--ink:#332539;--muted:#695963;--paper:#fffaf5;--white:#fff;--line:#e9d6df;--pink:#a71e58;--pink-dark:#79133d;--rose:#ffddeb;--lemon:#fff0ad;--mint:#dff3e8;--lilac:#eee5ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.75 "Nunito","Yu Gothic UI","Hiragino Sans",Meiryo,sans-serif}
+h1,h2,h3,p,figure{margin:0}
+h1,h2,h3{line-height:1.35;font-weight:850;overflow-wrap:anywhere}
+h2{font-size:clamp(1.55rem,4vw,2.65rem)}
+a{color:inherit;text-underline-offset:.25em}
+button,input,textarea,select{font:inherit;color:inherit}
+button,summary,select,input[type=checkbox],input[type=radio]{cursor:pointer}
+button:disabled{cursor:default;opacity:.55}
+[aria-disabled=true]{opacity:.55}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid #6536a7;outline-offset:4px}
+.wrap{width:min(1136px,calc(100% - 48px));margin-inline:auto}
+.skip{position:absolute;left:12px;top:-90px}
+.skip:focus{top:8px;z-index:5;background:white;padding:8px}
+.top{background:#fffdf9;border-bottom:1px solid var(--line)}
+.top .wrap,.top nav,.actions,.foot{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.top .wrap{justify-content:space-between;padding-block:14px}
+.brand{font-weight:850;text-decoration:none}
+.top nav a{font-size:.88rem;text-decoration:none;font-weight:750;padding:8px 4px}
+.top nav a:hover{text-decoration:underline}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:clamp(15px,3vw,36px);align-items:center;padding:clamp(20px,4vw,48px);margin:26px 0 65px;background:radial-gradient(circle at 85% 0,#fff3bd,transparent 44%),linear-gradient(125deg,#ffe1ed,#f2e7ff);border-radius:32px}
+.eyebrow{font-size:.76rem;font-weight:850;letter-spacing:.14em;color:var(--pink-dark);margin-bottom:9px}
+.hero h1{font-size:clamp(1.95rem,4.55vw,3.85rem);letter-spacing:-.045em;line-height:1.17}
+.hero h1 span{color:var(--pink)}
+.hero-intro{max-width:34ch;margin-block:16px 20px;color:#554152}
+.entry-links{display:flex;flex-wrap:wrap;gap:10px}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:8px 16px;border:2px solid var(--pink);border-radius:14px;background:var(--pink);color:white;text-decoration:none;text-align:center;font-weight:800}
+.button:hover:not(:disabled){background:var(--pink-dark);border-color:var(--pink-dark)}
+.button.secondary{background:#fff;color:var(--pink-dark);border-color:#cc96b1}
+.button.secondary:hover:not(:disabled){background:#fff0f7;border-color:var(--pink)}
+.entry-links .secondary{background:var(--lemon);border-color:#bd8f39;color:#563613}
+.hero-visual{position:relative;border:5px solid white;border-radius:23px;overflow:hidden;background:#e9c2d6;box-shadow:0 8px 20px #5a21432a}
+.hero-visual img{display:block;width:100%;aspect-ratio:5/4;object-fit:cover;object-position:center}
+.hero-visual figcaption{position:absolute;bottom:11px;left:11px;padding:4px 11px;background:#fffaf4;color:#442738;border-radius:999px;font-size:.77rem;font-weight:800}
+section{margin:0 0 58px;scroll-margin-top:18px}
+.intro{margin:8px 0 17px;color:var(--muted)}
+.panel,.card,details{border:1px solid var(--line);border-radius:20px;background:var(--white);padding:clamp(15px,2.8vw,29px)}
+#diagnosis{background:linear-gradient(120deg,#f4ebff,#ffeaf2);padding:clamp(14px,3.4vw,36px);border-radius:24px}
+#choose,#quiz,#results{border:0;box-shadow:0 5px 15px #67345410}
+.grid,.result-overview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.actions{margin-top:15px}
+.small,.tag,.result-next{font-size:.9rem;color:var(--muted)}
+.panel p,.card p,details p,.card address{margin-top:8px}
+#quiz-error,.error{color:#9e163b}
+.quiz-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.quiz-top strong,.quiz-top span{padding:4px 12px;border-radius:999px;background:var(--lilac);font-size:.86rem}
+.quiz-top span{background:var(--lemon);font-weight:800;white-space:nowrap}
+progress{width:100%;height:12px;accent-color:var(--pink);margin-top:12px}
+.question{margin:12px 0 15px;font-size:clamp(1.25rem,3vw,1.8rem)}
+.options{display:grid;gap:8px}
+.option{display:flex;align-items:center;gap:10px;padding:10px 12px;min-height:54px;border:1px solid var(--line);background:#fffbfd;border-radius:13px;cursor:pointer}
+.option:hover,.option:has(input:checked){border-color:var(--pink);background:#ffe9f4}
+input[type=radio],input[type=checkbox]{accent-color:var(--pink);width:18px;height:18px;flex:none;vertical-align:middle}
+.result-overview{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);margin-top:12px}
+.result-tile{padding:clamp(14px,3vw,24px);border-radius:18px;background:var(--lemon)}
+.result-tile + .result-tile{background:var(--rose)}
+.result-label{font-size:.85rem;font-weight:850}
+.result-tile strong{display:block;font-size:clamp(1.28rem,3vw,1.95rem);line-height:1.35;margin-top:5px}
+#score{font-size:clamp(2.6rem,7vw,4.6rem);color:var(--pink-dark);letter-spacing:-.06em}
+.pathway{list-style:none;counter-reset:stage;padding:0;margin:0;grid-template-columns:repeat(4,minmax(0,1fr))}
+.pathway li{counter-increment:stage;background:var(--rose)}
+.pathway li:nth-child(2){background:var(--mint)}.pathway li:nth-child(3){background:var(--lemon)}.pathway li:nth-child(4){background:var(--lilac)}
+.pathway li::before{content:counter(stage);display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:white;color:var(--pink-dark);font-weight:850;margin-bottom:9px}
+.pathway h3{font-size:1.05rem}.pathway p{font-size:.88rem}
+.company-card{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:14px;background:#f4ebff}
+.salon{padding:0;overflow:hidden}
+.salon .photo{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--rose)}
+.salon .body{padding:clamp(15px,3vw,25px)}
+.salon h3{font-size:1.65rem}.salon address{font-style:normal}
+details+details{margin-top:9px}summary{font-weight:800;padding:3px 0}
+.contact{background:#fff0f7}
+.field{display:grid;gap:5px;font-weight:750;margin-top:10px}
+select,textarea,.field input{width:100%;min-height:46px;border:1px solid #a6899c;border-radius:10px;background:white;padding:8px}
+textarea{resize:vertical}
+.application-fields{margin:10px 0;padding:12px;border:1px solid var(--line);border-radius:14px;min-width:0}
+.application-fields fieldset{border:0;margin:15px 0;padding:0;min-width:0}
+.job-options{display:flex;gap:8px;flex-wrap:wrap}
+.job-options label{padding:5px 9px;background:#fff0f7;border-radius:8px}
+.job-options label:has(input:checked){background:var(--rose)}
+.foot{padding:20px 0;border-top:1px solid var(--line);font-size:.87rem}
+@media(max-width:790px){.pathway{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){
+ .wrap{width:calc(100% - 26px)}
+ .top .wrap{gap:3px;padding-block:9px}.top nav{gap:7px}.top nav a{padding-block:5px}
+ .hero{grid-template-columns:1fr;gap:16px;margin:12px 0 38px;padding:16px;border-radius:22px}
+ .hero h1{font-size:clamp(1.65rem,7.6vw,2.8rem)}
+ .hero-intro{margin:9px 0 12px}
+ .hero-visual img{aspect-ratio:16/9}
+ .entry-links .button{flex:1 1 auto;padding-inline:9px;font-size:.9rem}
+ section{margin-bottom:36px}
+ .grid,.result-overview{grid-template-columns:1fr;gap:10px}
+ .pathway li{display:grid;grid-template-columns:32px 1fr;column-gap:9px;padding:11px 12px}
+ .pathway li::before{grid-row:span 2;margin:0}.pathway li p{grid-column:2;margin-top:2px}
+}
+/* Pop recruitment theme */
+:root{--paper:#fff9f5;--pink:#b2185c;--pink-dark:#831444;--ink:#352237;--lemon:#ffea80;--rose:#ffd6e8;--mint:#d4f3e4;--lilac:#eaddff;--line:#efbfd6}
+body{background:radial-gradient(circle,#edb9d14d 1px,transparent 1.2px) 0 0/19px 19px,var(--paper)}
+.top{background:#fffdfb}.brand{color:var(--pink-dark)}
+.hero{position:relative;isolation:isolate;background:linear-gradient(140deg,#ffd2e8 0%,#ffe7f2 61%,#f2dfff 100%);border:2px solid #e293ba;box-shadow:0 6px 0 #f4b9d4;margin-top:20px}
+.hero h1 span{background:linear-gradient(transparent 68%,#ffec83 68% 92%,transparent 92%);box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero-visual{margin:8px 6px 12px;border-width:8px;border-bottom-width:34px;border-radius:12px;transform:rotate(2.2deg);box-shadow:0 9px 0 #ac568833,0 14px 26px #64204929}
+.hero-visual figcaption{bottom:0;left:0;transform:translateY(0);position:static;text-align:center;background:white;margin-bottom:-26px;line-height:20px}
+.hero-visual{border-bottom-width:8px}.hero-visual figcaption{margin-bottom:0;padding:5px}
+.hero-photo{position:relative;min-width:0}
+.hero-photo::after{content:"✦";position:absolute;right:0;top:0;pointer-events:none;display:grid;place-items:center;width:43px;height:43px;border-radius:50%;background:var(--lemon);color:#7e321c;font-size:1.35rem;transform:rotate(12deg);box-shadow:0 3px 0 #ad57423b}
+.button{border-radius:999px;box-shadow:0 3px 0 #75133e;font-weight:850}
+.button.secondary{box-shadow:0 3px 0 #e2a1bf}
+.entry-links .secondary{box-shadow:0 3px 0 #b27b32}
+.button:active:not(:disabled){transform:translateY(2px);box-shadow:none}
+#diagnosis{background:#f3e5ff;border:2px solid #d7baef;box-shadow:0 5px 0 #e8d5fa}
+#choose,#quiz,#results{border:1px solid #e5c8ef;box-shadow:0 4px 0 #e0c9ef}
+.quiz-top strong{background:#ffe0ef;color:#6e2148}.quiz-top span{background:#fff0a4;color:#5b3510}
+.option{border-width:2px;border-radius:16px;box-shadow:0 2px 0 #f1d5e3}
+.option:has(input:checked){border-color:#b2185c;background:#ffdced;box-shadow:0 2px 0 #b2185c}
+.result-tile{border:2px solid #e3ba63}.result-tile + .result-tile{border-color:#ed9ec3}
+#score{font-size:clamp(2.9rem,8vw,5.3rem)}
+.pathway li{box-shadow:0 4px 0 #e9cddc;border:1px solid #dcbdd1}
+.pathway li::before{border:1px solid #e9bed1}
+.salon,.company-card,details,.contact{box-shadow:0 4px 0 #f1d6e3}
+.salon .body{background:#fff0f7}.salon+.salon .body{background:#e9f8ef}
+.company-card{background:#f0e6ff}
+.contact{background:#ffe5f1}
+#visit-template{min-height:42px;font-size:.86rem}
+@media(max-width:640px){.hero{padding:15px;margin-top:13px}.hero-visual{margin:4px 9px 7px;transform:rotate(1.6deg)}.hero-photo::after{right:3px;width:36px;height:36px}.hero h1{line-height:1.25}.entry-links{gap:8px}.entry-links .button{min-height:47px}.pathway li{min-height:60px}}
+
+/* Illustration, action cards and career timeline */
+.hero{background:radial-gradient(circle,#d9659c32 1.4px,transparent 1.7px) 0 0/18px 18px,linear-gradient(145deg,#ffd6e9,#fff3c8);gap:24px}
+.hero-photo::after{content:none}
+.hero-visual{transform:rotate(2deg);margin:5px 15px 16px 12px}
+.salon-sticker{position:absolute;z-index:2;right:0;bottom:13px;display:grid;place-items:center;width:76px;height:76px;border:3px solid #fff;border-radius:46% 54% 53% 47%;background:#e2f8e9;color:#76324f;transform:rotate(12deg);box-shadow:0 4px 0 #77344a29}
+.salon-sticker svg,.entry-icon svg{width:75%;height:75%;fill:none;stroke:currentColor;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round}
+.entry-links{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.entry-card{display:grid;grid-template-columns:46px minmax(0,1fr) auto;align-items:center;gap:11px;min-height:80px;padding:12px 14px;border:2px solid #ad1a57;border-radius:19px;background:#fff;color:var(--ink);box-shadow:0 4px 0 #d987ab;text-decoration:none}
+.entry-card:hover{background:#fff2f8}.entry-card + .entry-card{border-color:#8f6a2b;background:#fff4b5;box-shadow:0 4px 0 #d3a85c}
+.entry-card + .entry-card:hover{background:#fff9dc}
+.entry-icon{display:grid;place-items:center;width:46px;height:46px;border-radius:16px;background:#ffdfed;color:#9a2054}
+.entry-card + .entry-card .entry-icon{background:#fffdf1;color:#795420}
+.entry-card strong,.entry-card small{display:block;line-height:1.45}
+.entry-card strong{font-size:1.08rem}.entry-card small{color:#5c4756;margin-top:3px}
+.entry-arrow{font-weight:850;color:#831444}
+.pathway{position:relative;gap:12px}
+.pathway li{position:relative;padding-top:15px}
+.pathway li::before{position:relative;z-index:1}
+.pathway li::after{content:"";position:absolute;left:32px;right:-28px;top:31px;border-top:2px dashed #ac5275;pointer-events:none}
+.pathway li:last-child::after{display:none}
+.pathway h3,.pathway p{position:relative}
+.progress-dots{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-top:9px}
+.progress-dots i{height:7px;border-radius:9px;background:#eee1f6}
+.progress-dots i.done{background:#b2185c}
+.progress-dots i.current{background:#ef9bc1}
+#quiz progress{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);margin:0}
+@media(max-width:790px) and (min-width:641px){.pathway li:nth-child(even)::after{display:none}}
+@media(max-width:640px){
+ .hero{gap:12px}.hero-visual{margin:2px 14px 8px 6px}.salon-sticker{width:54px;height:54px;bottom:4px}
+ .entry-links{grid-template-columns:1fr;gap:8px}.entry-card{min-height:60px;padding:8px 10px;grid-template-columns:38px minmax(0,1fr) auto}.entry-icon{width:38px;height:38px}.entry-card strong{font-size:1rem}
+ .pathway li::after{left:27px;right:auto;top:31px;bottom:-32px;border-top:0;border-left:2px dashed #ac5275}
+}
+
+/* Colorful type and gentle motion */
+.hero{background:radial-gradient(circle,#ab397a32 1.5px,transparent 1.9px) 0 0/19px 19px,linear-gradient(137deg,#ffc9e4 3%,#f4d9ff 57%,#fff2af 100%)}
+.hero h1{font-size:clamp(2.4rem,5.3vw,4.35rem);font-weight:900;letter-spacing:-.07em;line-height:1.23}
+.hero h1 .hero-line{display:inline-block;color:#4e2661;background:none}
+.hero h1 .hero-accent{display:inline-block;color:#a21960;background:linear-gradient(transparent 68%,#ffe775 68% 94%,transparent 94%);text-shadow:1px 2px #fff8f5}
+.hero h1 .hero-happy{color:#a21960;background:none}
+.hero-intro{font-weight:700}
+.hero-photo .salon-sticker{background:#baf0de;color:#612a5a}
+.entry-card{border-color:#9a2765;box-shadow:0 5px 0 #d87caa}
+.entry-card strong{font-size:clamp(1.17rem,2.2vw,1.48rem);color:#871e59}
+.entry-card + .entry-card strong{color:#5a3712}
+.entry-card small{font-size:.86rem}
+#diagnosis h2,#pathway h2,#salons h2,#philosophy h2{color:#652665}
+.question{font-size:clamp(1.35rem,3.5vw,2.05rem);color:#562857;line-height:1.5}
+#results h3{font-size:clamp(1.5rem,4vw,2.1rem);color:#8c245b}
+.result-tile{background:#fff1a6}.result-tile + .result-tile{background:#ffd9f0}
+#score{font-size:clamp(3.25rem,8vw,5.5rem);color:#782782}
+.pathway li:nth-child(2)::before{background:#067352;color:white}
+.pathway li:nth-child(3)::before{background:#805219;color:white}
+.pathway li:nth-child(4)::before{background:#673f9b;color:white}
+@media(max-width:640px){.hero h1{font-size:clamp(1.85rem,8.3vw,3rem)}.entry-card strong{font-size:1.12rem}}
+@media(prefers-reduced-motion:no-preference){
+ .hero-line,.hero-accent{animation:recruit-rise .55s cubic-bezier(.18,.65,.4,1) both}
+ .hero-accent{animation-delay:.10s}
+ .salon-sticker{animation:recruit-wiggle .8s .2s ease-out both}
+ #results:not([hidden]) .result-tile{animation:recruit-rise .35s ease-out both}
+ #results:not([hidden]) .result-tile + .result-tile{animation-delay:.1s}
+ .entry-card{transition:transform .18s ease,background-color .18s ease}
+ .entry-card:hover{transform:translateY(-2px)}
+}
+@keyframes recruit-rise{from{opacity:0;transform:translateY(9px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes recruit-wiggle{0%{transform:rotate(-10deg) scale(.91)}50%{transform:rotate(18deg) scale(1.05)}100%{transform:rotate(12deg) scale(1)}}
+
+.button.line{background:#06c755;border-color:#06c755;color:#fff;box-shadow:0 3px 0 #04813a}.button.line:hover{background:#05a648;border-color:#05a648}</style>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<header class="top" id="top"><div class="wrap"><a href="#top" class="brand">株式会社行雲流水</a><nav aria-label="ページ内メニュー"><a href="#diagnosis">診断</a><a href="#salons">サロン</a><a href="#philosophy">理念</a><a href="#pathway">入社後の流れ</a></nav></div></header>
+<main id="main" class="wrap">
+<div class="hero"><div class="hero-copy"><p class="eyebrow">泉大津 · 美容師採用</p><h1><span class="hero-line">らしさを輝かせ、</span><br><span class="hero-accent">自分史上<span class="hero-happy">最幸</span>に。</span></h1><p class="hero-intro">美容学生も、経験のある美容師さんも。7問で、自分が大切にしたい働き方を見つけよう。</p></div><div class="hero-photo"><figure class="hero-visual"><img src="https://ko-un-ryu-sui.com/images/flow-cloud-team-hero_18f9702b.jpg" alt="FLOWCLOUDのキャスト" fetchpriority="high" width="800" height="640"><figcaption>FLOWCLOUDのキャスト</figcaption></figure><span class="salon-sticker" aria-hidden="true"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="12" cy="33" r="6"/><circle cx="28" cy="36" r="6"/><path d="m16 29 22-19-9 20M25 30 14 8l5 19m18-7v11m-5-6h10"/></svg></span></div><nav class="entry-links" aria-label="採用メニュー"><a class="entry-card" href="#diagnosis" data-entry="diagnose"><span class="entry-icon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 38 9 24C-2 13 14 4 24 16 34 4 50 13 39 24Z"/><path d="M33 8l2-5m5 10 5-2"/></svg></span><span><strong>7問の適性診断</strong><small>大切にしたい働き方を見つけよう</small></span><span class="entry-arrow" aria-hidden="true">→</span></a><a class="entry-card" href="#diagnosis" data-entry="visit"><span class="entry-icon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="8" y="12" width="32" height="29" rx="5"/><path d="M15 7v10m18-10v10M8 22h32m-22 9 4 4 8-8"/></svg></span><span><strong>見学・相談</strong><small>お店を見たい、話を聞いてみたい</small></span><span class="entry-arrow" aria-hidden="true">→</span></a></nav></div>
+
+<section id="diagnosis">
+<p class="eyebrow" id="entry-label">CAREER MATCH</p><h2 id="entry-heading">あなたの価値観を知る</h2>
+<p class="intro" id="entry-intro">今のあなたに近い答えを選んでね。結果は自分を知るためのヒントです。</p>
+<form id="choose" class="panel">
+<label class="field" id="course-field">診断コース<select id="course" name="course"><option value="newgrad">美容学生・新卒</option><option value="career">中途</option></select></label>
+<fieldset id="application-fields" class="application-fields">
+<legend>応募者情報</legend>
+<label class="field">見学・相談<select id="intent"><option value="visit">サロン見学</option><option value="consult">その他相談</option></select></label>
+<label class="field">お名前（漢字）<input name="name" autocomplete="name" maxlength="80" required></label>
+<label class="field">お名前（ふりがな）<input name="kana" maxlength="100" required></label>
+<label class="field">学校名<input name="school" maxlength="120" required></label>
+<label class="field">学年<input name="grade" maxlength="40" placeholder="例：2年、卒業済み" required></label>
+<label class="field">Instagram ID（任意）<input name="instagram" maxlength="40" placeholder="@アカウント名"></label>
+<fieldset><legend>興味のある職種（複数選択可）</legend><div class="job-options">
+<label><input type="checkbox" name="jobs" value="美容師"> 美容師</label>
+<label><input type="checkbox" name="jobs" value="アイリスト"> アイリスト</label>
+<label><input type="checkbox" name="jobs" value="エステ"> エステ</label>
+<label><input type="checkbox" name="jobs" value="ネイリスト"> ネイリスト</label>
+<label><input type="checkbox" name="jobs" value="レセプション"> レセプション</label>
+<label><input type="checkbox" name="jobs" value="その他"> その他</label>
+</div></fieldset>
+<button type="button" class="button secondary" id="visit-template">見学希望日のテンプレートを入れる</button>
+<label class="field">相談内容<textarea id="consultation" name="consultation" rows="4" maxlength="1000" required></textarea></label>
+</fieldset>
+<p id="profile-note" class="small">診断だけでもOK。回答はこの画面で確認できます。</p>
+<p id="profile-status" class="small error" role="status"></p>
+<div class="actions"><button class="button" id="start-quiz">診断スタート ♡</button></div>
+</form>
+<form class="panel" id="quiz" hidden>
+<div class="quiz-top"><strong id="track-label"></strong><span id="step"></span></div>
+<progress id="progress" max="7" value="1" aria-label="診断の進捗"></progress><div class="progress-dots" id="progress-dots" aria-hidden="true"></div>
+<h3 class="question" id="question" tabindex="-1"></h3>
+<div class="options" id="options" role="group" aria-labelledby="question"></div>
+<p class="small error" id="quiz-error" role="alert" hidden>回答を1つ選んでください。</p>
+<div class="actions"><button class="button secondary" type="button" id="back">戻る</button><button class="button" id="next">次の質問へ →</button></div>
+</form>
+<div class="panel" id="results" hidden>
+<h3 tabindex="-1" id="result-heading">あなたの診断結果 ♡</h3>
+<div class="result-overview">
+<div class="result-tile"><p class="result-label"><span aria-hidden="true">♡</span> 価値観のマッチ度の目安</p><strong id="score"></strong><p id="match-message"></p></div>
+<div class="result-tile"><p class="result-label"><span aria-hidden="true">✿</span> あなたのいいところ</p><strong id="salon-result"></strong><p id="salon-caption" class="result-next"></p><p id="result-tip" class="result-next"></p></div>
+</div>
+<div class="actions"><a class="button" href="#diagnosis" data-intent="0">見学・相談してみる →</a><a class="button line" href="https://line.me/R/oaMessage/%40512rmwnk/?%E3%83%9E%E3%83%83%E3%83%81%E3%83%B3%E3%82%B0%E8%A8%BA%E6%96%AD%E3%82%92%E5%8F%97%E3%81%91%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E8%A6%8B%E5%AD%A6%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E7%9B%B8%E8%AB%87%E3%81%97%E3%81%9F%E3%81%84%E3%81%A7%E3%81%99%E3%80%82" target="_blank" rel="noopener">LINEで相談する ↗</a><button type="button" class="button secondary" id="revise">回答を見直す</button><button type="button" class="button secondary" id="restart">最初から</button></div>
+</div>
+</section>
+
+<section id="pathway">
+<p class="eyebrow">YOUR FIRST STEPS</p><h2>入社からのキャリアステップ</h2>
+<p class="intro">入社後の成長の目安です。</p>
+<ol class="pathway grid">
+<li class="card"><h3>FLOWCLOUDで基礎を学ぶ</h3><p>コンシェルジュとして、接客や技術の基礎を身につけます。</p></li>
+<li class="card"><h3>1年後、glowでデビュー</h3><p>Jrスタイリストまたはアイリストとしてのデビューを目指します。</p></li>
+<li class="card"><h3>さらに1年後、月間総売上50万円へ</h3><p>スタイリストとしての次の目標。</p></li>
+<li class="card"><h3>さらに1年後、月間総売上100万円へ</h3><p>さらに技術を磨き、次の目標へ。</p></li>
+</ol>
+</section>
+<section id="salons">
+<p class="eyebrow">OUR SALONS</p><h2>泉大津の、ふたつのサロン</h2><p class="intro">働く場所の雰囲気と、それぞれのサロンで出会える美容を紹介します。</p>
+<article class="card company-card"><div><h3>株式会社行雲流水</h3><p>会社の想い、教育と成長、募集要項をご覧いただけます。</p></div><a class="button secondary" href="https://ko-un-ryu-sui.com/">行雲流水の公式ページへ ↗</a></article>
+
+<div class="grid">
+<article class="card salon"><img class="photo" src="https://ko-un-ryu-sui.com/images/flow-cloud-exterior_9a36efba.jpg" alt="FLOWCLOUDの外観" loading="lazy" width="800" height="450"><div class="body"><h3>FLOWCLOUD</h3><p>完全予約制・会員制のサロン。半個室でのヘッドスパが特徴。髪質改善・縮毛矯正・頭皮ケアで、一人ひとりの悩みに寄り添います。</p><address class="small">泉大津市東雲町1-20<br>南海本線 泉大津駅から徒歩約3分</address><div class="actions"><a href="https://www.flowcloud.net/">FLOWCLOUD公式サイト ↗</a></div></div></article>
+<article class="card salon"><img class="photo" src="https://ko-un-ryu-sui.com/images/glow-reception_7c41b63c.jpg" alt="glowの受付" loading="lazy" width="800" height="450"><div class="body"><h3>glow</h3><p>ショート・ショートボブやレイヤーカット、髪質改善カラーなどをマンツーマンで提案。似合わせと日々の扱いやすさを大切にしています。まつエク・エステもあります。</p><address class="small">泉大津市旭町18-3 いずみおおつCITY 1F<br>南海本線 泉大津駅東口から徒歩約1分</address><div class="actions"><a href="https://glow-izumiotsu.jp/">glow公式サイト ↗</a></div></div></article>
+</div>
+</section>
+
+<section id="philosophy">
+<p class="eyebrow">OUR PHILOSOPHY</p><h2>行雲流水が大切にすること</h2><p class="intro">自分らしく、しなやかに。変化を楽しみながら、人と社会に価値を流し続ける。</p>
+<details open><summary>経営理念・経営ビジョン</summary><p><strong>らしさを輝かせ、自分史上最幸になる。</strong><br>美容・商品・教育を通じて、一人ひとりの個性と魅力を磨き、自ら未来を切り拓く力を育みます。</p><p><strong>幸せの環がつながる社会を創る。</strong><br>お客様、仲間、地域、業界へ。一人の幸せから、応援し合い、共に成長できる社会へ。</p></details>
+<details><summary>人事理念・教育理念・9credo</summary><p><strong>圧倒的当事者意識～誠実・挑戦・学習～</strong><br><strong>人を想う可能思考～感謝心・素直心・向上心～</strong></p><p>9credo～応援し応援される人になる～</p><div id="credo-list"></div></details>
+<details><summary>3つの幸せの循環</summary><p><strong>お客様の幸せ（ありがとうのバトン）</strong> — 美しさと自信を手にした人が、まわりへ笑顔と優しさを広げる。</p><p><strong>仲間の幸せ（応援のエネルギー）</strong> — 挑戦を応援し、支えられたことに感謝する。その連鎖が次の成長を生む。</p><p><strong>業界の幸せ（全員が主役の未来）</strong> — 知識・技術・成功事例を分かち合い、美容師が誇りを持って働ける環境を広げる。</p></details>
+<details><summary>経営戦略・3つの事業</summary><p><strong>美容業界の「理想」をすべて叶える。</strong><br>現場（美容室）× 商品（開発）× 人（教育）の力で、現場の課題を解決し、得た知見を業界に分かち合う。</p><p><strong>美容室事業（ハピネスリング構想）</strong><br>人生に寄り添う、生涯美容パートナー。<br>地域で最も愛される幸せ創造サロンになる。</p><p><strong>商品開発事業（美ノベーション）</strong><br>科学の力で、その人らしい美を解き放つ。<br>美容の常識を超える価値を世界へ届ける。</p><p><strong>人材開発事業（行雲流水塾）</strong><br>自ら考え、自ら動く人を育てる。<br>応援し、応援される人財があふれる社会を創る。</p><p>事業ドメイン <strong>幸せ体験創造業</strong></p></details>
+</section>
+
+<section id="contact" class="panel contact" hidden>
+<h2>見学・応募を相談する</h2>
+<p class="intro">入力内容を受付番号と一緒に、行雲流水の採用担当のLINEへ送ります。</p>
+<form id="request-form">
+
+<p class="small">入力内容は見学・相談への対応に利用し、受付番号と一緒に採用担当へLINEで通知します。詳しくは<a href="/privacy">プライバシーポリシー</a>をご確認ください。</p><p><label><input id="consent" type="checkbox" required> 入力した情報と、診断を受けた場合はその回答を、採用担当に共有することに同意します。</label></p>
+<div class="actions"><button class="button" id="register">送信する</button></div>
+<p id="request-status" class="small" role="status"></p>
+</form>
+</section>
+</main>
+<footer class="wrap foot"><span>株式会社行雲流水</span><a href="#top">ページ上部へ ↑</a><a href="/privacy">プライバシーポリシー</a></footer>
+<script src="diagnosis.js?v=5-cast"></script>
+<script>
+"use strict";
+const byId = id => document.getElementById(id);
+let track = null;
+let index = 0;
+let answers = [];
+let visitId;
+async function recordFunnel(event) {
+  try {
+    if (!visitId) {
+      try { visitId = sessionStorage.getItem("recruit-funnel-id"); } catch {}
+      visitId ||= crypto.randomUUID();
+      try { sessionStorage.setItem("recruit-funnel-id",visitId); } catch {}
+    }
+    await fetch("/api/funnel",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({visitId,event}),
+      keepalive:true
+    });
+  } catch {
+    // A network error must not interrupt the diagnosis or form.
+  }
+}
+
+function append(parent, tag, value) {
+  const element = document.createElement(tag);
+  element.textContent = value;
+  parent.append(element);
+  return element;
+}
+function show(id) {
+  for (const view of ["choose","quiz","results"]) byId(view).hidden = view !== id;
+}
+function renderQuestion() {
+  byId("progress-dots").innerHTML = Array.from({length:questionCount}, (_, i) => i < index ? '<i class="done"></i>' : i === index ? '<i class="current"></i>' : "<i></i>").join("");
+  show("quiz");
+  byId("contact").hidden = true;
+  byId("track-label").textContent = tracks[track].label;
+  byId("step").textContent = (index + 1) + " / " + questionCount;
+  byId("progress").value = index + 1;
+  const [prompt,...choices] = questionAt(track,index,diagnosisVersion);
+  byId("question").textContent = prompt;
+  byId("options").replaceChildren();
+  byId("quiz-error").hidden = true;
+  choices.forEach((_, position) => {
+    const value = (position + index + 1) % choices.length;
+    const option = choices[value];
+    const label = append(byId("options"), "label", "");
+    label.className = "option";
+    const radio = document.createElement("input");
+    radio.type = "radio";
+    radio.name = "answer";
+    radio.value = value;
+    radio.checked = answers[index] === value;
+    label.append(radio, document.createTextNode(option));
+  });
+  byId("next").textContent = index === questionCount - 1 ? "診断結果を見る ♡" : "次の質問へ →";
+  byId("question").focus();
+}
+function renderResult() {
+  const result = describeResult(answers,track,diagnosisVersion);
+  byId("score").textContent = result.displayPercent + "%";
+  byId("salon-result").textContent = result.title;
+  byId("salon-caption").textContent = result.description;
+  byId("match-message").textContent = result.displayPercent >= matchThreshold
+    ? "行雲流水の価値観とよく合っています ♡"
+    : "サロン見学で、あなたが大切にしたいことを見つけてみませんか？";
+  byId("result-tip").textContent = result.tip;
+  byId("contact").hidden = true;
+  updateMessage();
+  show("results");
+  void recordFunnel("diagnosis_completed");
+  byId("result-heading").focus();
+}
+let receipt = null;
+let submissionId = null;
+let lastPayload = null;
+let requestPending = false;
+function updateMessage() {
+  receipt = null;
+  byId("register").disabled = false;
+  byId("request-status").textContent = "";
+  byId("consent").checked = false;
+}
+
+let application;
+let entry = "diagnose";
+function selectEntry(value, fromResult = false) {
+  entry = value;
+  if (!fromResult) {
+    track = null;
+    answers = [];
+  }
+  const diagnosisOnly = value === "diagnose";
+  byId("entry-label").textContent = diagnosisOnly ? "CAREER MATCH" : "SALON RECRUIT";
+  byId("entry-heading").textContent = diagnosisOnly ? "あなたの価値観を知る" : "見学・相談";
+  byId("entry-intro").textContent = diagnosisOnly
+    ? "今のあなたに近い答えを選んでね。結果は自分を知るためのヒントです。"
+    : "必要な情報を入力して、採用担当に送ってね。";
+  const fields = byId("application-fields");
+  byId("course-field").hidden = !diagnosisOnly;
+  byId("course").disabled = !diagnosisOnly;
+  if (!diagnosisOnly) {
+    byId("intent").value = value;
+    updateVisitTemplate();
+  }
+  fields.hidden = diagnosisOnly;
+  fields.disabled = diagnosisOnly;
+  byId("profile-note").textContent = diagnosisOnly
+    ? "診断だけでもOK。回答はこの画面で確認できます。"
+    : "共有に同意すると、入力内容を採用担当が確認できます。";
+  byId("start-quiz").textContent = diagnosisOnly ? "診断スタート ♡" : "送信内容の確認へ →";
+  byId("profile-status").textContent = "";
+  byId("contact").hidden = true;
+  show("choose");
+  updateMessage();
+}
+document.querySelectorAll("[data-entry]").forEach(link => link.addEventListener("click", event => {
+  if (requestPending) { event.preventDefault(); return; }
+  selectEntry(link.dataset.entry);
+  if (link.dataset.entry === "visit") void recordFunnel("direct_to_form");
+}));
+byId("choose").addEventListener("submit", event => {
+  event.preventDefault();
+  const form = new FormData(event.currentTarget);
+  if (entry === "diagnose") {
+    track = form.get("course");
+    index = 0;
+    answers = [];
+    renderQuestion();
+    return;
+  }
+  const profile = Object.fromEntries(["name","kana","school","grade","instagram","consultation"].map(key => [key,form.get(key).trim()]));
+  profile.jobs = form.getAll("jobs");
+  const blank = Object.keys(profile).find(key => key !== "instagram" && key !== "jobs" && !profile[key]);
+  const status = byId("profile-status");
+  if (blank) {
+    status.textContent = "必須項目を入力してください。";
+    event.currentTarget.elements.namedItem(blank).focus();
+    return;
+  }
+  if (!profile.jobs.length) {
+    status.textContent = "興味のある職種を1つ以上選んでください。";
+    byId("application-fields").querySelector('[name="jobs"]').focus();
+    return;
+  }
+  status.textContent = "";
+  application = profile;
+
+  updateMessage();
+  byId("contact").hidden = false;
+  byId("contact").scrollIntoView();
+  byId("consent").focus({preventScroll:true});
+});
+byId("quiz").addEventListener("change", event => {
+  if (event.target.name !== "answer") return;
+  answers[index] = Number(event.target.value);
+  byId("quiz-error").hidden = true;
+});
+byId("quiz").addEventListener("submit", event => {
+  event.preventDefault();
+  if (answers[index] === undefined) {
+    byId("quiz-error").hidden = false;
+    byId("options").querySelector("input").focus();
+    return;
+  }
+  if (index === questionCount - 1) {
+    renderResult();
+  } else {
+    index++;
+    renderQuestion();
+  }
+});
+byId("back").addEventListener("click", () => {
+  if (index === 0) {
+    show("choose");
+    byId("course").focus();
+  } else {
+    index--;
+    renderQuestion();
+  }
+});
+byId("revise").addEventListener("click", () => {
+  index = 0;
+  renderQuestion();
+});
+byId("restart").addEventListener("click", () => {
+  byId("choose").reset();
+  byId("profile-status").textContent = "";
+  application = undefined;
+  track = null;
+  answers = [];
+  index = 0;
+  updateMessage();
+  selectEntry("diagnose");
+  byId("course").focus();
+});
+const visitTemplate = "【見学希望日】\n第1希望：○月○日（○） ○時ごろ\n第2希望：○月○日（○） ○時ごろ\n第3希望：○月○日（○） ○時ごろ";
+const consultation = byId("consultation");
+function updateVisitTemplate() {
+  const visiting = byId("intent").value === "visit";
+  byId("visit-template").hidden = !visiting;
+  consultation.placeholder = visiting ? visitTemplate : "聞いてみたいことや、応募について伝えたいこと";
+}
+byId("intent").addEventListener("change", () => {
+  updateVisitTemplate();
+  byId("contact").hidden = true;
+  updateMessage();
+});
+byId("visit-template").addEventListener("click", () => {
+  if (!consultation.value.includes("【見学希望日】")) {
+    const existing = consultation.value.trim();
+    if (existing && existing.length + visitTemplate.length + 2 > consultation.maxLength) {
+      byId("profile-status").textContent = "希望日を追加するには、相談内容を少し短くしてください。";
+      consultation.focus();
+      return;
+    }
+    byId("profile-status").textContent = "";
+    consultation.value = existing ? existing + "\n\n" + visitTemplate : visitTemplate;
+    consultation.dispatchEvent(new Event("input",{bubbles:true}));
+  }
+  consultation.focus();
+});
+byId("application-fields").addEventListener("input", () => {
+  byId("contact").hidden = true;
+  updateMessage();
+});
+document.querySelectorAll("[data-intent]").forEach(link => link.addEventListener("click", event => {
+  if (requestPending) { event.preventDefault(); return; }
+  event.preventDefault();
+  selectEntry(link.dataset.intent === "0" ? "visit" : "consult", true);
+  void recordFunnel("diagnosis_to_form");
+  byId("diagnosis").scrollIntoView();
+  byId("intent").focus({preventScroll:true});
+}));
+byId("request-form").addEventListener("submit", async event => {
+  event.preventDefault();
+  if (requestPending || receipt || !byId("consent").checked || byId("contact").hidden) return;
+  if (location.protocol === "file:") {
+    byId("request-status").textContent = "受付を使うには、採用アプリのサーバーから開いてください。";
+    return;
+  }
+  const intent = byId("intent").value;
+  requestPending = true;
+  const controls = document.querySelectorAll("#register,#choose fieldset,#start-quiz,#consent,[data-intent],#revise,#restart");
+  controls.forEach(control => {
+    if (control.matches("a")) control.setAttribute("aria-disabled","true");
+    else control.disabled = true;
+  });
+  const status = byId("request-status");
+  status.textContent = "送信しています…";
+  try {
+    const payload = {track,questionVersion:diagnosisVersion,answers:answers.length === questionCount ? answers : null,intent,consent:true,application};
+    const snapshot = JSON.stringify(payload);
+    if (snapshot !== lastPayload) {
+      submissionId = crypto.randomUUID();
+      lastPayload = snapshot;
+    }
+    const response = await fetch("/api/requests", {
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({...payload,submissionId})
+    });
+    const result = await response.json();
+    if (!response.ok) {
+      if (result.error === "line retry expired" && result.receipt) {
+        status.textContent = "受付番号 " + result.receipt + "。通知の再送期限が過ぎました。この番号を採用担当にお伝えください。";
+        receipt = result.receipt;
+        return;
+      }
+      status.textContent = result.receipt
+        ? "受付番号 " + result.receipt + "。LINE通知を確認できませんでした。同じ内容で再送できます。"
+        : "送信できませんでした。時間をおいてお試しください。";
+      return;
+    }
+    receipt = result.receipt;
+    status.textContent = "送信しました ♡ 受付番号 " + receipt;
+  } catch {
+    status.textContent = "送信を確認できませんでした。同じ内容で再送できます。";
+  } finally {
+    requestPending = false;
+    controls.forEach(control => {
+      if (control.matches("a")) control.removeAttribute("aria-disabled");
+      else control.disabled = control.id === "register" && Boolean(receipt);
+    });
+  }
+});
+axes.forEach((axis,i) => {
+  append(byId("credo-list"),"p",axis);
+  const list = append(byId("credo-list"),"ol","");
+  list.start = i*3+1;
+  credo.slice(i*3,i*3+3).forEach(item => append(list,"li",item));
+});
+selectEntry("diagnose");
+</script>
+<script>
+(() => {
+  const link = document.querySelector('#results a.button.line');
+  if (!link) return;
+  const fields = ["track-label", "score", "salon-result"].map(id => document.getElementById(id));
+  function updateLineLink() {
+    const [track, score, strength] = fields.map(field => field?.textContent.trim() || "");
+    const lines = [
+      "【採用のご相談】",
+      "①ご希望：" + track,
+      "②お名前："
+    ];
+    if (score && strength) {
+      lines.push("③マッチング診断の結果：価値観のマッチ度 " + score + "／いいところ「" + strength + "」",
+        "④ご質問・見学のご希望日など：");
+    } else {
+      lines.push("③ご質問・見学のご希望日など：");
+    }
+    link.href = "https://line.me/R/oaMessage/%40512rmwnk/?" + encodeURIComponent(lines.join("\n"));
+  }
+  const observer = new MutationObserver(updateLineLink);
+  fields.filter(Boolean).forEach(field => observer.observe(field, {childList: true, characterData: true, subtree: true}));
+  link.addEventListener("click", updateLineLink);
+  updateLineLink();
+})();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+# ============================================================
+#  match.ko-un-ryu-sui.com（採用マッチング診断）用 .htaccess
+#  置き場所: match.ko-un-ryu-sui.com/public_html/.htaccess
+#  ※このファイルは自動の取り込み（sync_match.php）では更新されない。変えたときは手で貼り替える。
+# ============================================================
+
+AddDefaultCharset UTF-8
+DirectoryIndex index.html
+Options -Indexes
+
+# --- 応答ヘッダ（ChatGPT Sites 版と同じ） ---
+<IfModule mod_headers.c>
+Header always set Cache-Control "no-store"
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "same-origin"
+Header always set X-Frame-Options "DENY"
+</IfModule>
+
+# --- 受付データ・ログは外から見せない ---
+<FilesMatch "\.(sqlite|sqlite3|db|log|sql)$">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# (1) http → https
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# (2) app.php と lib/ は直接開かせない（下の (3) からの内部転送は THE_REQUEST が違うので通る）
+RewriteCond %{THE_REQUEST} \s/app\.php[\s?]
+RewriteRule ^ - [F]
+RewriteRule ^lib/ - [F]
+
+# (3) /api/* と /admin* は app.php（受付・管理画面）へ
+RewriteRule ^(api|admin)(/|$) app.php [L]
+
+# (4) /privacy と /privacy/ はプライバシーポリシー
+RewriteRule ^privacy/?$ privacy.html [L]
+</IfModule>
+
+# 存在しないURLは404
+ErrorDocument 404 "ページが見つかりません。"

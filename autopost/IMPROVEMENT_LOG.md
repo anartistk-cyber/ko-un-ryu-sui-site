@@ -1276,3 +1276,11 @@
   - FAQPage の JSON-LD にも同じ7問が入っている（JSONとして読める）
   - 題名は変更なし（FC「…泉大津の美容室 FLOWCLOUD」／glow「…泉大津駅徒歩1分の美容室 glow」）
   - 次：Search Console の再クロール依頼（上限があるので必要なら翌日）。効果判定は EFFECT_CHECKS のとおり 12/6・12/20
+- 2026-11-23 08:48 【採用マッチング診断：保守を Claude に移管・自社 Xserver への引っ越しを準備（藤津さん 11/23 8:36「全てこっちでやる」→ 置き場所は「自社サイトへ引っ越す」）】
+  - ソースをリポジトリ `match-site/` に取り込み：画面3点（診断ページ・診断スクリプト・プライバシー）は ChatGPT Sites の公開版と SHA-256 まで一致（/ c9c3e878…a544・diagnosis.js d26299f1…4686・privacy f20e2abc…61bf）。最後の ChatGPT 版のソースは `match-site/archive/`
+  - サーバー側（受付API・funnel・LINE通知・管理画面・ログイン）を PHP + SQLite に移植（`site/app.php`）。管理画面の診断の内訳は、採点の JavaScript をそのまま使う（`lib/admin.js` は diagnosis.js と `src/admin-parts.js` から `build.mjs` が自動生成）。設置確認用に `GET /api/health`（ok・db・config のはい／いいえだけ）を追加
+  - 試験 `match-site/tests/compat-test.mjs`：元の ChatGPT Sites 版（Node で代用実行）と PHP 版に同じリクエスト約90通り（正常・不正・旧版1〜5・LINE の 500/409/接続不可・LINE未設定・Origin・ログイン上限・状態切替・ログアウト）を送り、応答・LINE通知の文面・管理画面の表示（ブラウザで描画して比較）が一致 → 91件 OK・不一致 0。LINE は模擬サーバーで受けた（実物には未送信）
+  - 取り込み `server-files/sync_match.php`（毎時・PHP も取り込むため許可リストを厳しく。`.htaccess`・`config*`・DB・ログ・`../` は取り込まない／ハッシュ不一致は書かない。敵対的な一覧での試験済み）と `server-files/htaccess-match`、設定の見本 `match-site/server/config.sample.php`
+  - 新しい版の privacy.html だけ「ChatGPT Sites」→「エックスサーバー（日本国内のレンタルサーバー）」に直した（切り替えの時に初めて有効。いま公開中の ChatGPT 版・採用サイトの /privacy は変えていない。採用サイト側は OK 18 の手順で直す）
+  - 外には何も出していない。サーバー側の作業は OK待ち 16（試運転の準備）・17（LINE 試験送信1通）・18（本番切り替え）に入れた。手順・戻し方・未確認は `autopost/MATCH_MIGRATION.md`。FACTS・CLAUDE.md・APPROVALS を更新。`REQUEST_CHATGPT_2026-11-22_match-line-template.md` は役目終了と注記
+  - 未確認：Xserver の PHP 8.1+・SQLite・書き込み権限（試運転の /api/health で確認）／LINE が Xserver から実際に届くこと（OK 17）／サブドメイン追加と既存 CNAME の順序／スマホ実機の LINE 入力欄（11/22 から継続・藤津さん）
