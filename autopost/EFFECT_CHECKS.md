@@ -32,6 +32,8 @@
 | 店頭用「Googleマップの感想のお願い」カード（A6）を作成（11/22。使うかは藤津さん＝APPROVALS 11） | Google のクチコミ件数と平均（FLOWCLOUD・glow の月次：GBP パフォーマンス／Google マップの表示） | 11月時点（llms.txt）：FLOWCLOUD 4.8・118件／glow 4.9・17件 | 12/2（月次で件数を記録）／12/20 | |
 | IndexNow の仕組み（キーファイル3サイト＋送り方）（11/22）。Bing Webmaster Tools の登録は藤津さん待ち（APPROVALS 9） | 登録後：Bing Webmaster Tools の索引数・検索表示（3サイト）。IndexNow 送信の応答（200/202） | なし（Bing 側は未登録で数字が取れない） | 登録の1〜2週間後に読む | |
 | FLOWCLOUD トップ「キャスト紹介」の320px幅のはみ出し（9px。glow も同じ共通CSS）を直した（11/22、shared/css/30-delight.css） | 手元の overflow-test（320/360/390/768/1280px）が 0 のまま | 直す前：320px で FLOWCLOUD トップが 9px はみ出し | 次回の公開前点検 | |
+| IndexNow を3サイトに送信（11/22 12:3x。採用200・FLOWCLOUD 202・glow 202）／FLOWCLOUD の構造化データ sameAs にエキテンの掲載を追加（11/22） | Bing Webmaster Tools（登録後）の索引数と、ChatGPT・Copilot の回答に出る店の情報（住所・営業時間）が現在の値か | なし（Bing 側は未計測。エキテンの営業時間は藤津さんの修正待ち＝APPROVALS 12） | 12/6（IndexNow・Bing 登録後の最初の読み取り） | |
+| 採用トップ PageSpeed（11/22：95/100/100/100・FCP 1.1・LCP 1.1・TBT 260ms・SI 1.9。FLOWCLOUD・glow は100） | TBT が200ms以下に戻るか（採用トップの診断カード追加後に増えた）。原因は自社バンドル4本（各80〜110ms）と GA4 2本（126〜137ms）。GA4 を遅らせると計測が欠けるので見送り | 11/6 に TBT 60ms（88点）→ 今回 TBT 260ms（95点） | 12/4 の週次で再測定 | |
 
 ## 計測の変更の目印（比べるときの注意）
 - 11/3：GA4 の「CTA位置（pos）」を登録（FC・glow）。
