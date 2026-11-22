@@ -1204,3 +1204,8 @@
   - 藤津さんの操作の進み（読み取りで確認）：エキテン FLOWCLOUD の住所が東雲町1-20に修正済み（営業時間 9:00〜18:00 は未修正）。Bing Places に Google から3拠点を取り込み済み（公開待ち）。Bing Webmaster Tools はサインイン済みの様子（取り込みは未確認）。
 - 2026-11-22 13:0x 【FLOWCLOUD の構造化データ sameAs にエキテンの掲載（https://www.ekiten.jp/shop_2896914/）を追加】藤津さん「なんか出来る改善あればよろしく」。エキテンの住所が東雲町1-20に直った（藤津さん）ので、同じ店の掲載として店の情報を結びつける（AI検索・地図での表記の一致の足がかり）。fc-site/build.mjs の1か所のみ。確認：FC 98ファイル（manifest 不一致0）、JSON-LD 38ブロックが読める、トップに掲載URLが入っている。glow は対応する掲載が見つかっていないので変更なし。採用トップ PageSpeed の TBT 260ms は、GA4 を遅らせると計測が欠けるので見送り（EFFECT_CHECKS に記録）。
 - 2026-11-22 15:1x 【OK待ち9・10 を「済」に／OK待ち13（Bing のサイトマップ送信）を新設】藤津さん 15:09「2.3おわってるはず」→ 読み取りで確認：Bing Webmaster Tools に3サイト（flowcloud.net・glow-izumiotsu.jp・ko-un-ryu-sui.com）が取り込み済み（データは最長48時間後。サイトマップは0件＝送信は設定変更なので「やって」待ち）。Apple Business Connect は Apple のログインが要り Claude は確認できない＝藤津さんの報告として記録。エキテンは住所のみ修正済みで営業時間は 9:00〜18:00 のまま（OK待ち12に残す）。判定：12/6 に Bing の索引数・AI Performance を初回読み取り。戻し方：APPROVALS の該当行を戻す。
+- 2026-11-22 15:2x 【藤津さん「やって／アップルもできるとこまで／他も」→ Bing サイトマップ・エキテン営業時間・Apple 準備】
+  - Bing Webmaster Tools：FLOWCLOUD（www.flowcloud.net）に sitemap-fc.xml を送信（処理中）。glow（sitemap-gl.xml）・採用（sitemap.xml）は Search Console の取り込みで登録済み（成功・各38 URL）。最初に「0件」と読んだのは取り込み途中だった。確認：12/6 に Bing の索引数・AI Performance。戻し方：Bing のサイトマップ画面で削除。
+  - Apple Business：この PC の Chrome 2台とも未ログイン（Apple アカウントの入力画面で停止）→ Claude は進められない。貼る値を autopost/APPLE_BUSINESS_VALUES.md に作成（FACTS の範囲）。
+  - エキテン FLOWCLOUD の営業時間：店舗ページの編集で 水〜祝 9:00〜20:00・補足「最終受付18:00」を入力し確認画面まで進めた。「同意する」（掲載内容が事実に合うという宣誓）→「送信」は止めた（藤津さんの同意が要るため）。月・火は定休日のまま。反映後の確認：店舗ページの営業時間表示。
+  - ジョブメドレー glow（hs/1641819）：施設名 グロウ（glow）・住所「旭町20-1 アルザタウン泉大津1F」・最終更新 11/14（公開ページの読み取り）。FACTS の「旭町18-3 いずみおおつCITY 1F」と違う＝同じ店の旧表記とみられる。直すのはジョブメドレーの管理画面（藤津さんのログイン）。
