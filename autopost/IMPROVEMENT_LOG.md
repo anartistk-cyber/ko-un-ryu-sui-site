@@ -1196,3 +1196,9 @@
   - 確認：抽選を固定した試験で、はずれ／★1〜★4 の合言葉・知らせ・ログの行を確認。
   - 戻し方：ページは抽選の1行で kira を 0 に固定すれば従来どおり。LINE は ★つき32本の「利用」をオフ、通常8本の画像は /home/claude/work/card2_○○.png（旧カード）に戻す。
   - 未了：実機で LINE に合言葉を送って届くかの確認（藤津さん）。必殺技は方式Aのためジョブごとに2つ固定（全16種）。
+- 2026-11-22 12:4x 【成長ラウンドの本番確認・IndexNow送信・PageSpeed／Instagram投稿は ChatGPT の範囲に（藤津さん 12:34）】
+  - 本番確認（Chrome の実機で取得）：3サイトとも https://<ホスト>/9542d375a4b17cd25d7be464f9d4955a.txt が 200・中身はキーのみ。FC・glow のトップの診断バナーは「8タイプ・20問・約2分」、FC の小見出し色は rgb(110,90,34)＝#6e5a22。採用 /privacy に「診断コンテンツ」の項目08と改定日 2026年11月22日が公開済み。
+  - IndexNow 送信：api.indexnow.org 自身のタブから同一オリジンで POST（サイトのタブからの POST は CORS で失敗）。採用 200（38URL）／FLOWCLOUD 202（37）／glow 202（38）。方法を autopost/INDEXNOW.md に追記。Bing の索引・表示の数字は、藤津さんの Bing Webmaster Tools 登録（OK待ち9）後に読む。
+  - PageSpeed（スマホ・本番）：FLOWCLOUD 100/100/100/100（FCP 1.0・LCP 1.0・TBT 30ms・CLS 0・SI 1.0）＝ユーザー補助 97→100（#6e5a22 の効果）。glow 100/100/100/100（FCP 1.0・LCP 1.0・TBT 70ms・CLS 0・SI 1.1）＝前回99→100。採用 95/100/100/100（FCP 1.1・LCP 1.1・TBT 260ms・CLS 0・SI 1.9）＝TBT が200msを超えて性能が5点減。次：採用トップの TBT（診断カード追加後）を、効果の確認と合わせて週次で再測定。
+  - 担当の変更（藤津さん）：Instagram への投稿（ブログ紹介を含む）は ChatGPT の範囲。ブログ本文での Instagram 紹介は可。手順書（autopost/RUNBOOK・UNATTENDED・fc-site/glow-site の RUNBOOK）と、ブログ自動投稿の3つの定期タスク（採用・FLOWCLOUD・glow）の指示から、Instagram の投稿と sns/ 下書きの作成を外した。OK待ち8は移管。
+  - 藤津さんの操作の進み（読み取りで確認）：エキテン FLOWCLOUD の住所が東雲町1-20に修正済み（営業時間 9:00〜18:00 は未修正）。Bing Places に Google から3拠点を取り込み済み（公開待ち）。Bing Webmaster Tools はサインイン済みの様子（取り込みは未確認）。

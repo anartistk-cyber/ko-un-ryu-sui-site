@@ -12,14 +12,16 @@
 ## 送り方（サンドボックスから api.indexnow.org には届かないので、Chrome のタブから）
 1. 公開後、毎時の取り込み（採用 :17／FC :22／glow :27）が済んで、`https://<サイト>/<キー>.txt` が 200 で開けることを確認する。
 2. 上のコマンドで JSON を作る。
-3. そのサイトのタブ（例：https://www.flowcloud.net/）で、javascript_tool に次を渡す（`J` に JSON を貼る）。
+3. **api.indexnow.org 自身のタブから送る（2026-11-22 に確認した方法。CORS を避けられ、応答コードも読める）**：Chrome の新しいタブで `https://api.indexnow.org/indexnow?url=<サイトのトップURLをエンコード>&key=<キー>&keyLocation=<キーファイルのURLをエンコード>` を開く（空白のページ＝応答200）。そのタブの javascript_tool で、同一オリジンの `fetch('/IndexNow', {method:'POST', …})` を使えば、3サイト分を続けて送れて、`r.status` が読める。実績：採用 200（38URL）／FLOWCLOUD 202（37）／glow 202（38）。
+   以前の方法（各サイトのタブから POST）は、ブラウザの CORS で `Failed to fetch` になる（サイトのタブからの no-cors の GET は届くが、応答は読めない）。
+   参考：各サイトのタブから送る場合は、javascript_tool に次を渡す（`J` に JSON を貼る）。
    ```js
    const J = /* node scripts/indexnow-urls.mjs の出力 */;
    const r = await fetch('https://api.indexnow.org/IndexNow', {method:'POST', headers:{'Content-Type':'application/json; charset=utf-8'}, body: JSON.stringify(J)});
    r.status
    ```
    200 または 202 なら受理（202＝キーの確認待ち）。403＝キーが違う、422＝URL がホストと合わない、429＝送りすぎ。
-   CORS で失敗するときは、1 URL ずつ `fetch('https://api.indexnow.org/indexnow?url=…&key=…', {mode:'no-cors'})` を使う。
+   CORS で失敗するときは、上の「api.indexnow.org 自身のタブから送る」方法を使う。
 4. 結果を IMPROVEMENT_LOG に1行残す（サイト・件数・応答コード）。
 
 ## 使いどころ
