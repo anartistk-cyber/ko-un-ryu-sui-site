@@ -124,6 +124,8 @@ html{scroll-behavior:smooth}
 .wlist li{display:grid;grid-template-columns:2em 1fr;gap:6px;align-items:start}
 .wlist .mk{font-family:var(--display);font-weight:900;font-size:20px;line-height:1.4;color:var(--deep)}
 .wlist b{display:block;font-family:var(--display)}
+.wlist .ck{display:flex;flex-direction:column;gap:2px;margin-top:6px;padding:8px 10px;border-radius:8px;background:#eef4f7;font-size:14px}
+.wlist .ck em{font-style:normal;font-family:var(--display);font-weight:700;font-size:12px;color:var(--deep)}
 .blurbox img{filter:blur(13px);-webkit-filter:blur(13px)}
 .blurnote{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);white-space:nowrap;background:var(--ink);color:#fff;font-family:var(--display);font-weight:700;font-size:13px;padding:6px 14px;border-radius:999px}
 .rtitle{display:flex;flex-direction:column;gap:2px;text-align:center}
@@ -191,7 +193,7 @@ html{scroll-behavior:smooth}
       <p id="gText"></p>
       <h3>項目ごとのアドバイス</h3>
       <ul class="wlist" id="gList"></ul>
-      <p class="note">休み・成長・評価・お客様との時間の4問から出した目安です。◎ 良い　○ まずまず　△ 気をつけたい　× 見直したい</p>
+      <p class="note">休み・成長・評価・お客様との時間の4問から出した目安です。ふり返りポイントは、ご自身で確かめてみてください。◎ 良い　○ まずまず　△ 気をつけたい　× 見直したい</p>
     </div>
     <div class="card">
       <h3 id="linecard">詳しい結果は、LINEで受け取れます</h3>
@@ -269,11 +271,11 @@ function finish(){
     :r.pct>=50?'おおむね良い状態です。ただ、下の項目に△や×があれば、そこが疲れの元になりやすいところです。'
     :r.pct>=25?'無理が続いている可能性があります。下の△・×の項目から1つ選び、今月中にお店へ相談してみましょう。'
     :'かなり負担がかかっています。まずは休みの確保を優先し、下の項目を紙に書き出して、信頼できる人に相談してください。';
-  const WADV=[['休み','休みはとれて',['しっかり休めています。この休み方を続けられるシフトを守りましょう。','おおむね休めています。連休を月に1回入れると、回復がぐっと楽になります。','休みが足りていません。まず「週に1日は予約を入れない日」を決めて、店長に相談してみましょう。','ほとんど休めていない状態です。今月中に、休日数と営業後の練習時間を書き出して、お店と話す場をつくりましょう。']],
-    ['成長','成長を感じ',['この1年でしっかり伸びています。次に身につけたい技術を1つ決めると、勢いが続きます。','少しずつ伸びています。月に1回、仕上がりの写真を見返すと、伸びが見えやすくなります。','成長を感じにくい時期です。3か月で身につけたい技術を1つだけ決め、練習日を先に予定へ入れましょう。','止まっている感覚が続いています。教えてくれる人や講習など、学べる環境があるかを見直す時期です。']],
-    ['評価','給与や評価',['頑張りが評価に反映されています。評価の基準を言葉にしておくと、後輩にも伝えられます。','ある程度は反映されています。次の昇給や歩合の条件を、一度確認しておきましょう。','反映が弱いと感じています。指名数やリピート率など、自分の数字を3か月分まとめて面談で伝えましょう。','評価に納得できていない状態です。評価の基準が数字や書面で示されているかを確かめ、無ければ基準を聞いてみましょう。']],
-    ['お客様との時間','かけられる時間',['お客様に十分な時間をかけられています。その強みを、カウンセリングや提案にも生かしましょう。','おおむね時間をとれています。初めてのお客様だけ枠を10分長くすると、満足につながりやすくなります。','時間が少し足りていません。予約枠の長さやメニューの組み方を、一度見直してもらいましょう。','時間がまったく足りていません。1日に担当する人数の上限を、お店と相談して決めるのがおすすめです。']]];
-  $('gList').innerHTML='';WADV.forEach(w=>{const n=ans[QS.findIndex(q=>q.q.indexOf(w[1])>=0)];const li=document.createElement('li');const mk=document.createElement('span');mk.className='mk';mk.textContent='◎○△×'[n];const tx=document.createElement('span');const bb=document.createElement('b');bb.textContent=w[0];tx.appendChild(bb);tx.appendChild(document.createTextNode(w[2][n]));li.appendChild(mk);li.appendChild(tx);$('gList').appendChild(li)});
+  const WADV=[['休み','休みはとれて',['しっかり休めています。この休み方を続けられるシフトを守りましょう。','おおむね休めています。連休を月に1回入れると、回復がぐっと楽になります。','休みが足りていません。まず「週に2日の休み」と「毎日の休憩時間」がとれているかを確かめ、足りない方を店長に相談してみましょう。','ほとんど休めていない状態です。今月中に、休日数と営業後の練習時間を書き出して、お店と話す場をつくりましょう。'],['休憩時間がちゃんととれているか','週に2日は休みがきっちりあるか']],
+    ['成長','成長を感じ',['この1年でしっかり伸びています。次に身につけたい技術を1つ決めると、勢いが続きます。','少しずつ伸びています。月に1回、仕上がりの写真を見返すと、伸びが見えやすくなります。','成長を感じにくい時期です。3か月で身につけたい技術を1つだけ決め、練習日を先に予定へ入れましょう。','止まっている感覚が続いています。教えてくれる人や講習など、学べる環境があるかを見直す時期です。'],['レッスン時間がとれているか','昇格のチャンスが与えられているか','講習や勉強会があるか']],
+    ['評価','給与や評価',['頑張りが評価に反映されています。評価の基準を言葉にしておくと、後輩にも伝えられます。','ある程度は反映されています。次の昇給や歩合の条件を、一度確認しておきましょう。','反映が弱いと感じています。指名数やリピート率など、自分の数字を3か月分まとめて面談で伝えましょう。','評価に納得できていない状態です。評価の基準が数字や書面で示されているかを確かめ、無ければ基準を聞いてみましょう。'],['成長のチャンスが与えられているか','お給料に反映されているか','任されている仕事が増えているか']],
+    ['お客様との時間','かけられる時間',['お客様に十分な時間をかけられています。その強みを、カウンセリングや提案にも生かしましょう。','おおむね時間をとれています。初めてのお客様だけ枠を10分長くすると、満足につながりやすくなります。','時間が少し足りていません。予約枠の長さやメニューの組み方を、一度見直してもらいましょう。','時間がまったく足りていません。1日に担当する人数の上限を、お店と相談して決めるのがおすすめです。'],['時間単価を考えた濃い接客ができているか','お客様にとって価値のある仕事ができているか']]];
+  $('gList').innerHTML='';WADV.forEach(w=>{const n=ans[QS.findIndex(q=>q.q.indexOf(w[1])>=0)];const li=document.createElement('li');const mk=document.createElement('span');mk.className='mk';mk.textContent='◎○△×'[n];const tx=document.createElement('span');const bb=document.createElement('b');bb.textContent=w[0];tx.appendChild(bb);tx.appendChild(document.createTextNode(w[2][n]));const ck=document.createElement('span');ck.className='ck';const ch=document.createElement('em');ch.textContent='ふり返りポイント';ck.appendChild(ch);w[3].forEach(c=>{const d=document.createElement('span');d.textContent='□ '+c;ck.appendChild(d)});tx.appendChild(ck);li.appendChild(mk);li.appendChild(tx);$('gList').appendChild(li)});
   const JOBS=['','美容師','アイリスト','エステ','ネイリスト','レセプション','その他'],EMPS=['','正社員','パート・アルバイト','業務委託','まだ決めていない'];
   const chosen={1:'sei',2:'part',3:'gyomu'}[r.emp];const fk=chosen||r.fit;
   const FIT=chosen?{sei:['正社員','あなたが選んだ「正社員」に合わせた目安です。教育や評価のしくみが整ったお店だと、腰をすえて力を伸ばせます。'],part:['パート・アルバイト','あなたが選んだ「パート・アルバイト」に合わせた目安です。時間が限られる分、得意なメニューをしぼると指名につながります。'],gyomu:['業務委託','あなたが選んだ「業務委託」に合わせた目安です。集客と時間の使い方を自分で決められる分、得意分野の発信がカギになります。']}[fk]
