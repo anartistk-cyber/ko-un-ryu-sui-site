@@ -4,7 +4,7 @@ import { faqItems } from "../data/faq";
 import { ContactForm } from "../components/ContactForm";
 import { track, trackClick } from "../lib/track";
 import { MATCH_ENTRY } from "../lib/match";
-import { MatchCta, LineCta, MatchStrip } from "../components/MatchCta";
+import { MatchCta, LineCta, MatchStrip, TypeHeroCard } from "../components/MatchCta";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -306,6 +306,33 @@ export default function Home() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // どこまで読まれているかの計測（2026-11-22）。各セクションが画面の上から75%に入ったとき、1回だけ recruit_section_view を送る。
+  // 場所は既存の GA4 カスタムディメンション「採用CTAの場所」（パラメータ名 placement）に入れる（新しい登録は不要）。個人情報は載せない。
+  useEffect(() => {
+    if (typeof IntersectionObserver === "undefined") return;
+    const seen = new Set<string>();
+    const used = new Map<string, number>();
+    const io = new IntersectionObserver((entries) => {
+      for (const en of entries) {
+        if (!en.isIntersecting) continue;
+        const el = en.target as HTMLElement;
+        const key = el.dataset.secKey || "";
+        if (!key || seen.has(key)) continue;
+        seen.add(key);
+        track("recruit_section_view", { placement: key });
+        io.unobserve(el);
+      }
+    }, { rootMargin: "0px 0px -25% 0px", threshold: 0 });
+    document.querySelectorAll<HTMLElement>("main > section").forEach((el) => {
+      const base = ((el.className || "").toString().split(" ")[0] || "sec").replace(/-section$/, "");
+      const n = (used.get(base) || 0) + 1;
+      used.set(base, n);
+      el.dataset.secKey = "sec-" + base + (n > 1 ? "-" + n : "");
+      io.observe(el);
+    });
+    return () => io.disconnect();
+  }, []);
+
   const closeMenu = () => setMenuOpen(false);
 
   return (
@@ -344,6 +371,7 @@ export default function Home() {
               <h1 id="hero-title">美容師としての<br /><em><span className="nb">これからを、</span><span className="nb">ここから。</span></em></h1>
               <p className="hero-lead">大阪・泉大津のFLOWCLOUDとglow。はじめての就職も、経験を生かす転職も、子育てをしながらの仕事も。あなたの今に合う働き方を、募集条件と仕事の様子から確かめてください。</p>
               <div className="hero-actions">
+                <TypeHeroCard placement="hero" />
                 <MatchCta placement="hero" />
                 <LineCta href={lineHref} placement="hero" />
                 <a className="button button-primary" href="/?c=visit#contact" data-track="visit" data-placement="hero">サロン見学を相談する <ArrowRight size={17} aria-hidden="true" /></a>

@@ -1300,3 +1300,57 @@ html.cv-off main>:is(.worry-section,.who-section,.statement-section,.vision-sect
 .blog-links h2 { font-size: 18px; margin: 0 0 12px; }
 .blog-links ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .blog-links a { display: block; padding: 12px 16px; border-radius: 16px; background: var(--pink2, #fff6f8); color: var(--ink); font-weight: 700; text-decoration: none; }
+
+/* ===== 2026-11-22 美容師タイプ診断：キャラクター入りの大きな入口（トップの最初の画面）=====
+   藤津さん「トップに画像を出して、興味がわくように。クリックしてもらおう」。診断（赤ピンク）・LINE（緑）とは別の「水色の空＋砂の地面」で、遊びの入口に見せる。
+   キャラクターは types-strip.webp（8体・1枚）。スマホは横にゆっくり流し、600px 以上は全員を静止して並べる。動きは prefers-reduced-motion で止める。 */
+.type-hero { position: relative; isolation: isolate; display: flex; flex-direction: column; align-items: center; width: 100%; padding: 14px 16px 16px; border: 3px solid #173c3e; border-radius: 26px; overflow: hidden; color: #173c3e; text-align: center; text-decoration: none; font-family: var(--pop);
+  background: radial-gradient(rgba(255,255,255,.55) 2px, transparent 2.5px) 0 0 / 16px 16px, linear-gradient(180deg, #cdeafb 0%, #e6f5fd 100%);
+  box-shadow: 0 7px 0 #173c3e, 0 18px 30px rgba(60,140,190,.28); transition: transform .16s var(--ease), box-shadow .16s var(--ease); }
+.type-hero:hover { transform: translateY(-3px); box-shadow: 0 10px 0 #173c3e, 0 22px 34px rgba(60,140,190,.34); }
+.type-hero:active { transform: translateY(5px); box-shadow: 0 2px 0 #173c3e, 0 8px 14px rgba(60,140,190,.3); }
+.type-hero:focus-visible { outline: 3px solid #173c3e; outline-offset: 3px; }
+.type-hero > :not(.match-cta-shine) { position: relative; z-index: 1; }
+.type-hero-kicker { display: inline-block; padding: 3px 12px; border: 2px solid #173c3e; border-radius: 999px; background: #fff; font-size: 12px; font-weight: 700; letter-spacing: .06em; line-height: 1.5; }
+.type-hero-title { display: block; margin: 6px 0 2px; color: #ffd84d; font-size: clamp(29px, 8.4vw, 36px); font-weight: 900; letter-spacing: .02em; line-height: 1.2; -webkit-text-stroke: 7px #173c3e; paint-order: stroke fill; text-shadow: 0 4px 0 rgba(23,60,62,.3); }
+.type-hero-sub { display: block; font-size: 14px; font-weight: 700; line-height: 1.5; }
+.type-hero-chars { display: block; width: calc(100% + 32px); margin: 8px -16px 0; overflow: hidden; background: linear-gradient(to top, #f3dfae 0, #f3dfae 22px, transparent 22px); }
+.type-hero-track { display: flex; width: max-content; animation: typeRoll 34s linear infinite; }
+.type-hero-track img { display: block; flex: none; width: auto; height: 90px; }
+@keyframes typeRoll { to { transform: translateX(-50%); } }
+.type-hero-go { display: inline-flex; align-items: center; justify-content: center; gap: 6px; width: 100%; margin-top: 12px; padding: 11px 16px 11px 18px; border: 2px solid #173c3e; border-radius: 999px; background: #ffd84d; color: #173c3e; font-size: 17px; font-weight: 700; box-shadow: 0 3px 0 #173c3e; }
+.type-hero-go svg { animation: matchNudge 1.6s ease-in-out infinite; }
+.hero-actions .type-hero { flex: 1 1 100%; max-width: 600px; }
+@media (min-width: 600px) {
+  .type-hero-chars { display: flex; justify-content: center; }
+  .type-hero-track { width: auto; animation: none; }
+  .type-hero-dup { display: none; }
+}
+@media (max-width: 850px) {
+  .hero-actions .type-hero { grid-column: 1 / -1; max-width: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .type-hero-track { animation: none; }
+  .type-hero-go svg { animation: none; }
+  .type-hero { transition: none; }
+}
+
+/* 最初の画面に診断カードを収める：上の余白と文の下の余白を詰める（2026-11-22） */
+@media (max-width: 850px) {
+  .hero-copy { padding-top: 18px; padding-bottom: 28px; }
+  .hero-copy h1 { margin-bottom: 14px; }
+  .hero-lead { margin-bottom: 16px; }
+  .type-hero { padding: 12px 14px 14px; }
+  .type-hero-chars { width: calc(100% + 28px); margin: 6px -14px 0; }
+}
+@media (min-width: 851px) {
+  .hero-copy { padding-top: 34px; }
+}
+@media (min-width: 851px) {
+  .hero-lead { max-width: 530px; margin-bottom: 22px; }
+}
+
+/* 2026-11-22 /match/（転送ページ）：見出しの最初の文節が 360〜390px 幅に収まらず横にはみ出していたので、狭い画面だけ小さくする */
+@media (max-width: 520px) {
+  .match-entry-hero h1 { font-size: clamp(24px, 7.2vw, 38px); }
+}

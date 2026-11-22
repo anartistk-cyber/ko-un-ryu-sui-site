@@ -5,6 +5,7 @@ import { trackClick } from "../lib/track";
 // 採用マッチング診断（外部アプリ）と公式LINEへの、目立たせた入口。診断を一番目立たせ、LINEを次に目立たせる。
 // 文言は診断アプリ自身の言い回し（「7問で、あなたの大切にしたいことを見つけよう」「適性診断」）に合わせ、所要時間・無料などアプリが言っていないことは書かない。
 // 飾りはCSS（グラデーション・影・動き）とインラインSVGだけ。画像を読み込まないので、表示速度（LCP）には影響しない。
+// 例外：TypeHeroCard（美容師タイプ診断）だけは小さなキャラクター画像（約58KB）を1枚読む。公開後に PageSpeed（スマホ）で LCP を確認すること。
 
 /** 診断のイラスト：2つの円が重なる「マッチ」とハート・きらめき（飾りなので読み上げない） */
 export function MatchArt({ className = "" }: { className?: string }) {
@@ -58,6 +59,27 @@ export function TypeCta({ placement }: { placement: string }) {
     <a className="type-cta" href="/type-shindan/" data-track="type_shindan" data-placement={placement}>
       <span className="type-cta-text"><b>美容師タイプ診断</b><small>18問・約2分。あなたはどのジョブ？</small></span>
       <ArrowRight className="type-cta-arrow" size={20} aria-hidden="true" />
+    </a>
+  );
+}
+
+/** 美容師タイプ診断（/type-shindan/）の、キャラクター入りの大きな入口。トップの最初の画面用（2026-11-22 藤津さん「トップに画像を出して、興味がわくように」）。
+ *  キャラクター8体を1枚の小さな画像（types-strip.webp・約58KB）にして並べ、スマホでは横にゆっくり流す（動きが苦手な設定では止める）。
+ *  画像は飾りなので alt は空、意味は文字（題名・説明・ボタン）で伝える。同じタブで開く。 */
+export function TypeHeroCard({ placement }: { placement: string }) {
+  return (
+    <a className="type-hero" href="/type-shindan/" data-track="type_shindan" data-placement={placement}>
+      <span className="match-cta-shine" aria-hidden="true" />
+      <span className="type-hero-kicker">8タイプ・18問・約2分</span>
+      <strong className="type-hero-title">美容師タイプ診断</strong>
+      <span className="type-hero-sub">あなたはどのジョブ？ キャラクターで見つけよう</span>
+      <span className="type-hero-chars" aria-hidden="true">
+        <span className="type-hero-track">
+          <img src="/images/type-shindan/types-strip.webp" width={1233} height={200} alt="" decoding="async" />
+          <img className="type-hero-dup" src="/images/type-shindan/types-strip.webp" width={1233} height={200} alt="" decoding="async" />
+        </span>
+      </span>
+      <span className="type-hero-go">診断をはじめる <ArrowRight size={18} aria-hidden="true" /></span>
     </a>
   );
 }

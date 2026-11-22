@@ -2,7 +2,7 @@
  "files": [
   {
    "path": "404.html",
-   "sha256": "ab1810f81cfe9c4ae18399457e854b236bb8fc51d7c6a69a6a4a104d0d90f1d8"
+   "sha256": "6ea7d194fd8646d5a88a0193e2b6eff28f3f6ec23585b7aed6b8c6bef6e565fa"
   },
   {
    "path": "apple-touch-icon.png",
@@ -10,103 +10,103 @@
   },
   {
    "path": "area.html",
-   "sha256": "7ae46581a8fff6c0b82bbad314848866f95274955b1405927cb835f7c83876e0"
+   "sha256": "896658fcf64481be413d73c4587d48a212f98632eced58d3f880cc82d350879d"
   },
   {
-   "path": "assets/index-C6xB7w_F.css",
-   "sha256": "e4c1c4fe79b8e8199c556e6cef022aa1ad771d4e23f9028607975d2e7056be94"
+   "path": "assets/index-BMwBxW2v.css",
+   "sha256": "5968a282e2c3776886fbcab52ada0b761a9f35e51a095ea01f917344ea72165d"
   },
   {
-   "path": "assets/index-D_Cl6qOs.js",
-   "sha256": "03130c8ee554344bb6b1fb7bedde51203a8dd80f5f563cac03919a2fef0e9982"
+   "path": "assets/index-CDTY_sYO.js",
+   "sha256": "510cc0e2f78135a14dca69b155c842c5bed6d4f65c4db136a6dd3a668270c39c"
   },
   {
    "path": "blog/fukushoku-salon-erabi.html",
-   "sha256": "25f2511be4291e0bffe840c81a59f9438e35c27ee49fe08ff8a0cb3c6480f69f"
+   "sha256": "c5eba715ec22b30d178154bbb96febba7224d3c2b2a5040e1cae4a4679153a78"
   },
   {
    "path": "blog/gakusei-kengaku-kakunin.html",
-   "sha256": "b55b31b97f0469c2f3a412f11ac49b7f25c15cf82d45f568019d1c59440188bf"
+   "sha256": "583c401916ea7b015236d5de648e6d041dcb6940ac24987ac5d59295b8274268"
   },
   {
    "path": "blog/hayaban-osoban.html",
-   "sha256": "6a0e1960853e476a4a9f4b1052731a864c9d95c99dc1d2faaf4d415b0a47a403"
+   "sha256": "3482c9c792685781cd8ba9fd63adfdbd565c91e71e75138afdc8b49f454be324"
   },
   {
    "path": "blog/hogosha-biyoushi-shuushoku-shinpai.html",
-   "sha256": "0ed14689f035b25ccc1c543aad61de557c99295ce8350252e275160b860dec0c"
+   "sha256": "04453a4a5291d32532160384e3e871123d2fec8057c57d23c57282cde3402f6a"
   },
   {
    "path": "blog/index.html",
-   "sha256": "cacaa708070bf994dca3dad8e6f34ea5d1930082640916bccfb0fafc5958ad79"
+   "sha256": "de8b08793cf985f391777531c3766d425c4c30934ecf4b76136c5990df2f6ff0"
   },
   {
    "path": "blog/kotei-zangyo-minikata.html",
-   "sha256": "53b13fe078d1f2fe3bcc765e429b707885b1a1c9708c4d1ef02b73c19ba429a9"
+   "sha256": "a048e2235d4697172b21a8cacc7c8aa36c8ec793c019888f928493ddc442358c"
   },
   {
    "path": "blog/koukousei-biyoushi-susumikata.html",
-   "sha256": "2f274e4a26db08a09b5ee3472e30356cbf9782cc69470823b92fa2866b556869"
+   "sha256": "6ab14f0778a692d98c74927145074d316a12e17b16ceac12deb1057775c9074e"
   },
   {
    "path": "blog/kyujitsu-yukyu-minikata.html",
-   "sha256": "e18b1dadd1acd35c355263d2b31779435fb2917568daa8c18de39c3f41218c18"
+   "sha256": "0548e316d4adaf6d6ec373e40b9f1688b332162bb73c27e87c31dfc34b591347"
   },
   {
    "path": "blog/lesson-taiken-yoru-minikata.html",
-   "sha256": "61c051ea9cac9d35023b80d8ba676cefceeea1ac17ffdd7361f96916b308b706"
+   "sha256": "c65a98ee85763be8fc4db8f32f0c92492b4af6480edcae67b4aa1aa75840ac0a"
   },
   {
    "path": "blog/one-year-debut-curriculum.html",
-   "sha256": "0701e1b4b8ef6077733bc4b2b76e82d678c5ae385dc50404ad093c3a0cb887b3"
+   "sha256": "4bd0f81362a103ded1e0c773ea80386897dee44d09775c0de1a5fcf3b4175927"
   },
   {
    "path": "blog/part-biyoushi-jikyu-minikata.html",
-   "sha256": "9cca811ba166d39594281e75bfd8bf83fc5c7869bb128df5be8147d34d938441"
+   "sha256": "100b509519e8e6ee1187230b9479095499dae8a186b2aeead45fd093a37f832d"
   },
   {
    "path": "blog/salon-erabi-checklist.html",
-   "sha256": "57f210883a006fc1d33b443a1ce177365ad24d2860a85dec0610b1658f24373c"
+   "sha256": "ba2293e32c1f5ee99182a907a7413936240fceb4b700a80a45dc0711beaae081"
   },
   {
    "path": "blog/salon-ninzu-funiki-minikata.html",
-   "sha256": "7a2b05ed20421dc8002b52acbba833923b1138497823bae8399a85a5fdb8b455"
+   "sha256": "8ad4feba9478ddcce391788c8246ba854f1dd4f6e207511f198ee24d1c5daf4e"
   },
   {
    "path": "blog/shoninkyu-teate.html",
-   "sha256": "6477a79993361bb88652cdc6f16f388e44f4d9b92d12d9fc2e586e53a852b138"
+   "sha256": "c03b34c665eeacecba2ef0a50b95a22a3aad4345bed52d35aabf6683385fed3b"
   },
   {
    "path": "blog/shougakukin-hensai-salon-erabi.html",
-   "sha256": "b0ba27e52e345738014cf0499c90f81eee82c09b91a587d087e9e6d1ce3f48f1"
+   "sha256": "da0e85fc1e7850bf24c6af6fed4a110aa2062ce968924f517851ab7f5ef2a2e0"
   },
   {
    "path": "blog/shouyo-minikata-biyoushi.html",
-   "sha256": "e4c4a414698c602f740ced8bfbcd4e87044fafd7a1c4876adeda30bcc02f084c"
+   "sha256": "62523e912e92dc1138fd9db8dafbd9d1d70f90dded99213a31dd01649440311b"
   },
   {
    "path": "blog/student-baito.html",
-   "sha256": "f6fb34af80f3468a3178c890cadcbb6889b71fd8e7be987906dde8686cf2e571"
+   "sha256": "50ce16366613d138d53c8e378410f64ec54d1bec5c7be7e42cf9c413113e43d8"
   },
   {
    "path": "blog/taiken-guide.html",
-   "sha256": "8a47e585f915f44f781224c1949d6e7bfd36cb4cbcbc8c50068e5342d0e5cb56"
+   "sha256": "62e1739067e9d7c31bf4207de56fe92aacfd5c30a3b9211c44843cff194bace0"
   },
   {
    "path": "blog/tenshoku-point.html",
-   "sha256": "2b65cbe584a266d64a722638a8f35b56eac0e373ed140e914cdc2e0e807b7a56"
+   "sha256": "cff1776864670885a9d20590bff4d8a2596641a4a94ef6379c2e337290ac8a3d"
   },
   {
    "path": "blog/tsukin-kishiwada-izumi-sakai.html",
-   "sha256": "afde290ca011ef5c23a52b1e53878fac462de7f2d7037767bf6a16b8fe501eec"
+   "sha256": "d9acb4daef1c2fb9a8caf4b05521c791832405609ba770d7a147bcbf3dd15caf"
   },
   {
    "path": "blog/yuki-koyo-shiyo-kikan-minikata.html",
-   "sha256": "b43bd094415f8375162c72a45efaa4333ce19b33a852b14a95cca02152180f4f"
+   "sha256": "b9f23220f81aaab4140f2c9e9de0d10a3ac7187218495e6724a6700b7c6de503"
   },
   {
    "path": "faq.html",
-   "sha256": "87b88cf7e4899d33f5bd1098728e9ec21b068a0434660d482b7cb905865beffe"
+   "sha256": "a701aa25b4ce70d892353264f48106bf6a3beb029eefad16dbf18aa3c0777372"
   },
   {
    "path": "favicon-32.png",
@@ -325,32 +325,36 @@
    "sha256": "6fb08ae7f0ab328e6bb731e972887f44b9da0c625996b1661fb01e1f6767bcbd"
   },
   {
+   "path": "images/type-shindan/types-strip.webp",
+   "sha256": "4a19980e1645e0cd15fbcbb7e85c6beee3510ee27861589c8ebc6f9248f881c0"
+  },
+  {
    "path": "index.html",
-   "sha256": "e840d0b25d87edb737a4abaf3fbd934b84565b42a5efbb6c20c90411d2223f99"
+   "sha256": "3b2d06f81557ae89d723aa1366d435a86485ef197ca5ec32733e91c9e04e77e1"
   },
   {
    "path": "jobs/assistant.html",
-   "sha256": "1eaa1e6db8846bda10130498bc0815f5c29633ce7c32587957840ea4355159ec"
+   "sha256": "da677123224f3f5d06cd7888cbffb6e15afaab6f5199ec09ac0a641afb1e0058"
   },
   {
    "path": "jobs/index.html",
-   "sha256": "bba6d4b8a60a17a108ae483e261a83e0c98ea76b871471d436950df45b6e926c"
+   "sha256": "08a379a18f1100bfb6e36ecf03853da6d262f8afaf022aacef737502882a7ac5"
   },
   {
    "path": "jobs/part.html",
-   "sha256": "29526d8819b06993d9e3b0e0c83b373616c0298bf3c3453983d4efe7e868070f"
+   "sha256": "a0c8c6ff1bcbc7a9829c34958429f75250e4d9fe306be9e62f9a93af40bf23fe"
   },
   {
    "path": "jobs/student.html",
-   "sha256": "128ab6a475cf7404654498c9eca12b0332f37a7811b626ae91b964e4c6d5861b"
+   "sha256": "a32b3e51c05904a7fc3f92c10a95e96955884bedd41f5388de288680b85b3688"
   },
   {
    "path": "jobs/stylist.html",
-   "sha256": "cc2feb164620ee948a6c73e9fe290f79d6606625bdc970c11a75f771e4f8e9bd"
+   "sha256": "59b0fb9392dadcbf87a8c98072663c881ecea8ff2946fd42637a377eea08f5de"
   },
   {
    "path": "llms-full.txt",
-   "sha256": "4f2c2e848283449366f944c4010c0c8979ccdb21c36bc116cf28e90412dadc3c"
+   "sha256": "790d34b8bb3e323621184834527a4a7fcda7a40045ad2ddd474b0bf38c0217a2"
   },
   {
    "path": "llms.txt",
@@ -358,27 +362,27 @@
   },
   {
    "path": "match/index.html",
-   "sha256": "902008e6ae4d4829b15268499fb3d8ab3bf2119b789fc4ebd7e5a4f77aae679f"
+   "sha256": "0c4af2754f22e585d3e79f04bc9435a0ec23dea2857ad616d292553187be24b3"
   },
   {
    "path": "privacy.html",
-   "sha256": "930a4074e480a66806ecc662916d02ce2fa5cd8c8c6a0afd2472c7644f4d762d"
+   "sha256": "ae23435cfd644e4360fa0202cb0374d0adfd6c127336ac72a34ce0febc10e793"
   },
   {
    "path": "recruit/career.html",
-   "sha256": "5cb638155b2d39e2af5ab974b1a4d68d2de170bad84f64294fae12085783eeb1"
+   "sha256": "d6426d6280bd555ab7ff17abfb52c8389b518321f537daa667c88d4390a2a31e"
   },
   {
    "path": "recruit/index.html",
-   "sha256": "bba6d4b8a60a17a108ae483e261a83e0c98ea76b871471d436950df45b6e926c"
+   "sha256": "08a379a18f1100bfb6e36ecf03853da6d262f8afaf022aacef737502882a7ac5"
   },
   {
    "path": "recruit/newgrad.html",
-   "sha256": "78db0a539f9cedc52caa2d627a5186880f6eb0e09d597461cc55022441b27d1f"
+   "sha256": "fbca85e864386b7f4cecd8d97ac8ad5c809d71fc98adf7430180e4753b1ee229"
   },
   {
    "path": "recruit/student.html",
-   "sha256": "8932015c578de3d07c1780a6b4f882e9752a3c0d4ddd7cf728ebf15fbfc8a200"
+   "sha256": "9a19827abc093938d674f93783ba9c63c2b6e5baecd3e584432f79f91cd229b6"
   },
   {
    "path": "robots.txt",
@@ -386,7 +390,7 @@
   },
   {
    "path": "school.html",
-   "sha256": "c543458ebb41439b5adf15744e5abf345a4c05a0bad8cfd311935177e5725e69"
+   "sha256": "15865d4917637fadfbbef5772398a859efb13e11e9130c098e8e138c60f4707f"
   },
   {
    "path": "sitemap.xml",
@@ -402,11 +406,11 @@
   },
   {
    "path": "visit.html",
-   "sha256": "e092a051fbed75143d2270a64e72d533c0180145999dfd91244d1c9c8cae7599"
+   "sha256": "1797441249a5b4a2c8389cb67b85456979b7aa3912049512b500bd36fdbee4cc"
   },
   {
    "path": "workstyle.html",
-   "sha256": "a38bc15dd2909c3a0ecad1e23f20eefb1f7c4530f27eef2dee08ae1a62a3fd2c"
+   "sha256": "88ee830e7f8e9492d946d490ad0005428315393c46a52a52a9beefbba6b04851"
   }
  ]
 }

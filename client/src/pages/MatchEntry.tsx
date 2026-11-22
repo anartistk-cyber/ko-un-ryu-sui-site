@@ -22,7 +22,7 @@ export default function MatchEntry() {
   return (
     <div className="privacy-page">
       <main className="privacy-main" style={{ minHeight: "70vh", display: "grid", alignContent: "center", textAlign: "center" }}>
-        <div className="privacy-hero">
+        <div className="privacy-hero match-entry-hero">
           <p>RECRUIT MATCHING</p>
           <h1>採用マッチング診断を開いています</h1>
           <span>自動で切り替わらないときは、下のボタンからお進みください。</span>
