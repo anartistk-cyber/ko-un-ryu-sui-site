@@ -1171,4 +1171,8 @@
   - Clarity：この Chrome ではサインアウト状態で読めなかった（ログインは藤津さんの操作。ヒートマップは未確認）。
   - GA4（3サイト合算・10/25〜11/21）：表示1,464・アクティブユーザー497・キーイベント104。キーイベントの率が最も高いのは /coupon/（表示57・キーイベント15）。/faq/（表示20・0件・12秒）・/voice/（表示43・1件・16秒）は低いが、予約ブロックの見出し・/coupon/ 導線の判定期間（11/29・11/30）が終わるまで、予約ブロック周りは触らない。
   - 次：取り込み後（FC :22／glow :27／採用 :17）に本番確認 → IndexNow を3サイトに送信 → 11/22 17:40 の週次で EFFECT_CHECKS を判定。
+- 2026-11-22 11:37 【本番確認：FLOWCLOUD・glow トップの「美容師タイプ診断」広告帯（15008f6）／PageSpeed（スマホ）／コントラスト修正】本番（FC 11:22・glow 11:27 の取り込み後）をビルトインブラウザで確認。
+  - 帯：両サイトとも「採用情報・姉妹店」の直下に出ている。リンク先は ko-un-ryu-sui.com/type-shindan/ に utm_source=fc_site／glow_site・utm_medium=internal・utm_campaign=type_shindan_banner。画像 /fc/img/type-strip.webp・/gl/img/type-strip.webp は 200・image/webp・48,066B（1028×168で読み込める）。クリックで dataLayer に type_shindan_click（page=/・pos=home_banner）が入る（遷移はさせずに確認）。GA4 の collect は両サイトで送信されている。コンソールの自社エラーは無し（FC の 404 は確認用に叩いた IndexNow キーファイルがまだ未取り込みのため＝正常、glow の 400 は第三者（GA/Clarity 側）の応答で同一オリジンのエラーではない）。glow は bb287d3（問数20問）が取り込み済み、FC の「18問」は 12:22 の取り込みで20問になる。
+  - PageSpeed（スマホ・本番）：**FLOWCLOUD 100／97／100／100（FCP 1.0・LCP 1.0・TBT 30ms・CLS 0・SI 1.0・エージェント 3/3）**、**glow 99／100／100／100（FCP 1.0・LCP 1.0・TBT 40ms・CLS 0.022・SI 3.5・エージェント 3/3）**。前回 11/17 は FC 100／glow 97（TBT 200ms）。LCP は文字のまま（悪化なし）。
+  - 見つけた不具合：FC の「ユーザー補助」97点の原因は、広告帯の小さな見出し「RECRUIT｜美容師を目指す方へ」の文字色（金 #cdb67f・白地でコントラスト 1.98:1）。→ 濃い金茶 #6e5a22（6.67:1）に変更（fc-site/css/65-tsn.css）。glow は 100 で指摘なし。FC を再ビルド・manifest 再生成・overflow 0（38ページ×5幅）。次の取り込み（FC :22）後に PSI で97→100 を確認する。
 
