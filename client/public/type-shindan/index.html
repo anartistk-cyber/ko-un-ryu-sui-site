@@ -115,6 +115,11 @@ html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .blurbox{position:relative;cursor:pointer;text-decoration:none}
 #linecard{scroll-margin-top:16px}
+.kira{border:3px solid var(--ink);border-radius:14px;padding:16px 14px;text-align:center;background:linear-gradient(135deg,#fff3b8,#ffe07a 45%,#fff8d6 60%,#ffd23f);display:flex;flex-direction:column;gap:6px}
+.kira.k3,.kira.k4{background:linear-gradient(120deg,#ffd1dc,#ffe9a8,#c9f5d3,#bfe3ff,#e0ccff)}
+.kira .kt{font-family:var(--display);font-weight:900;font-size:21px;line-height:1.35;white-space:pre-line}
+.kira .kn{font-family:var(--display);font-weight:700;font-size:15px}
+.kira a{color:var(--ink);font-weight:700}
 .wlist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
 .wlist li{display:grid;grid-template-columns:2em 1fr;gap:6px;align-items:start}
 .wlist .mk{font-family:var(--display);font-weight:900;font-size:20px;line-height:1.4;color:var(--deep)}
@@ -165,6 +170,7 @@ html{scroll-behavior:smooth}
 
   <!-- 結果 -->
   <section id="result" hidden style="display:flex;flex-direction:column;gap:20px">
+    <div class="kira" id="kira" hidden><p class="kt" id="kiraT"></p><p class="kn" id="kiraN"></p><a href="#linecard">LINEで受け取る ▼</a></div>
     <div class="card">
       <p class="kicker">あなたの美容師タイプは</p>
       <a class="stage hero-stage blurbox" href="#linecard" aria-label="詳しい結果をLINEで受け取る欄へ移動"><img class="px" id="rImg" alt="" width="460" height="560"><span class="blurnote">タップして、詳しい結果へ ▼</span></a>
@@ -189,8 +195,8 @@ html{scroll-behavior:smooth}
     </div>
     <div class="card">
       <h3 id="linecard">詳しい結果は、LINEで受け取れます</h3>
-      <p class="lead">あなたのジョブの結果カードを、行雲流水の公式LINEでお届けします。</p>
-      <ul class="list"><li>キャラクターの絵</li><li>あなたの強み</li><li>力を出しやすい働き方</li><li>気をつけたいこと</li></ul>
+      <p class="lead">あなたのジョブの結果カードを、行雲流水の公式LINEでお届けします。まれにキラキラカードが出ます。</p>
+      <ul class="list"><li>キャラクターの絵（属性・BP・じゃんけんつき）</li><li>必殺技 2つ（攻撃力・防御）</li><li>あなたの強み</li><li>力を出しやすい働き方</li><li>気をつけたいこと</li></ul>
       <a class="btn line" id="lineBtn" href="https://line.me/R/ti/p/%40512rmwnk" target="_blank" rel="noopener">詳しい結果をLINEで受け取る ▶</a>
       <div class="linebox" id="lineBox">
         <span>LINEが開くと、下の合言葉が入力済みになっています。そのまま送信すると、結果カードが届きます。</span>
@@ -272,13 +278,18 @@ function finish(){
   const chosen={1:'sei',2:'part',3:'gyomu'}[r.emp];const fk=chosen||r.fit;
   const FIT=chosen?{sei:['正社員','あなたが選んだ「正社員」に合わせた目安です。教育や評価のしくみが整ったお店だと、腰をすえて力を伸ばせます。'],part:['パート・アルバイト','あなたが選んだ「パート・アルバイト」に合わせた目安です。時間が限られる分、得意なメニューをしぼると指名につながります。'],gyomu:['業務委託','あなたが選んだ「業務委託」に合わせた目安です。集客と時間の使い方を自分で決められる分、得意分野の発信がカギになります。']}[fk]
     :{sei:['正社員向き','働き方はまだ決めていないとのことなので、回答から出した目安です。腰をすえて力を伸ばせる、安定した働き方が合いやすそうです。'],part:['パート向き','働き方はまだ決めていないとのことなので、回答から出した目安です。時間にゆとりを持てる働き方が、今のあなたには合いやすそうです。'],gyomu:['業務委託向き','働き方はまだ決めていないとのことなので、回答から出した目安です。経験と技術を生かし、自分の裁量で動ける働き方が合いやすそうです。']}[fk];
+  const kx=Math.random(),kira=kx<1/1000?4:kx<1/1000+1/300?3:kx<1/1000+1/300+1/100?2:kx<1/1000+1/300+1/100+1/50?1:0;
+  const KIRA=[null,['少しキラキラカード','50人に1人'],['まぁまぁキラキラカード','100人に1人'],['メッチャキラキラカード','300人に1人'],['最強キラキラカード','1000人に1人']][kira];
+  $('kira').hidden=!KIRA;$('kira').className='kira k'+kira;
+  if(KIRA){$('kiraT').textContent='✨ '+KIRA[0]+'\nが出ました！';$('kiraN').textContent=KIRA[1]+'の当たりです。LINEで受け取ると、キラキラ仕様のカードが届きます。'}
+  const word='診断結果：'+T.key+(kira?'★'+kira:'');
   $('rMix').textContent=T.name+' × '+JOBS[r.job]+' × '+FIT[0];
   $('rEmp').textContent=FIT[1];
-  try{gtag('event','type_shindan_result',{shindan_type:T.key,shindan_fit:fk,shindan_job:JOBS[r.job],shindan_emp:EMPS[r.emp],shindan_exp:r.exp,shindan_area:r.area,shindan_mind:r.mind,shindan_pct:r.pct})}catch(e){}
+  try{gtag('event','type_shindan_result',{shindan_type:T.key,shindan_fit:fk,shindan_job:JOBS[r.job],shindan_emp:EMPS[r.emp],shindan_exp:r.exp,shindan_area:r.area,shindan_mind:r.mind,shindan_pct:r.pct,shindan_kira:kira})}catch(e){}
   try{const lab=k=>{const q=QS.find(q=>q.o[0].v[0]===k);return q?q.o[r[k]-1].t:''};let src='';try{const sp=new URLSearchParams(location.search);src=[sp.get('utm_source'),sp.get('utm_medium'),sp.get('utm_campaign')].filter(Boolean).join('/').replace(/[^A-Za-z0-9_\-./]/g,'').slice(0,50)||(document.referrer?new URL(document.referrer).hostname:'')}catch(e){}
-    const row=[T.key,FIT[0],JOBS[r.job],EMPS[r.emp],lab('exp'),lab('area'),lab('mind'),r.pct,r.x,r.y,r.z,'A'+ans.join(''),src,r.u,r.v].join('|');
+    const row=[T.key,FIT[0],JOBS[r.job],EMPS[r.emp],lab('exp'),lab('area'),lab('mind'),r.pct,r.x,r.y,r.z,'A'+ans.join(''),src,r.u,r.v,kira].join('|');
     fetch('https://docs.google.com/forms/d/e/1FAIpQLSeEWqVmExOEPJsUID_S4ugpzDwXjbgbrrrVMba0HGVwpdnGPQ/formResponse',{method:'POST',mode:'no-cors',body:new URLSearchParams({'entry.1969466246':row})}).catch(()=>{})}catch(e){}
-  $('lineBtn').dataset.t=T.key;$('lineMsg').textContent='診断結果：'+T.key;$('lineBtn').href='https://line.me/R/oaMessage/%40512rmwnk/?'+encodeURIComponent('診断結果：'+T.key);
+  $('lineBtn').dataset.t=T.key;$('lineMsg').textContent=word;$('lineBtn').href='https://line.me/R/oaMessage/%40512rmwnk/?'+encodeURIComponent(word);
   show('result');
 }
 Object.keys(TYPES).forEach(k=>{const im=document.createElement('img');im.className='px';im.src=IMG[k];im.alt=TYPES[k].job;im.width=460;im.height=560;$('party').appendChild(im)});
