@@ -4,6 +4,7 @@ import {claritySnippet,clarityPolicy} from '../shared/clarity.mjs';
 import {livePill,liveScript} from '../shared/live-status.mjs';
 import {readCssMin} from '../shared/css-min.mjs';
 import {typeBanner} from '../shared/type-banner.mjs';
+import {INDEXNOW_KEY} from '../shared/indexnow.mjs';
 // 最初の画面を早く出すため、style.css は各ページの <style> に埋め込む（HTMLを取った後にCSSを取りに行く往復が1回減る）。/fc|/gl の style.css も従来どおり出力する。
 const CSS_INLINE=readCssMin('style.css');
 // ページ名（<body data-pg>）：ページごとの色・透かし文字・絵文字を出し分ける（css/55-tone.css）。'/'=home、'/cut/'=cut、'/salon-blog/xxx/'=salon-blog
@@ -286,6 +287,7 @@ fs.writeFileSync(OUT+'/llms.txt',`# glow（グロウ）泉大津駅徒歩1分の
 ${llmsPageLinks(OUT,BASE,urls)}
 `);
 fs.writeFileSync(OUT+'/robots.txt',`User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: ${BASE}/wp-sitemap.xml\nSitemap: ${BASE}/sitemap.xml\nSitemap: ${BASE}/sitemap-gl.xml\n`);
+fs.writeFileSync(OUT+'/'+INDEXNOW_KEY+'.txt',INDEXNOW_KEY); // IndexNow の所有確認ファイル（autopost/INDEXNOW.md）
 const LF=buildLlmsFull(OUT,BASE,fs.readFileSync(OUT+'/llms.txt','utf8'));console.log('llms-full',LF.pages,'pages',Math.round(LF.bytes/1024)+'KB');
 console.log('pages',urls.length);
 

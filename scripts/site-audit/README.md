@@ -5,7 +5,7 @@
 
 | ファイル | 何を確認するか | 使い方（リポジトリ直下） |
 |---|---|---|
-| `overflow-test.cjs` | 全ページ × 360/390/768/1280px で横スクロール（はみ出し）が出ていないか | `node scripts/site-audit/overflow-test.cjs fc-site/site <画像フォルダ> 8841` |
+| `overflow-test.cjs` | 全ページ × 320/360/390/768/1280px で横スクロール（はみ出し）が出ていないか | `node scripts/site-audit/overflow-test.cjs fc-site/site <画像フォルダ> 8841` |
 | `shot.cjs` | PC(1280)とスマホ(390×2倍)の全画面スクリーンショット（見た目の確認・前後比較） | `node scripts/site-audit/shot.cjs fc-site/site <画像フォルダ> out /menu/ /cast/` → `out-d-_menu_.png` など |
 | `quiz-test.cjs` | 「お悩みから選ぶ」診断（ラジオ→結果カード）が動くか | `node scripts/site-audit/quiz-test.cjs fc-site/site <画像フォルダ> out.png 1` |
 | `audit.py` | title/description/canonical/OG/h1/見出し順/alt/画像サイズ/内部リンク切れ/JSON-LD/lang/重複、robots・sitemap・llms.txt | `python3 scripts/site-audit/audit.py fc-site/site https://flowcloud.net` |
