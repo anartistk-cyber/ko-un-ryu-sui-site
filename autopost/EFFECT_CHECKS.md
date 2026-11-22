@@ -27,6 +27,7 @@
 | FC 予約の準備の記事（yoyaku-junbi-40-50）と、nenmatsu-hair-plan・cut-erabikata からの内部リンク（11/20） | 3記事の表示・クリック（Search Console ページ別）、予約CTA（GA4 cta_*） | なし（公開直後） | 12/4／12/18 | |
 | 美容師タイプ診断の公開と LINE 結果カード（採用 /type-shindan/）（11/20） | GA4 の type_shindan_start／type_shindan_result／type_shindan_line の件数、/type-shindan/ の表示、行雲流水LINE の友だち数（11/20 時点 7） | なし（公開直後） | 12/4／12/18 | |
 | 採用トップの最初の画面に「美容師タイプ診断」カード（キャラ8人）を先頭に置き、7問カードを2番目にした（11/22） | GA4 採用：recruit_cta_click の cta_type=type_shindan・placement=hero の件数、同じ placement=hero の cta_type=match の件数、type_shindan_start（トップ経由）、トップの表示数。PageSpeed（スマホ）：性能点数・LCP | 11/17〜11/21 の5日：placement=hero の7問（match）クリック 5。トップ約39表示／週。直近28日の採用CTAクリック 25（9人）。PageSpeed 採用：99・LCP 0.9〜1.1秒（11/17）。診断カードは公開直後でなし | 12/6／12/20 | |
+| FLOWCLOUD・glow のトップの最下部（採用情報・姉妹店の下）に「美容師タイプ診断」の広告帯（11/22） | GA4：type_shindan_click（pos=home_banner、FC と glow はページタイトルで分ける）。採用サイト側の type_shindan_start のうち流入元 fc_site／glow_site（utm_source）。FC・glow トップの予約系キーイベント（cta_net_reserve／cta_tel／cta_line／cta_hotpepper）が減っていないか（広告帯が予約の邪魔になっていないか）。PageSpeed（FC・glow） | なし（公開直後）。予約系キーイベントは直近の週次（autopost/reports の最新）を基準。PageSpeed：11/17 FC 100／glow 97 | 12/6／12/20 | |
 
 ## 計測の変更の目印（比べるときの注意）
 - 11/3：GA4 の「CTA位置（pos）」を登録（FC・glow）。
@@ -34,3 +35,4 @@
 - 11/15：GA4 に「採用CTAの場所（placement）」「採用CTAの種類（cta_type）」を追加。数字は 11/17 以降から。
 - 11/17：週次・月次の定期タスクで「このパソコンを必須にする」をON（藤津さんの報告）。自動の回の取得項目が増えるかを 11/22 に確認。
 - 11/22：採用トップに recruit_section_view（各セクションが画面に入った回数。placement=sec-◯◯）を追加。**イベント総数が増えるので、11/22 以降の「イベント総数」は前と比べない**（比べるのは recruit_cta_click など個別のイベント）。
+- 11/22：FLOWCLOUD・glow のページ共通スクリプトに type_shindan_click を追加（広告帯のクリックだけ。ほかのイベントは変更なし）。

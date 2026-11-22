@@ -1147,3 +1147,11 @@
   - PageSpeed（スマホ・10:23 JST・1回）：**パフォーマンス 98**／ユーザー補助 100／おすすめ 100／SEO 100。FCP 1.1秒・**LCP 1.1秒（FCP と同じ）**・TBT 170ms・CLS 0・SI 1.9秒。前回（11/17）99・LCP 0.9〜1.1秒。点数の差 −1 は誤差内、LCP は悪化なし。モバイルの LCP 要素は文字（p.hero-lead）のままで、診断カードの画像はLCPにならなかった。「画像配信を改善する」に types-strip.webp（57KiB、表示 971×158 に対し 1233×200）が約42KiB削減可と出るが、点数・LCP への影響は出ていない。
   - 判断：悪化なし。画像の縮小はしない（必要なら 1233→約990px 幅の小さい版で約15KB減らせる。2回目以降の測定で LCP が 2.5秒に近づいたら実施）。次の PageSpeed は EFFECT_CHECKS の 12/2（月次）。
   - 次：11/22 17:40 の週次で、GA4 の採用CTA（cta_type=type_shindan・placement=hero）と recruit_section_view の初日の数字を見る（数が小さいので参考）。判定日は 12/6／12/20。
+- 2026-11-22 10:41 【FLOWCLOUD・glow のトップ最下部に「美容師タイプ診断」の広告帯を追加（藤津さん 10:34「FLOWCLOUD　glow　のサイトにも　美容師タイプ診断置こう　採用情報姉妹店の下あたりに　広告的な感じで」）】
+  - 置き場所：両サイトのトップで、最後の節「採用情報・姉妹店」の直下（フッターの手前）。ページ全体のかなり下（FC 約14,500px・glow 約13,100px）なので、最初の画面と LCP には関わらない。サブページには置いていない。
+  - 見た目：FLOWCLOUD は上品（クリーム〜セージのグラデーション・金の細い枠・明朝の見出し・えんじのボタン）、glow はポップ（水玉・太い黒縁・バターイエローの縁取り見出し・ピンクのボタン）。中身は両店同じ：「RECRUIT｜美容師を目指す方へ」「美容師タイプ診断」「あなたはどのジョブ？ キャラクターで見つけよう」「8タイプ・18問・約2分」＋キャラクター8人＋「診断をはじめる →」。下に「運営会社・株式会社行雲流水の採用サイトの診断です（美容師・美容学生の方向け）。」（お客様が自分向けと誤解しないため）。スマホはキャラが横にゆっくり流れ、600px以上は静止。動きを減らす設定の端末では止まる。
+  - 作り方：shared/type-banner.mjs（HTML・両店共通の文言）／fc-site/css/65-tsn.css・glow-site/css/65-tsn.css（見た目。scripts/build-css.mjs に追加）／各 build.mjs（HOME_ORDER に節を足し、本文に差し込み、共通スクリプトに type_shindan_click を追加）。画像は fc-site/img/type-strip.webp・glow-site/img/type-strip.webp（高さ168px・48KB・遅延読み込み・width/height 指定。autopost/type-shindan-art/make-strip.cjs の STRIP_H／STRIP_OUT で再生成できる）。
+  - リンク：採用サイトの /type-shindan/ に UTM（utm_source=fc_site／glow_site・utm_medium=internal・utm_campaign=type_shindan_banner）。UTM_LINKS.md に追記。クリックは GA4 のイベント type_shindan_click（page=/・pos=home_banner）。
+  - 確認（手元）：overflow-test FC 38ページ×4幅・glow 38ページ×4幅 = 0／audit.py（空altを1枚目の画像に付けて解消。残りは既知：google確認用html・採用の求人ページ重複・glow privacy のタイトル長）／マニフェスト検算 不一致0（FC 97・glow 110）／ページのクリックで type_shindan_click が出る・流れる動きが付く・スクリプトエラー 0。スクリーンショットで 390px と 1280px の見た目（折り返し・キャラの重複表示・glow の見出しの飾り）を直した。
+  - 気づき（前からのもの・今回の変更とは無関係）：FLOWCLOUD のトップは 320px 幅で横に 9px はみ出す（店内写真の帯。変更前の版でも 329px）。標準の点検幅（360/390/768/1280）では 0。次の見た目の点検で扱う。
+  - 次：取り込み（FC :22／glow :27）後に本番を確認 → FC・glow の PageSpeed（スマホ）を測り直す（LCP が文字のままか）→ 判定日 12/6／12/20（EFFECT_CHECKS）。

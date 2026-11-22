@@ -1,0 +1,30 @@
+
+/* ===== 65-tsn 2026-11-22: トップ最下部（採用情報・姉妹店の直下）の「美容師タイプ診断」広告帯（glow）。ポップで目立つ。
+   構造は shared/type-banner.mjs。画像は遅延読み込み（最初の画面・LCPには関わらない）。スマホは横に流れ、600px以上は静止。 ===== */
+.sec.tsn,.sec.tsn.alt{padding:30px 0 46px;background:transparent}
+.sec.tsn::before{content:none}
+.tsn .wrap{max-width:820px}
+.tsn-card{display:block;position:relative;text-align:center;text-decoration:none;color:var(--ink);padding:20px 16px 22px;border:3px solid var(--ink);border-radius:var(--r);background:radial-gradient(circle,rgba(245,154,179,.28) 1.6px,transparent 2.2px) 0 0/16px 16px,linear-gradient(180deg,#fff6f8 0%,var(--soft) 100%);box-shadow:6px 7px 0 var(--pinkl);overflow:hidden;transition:transform .2s,box-shadow .2s}
+.tsn-card:hover,.tsn-card:focus-visible{transform:translate(-2px,-2px);box-shadow:8px 9px 0 var(--pinkl)}
+.tsn-tag{display:inline-block;padding:6px 14px;border:2px solid var(--ink);border-radius:99px;background:#fff;color:var(--ink);font:700 11.5px/1 var(--hf);letter-spacing:.1em}
+.tsn-card h2{margin:10px 0 4px;padding:0;border:0;color:var(--butter);font:700 clamp(28px,7vw,40px)/1.25 var(--hf);letter-spacing:.04em;-webkit-text-stroke:7px var(--ink);paint-order:stroke fill;text-shadow:0 3px 0 var(--ink)}
+.tsn-card h2::before{content:none}
+.tsn-sub{display:block;color:var(--ink);font:700 14px/1.7 var(--hf)}
+.tsn-meta{display:inline-block;margin-top:6px;color:var(--prid);font:700 12.5px/1.5 var(--hf);letter-spacing:.06em}
+.tsn-chars{display:block;overflow:hidden;margin:12px -16px 0;padding-top:6px;background:linear-gradient(180deg,transparent 80%,rgba(255,226,138,.7) 80%)}
+.tsn-track{display:flex;width:max-content}
+.tsn-track img{display:block;flex:none;height:90px;width:auto}
+.tsn-go{display:inline-block;margin-top:16px;padding:13px 28px;border:3px solid var(--ink);border-radius:99px;background:var(--cta);color:#fff;font:700 16px/1 var(--hf);letter-spacing:.04em;box-shadow:0 4px 0 var(--ink)}
+.tsn-go i{display:inline-block;margin-left:4px;font-style:normal}
+.tsn .nw{white-space:nowrap}
+.tsn-note{margin:14px 0 0;text-align:center;color:var(--mute);font-size:12.5px;line-height:1.7}
+@keyframes tsnRoll{to{transform:translateX(-50%)}}
+@keyframes tsnNudge{50%{transform:translateX(5px)}}
+@media(max-width:599px){.sec.tsn,.sec.tsn.alt{padding:22px 0 38px}}
+@media(min-width:600px){.tsn-track{width:auto;justify-content:center}.tsn-track .tsn-dup{display:none}.tsn-track img{height:116px}}
+@media(prefers-reduced-motion:no-preference){
+ .tsn-go i{animation:tsnNudge 1.6s ease-in-out infinite}
+}
+@media(prefers-reduced-motion:no-preference) and (max-width:599px){
+ .tsn-track{animation:tsnRoll 40s linear infinite}
+}
