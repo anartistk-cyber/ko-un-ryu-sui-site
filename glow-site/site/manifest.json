@@ -310,7 +310,7 @@
   },
   {
    "path": "hair-donation/index.html",
-   "sha256": "596fef1edfbe105142fb246cb228fc1e65dbd42b3761b1d0c917d507a7df91c9"
+   "sha256": "fe91cb07512506f172285a22c7637a9ed32a1f653a0c286e6b4829a63026cf2a"
   },
   {
    "path": "hair-quality/index.html",
@@ -398,7 +398,7 @@
   },
   {
    "path": "llms-full.txt",
-   "sha256": "d644a0328c5228e72b948577bfb7afbb850fb043dafe82c7987a38557be75164"
+   "sha256": "7d334886d366a376cae2df1a8cee42b80624dfb46d02dc8cd140022ca14fcae1"
   },
   {
    "path": "llms.txt",
