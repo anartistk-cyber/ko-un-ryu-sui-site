@@ -149,3 +149,17 @@
 - 既存記事改善: 日曜ではないため週次レビューなし。
 - 検証: sitemap 37URL／vite build／prerender／publish-gate すべて終了コード0。
 - 次回: 日曜は地域・暮らし（和泉・堺・高石の地域別）＋週次レビュー。
+
+## 実行ログ 2026-11-22（日・自動実行）
+- 曜日／テーマ：日＝地域・暮らし／泉大津で美容師として暮らし、働く（駅近・休み・住まい）。
+- 準備: clone済み（detached→main・origin/mainと同期）。add_repo/register_repo_rootのツールは無く、スコープ済みのためそのまま作業。`npm ci` を実施。
+- 調査: WebSearchはこの回は未実施（無人実行・既存の調査結果を踏襲：上位は求人媒体、ko-un-ryu-sui.comは上位10に未表示）。tsukin-kishiwada-izumi-sakai（通勤）・hayaban-osoban と重複しないよう、暮らし目線（駅近・休みのリズム・住まい補助・地元で見学）に絞った。
+- 記事追加: izumiotsu-kurashi-hataraku-minikata ／ 狙い: 泉大津 美容師 働く 暮らし 地元 就職 保護者 ／ 切り口: 駅からの近さ・休みと勤務時間・住まいと通勤のサポート・地元で見学の4点。事実はFACTS.mdのみ。自宅からの通勤時間・周辺環境は未確認のため書かず「見学・相談時にご案内」とした。
+- タグ: 行雲流水／美容師求人／泉大津／泉州／泉大津美容師／地元で就職／保護者（7個）。
+- 画像・動画: バナー（make-banner）＋本文写真1枚（FLOWCLOUD外観）＋動画1本（FLOWCLOUD外観・glow受付・夜の外観の写真から約15秒・248KB・AI生成なし）。
+- Instagram下書き: autopost/sns/izumiotsu-kurashi-hataraku-minikata.md（未投稿）。
+- カバー済みテーマに追加: izumiotsu-kurashi-hataraku-minikata（地域・暮らし／泉大津で暮らし働く）
+- 週次レビュー（既存記事の改善）: ①taiken-guide のctasに lesson-taiken-yoru-minikata・gakusei-kengaku-kakunin を追加 ②tsukin-kishiwada-izumi-sakai のctasに新記事を追加。FACTSとの照合：月20時間／90名／年中無休／19:00最終受付などの古い表記は全記事で該当なし。dateは変更なし。
+- 検証: sitemap 38URL／vite build／prerender／publish-gate すべて終了コード0。export-site.sh 106ファイル。
+- 数字（Search Console・GA4）はクラウドのみの実行のため「未取得」。推測しない。
+- 次回: 月曜は就職活動、火曜は教育・技術。今週の軸（11/23〜）は BLOG_NETWORK の表のとおり「年末に向けて髪を整える」（採用は年末の繁忙期の働き方・FACTSの範囲）。
