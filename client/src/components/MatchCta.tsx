@@ -57,7 +57,7 @@ export function LineCta({ href, placement }: { href: string; placement: string }
 export function TypeCta({ placement }: { placement: string }) {
   return (
     <a className="type-cta" href="/type-shindan/" data-track="type_shindan" data-placement={placement}>
-      <span className="type-cta-text"><b>美容師タイプ診断</b><small>18問・約2分。あなたはどのジョブ？</small></span>
+      <span className="type-cta-text"><b>美容師タイプ診断</b><small>20問・約2分。あなたはどのジョブ？</small></span>
       <ArrowRight className="type-cta-arrow" size={20} aria-hidden="true" />
     </a>
   );
@@ -70,7 +70,7 @@ export function TypeHeroCard({ placement }: { placement: string }) {
   return (
     <a className="type-hero" href="/type-shindan/" data-track="type_shindan" data-placement={placement}>
       <span className="match-cta-shine" aria-hidden="true" />
-      <span className="type-hero-kicker">8タイプ・18問・約2分</span>
+      <span className="type-hero-kicker">8タイプ・20問・約2分</span>
       <strong className="type-hero-title">美容師タイプ診断</strong>
       <span className="type-hero-sub">あなたはどのジョブ？ キャラクターで見つけよう</span>
       <span className="type-hero-chars" aria-hidden="true">

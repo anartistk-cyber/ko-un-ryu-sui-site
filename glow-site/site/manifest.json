@@ -318,7 +318,7 @@
   },
   {
    "path": "index.html",
-   "sha256": "92814c7928548304b36ebe3df7ad806fa2b2931597e9a194e1e318d0b488eeb4"
+   "sha256": "6967d3854c64f2cb4b3ba0b61b0089a29778b5f94bf11a62a7d5547ffa2e185e"
   },
   {
    "path": "journal/access-parking/index.html",
@@ -394,7 +394,7 @@
   },
   {
    "path": "llms-full.txt",
-   "sha256": "ce9fa63bedabd072b5b3d37641738a373f820a59dc5bf7e41a60b70a98318397"
+   "sha256": "d644a0328c5228e72b948577bfb7afbb850fb043dafe82c7987a38557be75164"
   },
   {
    "path": "llms.txt",

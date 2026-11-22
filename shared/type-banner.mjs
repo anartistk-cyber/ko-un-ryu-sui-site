@@ -16,7 +16,7 @@ export function typeBanner({ site, imgDir }) {
     + `<div class="tsn-tag">RECRUIT｜美容師を目指す方へ</div>`
     + `<h2>${TSN_TITLE}</h2>`
     + `<div class="tsn-sub"><span class="nw">あなたはどのジョブ？</span> <span class="nw">キャラクターで見つけよう</span></div>`
-    + `<div class="tsn-meta">8タイプ・18問・約2分</div>`
+    + `<div class="tsn-meta">8タイプ・20問・約2分</div>`
     + `<span class="tsn-chars" aria-hidden="true"><span class="tsn-track">${img('', false)}${img('tsn-dup', true)}</span></span>`
     + `<div class="tsn-go">診断をはじめる <i aria-hidden="true">→</i></div>`
     + `</a>`
