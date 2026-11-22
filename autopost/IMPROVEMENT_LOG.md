@@ -1185,3 +1185,7 @@
   - 2（glow LINE 時間外自動返信）＝11/9 13:46 に案A反映済み。3（紹介一文・水素ケアクーポン）＝11/9 16:4x〜16:5x に両店のあいさつへ反映済み。4（FC の優先リンク）＝11/9 19:0x にホットペッパーのクーポンページへ設定済み、藤津さん 11/22「優先リンクはホットペッパーのクーポンページ」で再確認。5（HPB FC の駐車場・支払い）＝11/9 21:30 反映済み、公開ページで再確認（4台無料・現金/QR/電子マネー/交通系IC）。6（HPB glow 最終受付）＝11/10 15:3x 反映済み、公開ページで再確認（9時〜20時・最終受付18:00・毎週月曜・火曜（不定休あり））。→ 済み欄へ移した。
   - 7（採用 /privacy）：アプリ側（match.ko-un-ryu-sui.com/privacy）の公開ポリシーと、/type-shindan/ のコード（回答を匿名でGoogleフォームへ記録）を読み、/privacy に項目「08 診断コンテンツ」を追加（取得する情報・ChatGPT Sites と LINE への委託・アプリ側ポリシーへのリンク）。改定日 2026年11月22日。ビルド・prerender・publish-gate OK、site/ 107ファイル（manifest 一致）。
   - 次：取り込み後（採用 :17）に本番 /privacy の項目08を確認。8〜12番の残りは藤津さんの操作（9〜12は手順メモを用意）。
+- 2026-11-22 12:2x 【藤津さん「採用・FLOWCLOUD・glow のブログは Claude Code。他も途中まで進めて」→ 9・10・12 をサインイン画面の手前まで用意】
+  - 担当：3サイトそれぞれのブログ（とその紹介投稿）は Claude。APPROVALS 冒頭の担当欄を3サイトの書き方に直した。
+  - 9（Bing Webmaster Tools）：Chrome（Browser 1）で bing.com/webmasters を開き「Get started」→ サインイン方法の選択（Microsoft／Google／Facebook）まで表示。サインイン・許可は藤津さん（アカウント作成にあたるため Claude は進めない）。10（Bing Places）：bing.com/forbusiness のトップまで。12（エキテン）：ログイン画面（ekiten.jp/login）まで。ログイン情報はこちらにない。3つのタブは藤津さんが続きをできるよう開いたままにした。
+  - 状態を APPROVALS で「途中まで済」に。手順メモ＝autopost/OWNER_GUIDE_2026-11-22.md。
