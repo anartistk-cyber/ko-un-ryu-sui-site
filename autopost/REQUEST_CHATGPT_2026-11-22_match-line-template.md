@@ -1,7 +1,7 @@
 # ChatGPT（ChatGPT Sites）への依頼：採用マッチング診断の「LINEで相談する」を、記入用の文面つきにする（2026-11-22）
 
 **【11/22 17:2x 更新】おすすめの直し方＝ `autopost/match-line-snippet.js`（約25行）を、公開中のHTMLの `</body>` の直前に `<script>…</script>` で足すだけ。アプリの中身は書き換えない。** 本番ページ（match.ko-un-ryu-sui.com）で動作を確認済み（Claude のブラウザ内で試しただけ・サイトは未変更）：結果画面のリンクが「①ご希望：{診断の種類（#track-label）}／③マッチング診断の結果：価値観のマッチ度 {#score}／いいところ「{#salon-result}」」になり、点数が変わるとリンクも変わる。
-注意：藤津さんのPC（Documents/Codex）にあるソースは **11/20 版（worker/index.js・11/17 作成）で古く**、11/22 朝に足したLINEボタンが入っていない。これを渡すと LINE ボタンが消えるので使わない。最新のソースは、LINEボタンを足した ChatGPT のチャット（11/22 朝）が持っている。
+【11/22 18:5x 更新】基準版：`kounryusui-match-handover-20261122.zip`（11/22 18:30 に公開中の画面・診断スクリプト・プライバシーと照合済み。受付API・管理画面は未照合）。ZIP を基準に、LINEリンクの2か所だけを直す。LINEリンクは、①結果画面の「LINEで相談する」と、②プライバシーポリシーの「公式LINE」（https://line.me/R/ti/p/@512rmwnk）の2か所。**②は変えない**（目的が採用相談でなく個人情報の問い合わせのため）。**直すのは①だけ**（下の ② 診断のあとの文面）。
 
 依頼元：藤津さん 11/22 16:57「採用マッチングのページの公式ラインも同様にできる？診断後の内容も」。
 対象：https://match.ko-un-ryu-sui.com/ （ChatGPT Sites のアプリ）。採用サイト本体（ko-un-ryu-sui.com）は Claude が 11/22 に同じ形へ変更済み（client/src/lib/line.ts）。
