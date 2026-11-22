@@ -1271,3 +1271,8 @@
   - 新しい基準版（ChatGPT 作成 kounryusui-match-baseline-20261122-line.zip）を点検：worker/index.js の SHA-256 は修正案と同じ（2d71ec97…3fcc）、ほかのファイルは 18:30 の基準版と同一、秘密情報なし、公開識別（ソースコミット e1f8c818…・公開バージョン appgver_1e299309…）が README に記載。ただし README が短く書き直され、公開方法・構成・修正履歴が消えていた → Claude が元の README（公開方法・構成・秘密情報の名前・修正履歴）を戻し、19:0x の公開と再照合を追記、CHECKSUMS を更新したZIPを作った（藤津さんへ送付。PC の Downloads に kounryusui-match-baseline-20261122-line-withreadme.zip）。
   - 未確認：①スマホ実機で、結果画面の「LINEで相談する」→ LINE の入力欄に文面が入るか（藤津さん）。②受付API・管理画面は外から照合できない（変更なし）。
   - 戻し方（必要なら）：ChatGPT で 18:30 の基準版（kounryusui-match-handover-20261122.zip の worker/index.js）に戻して公開。LINEリンクは元の1文（「マッチング診断を受けました。見学について相談したいです。」）に戻る。
+- 2026-11-22 19:40 【ヘアドネーションFAQ（大阪）の本番確認：FLOWCLOUD・glow とも OK】
+  - FC /hair-donation/・glow /hair-donation/ とも、FAQ の2問目に「大阪でヘアドネーションができる美容室ですか？」が出ている（全7問）。回答文もFACTSどおり（FC 徒歩3分／glow 徒歩1分・31cm以上・料金は通常カットと同じ）
+  - FAQPage の JSON-LD にも同じ7問が入っている（JSONとして読める）
+  - 題名は変更なし（FC「…泉大津の美容室 FLOWCLOUD」／glow「…泉大津駅徒歩1分の美容室 glow」）
+  - 次：Search Console の再クロール依頼（上限があるので必要なら翌日）。効果判定は EFFECT_CHECKS のとおり 12/6・12/20
