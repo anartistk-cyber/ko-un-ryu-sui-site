@@ -1265,3 +1265,9 @@
   - 気づき（直さなくてよい）：診断の種類が空のときは「①ご希望：」が空欄になる（結果画面では常に入るので問題なし）。
   - 公開後の照合用：修正案の `/`（HTML）＝ SHA-256 c9c3e87805028605e525bf0813e747e5bbb1566aa1fa4afcaa88780828c9a544（41188 バイト）。公開後に公開サイトの `/` がこの値と一致し、`/diagnosis.js`・`/privacy` が基準版（d26299f1…・f20e2abc…）のままなら、公開されたのは修正案どおり。受付API・管理画面（worker/index.js の ほかの行）は基準版と同一＝修正案の worker/index.js の SHA-256 2d71ec9784282361dbab8afd8a24ad7c615d23485419ec6a7d0bdb6e24993fcc。
   - 次：藤津さんが ChatGPT に「公開してよい」と伝える → 公開後に Claude が上の値で再照合 → 新しい基準版ZIPを作る。
+
+- 2026-11-22 19:11 【採用マッチング診断：LINE相談文つきを公開（ChatGPT が公開）→ Claude が公開後に再照合・新しい基準版ZIPを整えた】
+  - 再照合（公開サイトから取得）：`/` ＝ 41,188 バイト・SHA-256 c9c3e878…a544（点検した修正案のHTMLと完全一致。LINE文面スクリプト `updateLineLink` あり）／`/diagnosis.js` ＝ d26299f1…（18:30 から変更なし）／`/privacy` ＝ f20e2abc…（変更なし。「公式LINE」は https://line.me/R/ti/p/@512rmwnk のまま）。
+  - 新しい基準版（ChatGPT 作成 kounryusui-match-baseline-20261122-line.zip）を点検：worker/index.js の SHA-256 は修正案と同じ（2d71ec97…3fcc）、ほかのファイルは 18:30 の基準版と同一、秘密情報なし、公開識別（ソースコミット e1f8c818…・公開バージョン appgver_1e299309…）が README に記載。ただし README が短く書き直され、公開方法・構成・修正履歴が消えていた → Claude が元の README（公開方法・構成・秘密情報の名前・修正履歴）を戻し、19:0x の公開と再照合を追記、CHECKSUMS を更新したZIPを作った（藤津さんへ送付。PC の Downloads に kounryusui-match-baseline-20261122-line-withreadme.zip）。
+  - 未確認：①スマホ実機で、結果画面の「LINEで相談する」→ LINE の入力欄に文面が入るか（藤津さん）。②受付API・管理画面は外から照合できない（変更なし）。
+  - 戻し方（必要なら）：ChatGPT で 18:30 の基準版（kounryusui-match-handover-20261122.zip の worker/index.js）に戻して公開。LINEリンクは元の1文（「マッチング診断を受けました。見学について相談したいです。」）に戻る。
