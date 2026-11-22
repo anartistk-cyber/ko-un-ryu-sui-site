@@ -1,7 +1,8 @@
 import { ArrowRight } from "lucide-react";
 import type { ReactNode } from "react";
 import { Link } from "wouter";
-import { SubPage, LINE_URL } from "../components/SubPage";
+import { SubPage } from "../components/SubPage";
+import { lineConsultHref } from "../lib/line";
 import { TBD } from "../components/Pending";
 import { trackClick } from "../lib/track";
 
@@ -74,7 +75,7 @@ export function Landing({ type }: { type: "newgrad" | "career" }) {
           <p className="job-detail-lead">{d.lead}</p>
           <div className="lp-actions">
             <a className="job-detail-cta" href={`/?c=${d.code}#contact`} data-track="consult" data-placement="hero" data-audience={d.audience}>{d.primary} <ArrowRight size={17} aria-hidden="true" /></a>
-            <a className="job-detail-line" href={LINE_URL} target="_blank" rel="noreferrer" data-track="line" data-placement="hero" data-audience={d.audience}>LINEで採用の質問をする</a>
+            <a className="job-detail-line" href={lineConsultHref(d.code)} target="_blank" rel="noreferrer" data-track="line" data-placement="hero" data-audience={d.audience}>LINEで採用の質問をする</a>
           </div>
         </section>
         {d.sections.map(s => (

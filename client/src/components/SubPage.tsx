@@ -4,9 +4,11 @@ import { ArrowLeft, Sparkles } from "lucide-react";
 import { MATCH_ENTRY } from "../lib/match";
 import { MatchStrip } from "./MatchCta";
 import { trackClick } from "../lib/track";
+import { lineConsultHref } from "../lib/line";
 
 export const SITE = "https://ko-un-ryu-sui.com";
-export const LINE_URL = "https://lin.ee/Z0JP8sH";
+// 公式LINEへ。押すとトークの入力欄に記入用の文面が入る（lib/line.ts）。友だち追加だけのURLは LINE_FRIEND_URL。
+export const LINE_URL = lineConsultHref();
 // 採用マッチング診断（外部アプリ）への自社ドメインの入口（/match/）。外部アプリのURLは lib/match.ts の1か所だけで管理する
 export const MATCH_URL = MATCH_ENTRY;
 const logoPath = "/images/company-logo_s210.jpg";

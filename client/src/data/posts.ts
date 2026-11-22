@@ -1,3 +1,4 @@
+import { LINE_CONSULT } from "../lib/line";
 export type Block = { h: string } | { p: string } | { ul: string[] } | { img: string; alt: string } | { video: string; poster: string; alt: string };
 export type Post = {
   slug: string;
@@ -48,7 +49,7 @@ export const posts: Post[] = [
       { h: "まとめ：暮らしの目線で、働く場所を選ぶ" },
       { p: "泉大津で美容師として働くとき、駅からの近さ、休みと勤務時間、住まいの補助の3つを見ておくと、入社後の暮らしを具体的に思い描けます。通勤時間や周辺の環境など、書いていない点は見学・相談や公式LINEでお気軽にご質問ください。" },
     ],
-    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", "https://lin.ee/Z0JP8sH"], ["勤務エリアを見る", "/area"], ["通勤の働き方を読む", "/blog/tsukin-kishiwada-izumi-sakai"], ["早番・遅番を読む", "/blog/hayaban-osoban"], ["保護者の方へ", "/blog/hogosha-biyoushi-shuushoku-shinpai"]],
+    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", LINE_CONSULT], ["勤務エリアを見る", "/area"], ["通勤の働き方を読む", "/blog/tsukin-kishiwada-izumi-sakai"], ["早番・遅番を読む", "/blog/hayaban-osoban"], ["保護者の方へ", "/blog/hogosha-biyoushi-shuushoku-shinpai"]],
   },
   {
     slug: "lesson-taiken-yoru-minikata",
@@ -82,7 +83,7 @@ export const posts: Post[] = [
       { h: "まとめ：夜の1時間で、教育と雰囲気を確かめる" },
       { p: "レッスン体験は、19:20〜20:20の1時間で教育の進め方と先輩の雰囲気を確かめられる機会です。開催日の違いと選考との関係を知って、聞きたいことを持って参加してみてください。ご不明な点は、見学・相談や公式LINEからお気軽にご質問ください。" },
     ],
-    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", "https://lin.ee/Z0JP8sH"], ["見学・体験の流れを読む", "/blog/taiken-guide"], ["教育の内容を読む", "/blog/one-year-debut-curriculum"], ["美容学生の方へ", "/recruit/student"], ["サロン見学の確認点を読む", "/blog/gakusei-kengaku-kakunin"]],
+    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", LINE_CONSULT], ["見学・体験の流れを読む", "/blog/taiken-guide"], ["教育の内容を読む", "/blog/one-year-debut-curriculum"], ["美容学生の方へ", "/recruit/student"], ["サロン見学の確認点を読む", "/blog/gakusei-kengaku-kakunin"]],
   },
   {
     slug: "part-biyoushi-jikyu-minikata",
@@ -117,7 +118,7 @@ export const posts: Post[] = [
       { h: "まとめ：時給は、区分・交通費・働き方とセットで見る" },
       { p: "パート美容師の時給は、区分・交通費・勤務日数と時間帯の3つとあわせて見ると比べやすくなります。行雲流水のパートは、応募資格が美容師免許（取得見込みを含む）で、選考は「見学→面接→採用」の順、提出書類は履歴書です。ブランクのある方のサロン選びは「復職のサロン選び」の記事もご覧ください。気になることは、見学・相談や公式LINEからお気軽にご質問ください。" },
     ],
-    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", "https://lin.ee/Z0JP8sH"], ["パート美容師の募集を見る", "/jobs/part"], ["中途の方へ", "/recruit/career"], ["復職のサロン選びを読む", "/blog/fukushoku-salon-erabi"], ["休日と有給の見方を読む", "/blog/kyujitsu-yukyu-minikata"], ["見学・体験の流れを読む", "/blog/taiken-guide"]],
+    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", LINE_CONSULT], ["パート美容師の募集を見る", "/jobs/part"], ["中途の方へ", "/recruit/career"], ["復職のサロン選びを読む", "/blog/fukushoku-salon-erabi"], ["休日と有給の見方を読む", "/blog/kyujitsu-yukyu-minikata"], ["見学・体験の流れを読む", "/blog/taiken-guide"]],
   },
   {
     slug: "hogosha-biyoushi-shuushoku-shinpai",
@@ -145,7 +146,7 @@ export const posts: Post[] = [
       { h: "まとめ：数字と現場で、安心を確かめる" },
       { p: "保護者の方が気になる休み・お給料の内訳・社会保険・勤務時間・環境は、求人票の数字と、見学で見る現場の両方で確かめられます。行雲流水の選考は「見学→面接→採用」の順で、応募資格は美容師免許（取得見込みを含む）です。気になることは、見学・相談や公式LINEからご質問ください。" },
     ],
-    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", "https://lin.ee/Z0JP8sH"], ["新卒の方へ", "/recruit/newgrad"], ["美容学生の方へ", "/recruit/student"], ["休日と有給の見方を読む", "/blog/kyujitsu-yukyu-minikata"], ["固定残業代の見方を読む", "/blog/kotei-zangyo-minikata"], ["見学・体験の流れを読む", "/blog/taiken-guide"]],
+    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", LINE_CONSULT], ["新卒の方へ", "/recruit/newgrad"], ["美容学生の方へ", "/recruit/student"], ["休日と有給の見方を読む", "/blog/kyujitsu-yukyu-minikata"], ["固定残業代の見方を読む", "/blog/kotei-zangyo-minikata"], ["見学・体験の流れを読む", "/blog/taiken-guide"]],
   },
   {
     slug: "salon-ninzu-funiki-minikata",
@@ -170,7 +171,7 @@ export const posts: Post[] = [
       { h: "まとめ：言葉より、数と現場で確かめる" },
       { p: "サロンの人数と雰囲気は、在籍人数の内訳、先輩との距離、見学・体験での普段の様子、シフトと教育の時間の4点で確かめられます。行雲流水の選考は「見学→面接→採用」の順で、応募資格は美容師免許（取得見込みを含む）です。まずは見学・相談や公式LINEから、気軽にご質問ください。" },
     ],
-    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", "https://lin.ee/Z0JP8sH"], ["新卒の方へ", "/recruit/newgrad"], ["美容学生の方へ", "/recruit/student"], ["見学・体験の流れを読む", "/blog/taiken-guide"], ["サロン選びの5つのポイントを読む", "/blog/salon-erabi-checklist"], ["見学で聞く6つの質問を読む", "/blog/gakusei-kengaku-kakunin"]],
+    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", LINE_CONSULT], ["新卒の方へ", "/recruit/newgrad"], ["美容学生の方へ", "/recruit/student"], ["見学・体験の流れを読む", "/blog/taiken-guide"], ["サロン選びの5つのポイントを読む", "/blog/salon-erabi-checklist"], ["見学で聞く6つの質問を読む", "/blog/gakusei-kengaku-kakunin"]],
   },
   {
     slug: "shouyo-minikata-biyoushi",
@@ -195,7 +196,7 @@ export const posts: Post[] = [
       { h: "まとめ：時期と条件を、聞いて確かめる" },
       { p: "賞与は、時期・条件・月給や手当との関係の3つを見ると比べやすくなります。行雲流水の選考は「見学→面接→採用」の順で、応募資格は美容師免許（取得見込みを含む）です。気になることは、見学・相談や公式LINEからお気軽にご質問ください。" },
     ],
-    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", "https://lin.ee/Z0JP8sH"], ["新卒の方へ", "/recruit/newgrad"], ["中途の方へ", "/recruit/career"], ["初任給と手当の見方を読む", "/blog/shoninkyu-teate"], ["固定残業代の見方を読む", "/blog/kotei-zangyo-minikata"], ["有期雇用・試用期間の見方を読む", "/blog/yuki-koyo-shiyo-kikan-minikata"]],
+    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", LINE_CONSULT], ["新卒の方へ", "/recruit/newgrad"], ["中途の方へ", "/recruit/career"], ["初任給と手当の見方を読む", "/blog/shoninkyu-teate"], ["固定残業代の見方を読む", "/blog/kotei-zangyo-minikata"], ["有期雇用・試用期間の見方を読む", "/blog/yuki-koyo-shiyo-kikan-minikata"]],
   },
   {
     slug: "yuki-koyo-shiyo-kikan-minikata",
@@ -220,7 +221,7 @@ export const posts: Post[] = [
       { h: "まとめ：言葉の意味を、聞いて確かめる" },
       { p: "「有期雇用」「試用期間」は、求人ごとに意味合いが違うことがあります。気になる言葉は、見学・面接の場で遠慮なく聞いてみてください。選考は「見学→面接→採用」の順で、応募資格は美容師免許（取得見込みを含む）です。公式LINEからのご質問もお待ちしています。" },
     ],
-    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", "https://lin.ee/Z0JP8sH"], ["中途の方へ", "/recruit/career"], ["美容学生の方へ", "/recruit/student"], ["休日・有給の見方を読む", "/blog/kyujitsu-yukyu-minikata"], ["固定残業代の見方を読む", "/blog/kotei-zangyo-minikata"], ["転職のポイントを読む", "/blog/tenshoku-point"]],
+    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", LINE_CONSULT], ["中途の方へ", "/recruit/career"], ["美容学生の方へ", "/recruit/student"], ["休日・有給の見方を読む", "/blog/kyujitsu-yukyu-minikata"], ["固定残業代の見方を読む", "/blog/kotei-zangyo-minikata"], ["転職のポイントを読む", "/blog/tenshoku-point"]],
   },
   {
     slug: "koukousei-biyoushi-susumikata",
@@ -254,7 +255,7 @@ export const posts: Post[] = [
       { h: "まとめ：決めきれなくても、相談から" },
       { p: "進路は、すぐに決めなくても大丈夫です。サロンを知る、体験する、学生アルバイトで働く、条件を見る。この順に、できるところから進めてみてください。気になることがあれば、見学・相談や公式LINEでお気軽にご質問ください。" },
     ],
-    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", "https://lin.ee/Z0JP8sH"], ["学生アルバイトの募集要項を見る", "/jobs/student"], ["美容学生の方へ", "/recruit/student"], ["早番・遅番の1日を読む", "/blog/hayaban-osoban"], ["学生アルバイトの記事を読む", "/blog/student-baito"], ["見学で聞くことを読む", "/blog/gakusei-kengaku-kakunin"]],
+    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", LINE_CONSULT], ["学生アルバイトの募集要項を見る", "/jobs/student"], ["美容学生の方へ", "/recruit/student"], ["早番・遅番の1日を読む", "/blog/hayaban-osoban"], ["学生アルバイトの記事を読む", "/blog/student-baito"], ["見学で聞くことを読む", "/blog/gakusei-kengaku-kakunin"]],
   },
   {
     slug: "shougakukin-hensai-salon-erabi",
@@ -290,7 +291,7 @@ export const posts: Post[] = [
       { p: "見学や相談の段階から、奨学金のことを聞いていただいて大丈夫です。選考は「見学→面接→採用」の順で、提出書類は履歴書です。説明会・採用試験は、体験会に参加した方が対象になります。体験には、キャスト体験（8:30〜17:30の間で1時間から）とレッスン体験（19:20〜20:20）があります。" },
       { p: "2027年度は新卒美容師を3名募集しています（募集状況は年度により異なります）。奨学金の返済と仕事を無理なく両立できるかどうかは、給与の額だけでは決まりません。内訳・休み・補助・サポート・練習の5つを、納得できるまで確認して、最初の職場を選んでください。" },
     ],
-    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", "https://lin.ee/Z0JP8sH"], ["新卒の募集条件を見る", "/recruit/newgrad"], ["固定残業代の見方を読む", "/blog/kotei-zangyo-minikata"], ["見学で聞くことを読む", "/blog/gakusei-kengaku-kakunin"], ["交通費・家賃補助と通勤を読む", "/blog/tsukin-kishiwada-izumi-sakai"]],
+    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", LINE_CONSULT], ["新卒の募集条件を見る", "/recruit/newgrad"], ["固定残業代の見方を読む", "/blog/kotei-zangyo-minikata"], ["見学で聞くことを読む", "/blog/gakusei-kengaku-kakunin"], ["交通費・家賃補助と通勤を読む", "/blog/tsukin-kishiwada-izumi-sakai"]],
   },
   {
     slug: "fukushoku-salon-erabi",
@@ -322,7 +323,7 @@ export const posts: Post[] = [
       ] },
       { p: "「ブランクがあるけれど話を聞いてみたい」という段階でも大丈夫です。見学・相談や公式LINEから、お気軽にご連絡ください。" },
     ],
-    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", "https://lin.ee/Z0JP8sH"], ["パート美容師の募集を見る", "/jobs/part"], ["中途採用を見る", "/recruit/career"], ["早番・遅番の一日を読む", "/blog/hayaban-osoban"], ["見学・体験と選考を読む", "/blog/taiken-guide"]],
+    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", LINE_CONSULT], ["パート美容師の募集を見る", "/jobs/part"], ["中途採用を見る", "/recruit/career"], ["早番・遅番の一日を読む", "/blog/hayaban-osoban"], ["見学・体験と選考を読む", "/blog/taiken-guide"]],
   },
   {
     slug: "gakusei-kengaku-kakunin",
@@ -356,7 +357,7 @@ export const posts: Post[] = [
       ] },
       { p: "気になる点は遠慮なく聞いて大丈夫です。体験は、キャスト体験が1時間から、レッスン体験とゲスト体験もあります。まずは見学・相談や公式LINEから、お気軽にご連絡ください。" },
     ],
-    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", "https://lin.ee/Z0JP8sH"], ["新卒採用を見る", "/recruit/newgrad"], ["見学・体験と選考を読む", "/blog/taiken-guide"], ["学生アルバイトを読む", "/blog/student-baito"]],
+    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", LINE_CONSULT], ["新卒採用を見る", "/recruit/newgrad"], ["見学・体験と選考を読む", "/blog/taiken-guide"], ["学生アルバイトを読む", "/blog/student-baito"]],
   },
   {
     slug: "kotei-zangyo-minikata",
@@ -387,7 +388,7 @@ export const posts: Post[] = [
       { h: "気になる点は見学・相談で聞いてください" },
       { p: "給与の仕組みは文章だけでは分かりにくいものです。応募資格は美容師免許（取得見込みを含む）です。まずは見学や公式LINEで、気になる点をご質問ください。" },
     ],
-    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", "https://lin.ee/Z0JP8sH"], ["初任給・手当を読む", "/blog/shoninkyu-teate"], ["休日・有給の見方を読む", "/blog/kyujitsu-yukyu-minikata"]],
+    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", LINE_CONSULT], ["初任給・手当を読む", "/blog/shoninkyu-teate"], ["休日・有給の見方を読む", "/blog/kyujitsu-yukyu-minikata"]],
   },
   {
     slug: "kyujitsu-yukyu-minikata",
@@ -418,7 +419,7 @@ export const posts: Post[] = [
       ] },
       { p: "数字は求人票だけでは伝わらないこともあります。見学・相談の際に、気になる点を直接お聞きください。応募資格は美容師免許（取得見込みを含む）です。" },
     ],
-    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", "https://lin.ee/Z0JP8sH"], ["休み・勤務時間を見る", "/workstyle"], ["早番・遅番を読む", "/blog/hayaban-osoban"]],
+    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", LINE_CONSULT], ["休み・勤務時間を見る", "/workstyle"], ["早番・遅番を読む", "/blog/hayaban-osoban"]],
   },
   {
     slug: "tsukin-kishiwada-izumi-sakai",
@@ -446,7 +447,7 @@ export const posts: Post[] = [
       { p: "見学・体験は、1時間から参加できる体験もあります。実際に駅から歩いて、サロンの雰囲気と合わせて通勤のイメージを確かめてみてください。応募資格は美容師免許（取得見込みを含む）です。" },
       { p: "お住まいのエリアから通えるか不安な方は、見学前に公式LINEで質問もできます。" },
     ],
-    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", "https://lin.ee/Z0JP8sH"], ["勤務エリアを見る", "/area"], ["早番・遅番を読む", "/blog/hayaban-osoban"], ["泉大津で暮らし、働く見方を読む", "/blog/izumiotsu-kurashi-hataraku-minikata"]],
+    ctas: [["見学・相談する", "/?c=visit#contact"], ["公式LINEで質問する", LINE_CONSULT], ["勤務エリアを見る", "/area"], ["早番・遅番を読む", "/blog/hayaban-osoban"], ["泉大津で暮らし、働く見方を読む", "/blog/izumiotsu-kurashi-hataraku-minikata"]],
   },
   {
     slug: "taiken-guide",
@@ -620,6 +621,6 @@ export const posts: Post[] = [
       { p: "スタイリストのその先の道について、現在お伝えできる内容は面談・見学でご案内します。アイリスト・管理職・FC契約・独立支援の制度と条件は要相談です。" },
       { p: "転職を決めていない段階でも、連絡方法を指定して相談できます。" },
     ],
-    ctas: [["中途採用を見る", "/recruit/career"], ["相談する", "/?c=career#contact"], ["公式LINEで質問する", "https://lin.ee/Z0JP8sH"], ["休み・勤務時間を見る", "/workstyle"], ["休日・有給の見方を読む", "/blog/kyujitsu-yukyu-minikata"], ["賞与の見方を読む", "/blog/shouyo-minikata-biyoushi"]],
+    ctas: [["中途採用を見る", "/recruit/career"], ["相談する", "/?c=career#contact"], ["公式LINEで質問する", LINE_CONSULT], ["休み・勤務時間を見る", "/workstyle"], ["休日・有給の見方を読む", "/blog/kyujitsu-yukyu-minikata"], ["賞与の見方を読む", "/blog/shouyo-minikata-biyoushi"]],
   },
 ];

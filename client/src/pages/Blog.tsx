@@ -95,7 +95,7 @@ export function BlogPost({ slug }: { slug: string }) {
                 <aside className="blog-mid-cta" onClick={trackClick}>
                   <p>読んで気になったことは、見学や公式LINEで気軽に聞けます。</p>
                   <a href="/?c=visit#contact" data-track="consult" data-placement="blog-mid">見学・相談する</a>
-                  <a href="https://lin.ee/Z0JP8sH" target="_blank" rel="noreferrer" data-track="line" data-placement="blog-mid">公式LINEで質問する</a>
+                  <a href={LINE_URL} target="_blank" rel="noreferrer" data-track="line" data-placement="blog-mid">公式LINEで質問する</a>
                 </aside>
               </div>
             );
@@ -112,7 +112,7 @@ export function BlogPost({ slug }: { slug: string }) {
           <h2>公式アカウント・働くサロン</h2>
           <ul>
             <li><a href="https://www.instagram.com/ko_un_ryu_sui.recruit/" target="_blank" rel="noreferrer" data-track="body" data-placement="blog-links">採用Instagram（@ko_un_ryu_sui.recruit）</a></li>
-            <li><a href="https://lin.ee/Z0JP8sH" target="_blank" rel="noreferrer" data-track="line" data-placement="blog-links">公式LINEで質問する</a></li>
+            <li><a href={LINE_URL} target="_blank" rel="noreferrer" data-track="line" data-placement="blog-links">公式LINEで質問する</a></li>
             <li><a href={`https://www.flowcloud.net/?utm_source=recruit_blog&utm_medium=internal&utm_campaign=${post.slug}`} target="_blank" rel="noreferrer" data-track="body" data-placement="blog-links">FLOWCLOUD（泉大津駅 徒歩3分）のサロンを見る</a></li>
             <li><a href={`https://glow-izumiotsu.jp/?utm_source=recruit_blog&utm_medium=internal&utm_campaign=${post.slug}`} target="_blank" rel="noreferrer" data-track="body" data-placement="blog-links">glow（泉大津駅 徒歩1分）のサロンを見る</a></li>
             <li><a href="https://beauty.hotpepper.jp/slnH000173335/" target="_blank" rel="noreferrer" data-track="body" data-placement="blog-links">FLOWCLOUD のホットペッパービューティーページ</a></li>
