@@ -1,6 +1,6 @@
 # ============================================================
 #  match.ko-un-ryu-sui.com（採用マッチング診断）用 .htaccess
-#  置き場所: match.ko-un-ryu-sui.com/public_html/.htaccess
+#  置き場所: ko-un-ryu-sui.com/public_html/<match-new または match>.ko-un-ryu-sui.com/.htaccess（サブドメインのフォルダの中）
 #  ※このファイルは自動の取り込み（sync_match.php）では更新されない。変えたときは手で貼り替える。
 # ============================================================
 

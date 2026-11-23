@@ -7,7 +7,7 @@
 
 ```
 match-site/
-  site/                      公開物（Xserver の match.ko-un-ryu-sui.com/public_html に毎時取り込まれる）
+  site/                      公開物（Xserver の match.ko-un-ryu-sui.com のフォルダに毎時取り込まれる）
     index.html               診断ページ（画面・デザイン・フォーム）
     diagnosis.js             診断の質問・採点・結果の文章（画面側で動く）
     privacy.html             プライバシーポリシー（/privacy）
@@ -15,7 +15,7 @@ match-site/
     lib/admin.js             管理画面の描画（自動生成。直接は編集しない）
     manifest.json            取り込み用の一覧（自動生成）
   src/admin-parts.js         管理画面の部品（これと diagnosis.js から lib/admin.js を作る）
-  server/config.sample.php   秘密を入れる設定ファイルの見本（本物の config.php はサーバーにだけ置く）
+  server/config.sample.php   秘密を入れる設定ファイルの見本（本物の match-config.php はサーバーにだけ置く）
   build.mjs                  lib/admin.js と manifest.json を作る（--check で最新か確認）
   tests/compat-test.mjs      元の ChatGPT Sites 版と PHP 版に同じリクエストを送って結果を比べる試験
   archive/                   ChatGPT Sites 最後の版（2026-11-22 19:09 公開）のソースと DB 定義。戻し・照合用。触らない
@@ -24,10 +24,11 @@ match-site/
   sync_match.php             サーバーの cron が毎時動かす取り込みスクリプト
 ```
 
-サーバーの `match.ko-un-ryu-sui.com/` フォルダ（`public_html` の1つ上＝Webから見えない場所）に、秘密と受付データを置く：
+サーバーでは、サブドメインのフォルダは入れ子（`ko-un-ryu-sui.com/public_html/match.ko-un-ryu-sui.com/`）。`ko-un-ryu-sui.com/`（`public_html` の1つ上＝Webから見えない場所）に、取り込みスクリプトと秘密と受付データを置く：
 
-- `config.php` … 管理画面パスワード（16文字以上）・LINE のアクセストークン・通知先ID・公開アドレス。**見本は server/config.sample.php。リポジトリ・チャット・メールには載せない**
-- `data/match.sqlite` … 受付データ（初回アクセスで自動作成。SQLite。ChatGPT Sites の D1 と同じ表の形）
+- `sync_match.php` … 毎時の取り込み（cron：`php sync_match.php <サブドメインのフォルダ名>`）
+- `match-config.php` … 管理画面パスワード（16文字以上）・LINE のアクセストークン・通知先ID・公開アドレス。**見本は server/config.sample.php。リポジトリ・チャット・メールには載せない**
+- `match-data/match.sqlite` … 受付データ（初回アクセスで自動作成。SQLite。ChatGPT Sites の D1 と同じ表の形）
 
 ## 仕組み
 
@@ -49,7 +50,7 @@ match-site/
 
 ## 秘密情報
 
-パスワード・LINE のトークンは、`config.php`（サーバーのみ）にだけ置く。リポジトリ・ログ・チャット・README に値を書かない。Claude はこの値を見ない（藤津さんがサーバーのファイルマネージャーで入れる）。
+パスワード・LINE のトークンは、`match-config.php`（サーバーのみ）にだけ置く。リポジトリ・ログ・チャット・README に値を書かない。Claude はこの値を見ない（藤津さんがサーバーのファイルマネージャーで入れる）。
 
 ## 戻し方
 

@@ -7,8 +7,8 @@
  * 管理画面の「診断の内訳」は、採点コードを書き換えずに済むよう、元の JavaScript（lib/admin.js）をブラウザで動かして表示する。
  *
  * 設定と DB はこのファイルの1つ上（Webから見えない場所）に置く：
- *   ../config.php        … LINE・管理画面パスワードなどの秘密（config.sample.php を見本に藤津さんが作る。リポジトリには入れない）
- *   ../data/match.sqlite … 受付データ（初回アクセス時に自動で作られる）
+ *   <public_html の1つ上>/match-config.php        … LINE・管理画面パスワードなどの秘密（config.sample.php を見本に藤津さんが作る。リポジトリには入れない）
+ *   <public_html の1つ上>/match-data/match.sqlite … 受付データ（初回アクセス時に自動で作られる）
  */
 
 declare(strict_types=1);
@@ -42,11 +42,28 @@ CREATE TABLE IF NOT EXISTS recruit_funnel (visit_id TEXT NOT NULL, event TEXT NO
 SQL;
 
 // ---------- 設定・DB ----------
+/**
+ * 設定とDBを置く場所＝「public_html の1つ上」（Webから見えない場所）。
+ * エックスサーバーでは、サブドメインのフォルダが <ドメイン>/public_html/<サブドメイン>/ になるので、上へたどって public_html を探す。
+ * 手元の試験などで public_html が無いときは、このファイルの1つ上。環境変数 MATCH_BASE で上書きもできる。
+ */
+function base_dir(): string
+{
+    $env = getenv('MATCH_BASE');
+    if ($env) { return rtrim($env, '/'); }
+    $d = __DIR__;
+    for ($i = 0; $i < 4; $i++) {
+        if (basename($d) === 'public_html') { return dirname($d); }
+        $d = dirname($d);
+    }
+    return dirname(__DIR__);
+}
+
 function conf(): array
 {
     static $c = null;
     if ($c !== null) { return $c; }
-    $path = getenv('MATCH_CONFIG') ?: dirname(__DIR__) . '/config.php';
+    $path = getenv('MATCH_CONFIG') ?: base_dir() . '/match-config.php';
     $c = is_file($path) ? require $path : [];
     return is_array($c) ? $c : [];
 }
@@ -55,7 +72,7 @@ function db(): PDO
 {
     static $pdo = null;
     if ($pdo !== null) { return $pdo; }
-    $dir = getenv('MATCH_DATA_DIR') ?: (conf()['data_dir'] ?? dirname(__DIR__) . '/data');
+    $dir = getenv('MATCH_DATA_DIR') ?: (conf()['data_dir'] ?? base_dir() . '/match-data');
     if (!is_dir($dir)) { @mkdir($dir, 0700, true); }
     $pdo = new PDO('sqlite:' . $dir . '/match.sqlite', null, null, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,

@@ -1,7 +1,7 @@
 <?php
 // 採用マッチング診断の設定（見本）。
-// これを config.php という名前にして、サーバーの「match.ko-un-ryu-sui.com/」フォルダ直下（public_html の1つ上）に置く。
-// config.php には秘密が入るので、リポジトリ・チャット・メールには絶対に載せない。
+// これを match-config.php という名前にして、サーバーの「ko-un-ryu-sui.com/」フォルダ直下（public_html の1つ上。sync_match.php と同じ場所）に置く。
+// match-config.php には秘密が入るので、リポジトリ・チャット・メールには絶対に載せない。
 return [
     // 公開アドレス（受付の確認に使う）
     'origin' => 'https://match.ko-un-ryu-sui.com',
