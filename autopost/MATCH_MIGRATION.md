@@ -73,3 +73,15 @@
 - `autopost/EFFECT_CHECKS.md` に1行（判定日 12/7 ごろ）：「切り替え後の受付が取りこぼしなく動いている（LINE 通知の件数と管理画面の件数が一致）」。
 - 毎日の「外部アプリが開けるか」の見張りに `/api/health`（`ok:true`）も加える。
 - `autopost/REQUEST_CHATGPT_2026-11-22_match-line-template.md` は役目終了（ChatGPT への依頼は不要になる）。
+
+## 7. 切り替え前の DNS の控え（2026-11-23 20:4x に Xserver の DNSレコード設定の画面から読み取り。戻し方に使う）
+
+ko-un-ryu-sui.com のゾーン（TTL はいずれも 3600）。ワイルドカード `*.ko-un-ryu-sui.com A 157.112.152.39`（Xserver）が元からあるので、下の3件を消すと `match` はこの A に落ちて Xserver に向く（match-new も同じ仕組みで開けている）。
+
+| ホスト名 | 種別 | 内容 |
+|---|---|---|
+| match.ko-un-ryu-sui.com | CNAME | custom-domains.chatgpt.site |
+| _openai-site-verification.match.ko-un-ryu-sui.com | TXT | openai-site-verification=4sIVXLjmhspEgP8OluaB7P5X8GltYKel11ek4ovW1DY |
+| _cf-custom-hostname.match.ko-un-ryu-sui.com | TXT | 5f50af57-af34-404a-b550-cc9495ae01d2 |
+
+戻すときは、同じ3件を DNSレコード設定の「DNSレコード設定を追加」で入れ直し（TTL 3600）、`match` サブドメインを削除する。
