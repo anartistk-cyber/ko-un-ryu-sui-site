@@ -115,9 +115,17 @@ const reqBody = (o = {}) => JSON.stringify({ track: 'newgrad', answers: [0, 1, 2
 
 // ---------- 試験 ----------
 console.log('== 静的ページ ==');
-for (const p of ['/', '/index.html', '/diagnosis.js', '/privacy', '/privacy/']) {
-  // /privacy だけは、置き場所の変更に合わせて文面の1か所（「ChatGPT Sites」→「エックスサーバー（日本国内のレンタルサーバー）」）を意図して直してある。それ以外は同一であること。
-  const fixWorker = p.startsWith('/privacy') ? t => t.replace('ChatGPT Sitesを', 'エックスサーバー（日本国内のレンタルサーバー）を') : undefined;
+// 2026-11-24：トップページ（/ と /index.html）は、フォームを簡単にし QR を足したため元の版と違う。ここでは「いまの site/index.html と同じものが返ること」と、新しい部品があることを確かめる。
+for (const p of ['/', '/index.html']) {
+  const x = await call('php', 'GET', p);
+  const disk = fs.readFileSync(path.join(root, 'site/index.html'), 'utf8');
+  const need = ['id="optional-fields"', 'id="after-submit"', 'id="result-qr"', 'qr.js', '/api/line'];
+  const missing = need.filter(k => !x.text.includes(k));
+  if (x.status === 200 && x.text === disk && !missing.length) { passed++; console.log(`✓ GET ${p} は新しい index.html（任意欄・QR・LINE）`); } else { fail++; failures.push('GET ' + p); console.log('✗', 'GET', p, x.status, x.text === disk, missing); }
+}
+for (const p of ['/diagnosis.js', '/privacy', '/privacy/']) {
+  // /privacy だけは、置き場所の変更に合わせて文面の1か所（「ChatGPT Sites」→「エックスサーバー（日本国内のレンタルサーバー）」、2026-11-24 に「必須はお名前と職種だけ」の案内）を意図して直してある。それ以外は同一であること。
+  const fixWorker = p.startsWith('/privacy') ? t => t.replace('ChatGPT Sitesを', 'エックスサーバー（日本国内のレンタルサーバー）を').replace('お名前（漢字・ふりがな）、学校名、学年、Instagram ID（任意）、興味のある職種', 'お名前、興味のある職種（この2つが必須です。ふりがな・学校名・学年・Instagram ID・相談内容は任意です）') : undefined;
   const r = await both(`GET ${p}`, 'GET', p, {}, { compareType: false, fixWorker });
 }
 console.log('== funnel ==');

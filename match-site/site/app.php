@@ -183,7 +183,7 @@ function parse_application(mixed $input): ?array
         $raw = array_key_exists($key, $input) && $input[$key] !== null ? $input[$key] : '';
         if (!is_string($raw)) { return null; }
         $value = js_trim($raw);
-        if (js_length($value) > $limit || ($value === '' && $key !== 'instagram')) { return null; }
+        if (js_length($value) > $limit || ($value === '' && $key === 'name')) { return null; } // 2026-11-24 から、必須はお名前と職種だけ（ふりがな・学校名・学年・Instagram・相談内容は任意）
         $result[$key] = $value;
     }
     return $result;
@@ -287,6 +287,23 @@ try {
         $dbOk = true;
         try { one('SELECT 1 AS ok'); } catch (Throwable $e) { $dbOk = false; error_log('match health: ' . $e->getMessage()); }
         json_out($dbOk ? 200 : 503, ['ok' => $dbOk, 'db' => $dbOk, 'config' => line_ready(), 'php' => PHP_MAJOR_VERSION . '.' . PHP_MINOR_VERSION]);
+    }
+
+    // パソコンの画面に出す QR コード用の短いアドレス。スマホで読むと、記入用の文面が入った LINE のトークが開く。
+    //   ?c=newgrad|career … 採用のご相談の記入用文面　?r=受付番号（6桁） … 受付番号つきの文面。個人情報は入れない。
+    if ($path === '/api/line' && $method === 'GET') {
+        $c = (string)($_GET['c'] ?? '');
+        $r = (string)($_GET['r'] ?? '');
+        if (preg_match('/^[0-9]{6}\z/', $r) === 1) {
+            $text = "【見学・相談の受付】\n受付番号 " . $r . "\nお名前：\n見学のご希望日など：";
+        } elseif (array_key_exists($c, TRACKS)) {
+            $text = "【採用のご相談】\n①ご希望：" . TRACKS[$c] . "\n②お名前：\n③ご質問・見学のご希望日など：";
+        } else {
+            $text = "【採用のご相談】\n①ご希望：\n②お名前：\n③ご質問・見学のご希望日など：";
+        }
+        header('Cache-Control: no-store');
+        header('Location: https://line.me/R/oaMessage/%40512rmwnk/?' . rawurlencode($text), true, 302);
+        exit;
     }
 
     // 診断→フォームの進行を数える（visitId とイベント名だけ）

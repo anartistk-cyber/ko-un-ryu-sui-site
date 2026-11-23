@@ -2,7 +2,7 @@
  "files": [
   {
    "path": "app.php",
-   "sha256": "3e8323d956b25bddd401768fe2abdb5d4aac39aaca21435e44c7d1a037c9d69b"
+   "sha256": "2591a17742fc325af856ec4037bdfdc3cec1967b48173a0e4dc9389571eb97fd"
   },
   {
    "path": "diagnosis.js",
@@ -10,7 +10,7 @@
   },
   {
    "path": "index.html",
-   "sha256": "c9c3e87805028605e525bf0813e747e5bbb1566aa1fa4afcaa88780828c9a544"
+   "sha256": "f5a517726f8b1410402740e640742225a031390f87b6d78b88a0aa03a157774a"
   },
   {
    "path": "lib/admin.js",
@@ -18,7 +18,11 @@
   },
   {
    "path": "privacy.html",
-   "sha256": "284a85cd7cdf9e280f67985ce0f1d01f87090f3532e1957c11d177889c9ee877"
+   "sha256": "0648ae03b851a66352f3f67860c36db75605697caf8cd9aa9ea9bc1156160906"
+  },
+  {
+   "path": "qr.js",
+   "sha256": "f29b6db42e5ca74d6da06fc87fde03e5f38b877b307e91f6958ad1abe5107ccc"
   }
  ]
 }

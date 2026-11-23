@@ -81,6 +81,9 @@ details+details{margin-top:9px}summary{font-weight:800;padding:3px 0}
 .field{display:grid;gap:5px;font-weight:750;margin-top:10px}
 select,textarea,.field input{width:100%;min-height:46px;border:1px solid #a6899c;border-radius:10px;background:white;padding:8px}
 textarea{resize:vertical}
+.optional-fields{border:0;box-shadow:none;background:transparent;padding:0;margin-top:14px}.optional-fields summary{color:#a2336b;font-weight:800;cursor:pointer}
+.qr-box{display:flex;gap:14px;align-items:center;margin-top:14px;padding:12px 14px;border:1px dashed #06c755;border-radius:14px;background:#f4fff8}.qr-box[hidden]{display:none}.qr-img{flex:none;width:136px;height:136px;background:#fff;border-radius:8px;padding:4px}.qr-img svg{display:block;width:100%;height:100%}.qr-box p{margin:0;font-size:.92rem;line-height:1.6}
+.after-submit{margin-top:14px;padding:14px;border-radius:14px;background:#f4fff8;border:1px solid #06c755}.after-submit[hidden]{display:none}.after-submit p{margin:0 0 10px}
 .application-fields{margin:10px 0;padding:12px;border:1px solid var(--line);border-radius:14px;min-width:0}
 .application-fields fieldset{border:0;margin:15px 0;padding:0;min-width:0}
 .job-options{display:flex;gap:8px;flex-wrap:wrap}
@@ -204,7 +207,7 @@ body{background:radial-gradient(circle,#edb9d14d 1px,transparent 1.2px) 0 0/19px
 <a class="skip" href="#main">本文へ</a>
 <header class="top" id="top"><div class="wrap"><a href="#top" class="brand">株式会社行雲流水</a><nav aria-label="ページ内メニュー"><a href="#diagnosis">診断</a><a href="#salons">サロン</a><a href="#philosophy">理念</a><a href="#pathway">入社後の流れ</a></nav></div></header>
 <main id="main" class="wrap">
-<div class="hero"><div class="hero-copy"><p class="eyebrow">泉大津 · 美容師採用</p><h1><span class="hero-line">らしさを輝かせ、</span><br><span class="hero-accent">自分史上<span class="hero-happy">最幸</span>に。</span></h1><p class="hero-intro">美容学生も、経験のある美容師さんも。7問で、自分が大切にしたい働き方を見つけよう。</p></div><div class="hero-photo"><figure class="hero-visual"><img src="https://ko-un-ryu-sui.com/images/flow-cloud-team-hero_18f9702b.jpg" alt="FLOWCLOUDのキャスト" fetchpriority="high" width="800" height="640"><figcaption>FLOWCLOUDのキャスト</figcaption></figure><span class="salon-sticker" aria-hidden="true"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="12" cy="33" r="6"/><circle cx="28" cy="36" r="6"/><path d="m16 29 22-19-9 20M25 30 14 8l5 19m18-7v11m-5-6h10"/></svg></span></div><nav class="entry-links" aria-label="採用メニュー"><a class="entry-card" href="#diagnosis" data-entry="diagnose"><span class="entry-icon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 38 9 24C-2 13 14 4 24 16 34 4 50 13 39 24Z"/><path d="M33 8l2-5m5 10 5-2"/></svg></span><span><strong>7問の適性診断</strong><small>大切にしたい働き方を見つけよう</small></span><span class="entry-arrow" aria-hidden="true">→</span></a><a class="entry-card" href="#diagnosis" data-entry="visit"><span class="entry-icon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="8" y="12" width="32" height="29" rx="5"/><path d="M15 7v10m18-10v10M8 22h32m-22 9 4 4 8-8"/></svg></span><span><strong>見学・相談</strong><small>お店を見たい、話を聞いてみたい</small></span><span class="entry-arrow" aria-hidden="true">→</span></a></nav></div>
+<div class="hero"><div class="hero-copy"><p class="eyebrow">泉大津 · 美容師採用</p><h1><span class="hero-line">らしさを輝かせ、</span><br><span class="hero-accent">自分史上<span class="hero-happy">最幸</span>に。</span></h1><p class="hero-intro">美容学生も、経験のある美容師さんも。7問で、自分が大切にしたい働き方を見つけよう。</p></div><div class="hero-photo"><figure class="hero-visual"><img src="https://ko-un-ryu-sui.com/images/flow-cloud-team-hero_18f9702b.jpg" alt="FLOWCLOUDのキャスト" fetchpriority="high" width="800" height="640"><figcaption>FLOWCLOUDのキャスト</figcaption></figure><span class="salon-sticker" aria-hidden="true"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="12" cy="33" r="6"/><circle cx="28" cy="36" r="6"/><path d="m16 29 22-19-9 20M25 30 14 8l5 19m18-7v11m-5-6h10"/></svg></span></div><nav class="entry-links" aria-label="採用メニュー"><a class="entry-card" href="#diagnosis" data-entry="diagnose"><span class="entry-icon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 38 9 24C-2 13 14 4 24 16 34 4 50 13 39 24Z"/><path d="M33 8l2-5m5 10 5-2"/></svg></span><span><strong>7問の適性診断</strong><small>大切にしたい働き方を見つけよう</small></span><span class="entry-arrow" aria-hidden="true">→</span></a><a class="entry-card" href="#diagnosis" data-entry="visit"><span class="entry-icon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="8" y="12" width="32" height="29" rx="5"/><path d="M15 7v10m18-10v10M8 22h32m-22 9 4 4 8-8"/></svg></span><span><strong>サロン見学を申し込む</strong><small>お名前と職種だけでOK・診断なしでも大丈夫</small></span><span class="entry-arrow" aria-hidden="true">→</span></a></nav></div>
 
 <section id="diagnosis">
 <p class="eyebrow" id="entry-label">CAREER MATCH</p><h2 id="entry-heading">あなたの価値観を知る</h2>
@@ -214,12 +217,8 @@ body{background:radial-gradient(circle,#edb9d14d 1px,transparent 1.2px) 0 0/19px
 <fieldset id="application-fields" class="application-fields">
 <legend>応募者情報</legend>
 <label class="field">見学・相談<select id="intent"><option value="visit">サロン見学</option><option value="consult">その他相談</option></select></label>
-<label class="field">お名前（漢字）<input name="name" autocomplete="name" maxlength="80" required></label>
-<label class="field">お名前（ふりがな）<input name="kana" maxlength="100" required></label>
-<label class="field">学校名<input name="school" maxlength="120" required></label>
-<label class="field">学年<input name="grade" maxlength="40" placeholder="例：2年、卒業済み" required></label>
-<label class="field">Instagram ID（任意）<input name="instagram" maxlength="40" placeholder="@アカウント名"></label>
-<fieldset><legend>興味のある職種（複数選択可）</legend><div class="job-options">
+<label class="field">お名前（必須）<input name="name" autocomplete="name" maxlength="80" placeholder="例：山田 花子" required></label>
+<fieldset><legend>興味のある職種（必須・複数選択可）</legend><div class="job-options">
 <label><input type="checkbox" name="jobs" value="美容師"> 美容師</label>
 <label><input type="checkbox" name="jobs" value="アイリスト"> アイリスト</label>
 <label><input type="checkbox" name="jobs" value="エステ"> エステ</label>
@@ -228,7 +227,13 @@ body{background:radial-gradient(circle,#edb9d14d 1px,transparent 1.2px) 0 0/19px
 <label><input type="checkbox" name="jobs" value="その他"> その他</label>
 </div></fieldset>
 <button type="button" class="button secondary" id="visit-template">見学希望日のテンプレートを入れる</button>
-<label class="field">相談内容<textarea id="consultation" name="consultation" rows="4" maxlength="1000" required></textarea></label>
+<details class="optional-fields" id="optional-fields"><summary>もっと伝える（すべて任意）</summary>
+<label class="field">ふりがな（任意）<input name="kana" maxlength="100"></label>
+<label class="field">学校名（任意）<input name="school" maxlength="120"></label>
+<label class="field">学年（任意）<input name="grade" maxlength="40" placeholder="例：2年、卒業済み"></label>
+<label class="field">Instagram ID（任意）<input name="instagram" maxlength="40" placeholder="@アカウント名"></label>
+<label class="field">相談内容・見学の希望日など（任意）<textarea id="consultation" name="consultation" rows="4" maxlength="1000"></textarea></label>
+</details>
 </fieldset>
 <p id="profile-note" class="small">診断だけでもOK。回答はこの画面で確認できます。</p>
 <p id="profile-status" class="small error" role="status"></p>
@@ -248,7 +253,9 @@ body{background:radial-gradient(circle,#edb9d14d 1px,transparent 1.2px) 0 0/19px
 <div class="result-tile"><p class="result-label"><span aria-hidden="true">♡</span> 価値観のマッチ度の目安</p><strong id="score"></strong><p id="match-message"></p></div>
 <div class="result-tile"><p class="result-label"><span aria-hidden="true">✿</span> あなたのいいところ</p><strong id="salon-result"></strong><p id="salon-caption" class="result-next"></p><p id="result-tip" class="result-next"></p></div>
 </div>
-<div class="actions"><a class="button" href="#diagnosis" data-intent="0">見学・相談してみる →</a><a class="button line" href="https://line.me/R/oaMessage/%40512rmwnk/?%E3%83%9E%E3%83%83%E3%83%81%E3%83%B3%E3%82%B0%E8%A8%BA%E6%96%AD%E3%82%92%E5%8F%97%E3%81%91%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E8%A6%8B%E5%AD%A6%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E7%9B%B8%E8%AB%87%E3%81%97%E3%81%9F%E3%81%84%E3%81%A7%E3%81%99%E3%80%82" target="_blank" rel="noopener">LINEで相談する ↗</a><button type="button" class="button secondary" id="revise">回答を見直す</button><button type="button" class="button secondary" id="restart">最初から</button></div>
+<div class="actions"><a class="button" href="#diagnosis" data-intent="0">サロン見学を申し込む →</a><a class="button line" href="https://line.me/R/oaMessage/%40512rmwnk/?%E3%83%9E%E3%83%83%E3%83%81%E3%83%B3%E3%82%B0%E8%A8%BA%E6%96%AD%E3%82%92%E5%8F%97%E3%81%91%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E8%A6%8B%E5%AD%A6%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E7%9B%B8%E8%AB%87%E3%81%97%E3%81%9F%E3%81%84%E3%81%A7%E3%81%99%E3%80%82" target="_blank" rel="noopener">LINEで相談する ↗</a><button type="button" class="button secondary" id="revise">回答を見直す</button><button type="button" class="button secondary" id="restart">最初から</button></div>
+</div>
+<div class="qr-box" id="result-qr" hidden><div class="qr-img" id="result-qr-img" role="img" aria-label="LINEを開くQRコード"></div><p><strong>パソコンで見ている方へ</strong><br>スマホのカメラで読み取ると、LINEで採用担当にすぐ相談できます。</p></div>
 </div>
 </section>
 
@@ -288,6 +295,11 @@ body{background:radial-gradient(circle,#edb9d14d 1px,transparent 1.2px) 0 0/19px
 <p class="small">入力内容は見学・相談への対応に利用し、受付番号と一緒に採用担当へLINEで通知します。詳しくは<a href="/privacy">プライバシーポリシー</a>をご確認ください。</p><p><label><input id="consent" type="checkbox" required> 入力した情報と、診断を受けた場合はその回答を、採用担当に共有することに同意します。</label></p>
 <div class="actions"><button class="button" id="register">送信する</button></div>
 <p id="request-status" class="small" role="status"></p>
+<div class="after-submit" id="after-submit" hidden>
+<p><strong>最後に、LINEで受付番号を送ってください</strong><br>担当からのご連絡が、LINEでスムーズに届きます。</p>
+<a class="button line" id="after-line" href="https://line.me/R/oaMessage/%40512rmwnk/" target="_blank" rel="noopener">LINEで受付番号を送る ↗</a>
+<div class="qr-box" id="after-qr" hidden><div class="qr-img" id="after-qr-img" role="img" aria-label="LINEを開くQRコード"></div><p><strong>パソコンの方へ</strong><br>スマホのカメラで読み取ると、受付番号が入力済みのLINEが開きます。</p></div>
+</div>
 </form>
 </section>
 </main>
@@ -365,8 +377,34 @@ function renderResult() {
   byId("contact").hidden = true;
   updateMessage();
   show("results");
+  showQr("result-qr", "result-qr-img", location.origin + "/api/line?c=" + encodeURIComponent(track));
   void recordFunnel("diagnosis_completed");
   byId("result-heading").focus();
+}
+const isDesktop = () => window.matchMedia("(hover: hover) and (pointer: fine)").matches && window.innerWidth >= 760;
+function showQr(boxId, imgId, url) {
+  const box = byId(boxId);
+  if (!box || !isDesktop()) return;
+  const draw = () => {
+    try {
+      const code = qrcode(0, "L");
+      code.addData(url);
+      code.make();
+      byId(imgId).innerHTML = code.createSvgTag({cellSize: 4, margin: 2, scalable: true});
+      box.hidden = false;
+    } catch {}
+  };
+  if (window.qrcode) { draw(); return; }
+  const script = document.createElement("script");
+  script.src = "qr.js?v=1";
+  script.onload = draw;
+  document.head.append(script);
+}
+function showAfterSubmit(number) {
+  const text = "【見学・相談の受付】\n受付番号 " + number + "\nお名前：" + ((application && application.name) || "") + "\n見学のご希望日など：";
+  byId("after-line").href = "https://line.me/R/oaMessage/%40512rmwnk/?" + encodeURIComponent(text);
+  byId("after-submit").hidden = false;
+  showQr("after-qr", "after-qr-img", location.origin + "/api/line?r=" + encodeURIComponent(number));
 }
 let receipt = null;
 let submissionId = null;
@@ -374,6 +412,7 @@ let lastPayload = null;
 let requestPending = false;
 function updateMessage() {
   receipt = null;
+  byId("after-submit").hidden = true;
   byId("register").disabled = false;
   byId("request-status").textContent = "";
   byId("consent").checked = false;
@@ -428,11 +467,10 @@ byId("choose").addEventListener("submit", event => {
   }
   const profile = Object.fromEntries(["name","kana","school","grade","instagram","consultation"].map(key => [key,form.get(key).trim()]));
   profile.jobs = form.getAll("jobs");
-  const blank = Object.keys(profile).find(key => key !== "instagram" && key !== "jobs" && !profile[key]);
   const status = byId("profile-status");
-  if (blank) {
-    status.textContent = "必須項目を入力してください。";
-    event.currentTarget.elements.namedItem(blank).focus();
+  if (!profile.name) {
+    status.textContent = "お名前を入力してください。";
+    event.currentTarget.elements.namedItem("name").focus();
     return;
   }
   if (!profile.jobs.length) {
@@ -504,6 +542,7 @@ byId("intent").addEventListener("change", () => {
   updateMessage();
 });
 byId("visit-template").addEventListener("click", () => {
+  byId("optional-fields").open = true;
   if (!consultation.value.includes("【見学希望日】")) {
     const existing = consultation.value.trim();
     if (existing && existing.length + visitTemplate.length + 2 > consultation.maxLength) {
@@ -562,6 +601,7 @@ byId("request-form").addEventListener("submit", async event => {
       if (result.error === "line retry expired" && result.receipt) {
         status.textContent = "受付番号 " + result.receipt + "。通知の再送期限が過ぎました。この番号を採用担当にお伝えください。";
         receipt = result.receipt;
+        showAfterSubmit(receipt);
         return;
       }
       status.textContent = result.receipt
@@ -571,6 +611,7 @@ byId("request-form").addEventListener("submit", async event => {
     }
     receipt = result.receipt;
     status.textContent = "送信しました ♡ 受付番号 " + receipt;
+    showAfterSubmit(receipt);
   } catch {
     status.textContent = "送信を確認できませんでした。同じ内容で再送できます。";
   } finally {

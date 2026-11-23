@@ -92,5 +92,6 @@
 | Instagram ストーリーズのリンク | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=instagram&utm_medium=social&utm_campaign=type_shindan_story` |
 | FLOWCLOUD トップ「採用情報・姉妹店」の下の広告帯（2026-11-22 開始） | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=fc_site&utm_medium=internal&utm_campaign=type_shindan_banner` |
 | glow トップ「採用情報・姉妹店」の下の広告帯（2026-11-22 開始） | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=glow_site&utm_medium=internal&utm_campaign=type_shindan_banner` |
+| 美容師タイプ診断の結果画面「友だちにすすめる／リンクをコピー」（2026-11-24 開始。受け取った人が開くリンク） | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=share&utm_medium=social&utm_campaign=type_shindan_share` |
 - 流入元は回答ログ（スプレッドシート「美容師タイプ診断_回答ログ」）の「流入元」列にも `instagram/social/type_shindan_bio` の形で残る。
 - FLOWCLOUD・glow の広告帯のクリックは、各サイト側でも GA4 のイベント `type_shindan_click`（`page`=/、`pos`=home_banner）として数える（サイトの分け方は他のイベントと同じくページタイトル）。

@@ -104,6 +104,14 @@ h3{font-size:16px;font-weight:700;color:var(--deep)}
 .gauge strong{font-family:var(--display);font-size:28px;font-variant-numeric:tabular-nums;line-height:1}
 .linebox{border:2px dashed var(--line-green);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:8px;font-size:14px}
 .linebox code{font-family:var(--body);font-weight:700;background:var(--bg);border-radius:8px;padding:8px 10px;display:block}
+.qrbox{display:none;align-items:center;gap:14px;border:2px dashed var(--line-green);border-radius:14px;padding:12px;font-size:14px}
+.qrbox.on{display:flex}
+.qrbox p{margin:0}
+.qrimg{flex:0 0 auto;width:176px;height:176px;background:#fff;border-radius:8px;padding:4px;line-height:0}
+.qrimg svg{display:block;width:100%;height:100%}
+.share{display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--line);padding-top:14px}
+.share .row{display:flex;gap:8px}
+.share .row .btn{flex:1;font-size:15px;padding:12px 8px}
 
 .px{display:block}
 .stage{border:3px solid var(--ink);border-radius:10px;overflow:hidden;background:linear-gradient(#cfeaf8 0 72%,#f3dfae 72%)}
@@ -205,6 +213,12 @@ html{scroll-behavior:smooth}
         <code id="lineMsg"></code>
         <span class="note">うまく入力されないときは、合言葉をそのまま打って送ってください。</span>
       </div>
+      <div class="qrbox" id="qrBox"><div class="qrimg" id="qrImg" role="img" aria-label="LINEで結果を受け取るQRコード"></div><p><strong>パソコンで見ている方へ</strong><br>スマホのカメラやLINEで読み取ると、合言葉が入力済みのトーク画面が開きます。</p></div>
+      <div class="share" id="share">
+        <p class="lead">まわりの美容師さん・美容学生さんにも、教えてあげてね。タイプを見くらべてみよう。</p>
+        <div class="row"><button class="btn ghost" id="shareBtn" type="button">友だちにすすめる</button><button class="btn ghost" id="copyBtn" type="button">リンクをコピー</button></div>
+        <span class="note" id="shareNote" role="status"></span>
+      </div>
       <button class="btn ghost" id="retryBtn" type="button">もう一度診断する</button>
     </div>
   </section>
@@ -292,12 +306,43 @@ function finish(){
     const row=[T.key,FIT[0],JOBS[r.job],EMPS[r.emp],lab('exp'),lab('area'),lab('mind'),r.pct,r.x,r.y,r.z,'A'+ans.join(''),src,r.u,r.v,kira].join('|');
     fetch('https://docs.google.com/forms/d/e/1FAIpQLSeEWqVmExOEPJsUID_S4ugpzDwXjbgbrrrVMba0HGVwpdnGPQ/formResponse',{method:'POST',mode:'no-cors',body:new URLSearchParams({'entry.1969466246':row})}).catch(()=>{})}catch(e){}
   $('lineBtn').dataset.t=T.key;$('lineMsg').textContent=word;$('lineBtn').href='https://line.me/R/oaMessage/%40512rmwnk/?'+encodeURIComponent(word);
+  $('shareBtn').dataset.t=T.key;$('shareBtn').dataset.text='美容師タイプ診断で「'+T.name+'」でした！あなたのタイプは？';$('shareNote').textContent='';
+  showQr($('lineBtn').href,T.key);
   show('result');
 }
 Object.keys(TYPES).forEach(k=>{const im=document.createElement('img');im.className='px';im.src=IMG[k];im.alt=TYPES[k].job;im.width=460;im.height=560;$('party').appendChild(im)});
 $('startBtn').addEventListener('click',()=>{i=0;ans=[];render();show('quiz')});
 $('backBtn').addEventListener('click',()=>{if(i>0){i--;render()}});
 $('retryBtn').addEventListener('click',()=>show('intro'));
+/* パソコン（マウス操作の画面）だけ、LINEを開くQRコードを出す（2026-11-24）。QRの作成は同じ場所の qr.js（MIT）。 */
+function showQr(url,key){
+  try{
+    if(!window.matchMedia('(hover: hover) and (pointer: fine)').matches)return;
+    const draw=()=>{try{const q=qrcode(0,'L');q.addData(url);q.make();$('qrImg').innerHTML=q.createSvgTag({cellSize:4,margin:2,scalable:true});$('qrBox').classList.add('on');try{gtag('event','type_shindan_qr',{shindan_type:key})}catch(e){}}catch(e){}};
+    if(window.qrcode){draw();return}
+    const s=document.createElement('script');s.src='/type-shindan/qr.js?v=1';s.onload=draw;document.head.appendChild(s);
+  }catch(e){}
+}
+/* 友だちにすすめる（2026-11-24）：どこから来たかを数えるため、共有リンクには出どころの印をつける */
+const SHARE_URL='https://ko-un-ryu-sui.com/type-shindan/?utm_source=share&utm_medium=social&utm_campaign=type_shindan_share';
+$('shareBtn').addEventListener('click',()=>{
+  const t=$('shareBtn').dataset.text||'美容師タイプ診断、やってみて！',k=$('shareBtn').dataset.t||'';
+  if(navigator.share){
+    navigator.share({title:'美容師タイプ診断',text:t,url:SHARE_URL}).then(()=>{try{gtag('event','type_shindan_share',{method:'native',shindan_type:k})}catch(e){}}).catch(()=>{});
+  }else{
+    window.open('https://social-plugins.line.me/lineit/share?url='+encodeURIComponent(SHARE_URL)+'&text='+encodeURIComponent(t),'_blank','noopener');
+    try{gtag('event','type_shindan_share',{method:'line',shindan_type:k})}catch(e){}
+  }
+});
+$('copyBtn').addEventListener('click',async()=>{
+  const t=($('shareBtn').dataset.text||'美容師タイプ診断、やってみて！')+'\n'+SHARE_URL,k=$('shareBtn').dataset.t||'';
+  let done=false;
+  try{await navigator.clipboard.writeText(t);done=true}catch(e){
+    try{const a=document.createElement('textarea');a.value=t;a.style.cssText='position:fixed;opacity:0';document.body.appendChild(a);a.select();done=document.execCommand('copy');a.remove()}catch(e2){}
+  }
+  $('shareNote').textContent=done?'コピーしました。LINEやインスタのDMに貼りつけて送ってね。':'コピーできませんでした。お手数ですが、ページのリンクを直接お送りください。';
+  if(done){try{gtag('event','type_shindan_share',{method:'copy',shindan_type:k})}catch(e){}}
+});
 $('lineBtn').addEventListener('click',()=>{try{gtag('event','type_shindan_line',{shindan_type:$('lineBtn').dataset.t||''})}catch(e){}});
 $('startBtn').addEventListener('click',()=>{try{gtag('event','type_shindan_start')}catch(e){}});
 </script>

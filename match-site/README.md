@@ -36,6 +36,9 @@ match-site/
 - 診断完了・フォームへ進んだ回数は `POST /api/funnel`（visitId とイベント名だけ）。
 - 管理画面 `/admin`：パスワードでログイン（8時間・ログイン失敗は10分に8回まで）。受付一覧・LINE確認済みの切替・診断の内訳（採点の表示）・集計。
 - 管理画面の診断の内訳は、PHP に書き直さず **元の JavaScript（採点コード）をブラウザで動かして表示する**。`lib/admin.js` は `diagnosis.js` に管理画面の部品を連結して作るので、診断の質問・採点を直せば管理画面も同じ内容になる。
+- `GET /api/line?c=newgrad|career` または `?r=<受付番号6桁>`：LINE（採用）のトークを、記入用の文面入りで開く 302 の近道。パソコンの画面に出すQR（`qr.js`＝qrcode-generator 1.4.4・MIT）の中身を短くするために使う。文面は固定の形だけ（自由入力は通さない）。
+- 見学・相談の入力の必須は、お名前と職種（1つ以上）だけ（`app.php` の `parse_application`）。ふりがな・学校名・学年・Instagram・相談内容は空でも受け付け、LINE の文面と管理画面には「未入力」と出る。
+- 試験は2本：`tests/compat-test.mjs`（元の ChatGPT 版との互換。トップページは意図して変えたので現行ファイルとの一致を見る）と `tests/new-features-test.mjs`（任意欄・/api/line・QR・送信後のLINEボタン）。どちらも `NODE_PATH=$(npm root -g) node --experimental-sqlite tests/…`。
 - `GET /api/health`：設置の確認用。DB が開けるか・秘密が入っているかの「はい／いいえ」だけ返す（値は返さない）。
 
 ## 直すとき（Claude の手順）
