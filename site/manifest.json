@@ -438,7 +438,39 @@
   },
   {
    "path": "type-shindan/index.html",
-   "sha256": "5c8f973f6f7d9dadf842352d61fb93cb11dbb7b7a4bee6233d3f0620b4363061"
+   "sha256": "9ab955d17942b07431ea50bae6efa1b59054a5078d03b8a2cb88b39f9d86285a"
+  },
+  {
+   "path": "type-shindan/og/hcf.png",
+   "sha256": "ad60bd46248471d6a4f8ea7ce7085d4b51164cc24c77ae3cf7fab459bca63d0d"
+  },
+  {
+   "path": "type-shindan/og/hcl.png",
+   "sha256": "d6916795d24739c1caac76a8311602763ec9f77f1814f6dd7fab744752f7c6ab"
+  },
+  {
+   "path": "type-shindan/og/hsf.png",
+   "sha256": "2b819b3a4bf0ea47dad6eada0b79dfb21ab5be7834c0e48d8c64194f8176db49"
+  },
+  {
+   "path": "type-shindan/og/hsl.png",
+   "sha256": "dea66df5667bd9223f197ebad49eee03740ea09dba8478de721946f0ef26866a"
+  },
+  {
+   "path": "type-shindan/og/tcf.png",
+   "sha256": "8cab077f4f6e6f2b333db1450894e9df1c659df9beb3b754360d9cccf6d5769f"
+  },
+  {
+   "path": "type-shindan/og/tcl.png",
+   "sha256": "4a8232a4a18e8424e1a697ebf41257c4072d11be0f060668fb8963bfc170b95c"
+  },
+  {
+   "path": "type-shindan/og/tsf.png",
+   "sha256": "aac0583e7e5921b43e132668864cdcf9409220e3191ffa80ab59854ae9d1a8c0"
+  },
+  {
+   "path": "type-shindan/og/tsl.png",
+   "sha256": "63cef3b73b658575a157b73dd51681d2de57307d444aeac6b93cca170358c95b"
   },
   {
    "path": "type-shindan/ogp.png",
@@ -447,6 +479,38 @@
   {
    "path": "type-shindan/qr.js",
    "sha256": "f29b6db42e5ca74d6da06fc87fde03e5f38b877b307e91f6958ad1abe5107ccc"
+  },
+  {
+   "path": "type-shindan/r/hcf/index.html",
+   "sha256": "1faa6d2f3ea5b861704ba6fc89af2554ae98f16a00234344bb8760f89677ae56"
+  },
+  {
+   "path": "type-shindan/r/hcl/index.html",
+   "sha256": "9b638e45fafcb6cfa63fa84e81775014debeb8f1b9d5558ffe3817450c3ab43c"
+  },
+  {
+   "path": "type-shindan/r/hsf/index.html",
+   "sha256": "5151315196c0cc62a0092134ac3864b4ebb2d686fa12429e51b8c50d1ce063c5"
+  },
+  {
+   "path": "type-shindan/r/hsl/index.html",
+   "sha256": "119d0d27d30c7e375c839ee102ababba782d6ca954cacd123e6ced00134c195a"
+  },
+  {
+   "path": "type-shindan/r/tcf/index.html",
+   "sha256": "e06d68d99a2381af1ec80eaffff804e6fd780cae152d3a6cd14526b8b3b68b39"
+  },
+  {
+   "path": "type-shindan/r/tcl/index.html",
+   "sha256": "1ba0902c2f61d285d4ec978bb14b671b962e242fa432f82de1d1783a5d381b6b"
+  },
+  {
+   "path": "type-shindan/r/tsf/index.html",
+   "sha256": "61bbe12d1f59be8a4c66c49289ceea136848beb1707346b2f0a67919ae88753e"
+  },
+  {
+   "path": "type-shindan/r/tsl/index.html",
+   "sha256": "bfa0b73390fff5d3e62af589bfcbe5a63d0f78efb6fb584a48ef494a2e57bc7d"
   },
   {
    "path": "visit.html",

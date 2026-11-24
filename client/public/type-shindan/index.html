@@ -311,7 +311,7 @@ function finish(){
     const row=[T.key,FIT[0],JOBS[r.job],EMPS[r.emp],lab('exp'),lab('area'),lab('mind'),r.pct,r.x,r.y,r.z,'A'+ans.join(''),src,r.u,r.v,kira].join('|');
     fetch('https://docs.google.com/forms/d/e/1FAIpQLSeEWqVmExOEPJsUID_S4ugpzDwXjbgbrrrVMba0HGVwpdnGPQ/formResponse',{method:'POST',mode:'no-cors',body:new URLSearchParams({'entry.1969466246':row})}).catch(()=>{})}catch(e){}
   $('lineBtn').dataset.t=T.key;$('lineMsg').textContent=word;$('lineBtn').href='https://line.me/R/oaMessage/%40512rmwnk/?'+encodeURIComponent(word);
-  $('shareBtn').dataset.t=T.key;$('shareBtn').dataset.text='美容師タイプ診断で「'+T.name+'」でした！あなたのタイプは？';$('shareNote').textContent='';
+  $('shareBtn').dataset.t=T.key;$('shareBtn').dataset.c=r.type;$('shareBtn').dataset.text='美容師タイプ診断で「'+T.name+'」でした！あなたのタイプは？';$('shareNote').textContent='';
   showQr($('lineBtn').href,T.key);
   show('result');
 }
@@ -330,18 +330,20 @@ function showQr(url,key){
 }
 /* 友だちにすすめる（2026-11-24）：どこから来たかを数えるため、共有リンクには出どころの印をつける */
 const SHARE_URL='https://ko-un-ryu-sui.com/type-shindan/?utm_source=share&utm_medium=social&utm_campaign=type_shindan_share';
+/* タイプ別の共有ページ（11/24）：リンクをLINE等に貼ると、そのタイプのキャラ画像つきのカードが出る。開くとすぐ診断へ移り、utm_content にタイプが入る（作り方 autopost/type-shindan-art/gen_share_pages.py） */
+function shareUrl(){const c=($('shareBtn').dataset.c||'').toLowerCase();return /^[a-z]{3}$/.test(c)?'https://ko-un-ryu-sui.com/type-shindan/r/'+c+'/':SHARE_URL}
 $('visitBtn').addEventListener('click',()=>{try{gtag('event','type_shindan_match',{shindan_type:$('shareBtn').dataset.t||''})}catch(e){}});
 $('shareBtn').addEventListener('click',()=>{
   const t=$('shareBtn').dataset.text||'美容師タイプ診断、やってみて！',k=$('shareBtn').dataset.t||'';
   if(navigator.share){
-    navigator.share({title:'美容師タイプ診断',text:t,url:SHARE_URL}).then(()=>{try{gtag('event','type_shindan_share',{method:'native',shindan_type:k})}catch(e){}}).catch(()=>{});
+    navigator.share({title:'美容師タイプ診断',text:t,url:shareUrl()}).then(()=>{try{gtag('event','type_shindan_share',{method:'native',shindan_type:k})}catch(e){}}).catch(()=>{});
   }else{
-    window.open('https://social-plugins.line.me/lineit/share?url='+encodeURIComponent(SHARE_URL)+'&text='+encodeURIComponent(t),'_blank','noopener');
+    window.open('https://social-plugins.line.me/lineit/share?url='+encodeURIComponent(shareUrl())+'&text='+encodeURIComponent(t),'_blank','noopener');
     try{gtag('event','type_shindan_share',{method:'line',shindan_type:k})}catch(e){}
   }
 });
 $('copyBtn').addEventListener('click',async()=>{
-  const t=($('shareBtn').dataset.text||'美容師タイプ診断、やってみて！')+'\n'+SHARE_URL,k=$('shareBtn').dataset.t||'';
+  const t=($('shareBtn').dataset.text||'美容師タイプ診断、やってみて！')+'\n'+shareUrl(),k=$('shareBtn').dataset.t||'';
   let done=false;
   try{await navigator.clipboard.writeText(t);done=true}catch(e){
     try{const a=document.createElement('textarea');a.value=t;a.style.cssText='position:fixed;opacity:0';document.body.appendChild(a);a.select();done=document.execCommand('copy');a.remove()}catch(e2){}

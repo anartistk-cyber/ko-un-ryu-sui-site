@@ -93,6 +93,7 @@
 | FLOWCLOUD トップ「採用情報・姉妹店」の下の広告帯（2026-11-22 開始） | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=fc_site&utm_medium=internal&utm_campaign=type_shindan_banner` |
 | glow トップ「採用情報・姉妹店」の下の広告帯（2026-11-22 開始） | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=glow_site&utm_medium=internal&utm_campaign=type_shindan_banner` |
 | 美容師タイプ診断の結果画面「友だちにすすめる／リンクをコピー」（2026-11-24 開始。受け取った人が開くリンク） | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=share&utm_medium=social&utm_campaign=type_shindan_share` |
+| 同・タイプ別の共有ページ（2026-11-24 12:4x〜。結果のタイプごとに `/type-shindan/r/<tcf|tcl|tsf|tsl|hcf|hcl|hsf|hsl>/` を共有する。貼るとキャラ画像つきのカードが出て、開くと下のリンクへ移る。`utm_content` にタイプが入る） | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=share&utm_medium=social&utm_campaign=type_shindan_share&utm_content=<タイプ>` |
 | 美容師タイプ診断の QR カード（紙。美容学校・勉強会・取引先・サロンで配る。autopost/type-shindan-card/。2026-11-24 作成） | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=card&utm_medium=offline&utm_campaign=type_shindan_card` |
 | 行雲流水の Google プロフィール「最新情報」から診断へ（2026-11-24 から。ChatGPT 担当の投稿） | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=gbp&utm_medium=organic&utm_campaign=type_shindan_post` |
 - 流入元は回答ログ（スプレッドシート「美容師タイプ診断_回答ログ」）の「流入元」列にも `instagram/social/type_shindan_bio` の形で残る。
