@@ -26,6 +26,7 @@
 | 2026-11-23 | 月 | 採用 | 就職活動の見方（見学後の比べ方） | kengaku-hikaku-memo-minikata | 美容学生 サロン見学 比較 就活 | #行雲流水 #美容学生 #就活 #サロン見学 | gakusei-kengaku-kakunin・salon-ninzu-funiki-minikata・taiken-guide |
 | 2026-11-23 | 月 | FLOWCLOUD | 髪のお悩み解決（ツヤがなくなった・毎日のケア） | tsuya-nakunatta-40-50 | 40代 50代 髪 ツヤ / 泉大津 トリートメント | #髪のお悩み #40代ヘアケア #FLOWCLOUD | home-hair-care-cota-store・nenmatsu 2記事・/color/ /headspa/ /menu/ |
 | 2026-11-24 | 火 | 採用 | 教育・技術（1年目の冬のカット理論・ウィッグカット） | fuyu-cut-wig-renshu-minikata | 美容師 新卒 教育 カット練習 ウィッグ | #行雲流水 #美容師の成長 #レッスン #カット理論 | one-year-debut-curriculum・lesson-taiken-yoru-minikata・taiken-guide |
+| 2026-11-24 | 火 | glow | 髪のお悩み解決（伸ばしかけの髪） | nobashikake-matomaranai-young | 伸ばしかけ まとまらない 泉大津 美容室 | #髪のお悩み #glow泉大津 | 内部リンク：short-layer-asa-raku・hair-set-seijinshiki-glow |
 
 ## 要確認（食い違い・未確認の事実）
 （なし）
