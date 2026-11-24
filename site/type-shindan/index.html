@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>美容師タイプ診断｜あなたはどのジョブ？｜行雲流水</title>
-<meta name="description" content="20問・約2分。仕事で大事にしていることから、8つのジョブ（美容師タイプ）と今の働き方の充実度がわかる無料診断です。結果カードはLINEで受け取れます。">
+<meta name="description" content="美容師・美容学生のための無料診断（20問・約2分）。仕事で大事にしていることから、8つのジョブ（美容師タイプ）と今の働き方の充実度がわかります。結果カードはLINEで受け取れて、友だちと見くらべられます。">
 <link rel="canonical" href="https://ko-un-ryu-sui.com/type-shindan/">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="美容師タイプ診断｜あなたはどのジョブ？">
-<meta property="og:description" content="20問・約2分。8つのジョブからあなたの美容師タイプがわかります。">
+<meta property="og:title" content="あなたは美容師の何タイプ？｜美容師タイプ診断（無料・約2分）">
+<meta property="og:description" content="20問・約2分。8つのジョブから、あなたの美容師タイプがわかります。友だちと見くらべてみよう。">
 <meta property="og:url" content="https://ko-un-ryu-sui.com/type-shindan/">
 <meta property="og:image" content="https://ko-un-ryu-sui.com/type-shindan/ogp.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -109,7 +109,8 @@ h3{font-size:16px;font-weight:700;color:var(--deep)}
 .qrbox p{margin:0}
 .qrimg{flex:0 0 auto;width:176px;height:176px;background:#fff;border-radius:8px;padding:4px;line-height:0}
 .qrimg svg{display:block;width:100%;height:100%}
-.share{display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--line);padding-top:14px}
+.share,.visit{display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--line);padding-top:14px}
+.visit .btn{text-align:center;text-decoration:none;font-size:15px;padding:12px 8px}
 .share .row{display:flex;gap:8px}
 .share .row .btn{flex:1;font-size:15px;padding:12px 8px}
 
@@ -219,6 +220,10 @@ html{scroll-behavior:smooth}
         <div class="row"><button class="btn ghost" id="shareBtn" type="button">友だちにすすめる</button><button class="btn ghost" id="copyBtn" type="button">リンクをコピー</button></div>
         <span class="note" id="shareNote" role="status"></span>
       </div>
+      <div class="visit" id="visit">
+        <p class="lead">LINEはまだ…という方へ。お名前と職種だけで、サロン見学を申し込めます。話を聞くだけでも大丈夫です。</p>
+        <a class="btn ghost" id="visitBtn" href="/match/" target="_blank" rel="noopener">サロン見学を申し込む</a>
+      </div>
       <button class="btn ghost" id="retryBtn" type="button">もう一度診断する</button>
     </div>
   </section>
@@ -325,6 +330,7 @@ function showQr(url,key){
 }
 /* 友だちにすすめる（2026-11-24）：どこから来たかを数えるため、共有リンクには出どころの印をつける */
 const SHARE_URL='https://ko-un-ryu-sui.com/type-shindan/?utm_source=share&utm_medium=social&utm_campaign=type_shindan_share';
+$('visitBtn').addEventListener('click',()=>{try{gtag('event','type_shindan_match',{shindan_type:$('shareBtn').dataset.t||''})}catch(e){}});
 $('shareBtn').addEventListener('click',()=>{
   const t=$('shareBtn').dataset.text||'美容師タイプ診断、やってみて！',k=$('shareBtn').dataset.t||'';
   if(navigator.share){
