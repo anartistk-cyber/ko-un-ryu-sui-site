@@ -11,10 +11,12 @@
 - 文面は事実だけ（無料・20問・約2分・8つのジョブ・結果カードは公式LINEで受け取れる）。効果の保証・他社比較は書かない。
 
 ## 依頼2：Google プロフィール（行雲流水・採用向け）の「最新情報」
-- 「美容師・美容学生向けの無料診断」を、写真つきで1本。リンクは `https://ko-un-ryu-sui.com/type-shindan/?utm_source=gbp&utm_medium=organic&utm_campaign=type_shindan_post`（※このUTMは新規。UTM_LINKS.md に反映済みではないので、使うときに Claude が表へ足す）。
+- 「美容師・美容学生向けの無料診断」を、写真つきで1本。リンクは `https://ko-un-ryu-sui.com/type-shindan/?utm_source=gbp&utm_medium=organic&utm_campaign=type_shindan_post`（UTM_LINKS.md に追加済み）。
 
 ## 依頼3：来店客・スタッフの身近な美容師さんへ
 - スタッフが友だちに送れるよう、診断の結果画面に「友だちにすすめる」を足した（11/24）。スタッフ向けの案内（朝礼など）は藤津さんの運用。
 
 ## 数字の見方
 GA4 の流入元（instagram・social／share・social）と、イベント type_shindan_start／result／line／match／share。判定は EFFECT_CHECKS の 12/8・12/22。
+
+※ 藤津さんがそのまま貼れる文は 2026-11-24 12:1x にチャットで送った（この表の内容と同じ）。
