@@ -4,6 +4,7 @@ import { posts } from "../data/posts";
 import { SubPage, SITE, LINE_URL } from "../components/SubPage";
 import { TBD } from "../components/Pending";
 import { trackClick } from "../lib/track";
+import { relatedPosts } from "../lib/related";
 import type { ReactNode } from "react";
 
 function rich(s: string): ReactNode[] {
@@ -71,7 +72,7 @@ export function BlogPost({ slug }: { slug: string }) {
   const toc = post.body.map((b, i) => ("h" in b ? { h: b.h, id: `sec-${i}` } : null)).filter((x): x is { h: string; id: string } => x !== null);
   const hIdx = post.body.map((b, i) => ("h" in b ? i : -1)).filter(i => i >= 0);
   const midIdx = hIdx.length >= 4 ? hIdx[Math.floor(hIdx.length / 2)] - 1 : -1;
-  const others = posts.filter(p => p.slug !== slug).slice(0, 3);
+  const others = relatedPosts(posts, slug, 4); // 同じカテゴリ・タグの記事を優先（lib/related.ts）
   return (
     <SubPage title={post.seoTitle} description={post.seoDesc} path={path} image={post.image}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
@@ -123,7 +124,7 @@ export function BlogPost({ slug }: { slug: string }) {
           </ul>
         </section>
         <section className="blog-others">
-          <h2>ほかの記事</h2>
+          <h2>あわせて読みたい記事</h2>
           {others.map(p => <Link key={p.slug} href={`/blog/${p.slug}`}>{p.title}</Link>)}
           <Link href="/blog/">記事一覧へ</Link>
         </section>
