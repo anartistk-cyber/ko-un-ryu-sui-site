@@ -5,9 +5,13 @@ import { SubPage } from "../components/SubPage";
 import { lineConsultHref } from "../lib/line";
 import { TBD } from "../components/Pending";
 import { trackClick } from "../lib/track";
+import { posts } from "../data/posts";
+
+// 関連するブログ記事（題名は posts.ts から取る。スラッグが無ければビルドを止める）
+const blog = (...slugs: string[]): [string, string][] => slugs.map(s => { const p = posts.find(x => x.slug === s); if (!p) throw new Error("blog slug not found: " + s); return [p.title, `/blog/${s}`] as [string, string]; });
 
 type Sec = { h: string; body: ReactNode };
-type L = { path: string; code: string; eyebrow: string; h1: string; seoTitle: string; desc: string; lead: string; sections: Sec[]; jobs: [string, string][]; primary: string; secondary: [string, string]; audience: string };
+type L = { path: string; code: string; eyebrow: string; h1: string; seoTitle: string; desc: string; lead: string; sections: Sec[]; jobs: [string, string][]; blogs?: [string, string][]; primary: string; secondary: [string, string]; audience: string };
 
 const pages: Record<"newgrad" | "career", L> = {
   newgrad: {
@@ -33,7 +37,7 @@ const pages: Record<"newgrad" | "career", L> = {
         <p>フォームまたはLINEで相談 → 見学・体験の日程調整 → 対象となる体験への参加 → 説明会・採用試験 → 条件の確認 → 内定・入社のご案内。</p>
         <p>体験の種類、費用、選考参加に必要な体験は、<Link href="/blog/taiken-guide">体験ガイド</Link>をご確認ください。ご希望の日程が合わない場合は、その他の日程を相談できます（要相談）。選考は「見学→面接→採用」の流れです。提出書類は履歴書です。所要期間：要相談</p></> },
     ],
-    jobs: [["美容師アシスタント（正社員）", "/jobs/assistant"], ["美容師スタイリスト（正社員）", "/jobs/stylist"], ["美容学生アルバイト", "/jobs/student"], ["美容学校の学生の方へ", "/school"], ["勤務エリア（泉大津・南大阪・泉州）", "/area"]],
+    jobs: [["美容師アシスタント（正社員）", "/jobs/assistant"], ["美容師スタイリスト（正社員）", "/jobs/stylist"], ["美容学生アルバイト", "/jobs/student"], ["美容学校の学生の方へ", "/school"], ["勤務エリア（泉大津・南大阪・泉州）", "/area"]], blogs: blog("fuyu-cut-wig-renshu-minikata","salon-erabi-checklist","shougakukin-hensai-salon-erabi","yuki-koyo-shiyo-kikan-minikata"),
     primary: "新卒として応募・相談する", secondary: ["体験と選考の流れを見る", "/blog/taiken-guide"],
   },
   career: {
@@ -59,7 +63,7 @@ const pages: Record<"newgrad" | "career", L> = {
       { h: "在職中の方へ。", body: <p>入社を希望する時期と、連絡しやすい時間帯をお知らせください。まだ転職を決めていない段階で、確認したい条件がある方もご相談ください。勤務中の電話を避けたい場合は、希望する連絡方法をご指定いただけます。</p> },
       { h: "働く時間から考える方へ。", body: <p>パートや復職を検討している方は、現在の勤務日数・時間帯の条件もご確認ください。<Link href="/jobs/part">パートの募集を見る</Link></p> },
     ],
-    jobs: [["美容師スタイリスト（正社員）", "/jobs/stylist"], ["パート美容師", "/jobs/part"], ["勤務エリア（泉大津・南大阪・泉州）", "/area"]],
+    jobs: [["美容師スタイリスト（正社員）", "/jobs/stylist"], ["パート美容師", "/jobs/part"], ["勤務エリア（泉大津・南大阪・泉州）", "/area"]], blogs: blog("tenshoku-point","fukushoku-salon-erabi","part-biyoushi-jikyu-minikata","shouyo-minikata-biyoushi","kotei-zangyo-minikata"),
     primary: "中途スタイリストとして応募・相談する", secondary: ["体験と選考の流れを見る", "/blog/taiken-guide"],
   },
 };
@@ -88,6 +92,12 @@ export function Landing({ type }: { type: "newgrad" | "career" }) {
           <div className="job-detail-section-heading"><p>POSITIONS</p><h2>募集職種</h2></div>
           <ul className="job-detail-list">{d.jobs.map(([t, h]) => <li key={h}><Link href={h}>{t}</Link></li>)}</ul>
         </section>
+        {d.blogs && d.blogs.length > 0 && (
+          <section className="job-detail-section">
+            <div className="job-detail-section-heading"><p>ARTICLES</p><h2>関連する記事</h2></div>
+            <ul className="job-detail-list">{d.blogs.map(([t, h]) => <li key={h}><Link href={h}>{t}</Link></li>)}</ul>
+          </section>
+        )}
         <section className="blog-cta">
           <h2>気になったら、まずご相談ください。</h2>
           <p>体験の内容、費用、選考との関係は、お申し込み前にご案内します。</p>

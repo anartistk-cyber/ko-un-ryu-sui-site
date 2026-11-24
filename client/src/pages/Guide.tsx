@@ -3,11 +3,15 @@ import type { ReactNode } from "react";
 import { Link } from "wouter";
 import { SubPage, LINE_URL, MATCH_URL, SITE } from "../components/SubPage";
 import { trackClick } from "../lib/track";
+import { posts } from "../data/posts";
+
+// 関連するブログ記事（題名は posts.ts から取る。スラッグが無ければビルドを止める）
+const blog = (...slugs: string[]): [string, string][] => slugs.map(s => { const p = posts.find(x => x.slug === s); if (!p) throw new Error("blog slug not found: " + s); return [p.title, `/blog/${s}`] as [string, string]; });
 
 type Sec = { h: string; body: ReactNode };
 type G = {
   path: string; code: string; audience: string; eyebrow: string; h1: string; seoTitle: string; desc: string; lead: string;
-  chips: string[]; chipsLabel: string; sections: Sec[]; faq: [string, string][]; related: [string, string][]; primary: string;
+  chips: string[]; chipsLabel: string; sections: Sec[]; faq: [string, string][]; related: [string, string][]; blogs?: [string, string][]; primary: string;
 };
 
 const SALON = "FLOWCLOUD（泉大津駅から徒歩約3分）とglow（泉大津駅東口から徒歩約1分）";
@@ -48,7 +52,7 @@ const pages: Record<"recruit" | "area" | "school" | "student" | "workstyle" | "v
       ["選考の流れを教えてください。", "見学（会社説明会）→ 面接 → 採用の流れで、提出書類は履歴書です。"],
       ["勤務時間は何時から何時までですか。", "シフト制で、早番は8:30〜17:30、遅番は11:30〜20:30（休憩60分）です。"],
     ],
-    related: [["勤務エリア（泉大津・南大阪・泉州）", "/area"], ["働き方（休み・教育・給与の内訳）", "/workstyle"], ["見学・体験の流れ", "/visit"], ["よくある質問", "/faq"]],
+    related: [["勤務エリア（泉大津・南大阪・泉州）", "/area"], ["働き方（休み・教育・給与の内訳）", "/workstyle"], ["見学・体験の流れ", "/visit"], ["よくある質問", "/faq"]], blogs: blog("shoninkyu-teate","kyujitsu-yukyu-minikata","one-year-debut-curriculum","fuyu-cut-wig-renshu-minikata"),
     primary: "サロン見学を相談する",
   },
   area: {
@@ -85,7 +89,7 @@ const pages: Record<"recruit" | "area" | "school" | "student" | "workstyle" | "v
       ["交通費は出ますか。", "交通費または家賃補助（どちらか一方・併給なし）として、一律1万円を支給します（要相談）。"],
       ["勤務時間は何時から何時までですか。", "シフト制で、早番は8:30〜17:30、遅番は11:30〜20:30（休憩60分）です。"],
     ],
-    related: [["美容学校の学生の方へ", "/school"], ["高校生・美容学生の方へ", "/recruit/student"], ["中途・転職をお考えの方へ", "/recruit/career"]],
+    related: [["美容学校の学生の方へ", "/school"], ["高校生・美容学生の方へ", "/recruit/student"], ["中途・転職をお考えの方へ", "/recruit/career"]], blogs: blog("izumiotsu-kurashi-hataraku-minikata","tsukin-kishiwada-izumi-sakai","hayaban-osoban"),
     primary: "見学・相談を申し込む",
   },
   school: {
@@ -113,7 +117,7 @@ const pages: Record<"recruit" | "area" | "school" | "student" | "workstyle" | "v
       ["2027年度の新卒の募集人数は。", "2027年度は新卒美容師を3名募集しています。年度・人数・募集状態は年度により異なります。"],
       ["学校名を書かないと相談できませんか。", "学校名は任意です。後日の確認でもかまいません。"],
     ],
-    related: [["新卒採用ページ", "/recruit/newgrad"], ["高校生・美容学生の方へ", "/recruit/student"], ["勤務エリア（泉大津・南大阪・泉州）", "/area"], ["働き方（休み・教育・給与の内訳）", "/workstyle"], ["見学・体験の流れ", "/visit"]],
+    related: [["新卒採用ページ", "/recruit/newgrad"], ["高校生・美容学生の方へ", "/recruit/student"], ["勤務エリア（泉大津・南大阪・泉州）", "/area"], ["働き方（休み・教育・給与の内訳）", "/workstyle"], ["見学・体験の流れ", "/visit"]], blogs: blog("salon-erabi-checklist","gakusei-kengaku-kakunin","kengaku-hikaku-memo-minikata","shougakukin-hensai-salon-erabi"),
     primary: "学生として見学・相談する",
   },
   student: {
@@ -136,7 +140,7 @@ const pages: Record<"recruit" | "area" | "school" | "student" | "workstyle" | "v
       ["見学だけでも大丈夫ですか。", "はい。応募を決めていなくても、見学・相談を受け付けています。"],
       ["どの学校の学生でも相談できますか。", "学校名は問いません。通信課程など対象か分からない場合も、お問い合わせください。"],
     ],
-    related: [["高校生の進路の進め方（4つのこと）", "/blog/koukousei-biyoushi-susumikata"], ["美容学校の学生の方へ", "/school"], ["新卒採用ページ", "/recruit/newgrad"], ["勤務エリア（泉大津・南大阪・泉州）", "/area"], ["働き方（休み・教育・給与の内訳）", "/workstyle"], ["見学・体験の流れ", "/visit"]],
+    related: [["高校生の進路の進め方（4つのこと）", "/blog/koukousei-biyoushi-susumikata"], ["美容学校の学生の方へ", "/school"], ["新卒採用ページ", "/recruit/newgrad"], ["勤務エリア（泉大津・南大阪・泉州）", "/area"], ["働き方（休み・教育・給与の内訳）", "/workstyle"], ["見学・体験の流れ", "/visit"]], blogs: blog("hogosha-biyoushi-shuushoku-shinpai","student-baito","salon-ninzu-funiki-minikata"),
     primary: "見学・アルバイトを相談する",
   },
   workstyle: {
@@ -167,7 +171,7 @@ const pages: Record<"recruit" | "area" | "school" | "student" | "workstyle" | "v
       ["新卒の給与の内訳を教えてください。", "月給28万円で、基本給24万円と固定残業代3万円（15時間分、超過分は別途）、交通費または家賃補助1万円（一律・要相談）です。"],
       ["1年目でデビューできますか。", "1年でのデビューは目標としており、全員の保証ではありません。"],
     ],
-    related: [["見学・体験の流れ", "/visit"], ["よくある質問", "/faq"], ["2027年度 新卒採用", "/recruit/newgrad"]],
+    related: [["見学・体験の流れ", "/visit"], ["よくある質問", "/faq"], ["2027年度 新卒採用", "/recruit/newgrad"]], blogs: blog("kyujitsu-yukyu-minikata","hayaban-osoban","kotei-zangyo-minikata","shoninkyu-teate","shouyo-minikata-biyoushi"),
     primary: "働き方について相談する",
   },
   visit: {
@@ -195,7 +199,7 @@ const pages: Record<"recruit" | "area" | "school" | "student" | "workstyle" | "v
       ["選考の流れを教えてください。", "見学（会社説明会）→ 面接 → 採用の流れで、提出書類は履歴書です。"],
       ["どこで勤務しますか。", "泉大津市のFLOWCLOUD（泉大津駅から徒歩約3分）とglow（東口から徒歩約1分）です。"],
     ],
-    related: [["働き方（休み・教育・給与の内訳）", "/workstyle"], ["よくある質問", "/faq"], ["勤務エリア", "/area"]],
+    related: [["働き方（休み・教育・給与の内訳）", "/workstyle"], ["よくある質問", "/faq"], ["勤務エリア", "/area"]], blogs: blog("lesson-taiken-yoru-minikata","salon-ninzu-funiki-minikata","kengaku-hikaku-memo-minikata"),
     primary: "サロン見学を相談する",
   },
 };
@@ -238,6 +242,12 @@ export function Guide({ type }: { type: "recruit" | "area" | "school" | "student
           <div className="job-detail-section-heading"><p>RELATED</p><h2>あわせて見る</h2></div>
           <ul className="job-detail-list">{d.related.map(([t, h]) => <li key={h}><Link href={h}>{t}</Link></li>)}</ul>
         </section>
+        {d.blogs && d.blogs.length > 0 && (
+          <section className="job-detail-section">
+            <div className="job-detail-section-heading"><p>ARTICLES</p><h2>関連する記事</h2></div>
+            <ul className="job-detail-list">{d.blogs.map(([t, h]) => <li key={h}><Link href={h}>{t}</Link></li>)}</ul>
+          </section>
+        )}
         <section className="blog-cta">
           <h2>まずは、気になることから相談してください。</h2>
           <p>見学・体験の内容、費用、選考との関係は、お申し込み前にご案内します。</p>
