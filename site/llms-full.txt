@@ -22,6 +22,7 @@
 - [働き方（シフト・休日・教育）](https://ko-un-ryu-sui.com/workstyle)
 - [見学・体験の流れ](https://ko-un-ryu-sui.com/visit)
 - [美容師タイプ診断（無料・20問・約2分。8つのジョブと今の働き方の充実度がわかる）](https://ko-un-ryu-sui.com/type-shindan/)
+- [美容師の8タイプ（ジョブ）一覧（特徴・強み・向いている環境・気をつけたいこと）](https://ko-un-ryu-sui.com/type-shindan/types/)
 - [サロン見学の申し込み（お名前と職種だけ）](https://ko-un-ryu-sui.com/match/)
 - [記事一覧](https://ko-un-ryu-sui.com/blog/)
   - [見学・体験と選考](https://ko-un-ryu-sui.com/blog/taiken-guide) ／[1年デビューの教育](https://ko-un-ryu-sui.com/blog/one-year-debut-curriculum) ／[早番・遅番](https://ko-un-ryu-sui.com/blog/hayaban-osoban)
