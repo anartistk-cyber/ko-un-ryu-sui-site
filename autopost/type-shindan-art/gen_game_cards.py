@@ -1,7 +1,11 @@
-import json,re,random,colorsys,math
+import json,re,random,colorsys,math,os
 from PIL import Image,ImageDraw,ImageFont,ImageFilter,ImageChops
 h=open('/home/claude/ko-un-ryu-sui-site/client/public/type-shindan/index.html').read()
 T=json.loads(re.search(r'const TYPES=(\{.*?\});\n',h,re.S).group(1))
+# 相性◎のタイプ（診断ページの COMPAT と同じ。2026-11-25）：診断ページの定義をそのまま読む
+_cm=re.search(r'const COMPAT=(\{.*?\});\n',h,re.S).group(1)
+COMPAT=json.loads(re.sub(r'([A-Z]{3}):',r'"\1":',_cm).replace("'",'"'))
+CHAR_DIR=os.environ.get('CHAR_DIR','v2')   # キャラクターのPNG置き場（<名前>.png。<名前>.svg を 920×1120 で書き出したもの）
 V2={'TCF':'creator','TCL':'innovator','TSF':'artist','TSL':'meister','HCF':'entertainer','HCL':'producer','HSF':'partner','HSL':'advisor'}
 # 属性・じゃんけん・基本BP・必殺技（名前, 攻撃力, 防御）
 G={'TCF':('火','チョキ',500,[('ひらめきカット',180,80),('トレンド先取り',150,100)]),
@@ -96,7 +100,7 @@ def card(k,tier):
         if tier==2:
             sky=metal(x1-x0,int((y1-y0)*0.74),(178,222,246),(255,246,205),5); im.paste(sky,(x0,y0)); glowspot(im,W//2,y0+300,300,(255,250,215),235); shine(im,(x0,y0,x1,y1),95,3)
     d=ImageDraw.Draw(im); d.rectangle((x0,y0,x1,y1),outline=INK,width=8)
-    s=Image.open(f'/home/claude/work/v2/{V2[k]}.png').convert('RGBA').resize((427,520),Image.LANCZOS); im.paste(s,(327,196),s)
+    s=Image.open(f'{CHAR_DIR}/{V2[k]}.png').convert('RGBA').resize((427,520),Image.LANCZOS); im.paste(s,(327,196),s)
     random.seed(tier*7+sum(map(ord,k)))
     items=[]
     for i in range({0:0,1:8,2:34,3:40,4:90}[tier]):
@@ -140,6 +144,7 @@ def card(k,tier):
                 d.text((146 if bullet else 100,y),ln,font=f(FR,35),fill=INK); y+=54
         return y+26
     y=sec('強み',t['strong'],y); y=sec('力を出しやすい働き方',t['fit'],y); y=sec('気をつけたいこと',[t['care']],y,False)
+    _p=T[COMPAT[k][0]]; y=sec('相性◎のタイプ（お楽しみ）',[_p['job']+'（'+_p['name']+'）',COMPAT[k][1]],y,False)
     d.line((90,y,990,y),fill=(207,219,227),width=3); y+=24
     ctext(d,y,'運営：株式会社行雲流水（大阪・泉大津｜FLOWCLOUD／glow）',f(FR,28),(90,107,128)); y+=84
     body=im.crop((0,0,W,y))
