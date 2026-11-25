@@ -156,6 +156,14 @@ html{scroll-behavior:smooth}
 .friend{display:flex;align-items:center;gap:12px;border:2px solid var(--accent);border-radius:12px;padding:10px 12px;background:var(--surface)}
 .friend img{width:56px;height:auto;flex:0 0 auto}
 .friend p{margin:0;font-family:var(--display);font-weight:900;font-size:16px;line-height:1.5}
+.compat{display:flex;flex-direction:column;gap:10px;border:2px dashed var(--accent);border-radius:12px;padding:12px;background:var(--bg)}
+.compat .crow{display:flex;align-items:center;gap:12px}
+.compat img{width:64px;height:auto;flex:0 0 auto}
+.compat p{margin:0}
+.compat .ck{font-size:12px;color:var(--muted);line-height:1.5}
+.compat .cn{font-family:var(--display);font-weight:900;font-size:16px;line-height:1.45;color:var(--ink)}
+.compat .cw{font-size:14px;line-height:1.6}
+.compat .btn{font-size:14px;padding:12px 8px;box-shadow:none}
 [hidden]{display:none!important}
 @media (prefers-reduced-motion:reduce){.progress i{transition:none}}
 </style>
@@ -203,6 +211,11 @@ html{scroll-behavior:smooth}
         <p class="note" id="shareTopNote" role="status">ハッシュタグは #美容師タイプ診断。画像は、インスタのストーリーなどに使えます。</p>
       </div>
       <p id="rDesc"></p>
+      <div class="compat" id="compat" hidden>
+        <div class="crow"><img id="cImg" alt="" width="64" height="78"><div><p class="ck">相性◎のタイプ（お楽しみの目安）</p><p class="cn" id="cName"></p></div></div>
+        <p class="cw" id="cWhy"></p>
+        <button class="btn ghost" id="cShare" type="button">相性◎のタイプの友だちを探す（シェア）</button>
+      </div>
       <div class="axes">
         <div class="axis"><span>技術</span><div class="track"><i id="ax"></i></div><span class="r">人</span></div>
         <div class="axis"><span>挑戦</span><div class="track"><i id="ay"></i></div><span class="r">じっくり</span></div>
@@ -327,7 +340,7 @@ function finish(){
     const row=[T.key,FIT[0],JOBS[r.job],EMPS[r.emp],lab('exp'),lab('area'),lab('mind'),r.pct,r.x,r.y,r.z,'A'+ans.join(''),src,r.u,r.v,kira].join('|');
     fetch('https://docs.google.com/forms/d/e/1FAIpQLSeEWqVmExOEPJsUID_S4ugpzDwXjbgbrrrVMba0HGVwpdnGPQ/formResponse',{method:'POST',mode:'no-cors',body:new URLSearchParams({'entry.1969466246':row})}).catch(()=>{})}catch(e){}
   $('lineBtn').dataset.t=T.key;$('lineMsg').textContent=word;$('lineBtn').href='https://line.me/R/oaMessage/%40512rmwnk/?'+encodeURIComponent(word);
-  $('shareBtn').dataset.t=T.key;$('shareBtn').dataset.c=r.type;$('shareBtn').dataset.text='美容師タイプ診断で「'+T.name+'」でした！あなたのタイプは？';$('shareNote').textContent='';
+  $('shareBtn').dataset.t=T.key;$('shareBtn').dataset.c=r.type;try{showCompat(r.type)}catch(e){}$('shareBtn').dataset.text='美容師タイプ診断で「'+T.name+'」でした！あなたのタイプは？';$('shareNote').textContent='';
   showQr($('lineBtn').href,T.key);
   show('result');
 }
@@ -348,6 +361,18 @@ function showQr(url,key){
 const SHARE_URL='https://ko-un-ryu-sui.com/type-shindan/?utm_source=share&utm_medium=social&utm_campaign=type_shindan_share';
 /* タイプ別の共有ページ（11/24）：リンクをLINE等に貼ると、そのタイプのキャラ画像つきのカードが出る。開くとすぐ診断へ移り、utm_content にタイプが入る（作り方 autopost/type-shindan-art/gen_share_pages.py） */
 function shareUrl(){const c=($('shareBtn').dataset.c||'').toLowerCase();return /^[a-z]{3}$/.test(c)?'https://ko-un-ryu-sui.com/type-shindan/r/'+c+'/':SHARE_URL}
+/* 相性◎のタイプ（2026-11-25）：4組の相棒（お楽しみの目安）。質問・採点は変えていない。友だちを探したくなる共有の入口。 */
+const COMPAT={TCF:['TSL','ひらめきを、こだわりの技術で磨き上げてくれる相棒。'],TSL:['TCF','深めた技術に、新しい発想を持ちこんでくれる相棒。'],
+  TCL:['HCL','見つけた仕組みを、チームやお店に広げてくれる相棒。'],HCL:['TCL','企画に、確かな理屈と手順の裏づけをくれる相棒。'],
+  TSF:['HCF','自分の世界観を、明るい発信でたくさんの人に届けてくれる相棒。'],HCF:['TSF','盛り上がる場に、深みと世界観をくれる相棒。'],
+  HSF:['HSL','気持ちによりそう力に、理由のある提案を足してくれる相棒。'],HSL:['HSF','正しい提案に、安心感とあたたかさを足してくれる相棒。']};
+function showCompat(c){const m=COMPAT[c],P=m&&TYPES[m[0]];if(!P){$('compat').hidden=true;return}
+  $('cImg').src=IMG[m[0]];$('cName').textContent=P.job+'（'+P.name+'）';$('cWhy').textContent=m[1];$('compat').hidden=false;$('compat').dataset.p=m[0]}
+$('cShare').addEventListener('click',async()=>{const x=shareCtx(),pc=$('compat').dataset.p,P=TYPES[pc];if(!x||!P)return;
+  const text='美容師タイプ診断で私は「'+x.T.name+'」。相性◎は「'+P.name+'」だって！あなたは何タイプ？',url=x.url,note=$('shareTopNote');
+  shareEvt('compat',x.k);
+  try{if(navigator.share){await navigator.share({text:text+' #美容師タイプ診断',url});return}}catch(e){if(e&&e.name==='AbortError')return}
+  window.open('https://social-plugins.line.me/lineit/share?url='+encodeURIComponent(url)+'&text='+encodeURIComponent(text),'_blank','noopener')});
 /* 結果のすぐ下のシェア（2026-11-25）：Xでポスト／LINEで送る／ストーリー用の画像（1080×1920）を保存・共有。診断の質問・採点は変えていない。 */
 function shareCtx(){const c=($('shareBtn').dataset.c||'').toUpperCase(),T=TYPES[c];if(!T)return null;
   return {c,T,k:T.key,text:'美容師タイプ診断で「'+T.job+'」（'+T.name+'）でした！あなたは何タイプ？',url:shareUrl()}}
