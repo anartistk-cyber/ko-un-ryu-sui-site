@@ -94,9 +94,10 @@ export function BlogPost({ slug }: { slug: string }) {
               <div key={i}>
                 {node}
                 <aside className="blog-mid-cta" onClick={trackClick}>
-                  <p>読んで気になったことは、見学や公式LINEで気軽に聞けます。</p>
+                  <p>読んで気になったことは、見学や公式LINEで気軽に聞けます。自分のタイプを知りたい人は、2分の診断もどうぞ。</p>
                   <a href="/?c=visit#contact" data-track="consult" data-placement="blog-mid">見学・相談する</a>
                   <a href={LINE_URL} target="_blank" rel="noreferrer" data-track="line" data-placement="blog-mid">公式LINEで質問する</a>
+                  <a href={`/type-shindan/?utm_source=recruit_blog&utm_medium=internal&utm_campaign=${post.slug}`} data-track="type_shindan" data-placement="blog-mid">美容師タイプ診断（約2分）</a>
                 </aside>
               </div>
             );

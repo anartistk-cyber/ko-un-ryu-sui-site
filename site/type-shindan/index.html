@@ -164,6 +164,15 @@ html{scroll-behavior:smooth}
 .compat .cn{font-family:var(--display);font-weight:900;font-size:16px;line-height:1.45;color:var(--ink)}
 .compat .cw{font-size:14px;line-height:1.6}
 .compat .btn{font-size:14px;padding:12px 8px;box-shadow:none}
+.pair{display:flex;flex-direction:column;gap:10px;border:3px solid var(--accent);border-radius:12px;padding:12px;background:var(--surface);text-align:center}
+.pair .pk{margin:0;font-size:12px;color:var(--muted);line-height:1.5}
+.pair .prow{display:flex;align-items:center;justify-content:center;gap:10px}
+.pair .prow img{width:72px;height:auto;flex:0 0 auto}
+.pair .prow b{font-family:var(--display);font-weight:900;font-size:22px}
+.pair .pnm{margin:0;font-size:12px;color:var(--muted);line-height:1.5}
+.pair .pn{margin:0;font-family:var(--display);font-weight:900;font-size:20px;line-height:1.4;color:var(--ink)}
+.pair .pw{margin:0;font-size:14px;line-height:1.7;text-align:left}
+.pair .btn{font-size:14px;padding:12px 8px;box-shadow:none}
 [hidden]{display:none!important}
 @media (prefers-reduced-motion:reduce){.progress i{transition:none}}
 </style>
@@ -205,6 +214,14 @@ html{scroll-behavior:smooth}
       <p class="kicker">あなたの美容師タイプは</p>
       <a class="stage hero-stage blurbox" href="#linecard" aria-label="詳しい結果をLINEで受け取る欄へ移動"><img class="px" id="rImg" alt="" width="460" height="560"><span class="blurnote">タップして、詳しい結果へ ▼</span></a>
       <div class="rtitle"><p class="job" id="rJob"></p><h2 id="rName"></h2><p class="catch" id="rCatch"></p></div>
+      <div class="pair" id="pair" hidden>
+        <p class="pk">友だち × あなた の相性（お楽しみの目安）</p>
+        <div class="prow"><img id="pImgF" alt="" width="72" height="88"><b aria-hidden="true">×</b><img id="pImgM" alt="" width="72" height="88"></div>
+        <p class="pnm" id="pNames"></p>
+        <p class="pn" id="pLabel"></p>
+        <p class="pw" id="pWhy"></p>
+        <button class="btn ghost" id="pShare" type="button">この相性を友だちに送る</button>
+      </div>
       <div class="sharetop" id="shareTop">
         <p class="lead">この結果をシェアして、友だちとタイプを見くらべよう</p>
         <div class="row"><button class="btn xb" id="xBtn" type="button">Xでポスト</button><button class="btn line" id="lnShareBtn" type="button">LINEで送る</button><button class="btn ghost" id="imgBtn" type="button">画像を保存・共有</button></div>
@@ -340,7 +357,7 @@ function finish(){
     const row=[T.key,FIT[0],JOBS[r.job],EMPS[r.emp],lab('exp'),lab('area'),lab('mind'),r.pct,r.x,r.y,r.z,'A'+ans.join(''),src,r.u,r.v,kira].join('|');
     fetch('https://docs.google.com/forms/d/e/1FAIpQLSeEWqVmExOEPJsUID_S4ugpzDwXjbgbrrrVMba0HGVwpdnGPQ/formResponse',{method:'POST',mode:'no-cors',body:new URLSearchParams({'entry.1969466246':row})}).catch(()=>{})}catch(e){}
   $('lineBtn').dataset.t=T.key;$('lineMsg').textContent=word;$('lineBtn').href='https://line.me/R/oaMessage/%40512rmwnk/?'+encodeURIComponent(word);
-  $('shareBtn').dataset.t=T.key;$('shareBtn').dataset.c=r.type;try{showCompat(r.type)}catch(e){}$('shareBtn').dataset.text='美容師タイプ診断で「'+T.name+'」でした！あなたのタイプは？';$('shareNote').textContent='';
+  $('shareBtn').dataset.t=T.key;$('shareBtn').dataset.c=r.type;try{showCompat(r.type)}catch(e){}try{showPair(r.type)}catch(e){}$('shareBtn').dataset.text='美容師タイプ診断で「'+T.name+'」でした！あなたのタイプは？';$('shareNote').textContent='';
   showQr($('lineBtn').href,T.key);
   show('result');
 }
@@ -368,6 +385,29 @@ const COMPAT={TCF:['TSL','ひらめきを、こだわりの技術で磨き上げ
   HSF:['HSL','気持ちによりそう力に、理由のある提案を足してくれる相棒。'],HSL:['HSF','正しい提案に、安心感とあたたかさを足してくれる相棒。']};
 function showCompat(c){const m=COMPAT[c],P=m&&TYPES[m[0]];if(!P){$('compat').hidden=true;return}
   $('cImg').src=IMG[m[0]];$('cName').textContent=P.job+'（'+P.name+'）';$('cWhy').textContent=m[1];$('compat').hidden=false;$('compat').dataset.p=m[0]}
+/* 友だち×あなたの相性（2026-11-25）：友だちの共有リンクから来て診断した人にだけ出す、お楽しみの目安。質問・採点は変えていない。
+   コードの3文字＝1文字目 T技術/H人・2文字目 C挑戦/S じっくり・3文字目 F感性/L理論。違う文字の数でことばを変え、COMPAT の組は「相性◎」。 */
+const FRIEND=(function(){try{const c=(new URLSearchParams(location.search).get('utm_content')||'').toUpperCase();return /^[A-Z]{3}$/.test(c)&&TYPES[c]?c:''}catch(e){return ''}})();
+const AXW=[['技術','人'],['挑戦','じっくり'],['感性','理論']],AXL=['TCF','HSL'];
+function pairInfo(f,m){
+  if(f===m)return ['そっくりな二人','同じ景色が見えるから、話が早い二人。技術の話も、お客様の話も、きっと止まらなくなります。'];
+  const cm=COMPAT[m];if(cm&&cm[0]===f)return ['相性◎の二人！',TYPES[f].name+'は、'+cm[1]];
+  const d=[];for(let i=0;i<3;i++)if(f[i]!==m[i])d.push(i);
+  const side=(c,i)=>AXW[i][c[i]===AXL[0][i]?0:1];
+  if(d.length===1){const i=d[0];return ['気が合う二人','ほとんど同じ感覚の二人。ちがうのは「'+side(m,i)+'」と「'+side(f,i)+'」だけ。そこをおぎない合えます。']}
+  if(d.length===2)return ['刺激し合う二人','共通点とちがいがちょうどいい二人。「'+AXW[d[0]][0]+'と'+AXW[d[0]][1]+'」「'+AXW[d[1]][0]+'と'+AXW[d[1]][1]+'」の見かたがちがう分、おたがいに学べます。'];
+  return ['正反対の二人','見ているところが全部ちがう二人。だからこそ、話すほど「その見かたがあったか」という発見があります。']}
+function showPair(c){const el=$('pair');if(!FRIEND||!TYPES[c]){el.hidden=true;return}
+  const F=TYPES[FRIEND],M=TYPES[c],p=pairInfo(FRIEND,c);
+  $('pImgF').src=IMG[FRIEND];$('pImgM').src=IMG[c];
+  $('pNames').textContent='友だち：'+F.job+'（'+F.name+'）　あなた：'+M.job+'（'+M.name+'）';
+  $('pLabel').textContent=p[0];$('pWhy').textContent=p[1];el.dataset.l=p[0];el.hidden=false;
+  try{gtag('event','type_shindan_pair',{shindan_type:M.key,friend_type:F.key,pair_label:p[0]})}catch(e){}}
+$('pShare').addEventListener('click',async()=>{const x=shareCtx(),F=TYPES[FRIEND],l=$('pair').dataset.l;if(!x||!F)return;
+  const text='友だち（'+F.name+'）と私（'+x.T.name+'）は「'+l.replace('！','')+'」でした！あなたは何タイプ？',url=x.url;
+  shareEvt('pair',x.k);
+  try{if(navigator.share){await navigator.share({text:text+' #美容師タイプ診断',url});return}}catch(e){if(e&&e.name==='AbortError')return}
+  window.open('https://social-plugins.line.me/lineit/share?url='+encodeURIComponent(url)+'&text='+encodeURIComponent(text),'_blank','noopener')});
 $('cShare').addEventListener('click',async()=>{const x=shareCtx(),pc=$('compat').dataset.p,P=TYPES[pc];if(!x||!P)return;
   const text='美容師タイプ診断で私は「'+x.T.name+'」。相性◎は「'+P.name+'」だって！あなたは何タイプ？',url=x.url,note=$('shareTopNote');
   shareEvt('compat',x.k);
