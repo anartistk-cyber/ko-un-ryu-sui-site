@@ -58,9 +58,9 @@
 - 週次（日曜）で、リンク別のクリック（GA4のcta・外部リンク・UTM `fc_blog`/`glow_blog`/`recruit_blog` 別）を見て、押されない置き方は文言・位置・並びを変える。毎週1つは工夫（ボタン文言／並び順／本文中の導線／動画の埋め込み／記事末尾の一言）を入れ、BLOG_CALENDAR の「学び」に「何を変えたか→数字」を1行で残す。取れない数字は「未取得」。
 
 ## 9. 公式アカウント一覧（2026-11-18 藤津さん確認。記事末尾・Instagram下書き・動画の説明欄で使う）
-- 採用：Instagram @ko_un_ryu_sui.recruit／Threads https://www.threads.com/@ko_un_ryu_sui.recruit／LINE https://lin.ee/Z0JP8sH
+- 採用：Instagram @ko_un_ryu_sui.recruit／Threads https://www.threads.com/@ko_un_ryu_sui.recruit／TikTok https://www.tiktok.com/@kounryusui.recruit（2026-11-25 藤津さんから受領）／LINE https://lin.ee/Z0JP8sH
 - FLOWCLOUD：Instagram @flowcloud_osaka／Threads https://www.threads.com/@flowcloud_osaka／TikTok https://www.tiktok.com/@flowcloud1101／YouTube https://www.youtube.com/@flowcloud
 - glow：Instagram @glow_.osaka／Threads https://www.threads.com/@glow_.osaka（glow の YouTube・TikTok は未確認のため載せない）
-- 採用のYouTube・TikTokは未確認。FLOWCLOUDのものを「サロンの様子」として紹介するのみ。
+- 採用の TikTok は @kounryusui.recruit（2026-11-25 受領・採用ブログの記事末尾に追加）。採用の YouTube は未確認（FLOWCLOUD の YouTube https://www.youtube.com/@FLOWCLOUD〔@flowcloud と同じ〕を「サロンの様子」として紹介するのみ）。glow の YouTube・TikTok は未確認のまま（FLOWCLOUD のものは glow に載せない）。
 - Threads・TikTok への投稿は、Instagram と同じ扱い（OK不要）。ログイン済みの環境が使える回に、記事の要点を短い文で投稿する。
 
