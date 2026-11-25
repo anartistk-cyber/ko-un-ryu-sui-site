@@ -8,13 +8,29 @@
 - 8つのジョブ一覧ページ（見せたいときに）：`https://ko-un-ryu-sui.com/type-shindan/types/`
 
 ## リンク（出どころの印つき。GA4 で数える）
+決まり（11/25 12:4x に ChatGPT の提案を受けて、utm_content で区別する形に更新）：utm_source・utm_medium・utm_campaign は下の表のとおり（変えない）。utm_content は『同じ置き場所の中の区別』に使う（story_day01〜08 など）。
+・utm_content に、英字3文字だけの値（例：tcf、bio、abc）は使わない。診断ページが『友だちのタイプ』の合図として読むため（相性の表示が誤って出る）。story_day01 や profile のような長い値は大丈夫。
+・小文字の英数字と _ だけ。空白や日本語は入れない。
+・フィードの投稿とリールの投稿は、どちらも『プロフィールのリンク欄』に誘導する場合は同じリンク（profile）になる。リールの固定コメント／キャプションに直接リンクを置くときだけ reel_01 を使う。
+
 | 置き場所 | リンク |
 |---|---|
-| Instagram ストーリーズのリンクスタンプ | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=instagram&utm_medium=social&utm_campaign=type_shindan_story` |
-| Instagram プロフィールのリンク欄 | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=instagram&utm_medium=social&utm_campaign=type_shindan_bio` |
-| Instagram リール（キャプション・固定コメント） | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=instagram&utm_medium=social&utm_campaign=type_shindan_reel` |
-| X（旧Twitter） | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=x&utm_medium=social&utm_campaign=type_shindan_post` |
-| Google プロフィール「最新情報」（行雲流水） | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=gbp&utm_medium=organic&utm_campaign=type_shindan_post` |
+| Instagramプロフィールのリンク欄（フィードの投稿はここへ誘導） | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=instagram&utm_medium=social&utm_campaign=type_shindan_bio&utm_content=profile` |
+| Instagramストーリーズ 1日目（1/8）のリンクスタンプ | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=instagram&utm_medium=social&utm_campaign=type_shindan_story&utm_content=story_day01` |
+| Instagramストーリーズ 2日目（2/8）のリンクスタンプ | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=instagram&utm_medium=social&utm_campaign=type_shindan_story&utm_content=story_day02` |
+| Instagramストーリーズ 3日目（3/8）のリンクスタンプ | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=instagram&utm_medium=social&utm_campaign=type_shindan_story&utm_content=story_day03` |
+| Instagramストーリーズ 4日目（4/8）のリンクスタンプ | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=instagram&utm_medium=social&utm_campaign=type_shindan_story&utm_content=story_day04` |
+| Instagramストーリーズ 5日目（5/8）のリンクスタンプ | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=instagram&utm_medium=social&utm_campaign=type_shindan_story&utm_content=story_day05` |
+| Instagramストーリーズ 6日目（6/8）のリンクスタンプ | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=instagram&utm_medium=social&utm_campaign=type_shindan_story&utm_content=story_day06` |
+| Instagramストーリーズ 7日目（7/8）のリンクスタンプ | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=instagram&utm_medium=social&utm_campaign=type_shindan_story&utm_content=story_day07` |
+| Instagramストーリーズ 8日目（8/8）のリンクスタンプ | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=instagram&utm_medium=social&utm_campaign=type_shindan_story&utm_content=story_day08` |
+| Instagramストーリーズ 案C「あなたは何タイプ？」 | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=instagram&utm_medium=social&utm_campaign=type_shindan_story&utm_content=story_share_c` |
+| Instagramストーリーズ 案D「友だちとの相性」 | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=instagram&utm_medium=social&utm_campaign=type_shindan_story&utm_content=story_result_d` |
+| Instagramリール（固定コメント・キャプション） | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=instagram&utm_medium=social&utm_campaign=type_shindan_reel&utm_content=reel_01` |
+| FLOWCLOUD のInstagramストーリーズで紹介する場合 | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=instagram_flowcloud&utm_medium=social&utm_campaign=type_shindan_story&utm_content=story_share` |
+| glow のInstagramストーリーズで紹介する場合 | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=instagram_glow&utm_medium=social&utm_campaign=type_shindan_story&utm_content=story_share` |
+| X（旧Twitter） | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=x&utm_medium=social&utm_campaign=type_shindan_post&utm_content=post_01` |
+| Googleプロフィール「最新情報」（行雲流水） | `https://ko-un-ryu-sui.com/type-shindan/?utm_source=gbp&utm_medium=organic&utm_campaign=type_shindan_post&utm_content=gbp_01` |
 
 ## 守ること
 - 書いてよいのは事実だけ：無料／20問・約2分／8つのジョブ（タイプ）／結果の詳しいカードは公式LINE（行雲流水）で受け取れる／まれにキラキラカードが出る。
