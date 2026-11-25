@@ -41,7 +41,7 @@ type JobData = {
 };
 
 const locations = [
-  { "@type": "Place", address: { "@type": "PostalAddress", streetAddress: "東雲町1-20", addressLocality: "泉大津市", addressRegion: "大阪府", addressCountry: "JP" } },
+  { "@type": "Place", address: { "@type": "PostalAddress", streetAddress: "東雲町1-20", addressLocality: "泉大津市", addressRegion: "大阪府", postalCode: "595-0026", addressCountry: "JP" } },
   { "@type": "Place", address: { "@type": "PostalAddress", streetAddress: "旭町18-3 いずみおおつCITY 1F", addressLocality: "泉大津市", addressRegion: "大阪府", addressCountry: "JP" } },
 ];
 
@@ -207,7 +207,7 @@ export default function JobPosting({ type }: { type: JobType }) {
       datePosted: "2026-10-29",
       directApply: true,
       employmentType: job.employmentType,
-      hiringOrganization: { "@type": "Organization", name: companyName, sameAs: siteUrl },
+      hiringOrganization: { "@type": "Organization", name: companyName, sameAs: siteUrl, logo: `${siteUrl}/images/company-logo_19c099e6.jpg` },
       jobLocation: locations,
       // 「〜」は上限ではないため、下限(minValue)のみを示す。上限は推測しない。
       baseSalary: { "@type": "MonetaryAmount", currency: "JPY", value: { "@type": "QuantitativeValue", minValue: job.salaryMin, unitText: job.salaryUnit } },
