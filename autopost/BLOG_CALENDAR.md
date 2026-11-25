@@ -27,6 +27,7 @@
 | 2026-11-23 | 月 | FLOWCLOUD | 髪のお悩み解決（ツヤがなくなった・毎日のケア） | tsuya-nakunatta-40-50 | 40代 50代 髪 ツヤ / 泉大津 トリートメント | #髪のお悩み #40代ヘアケア #FLOWCLOUD | home-hair-care-cota-store・nenmatsu 2記事・/color/ /headspa/ /menu/ |
 | 2026-11-24 | 火 | 採用 | 教育・技術（1年目の冬のカット理論・ウィッグカット） | fuyu-cut-wig-renshu-minikata | 美容師 新卒 教育 カット練習 ウィッグ | #行雲流水 #美容師の成長 #レッスン #カット理論 | one-year-debut-curriculum・lesson-taiken-yoru-minikata・taiken-guide |
 | 2026-11-24 | 火 | glow | 髪のお悩み解決（伸ばしかけの髪） | nobashikake-matomaranai-young | 伸ばしかけ まとまらない 泉大津 美容室 | #髪のお悩み #glow泉大津 | 内部リンク：short-layer-asa-raku・hair-set-seijinshiki-glow |
+| 2026-11-25 | 水 | FLOWCLOUD | メニュー・相談のしかた（ヘッドスパの選び方・時間と気になることから） | headspa-erabikata-40-50 | 泉大津 ヘッドスパ 40代 50代 / ヘッドスパ メニュー 選び方 | #ヘッドスパ #FLOWCLOUD #泉大津美容室 #泉大津駅 | headspa-shampoo-kukan・nenmatsu 2記事・/headspa/ /menu/ |
 
 ## 要確認（食い違い・未確認の事実）
 （なし）
