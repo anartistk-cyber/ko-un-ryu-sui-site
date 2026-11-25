@@ -385,7 +385,9 @@ function loadImg(src){return new Promise((ok,ng)=>{const im=new Image();im.onloa
 function wrapLines(g,text,max){const out=[];let line='';for(const ch of text){const t=line+ch;if(g.measureText(t).width>max&&line){out.push(line);line=ch}else line=t}if(line)out.push(line);return out}
 async function makeCard(code){
   const T=TYPES[code],W=1080,H=1920,cv=document.createElement('canvas');cv.width=W;cv.height=H;const g=cv.getContext('2d');
-  try{await Promise.all([document.fonts.load('900 60px "Zen Maru Gothic"'),document.fonts.load('40px DotGothic16')])}catch(e){}
+  /* Googleフォントは文字の範囲ごとに分かれて届くため、カードに使う文字そのものを指定して先に読み込む（指定しないと、まだ読み込まれていない文字は代わりの書体で描かれる） */
+  const ft=['行雲流水｜美容師タイプ診断','あなたの美容師タイプは','ジョブ：'+T.job,T.name,T.catch,'あなたは何タイプ？','20問・約2分・無料','ko-un-ryu-sui.com/type-shindan','#美容師タイプ診断'].join('');
+  try{await Promise.all([document.fonts.load('900 60px "Zen Maru Gothic"',ft),document.fonts.load('40px DotGothic16',ft)])}catch(e){}
   const disp='"Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif',dot='DotGothic16,"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif';
   const bg=g.createLinearGradient(0,0,0,H);bg.addColorStop(0,'#cfeaf8');bg.addColorStop(.55,'#eaf6fc');bg.addColorStop(1,'#f3dfae');g.fillStyle=bg;g.fillRect(0,0,W,H);
   g.textAlign='center';g.textBaseline='alphabetic';g.fillStyle='#15243b';
@@ -402,7 +404,11 @@ async function makeCard(code){
   let fs=86;while(g.measureText(T.name).width>940&&fs>56){fs-=4;g.font='900 '+fs+'px '+disp}g.fillText(T.name,W/2,y);
   y+=84;g.font='900 44px '+disp;g.fillStyle='#3b4d63';
   let cl=wrapLines(g,T.catch,900);
-  if(cl.length>1){const tw=g.measureText(T.catch).width,m2=Math.ceil(tw/cl.length*1.1),c2=wrapLines(g,T.catch,m2);if(c2.length===cl.length)cl=c2}
+  if(cl.length>1){ /* 読点（、）があれば真ん中に近い読点で2行に分ける。なければ行の長さをそろえる */
+    const t=T.catch,mid=t.length/2;let bi=-1;for(let i=0;i<t.length-1;i++)if(t[i]==='、'&&(bi<0||Math.abs(i-mid)<Math.abs(bi-mid)))bi=i;
+    const two=bi>=0?[t.slice(0,bi+1),t.slice(bi+1)]:null;
+    if(two&&two.every(l=>g.measureText(l).width<=900))cl=two;
+    else{const tw=g.measureText(t).width,m2=Math.ceil(tw/cl.length*1.1),c2=wrapLines(g,t,m2);if(c2.length===cl.length)cl=c2}}
   cl.forEach(l=>{g.fillText(l,W/2,y);y+=64});
   const fy=H-340,fh=230;g.fillStyle='#e9a514';g.strokeStyle='#15243b';g.lineWidth=6;g.beginPath();g.roundRect?g.roundRect(90,fy,W-180,fh,40):g.rect(90,fy,W-180,fh);g.fill();g.stroke();
   g.fillStyle='#3a2a00';g.font='900 58px '+disp;g.fillText('あなたは何タイプ？',W/2,fy+84);
