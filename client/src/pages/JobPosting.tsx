@@ -42,7 +42,7 @@ type JobData = {
 
 const locations = [
   { "@type": "Place", address: { "@type": "PostalAddress", streetAddress: "東雲町1-20", addressLocality: "泉大津市", addressRegion: "大阪府", postalCode: "595-0026", addressCountry: "JP" } },
-  { "@type": "Place", address: { "@type": "PostalAddress", streetAddress: "旭町18-3 いずみおおつCITY 1F", addressLocality: "泉大津市", addressRegion: "大阪府", addressCountry: "JP" } },
+  { "@type": "Place", address: { "@type": "PostalAddress", streetAddress: "旭町18-3 いずみおおつCITY 1F", addressLocality: "泉大津市", addressRegion: "大阪府", postalCode: "595-0025", addressCountry: "JP" } },
 ];
 
 const salonSection = (extra?: ReactNode): Section => ({

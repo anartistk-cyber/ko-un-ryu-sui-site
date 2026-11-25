@@ -3,7 +3,7 @@
 
 ## 会社・店舗
 - 株式会社行雲流水（代表取締役 藤津一弥、設立2020年4月1日）。大阪府泉大津市。
-- FLOWCLOUD：泉大津市東雲町1-20（南海本線 泉大津駅から徒歩約3分）／glow：泉大津市旭町18-3 いずみおおつCITY 1F（泉大津駅東口から徒歩約1分）。
+- FLOWCLOUD：泉大津市東雲町1-20（南海本線 泉大津駅から徒歩約3分）／glow：泉大津市旭町18-3 いずみおおつCITY 1F（泉大津駅東口から徒歩約1分）。郵便番号：FLOWCLOUD 〒595-0026／glow 〒595-0025（glow は藤津さん 2026-11-25 10:01）。
 - 問い合わせ：info@ko-un-ryu-sui.com／公式LINE https://lin.ee/Z0JP8sH／TEL 0725-90-5699
 - Instagram：@ko_un_ryu_sui.recruit（採用）、@flowcloud_osaka、@glow_.osaka
 ## 募集
