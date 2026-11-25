@@ -28,6 +28,7 @@
 | 2026-11-24 | 火 | 採用 | 教育・技術（1年目の冬のカット理論・ウィッグカット） | fuyu-cut-wig-renshu-minikata | 美容師 新卒 教育 カット練習 ウィッグ | #行雲流水 #美容師の成長 #レッスン #カット理論 | one-year-debut-curriculum・lesson-taiken-yoru-minikata・taiken-guide |
 | 2026-11-24 | 火 | glow | 髪のお悩み解決（伸ばしかけの髪） | nobashikake-matomaranai-young | 伸ばしかけ まとまらない 泉大津 美容室 | #髪のお悩み #glow泉大津 | 内部リンク：short-layer-asa-raku・hair-set-seijinshiki-glow |
 | 2026-11-25 | 水 | FLOWCLOUD | メニュー・相談のしかた（ヘッドスパの選び方・時間と気になることから） | headspa-erabikata-40-50 | 泉大津 ヘッドスパ 40代 50代 / ヘッドスパ メニュー 選び方 | #ヘッドスパ #FLOWCLOUD #泉大津美容室 #泉大津駅 | headspa-shampoo-kukan・nenmatsu 2記事・/headspa/ /menu/ |
+| 2026-11-25 | 水 | FLOWCLOUD・glow | お知らせ（12月末まで 店販キャンペーン） | tenpan-campaign-2026-12 | 店販 キャンペーン 泉大津 コタ | — | cota-products・年末年始の営業日・おうちでのヘアケアの記事 |
 
 ## 要確認（食い違い・未確認の事実）
 （なし）
@@ -39,3 +40,4 @@
 
 ## 学び（日曜の週次分析で更新）
 （まだデータなし）
+

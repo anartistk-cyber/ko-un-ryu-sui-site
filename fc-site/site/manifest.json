@@ -22,7 +22,7 @@
   },
   {
    "path": "cota-products/index.html",
-   "sha256": "3dceafb4b1e94d31c508080a4c3d1aa5c124f34d1660cb1177be48ab3c19715d"
+   "sha256": "7832e2d048e8bd77b0379b1be22937f4461f75d2c05142275aad8d9f8a31521f"
   },
   {
    "path": "coupon/index.html",
@@ -286,15 +286,15 @@
   },
   {
    "path": "index.html",
-   "sha256": "6e94486da218f8e6261c68ba25d79ad53e35939285c45bd684617aa1572a0b0b"
+   "sha256": "b9920c187869a8716e998b77952638389f73d3c712d8002bb1f043b46974cdd3"
   },
   {
    "path": "llms-full.txt",
-   "sha256": "dfbae14ace445079915bbf86436dae47c25f6f89212b91fbc6cb3c56cbd5cc83"
+   "sha256": "56c420327d98345e1f39a0d6abf984a856a50d018f3d6ab0e4923b39c8eaa279"
   },
   {
    "path": "llms.txt",
-   "sha256": "1f622c684fea4da0a31ed17fa55f3318ca0c7547067716e861b62b3701e164e9"
+   "sha256": "7660bfd47cc1eeda3e131591eef5e3cb526cbf7800ff1ca797f4afdaff1a7d97"
   },
   {
    "path": "men/index.html",
@@ -354,7 +354,7 @@
   },
   {
    "path": "salon-blog/index.html",
-   "sha256": "943e758b964cba5eb76a1efce3296df513f0706aef9efbcbc511179c34ba6bce"
+   "sha256": "18a969aa348c32a259ce5342eca1c3297ac759675278d97b75417116f46ca953"
   },
   {
    "path": "salon-blog/kuse-uneri-straight-40-50/index.html",
@@ -381,6 +381,10 @@
    "sha256": "2d8cdabd449e7127cad14f3756fbe6d467c6f488f65cde9f3fd9e2935cb63bd5"
   },
   {
+   "path": "salon-blog/tenpan-campaign-2026-12/index.html",
+   "sha256": "0339b33530b6f47ad4e1a5abcd3451893ee6353e894f031ff00096c1510322f3"
+  },
+  {
    "path": "salon-blog/toppe-peta-volume-40-50/index.html",
    "sha256": "852a56e0ad9ee93c4baf973c64b1c435cd92d3304f662b06c728cf008d7e14d8"
   },
@@ -394,7 +398,7 @@
   },
   {
    "path": "sitemap-fc.xml",
-   "sha256": "26afb0651b2c1e013e95d526fed7cfd168c9ded1b49a90ee94bd67de8a9d027a"
+   "sha256": "9e0cb950da68b7eff6271f0b70f834e37f9b45100a308b2957b056e274afd5a1"
   },
   {
    "path": "straight/index.html",
