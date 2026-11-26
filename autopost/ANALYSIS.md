@@ -188,3 +188,16 @@
 - 検証: sitemap 40URL／vite build／prerender／publish-gate すべて終了コード0。
 - 数字（Search Console・GA4）は未取得。
 - 次回: 木曜は働き方・待遇。
+
+## 実行ログ 2026-11-26（木・自動実行）
+- 曜日／テーマ：木＝働き方・待遇／年末の忙しい時期の働き方の確かめ方（今週の軸「年末の繁忙期の働き方」）。
+- 準備: main に ff 同期。add_repo/register_repo_rootのツールは無く、スコープ済みのためそのまま作業。
+- 調査: WebSearchはこの回は未実施（無人実行・既存の調査結果を踏襲）。kyujitsu-yukyu-minikata・hayaban-osoban と重複しないよう、年末の時期に4点（営業時間と最終受付・定休と不定休・年末年始休暇・練習の扱い）を並べる切り口にした。
+- 記事追加: nenmatsu-hataraku-kakunin-minikata ／ 狙い: 美容師 年末 働き方 勤務時間 休み 求人 ／ 事実はFACTS.mdのみ（営業9:00〜20:00・最終受付18:00・早番遅番・朝礼・月火定休・不定休・年末年始休暇4日・年間休日104日・有給・取得率100%・勤続6.0年・月25時間・練習は勤務時間内）。「年末は忙しくなりやすい」は一般論として書き、自社の繁忙の事実は書いていない。
+- タグ: 行雲流水／美容師求人／働き方／年末年始／勤務時間／休み／転職（7個）。
+- 画像・動画: バナー（make-banner）＋本文写真1枚（gallery-exterior）＋動画1本（FLOWCLOUD外観・glow受付・夜の外観から約15秒・264KB・AI生成なし）。
+- カバー済みテーマに追加: nenmatsu-hataraku-kakunin-minikata（働き方・待遇／年末の働き方の確認点）
+- 既存記事改善: 日曜ではないため週次レビューなし。Instagram投稿・下書きは作らない（11/22指示）。
+- 検証: sitemap 42URL／vite build／prerender／publish-gate すべて終了コード0。
+- 数字（Search Console・GA4）は未取得。
+- 次回: 土曜は体験・見学。
