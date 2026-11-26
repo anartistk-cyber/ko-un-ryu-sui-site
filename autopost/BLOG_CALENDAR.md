@@ -30,6 +30,7 @@
 | 2026-11-25 | 水 | FLOWCLOUD | メニュー・相談のしかた（ヘッドスパの選び方・時間と気になることから） | headspa-erabikata-40-50 | 泉大津 ヘッドスパ 40代 50代 / ヘッドスパ メニュー 選び方 | #ヘッドスパ #FLOWCLOUD #泉大津美容室 #泉大津駅 | headspa-shampoo-kukan・nenmatsu 2記事・/headspa/ /menu/ |
 | 2026-11-25 | 水 | FLOWCLOUD・glow | お知らせ（12月末まで 店販キャンペーン） | tenpan-campaign-2026-12 | 店販 キャンペーン 泉大津 コタ | — | cota-products・年末年始の営業日・おうちでのヘアケアの記事 |
 | 2026-11-26 | 木 | 採用 | 働き方・待遇（年末の忙しい時期の働き方の確かめ方） | nenmatsu-hataraku-kakunin-minikata | 美容師 年末 働き方 勤務時間 休み | #行雲流水 #働き方 #年末年始 #勤務時間 | kyujitsu-yukyu-minikata・hayaban-osoban・kengaku-hikaku-memo-minikata |
+| 2026-11-26 | 木 | glow | メニュー・相談のしかた（ブリーチ毛の縮毛矯正の相談） | bleach-shukumou-kyosei-soudan-young | 泉大津 ブリーチ 縮毛矯正 | #髪質改善 #glow泉大津 #泉大津美容室 | /straight/・kuse-hiroga-straight-young |
 
 ## 要確認（食い違い・未確認の事実）
 （なし）
