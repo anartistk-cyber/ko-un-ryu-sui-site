@@ -1,0 +1,65 @@
+# ChatGPT（SNS担当）への依頼：12月末までの店販キャンペーンの投稿素材（2026-11-26）
+
+投稿は ChatGPT 担当（藤津さん 11/22）。Claude は素材づくりまで。**ChatGPT が書いた文は、藤津さんが見て OK を出してから投稿する**（Claude からは投稿も送信もしない）。藤津さん 11/26 9:56「１は」への素材。
+この依頼文は、ChatGPT に Claude のリンクを開かせずに渡せるよう、同じ中身の .txt（`REQUEST_CHATGPT_2026-11-26_tenpan-campaign.txt`）も作った。
+
+## 目的
+- 12月のご来店を早めに決めたくなる「店販キャンペーン」を、Instagram（FLOWCLOUD・glow）と Google プロフィール「最新情報」（FLOWCLOUD・glow）で知らせる。
+- LINE の一斉配信（11/27 12:00 FLOWCLOUD・12:05 glow）の友だちに届かない人（Instagram・Google で見つけた人）にも届ける。
+- FLOWCLOUD と glow は**同じ内容・同じ運用**。変えるのは店名・口調・絵文字・リンク・電話番号だけ。
+
+## 事実（FACTS.md 2026-11-25 13:45 藤津さん確認。これ以外は書かない）
+- 期間：12月末まで（12/31 は休業なので、実際に使える最後の営業日は 12/30〔水〕。投稿では「12月末まで」と書き、年末の営業日の説明では下の日付を使う）
+- 対象：**全ての店販商品**
+- 条件：**¥5,500以上のお買い上げ**
+- 特典：**10％分の金券**をプレゼント（お知らせページと LINE の書き方は「¥5,500以上のお買い上げで、10％分の金券をプレゼント」）
+- 細かい決まりは「**ご来店のときにキャストへおたずねください**」と書く
+- 店販の在庫は変わることがあるので、気になる商品は来店前に電話で聞ける（両店の「コタ製品」ページの案内と同じ）
+- 年末年始の営業日（両店の「年末年始の営業のお知らせ」ページと同じ）：12/28（月）休業／12/29（火）・12/30（水）営業（通常は火曜定休だが年末は営業）／12/31（木）〜1/5（火）休業／1/6（水）から営業
+- 営業 9:00〜20:00（最終受付 18:00）。FLOWCLOUD は完全予約制・泉大津駅から徒歩3分。glow は泉大津駅から徒歩1分
+
+## 書いてはいけないこと
+- 金券の**使える時期・有効期限・ほかの割引との併用・税込かどうか・次回来店で使える**は、まだ決まっていない（藤津さんに確認中）。書かない。聞かれたら「キャストへ」。
+- 「お買い上げ額の」と対象額の言い方を足さない（「10％分の金券」のまま）。
+- 先着・数量限定・「最大」・「必ず」・効果の保証・ほかの店との比較・商品名／ブランド名／商品の価格（在庫や価格は変わるため）。
+- 「スタッフ」ではなく「キャスト」。
+- 写真は**実店舗の店販コーナー・店内の実写**（藤津さんがキャストに撮ってもらう）。人物が写る写真は本人の許可があるものだけ。ない場合は文字だけの画像でよい。
+
+## 出してほしいもの（各店・同じ中身で2店分）
+1. **Instagram フィード投稿のキャプション**：1本（150〜250字）。リンクは貼れないので「くわしくはストーリーズ／ご来店のときにキャストへ」の形。ハッシュタグは5個前後。FLOWCLOUD は `#FLOWCLOUD #泉大津美容室 #泉大津` を土台に、glow は `#glow #泉大津美容室 #泉大津` を土台にする（IG_CAPTIONS と同じ）。
+2. **Instagram ストーリーズ**：2コマ分の文。1コマ目＝キャンペーンのお知らせ（期間・対象・条件・特典）。2コマ目＝「12月は予約が埋まりやすいので早めのご予約が安心」＋リンクスタンプ（下のリンク）。
+3. **Google プロフィール「最新情報」**：1本（300字前後・ボタン「詳細」・下のリンク）。
+4. **2回目・3回目の短い文**（Instagram ストーリーズ・Google プロフィール）：2回目＝「12月も半ば、キャンペーンは12月末まで」、3回目＝「年内は12/30まで。年末年始のお休みはこちら」。年末の日付は上の営業日をそのまま使う。
+- トーンは各店のこれまでの投稿に合わせる：**FLOWCLOUD＝40〜50代の女性に上品・落ち着き（文字は読みやすく、絵文字は控えめ）／glow＝10〜20代の女性にポップで可愛く上品**。2店を混ぜない。
+- 診断（美容師タイプ診断）や採用の話は、この投稿には入れない（お客様向けの投稿）。
+
+## 投稿の日（案）
+LINE の一斉配信が 11/27（金）に出るので、Instagram・Google は**翌日以降**がちょうどよい（同じ日にいくつも出さない）。休業日（FLOWCLOUD：12/1・7・8・14・21・22・28・31／glow：同じ日＋12/15）は避ける。
+- 1回目：11/28（土）（Instagram フィード＋ストーリーズ／Google 最新情報）
+- 2回目：12/12（土）ごろ
+- 3回目：12/26（土）ごろ
+日付が合わなければ ChatGPT の予約投稿の予定に合わせてよい（ほかの投稿と同じ日が重ならないように）。
+
+## リンク（出どころの印つき。GA4 で数える）
+お知らせページ（本番で公開済み）：
+- FLOWCLOUD：`https://www.flowcloud.net/salon-blog/tenpan-campaign-2026-12/`
+- glow：`https://glow-izumiotsu.jp/journal/tenpan-campaign-2026-12/`
+
+決まり：utm_source＝instagram／google、utm_medium＝social（Instagram）／gbp（Google）。utm_campaign と utm_content は下の表のとおり（小文字の英数字と `_` だけ）。変えない。
+
+| 置き場所 | FLOWCLOUD | glow |
+|---|---|---|
+| Instagram ストーリーズ（1回目）のリンクスタンプ | `https://www.flowcloud.net/salon-blog/tenpan-campaign-2026-12/?utm_source=instagram&utm_medium=social&utm_campaign=tenpan_202612&utm_content=story_01` | `https://glow-izumiotsu.jp/journal/tenpan-campaign-2026-12/?utm_source=instagram&utm_medium=social&utm_campaign=tenpan_202612&utm_content=story_01` |
+| Instagram ストーリーズ（2回目） | `…?utm_source=instagram&utm_medium=social&utm_campaign=tenpan_202612&utm_content=story_02`（上と同じページ） | 同左（glow のページ） |
+| Instagram ストーリーズ（3回目） | `…&utm_content=story_03` | 同左 |
+| Google プロフィール「最新情報」（1回目） | `https://www.flowcloud.net/salon-blog/tenpan-campaign-2026-12/?utm_source=google&utm_medium=gbp&utm_campaign=post_202612_tenpan&utm_content=post_01` | `https://glow-izumiotsu.jp/journal/tenpan-campaign-2026-12/?utm_source=google&utm_medium=gbp&utm_campaign=post_202612_tenpan&utm_content=post_01` |
+| Google プロフィール（2回目・3回目） | 上の `post_01` を `post_02`／`post_03` に変える | 同左 |
+
+（Google プロフィールの印は、これまでの GBP 投稿〔GBP_DRAFTS_2026-12〕と同じ `google／gbp／post_202612_◯◯` にそろえた。診断の投稿で使っていた `gbp／organic` とは別の印。）
+
+## 藤津さんが決めること（ChatGPT の文を見るときに）
+- Instagram のプロフィールのリンク欄を、12月だけキャンペーンのお知らせページ（`…&utm_campaign=tenpan_202612&utm_content=profile`）に変えるか。変えると、フィードの投稿を見た人も1タップでお知らせへ行ける。12/30 のあと元に戻す。（変えなければ、フィードは「ストーリーズ／キャストへ」の誘導のまま）
+- 「10％分の金券」の細かい決まり（使える時期・有効期限・併用・税込）が決まったら教えてほしい。決まれば FACTS・お知らせページ・投稿に足せる。
+
+## 測り方（Claude が週次で読む）
+GA4：流入元 instagram／social・google／gbp、キャンペーン tenpan_202612・post_202612_tenpan の、お知らせページへのセッション数と、そのあとの cta_net_reserve／cta_tel／cta_line。両店の「店販の金券を出した件数」は、藤津さん・キャストに聞く（GA4 では見えない）。判定は EFFECT_CHECKS の 12/13 と 1/3。
