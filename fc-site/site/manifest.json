@@ -30,7 +30,7 @@
   },
   {
    "path": "cut/index.html",
-   "sha256": "1e0dbf63f5ed68264a04f27961cd870998c1fed64ae088b00fc149a18a166dfd"
+   "sha256": "511ed650f06bcc43ee33013c31a9ba0600be6eab8ae64b4a426fa61364cf0454"
   },
   {
    "path": "faq/index.html",
@@ -270,7 +270,7 @@
   },
   {
    "path": "hair-care-40-50/index.html",
-   "sha256": "94d62954abe87b57c00a9b45852eb98fed2e902c2b6d89a31c4793d39d648fc9"
+   "sha256": "33aa743d00b8a766e8b215dfbfb827ca885c122c3ce28f034f9ca6b2a2ce709e"
   },
   {
    "path": "hair-donation/index.html",
@@ -278,19 +278,19 @@
   },
   {
    "path": "hair-quality/index.html",
-   "sha256": "d9de22d25646b2df891038d4e09165177f05e01910d7af00f58ca588860a7927"
+   "sha256": "0277ffeea85a70eaf5c2c8db461c95481ee2dce7cceba75af1b1bed1a4eb6f92"
   },
   {
    "path": "headspa/index.html",
-   "sha256": "e294066901be00de0514fead5dce63271b0c73ea407f3caf2b4a50833c9e2170"
+   "sha256": "516bddb34a5898edef06d85a41eaabfbdacba330d3bbd22d655233cf61ca5c78"
   },
   {
    "path": "index.html",
-   "sha256": "6e8096fb33d0416fe77a839c6f88c70c9eedd9310d2d70637c28aeadcc44bc99"
+   "sha256": "135f3a42fa3da27478b726c3fc9d26da89443d9d56b420c4b18cd5114b20ddd4"
   },
   {
    "path": "llms-full.txt",
-   "sha256": "a1ba89461b9ea6947d6a2b34b9c8a826f3964dde3736c1c195c37aeb55028f0c"
+   "sha256": "0d5c2fb60539ee14e34f3c301ace74248c58ea5f103b1d14c486cc632ed820f7"
   },
   {
    "path": "llms.txt",
