@@ -414,11 +414,11 @@
   },
   {
    "path": "journal/tenpan-campaign-2026-12/index.html",
-   "sha256": "e9bd2d27ab08f5e1666fc87aca151f8d55cf3b633e6bec93bb4b656c2aa60583"
+   "sha256": "0c15cbc796ddbfa9eddeffc603588619490280ffbf95c15c48fab5f93b700b3f"
   },
   {
    "path": "llms-full.txt",
-   "sha256": "ba4f18e4cc2c733fde0b731ed489c50843d588a93aa010b1b645440c0073873c"
+   "sha256": "c5ba50011586adea8c861b133c87464f0c32febe7f92779994e392d501996adf"
   },
   {
    "path": "llms.txt",
