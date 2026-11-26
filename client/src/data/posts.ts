@@ -325,7 +325,7 @@ export const posts: Post[] = [
   {
     slug: "koukousei-biyoushi-susumikata",
     title: "美容師を目指す高校生へ。進路を決める前にできる4つのこと",
-    seoTitle: "美容師を目指す高校生が進路を決める前にできる4つのこと｜行雲流水 採用",
+    seoTitle: "美容師になるために高校生からできること｜進路を決める前の4つ｜行雲流水 採用",
     seoDesc: "美容師を目指す高校生へ。進路を決める前に、サロンの仕事を知る・体験する・学生アルバイトで働く・就職先の条件を見る方法を、行雲流水の事実のみでご紹介します。",
     date: "2026-11-09", category: "新卒・美容学生",
     image: "/images/blog/koukousei-biyoushi-susumikata.jpg", imageAlt: "美容師を目指す高校生へ。進路を決める前にできる4つのこと",
@@ -492,7 +492,7 @@ export const posts: Post[] = [
   {
     slug: "kyujitsu-yukyu-minikata",
     title: "美容師の休日・有給の見方。求人で確認したい5つのこと",
-    seoTitle: "美容師の休日・有給の見方｜FLOWCLOUD・glow 採用",
+    seoTitle: "美容師の年間休日・有給の見方｜求人で確認する5つのこと｜FLOWCLOUD・glow 採用",
     seoDesc: "美容師の求人で休日と有給をどう見るか。年間休日、シフト制の週休2日、有給の付与時期、取得率の確認ポイントを、FLOWCLOUD・glowの実際の条件とあわせて整理します。",
     date: "2026-11-02", category: "働き方",
     image: "/images/blog/kyujitsu-yukyu-minikata.jpg", imageAlt: "美容師の休日・有給の見方",
@@ -610,7 +610,7 @@ export const posts: Post[] = [
   {
     slug: "hayaban-osoban",
     title: "早番・遅番の働き方。出勤、休憩、練習まで確認する",
-    seoTitle: "早番・遅番の一日｜準備・休憩・練習｜行雲流水",
+    seoTitle: "美容師の早番・遅番の時間と一日の流れ｜8:30〜17:30／11:30〜20:30｜行雲流水",
     seoDesc: "早番は8:30〜17:30、遅番は11:30〜20:30（休憩60分）。準備・朝礼・練習は勤務時間内。出勤から退勤までの一日の流れを、FLOWCLOUD・glowの実際の条件でご紹介します。",
     date: "2026-10-29", category: "働き方",
     excerpt: "出勤・準備・休憩・練習・退勤を分けて、働く一日をご案内します。",
