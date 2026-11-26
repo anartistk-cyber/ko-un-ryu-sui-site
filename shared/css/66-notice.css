@@ -1,0 +1,15 @@
+
+/* ===== 66-notice 2026-11-26: トップのヒーロー（予約ボタンの下）の「お知らせ」囲み（FLOWCLOUD・glow 共通）。構造は shared/home-notice.mjs。
+   色・書体は各サイトの変数（--pri/--soft/--pink2/--pinkl/--ctad/--ink/--r）を使い、書体は各サイトの本文のまま（glow には --bf が無いので font の省略形に var(--bf) を使わない）ので、2店で自然に違う雰囲気になる。
+   文字だけ（画像なし）。予約ボタンより目立たないよう、控えめな枠にしている。ヒーローの文字が増えるぶん写真は下へ下がるので、LCP（リード文）の条件は崩れない。 ===== */
+.hn{margin:14px 0 0;padding:8px 12px 2px;border:1px solid var(--pinkl);border-radius:calc(var(--r) * .7);background:var(--pink2);text-align:left}
+.hn-t{display:inline-block;margin:0 0 2px;padding:3px 10px;border-radius:99px;background:var(--soft);color:var(--prid);font-weight:700;font-size:11.5px;line-height:1.4;letter-spacing:.14em}
+.hn ul{list-style:none;margin:0;padding:0}
+.hn li{margin:0;padding:0;border-top:1px dashed var(--pinkl)}
+.hn li:first-child{border-top:0}
+.hn-a{display:block;position:relative;padding:7px 24px 7px 2px;color:var(--ink);text-decoration:none}
+.hn-a:hover .hn-h,.hn-a:focus-visible .hn-h{text-decoration:underline}
+.hn-h{color:var(--ctad);font-weight:700;font-size:14px;line-height:1.5;letter-spacing:.02em}
+.hn-s{margin-top:1px;color:var(--ink);font-weight:400;font-size:12.5px;line-height:1.6}
+.hn .nw{white-space:nowrap}
+.hn-a::after{content:"›";position:absolute;right:4px;top:50%;transform:translateY(-50%);color:var(--ctad);font-weight:400;font-size:24px;line-height:1}

@@ -5,8 +5,8 @@
 import fs from 'node:fs';
 const read = (p) => fs.readFileSync(p, 'utf8');
 const sites = {
-  'fc-site': ['fc-site/css/00-base.css', 'fc-site/css/10-palette.css', 'fc-site/css/20-theme.css', 'shared/css/30-delight.css', 'shared/css/35-gallery.css', 'fc-site/css/45-pop.css', 'shared/css/50-convert.css', 'fc-site/css/50-fc.css', 'fc-site/css/55-tone.css', 'shared/css/60-trend.css', 'fc-site/css/65-tsn.css'],
-  'glow-site': ['glow-site/css/00-base.css', 'glow-site/css/10-palette.css', 'glow-site/css/20-theme.css', 'shared/css/30-delight.css', 'glow-site/css/40-extra.css', 'shared/css/35-gallery.css', 'glow-site/css/45-pop.css', 'shared/css/50-convert.css', 'glow-site/css/55-tone.css', 'shared/css/60-trend.css', 'glow-site/css/65-tsn.css'],
+  'fc-site': ['fc-site/css/00-base.css', 'fc-site/css/10-palette.css', 'fc-site/css/20-theme.css', 'shared/css/30-delight.css', 'shared/css/35-gallery.css', 'fc-site/css/45-pop.css', 'shared/css/50-convert.css', 'fc-site/css/50-fc.css', 'fc-site/css/55-tone.css', 'shared/css/60-trend.css', 'fc-site/css/65-tsn.css', 'shared/css/66-notice.css'],
+  'glow-site': ['glow-site/css/00-base.css', 'glow-site/css/10-palette.css', 'glow-site/css/20-theme.css', 'shared/css/30-delight.css', 'glow-site/css/40-extra.css', 'shared/css/35-gallery.css', 'glow-site/css/45-pop.css', 'shared/css/50-convert.css', 'glow-site/css/55-tone.css', 'shared/css/60-trend.css', 'glow-site/css/65-tsn.css', 'shared/css/66-notice.css'],
 };
 for (const [dir, parts] of Object.entries(sites)) {
   const [base, ...rest] = parts.map(read);
