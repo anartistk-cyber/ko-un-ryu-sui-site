@@ -33,6 +33,7 @@
 | 2026-11-26 | 木 | glow | メニュー・相談のしかた（ブリーチ毛の縮毛矯正の相談） | bleach-shukumou-kyosei-soudan-young | 泉大津 ブリーチ 縮毛矯正 | #髪質改善 #glow泉大津 #泉大津美容室 | /straight/・kuse-hiroga-straight-young |
 | 2026-11-27 | 金 | FLOWCLOUD | 季節・おでかけ・予約の準備（お出かけ前のヘアセットの相談のしかた・年内の営業日） | hairset-soudan-nenmatsu-40-50 | 泉大津 ヘアセット 40代 50代 / 泉大津 美容室 年末 | #ヘアセット #年末 #FLOWCLOUD #泉大津美容室 | 内部リンク：menu・cut・color・headspa・年末年始の営業日・nenmatsu-hair-plan・yoyaku-junbi。Instagram(flowcloud_osaka)を本文で案内
 | 2026-11-28 | 土 | 採用 | 体験・見学（キャスト体験は1時間から・朝礼と準備） | cast-taiken-1jikan-minikata | 美容学生 サロン見学 キャスト体験 | #行雲流水 #サロン見学 #美容師体験 #キャスト体験 | taiken-guide・lesson-taiken-yoru-minikata・hayaban-osoban |
+| 2026-11-28 | 土 | glow | スタイル・おでかけ（ライブ・推し活・遠出の前の髪の相談） | odekake-live-oshikatsu-hair-young | 泉大津 ヘアセット 10代 20代 / ライブ 髪 美容室 | #ヘアスタイル #ヘアアレンジ #glow泉大津 #泉大津美容室 | 内部リンク：maegami-cut-soudan-young・hair-set-seijinshiki-glow・color-first-counseling-glow・short-layer-asa-raku・menu。Instagram(@glow_.osaka)を本文で案内 |
 
 ## 要確認（食い違い・未確認の事実）
 （なし）
