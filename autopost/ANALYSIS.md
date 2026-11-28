@@ -201,3 +201,16 @@
 - 検証: sitemap 42URL／vite build／prerender／publish-gate すべて終了コード0。
 - 数字（Search Console・GA4）は未取得。
 - 次回: 土曜は体験・見学。
+
+## 実行ログ 2026-11-28（土・自動実行）
+- 曜日／テーマ：土＝体験・見学／キャスト体験は1時間から（朝礼・準備・勤務の流れと体験の日をそろえる）。週の軸は「年末に向けて」の最終日。
+- 準備: origin/main に揃えて作業（add_repo/register_repo_rootのツールは無く、スコープ済みのためそのまま）。`npm ci` を実施。
+- 調査: WebSearchはこの回は未実施（無人実行・既存の調査結果を踏襲）。taiken-guide（体験全体）・lesson-taiken-yoru-minikata（夜のレッスン体験）・gakusei-kengaku-kakunin・kengaku-hikaku-memo-minikata と重複しないよう、昼間のキャスト体験に絞った。
+- 記事追加: cast-taiken-1jikan-minikata ／ 狙い: 美容学生 サロン見学 キャスト体験 1時間 ／ 事実はFACTS.mdのみ（キャスト体験8:30〜17:30の間で1時間から・営業9:00〜20:00・早番遅番・朝礼8:40/11:15・準備朝礼片付け練習は勤務時間内・定休月火不定休・最終受付18:00・月25時間・選考は見学→面接→採用で説明会・採用試験は体験会参加者対象）。当日の内容・持ち物・服装は未確認のため「申込み時にご案内／要相談」とした。
+- タグ: 行雲流水／美容師求人／サロン見学／美容師体験／キャスト体験／美容学生／泉大津美容師（7個）。
+- 画像・動画: バナー（make-banner）＋本文写真1枚（FLOWCLOUD店内）＋動画1本（FLOWCLOUD店内・glow店内・glow受付の写真から約15秒・274KB・AI生成なし）。
+- カバー済みテーマに追加: cast-taiken-1jikan-minikata（体験・見学／キャスト体験の1時間）
+- 既存記事改善: 日曜ではないため週次レビューなし。Instagram投稿・下書きは作らない（11/22指示）。
+- 検証: sitemap 43URL／vite build／prerender／publish-gate すべて終了コード0。
+- 数字（Search Console・GA4）は未取得。
+- 次回: 日曜は地域・暮らし＋週次レビュー（既存記事の改善1〜2件）。
